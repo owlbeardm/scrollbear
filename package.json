@@ -3,8 +3,17 @@
   "version": "0.1.0",
   "author": "Mikita Kukavenka",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "babel-watch": "babel src/app.js --out-file dist/scripts/app.js --presets=env,react --watch",
+    "server": "cd dist && lite-server",
+    "clean": "git rm -rf dist/*",
+    "serve": "yarn clean && mkdir dist/scripts && touch dist/scripts/app.js && cp src/index.html dist/index.html && babel-watch && server"
+
+
+  },
+  "devDependencies": {
     "babel-preset-env": "1.5.2",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "lite-server": "^2.3.0"
   }
 }
