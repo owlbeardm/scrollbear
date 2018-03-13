@@ -1,2 +1,0 @@
-# scrollbear
-spellbooks at hand
