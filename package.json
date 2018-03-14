@@ -6,8 +6,8 @@
   "scripts": {
     "babel-watch": "babel src/app.js --out-file dist/scripts/app.js --presets=env,react --watch",
     "server": "cd dist && lite-server",
-    "clean": "git rm -rf dist/*",
-    "serve": "yarn clean && mkdir dist/scripts && touch dist/scripts/app.js && cp src/index.html dist/index.html && babel-watch && server"
+    "clean": "rm -rf dist/* && mkdir dist/scripts && touch dist/scripts/app.js",
+    "serve": "yarn clean && cp src/index.html dist/index.html && yarn babel-watch && yarn server"
 
 
   },
