@@ -139,13 +139,13 @@ var Spell = function (_React$Component4) {
               null,
               'School'
             ),
-            'evocation [force];',
+            ' evocation [force];',
             React.createElement(
               'b',
               null,
               'Level'
             ),
-            'sorcerer/wizard 1'
+            ' sorcerer/wizard 1'
           ),
           React.createElement(
             'p',
@@ -155,7 +155,7 @@ var Spell = function (_React$Component4) {
               null,
               'Casting Time'
             ),
-            '1 standard action'
+            ' 1 standard action'
           ),
           React.createElement(
             'p',
@@ -165,7 +165,7 @@ var Spell = function (_React$Component4) {
               null,
               'Components'
             ),
-            'V, S'
+            ' V, S'
           ),
           React.createElement(
             'p',
@@ -175,7 +175,7 @@ var Spell = function (_React$Component4) {
               null,
               'Range'
             ),
-            'medium (100 ft. + 10 ft./level)'
+            ' medium (100 ft. + 10 ft./level)'
           ),
           React.createElement(
             'p',
@@ -185,7 +185,7 @@ var Spell = function (_React$Component4) {
               null,
               'Targets'
             ),
-            'up to five creatures, no two of which can be more than 15 ft. apart'
+            ' up to five creatures, no two of which can be more than 15 ft. apart'
           ),
           React.createElement(
             'p',
@@ -195,7 +195,7 @@ var Spell = function (_React$Component4) {
               null,
               'Duration'
             ),
-            'instantaneous'
+            ' instantaneous'
           ),
           React.createElement(
             'p',
@@ -205,13 +205,13 @@ var Spell = function (_React$Component4) {
               null,
               'Saving Throw'
             ),
-            'none;',
+            ' none; ',
             React.createElement(
               'b',
               null,
               'Spell Resistance'
             ),
-            'yes'
+            ' yes'
           ),
           React.createElement(
             'p',
@@ -226,7 +226,7 @@ var Spell = function (_React$Component4) {
           React.createElement(
             'p',
             null,
-            'For every two caster levels beyond 1st, you gain an additional missile\u2014two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.'
+            'For every two caster levels beyond 1st, you gain an additional missile \u2014 two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.'
           )
         )
       );
