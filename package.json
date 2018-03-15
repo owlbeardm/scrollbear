@@ -8,7 +8,7 @@
     "babel-watch": "babel src/app.js --out-file dist/scripts/app.js --presets=env,react --watch",
     "server": "cd dist && lite-server",
     "clean": "rm -rf dist/* && mkdir dist/scripts && touch dist/scripts/app.js",
-    "serve": "yarn clean && cp src/index.html dist/index.html && yarn babel-watch && yarn server",
+    "serve": "yarn clean && cp src/index.html dist/index.html && yarn server",
     "dev-build": "yarn clean && cp src/index.html dist/index.html && cp CNAME dist/CNAME && yarn babel-build",
     "dev-deploy": "yarn dev-build && cd dist && git add --all && git commit -m \"Dev-build at $(date)\" && git push"
   },
