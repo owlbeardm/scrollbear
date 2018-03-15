@@ -9,7 +9,7 @@ class ScrollBearApp extends React.Component {
     const subtitle = 'Best spellbook ever';
     return (<div>
       <Header title={title} subtitle={subtitle}/>
-      <Spells/>
+      <Spell/>
     </div>);
   }
 }
@@ -102,35 +102,23 @@ class Spell extends React.Component {
           <b>Magic Missile</b>
         </p>
         <p>
-          <b>School</b>
-          evocation [force];
-          <b>Level</b>
-          sorcerer/wizard 1</p>
+          <b>School</b> evocation [force];
+          <b>Level</b> sorcerer/wizard 1</p>
         <p>
-          <b>Casting Time</b>
-          1 standard action</p>
+          <b>Casting Time</b> 1 standard action</p>
         <p>
-          <b>Components</b>
-          V, S</p>
+          <b>Components</b> V, S</p>
         <p>
-          <b>Range
-          </b>medium (100 ft. + 10 ft./level)</p>
+          <b>Range</b> medium (100 ft. + 10 ft./level)</p>
         <p>
-          <b>Targets</b>
-          up to five creatures, no two of which can be more than 15 ft. apart</p>
+          <b>Targets</b> up to five creatures, no two of which can be more than 15 ft. apart</p>
         <p>
-          <b>Duration</b>
-          instantaneous</p>
+          <b>Duration</b> instantaneous</p>
         <p>
-          <b>Saving Throw</b>
-          none;
-          <b>
-            Spell Resistance
-          </b>
-          yes</p>
+          <b>Saving Throw</b> none; <b>Spell Resistance</b> yes</p>
         <p>A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.</p>
         <p>The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can't be singled out. Objects are not damaged by the spell.</p>
-        <p>For every two caster levels beyond 1st, you gain an additional missile—two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.</p>
+        <p>For every two caster levels beyond 1st, you gain an additional missile — two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.</p>
 
       </div>
     </div>);
