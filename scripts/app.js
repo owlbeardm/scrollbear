@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -18,14 +18,13 @@ var ScrollBearApp = function (_React$Component) {
   }
 
   _createClass(ScrollBearApp, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       var title = 'ScrollBear';
-      var subtitle = 'Best spellbook ever';
       return React.createElement(
-        'div',
+        "div",
         null,
-        React.createElement(Header, { title: title, subtitle: subtitle }),
+        React.createElement(Header, { title: title }),
         React.createElement(Spells, { spells: spellbook })
       );
     }
@@ -44,26 +43,60 @@ var Header = function (_React$Component2) {
   }
 
   _createClass(Header, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'h1',
-          null,
-          this.props.title
-        ),
-        React.createElement(
-          'h2',
-          null,
-          this.props.subtitle
+          "nav",
+          { className: "navbar navbar-expand-lg navbar-dark bg-dark" },
+          React.createElement(
+            "a",
+            { className: "navbar-brand", href: "#" },
+            this.props.title
+          )
         )
       );
     }
   }]);
 
   return Header;
+}(React.Component);
+
+var Footer = function (_React$Component3) {
+  _inherits(Footer, _React$Component3);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "footer",
+          { "class": "footer" },
+          React.createElement(
+            "div",
+            { "class": "container" },
+            React.createElement(
+              "span",
+              { "class": "text-muted" },
+              "Place sticky footer content here."
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
 }(React.Component);
 
 var spellbook = [{
@@ -79,7 +112,7 @@ var spellbook = [{
     "duration": "instantaneous",
     "savingThrow": "Reflex half",
     "spellResistance": "yes",
-    "text": 'A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them.A character can extinguish burning items as a full-round action.'
+    "text": "A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action."
   }
 }, {
   "title": "Magic Missile",
@@ -94,13 +127,13 @@ var spellbook = [{
     "duration": "instantaneous",
     "savingThrow": "none",
     "spellResistance": "yes",
-    "text": 'A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.\n                  The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can\'t be singled out. Objects are not damaged by the spell.\n                  For every two caster levels beyond 1st, you gain an additional missile \u2014 two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.'
+    "text": "A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.\n                  The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can't be singled out. Objects are not damaged by the spell.\n                  For every two caster levels beyond 1st, you gain an additional missile \u2014 two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage."
 
   }
 }];
 
-var Spells = function (_React$Component3) {
-  _inherits(Spells, _React$Component3);
+var Spells = function (_React$Component4) {
+  _inherits(Spells, _React$Component4);
 
   function Spells(props) {
     _classCallCheck(this, Spells);
@@ -109,20 +142,20 @@ var Spells = function (_React$Component3) {
   }
 
   _createClass(Spells, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         this.props.spells.map(function (spell) {
           return React.createElement(
-            'div',
+            "div",
             null,
             React.createElement(
-              'a',
+              "a",
               null,
               React.createElement(
-                'h3',
+                "h3",
                 null,
                 spell.title
               )
@@ -137,8 +170,8 @@ var Spells = function (_React$Component3) {
   return Spells;
 }(React.Component);
 
-var Spell = function (_React$Component4) {
-  _inherits(Spell, _React$Component4);
+var Spell = function (_React$Component5) {
+  _inherits(Spell, _React$Component5);
 
   function Spell() {
     _classCallCheck(this, Spell);
@@ -147,95 +180,86 @@ var Spell = function (_React$Component4) {
   }
 
   _createClass(Spell, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       console.log(this.props.spellText.text.match(/[^\r\n]+/g));
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'b',
+          "b",
           null,
-          'School'
+          "School"
         ),
-        ' ',
         this.props.spellText.school,
-        '; ',
+        ";",
         React.createElement(
-          'b',
+          "b",
           null,
-          'Level'
+          "Level"
         ),
-        ' ',
         this.props.spellText.level,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Casting Time'
+          "Casting Time"
         ),
-        ' ',
         this.props.spellText.castingTime,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Components'
+          "Components"
         ),
-        ' ',
         this.props.spellText.components,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Range'
+          "Range"
         ),
-        ' ',
         this.props.spellText.range,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Area'
+          "Area"
         ),
-        ' ',
         this.props.spellText.area,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Targets'
+          "Targets"
         ),
-        ' ',
         this.props.spellText.targets,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Duration'
+          "Duration"
         ),
-        ' ',
         this.props.spellText.duration,
-        React.createElement('br', null),
+        React.createElement("br", null),
         React.createElement(
-          'b',
+          "b",
           null,
-          'Saving Throw'
+          "Saving Throw"
         ),
-        ' ',
         this.props.spellText.savingThrow,
-        '; ',
+        ";",
         React.createElement(
-          'b',
+          "b",
           null,
-          'SpellResistance'
+          "SpellResistance"
         ),
-        ' ',
         this.props.spellText.spellResistance,
-        React.createElement('br', null),
+        React.createElement("br", null),
+        " ",
         this.props.spellText.text.match(/[^\r\n]+/g).map(function (line) {
           return React.createElement(
-            'p',
+            "p",
             null,
             line.trim()
           );
