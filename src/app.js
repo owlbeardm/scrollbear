@@ -52,6 +52,39 @@ const spellbook = [
       "text": `A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action.`
     }
   }, {
+    "title": "Sow Thought",
+    "spell": {
+      "title": "Sow Thought",
+      "school": "enchantment (compulsion) [mind-affecting]",
+      "level": "bard 1, psychic 1, sorcerer/wizard 1, witch 1",
+      "castingTime": "1 standard action",
+      "components": "V, S",
+      "range": "close (25 ft. + 5 ft./2 levels)",
+      "targets": "one creature",
+      "duration": "permanent",
+      "savingThrow": "Will negates",
+      "spellResistance": "yes",
+      "text": `You plant an idea, concept, or suspicion in the mind of the subject. The target genuinely believes that the idea is his own, but is not required to act upon it. If the idea is contrary to the target’s normal thoughts (such as making a paladin think, “I should murder my friends”) the target may suspect mind-altering magic is at play. The idea must be fairly clear, enough so that it can be conveyed in one or two sentences. You do not need to share a common language for the spell to succeed, but without a common language you can only sow the most basic rudimentary ideas.`
+    }
+  }, {
+    "title": "Command Undead",
+    "spell": {
+      "title": "Command Undead",
+      "school": "necromancy",
+      "level": "sorcerer/wizard 2",
+      "castingTime": "1 standard action",
+      "components": "V, S, M (a shred of raw meat and a splinter of bone)",
+      "range": "close (25 ft. + 5 ft./2 levels)",
+      "targets": "one undead creature",
+      "duration": "1 day/level",
+      "savingThrow": "Will negates; see text",
+      "spellResistance": "yes",
+      "text": `This spell allows you a degree of control over an undead creature. If the subject is intelligent, it perceives your words and actions favorably (treat its attitude as friendly). It will not attack you while the spell lasts. You can give the subject orders, but you must win an opposed Charisma check to convince it to do anything it wouldn’t ordinarily do. Retries are not allowed. An intelligent commanded undead never obeys suicidal or obviously harmful orders, but it might be convinced that something very dangerous is worth doing.
+      A nonintelligent undead creature gets no saving throw against this spell. When you control a mindless being, you can communicate only basic commands, such as “come here,” “go there,” “fight,” “stand still,” and so on. Nonintelligent undead won’t resist suicidal or obviously harmful orders.
+      Any act by you or your apparent allies that threatens the commanded undead (regardless of its Intelligence) breaks the spell.
+      Your commands are not telepathic. The undead creature must be able to hear you.`
+    }
+  }, {
     "title": "Magic Missile",
     "spell": {
       "title": "Magic Missile",
