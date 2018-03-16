@@ -8,7 +8,7 @@ class ScrollBearApp extends React.Component {
     const title = 'ScrollBear';
     return (<div>
       <Header title={title}/>
-      <Spells spells={spellbook}/>      
+      <Spells spells={spellbook}/>
     </div>);
   }
 }
@@ -97,26 +97,15 @@ class Spell extends React.Component {
   render() {
     console.log(this.props.spellText.text.match(/[^\r\n]+/g));
     return (<div>
-      <b>School</b>
-      {this.props.spellText.school};
-      <b>Level</b>
-      {this.props.spellText.level}<br/>
-      <b>Casting Time</b>
-      {this.props.spellText.castingTime}<br/>
-      <b>Components</b>
-      {this.props.spellText.components}<br/>
-      <b>Range</b>
-      {this.props.spellText.range}<br/>
-      <b>Area</b>
-      {this.props.spellText.area}<br/>
-      <b>Targets</b>
-      {this.props.spellText.targets}<br/>
-      <b>Duration</b>
-      {this.props.spellText.duration}<br/>
-      <b>Saving Throw</b>
-      {this.props.spellText.savingThrow};
-      <b>SpellResistance</b>
-      {this.props.spellText.spellResistance}<br/> {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
+      <b>School</b> {this.props.spellText.school}; <b>Level</b> {this.props.spellText.level}<br/>
+      <b>Casting Time</b> {this.props.spellText.castingTime}<br/>
+      <b>Components</b> {this.props.spellText.components}<br/>
+      <b>Range</b> {this.props.spellText.range}<br/>
+      <b>Area</b> {this.props.spellText.area}<br/>
+      <b>Targets</b> {this.props.spellText.targets}<br/>
+      <b>Duration</b> {this.props.spellText.duration}<br/>
+      <b>Saving Throw</b> {this.props.spellText.savingThrow}; <b>SpellResistance</b> {this.props.spellText.spellResistance}<br/>
+      {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
     </div>);
   }
 }
