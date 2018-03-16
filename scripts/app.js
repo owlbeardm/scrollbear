@@ -191,13 +191,15 @@ var Spell = function (_React$Component5) {
           null,
           "School"
         ),
+        " ",
         this.props.spellText.school,
-        ";",
+        "; ",
         React.createElement(
           "b",
           null,
           "Level"
         ),
+        " ",
         this.props.spellText.level,
         React.createElement("br", null),
         React.createElement(
@@ -205,6 +207,7 @@ var Spell = function (_React$Component5) {
           null,
           "Casting Time"
         ),
+        " ",
         this.props.spellText.castingTime,
         React.createElement("br", null),
         React.createElement(
@@ -212,6 +215,7 @@ var Spell = function (_React$Component5) {
           null,
           "Components"
         ),
+        " ",
         this.props.spellText.components,
         React.createElement("br", null),
         React.createElement(
@@ -219,6 +223,7 @@ var Spell = function (_React$Component5) {
           null,
           "Range"
         ),
+        " ",
         this.props.spellText.range,
         React.createElement("br", null),
         React.createElement(
@@ -226,6 +231,7 @@ var Spell = function (_React$Component5) {
           null,
           "Area"
         ),
+        " ",
         this.props.spellText.area,
         React.createElement("br", null),
         React.createElement(
@@ -233,6 +239,7 @@ var Spell = function (_React$Component5) {
           null,
           "Targets"
         ),
+        " ",
         this.props.spellText.targets,
         React.createElement("br", null),
         React.createElement(
@@ -240,6 +247,7 @@ var Spell = function (_React$Component5) {
           null,
           "Duration"
         ),
+        " ",
         this.props.spellText.duration,
         React.createElement("br", null),
         React.createElement(
@@ -247,16 +255,17 @@ var Spell = function (_React$Component5) {
           null,
           "Saving Throw"
         ),
+        " ",
         this.props.spellText.savingThrow,
-        ";",
+        "; ",
         React.createElement(
           "b",
           null,
           "SpellResistance"
         ),
+        " ",
         this.props.spellText.spellResistance,
         React.createElement("br", null),
-        " ",
         this.props.spellText.text.match(/[^\r\n]+/g).map(function (line) {
           return React.createElement(
             "p",
