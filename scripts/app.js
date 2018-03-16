@@ -26,7 +26,7 @@ var ScrollBearApp = function (_React$Component) {
         'div',
         null,
         React.createElement(Header, { title: title, subtitle: subtitle }),
-        React.createElement(Spell, null)
+        React.createElement(Spells, { spells: spellbook })
       );
     }
   }]);
@@ -68,10 +68,35 @@ var Header = function (_React$Component2) {
 
 var spellbook = [{
   "title": "Burning Hands",
-  "spell": '<div>\n < p > <h3>Burning Hands</h3>\n  </p>\n  <p >\n    <b>School</b>evocation[fire];\n    <b>Level</b>sorcerer / wizard 1</p> < p > <b>Casting Time</b>1 standard action</p> < p > <b>Components</b>V,\n    S</p> < p > <b>Range</b>15 ft.</p>\n  <p >\n    <b>Area</b>cone - shaped burst</p> < p > <b>Duration</b>instantaneous</p> < p > <b>Saving Throw</b>Reflex half;\n    <b>Spell Resistance</b>yes</p> < p > A cone of searing flame shoots from your fingertips.Any creature in the area of the flames takes 1 d4 points of fire damage per caster level(maximum 5 d4).Flammable materials burn if the flames touch them.A character can extinguish burning items as a full - round action.</p>\n</div>'
+  "spell": {
+    "title": "Burning Hands",
+    "school": "evocation [fire]",
+    "level": "sorcerer/wizard 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "15 ft.",
+    "area": "cone-shaped burst",
+    "duration": "instantaneous",
+    "savingThrow": "Reflex half",
+    "spellResistance": "yes",
+    "text": 'A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them.A character can extinguish burning items as a full-round action.'
+  }
 }, {
   "title": "Magic Missile",
-  "spell": '<div>\n      <p>\n        <b>Magic Missile</b>\n      </p>\n      <p>\n        <b>School</b>\n        evocation [force];\n        <b>Level</b>\n        sorcerer/wizard 1</p>\n      <p>\n        <b>Casting Time</b>\n        1 standard action</p>\n      <p>\n        <b>Components</b>\n        V, S</p>\n      <p>\n        <b>Range\n        </b>medium (100 ft. + 10 ft./level)</p>\n      <p>\n        <b>Targets</b>\n        up to five creatures, no two of which can be more than 15 ft. apart</p>\n      <p>\n        <b>Duration</b>\n        instantaneous</p>\n      <p>\n        <b>Saving Throw</b>\n        none;\n        <b>\n          Spell Resistance\n        </b>\n        yes</p>\n      <p>A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.</p>\n      <p>The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can\'t be singled out. Objects are not damaged by the spell.</p>\n      <p>For every two caster levels beyond 1st, you gain an additional missile\u2014two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for\n        spell resistance or roll damage.</p>\n\n    </div>'
+  "spell": {
+    "title": "Magic Missile",
+    "school": "evocation [force]",
+    "level": "sorcerer/wizard 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "medium (100 ft. + 10 ft./level)",
+    "targets": "up to five creatures, no two of which can be more than 15 ft. apart",
+    "duration": "instantaneous",
+    "savingThrow": "none",
+    "spellResistance": "yes",
+    "text": 'A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.\n                  The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can\'t be singled out. Objects are not damaged by the spell.\n                  For every two caster levels beyond 1st, you gain an additional missile \u2014 two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.'
+
+  }
 }];
 
 var Spells = function (_React$Component3) {
@@ -89,13 +114,21 @@ var Spells = function (_React$Component3) {
       return React.createElement(
         'div',
         null,
-        React.createElement(
-          'button',
-          { onClick: this.props.handleDeleteOptions },
-          'Remove All'
-        ),
         this.props.spells.map(function (spell) {
-          return React.createElement(Spell, { key: spell.title, spellText: spell.spell });
+          return React.createElement(
+            'div',
+            null,
+            React.createElement(
+              'a',
+              null,
+              React.createElement(
+                'h3',
+                null,
+                spell.title
+              )
+            ),
+            React.createElement(Spell, { key: spell.title, spellText: spell.spell })
+          );
         })
       );
     }
@@ -116,119 +149,97 @@ var Spell = function (_React$Component4) {
   _createClass(Spell, [{
     key: 'render',
     value: function render() {
+      console.log(this.props.spellText.text.match(/[^\r\n]+/g));
       return React.createElement(
         'div',
         null,
         React.createElement(
-          'div',
+          'b',
           null,
-          React.createElement(
+          'School'
+        ),
+        ' ',
+        this.props.spellText.school,
+        '; ',
+        React.createElement(
+          'b',
+          null,
+          'Level'
+        ),
+        ' ',
+        this.props.spellText.level,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Casting Time'
+        ),
+        ' ',
+        this.props.spellText.castingTime,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Components'
+        ),
+        ' ',
+        this.props.spellText.components,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Range'
+        ),
+        ' ',
+        this.props.spellText.range,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Area'
+        ),
+        ' ',
+        this.props.spellText.area,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Targets'
+        ),
+        ' ',
+        this.props.spellText.targets,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Duration'
+        ),
+        ' ',
+        this.props.spellText.duration,
+        React.createElement('br', null),
+        React.createElement(
+          'b',
+          null,
+          'Saving Throw'
+        ),
+        ' ',
+        this.props.spellText.savingThrow,
+        '; ',
+        React.createElement(
+          'b',
+          null,
+          'SpellResistance'
+        ),
+        ' ',
+        this.props.spellText.spellResistance,
+        React.createElement('br', null),
+        this.props.spellText.text.match(/[^\r\n]+/g).map(function (line) {
+          return React.createElement(
             'p',
             null,
-            React.createElement(
-              'b',
-              null,
-              'Magic Missile'
-            )
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'School'
-            ),
-            ' evocation [force];',
-            React.createElement(
-              'b',
-              null,
-              'Level'
-            ),
-            ' sorcerer/wizard 1'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Casting Time'
-            ),
-            ' 1 standard action'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Components'
-            ),
-            ' V, S'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Range'
-            ),
-            ' medium (100 ft. + 10 ft./level)'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Targets'
-            ),
-            ' up to five creatures, no two of which can be more than 15 ft. apart'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Duration'
-            ),
-            ' instantaneous'
-          ),
-          React.createElement(
-            'p',
-            null,
-            React.createElement(
-              'b',
-              null,
-              'Saving Throw'
-            ),
-            ' none; ',
-            React.createElement(
-              'b',
-              null,
-              'Spell Resistance'
-            ),
-            ' yes'
-          ),
-          React.createElement(
-            'p',
-            null,
-            'A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.'
-          ),
-          React.createElement(
-            'p',
-            null,
-            'The missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can\'t be singled out. Objects are not damaged by the spell.'
-          ),
-          React.createElement(
-            'p',
-            null,
-            'For every two caster levels beyond 1st, you gain an additional missile \u2014 two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.'
-          )
-        )
+            line.trim()
+          );
+        })
       );
     }
   }]);
