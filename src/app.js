@@ -6,10 +6,9 @@ class ScrollBearApp extends React.Component {
 
   render() {
     const title = 'ScrollBear';
-    const subtitle = 'Best spellbook ever';
     return (<div>
-      <Header title={title} subtitle={subtitle}/>
-      <Spells spells={spellbook}/>
+      <Header title={title}/>
+      <Spells spells={spellbook}/>      
     </div>);
   }
 }
@@ -17,8 +16,21 @@ class ScrollBearApp extends React.Component {
 class Header extends React.Component {
   render() {
     return (<div>
-      <h1>{this.props.title}</h1>
-      <h2>{this.props.subtitle}</h2>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">{this.props.title}</a>
+      </nav>
+    </div>);
+  }
+}
+
+class Footer extends React.Component {
+  render() {
+    return (<div>
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
     </div>);
   }
 }
@@ -37,7 +49,7 @@ const spellbook = [
       "duration": "instantaneous",
       "savingThrow": "Reflex half",
       "spellResistance": "yes",
-      "text": `A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them.A character can extinguish burning items as a full-round action.`
+      "text": `A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action.`
     }
   }, {
     "title": "Magic Missile",
@@ -68,12 +80,14 @@ class Spells extends React.Component {
   render() {
     return (<div>
 
-      {this.props.spells.map((spell) => (
-        <div>
-          <a><h3>{spell.title}</h3></a>
+      {
+        this.props.spells.map((spell) => (<div>
+          <a>
+            <h3>{spell.title}</h3>
+          </a>
           <Spell key={spell.title} spellText={spell.spell}/>
-        </div>
-      ))}
+        </div>))
+      }
     </div>);
   }
 }
@@ -83,15 +97,26 @@ class Spell extends React.Component {
   render() {
     console.log(this.props.spellText.text.match(/[^\r\n]+/g));
     return (<div>
-        <b>School</b> {this.props.spellText.school}; <b>Level</b> {this.props.spellText.level}<br/>
-        <b>Casting Time</b> {this.props.spellText.castingTime}<br/>
-        <b>Components</b> {this.props.spellText.components}<br/>
-        <b>Range</b> {this.props.spellText.range}<br/>
-        <b>Area</b> {this.props.spellText.area}<br/>
-        <b>Targets</b> {this.props.spellText.targets}<br/>
-        <b>Duration</b> {this.props.spellText.duration}<br/>
-        <b>Saving Throw</b> {this.props.spellText.savingThrow}; <b>SpellResistance</b> {this.props.spellText.spellResistance}<br/>
-        {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
+      <b>School</b>
+      {this.props.spellText.school};
+      <b>Level</b>
+      {this.props.spellText.level}<br/>
+      <b>Casting Time</b>
+      {this.props.spellText.castingTime}<br/>
+      <b>Components</b>
+      {this.props.spellText.components}<br/>
+      <b>Range</b>
+      {this.props.spellText.range}<br/>
+      <b>Area</b>
+      {this.props.spellText.area}<br/>
+      <b>Targets</b>
+      {this.props.spellText.targets}<br/>
+      <b>Duration</b>
+      {this.props.spellText.duration}<br/>
+      <b>Saving Throw</b>
+      {this.props.spellText.savingThrow};
+      <b>SpellResistance</b>
+      {this.props.spellText.spellResistance}<br/> {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
     </div>);
   }
 }
