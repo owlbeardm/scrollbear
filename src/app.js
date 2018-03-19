@@ -111,13 +111,10 @@ class Spells extends React.Component {
   }
 
   render() {
-    return (<div>
+    return (<div className="spells">
 
       {
         this.props.spells.map((spell) => (<div>
-          <a>
-            <h3>{spell.title}</h3>
-          </a>
           <Spell key={spell.title} spellText={spell.spell}/>
         </div>))
       }
@@ -127,18 +124,58 @@ class Spells extends React.Component {
 
 class Spell extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.handleToggleVisible = this.handleToggleVisible.bind(this);
+    this.state = {
+      visible: false
+    }
+  }
+
+  handleToggleVisible(e) {
+    e.preventDefault();
+    this.setState((prevState) => {
+      return {
+        visible: !prevState.visible
+      };
+    });
+
+  }
+
   render() {
-    console.log(this.props.spellText.text.match(/[^\r\n]+/g));
     return (<div>
-      <b>School</b> {this.props.spellText.school}; <b>Level</b> {this.props.spellText.level}<br/>
-      <b>Casting Time</b> {this.props.spellText.castingTime}<br/>
-      <b>Components</b> {this.props.spellText.components}<br/>
-      <b>Range</b> {this.props.spellText.range}<br/>
-      <b>Area</b> {this.props.spellText.area}<br/>
-      <b>Targets</b> {this.props.spellText.targets}<br/>
-      <b>Duration</b> {this.props.spellText.duration}<br/>
-      <b>Saving Throw</b> {this.props.spellText.savingThrow}; <b>SpellResistance</b> {this.props.spellText.spellResistance}<br/>
-      {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
+      <a href="#" onClick={this.handleToggleVisible}>
+       <h3>{this.props.spellText.title}</h3>
+      </a>
+      {this.state.visible && (<SpellDescription spellText={this.props.spellText}/>)}
+    </div>);
+  }
+}
+
+class SpellDescription extends React.Component {
+
+  render() {
+    return (<div>
+      <b>School </b>
+      {this.props.spellText.school};
+      <b> Level </b>
+      {this.props.spellText.level}<br/>
+      <b>Casting Time </b>
+      {this.props.spellText.castingTime}<br/>
+      <b>Components </b>
+      {this.props.spellText.components}<br/>
+      <b>Range </b>
+      {this.props.spellText.range}<br/>
+      <b>Area </b>
+      {this.props.spellText.area}<br/>
+      <b>Targets </b>
+      {this.props.spellText.targets}<br/>
+      <b>Duration </b>
+      {this.props.spellText.duration}<br/>
+      <b>Saving Throw </b>
+      {this.props.spellText.savingThrow};
+      <b> SpellResistance </b>
+      {this.props.spellText.spellResistance}<br/> {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
     </div>);
   }
 }
