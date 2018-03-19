@@ -115,6 +115,36 @@ var spellbook = [{
     "text": "A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action."
   }
 }, {
+  "title": "Sow Thought",
+  "spell": {
+    "title": "Sow Thought",
+    "school": "enchantment (compulsion) [mind-affecting]",
+    "level": "bard 1, psychic 1, sorcerer/wizard 1, witch 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "close (25 ft. + 5 ft./2 levels)",
+    "targets": "one creature",
+    "duration": "permanent",
+    "savingThrow": "Will negates",
+    "spellResistance": "yes",
+    "text": "You plant an idea, concept, or suspicion in the mind of the subject. The target genuinely believes that the idea is his own, but is not required to act upon it. If the idea is contrary to the target\u2019s normal thoughts (such as making a paladin think, \u201CI should murder my friends\u201D) the target may suspect mind-altering magic is at play. The idea must be fairly clear, enough so that it can be conveyed in one or two sentences. You do not need to share a common language for the spell to succeed, but without a common language you can only sow the most basic rudimentary ideas."
+  }
+}, {
+  "title": "Command Undead",
+  "spell": {
+    "title": "Command Undead",
+    "school": "necromancy",
+    "level": "sorcerer/wizard 2",
+    "castingTime": "1 standard action",
+    "components": "V, S, M (a shred of raw meat and a splinter of bone)",
+    "range": "close (25 ft. + 5 ft./2 levels)",
+    "targets": "one undead creature",
+    "duration": "1 day/level",
+    "savingThrow": "Will negates; see text",
+    "spellResistance": "yes",
+    "text": "This spell allows you a degree of control over an undead creature. If the subject is intelligent, it perceives your words and actions favorably (treat its attitude as friendly). It will not attack you while the spell lasts. You can give the subject orders, but you must win an opposed Charisma check to convince it to do anything it wouldn\u2019t ordinarily do. Retries are not allowed. An intelligent commanded undead never obeys suicidal or obviously harmful orders, but it might be convinced that something very dangerous is worth doing.\n      A nonintelligent undead creature gets no saving throw against this spell. When you control a mindless being, you can communicate only basic commands, such as \u201Ccome here,\u201D \u201Cgo there,\u201D \u201Cfight,\u201D \u201Cstand still,\u201D and so on. Nonintelligent undead won\u2019t resist suicidal or obviously harmful orders.\n      Any act by you or your apparent allies that threatens the commanded undead (regardless of its Intelligence) breaks the spell.\n      Your commands are not telepathic. The undead creature must be able to hear you."
+  }
+}, {
   "title": "Magic Missile",
   "spell": {
     "title": "Magic Missile",
@@ -146,20 +176,11 @@ var Spells = function (_React$Component4) {
     value: function render() {
       return React.createElement(
         "div",
-        null,
+        { className: "spells" },
         this.props.spells.map(function (spell) {
           return React.createElement(
             "div",
             null,
-            React.createElement(
-              "a",
-              null,
-              React.createElement(
-                "h3",
-                null,
-                spell.title
-              )
-            ),
             React.createElement(Spell, { key: spell.title, spellText: spell.spell })
           );
         })
@@ -173,99 +194,137 @@ var Spells = function (_React$Component4) {
 var Spell = function (_React$Component5) {
   _inherits(Spell, _React$Component5);
 
-  function Spell() {
+  function Spell(props) {
     _classCallCheck(this, Spell);
 
-    return _possibleConstructorReturn(this, (Spell.__proto__ || Object.getPrototypeOf(Spell)).apply(this, arguments));
+    var _this5 = _possibleConstructorReturn(this, (Spell.__proto__ || Object.getPrototypeOf(Spell)).call(this, props));
+
+    _this5.handleToggleVisible = _this5.handleToggleVisible.bind(_this5);
+    _this5.state = {
+      visible: false
+    };
+    return _this5;
   }
 
   _createClass(Spell, [{
+    key: "handleToggleVisible",
+    value: function handleToggleVisible(e) {
+      e.preventDefault();
+      this.setState(function (prevState) {
+        return {
+          visible: !prevState.visible
+        };
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(this.props.spellText.text.match(/[^\r\n]+/g));
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "a",
+          { href: "#", onClick: this.handleToggleVisible },
+          React.createElement(
+            "h3",
+            null,
+            this.props.spellText.title
+          )
+        ),
+        this.state.visible && React.createElement(SpellDescription, { spellText: this.props.spellText })
+      );
+    }
+  }]);
+
+  return Spell;
+}(React.Component);
+
+var SpellDescription = function (_React$Component6) {
+  _inherits(SpellDescription, _React$Component6);
+
+  function SpellDescription() {
+    _classCallCheck(this, SpellDescription);
+
+    return _possibleConstructorReturn(this, (SpellDescription.__proto__ || Object.getPrototypeOf(SpellDescription)).apply(this, arguments));
+  }
+
+  _createClass(SpellDescription, [{
+    key: "render",
+    value: function render() {
       return React.createElement(
         "div",
         null,
         React.createElement(
           "b",
           null,
-          "School"
+          "School "
         ),
-        " ",
         this.props.spellText.school,
-        "; ",
+        ";",
         React.createElement(
           "b",
           null,
-          "Level"
+          " Level "
         ),
-        " ",
         this.props.spellText.level,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Casting Time"
+          "Casting Time "
         ),
-        " ",
         this.props.spellText.castingTime,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Components"
+          "Components "
         ),
-        " ",
         this.props.spellText.components,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Range"
+          "Range "
         ),
-        " ",
         this.props.spellText.range,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Area"
+          "Area "
         ),
-        " ",
         this.props.spellText.area,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Targets"
+          "Targets "
         ),
-        " ",
         this.props.spellText.targets,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Duration"
+          "Duration "
         ),
-        " ",
         this.props.spellText.duration,
         React.createElement("br", null),
         React.createElement(
           "b",
           null,
-          "Saving Throw"
+          "Saving Throw "
         ),
-        " ",
         this.props.spellText.savingThrow,
-        "; ",
+        ";",
         React.createElement(
           "b",
           null,
-          "SpellResistance"
+          " SpellResistance "
         ),
-        " ",
         this.props.spellText.spellResistance,
         React.createElement("br", null),
+        " ",
         this.props.spellText.text.match(/[^\r\n]+/g).map(function (line) {
           return React.createElement(
             "p",
@@ -277,7 +336,7 @@ var Spell = function (_React$Component5) {
     }
   }]);
 
-  return Spell;
+  return SpellDescription;
 }(React.Component);
 
 ReactDOM.render(React.createElement(ScrollBearApp, null), document.getElementById('app'));

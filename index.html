@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115918011-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-115918011-1');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ScrollBear</title>
@@ -10,7 +21,7 @@
   <style>
     body {
       font-family: 'Lora', serif;
-      font-size: 16px;
+      font-size: 17px;
       color: rgba(0, 0, 0, .84);
       font-style: normal;
       font-weight: 400;
@@ -21,12 +32,19 @@
     }
 
     p {
-      margin-top: 21px;
+      margin-top: 20px;
       margin-bottom: 0px;
     }
 
-    a {
-      /* text-decoration: underline; */
+    .spells a:hover {
+      color: rgba(0, 0, 0, .84);
+      text-decoration: underline;
+    }
+
+    .spells a {
+      color: rgba(0, 0, 0, .84);
+      text-decoration: underline;
+      background-color: transparent;
     }
 
     h3 {
@@ -34,7 +52,11 @@
     }
 
     .navbar {
-      background-color: #333333!important;
+      background-color: #333333 !important;
+    }
+
+    .spells {
+      padding: 12px;
     }
   </style>
 </head>
