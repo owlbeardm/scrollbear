@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { withStyles } from 'material-ui/styles';
+import ExpansionPanel, {
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+} from 'material-ui/ExpansionPanel';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 class ScrollBearApp extends React.Component {
 
@@ -147,10 +153,14 @@ class Spell extends React.Component {
 
   render() {
     return (<div>
-      <a href="#" onClick={this.handleToggleVisible}>
-       <h3>{this.props.spellText.title}</h3>
-      </a>
-      {this.state.visible && (<SpellDescription spellText={this.props.spellText}/>)}
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+           <h3>{this.props.spellText.title}</h3>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+            <SpellDescription spellText={this.props.spellText}/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     </div>);
   }
 }
