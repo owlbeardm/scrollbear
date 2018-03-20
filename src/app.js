@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 class ScrollBearApp extends React.Component {
 
   constructor(props) {
