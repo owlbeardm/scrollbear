@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './Header.js';
 import Spells from './Spells.js';
+import CssBaseline from 'material-ui/CssBaseline';
+
 
 export default class ScrollBearApp extends React.Component {
 
@@ -11,6 +13,7 @@ export default class ScrollBearApp extends React.Component {
   render() {
     const title = 'ScrollBear';
     return (<div>
+      <CssBaseline />
       <Header title={title}/>
       <Spells spells={spellbook1} level="Level 1"/>
       <Spells spells={spellbook2} level="Level 2"/>
