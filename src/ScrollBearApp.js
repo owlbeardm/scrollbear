@@ -1,4 +1,5 @@
 import React from 'react';
+import myData from './spells.json';
 import Header from './Header.js';
 import Spells from './Spells.js';
 import CssBaseline from 'material-ui/CssBaseline';
@@ -8,6 +9,7 @@ export default class ScrollBearApp extends React.Component {
 
   constructor(props) {
     super(props);
+
   }
 
   render() {
@@ -15,8 +17,7 @@ export default class ScrollBearApp extends React.Component {
     return (<div>
       <CssBaseline />
       <Header title={title}/>
-      <Spells spells={spellbook1} level="Level 1"/>
-      <Spells spells={spellbook2} level="Level 2"/>
+      <Spells spells={myData} level="Level 1"/>
     </div>);
   }
 }

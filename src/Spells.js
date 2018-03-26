@@ -19,7 +19,7 @@ export default class Spells extends React.Component {
       <div>
         {
           this.props.spells.map((spell) => (<div>
-            <Spell key={spell.title} spellText={spell.spell}/>
+            <Spell key={spell.name} spellText={spell}/>
           </div>))
         }
       </div>

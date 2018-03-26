@@ -4,7 +4,7 @@ import ExpansionPanel, {
   ExpansionPanelSummary,
   ExpansionPanelDetails,
 } from 'material-ui/ExpansionPanel';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore'; 
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 export default class Spell extends React.Component {
 
@@ -30,7 +30,7 @@ export default class Spell extends React.Component {
     return (<div>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-           <h3>{this.props.spellText.title}</h3>
+           <h3>{this.props.spellText.name}</h3>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <SpellDescription spellText={this.props.spellText}/>
@@ -63,7 +63,7 @@ class SpellDescription extends React.Component {
       <b>Saving Throw </b>
       {this.props.spellText.savingThrow};
       <b> SpellResistance </b>
-      {this.props.spellText.spellResistance}<br/> {this.props.spellText.text.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
+      {this.props.spellText.spellResistance}<br/> {this.props.spellText.description.match(/[^\r\n]+/g).map((line) => <p>{line.trim()}</p>)}
     </div>);
   }
 }

@@ -1,0 +1,47 @@
+[{
+  "title": "Burning Hands",
+  "spell": {
+    "title": "Burning Hands",
+    "school": "evocation [fire]",
+    "level": "sorcerer/wizard 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "15 ft.",
+    "area": "cone-shaped burst",
+    "duration": "instantaneous",
+    "savingThrow": "Reflex half",
+    "spellResistance": "yes",
+    "text": "A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action."
+  }
+}, {
+  "title": "Sow Thought",
+  "spell": {
+    "title": "Sow Thought",
+    "school": "enchantment (compulsion) [mind-affecting]",
+    "level": "bard 1, psychic 1, sorcerer/wizard 1, witch 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "close (25 ft. + 5 ft./2 levels)",
+    "targets": "one creature",
+    "duration": "permanent",
+    "savingThrow": "Will negates",
+    "spellResistance": "yes",
+    "text": "You plant an idea, concept, or suspicion in the mind of the subject. The target genuinely believes that the idea is his own, but is not required to act upon it. If the idea is contrary to the target’s normal thoughts (such as making a paladin think, “I should murder my friends”) the target may suspect mind-altering magic is at play. The idea must be fairly clear, enough so that it can be conveyed in one or two sentences. You do not need to share a common language for the spell to\nsucceed, but without a common language you can only sow the most basic rudimentary ideas."
+  }
+}, {
+  "title": "Magic Missile",
+  "spell": {
+    "title": "Magic Missile",
+    "school": "evocation [force]",
+    "level": "sorcerer/wizard 1",
+    "castingTime": "1 standard action",
+    "components": "V, S",
+    "range": "medium (100 ft. + 10 ft./level)",
+    "targets": "up to five creatures, no two of which can be more than 15 ft. apart",
+    "duration": "instantaneous",
+    "savingThrow": "none",
+    "spellResistance": "yes",
+    "text": "A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.\nThe missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can't be singled out. Objects are not damaged by the spell.\nFor every two caster levels beyond 1st, you gain an additional missile — two at 3rd level, three at 5th, four at 7th, and the maximum of\nfive missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage."
+
+  }
+}]
