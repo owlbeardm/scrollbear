@@ -30,7 +30,7 @@ export default class Spell extends React.Component {
     return (<div>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-           <h3>{this.props.spellText.name}</h3>
+           <h4>{this.props.spellText.name}</h4>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <SpellDescription spellText={this.props.spellText}/>

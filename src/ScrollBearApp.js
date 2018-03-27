@@ -2,20 +2,27 @@ import React from 'react';
 import myData from './spells.json';
 import Header from './Header.js';
 import Spells from './Spells.js';
+import Selection from './Selection.js';
 import CssBaseline from 'material-ui/CssBaseline';
 
 export default class ScrollBearApp extends React.Component {
 
   constructor(props) {
     super(props);
-    let array_chunks = [];
+    let spells = [];
     let i,j,temparray, chunk = 10;
-    for (i = 0, j = myData.length/2; i < j; i += chunk) {
-      temparray = myData.slice(i, i + chunk);
-      array_chunks.push(temparray);
+    for (i = 0; i < myData.length; i++) {
+      for (j = 0; j < myData[i].classLevels.length; j++) {
+        if(myData[i].classLevels[j].spellClass == "sorcerer-wizard"){
+          if(!spells[myData[i].classLevels[j].spellLevel]){
+            spells[myData[i].classLevels[j].spellLevel] = [];
+          }
+          spells[myData[i].classLevels[j].spellLevel].push(myData[i]);
+        }
+      }
     }
     this.state = {
-      spells_arr: array_chunks
+      spells_arr: spells
     }
   }
 
@@ -24,7 +31,8 @@ export default class ScrollBearApp extends React.Component {
     return (<div>
       <CssBaseline/>
       <Header title={title}/>
-      {this.state.spells_arr.map((chunk) => <Spells spells={chunk} level="Level 1"/>)}
+      <Selection />
+      {this.state.spells_arr.map((chunk, index) => <Spells spells={chunk} level={"Level " + index}/>)}
     </div>);
   }
 }
