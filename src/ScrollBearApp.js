@@ -4,35 +4,51 @@ import Header from './Header.js';
 import Spells from './Spells.js';
 import Selection from './Selection.js';
 import CssBaseline from 'material-ui/CssBaseline';
+import SwipeableViews from 'react-swipeable-views';
+import AppBar from 'material-ui/AppBar';
+import Tabs, {Tab} from 'material-ui/Tabs';
+import Typography from 'material-ui/Typography';
 
+function TabContainer({children, dir}) {
+  return (<Typography>
+    {children}
+  </Typography>);
+}
 export default class ScrollBearApp extends React.Component {
 
   constructor(props) {
     super(props);
-    let spells = [];
-    let i,j,temparray, chunk = 10;
-    for (i = 0; i < myData.length; i++) {
-      for (j = 0; j < myData[i].classLevels.length; j++) {
-        if(myData[i].classLevels[j].spellClass == "sorcerer-wizard"){
-          if(!spells[myData[i].classLevels[j].spellLevel]){
-            spells[myData[i].classLevels[j].spellLevel] = [];
-          }
-          spells[myData[i].classLevels[j].spellLevel].push(myData[i]);
-        }
-      }
-    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeIndex = this.handleChangeIndex.bind(this);
     this.state = {
-      spells_arr: spells
-    }
+      value: 0
+    };
   }
+
+  handleChange(event, value) {
+    this.setState({value});
+  };
+
+  handleChangeIndex(index) {
+    this.setState({value: index});
+  };
 
   render() {
     const title = 'ScrollBear';
     return (<div>
       <CssBaseline/>
-      <Header title={title}/>
-      <Selection />
-      {this.state.spells_arr.map((chunk, index) => <Spells spells={chunk} level={"Level " + index}/>)}
+      <AppBar>
+        <Tabs>
+          <Tab label="Item One"/>
+          <Tab label="Item Two"/>
+          <Tab label="Item Three"/>
+        </Tabs>
+      </AppBar>
+      <SwipeableViews>
+        <TabContainer dir={theme.direction}>Item One</TabContainer>
+        <TabContainer dir={theme.direction}>Item Two</TabContainer>
+        <TabContainer dir={theme.direction}>Item Three</TabContainer>
+      </SwipeableViews>
     </div>);
   }
 }
