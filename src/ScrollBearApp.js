@@ -4,20 +4,27 @@ import Header from './Header.js';
 import Spells from './Spells.js';
 import CssBaseline from 'material-ui/CssBaseline';
 
-
 export default class ScrollBearApp extends React.Component {
 
   constructor(props) {
     super(props);
-
+    let array_chunks = [];
+    let i,j,temparray, chunk = 10;
+    for (i = 0, j = myData.length/2; i < j; i += chunk) {
+      temparray = myData.slice(i, i + chunk);
+      array_chunks.push(temparray);
+    }
+    this.state = {
+      spells_arr: array_chunks
+    }
   }
 
   render() {
     const title = 'ScrollBear';
     return (<div>
-      <CssBaseline />
+      <CssBaseline/>
       <Header title={title}/>
-      <Spells spells={myData} level="Level 1"/>
+      {this.state.spells_arr.map((chunk) => <Spells spells={chunk} level="Level 1"/>)}
     </div>);
   }
 }

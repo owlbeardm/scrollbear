@@ -28,9 +28,6 @@ export default class Header extends React.Component {
     return (<div>
       <AppBar position="static" color={appbar}>
         <Toolbar>
-          <IconButton color="inherit" aria-label="Menu">
-            <MenuIcon/>
-          </IconButton>
           <h2>
             ScrollBear
           </h2>

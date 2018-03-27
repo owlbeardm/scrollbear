@@ -10,7 +10,7 @@ export default class Spells extends React.Component {
   render() {
     return (<div className="spells">
       <div>
-        <Card>
+        <Card className="spellsheader">
           <CardContent >
             <h5>{this.props.level}</h5>
           </CardContent>
