@@ -1,0 +1,10 @@
+<a href="#" class="badge badge-pill ml-auto" ng-class="{'badge-light': $ctrl.condition.count == 0, 'badge-secondary': $ctrl.condition.count !== 0}" ng-click="$ctrl.changeShowDelete()">
+  {{$ctrl.condition.name}}
+  <span class="badge badge-light" ng-if="$ctrl.condition.count != undefined">{{$ctrl.condition.count}}
+    <span class="fas fa-caret-down" ng-if="$ctrl.condition.descending"></span>
+    <span class="fas fa-caret-up" ng-if="!$ctrl.condition.descending"></span>
+  </span>
+  <span class="badge badge-pill badge-light" ng-click="$ctrl.deleteThis()" ng-if="$ctrl.showDelete || !$ctrl.condition.count">
+    <span class="fas fa-times"></span>
+  </span>
+</a>
