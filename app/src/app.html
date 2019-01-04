@@ -6,9 +6,17 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <button ng-repeat="spell in $ctrl.spells track by $index" type="submit" class="btn btn-primary btn" data-toggle="modal" ng-click="$ctrl.chooseSpell($index)" data-target="#exampleModal">
-              {{spell.name}}
-            </button>
+            <table class="table">
+              <tbody>
+                <tr ng-repeat="spell in $ctrl.spells track by $index">
+                  <td>
+                    <a href="#"  class="text-dark" data-toggle="modal" ng-click="$ctrl.chooseSpell($index)" data-target="#exampleModal">
+                      {{spell.name}}
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
