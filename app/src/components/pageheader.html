@@ -1,14 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-transparent">
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <!-- <img src="../../../assets/logo.png" class="img-fluid float-left" alt="Responsive image"> -->
-      <h2 class="text-light ml-3 mt-3">
+      <img src="../../../assets/logo.png" class="img-fluid float-left" alt="Responsive image">
+      <h2 class="text-light ml-3 align-top">
         <span>{{$ctrl.title}}</span>
       </h2>
-      <h6 class="text-primary ml-3 mt-3" ng-if="$ctrl.subtitle">
+      <h6 class="text-primary ml-3 align-top" ng-if="$ctrl.subtitle">
         <span>{{$ctrl.subtitle}}</span>
       </h6>
-
     </div>
   </div>
 </nav>

@@ -1,51 +1,22 @@
-<pageheader title="ScrollBear" subtitle="Handy Spellbook"></pageheader>
+<div class="wrapper">
+  <div class="main-panel">
+    <pageheader title="ScrollBear" subtitle="Handy Spellbook"></pageheader>
 
-<div class="container-fluid">
-  <div class="card">
-    <div class="card-body">
-      <button type="submit" class="btn btn-primary btn" data-toggle="modal" data-target="#exampleModal">
-        Show me the Spell
-      </button>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Burning Hands</h3>
-        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="fas fa-times"></span>
-        </button> -->
-      </div>
-      <div class="modal-body">
-        <div>
-          <b>School </b>
-          evocation [fire];
-          <b> Level </b>
-          sorcerer/wizard 1<br />
-          <b>Casting Time </b>
-          1 standard action<br />
-          <b>Components </b>
-          V, S<br />
-          <b>Range </b>
-          15 ft.<br />
-          <b>Area </b>
-          cone-shaped burst<br />
-          <b>Targets </b>
-          <br />
-          <b>Duration </b>
-          instantaneous<br />
-          <b>Saving Throw </b>
-          Reflex half;
-          <b> SpellResistance </b>
-          yes<br /> <p>A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action.</p>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <button ng-repeat="spell in $ctrl.spells track by $index" type="submit" class="btn btn-primary btn" data-toggle="modal" ng-click="$ctrl.chooseSpell($index)" data-target="#exampleModal">
+              {{spell.name}}
+            </button>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <spell spell="$ctrl.spell"></spell>
       </div>
     </div>
   </div>
