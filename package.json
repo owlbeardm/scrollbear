@@ -10,6 +10,7 @@
     "build": "webpack --config webpack.js --mode=production",
     "build-dev": "webpack --config webpack.js --mode=development",
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
+    "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "parse": "node parcer/script.js"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 "use strict";
 
-function MainController(spellService, $location, $state, $uibModal, $log) {
+function MainController(spellService, $state, $log) {
   $log.debug('SpellController create');
   const ctrl = this;
 
@@ -11,7 +11,6 @@ function MainController(spellService, $location, $state, $uibModal, $log) {
     const popup = angular.element("#exampleModal");
     $log.debug('Modal popup', popup);
     popup.on("hidden.bs.modal", function() {
-      $log.debug('Modal exiting state', $location.state());
       $state.go('main');
     });
   }
@@ -39,7 +38,7 @@ function MainController(spellService, $location, $state, $uibModal, $log) {
 
 const MainComponent = {
   template: require('./main.html'),
-  controller: ['spellService', '$location', '$state', '$uibModal', '$log', MainController]
+  controller: ['spellService', '$state', '$log', MainController]
 }
 
 export default MainComponent;

@@ -72,6 +72,12 @@ module.exports = (env, argv) => {
   }
 
   if (argv.mode === 'production') {
+    config.devtool = 'inline-source-map';
+    config.devServer = {
+      contentBase: './dist',
+      historyApiFallback: true,
+      publicPath: '/'
+    };
     config.plugins.push(new FaviconsWebpackPlugin({
       logo: './assets/fav.png',
       icons: {
@@ -93,8 +99,6 @@ module.exports = (env, argv) => {
       ],
       splitChunks: {
         chunks: 'all',
-        minSize: 249856,
-        maxSize: 1048576,
         cacheGroups: {
           styles: {
             name: 'styles',
@@ -105,6 +109,12 @@ module.exports = (env, argv) => {
           res: {
             name: 'res',
             test: /\.json/,
+            chunks: 'all',
+            enforce: true
+          },
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
             chunks: 'all',
             enforce: true
           }
