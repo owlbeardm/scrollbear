@@ -18,7 +18,7 @@ function getCommonConfig() {
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: '[name].[hash].js'
+      filename: '[name].[contenthash].js'
     },
     module: {
       rules: [
