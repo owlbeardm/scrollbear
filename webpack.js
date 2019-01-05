@@ -56,7 +56,7 @@ function getCommonConfig() {
         name: 'ScrollBear Spellbook',
         short_name: 'ScrollBear',
         description: 'Scrollbear spellbook reference for Pathfinder RPG.',
-        background_color: '#463e43',
+        background_color: '#ca945c',
         crossorigin: 'anonymous', //can be null, use-credentials or anonymous
         theme_color: '#ca945c',
         'theme-color': '#ca945c',
@@ -98,10 +98,6 @@ function getCommonConfig() {
           }, {
             "src": path.resolve("resources/img/android-chrome-512x512.png"),
             "sizes": "512x512",
-            "type": "image/png"
-          }, {
-            src: path.resolve("resources/img/large-owl-scroll.png"),
-            size: '1024x1024',
             "type": "image/png"
           }
         ]
