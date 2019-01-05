@@ -64,14 +64,14 @@ module.exports = {
       icons: {
         android: true,
         appleIcon: true,
-        appleStartup: false,
-        coast: false,
+        appleStartup: true,
+        coast: true,
         favicons: true,
         firefox: true,
-        opengraph: false,
-        twitter: false,
-        yandex: false,
-        windows: false
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
       }
     }),
     new MiniCssExtractPlugin({
@@ -82,6 +82,9 @@ module.exports = {
       [{
           from: 'assets/CNAME'
         },
+        {
+            from: 'assets/fav.png'
+          },
         {
           from: 'assets/google989809d758b4217a.html'
         }
