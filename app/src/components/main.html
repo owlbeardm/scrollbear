@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <div class="flextable table-actions">
+      <div class="flextable-item">
+        <form ng-submit="$ctrl.search()">
+          <div class="btn-toolbar-item input-with-icon">
+            <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
+            <!-- <span class="icon icon-magnifying-glass"></span> -->
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <table class="table">
+      <tbody>
+        <tr ng-repeat="spell in $ctrl.spells track by $index">
+          <td>
+            <a href="#" class="text-dark" ng-click="$ctrl.chooseSpell($index)">
+              {{spell.name}}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<ui-view></ui-view>
+<spell spell="$ctrl.spell"></spell>

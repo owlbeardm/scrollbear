@@ -7,3 +7,6 @@ appComponents.component('spell', SpellComponent);
 
 import PageHeaderComponent from './pageheader.component.js';
 appComponents.component('pageheader', PageHeaderComponent);
+
+import MainComponent from './main.component.js';
+appComponents.component('main', MainComponent);

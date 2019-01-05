@@ -7,9 +7,9 @@
   "author": "Mikita Kukavenka <godinfrog@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "build-dev": "webpack --config webpack.dev.js",
-    "start": "webpack-dev-server --hot --open --config webpack.dev.js",
+    "build": "webpack --config webpack.js --mode=production",
+    "build-dev": "webpack --config webpack.js --mode=development",
+    "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
     "parse": "node parcer/script.js"
   },
   "dependencies": {
@@ -33,6 +33,9 @@
     "webpack-merge": "^4.1.4"
   },
   "devDependencies": {
+    "angular": "^1.7.5",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "^1.0.20",
     "mini-css-extract-plugin": "^0.5.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "terser-webpack-plugin": "^1.2.1"

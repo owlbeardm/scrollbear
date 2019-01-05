@@ -4,39 +4,13 @@
 
     <div class="content">
       <div class="container-fluid">
-        <div class="card">
-          <div class="card-body">
-            <div class="flextable table-actions">
-              <div class="flextable-item">
-                <form ng-submit="$ctrl.search()">
-                  <div class="btn-toolbar-item input-with-icon">
-                    <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
-                    <!-- <span class="icon icon-magnifying-glass"></span> -->
-                  </div>
-                </form>
-              </div>
-            </div>
+        <ui-view></ui-view>
 
-            <table class="table">
-              <tbody>
-                <tr ng-repeat="spell in $ctrl.spells track by $index">
-                  <td>
-                    <a href="#"  class="text-dark" data-toggle="modal" ng-click="$ctrl.chooseSpell($index)" data-target="#exampleModal">
-                      {{spell.name}}
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <spell spell="$ctrl.spell"></spell>
-      </div>
-    </div>
+
   </div>
 </div>
+
+<spell></spell>

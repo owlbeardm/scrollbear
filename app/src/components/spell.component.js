@@ -1,18 +1,16 @@
 "use strict";
 
-function SpellController($log) {
+function SpellController($rootScope, $log) {
   $log.debug('SpellController create');
   const ctrl = this;
+  ctrl.rootScope = $rootScope;
 }
 
 const SpellComponent = {
   template: require('./spell.html'),
   controller: [
-    '$log', SpellController
-  ],
-  bindings: {
-    spell: '<',
-  }
+    '$rootScope', '$log', SpellController
+  ]
 }
 
 export default SpellComponent;
