@@ -8,6 +8,16 @@ import './src/components/components.module.js';
 import './src/services/services.module.js';
 // import './src/directives/directives.module.js';
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+}
+
 const initiativeApp = angular.module('initiativeApp', [
   'app.components', 'app.services', 'ui.router'
   // 'app.directives'
