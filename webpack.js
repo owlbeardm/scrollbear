@@ -16,10 +16,7 @@ function getCommonConfig() {
     entry: {
       app: './app/app.module.js'
     },
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: '[name].[contenthash].js'
-    },
+
     module: {
       rules: [
         {
@@ -61,8 +58,8 @@ function getCommonConfig() {
         description: 'Scrollbear spellbook reference for Pathfinder RPG.',
         background_color: '#463e43',
         crossorigin: 'anonymous', //can be null, use-credentials or anonymous
-        theme_color: '#463e43',
-        'theme-color': '#463e43',
+        theme_color: '#ca945c',
+        'theme-color': '#ca945c',
         start_url: '/',
         standalone: 'standalone',
         icons: [
@@ -102,6 +99,10 @@ function getCommonConfig() {
             "src": path.resolve("resources/img/android-chrome-512x512.png"),
             "sizes": "512x512",
             "type": "image/png"
+          }, {
+            src: path.resolve("resources/img/large-owl-scroll.png"),
+            size: '1024x1024',
+            "type": "image/png"
           }
         ]
       }),
@@ -109,7 +110,7 @@ function getCommonConfig() {
         {
           from: 'assets/CNAME'
         }, {
-          from: 'assets/fav.png'
+          from: 'assets/logo.svg'
         }, {
           from: 'assets/google989809d758b4217a.html'
         }
@@ -127,9 +128,17 @@ module.exports = (env, argv) => {
       historyApiFallback: true,
       publicPath: '/'
     };
+    config.output = {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js'
+    };
   }
 
   if (argv.mode === 'production') {
+    config.output = {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].[contenthash].js'
+    };
     config.devtool = 'inline-source-map';
     config.devServer = {
       contentBase: './dist',
@@ -137,7 +146,7 @@ module.exports = (env, argv) => {
       publicPath: '/'
     };
     config.plugins.push(new FaviconsWebpackPlugin({
-      logo: './assets/fav.png',
+      logo: './assets/logo.svg',
       prefix: 'icons/',
       icons: {
         android: true,
