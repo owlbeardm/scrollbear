@@ -43,7 +43,7 @@ function getCommonConfig() {
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
-      new HtmlWebpackPlugin({template: './app/index.html', filename: '404.html'}),
+      new HtmlWebpackPlugin({template: './app/index.html', filename: 'index.html'}),
       new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
       new webpack.HashedModuleIdsPlugin(),
       new WorkboxPlugin.GenerateSW({
