@@ -7,7 +7,7 @@ const spells = require('../resources/spells.json');
 async function main() {
   try {
     console.log(spells.length);
-    fs.writeFileSync('parcer/sitemap.txt', "", 'utf8');
+    fs.writeFileSync('parcer/sitemap.txt', "https://scrollbear.com/\n", 'utf8');
     spells.forEach((spell)=>{
       const url = `https://scrollbear.com/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}\n`;
       console.log(url);
