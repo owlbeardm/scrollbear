@@ -106,6 +106,8 @@ function getCommonConfig() {
         {
           from: 'assets/CNAME'
         }, {
+          from: 'assets/sitemap.txt'
+        }, {
           from: 'assets/logo.svg'
         }, {
           from: 'assets/google989809d758b4217a.html'

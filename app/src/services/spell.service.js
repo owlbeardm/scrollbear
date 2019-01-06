@@ -13,7 +13,7 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getSpellByUrl = function(url) {
       return allSpells.find((spell) => {
-        return spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-') == url;
+        return spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_') == url;
       });
     };
 

@@ -17,7 +17,7 @@ function MainController(spellService, $state, $log) {
 
   ctrl.chooseSpell = function(index) {
     ctrl.spell = ctrl.spells[index];
-    const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-');
+    const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
     $state.go('spells', {spellUrl: spell_url});
   }
 
