@@ -9,7 +9,7 @@ async function main() {
     console.log(spells.length);
     fs.writeFileSync('parcer/sitemap.txt', "https://scrollbear.com/\n", 'utf8');
     spells.forEach((spell)=>{
-      const url = `https://scrollbear.com/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}\n`;
+      const url = `https://scrollbear.com/#!/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}\n`;
       console.log(url);
       fs.appendFileSync('parcer/sitemap.txt', url, 'utf8');
     });
