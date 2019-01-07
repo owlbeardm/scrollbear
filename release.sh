@@ -1,5 +1,6 @@
 #!/bin/bash
 
+yarn sitemap
 yarn build
 git checkout gh-pages
 git pull

@@ -6,14 +6,23 @@ const spells = require('../resources/spells.json');
 
 async function main() {
   try {
-    console.log(spells.length);
-    fs.writeFileSync('parcer/sitemap.txt', "https://scrollbear.com/\n", 'utf8');
-    spells.forEach((spell)=>{
-      const url = `https://scrollbear.com/#!/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}\n`;
-      console.log(url);
-      fs.appendFileSync('parcer/sitemap.txt', url, 'utf8');
+    const stats = fs.statSync("resources/spells.json");
+    const mtime = new Date(stats.mtime).toISOString();
+    fs.writeFileSync('assets/sitemap.xml', "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n", 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>https://scrollbear.com/</loc>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${(new Date()).toISOString()}</lastmod>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
+    spells.forEach((spell) => {
+      fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+      const url = `https://scrollbear.com/#!/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}`;
+      fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url}</loc>\n`, 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     });
-    logSuccess("Finished\n\n");
+    fs.appendFileSync('assets/sitemap.xml', '</urlset>', 'utf8');
+    logSuccess(`\n\nFinished sitemap with ${spells.length+1} links \n\tCurrent date     ${(new Date()).toISOString()} \n\tspells.json date ${mtime} \n\n`);
   } catch (e) {
     logError(e);
   }

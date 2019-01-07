@@ -108,7 +108,7 @@ function getCommonConfig() {
         }, {
           from: 'assets/404.html'
         }, {
-          from: 'assets/sitemap.txt'
+          from: 'assets/sitemap.xml'
         }, {
           from: 'assets/logo.png'
         }, {
