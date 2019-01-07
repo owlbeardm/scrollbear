@@ -9,26 +9,21 @@
       </div>
       <div class="modal-body">
         <div>
-          <b>School </b> {{$ctrl.rootScope.spell.school}} <span ng-if="$ctrl.spell.subschool">({{$ctrl.rootScope.spell.subschool}})</span> <span ng-if="$ctrl.spell.descripters">{{$ctrl.rootScope.spell.descripters}}</span>;
-          <b> Level </b>
-          <!-- sorcerer/wizard 1 --><br />
+          <p><b>School </b> {{$ctrl.rootScope.spell.school}}<span ng-if="$ctrl.rootScope.spell.subschool"> ({{$ctrl.rootScope.spell.subschool}})</span><span ng-if="$ctrl.rootScope.spell.descripters"> {{$ctrl.getDescripters()}}</span>;
+          <b> Level </b><br />
+          <!-- sorcerer/wizard 1 -->
           <b>Casting Time </b>
-          <!-- 1 standard action --><br />
+          {{$ctrl.rootScope.spell.castingTime}}<br />
           <b>Components </b>
-          <!-- V, S --><br />
-          <b>Range </b>
-          <!-- 15 ft. --><br />
-          <b>Area </b>
-          <!-- cone-shaped burst --><br />
-          <b>Targets </b>
-          <!-- <br /> -->
-          <b>Duration </b>
-          <!-- instantaneous --><br />
-          <b>Saving Throw </b>
-          <!-- Reflex half; -->
-          <b> SpellResistance </b>
-          <!-- yes --><br />
-          <p>{{$ctrl.rootScope.spell.description}}</p>
+          {{$ctrl.rootScope.spell.components}}<br />
+          <span ng-if="$ctrl.rootScope.spell.range"><b>Range </b>{{$ctrl.rootScope.spell.range}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.area"><b>Area </b>{{$ctrl.rootScope.spell.area}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.target"><b>Target </b>{{$ctrl.rootScope.spell.target}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.targets"><b>Targets </b>{{$ctrl.rootScope.spell.targets}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.effect"><b>Effect </b>{{$ctrl.rootScope.spell.effect}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.duration"><b>Duration </b>{{$ctrl.rootScope.spell.duration}}<br /></span>
+          <span ng-if="$ctrl.rootScope.spell.savingThrow"><b>Saving Throw </b>{{$ctrl.rootScope.spell.savingThrow}}; <b>Spell Resistance </b>{{$ctrl.rootScope.spell.spellResistance}}</p></span>
+          <p ng-repeat="paragraph in $ctrl.rootScope.spell.description.split('\n') track by $index">{{paragraph}}</p>
         </div>
       </div>
       <div class="modal-footer">
