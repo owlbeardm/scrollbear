@@ -56,10 +56,10 @@ function getCommonConfig() {
         name: 'ScrollBear Spellbook',
         short_name: 'ScrollBear',
         description: 'Scrollbear spellbook reference for Pathfinder RPG.',
-        background_color: '#ca945c',
+        background_color: '#463e43',
         crossorigin: 'anonymous', //can be null, use-credentials or anonymous
-        theme_color: '#ca945c',
-        'theme-color': '#ca945c',
+        theme_color: '#463e43',
+        'theme-color': '#463e43',
         start_url: '/',
         standalone: 'standalone',
         icons: [
@@ -110,7 +110,7 @@ function getCommonConfig() {
         }, {
           from: 'assets/sitemap.txt'
         }, {
-          from: 'assets/logo.svg'
+          from: 'assets/logo.png'
         }, {
           from: 'assets/google989809d758b4217a.html'
         }
@@ -146,7 +146,7 @@ module.exports = (env, argv) => {
       publicPath: '/'
     };
     config.plugins.push(new FaviconsWebpackPlugin({
-      logo: './assets/logo.svg',
+      logo: './assets/logo.png',
       prefix: 'icons/',
       icons: {
         android: true,
