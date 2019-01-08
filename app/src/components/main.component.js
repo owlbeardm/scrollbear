@@ -1,20 +1,28 @@
 "use strict";
 
-function MainController(spellService, $state, $log, CLASSES) {
+function MainController(spellService, $window, $state, $log, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
+  const localStorage = $window['localStorage'];
+  const FAV_ONLY = "FAV_ONLY";
+  const SELECTED_CLASS = "SELECTED_CLASS";
 
   ctrl.$onInit = function() {
     $log.debug("AppController init");
-    ctrl.total = 0;
-    ctrl.spells = getSpells();
     const popup = angular.element("#exampleModal");
     $log.debug('Modal popup', popup);
     popup.on("hidden.bs.modal", function() {
       $state.go('main');
     });
     ctrl.classes = CLASSES;
-    ctrl.classSelected = 'wizard'
+    const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
+    const selectedClass = JSON.parse(localStorage.getItem(SELECTED_CLASS));
+    ctrl.classSelected = (selectedClass && CLASSES[selectedClass])
+      ? selectedClass
+      : 'wizard';
+    ctrl.favOnly = favOnly
+      ? favOnly
+      : false;
     ctrl.setClass();
   }
 
@@ -39,6 +47,12 @@ function MainController(spellService, $state, $log, CLASSES) {
 
   ctrl.setClass = function() {
     spellService.setClass(ctrl.classSelected);
+    localStorage.setItem(SELECTED_CLASS, JSON.stringify(ctrl.classSelected));
+    ctrl.search();
+  }
+
+  ctrl.setFavOnly = function() {
+    localStorage.setItem(FAV_ONLY, JSON.stringify(ctrl.favOnly));
     ctrl.search();
   }
 
@@ -75,7 +89,14 @@ function MainController(spellService, $state, $log, CLASSES) {
 
 const MainComponent = {
   template: require('./main.html'),
-  controller: ['spellService', '$state', '$log', 'CLASSES', MainController]
+  controller: [
+    'spellService',
+    '$window',
+    '$state',
+    '$log',
+    'CLASSES',
+    MainController
+  ]
 }
 
 export default MainComponent;
