@@ -38,8 +38,8 @@ async function main() {
       } catch (e) {
         logError(i, "Cant parse spell", spelllist[i]);
         logError("\t", e);
-        fs.appendFileSync('parcer/spells_failed.log', i + '\t' + spelllist[i], 'utf8');
-        fs.appendFileSync('parcer/spells_failed.log', "\t" + e, 'utf8');
+        fs.appendFileSync('parcer/spells_failed.log', i + '\t' + spelllist[i] + '\n', 'utf8');
+        fs.appendFileSync('parcer/spells_failed.log', "\t" + e + '\n', 'utf8');
         f++;
       }
     }
@@ -86,7 +86,7 @@ function parseSpellSubschool(data) {
   const subschoolVar = data.match(subschool);
   if (subschoolVar)
     return removeATag(subschoolVar[0].substring(1, subschoolVar[0].length - 1).trim());
-  }
+}
 //   [Descriptor]
 function parseSpellDescriptor(data) {
   const descripters = /\[(.*?)\]/g;
@@ -97,29 +97,32 @@ function parseSpellDescriptor(data) {
     return descriptersVar[0].substring(1, descriptersVar[0].length - 1).split(',').map((value) => {
       return removeATag(value.trim())
     });
-  }
+}
 
 function parseSpellPage(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
   const spell = {};
   spell.name = rootVar.querySelector('h1').text;
   let article = rootVar.querySelector('.article-content');
-  const tempDiv = article.querySelector('div');
-  if (!tempDiv.classNames.length) {
-    article = tempDiv;
-  }
-  article.childNodes.forEach((value, index, elements) => {
-    if (value.innerHTML && value.innerHTML.includes('School')) {
+  article.querySelectorAll('p').forEach((value) => {
+    if (value.innerHTML && value.innerHTML.includes('<b>School</b>')) {
       spell.school = parseSpellSchool(value.innerHTML);
       spell.subschool = parseSpellSubschool(value.innerHTML);
       spell.descripters = parseSpellDescriptor(value.innerHTML);
       const levels = value.innerHTML.split(';')[1];
       spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
-    } else if (index > 1 && elements[index - 2].innerHTML === 'CASTING') {
+    } else if (value.innerHTML && (value.innerHTML.includes('<b>Casting Time</b>') ||
+        value.innerHTML.includes('<b>Components</b>'))) {
       const casting = value.innerHTML.split('<br />');
       spell.castingTime = removeATag(casting[0].replace('<b>Casting Time</b>', '')).trim();
       spell.components = removeATag(casting[1].replace('<b>Components</b>', '')).trim();
-    } else if (index > 1 && elements[index - 2].innerHTML === 'EFFECT') {
+    } else if (value.innerHTML && (value.innerHTML.includes('<b>Range</b>') ||
+        value.innerHTML.includes('<b>Area</b>') ||
+        value.innerHTML.includes('<b>Target</b>') ||
+        value.innerHTML.includes('<b>Effect</b>') ||
+        value.innerHTML.includes('<b>Duration</b>') ||
+        value.innerHTML.includes('<b>Saving Throw</b>') ||
+        value.innerHTML.includes('<b>Spell Resistance</b>'))) {
       const effect = value.innerHTML.split('<br />');
       effect.forEach((value) => {
         if (value.includes('Range')) {
@@ -140,7 +143,15 @@ function parseSpellPage(parsedData) {
           spell.spellResistance = removeATag(saving[1].replace('<b>Spell Resistance</b>', '')).trim();
         }
       });
-    } else if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION') {
+    }
+  });
+  const tempDiv = article.querySelector('div');
+  if (!tempDiv.classNames.length) {
+    article = tempDiv;
+  }
+
+  article.childNodes.forEach((value, index, elements) => {
+    if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION') {
       let i = index;
       spell.description = '';
       while (elements[i] && (elements[i].tagName === 'p' || !elements[i].tagName)) {
@@ -150,29 +161,15 @@ function parseSpellPage(parsedData) {
     }
   });
 
-  // spell.school = parseSpellName(articlePs[0].innerHTML);
-  // const subschoolVar = articlePs[0].innerHTML.match(subschool);
-  // if (subschoolVar)
-  //   spell.subschool = subschoolVar[0].substring(1, subschoolVar[0].length - 1).trim();
-
-  // spell.description = articlePs.reduce((accumulator, currentValue, currentIndex) => {
-  //   if (currentIndex < 6) {
-  //     return '';
-  //   }
-  //   if (currentIndex > articlePs.length - 3) {
-  //     return accumulator;
-  //   }
-  //   return accumulator + currentValue.removeWhitespace().text + '\n';
-  // }).trim();
-
-  // console.log(spell);
   return spell;
 }
 
 function getSpell(url) {
   return new Promise(function(resolve, reject) {
     http.get(url, (res) => {
-      const {statusCode} = res;
+      const {
+        statusCode
+      } = res;
       const contentType = res.headers['content-type'];
       let error;
       if (statusCode !== 200) {
