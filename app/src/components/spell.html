@@ -10,7 +10,7 @@
       <div class="modal-body">
         <div>
           <p><b>School </b> {{$ctrl.rootScope.spell.school}}<span ng-if="$ctrl.rootScope.spell.subschool"> ({{$ctrl.rootScope.spell.subschool}})</span><span ng-if="$ctrl.rootScope.spell.descripters"> {{$ctrl.getDescripters()}}</span>;
-          <b> Level </b><br />
+          <b>Level </b>{{$ctrl.rootScope.spell.levels}}<br />
           <!-- sorcerer/wizard 1 -->
           <b>Casting Time </b>
           {{$ctrl.rootScope.spell.castingTime}}<br />

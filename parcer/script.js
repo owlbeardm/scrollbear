@@ -113,6 +113,8 @@ function parseSpellPage(parsedData) {
       spell.school = parseSpellSchool(value.innerHTML);
       spell.subschool = parseSpellSubschool(value.innerHTML);
       spell.descripters = parseSpellDescriptor(value.innerHTML);
+      const levels = value.innerHTML.split(';')[1];
+      spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
     } else if (index > 1 && elements[index - 2].innerHTML === 'CASTING') {
       const casting = value.innerHTML.split('<br />');
       spell.castingTime = removeATag(casting[0].replace('<b>Casting Time</b>', '')).trim();
