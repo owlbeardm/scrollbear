@@ -1,6 +1,6 @@
 <spell spell="$ctrl.spell"></spell>
 <div class="card">
-  <div class="card-body">
+  <div class="card-header">
     <div class="flextable table-actions">
       <div class="flextable-item ">
         <form ng-submit="$ctrl.search()">
@@ -30,7 +30,16 @@
         </form>
       </div>
     </div>
+  </div>
+  <div class="card-body">
     <spelllist spells="$ctrl.spells" class-name="$ctrl.classSelected"></spelllist>
+  </div>
+  <div class="card-footer">
+    <div class="container">
+      <span class="float-right">
+      Total: {{$ctrl.total}}
+    </span>
+    </div>
   </div>
 </div>
 <ui-view></ui-view>

@@ -6,8 +6,8 @@ function MainController(spellService, $state, $log, CLASSES) {
 
   ctrl.$onInit = function() {
     $log.debug("AppController init");
+    ctrl.total = 0;
     ctrl.spells = getSpells();
-    $log.debug("AppController init", ctrl.spells);
     const popup = angular.element("#exampleModal");
     $log.debug('Modal popup', popup);
     popup.on("hidden.bs.modal", function() {
@@ -21,9 +21,7 @@ function MainController(spellService, $state, $log, CLASSES) {
   ctrl.chooseSpell = function(index) {
     ctrl.spell = ctrl.spells[index];
     const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
+    $state.go('spells', {spellUrl: spell_url});
   }
 
   ctrl.isFav = function(index) {
@@ -56,19 +54,21 @@ function MainController(spellService, $state, $log, CLASSES) {
       if (ctrl.favOnly) {
         include = include && spellService.isFav(value);
       }
-      if(include){
+      if (include) {
         value.levels.split(', ').forEach((classLevel) => {
-          const className = classLevel.substring(0,classLevel.length-2);
-          if(className.includes(ctrl.classSelected)){
-            if(!allSells[classLevel.substring(classLevel.length-1)]){
-              allSells[classLevel.substring(classLevel.length-1)] = [];
+          const className = classLevel.substring(0, classLevel.length - 2);
+          if (className.includes(ctrl.classSelected)) {
+            if (!allSells[classLevel.substring(classLevel.length - 1)]) {
+              allSells[classLevel.substring(classLevel.length - 1)] = [];
             }
-            allSells[classLevel.substring(classLevel.length-1)].push(value);
+            allSells[classLevel.substring(classLevel.length - 1)].push(value);
           }
         });
       }
     });
-    console.log(allSells);
+    ctrl.total = Object.entries(allSells).reduce(function(total, pair) {
+      return total + (pair[1].length);
+    }, 0);
     return allSells;
   }
 }

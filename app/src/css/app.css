@@ -2,7 +2,20 @@
   width: 100%;
 }
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.text-muted {
+  color: #d4d4d3 !important;
+}
+
+.card-collapse {
+  margin: 0px;
+}
+
+.accordion {
+  margin-left: -20px;
+  margin-right: -20px;
 }
