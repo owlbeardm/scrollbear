@@ -18,7 +18,17 @@ function MainController(spellService, $state, $log) {
   ctrl.chooseSpell = function(index) {
     ctrl.spell = ctrl.spells[index];
     const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-    $state.go('spells', {spellUrl: spell_url});
+    $state.go('spells', {
+      spellUrl: spell_url
+    });
+  }
+
+  ctrl.isFav = function(index) {
+    return spellService.isFav(ctrl.spells[index]);
+  }
+
+  ctrl.changeFav = function(index) {
+    spellService.changeFav(ctrl.spells[index]);
   }
 
   ctrl.search = function() {
@@ -28,10 +38,16 @@ function MainController(spellService, $state, $log) {
 
   function getSpells() {
     return spellService.getAllSpells().filter((value) => {
+      let include = false;
       if (!ctrl.filter) {
-        return true;
+        include = true;
+      } else {
+        include = value.name.toLowerCase().includes(ctrl.filter.toLowerCase())
       }
-      return value.name.toLowerCase().includes(ctrl.filter.toLowerCase());
+      if (ctrl.favOnly) {
+        include = include && spellService.isFav(value);
+      }
+      return include;
     });
   }
 }

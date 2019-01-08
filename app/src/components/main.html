@@ -1,23 +1,45 @@
 <div class="card">
   <div class="card-body">
+  <!-- <div class="card-header card-header-primary"> -->
     <div class="flextable table-actions">
-      <div class="flextable-item">
+      <div class="flextable-item ">
         <form ng-submit="$ctrl.search()">
-          <div class="btn-toolbar-item input-with-icon">
-            <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
-            <!-- <span class="icon icon-magnifying-glass"></span> -->
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
+            </div>
+            <div class="col-auto">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" ng-change="$ctrl.search()" ng-model="$ctrl.favOnly">
+                  <span class="form-check-sign">
+                    <span class="check"></span>
+                  </span>
+                  Favorites Only
+                </label>
+              </div>
+            </div>
           </div>
         </form>
       </div>
     </div>
+  <!-- </div> -->
+
 
     <table class="table">
       <tbody>
         <tr ng-repeat="spell in $ctrl.spells track by $index">
-          <td>
-            <a href="#" class="text-dark" ng-click="$ctrl.chooseSpell($index)">
+          <td ng-click="$ctrl.chooseSpell($index)">
+            <a href="#" class="text-dark">
               {{spell.name}}
             </a>
+          </td>
+          <td class="float-right">
+            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.changeFav($index)">
+              <i class="fa-2x text-primary fa-star" ng-class="{'fas': $ctrl.isFav($index), 'far': !$ctrl.isFav($index)}"></i>
+              <div class="ripple-container"></div>
+            </button>
+            <!-- <i  class="text-muted far fa-heart"></i> -->
           </td>
         </tr>
       </tbody>

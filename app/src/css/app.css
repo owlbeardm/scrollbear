@@ -1,0 +1,8 @@
+.main-panel {
+  width: 100%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

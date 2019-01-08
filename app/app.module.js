@@ -1,8 +1,8 @@
 'use strict';
 import 'angular';
 import 'angular-ui-router';
-import './src/css/bootstrap.min.css';
 import './src/css/material-dashboard.css';
+import './src/css/app.css';
 
 import './src/components/components.module.js';
 import './src/services/services.module.js';
