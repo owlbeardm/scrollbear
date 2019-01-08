@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "icons/mstile-70x70.png"
   },
   {
-    "revision": "b424e4ec27e5edc170d4174c6e8814c0",
+    "revision": "6cd49817c44bf8df3c775081538c68b8",
     "url": "index.html"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-icon-76x76.png"
   },
   {
-    "revision": "7e78707ba9c9dd7bcc57851fe8bfe576",
-    "url": "iconstats-72f8eb6a065fb41721cb.json"
+    "revision": "fd85b3896d09654087b5cd2f0e3dcc7d",
+    "url": "iconstats-e2c675b70f6c2e62320a.json"
   },
   {
     "revision": "f9f9c05357d1bfae949032a592928966",
@@ -76,16 +76,12 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-startup-image-1496x2048.png"
   },
   {
-    "revision": "659674d5fa858df434d7f4c21edad6ad",
-    "url": "icons/apple-touch-startup-image-1182x2208.png"
-  },
-  {
     "revision": "ca737674ff26392c67a621a3dbdb14a0",
     "url": "icons/apple-touch-startup-image-1242x2148.png"
   },
   {
-    "revision": "919fdc68d476ae465c4a9c3776b173ca",
-    "url": "icons/apple-touch-startup-image-750x1294.png"
+    "revision": "659674d5fa858df434d7f4c21edad6ad",
+    "url": "icons/apple-touch-startup-image-1182x2208.png"
   },
   {
     "revision": "f3960e04e7f0504ba6a6fb24e7826849",
@@ -94,6 +90,10 @@ self.__precacheManifest = [
   {
     "revision": "7949f34dab9798fb48e3ad6859676d82",
     "url": "icons/apple-touch-startup-image-748x1024.png"
+  },
+  {
+    "revision": "919fdc68d476ae465c4a9c3776b173ca",
+    "url": "icons/apple-touch-startup-image-750x1294.png"
   },
   {
     "revision": "5e37a00074dce925398cbfd4229d501e",
@@ -144,12 +144,12 @@ self.__precacheManifest = [
     "url": "icons/favicon.ico"
   },
   {
-    "revision": "000d2d0a304044ddc93e4fc98f31cf17",
-    "url": "icons/firefox_app_60x60.png"
-  },
-  {
     "revision": "cacf77fde42dea4e1e2d686042257172",
     "url": "icons/firefox_app_128x128.png"
+  },
+  {
+    "revision": "000d2d0a304044ddc93e4fc98f31cf17",
+    "url": "icons/firefox_app_60x60.png"
   },
   {
     "revision": "95daa3517d572fa0f3302182c698c0b2",
@@ -168,16 +168,16 @@ self.__precacheManifest = [
     "url": "icons/android-chrome-384x384.png"
   },
   {
-    "revision": "a3f476b0dcb93940f3cfee4e44ec0aac",
-    "url": "icons/android-chrome-96x96.png"
-  },
-  {
     "revision": "1f92ca4c36682bb6ee30c02dd3059d7b",
     "url": "icons/apple-touch-icon-114x114.png"
   },
   {
-    "revision": "e0f40eb4492ac1a872454db8412817bf",
-    "url": "icons/apple-touch-icon-120x120.png"
+    "revision": "d94d07e8fef4dc35d3d5779f50fcf17f",
+    "url": "icons/apple-touch-icon-152x152.png"
+  },
+  {
+    "revision": "a3f476b0dcb93940f3cfee4e44ec0aac",
+    "url": "icons/android-chrome-96x96.png"
   },
   {
     "revision": "29c29b1671ae5a81d788b944e8611181",
@@ -192,16 +192,16 @@ self.__precacheManifest = [
     "url": "icons/android-chrome-512x512.png"
   },
   {
-    "revision": "d94d07e8fef4dc35d3d5779f50fcf17f",
-    "url": "icons/apple-touch-icon-152x152.png"
-  },
-  {
-    "revision": "d267eb4e9d4eb3540f17e914eaef84de",
-    "url": "icons/apple-touch-icon-167x167.png"
+    "revision": "e0f40eb4492ac1a872454db8412817bf",
+    "url": "icons/apple-touch-icon-120x120.png"
   },
   {
     "revision": "7b07d82cadf4c61668ccebd6828898b5",
     "url": "icons/apple-touch-icon-144x144.png"
+  },
+  {
+    "revision": "d267eb4e9d4eb3540f17e914eaef84de",
+    "url": "icons/apple-touch-icon-167x167.png"
   },
   {
     "revision": "80b542d2ea60e0a9a2c4137f8444be43",
@@ -216,12 +216,12 @@ self.__precacheManifest = [
     "url": "icons/android-chrome-144x144.png"
   },
   {
-    "revision": "78f7a68cdecff7aa8263eddcc6d2117b",
+    "revision": "4120733314de5fb36aef1959b5a79f2b",
     "url": "icons/.cache"
   },
   {
-    "revision": "35d3a5010f71a4b1ef11",
-    "url": "app.90d646e42e83ab9107e8.js"
+    "revision": "c9840a86d96e819e5570",
+    "url": "app.a93fa4d5d99a8700afd5.js"
   },
   {
     "url": "29c29b1671ae5a81d788b944e8611181.png"
