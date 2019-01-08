@@ -74,12 +74,19 @@ initiativeApp.config([
   }
 ]);
 
-// initiativeApp.run([
-//   '$log',
-//   '$location',
-//   '$state',
-//   function($log, $location, $state) {
-//      $state.go('main')
-//
-//   }
-// ]);
+initiativeApp.run([
+  '$log',
+  '$transitions',
+  '$location',
+  function($log, $transitions, $location) {
+    $transitions.onStart({to: 'main'}, function(transition) {
+      console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
+      // check if the state should be protected
+      if ($location.search()._escaped_fragment_) {
+        const p = $location.search()._escaped_fragment_;
+        $location.search({});
+        $location.path(p);
+      }
+    });
+  }
+]);
