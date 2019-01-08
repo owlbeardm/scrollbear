@@ -9,9 +9,17 @@ angular.module('app.services').factory('spellService', [
     const SpellService = {};
     const localStorage = $window['localStorage'];
     const FAV_SPELLS = "FAV_SPELLS";
+    let currentSpells  = [];
+
 
     SpellService.getAllSpells = function() {
-      return allSpells;
+      return currentSpells;
+    };
+
+    SpellService.setClass = function(className) {
+      currentSpells = allSpells.filter((value) => {
+        return value.levels.includes(className);
+      });
     };
 
     SpellService.getSpellByUrl = function(url) {

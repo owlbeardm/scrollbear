@@ -6,6 +6,7 @@ import './src/css/app.css';
 
 import './src/components/components.module.js';
 import './src/services/services.module.js';
+import './src/constants/constants.module.js';
 // import './src/directives/directives.module.js';
 
 if ('serviceWorker' in navigator) {
@@ -19,7 +20,7 @@ if ('serviceWorker' in navigator) {
 }
 
 const initiativeApp = angular.module('initiativeApp', [
-  'app.components', 'app.services', 'ui.router'
+  'app.components', 'app.constants', 'app.services', 'ui.router'
   // 'app.directives'
 ]);
 

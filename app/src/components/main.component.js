@@ -1,6 +1,6 @@
 "use strict";
 
-function MainController(spellService, $state, $log) {
+function MainController(spellService, $state, $log, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
 
@@ -13,6 +13,9 @@ function MainController(spellService, $state, $log) {
     popup.on("hidden.bs.modal", function() {
       $state.go('main');
     });
+    ctrl.classes = CLASSES;
+    ctrl.classSelected = 'wizard'
+    ctrl.setClass();
   }
 
   ctrl.chooseSpell = function(index) {
@@ -36,8 +39,14 @@ function MainController(spellService, $state, $log) {
     ctrl.spells = getSpells();
   }
 
+  ctrl.setClass = function() {
+    spellService.setClass(ctrl.classSelected);
+    ctrl.search();
+  }
+
   function getSpells() {
-    return spellService.getAllSpells().filter((value) => {
+    const allSells = {};
+    spellService.getAllSpells().forEach((value) => {
       let include = false;
       if (!ctrl.filter) {
         include = true;
@@ -47,14 +56,26 @@ function MainController(spellService, $state, $log) {
       if (ctrl.favOnly) {
         include = include && spellService.isFav(value);
       }
-      return include;
+      if(include){
+        value.levels.split(', ').forEach((classLevel) => {
+          const className = classLevel.substring(0,classLevel.length-2);
+          if(className.includes(ctrl.classSelected)){
+            if(!allSells[classLevel.substring(classLevel.length-1)]){
+              allSells[classLevel.substring(classLevel.length-1)] = [];
+            }
+            allSells[classLevel.substring(classLevel.length-1)].push(value);
+          }
+        });
+      }
     });
+    console.log(allSells);
+    return allSells;
   }
 }
 
 const MainComponent = {
   template: require('./main.html'),
-  controller: ['spellService', '$state', '$log', MainController]
+  controller: ['spellService', '$state', '$log', 'CLASSES', MainController]
 }
 
 export default MainComponent;

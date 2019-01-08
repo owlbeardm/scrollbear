@@ -18,103 +18,50 @@ function getCommonConfig() {
     },
 
     module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: ['babel-loader']
-        }, {
-          test: /\.html$/,
-          use: ['html-loader']
-        }, {
-          test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, "css-loader"]
-        }, {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: ['file-loader']
-        }, {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: ['file-loader']
-        }, {
-          test: /\.properties$/,
-          use: ['properties-loader']
-        }
-      ]
+      rules: [{
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: ['babel-loader']
+      }, {
+        test: /\.html$/,
+        use: ['html-loader']
+      }, {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+      }, {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader']
+      }, {
+        test: /\.properties$/,
+        use: ['properties-loader']
+      }]
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
-      new HtmlWebpackPlugin({template: './app/index.html', filename: 'index.html'}),
-      new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
+      new HtmlWebpackPlugin({
+        template: './app/index.html',
+        filename: 'index.html'
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].[contenthash].css'
+      }),
       new webpack.HashedModuleIdsPlugin(),
-      new WorkboxPlugin.GenerateSW({
-        // these options encourage the ServiceWorkers to get in there fast
-        // and not allow any straggling "old" SWs to hang around
-        clientsClaim: true,
-        skipWaiting: true
-      }),
-      new WebpackPwaManifest({
-        name: 'ScrollBear Spellbook',
-        short_name: 'ScrollBear',
-        description: 'Scrollbear spellbook reference for Pathfinder RPG.',
-        background_color: '#463e43',
-        crossorigin: 'anonymous', //can be null, use-credentials or anonymous
-        theme_color: '#463e43',
-        'theme-color': '#463e43',
-        start_url: '/',
-        standalone: 'standalone',
-        icons: [
-          {
-            "src": path.resolve("resources/img/android-chrome-36x36.png"),
-            "sizes": "36x36",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-48x48.png"),
-            "sizes": "48x48",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-72x72.png"),
-            "sizes": "72x72",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-96x96.png"),
-            "sizes": "96x96",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-144x144.png"),
-            "sizes": "144x144",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-192x192.png"),
-            "sizes": "192x192",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-256x256.png"),
-            "sizes": "256x256",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-384x384.png"),
-            "sizes": "384x384",
-            "type": "image/png"
-          }, {
-            "src": path.resolve("resources/img/android-chrome-512x512.png"),
-            "sizes": "512x512",
-            "type": "image/png"
-          }
-        ]
-      }),
-      new CopyWebpackPlugin([
-        {
-          from: 'assets/CNAME'
-        }, {
-          from: 'assets/404.html'
-        }, {
-          from: 'assets/sitemap.xml'
-        }, {
-          from: 'assets/logo.png'
-        }, {
-          from: 'assets/google989809d758b4217a.html'
-        }
-      ])
+
+
+      new CopyWebpackPlugin([{
+        from: 'assets/CNAME'
+      }, {
+        from: 'assets/404.html'
+      }, {
+        from: 'assets/sitemap.xml'
+      }, {
+        from: 'assets/logo.png'
+      }, {
+        from: 'assets/google989809d758b4217a.html'
+      }])
     ]
   }
 }
@@ -160,6 +107,58 @@ module.exports = (env, argv) => {
         yandex: true,
         windows: true
       }
+    }));
+    config.plugins.push(new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    }));
+    config.plugins.push(new WebpackPwaManifest({
+      name: 'ScrollBear Spellbook',
+      short_name: 'ScrollBear',
+      description: 'Scrollbear spellbook reference for Pathfinder RPG.',
+      background_color: '#463e43',
+      crossorigin: 'anonymous', //can be null, use-credentials or anonymous
+      theme_color: '#463e43',
+      'theme-color': '#463e43',
+      start_url: '/',
+      standalone: 'standalone',
+      icons: [{
+        "src": path.resolve("resources/img/android-chrome-36x36.png"),
+        "sizes": "36x36",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-48x48.png"),
+        "sizes": "48x48",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-72x72.png"),
+        "sizes": "72x72",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-96x96.png"),
+        "sizes": "96x96",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-144x144.png"),
+        "sizes": "144x144",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-192x192.png"),
+        "sizes": "192x192",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-256x256.png"),
+        "sizes": "256x256",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-384x384.png"),
+        "sizes": "384x384",
+        "type": "image/png"
+      }, {
+        "src": path.resolve("resources/img/android-chrome-512x512.png"),
+        "sizes": "512x512",
+        "type": "image/png"
+      }]
     }));
     config.optimization = {
       minimizer: [

@@ -1,16 +1,23 @@
+<spell spell="$ctrl.spell"></spell>
 <div class="card">
   <div class="card-body">
-  <!-- <div class="card-header card-header-primary"> -->
     <div class="flextable table-actions">
       <div class="flextable-item ">
         <form ng-submit="$ctrl.search()">
+          <div class="form-row">
+            <div class="col col-centered ">
+              <select class="form-control" ng-change="$ctrl.setClass()" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected">
+                <option ng-repeat="(key, value) in $ctrl.classes" value="{{key}}">{{value}}</option>
+              </select>
+            </div>
+          </div>
           <div class="form-row">
             <div class="col">
               <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
             </div>
             <div class="col-auto">
               <div class="form-check">
-                <label class="form-check-label">
+                <label class="form-check-label text-info">
                   <input class="form-check-input" type="checkbox" ng-change="$ctrl.search()" ng-model="$ctrl.favOnly">
                   <span class="form-check-sign">
                     <span class="check"></span>
@@ -23,28 +30,7 @@
         </form>
       </div>
     </div>
-  <!-- </div> -->
-
-
-    <table class="table">
-      <tbody>
-        <tr ng-repeat="spell in $ctrl.spells track by $index">
-          <td ng-click="$ctrl.chooseSpell($index)">
-            <a href="#" class="text-dark">
-              {{spell.name}}
-            </a>
-          </td>
-          <td class="float-right">
-            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.changeFav($index)">
-              <i class="fa-2x text-primary fa-star" ng-class="{'fas': $ctrl.isFav($index), 'far': !$ctrl.isFav($index)}"></i>
-              <div class="ripple-container"></div>
-            </button>
-            <!-- <i  class="text-muted far fa-heart"></i> -->
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <spelllist spells="$ctrl.spells" class-name="$ctrl.classSelected"></spelllist>
   </div>
 </div>
 <ui-view></ui-view>
-<spell spell="$ctrl.spell"></spell>
