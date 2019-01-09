@@ -36,10 +36,15 @@ initiativeApp.config([
       name: 'main',
       url: '/',
       component: 'main',
-      onEnter: function() {
-        const popup = angular.element("#exampleModal");
-        popup.modal('hide');
-      }
+      onEnter: [
+        '$rootScope',
+        function($rootScope) {
+          const popup = angular.element("#exampleModal");
+          popup.modal('hide');
+          $rootScope.title = '';
+          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+        }
+      ]
     });
 
     $stateProvider.state({
@@ -59,27 +64,44 @@ initiativeApp.config([
         'spell',
         '$rootScope',
         function(spell, $rootScope) {
+          $rootScope.title = `${spell.name} - `;
+          $rootScope.description = spell.description;
           $rootScope.spell = spell;
           const popup = angular.element("#exampleModal");
           popup.modal('show');
         }
       ],
-      onExit: function() {
-        const popup = angular.element("#exampleModal");
-        popup.modal('hide');
-      }
+      onExit: [
+        '$rootScope',
+        function($rootScope) {
+          const popup = angular.element("#exampleModal");
+          popup.modal('hide');
+          $rootScope.title = '';
+          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+        }
+      ]
     });
 
     $locationProvider.html5Mode(true);
   }
 ]);
 
-// initiativeApp.run([
-//   '$log',
-//   '$location',
-//   '$state',
-//   function($log, $location, $state) {
-//      $state.go('main')
-//
-//   }
-// ]);
+initiativeApp.run([
+  '$log',
+  '$transitions',
+  '$location',
+  function($log, $transitions, $location) {
+    $transitions.onStart({
+      to: 'main'
+    }, function(transition) {
+      console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
+      // check if the state should be protected
+      if ($location.search()._escaped_fragment_) {
+        const p = $location.search()._escaped_fragment_;
+        $location.search({});
+        $location.path(p);
+      }
+    });
+
+  }
+]);
