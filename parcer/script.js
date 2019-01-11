@@ -33,7 +33,7 @@ async function main() {
         if (i !== 0) {
           fs.appendFileSync('parcer/spells.json', ",", 'utf8');
         }
-        fs.appendFileSync('parcer/spells.json', JSON.stringify(spell), 'utf8');
+        fs.appendFileSync('parcer/spells.json', JSON.stringify(spell, null, 4), 'utf8');
         s++;
       } catch (e) {
         logError(i, "Cant parse spell", spelllist[i]);
@@ -45,6 +45,8 @@ async function main() {
     }
     fs.appendFileSync('parcer/spells.json', "]", 'utf8');
     logSuccess("Finished\n\n");
+    format();
+
     logSuccess("Successed", s);
     logError("Failed", f);
   } catch (e) {
@@ -52,6 +54,15 @@ async function main() {
   }
 }
 main();
+
+async function format() {
+  try {
+    fs.writeFileSync('parcer/spells.json', JSON.stringify(require('parcer/spells.json'), null, 4), 'utf8');
+    logSuccess("Formated\n\n");
+  } catch (e) {
+    logError(e);
+  }
+}
 
 function loadSpellList(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
@@ -106,16 +117,22 @@ function parseSpellPage(parsedData) {
   let article = rootVar.querySelector('.article-content');
   article.querySelectorAll('p').forEach((value) => {
     if (value.innerHTML && value.innerHTML.includes('<b>School</b>')) {
-      spell.school = parseSpellSchool(value.innerHTML);
-      spell.subschool = parseSpellSubschool(value.innerHTML);
-      spell.descripters = parseSpellDescriptor(value.innerHTML);
+      if (!spell.school)
+        spell.school = parseSpellSchool(value.innerHTML);
+      if (!spell.subschool)
+        spell.subschool = parseSpellSubschool(value.innerHTML);
+      if (!spell.descripters)
+        spell.descripters = parseSpellDescriptor(value.innerHTML);
       const levels = value.innerHTML.split(';')[1];
-      spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
+      if (!spell.levels)
+        spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
     } else if (value.innerHTML && (value.innerHTML.includes('<b>Casting Time</b>') ||
         value.innerHTML.includes('<b>Components</b>'))) {
       const casting = value.innerHTML.split('<br />');
-      spell.castingTime = removeATag(casting[0].replace('<b>Casting Time</b>', '')).trim();
-      spell.components = removeATag(casting[1].replace('<b>Components</b>', '')).trim();
+      if (!spell.castingTime)
+        spell.castingTime = removeATag(casting[0].replace('<b>Casting Time</b>', '')).trim();
+      if (!spell.components)
+        spell.components = removeATag(casting[1].replace('<b>Components</b>', '')).trim();
     } else if (value.innerHTML && (value.innerHTML.includes('<b>Range</b>') ||
         value.innerHTML.includes('<b>Area</b>') ||
         value.innerHTML.includes('<b>Target</b>') ||
@@ -125,22 +142,24 @@ function parseSpellPage(parsedData) {
         value.innerHTML.includes('<b>Spell Resistance</b>'))) {
       const effect = value.innerHTML.split('<br />');
       effect.forEach((value) => {
-        if (value.includes('Range')) {
+        if (value.includes('Range') && !spell.range) {
           spell.range = removeATag(value.replace('<b>Range</b>', '')).trim();
-        } else if (value.includes('Area')) {
+        } else if (value.includes('Area') && !spell.area) {
           spell.area = removeATag(value.replace('<b>Area</b>', '')).trim();
-        } else if (value.includes('Target')) {
+        } else if (value.includes('Target') && !spell.target) {
           spell.target = removeATag(value.replace('<b>Target</b>', '')).trim();
-        } else if (value.includes('Targets')) {
+        } else if (value.includes('Targets') && !spell.targets) {
           spell.targets = removeATag(value.replace('<b>Targets</b>', '')).trim();
-        } else if (value.includes('Effect')) {
+        } else if (value.includes('Effect') && !spell.effect) {
           spell.effect = removeATag(value.replace('<b>Effect</b>', '')).trim();
-        } else if (value.includes('Duration')) {
+        } else if (value.includes('Duration') && !spell.duration) {
           spell.duration = removeATag(value.replace('<b>Duration</b>', '')).trim();
         } else if (value.includes('Saving Throw')) {
           const saving = value.split(';');
-          spell.savingThrow = removeATag(saving[0].replace('<b>Saving Throw</b>', '')).trim();
-          spell.spellResistance = removeATag(saving[1].replace('<b>Spell Resistance</b>', '')).trim();
+          if (!spell.savingThrow)
+            spell.savingThrow = removeATag(saving[0].replace('<b>Saving Throw</b>', '')).trim();
+          if (!spell.spellResistance)
+            spell.spellResistance = removeATag(saving[1].replace('<b>Spell Resistance</b>', '')).trim();
         }
       });
     }

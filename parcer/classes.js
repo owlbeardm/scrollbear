@@ -20,7 +20,16 @@ async function main() {
     logError(e);
   }
 }
-main();
+
+async function format() {
+  try {
+    fs.writeFileSync('parcer/spells.json', JSON.stringify(spells, null, 4), 'utf8');
+  } catch (e) {
+    logError(e);
+  }
+}
+// main();
+format();
 
 function logError(...arguments) {
   if (typeof(console) !== 'undefined') {
