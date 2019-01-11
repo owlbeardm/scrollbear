@@ -71,7 +71,7 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
       if (include) {
         value.levels.split(', ').forEach((classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          if (className.includes(ctrl.classSelected)) {
+          if (className.startsWith(ctrl.classSelected)) {
             if (!allSells[classLevel.substring(classLevel.length - 1)]) {
               allSells[classLevel.substring(classLevel.length - 1)] = [];
             }
