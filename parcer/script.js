@@ -19,12 +19,12 @@ async function main() {
           throw "Spell has no Name";
         if (!spell.school)
           throw "Spell has no School";
-        if (!spell.castingTime)
-          throw "Spell has no Casting Time";
-        if (!spell.components)
-          throw "Spell has no Components";
-        if (!spell.duration)
-          throw "Spell has no Duration";
+        // if (!spell.castingTime)
+        //   throw "Spell has no Casting Time";
+        // if (!spell.components)
+        //   throw "Spell has no Components";
+        // if (!spell.duration)
+        //   throw "Spell has no Duration";
         if (!spell.description)
           throw "Spell has no Description";
 
