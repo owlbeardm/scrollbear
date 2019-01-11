@@ -148,7 +148,7 @@ function parseSpellPage(parsedData) {
           spell.area = removeATag(value.replace('<b>Area</b>', '')).trim();
         } else if (value.includes('Target') && !spell.target) {
           spell.target = removeATag(value.replace('<b>Target</b>', '')).trim();
-        } else if (value.includes('Targets') && !spell.targets) {
+        } else if (value.includes('Targets') && !spell.targets && !spell.target) {
           spell.targets = removeATag(value.replace('<b>Targets</b>', '')).trim();
         } else if (value.includes('Effect') && !spell.effect) {
           spell.effect = removeATag(value.replace('<b>Effect</b>', '')).trim();

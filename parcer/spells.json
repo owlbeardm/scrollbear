@@ -82,7 +82,7 @@
     {
         "name": "Absorb Rune I",
         "school": "abjuration",
-        "levels": "cleric 9, sorcerer/wizard 9",
+        "levels": "bard 4, cleric 4, magus 4, occultist 4, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V, S, M (a white silk glove worth 25 gp)",
         "range": "touch",
@@ -491,10 +491,9 @@
         "school": "evocation",
         "subschool": "see text",
         "descripters": [
-            "electricity",
-            "sonic"
+            "electricity"
         ],
-        "levels": "druid 4, magus 4, sorcerer/wizard 4, witch 4 Saving Throw Reflex negates and Fort negates (see text)",
+        "levels": "druid 2, magus 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a piece of a tree struck by lightning)",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -629,15 +628,15 @@
     },
     {
         "name": "Air Walk",
-        "school": "alchemist",
+        "school": "transmutation",
         "descripters": [
             "air"
         ],
-        "levels": "alchemist 5, cleric 5, druid 5",
+        "levels": "alchemist 4, cleric/oracle 4, druid 4",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature (Gargantuan or smaller) touched",
         "duration": "10 min./level",
         "savingThrow": "none",
         "spellResistance": "yes (harmless)",
@@ -717,15 +716,16 @@
     {
         "name": "Align Weapon",
         "school": "transmutation",
+        "subschool": "chaos, evil",
         "descripters": [
             "see text"
         ],
-        "levels": "cleric 3, inquisitor 3",
+        "levels": "cleric/oracle 2, inquisitor 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "weapons or projectiles touched",
-        "duration": "1 minute/level",
+        "target": "weapon touched or 50 projectiles (all of which must be together at the time of casting)",
+        "duration": "1 min./level",
         "savingThrow": "Will negates (harmless, object)",
         "spellResistance": "yes (harmless, object)",
         "description": "This spell functions as align weapon, except you divide the duration in 1-minute increments between any number of touched weapons. Every group of up to 50 projectiles (which must be together at the time of casting) counts as one weapon for the purpose of dividing the spell’s duration. \n"
@@ -1027,7 +1027,7 @@
         "descripters": [
             "good"
         ],
-        "levels": "cleric 8, paladin 4, sorcerer/wizard 8",
+        "levels": "cleric 2, paladin 2, sorcerer/wizard 2",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "personal",
@@ -1058,7 +1058,7 @@
         "name": "Animal Aspect",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 3, bloodrager 3, druid 3, magus 3, psychic 4, ranger 3, sorcerer/wizard 4",
+        "levels": "alchemist 2, bloodrager 2, druid 2, magus 2, psychic 2, ranger 2, sorcerer/wizard 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a part of the animal)",
         "range": "personal",
@@ -1175,7 +1175,7 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "mesmerist 4, psychic 5",
+        "levels": "mesmerist 2, psychic 2",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "personal",
@@ -1204,14 +1204,15 @@
     {
         "name": "Ant Haul",
         "school": "transmutation",
-        "levels": "alchemist 2, cleric 2, druid 2, psychic 2, ranger 2, sorcerer/wizard 2, summoner/unchained summoner 2",
+        "levels": "alchemist 1, cleric/oracle 1, druid 1, psychic 1, ranger 1, sorcerer/wizard 1, summoner/unchained summoner 1",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a small pulley)",
         "range": "touch",
-        "target": "Targets creatures touched",
+        "target": "Targets creature touched",
         "duration": "2 hours/level",
         "savingThrow": "Fortitude negates (harmless)",
         "spellResistance": "yes (harmless)",
+        "targets": "creatures touched",
         "description": "This spell functions like ant haul except you may divide the duration in 2-hour intervals among the creatures touched. \n"
     },
     {
@@ -1666,7 +1667,7 @@
     {
         "name": "Arcane Sight",
         "school": "divination",
-        "levels": "psychic 7, sorcerer/wizard 7, witch 7",
+        "levels": "alchemist 3, inquisitor 3, magus 3, occultist 3, psychic 3, sorcerer/wizard 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "personal",
@@ -1900,7 +1901,7 @@
         "name": "Assume Appearance",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 4, bard 4, medium 4, mesmerist 4, occultist 4, psychic 4, shaman 4, sorcerer/wizard 4, spiritualist 4, summoner 4, witch 4 Components V, S, F (corpse or likeness of the deceased creature whose form you plan to assume)",
+        "levels": "alchemist 3, bard 3, medium 3, mesmerist 3, occultist 3, psychic 3, shaman 3, sorcerer/wizard 3, spiritualist 3, summoner 3, witch 3",
         "castingTime": "1 minute",
         "components": "V, S, F (corpse of the deceased creature whose form you plan to assume)",
         "range": "personal",
@@ -1929,7 +1930,7 @@
     {
         "name": "Astral Projection",
         "school": "necromancy",
-        "levels": "cleric/oracle 5, sorcerer/wizard 5",
+        "levels": "cleric/oracle 9, sorcerer/wizard 9, witch 9",
         "castingTime": "30 minutes",
         "components": "V, S, M (1,000 gp jacinth)",
         "range": "touch",
@@ -1942,11 +1943,11 @@
     {
         "name": "Atavism",
         "school": "transmutation",
-        "levels": "druid 8",
+        "levels": "druid 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one animal/level, no two of which can be more than 30 ft. apart",
+        "target": "one animal",
         "duration": "1 minute/level",
         "savingThrow": "Fortitude negates",
         "spellResistance": "Spell resistance yes",
@@ -2515,21 +2516,22 @@
     {
         "name": "Bear’s Endurance",
         "school": "transmutation",
-        "levels": "cleric/oracle 6, druid 6, magus 6, psychic 6, shaman 6, sorcerer/wizard 6, summoner 4, unchained summoner 6",
+        "levels": "alchemist 2, bloodrager 2, cleric/oracle 2, druid 2, magus 2, psychic 2, ranger 2, shaman 2, sorcerer/wizard 2, summoner/unchained summoner 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a few hairs, or a pinch of dung, from a bear)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "1 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
         "description": "Mass bear’s endurance works like bear’s endurance, except that it affects multiple creatures.\r\n"
     },
     {
         "name": "Beast Shape",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 6, magus 6, sorcerer/wizard 6",
+        "levels": "alchemist 3, bloodrager 3, magus 3, sorcerer/wizard 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
@@ -2640,7 +2642,10 @@
     {
         "name": "Bestow Curse",
         "school": "necromancy",
-        "levels": "cleric 7, sorcerer/wizard 8, witch 7",
+        "descripters": [
+            "curse"
+        ],
+        "levels": "antipaladin 3, bloodrager 4, cleric/oracle 3, shaman 3, sorcerer/wizard 4, spiritualist 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
@@ -2697,7 +2702,7 @@
     {
         "name": "Bestow Planar Infusion I",
         "school": "evocation",
-        "levels": "cleric 7, psychic 7, sorcerer/wizard 7, witch 7",
+        "levels": "cleric 1, inquisitor 1, magus 1, medium 1, occultist 1, psychic 1, sorcerer/wizard 1, summoner 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
@@ -2801,7 +2806,7 @@
         "descripters": [
             "earth"
         ],
-        "levels": "druid 6, witch 6",
+        "levels": "druid 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -2826,14 +2831,15 @@
         "name": "Bite the Hand",
         "school": "enchantment",
         "subschool": "compulsion",
-        "levels": "druid 6, inquisitor 6, sorcerer/wizard 7, summoner 6, witch 7",
+        "levels": "druid 3, inquisitor 3, sorcerer/wizard 4, summoner 3, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "Targets one creature summoned by a spell or spell-like ability/level, no two of which can be more than 30 ft. apart",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one creature summoned by a spell or spell-like ability",
         "duration": "1 round/level (D)",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
+        "targets": "one creature summoned by a spell or spell-like ability/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like bite the hand, except as noted above. The target creatures do not need to have all been summoned by the same being. \n"
     },
     {
@@ -2885,11 +2891,12 @@
     },
     {
         "name": "Black Tentacles",
-        "school": "transmutation",
+        "school": "conjuration",
+        "subschool": "creation",
         "descripters": [
             "good"
         ],
-        "levels": "druid 6, sorcerer/wizard 6 Area 120-ft.-radius spread",
+        "levels": "bloodrager 4, magus 4, sorcerer/wizard 4, summoner 3, unchained summoner 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S, M (octopus or squid tentacle)",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -3954,6 +3961,22 @@
         "description": "The bow that is touched takes on the rigidity and toughness of forged steel, allowing it to be used as a melee weapon. The spell allows a shortbow to be used as a club or a longbow to be used as a quarterstaff, although the bow retains its normal hit points and hardness. The bow’s enhancement bonus, if any, applies on melee attack and damage rolls. Additional weapon special weapon qualities also apply to melee attacks if such qualities can be added to a melee weapon. \n"
     },
     {
+        "name": "Brand",
+        "school": "transmutation",
+        "descripters": [
+            "curse"
+        ],
+        "levels": "inquisitor 0",
+        "castingTime": "1 standard action",
+        "components": "V, S, DF",
+        "range": "touch",
+        "target": "Targets creature touched",
+        "duration": "1 day/level",
+        "savingThrow": "Fortitude negates",
+        "spellResistance": "yes",
+        "description": "This spell functions like brand, except that it inflicts 1d6 points of damage when applied and cannot be removed, even temporarily. In addition, a greater brand blazes as bright as a torch when brought within 30 feet of a visible symbol of your faith. While the symbol is blazing, the recipient is sickened. \nLike the effects of bestow curse, a greater brand cannot be dispelled, but it can be removed by any means that removes a mark of justice. \n"
+    },
+    {
         "name": "Brand of Conformity",
         "school": "transmutation",
         "descripters": [
@@ -4004,14 +4027,15 @@
     {
         "name": "Break",
         "school": "transmutation",
-        "levels": "bloodrager 4, occultist 6, psychic 6, sorcerer/wizard 6",
-        "castingTime": "1 round",
-        "components": "V, S, M (an unbroken platinum tuning fork worth 100 gp)",
-        "range": "30 ft.",
-        "target": "Targets all Medium or smaller objects in a 30-ft. burst centered on you",
+        "levels": "bloodrager 1, psychic 1, sorcerer/wizard 1",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (a twig)",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "Targets one Medium or smaller object",
         "duration": "instantaneous",
-        "savingThrow": "none",
+        "savingThrow": "Fortitude negates (object)",
         "spellResistance": "yes (object)",
+        "targets": "Targets all Medium or smaller objects in a 30-ft. burst centered on you",
         "description": "You release a burst of destructive energy. Each Medium or smaller object in the area gains the broken condition unless it succeeds at a Fortitude saving throw. If a broken object fails this save, it is instead destroyed. Magic items can be broken by this spell, but not destroyed. Objects in your possession are not immune. \r\n"
     },
     {
@@ -4123,19 +4147,6 @@
         "description": "You get a sense of the best way to interact with the target in order to encourage positive regard and fellowship toward you. \nYou gain a +2 circumstance bonus on all Charisma checks and Charisma-based skill checks you attempt when interacting with the target. In addition, whenever you fail a Charisma check or Charisma-based skill check when interacting with the target, you can reroll the check as an immediate action. \nAttempting this reroll grants the target a new saving throw to end the spell. The target doesn’t become hostile to you when the spell ends, but it does become disillusioned of its new trust in you. Attacking the target or taking an obvious hostile action against it automatically ends the spell. \nIf you are using the contacts rules, your trust score with the target increases by 1 for the duration of the spell. If you’re using the individual influence system, if the target fails its initial saving throw you learn one of its influence skills, strengths, or weaknesses as though you had succeeded at a discovery check. \n"
     },
     {
-        "name": "Bull’s Strength",
-        "school": "transmutation",
-        "levels": "cleric/oracle 6, druid 6, magus 6, psychic 6, shaman 6, sorcerer/wizard 6, summoner 4, unchained summoner 6",
-        "castingTime": "1 standard action",
-        "components": "V, S, M/DF (a few hairs, or a pinch of dung, from a bull)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
-        "duration": "1 min./level",
-        "savingThrow": "Will negates (harmless)",
-        "spellResistance": "yes (harmless)",
-        "description": "This spell functions like bull’s strength, except that it affects multiple creatures. \n"
-    },
-    {
         "name": "Bullet Shield",
         "school": "abjuration",
         "levels": "alchemist 2, bloodrager 2, psychic 2, sorcerer/wizard 2",
@@ -4158,6 +4169,20 @@
         "target": "you",
         "duration": "10 minutes/level or until discharged",
         "description": "You toss several adamantine bullets into the air, which then hover protectively nearby and intercept firearm attacks targeting you. The number of bullets protecting you is equal to half your caster level (maximum 4). When an opponent takes a shot at you with a firearm, as an immediate action you can designate a hovering bullet to attempt to block the attack, increasing your AC against that attack by 10. Doing this destroys the adamantine bullet whether or not the attack hits. The spell is discharged when all affected adamantine bullets are destroyed or taken from you. Each adamantine bullet has AC 24, 20 hit points, and hardness 20. \n"
+    },
+    {
+        "name": "Bull’s Strength",
+        "school": "transmutation",
+        "levels": "alchemist 2, antipaladin 2, bloodrager 2, cleric/oracle 2, druid 2, magus 2, paladin 2, psychic 2, shaman 2, sorcerer/wizard 2, summoner/unchained summoner 2",
+        "castingTime": "1 standard action",
+        "components": "V, S, M/DF (a few hairs, or a pinch of dung, from a bull)",
+        "range": "touch",
+        "target": "creature touched",
+        "duration": "1 min./level",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+        "description": "This spell functions like bull’s strength, except that it affects multiple creatures. \n"
     },
     {
         "name": "Bungle",
@@ -4492,11 +4517,11 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 5",
+        "levels": "bard 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a scrap of sheet music)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/level (all of which must be within 30 feet)",
+        "target": "one creature",
         "duration": "1 round/level",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
@@ -4598,10 +4623,10 @@
         "descripters": [
             "electricity"
         ],
-        "levels": "druid 5",
+        "levels": "druid 3, shaman 3",
         "castingTime": "1 round",
         "components": "V, S",
-        "range": "long (400 ft. + 40 ft./level)",
+        "range": "medium (100 ft. + 10 ft./level)",
         "effect": "one or more 30-ft.-long vertical lines of lightning",
         "duration": "1 min./level",
         "savingThrow": "Reflex half",
@@ -4667,12 +4692,12 @@
         "name": "Callback",
         "school": "conjuration",
         "subschool": "teleportation",
-        "levels": "shaman 5, sorcerer/wizard 5, witch 5",
+        "levels": "shaman 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a crushed grasshopper)",
-        "range": "1 mile/level",
+        "range": "long (400 ft. + 40 ft./level)",
         "target": "your familiar or spirit animal",
-        "duration": "1 hour/level or until expended",
+        "duration": "10 minutes/level or until expended (see text)",
         "savingThrow": "Fort negates (harmless)",
         "spellResistance": "yes",
         "description": "This spell functions as callback, except as noted above. \n"
@@ -4849,32 +4874,20 @@
         "school": "enchantment",
         "subschool": "compulsion",
         "descripters": [
+            "emotion",
             "fear",
             "language-dependent",
             "mind-affecting"
         ],
-        "levels": "inquisitor 5",
+        "levels": "inquisitor 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart.",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "Targets one living creature",
         "duration": "1 round/level or 1 round; see text",
         "savingThrow": "Will partial",
         "spellResistance": "yes",
         "description": "This spell functions as castigate, except it affects many creatures. \n"
-    },
-    {
-        "name": "Cat’s Grace",
-        "school": "transmutation",
-        "levels": "bard 6, druid 6, magus 6, psychic 6, sorcerer/wizard 6, summoner 4, unchained summoner 6",
-        "castingTime": "1 standard action",
-        "components": "V, S, M (pinch of cat fur)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
-        "duration": "1 min./level",
-        "savingThrow": "Will negates (harmless)",
-        "spellResistance": "yes",
-        "description": "This spell functions like cat’s grace, except that it affects multiple creatures. \n"
     },
     {
         "name": "Catatonia",
@@ -4887,6 +4900,20 @@
         "savingThrow": "none",
         "spellResistance": "yes",
         "description": "You touch the target and place it into a deathlike state that persists for the duration. The target appears to be dead, and any creature that interacts with the target must succeed at a DC 20 Heal check to recognize it is actually alive. \nUntil the spell ends, the target counts as if it were dead for the purpose of resolving any effects that target or affect only living creatures, but it doesn’t count as undead. The subject is helpless, and can still be killed normally. \nAny effect that would bring the creature back to life or animate it as an undead fails, but ends the catatonia. \nThe target can be affected by spells that affect only objects, including animate objects (if the creature is Small) and teleport object. However, anything that would cause the body to change form (such as shrink item) fails and ends the catatonia. This doesn’t prevent the effects of spells that simply deal damage or otherwise destroy objects. \n"
+    },
+    {
+        "name": "Cat’s Grace",
+        "school": "transmutation",
+        "levels": "alchemist 2, bard 2, bloodrager 2, druid 2, psychic 2, magus 2, ranger 2, sorcerer/wizard 2, summoner/unchained summoner 2",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (pinch of cat fur)",
+        "range": "touch",
+        "target": "creature touched",
+        "duration": "1 min./level",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+        "description": "This spell functions like cat’s grace, except that it affects multiple creatures. \n"
     },
     {
         "name": "Cause Fear",
@@ -5005,7 +5032,7 @@
         "descripters": [
             "good"
         ],
-        "levels": "bloodrager 4, cleric 4, magus 4, sorcerer/wizard 4, summoner 4, witch 4",
+        "levels": "bloodrager 1, cleric 1, magus 1, sorcerer/wizard 1, summoner 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S, M (1 drop of blood from a good outsider or 1 dose of holy water)",
         "range": "touch",
@@ -5139,12 +5166,12 @@
         "name": "Chameleon Stride",
         "school": "illusion",
         "subschool": "glamer",
-        "levels": "ranger 3",
+        "levels": "ranger 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
-        "range": "5 ft.",
+        "range": "personal",
         "target": "Targets you",
-        "duration": "1 minute/level (see text)",
+        "duration": "1 minute/level",
         "area": "allies in a 10-ft.-radius emanation centered on you",
         "description": "This spell functions as chameleon stride, except it confers its bonuses upon all allies within 10 feet of you at the time the spell is cast. Those affected by this spell are able to see each other and themselves as if they were unaffected by the spell. If an affected creature moves out of the area, it loses the benefit of the spell. Creatures that move into the area after the spell is cast do not gain its benefit. \n"
     },
@@ -5239,11 +5266,11 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 4, mesmerist 4, occultist 4, psychic 5, shaman 5, sorcerer/wizard 5, witch 5",
+        "levels": "bard 1, psychic 1, shaman 1, sorcerer/wizard 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one or more humanoid creatures, no two of which can be more than 30 ft. apart",
+        "target": "one humanoid creature",
         "duration": "1 hour/level",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
@@ -5368,9 +5395,9 @@
         "name": "Claim Identity",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 5, antipaladin 4, bard 5, druid 6, inquisitor 5, shaman 6, sorcerer/wizard 6, witch 5",
+        "levels": "alchemist 3, antipaladin 3, bard 3, druid 4, inquisitor 3, shaman 4, sorcerer/wizard 4, witch 3",
         "castingTime": "1 standard action",
-        "components": "V, S, M (a silver needle costing 100 gp)",
+        "components": "V, S, M (a needle and thread)",
         "range": "touch",
         "target": "humanoid creature touched",
         "duration": "1 hour/level",
@@ -5719,14 +5746,15 @@
             "language-dependent",
             "mind-affecting"
         ],
-        "levels": "cleric/oracle 5, inquisitor 5",
+        "levels": "antipaladin 1, cleric/oracle 1, inquisitor 1, psychic 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
-        "duration": "1 round/level",
+        "target": "one living creature",
+        "duration": "1 round",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
         "description": "You give the subject a single command, which it obeys to the best of its ability at its earliest opportunity. You may select from the following options. \r\nApproach: On its turn, the subject moves toward you as quickly and directly as possible for 1 round. The creature may do nothing but move during its turn, and it provokes attacks of opportunity for this movement as normal. \r\nDrop: On its turn, the subject drops whatever it is holding. It can’t pick up any dropped item until its next turn. \r\nFall: On its turn, the subject falls to the ground and remains prone for 1 round. It may act normally while prone but takes any appropriate penalties. \r\nFlee: On its turn, the subject moves away from you as quickly as possible for 1 round. It may do nothing but move during its turn, and it provokes attacks of opportunity for this movement as normal. \r\nHalt: The subject stands in place for 1 round. It may not take any actions but is not considered helpless. \r\nIf the subject can’t carry out your command on its next turn, the spell automatically fails. \r\n \r\n"
     },
     {
@@ -5866,7 +5894,7 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 4, cleric/oracle 5, druid 5, medium 4, mesmerist 4, sorcerer/wizard 5, witch 5",
+        "levels": "bard 1, cleric/oracle 2, druid 2, medium 2, mesmerist 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a wooden block carved with a letter)",
         "range": "touch",
@@ -6003,12 +6031,12 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 1, psychic 1",
+        "levels": "bard 3, bloodrager 4, sorcerer/wizard 4, witch 4",
         "castingTime": "1 standard action",
-        "components": "V, S, DF",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one living creature",
-        "duration": "1 round",
+        "components": "V, S, M/DF (three nutshells)",
+        "range": "medium (100 ft. + 10 ft./level)",
+        "target": "Targets all creatures in a 15-ft.-radius burst",
+        "duration": "1 round/level",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
         "description": "This spell causes a single creature to become confused for 1 round. \n "
@@ -6108,11 +6136,11 @@
     {
         "name": "Contact Entity",
         "school": "evocation",
-        "levels": "cleric 7, medium 4, occultist 6, psychic 7, shaman 7, sorcerer/wizard 7, summoner 6, witch 7",
+        "levels": "cleric 2, medium 1, occultist 2, psychic 2, shaman 2, sorcerer/wizard 2, summoner 2, witch 2",
         "castingTime": "1 minute",
         "components": "V, S, M (see text)",
-        "range": "500 miles",
-        "target": "up to 20 entities of 24 HD or fewer",
+        "range": "100 miles",
+        "target": "up to 20 entities of 6 HD or fewer; see text",
         "duration": "instantaneous",
         "savingThrow": "none",
         "spellResistance": "no",
@@ -6149,14 +6177,14 @@
             "disease",
             "evil"
         ],
-        "levels": "cleric/oracle 5, druid 5, sorcerer/wizard 6, witch 5",
+        "levels": "antipaladin 3, bloodrager 4, cleric/oracle 3, druid 3, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one living creature",
+        "range": "touch",
+        "target": "living creature touched",
         "duration": "instantaneous",
         "savingThrow": "Fortitude negates",
-        "spellResistance": "Spell resistance yes",
+        "spellResistance": "yes",
         "description": "This spell functions as contagion, except the victim cannot overcome the disease without magic—making the required number of saves does not cure it. \r\n The DC to remove the disease with magic is equal to the save DC + 5. \r\n"
     },
     {
@@ -6692,7 +6720,7 @@
         "descripters": [
             "evil"
         ],
-        "levels": "cleric/oracle 8, shaman 8, sorcerer/wizard 8",
+        "levels": "cleric/oracle 6, shaman 6, sorcerer/wizard 6",
         "castingTime": "1 hour",
         "components": "V, S, M (a clay pot filled with grave dirt and an onyx gem worth at least 50 gp per HD of the undead to be created)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -6939,13 +6967,13 @@
         "name": "Cure Light Wounds",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "bard 5, cleric/oracle 5, druid 6, inquisitor 5, shaman 5, witch 6",
+        "levels": "alchemist 1, bard 1, cleric/oracle 1, druid 1, inquisitor 1, paladin 1, ranger 2, shaman 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "instantaneous",
-        "savingThrow": "Will half (harmless) or Will half",
+        "savingThrow": "Will half (harmless)",
         "spellResistance": "see text",
         "description": "You channel positive energy to cure 1d8 points of damage + 1 point per caster level (maximum +25) on each selected creature. Like other cure spells, mass cure light wounds deals damage to undead in its area rather than curing them. Each affected undead may attempt a Will save for half damage. \r\n"
     },
@@ -7340,6 +7368,19 @@
         "description": "You ward an area’s shadows such that light cannot penetrate them.\r\nThe illumination level in the affected area no longer changes when non-magical light enters it. Any magical effect must succeed at a caster level check (DC = 10 + your caster level) in order to change the light level within the spell’s radius. Darkvault has no effect on spells or effects that would make the spell’s area darker.\r\nThe spell must be cast on an area, such as a cave or room. A spellcaster of 11th level or higher can make darkvault permanent with a permanency spell, at a cost of 7,500 gp.\r\n"
     },
     {
+        "name": "Darkvision",
+        "school": "transmutation",
+        "levels": "alchemist 2, antipaladin 2, psychic 2, ranger 3, sorcerer/wizard 2",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (either a pinch of dried carrot or an agate)",
+        "range": "touch",
+        "target": "creature touched",
+        "duration": "1 hour/level",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "description": "This spell functions as darkvision, except the target’s darkvision has a range of 120 feet. \n"
+    },
+    {
         "name": "Darting Duplicate",
         "school": "illusion",
         "subschool": "figment",
@@ -7399,14 +7440,32 @@
         "description": "You reshape the substance of a willing undead creature to resemble a living, breathing creature of the same size. This is a physical change to the undead creature’s bone, flesh, or incorporeal ectoplasm, adding new flesh or bone and even hair, teeth, and blood, all of which demonstrate false signs of life that mimic a living creature’s breathing and other physiological processes. An incorporeal undead creature using daywalker ceases to be incorporeal for the duration of the spell, gaining a physical corpse body. Creatures interacting with the undead can attempt a Perception check (DC = 30 or DC = 21 + the undead’s Disguise modifier, whichever is higher) to realize that the signs of life are false, and a close examination with a Heal check always reveals the truth of the dead flesh. \nIf the undead has the frightful presence, incorporeal, light blindness, light sensitivity, stench, sunlight powerlessness, or unnatural aura abilities, the spell suppresses them. An undead creature whose touch normally deals damage, ability drain, or energy drain doesn’t do so while under the spell’s effects. \nThe target of this spell may end its duration at any time as a standard action. \n"
     },
     {
+        "name": "Daze",
+        "school": "enchantment",
+        "subschool": "compulsion",
+        "descripters": [
+            "mind-affecting"
+        ],
+        "levels": "bard 0, inquisitor 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (a pinch of wool or similar substance)",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one humanoid creature of 4 HD or less",
+        "duration": "1 round",
+        "savingThrow": "Will negates",
+        "spellResistance": "yes",
+        "targets": "one or more humanoid creatures, no two of which may be more than 30 ft. apart",
+        "description": "This spell functions as daze, except as noted above. \n"
+    },
+    {
         "name": "Dazzling Blade",
         "school": "illusion",
         "subschool": "pattern",
-        "levels": "sorcerer/wizard 3",
+        "levels": "bard 1, sorcerer/wizard 1",
         "castingTime": "1 swift action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "One metal weapon/level, no two of which can be more than 30 ft. apart",
+        "range": "Touch",
+        "target": "one metal weapon",
         "duration": "1 minute/level",
         "savingThrow": "Will negates (see text)",
         "spellResistance": "yes (harmless, object)",
@@ -7567,7 +7626,7 @@
             "mind-affecting",
             "pain"
         ],
-        "levels": "psychic 5, witch 5 Target one creature/4 levels",
+        "levels": "psychic 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S, M",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -7823,11 +7882,11 @@
         "name": "Delay Poison",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "alchemist 3, bard 3, cleric 3, druid 3, inquisitor 3, paladin 3, ranger 3, witch 3",
+        "levels": "alchemist 2, bard 2, cleric/oracle 2, druid 2, inquisitor 2, paladin 2, ranger 1, shaman 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 hour/level",
         "savingThrow": "Fortitude negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -8387,7 +8446,7 @@
     {
         "name": "Discharge",
         "school": "abjuration",
-        "levels": "bard 6, cleric 6, magus 6, sorcerer/wizard 6, witch 6 Target or Area one creature or technological object, or a 20-ft.-radius burst",
+        "levels": "bard 3, cleric 3, magus 3, sorcerer/wizard 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -8541,7 +8600,7 @@
     {
         "name": "Dispel Magic",
         "school": "abjuration",
-        "levels": "bard 5, cleric/oracle 6, druid 6, inquisitor 6, magus 6, occultist 5, psychic 6, shaman 6, sorcerer/wizard 6, spiritualist 6, summoner/unchained summoner 5, witch 6",
+        "levels": "antipaladin 3, bard 3, cleric/oracle 3, druid 4, inquisitor 3, magus 3, medium 3, mesmerist 3, occultist 3, paladin 3, psychic 3, shaman 3, sorcerer/wizard 3, spiritualist 3, summoner/unchained summoner 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -8932,6 +8991,17 @@
         "description": "When you are struck by an opponent’s natural attacks, the damage is resolved as if the attack came from a creature one size smaller per 5 caster levels (maximum of four size categories smaller at CL 20th). Refer to Table 3–1 to determine an attack’s altered base damage. If the creature’s natural attack deals nonstandard damage, refer instead to the Improved Natural Attack feat. It is not possible to reduce the base damage of a creature’s natural attack below 1d2 with this spell. \n"
     },
     {
+        "name": "Dragonvoice",
+        "school": "transmutation",
+        "levels": "alchemist 2, bard 2, sorcerer/wizard 2, witch 2",
+        "castingTime": "1 standard action",
+        "components": "V, S",
+        "range": "personal",
+        "target": "you",
+        "duration": "1 minute/level",
+        "description": "By magically altering the way your vocal cords create sounds, you can emulate the vocal inflections of dragons. \nThis grants a +6 circumstance bonus on Charisma checks and Charisma-related skill checks when dealing with dragons. \nIn addition, your voice is much louder than normal, halving the penalties to others’ Perception checks to hear you due to distance, intervening doors, and so on. \n"
+    },
+    {
         "name": "Dragon’s Breath",
         "school": "evocation",
         "descripters": [
@@ -8949,17 +9019,6 @@
         "savingThrow": "Reflex half",
         "spellResistance": "yes",
         "description": "You breathe out a blast of energy. Creatures in the affected area take 1d6 points of energy damage per caster level (maximum of 12d6). A successful Reflex save results in half damage. The spell’s effect and energy type depend on the type of dragon scale used: \r\n"
-    },
-    {
-        "name": "Dragonvoice",
-        "school": "transmutation",
-        "levels": "alchemist 2, bard 2, sorcerer/wizard 2, witch 2",
-        "castingTime": "1 standard action",
-        "components": "V, S",
-        "range": "personal",
-        "target": "you",
-        "duration": "1 minute/level",
-        "description": "By magically altering the way your vocal cords create sounds, you can emulate the vocal inflections of dragons. \nThis grants a +6 circumstance bonus on Charisma checks and Charisma-related skill checks when dealing with dragons. \nIn addition, your voice is much louder than normal, halving the penalties to others’ Perception checks to hear you due to distance, intervening doors, and so on. \n"
     },
     {
         "name": "Drain Construct",
@@ -9321,19 +9380,6 @@
         "description": "Eagle eye creates a magical sensor directly above you. The sensor can appear anywhere above you, to a maximum height equal to the spell’s range. You can see from this vantage as if you were actually there, rotating your viewpoint 360 degrees.\r\nYou perceive with your normal visual senses. A caster using eagle eye can easily see for a considerable distance. The spell does not penetrate any solid surface, although it is unaffected by foliage and the like.\r\n"
     },
     {
-        "name": "Eagle’s Splendor",
-        "school": "transmutation",
-        "levels": "bard 6, cleric/oracle 6, psychic 6, shaman 6, sorcerer/wizard 6, summoner 4, unchained summoner 6",
-        "castingTime": "1 standard action",
-        "components": "V, S, M/DF (feathers or droppings from an eagle)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "duration": "1 min./level",
-        "savingThrow": "Will negates (harmless)",
-        "spellResistance": "yes",
-        "target": "One creature/level, no two of which can be more than 30 ft. apart",
-        "description": "This spell functions like eagle’s splendor, except that it affects multiple creatures. \n"
-    },
-    {
         "name": "Eaglesoul",
         "school": "conjuration",
         "subschool": "summoning",
@@ -9347,6 +9393,19 @@
         "target": "you",
         "duration": "1 hour/level (see below)",
         "description": "When you cast this spell, you beseech a good-aligned outsider for their aid against evil. The outsider infuses a small portion of its own power into you, making you a powerful force for good. You gain a +2 morale bonus on all Perception checks made against evil creatures, a +2 bonus on Initiative checks, and detect evil as a constant spell-like ability. \nIn addition, once during the spell’s duration you can call forth a surge of holy power when fighting an evil creature. Doing so is a swift action that shortens the spell’s remaining duration so that its remaining hours of duration become rounds of duration. For the rest of this duration, the surge of power grants you the following benefits:  \n"
+    },
+    {
+        "name": "Eagle’s Splendor",
+        "school": "transmutation",
+        "levels": "alchemist 2, antipaladin 2, bard 2, bloodrager 2, cleric/oracle 2, paladin 2, psychic 2, shaman 2, sorcerer/wizard 2, summoner/unchained summoner 2",
+        "castingTime": "1 standard action",
+        "components": "V, S, M/DF (feathers or droppings from an eagle)",
+        "range": "touch",
+        "duration": "1 min./level",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes",
+        "target": "One creature/level, no two of which can be more than 30 ft. apart",
+        "description": "This spell functions like eagle’s splendor, except that it affects multiple creatures. \n"
     },
     {
         "name": "Ear-Piercing Scream",
@@ -9508,7 +9567,7 @@
             "emotion",
             "mind-affecting"
         ],
-        "levels": "psychic 7",
+        "levels": "psychic 3",
         "castingTime": "1 standard action",
         "components": "S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -9578,7 +9637,7 @@
         "name": "Elemental Body",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 7",
+        "levels": "alchemist 4, bloodrager 4, magus 4, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V, S, M (the element you plan to assume)",
         "range": "personal",
@@ -9708,7 +9767,7 @@
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "24 hours",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -9816,11 +9875,11 @@
     {
         "name": "Enlarge Person",
         "school": "transmutation",
-        "levels": "bloodrager 4, magus 4, psychic 4, sorcerer / wizard 4, summoner 3, unchained summoner 4",
+        "levels": "alchemist 1, bloodrager 1, magus 1, psychic 1, sorcerer/wizard 1, summoner/unchained summoner 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S, M (powdered iron)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "One humanoid creature/level, no two of which can be more than 30 ft. apart",
+        "target": "one humanoid creature",
         "duration": "1 min./level (D)",
         "savingThrow": "Fortitude negates",
         "spellResistance": "yes",
@@ -9897,6 +9956,20 @@
         "savingThrow": "Will negates",
         "spellResistance": "see text",
         "description": "If you have the attention of a group of creatures, you can use this spell to hold them enthralled. To cast the spell, you must speak or sing without interruption for 1 full round. Thereafter, those affected give you their undivided attention, ignoring their surroundings. They are considered to have an attitude of friendly while under the effect of the spell. Any potentially affected creature of a race or religion unfriendly to yours gets a +4 bonus on the saving throw. \nA target with 4 or more HD or with a Wisdom score of 16 or higher remains aware of its surroundings and has an attitude of indifferent. It gains a new saving throw if it witnesses actions that it opposes. \nThe effect lasts as long as you speak or sing, to a maximum of 1 hour. Those enthralled by your words take no action while you speak or sing and for 1d3 rounds thereafter while they discuss the topic or performance. Those entering the area during the performance must also successfully save or become enthralled. The speech ends (but the 1d3-round delay still applies) if you lose concentration or do anything other than speak or sing. \nIf those not enthralled have unfriendly or hostile attitudes toward you, they can collectively make a Charisma check to try to end the spell by jeering and heckling. For this check, use the Charisma bonus of the creature with the highest Charisma in the group; others may make Charisma checks to assist. The heckling ends the spell if this check result beats your Charisma check result. Only one such challenge is allowed per use of the spell. \nIf any member of the audience is attacked or subjected to some other overtly hostile act, the spell ends and the previously enthralled members become immediately unfriendly toward you. Each creature with 4 or more HD or with a Wisdom score of 16 or higher becomes hostile. \n"
+    },
+    {
+        "name": "Entice Fey, Lesser",
+        "school": "conjuration",
+        "subschool": "calling",
+        "levels": "bard 4, druid 5, medium 3, ranger 4, shaman 5",
+        "castingTime": "10 minutes",
+        "components": "V, S, M (offerings worth 500 gp plus payment, see text), DF",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "effect": "one called fey with 6 Hit Dice or fewer",
+        "duration": "instantaneous",
+        "savingThrow": "none",
+        "spellResistance": "no",
+        "description": "This spell functions as lesser entice fey, except the spell’s whimsical calling can produce a single fey of 18 Hit Dice or less, or up to three fey of the same kind whose Hit Dice total no more than 18. \n"
     },
     {
         "name": "Entomb",
@@ -10190,7 +10263,7 @@
     {
         "name": "Evolution Surge",
         "school": "transmutation",
-        "levels": "summoner/unchained summoner 4",
+        "levels": "summoner/unchained summoner 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a chameleon scale)",
         "range": "touch",
@@ -10587,7 +10660,7 @@
     {
         "name": "False Life",
         "school": "necromancy",
-        "levels": "alchemist 4, bloodrager 4, shaman 4, sorcerer/ wizard 4, witch 4",
+        "levels": "alchemist 2, bloodrager 2, psychic 2, shaman 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a drop of blood)",
         "range": "personal",
@@ -10600,11 +10673,11 @@
         "school": "conjuration",
         "subschool": "calling",
         "descripters": [
+            "chaotic",
             "evil",
-            "lawful",
             "ruse"
         ],
-        "levels": "cleric 9 Components V, S, M (diamond worth 25,000 gp), DF Duration permanent",
+        "levels": "cleric 7, shaman 8, witch 8",
         "castingTime": "1 minute",
         "components": "V, S, M (diamond worth 10,000 gp), DF",
         "range": "touch",
@@ -10618,13 +10691,13 @@
         "name": "False Vision",
         "school": "illusion",
         "subschool": "glamer",
-        "levels": "bard 6, mesmerist 6, psychic 7, sorcerer/wizard 7",
+        "levels": "bard 5, sorcerer/wizard 5",
         "castingTime": "1 standard action",
-        "components": "V, S, M (a jade sphere worth 500 gp)",
-        "range": "see text",
+        "components": "V, S, M (crushed jade worth 250 gp)",
+        "range": "touch",
         "area": "40-ft.-radius emanation",
         "duration": "1 hour/level (D)",
-        "savingThrow": "Will negates",
+        "savingThrow": "none",
         "spellResistance": "no",
         "target": "one creature",
         "description": "This spell functions similarly to false vision, but instead of placing the illusion on a nearby area, you can tie it to a specific individual, and can do so from great distances. The spell can be cast at any distance. The difficulty of the save depends on your knowledge of the subject and what sort of physical connection (if any) you have to that creature. The target gains the same bonuses and penalties on its Will save to resist this spell as the bonuses and penalties that apply to the scrying spell (including a +5 bonus if the target is on another plane). \n The illusion created by the spell moves with the target, and is not stationary. The image can affect the way the target is perceived, the way the target’s surroundings are perceived, and the way that specific creatures or objects around the target are perceived. For the target, and any other specific creatures or objects you specify, you can cause them to appear as other creatures or objects that you designate, not to appear at all, or to have their appearance unaltered. For the target’s surroundings, you can choose to make the target appear to be somewhere else, either a specific location with which you are familiar, or a generic location conjured from your imagination. You can change the way that the spell affects the appearance of any of these things by concentrating on the spell. You can also cause creatures or objects to appear in the illusion that are not really there, or to make a creature or object seem to act in a way other than it is actually acting. In this case, you must concentrate on the spell, or these aspects of the illusion simply remain static. The spell can provide visual, auditory, olfactory, tactile, and thermal sensations as needed. \n The illusion applies to only those who observe the target via a divination (scrying) spell, and has no effect on viewers who are there in person. \n"
@@ -10779,7 +10852,7 @@
     {
         "name": "Feather Step",
         "school": "transmutation",
-        "levels": "bard 3, druid 3, psychic 3, ranger 3",
+        "levels": "bard 1, druid 1, psychic 1, ranger 1",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -10809,7 +10882,7 @@
     {
         "name": "Fester",
         "school": "necromancy",
-        "levels": "inquisitor 6, witch 6",
+        "levels": "inquisitor 3, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (rotted meat)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -10823,7 +10896,7 @@
         "name": "Fey Form",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "druid 8, shaman 8, sorcerer/wizard 9, witch 9",
+        "levels": "alchemist 3, bloodrager 3, druid 3, magus 4, shaman 3, sorcerer/wizard 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
@@ -11096,20 +11169,6 @@
         "description": "This spell causes you to begin sneezing gouts of fire that can not only set creatures ablaze but also drop them flat on their backs. Once you cast this spell, you must sneeze each round as a standard action—you can take no other standard action as long as this spell is in effect, nor can you take full-round actions. Each time you sneeze, you produce a 10-foot-long cone of fire and wind. All creatures caught in this cone take 2d6 points of fire damage—a successful Reflex save halves this damage. Any creature that fails to resist this spell with a Reflex save must immediately make a DC 12 Fortitude save or be knocked prone by the blast of wind associated with the sneeze. \n"
     },
     {
-        "name": "Fire’s Friend",
-        "school": "evocation",
-        "descripters": [
-            "fire"
-        ],
-        "levels": "alchemist 2, bloodrager 2, magus 2",
-        "castingTime": "1 standard action",
-        "components": "V, S, M (a flame of any size)",
-        "range": "personal",
-        "target": "you",
-        "duration": "1 round/level",
-        "description": "You cloak yourself in flames that do not harm you or your carried equipment but damage other creatures and objects. The flames cast light as a torch. Any creature that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you takes 1d6 points of fire damage and must succeed at a Reflex save or catch fire. The creature can negate the damage (and avoid catching fire) with spell resistance. \nAny time you end your movement in the same square as a flammable object or creature, that creature or object must succeed at a Reflex save or catch fire. \n"
-    },
-    {
         "name": "Fireball",
         "school": "evocation",
         "descripters": [
@@ -11187,6 +11246,20 @@
         "description": "A rushing stream of fire sprays from your outstretched hand, dealing 2d6 points of fire damage to every creature in the area. Each round you continue to concentrate on the spell, you can select a new area for it to affect. \nFirestream sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the firestream may continue beyond the barrier if the area permits; otherwise it stops at the barrier just as any other spell effect does. \n"
     },
     {
+        "name": "Fire’s Friend",
+        "school": "evocation",
+        "descripters": [
+            "fire"
+        ],
+        "levels": "alchemist 2, bloodrager 2, magus 2",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (a flame of any size)",
+        "range": "personal",
+        "target": "you",
+        "duration": "1 round/level",
+        "description": "You cloak yourself in flames that do not harm you or your carried equipment but damage other creatures and objects. The flames cast light as a torch. Any creature that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you takes 1d6 points of fire damage and must succeed at a Reflex save or catch fire. The creature can negate the damage (and avoid catching fire) with spell resistance. \nAny time you end your movement in the same square as a flammable object or creature, that creature or object must succeed at a Reflex save or catch fire. \n"
+    },
+    {
         "name": "Flame Arrow",
         "school": "transmutation",
         "descripters": [
@@ -11257,7 +11330,7 @@
         "descripters": [
             "fire"
         ],
-        "levels": "bloodrager 4, druid 4, magus 4, sorcerer/wizard 4 Saving Throw Reflex negates (see text)",
+        "levels": "bloodrager 2, druid 2, magus 2, sorcerer/wizard 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (tallow, brimstone, and powdered iron)",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -11349,11 +11422,11 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 6, mesmerist 5, occultist 6, psychic 7, sorcerer/wizard 8",
+        "levels": "bard 3, mesmerist 2, occultist 3, psychic 3, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart",
+        "target": "one creature",
         "duration": "1 round/level (D)",
         "savingThrow": "Will partial",
         "spellResistance": "yes",
@@ -11365,11 +11438,11 @@
         "descripters": [
             "evil"
         ],
-        "levels": "antipaladin 3, cleric 4, occultist 4, shaman 4, sorcerer/wizard 5, spiritualist 4, witch 5",
-        "castingTime": "10 minutes",
-        "components": "V, S, M (an onyx worth 50 gp for each zombie and a silken string)",
+        "levels": "antipaladin 2, cleric 3, occultist 3, shaman 3, sorcerer/wizard 4, spiritualist 3, witch 4",
+        "castingTime": "1 round",
+        "components": "V, S, M (an onyx worth 25 gp and a silken string)",
         "range": "touch",
-        "target": "one or more corpses touched",
+        "target": "one corpse touched",
         "duration": "permanent (D)",
         "savingThrow": "none",
         "spellResistance": "no",
@@ -11543,14 +11616,14 @@
     },
     {
         "name": "Fly",
-        "school": "necromancy",
-        "subschool": "chaos",
+        "school": "transmutation",
+        "subschool": "chaos, good",
         "descripters": [
-            "evil"
+            "see text"
         ],
-        "levels": "alchemist 3, bloodrager 3, magus 3, shaman 3, sorcerer/wizard 3, summoner/unchained summoner 3, witch 3",
+        "levels": "alchemist 3, bloodrager 3, magus 3, medium 3, occultist 3, psychic 3, shaman 3, sorcerer/wizard 3, spiritualist 3, summoner/unchained summoner 3, witch 3",
         "castingTime": "1 standard action",
-        "components": "V, S, M",
+        "components": "V, S, F (a wing feather)",
         "range": "touch",
         "target": "creature touched",
         "duration": "1 min./level",
@@ -11661,19 +11734,6 @@
         "description": "Through your antics and performance, you create an area of warding that adversely affects all enemies that dare enter it. When an enemy creature enters the area it must make an immediate Will Saving Throw. If it fails, the creature is confused as long as it is in the area and for 1 round after it leaves. If it succeeds on the Saving Throw, the creature is staggered as long as it is in the area and for 1 round after it leaves. \n"
     },
     {
-        "name": "Fool’s Gold (PZO1136)",
-        "school": "illusion",
-        "levels": "arcanist 1, bard 1, medium 1, mesmerist 1, psychic 1, skald 1, sorcerer/wizard 1",
-        "castingTime": "1 standard action",
-        "components": "V, S, M (a copper piece or silver piece)",
-        "range": "touch",
-        "target": "objects touched",
-        "duration": "1 hour/level",
-        "savingThrow": "none or Will disbelief (see text)",
-        "spellResistance": "no",
-        "description": "You can temporarily make copper or silver seem to be an equivalent amount of gold. The spell affects 1 gp/level worth of material (thus, at 3rd level, the spell affects up to 300 copper pieces, 30 silver pieces, or a copper or silver item worth no more than 3 gp). Coins increase in value as normal for the new type of coinage. For items other than coins, some of the value of the item comes from its craftsmanship, regardless of the metal used, so the value of the item seems to be 5 times (for silver items) or 50 times (for copper items) its true value. Thus, a copper candlestick originally worth 5 cp transformed by this spell appears to be worth 250 cp, or 2 gp and 5 sp. A successful DC 25 Appraise check automatically detects the true nature of the coins or items. Creatures inspecting or interacting with the coins or items can attempt a saving throw to disbelieve the illusion. \n"
-    },
-    {
         "name": "Fool’s Gold",
         "school": "transmutation",
         "levels": "alchemist 1, antipaladin 1, bard 1, mesmerist 1, occultist 2, psychic 1, shaman 2, sorcerer/wizard 2, witch 2",
@@ -11685,6 +11745,19 @@
         "savingThrow": "Fort negates (object, see text)",
         "spellResistance": "yes",
         "description": "You cast this spell on one or more gold pieces, which make those who have them more vulnerable to your magics. A creature with one or more of these gold pieces in its possession must attempt a Will save (at this spell’s save DC) the first time the creature is forced to attempt a saving throw against a spell, spell-like ability, or supernatural ability you create. If the creature fails, it takes a –2 penalty on all saving throws against your magic effects as long as the gold piece is in its possession. Additionally, if it fails a saving throw against a magic ability of yours that is not harmless and has a duration, the duration is doubled for that creature. \n"
+    },
+    {
+        "name": "Fool’s Gold (PZO1136)",
+        "school": "illusion",
+        "levels": "arcanist 1, bard 1, medium 1, mesmerist 1, psychic 1, skald 1, sorcerer/wizard 1",
+        "castingTime": "1 standard action",
+        "components": "V, S, M (a copper piece or silver piece)",
+        "range": "touch",
+        "target": "objects touched",
+        "duration": "1 hour/level",
+        "savingThrow": "none or Will disbelief (see text)",
+        "spellResistance": "no",
+        "description": "You can temporarily make copper or silver seem to be an equivalent amount of gold. The spell affects 1 gp/level worth of material (thus, at 3rd level, the spell affects up to 300 copper pieces, 30 silver pieces, or a copper or silver item worth no more than 3 gp). Coins increase in value as normal for the new type of coinage. For items other than coins, some of the value of the item comes from its craftsmanship, regardless of the metal used, so the value of the item seems to be 5 times (for silver items) or 50 times (for copper items) its true value. Thus, a copper candlestick originally worth 5 cp transformed by this spell appears to be worth 250 cp, or 2 gp and 5 sp. A successful DC 25 Appraise check automatically detects the true nature of the coins or items. Creatures inspecting or interacting with the coins or items can attempt a saving throw to disbelieve the illusion. \n"
     },
     {
         "name": "Forbiddance",
@@ -11902,7 +11975,7 @@
         "name": "Form of The Alien Dragon I-III",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "psychic 9, sorcerer/wizard 8",
+        "levels": "alchemist 6, magus 6, psychic 7, sorcerer/wizard 6",
         "castingTime": "1 standard action",
         "components": "V, S, M (a scale of the dragon type you plan to assume)",
         "range": "personal",
@@ -11916,7 +11989,7 @@
         "name": "Form of the Dragon",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 8",
+        "levels": "alchemist 6, magus 6, sorcerer/wizard 6",
         "castingTime": "1 standard action",
         "components": "V, S, M (a scale of the dragon type you plan to assume)",
         "range": "personal",
@@ -11930,7 +12003,7 @@
         "name": "Form of the Exotic Dragon I-III",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "druid 9, sorcerer/wizard 8",
+        "levels": "alchemist 6, druid 7, sorcerer/wizard 6",
         "castingTime": "1 standard action",
         "components": "V, S, M (a scale of the dragon type you plan to assume)",
         "range": "personal",
@@ -11984,11 +12057,14 @@
     {
         "name": "Fox’s Cunning",
         "school": "transmutation",
-        "levels": "bard 6, psychic 6, sorcerer/wizard 6, summoner 4, unchained summoner 6",
+        "descripters": [
+            "subdomain"
+        ],
+        "levels": "alchemist 2, bard 2, psychic 2, sorcerer/wizard 2, summoner/unchained summoner 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (hairs or dung from a fox)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "1 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes",
@@ -12554,7 +12630,7 @@
     {
         "name": "Ghostbane Dirge",
         "school": "transmutation",
-        "levels": "bard 4, cleric/oracle 5, inquisitor 5, paladin 3, shaman 5",
+        "levels": "bard 2, cleric/oracle 2, inquisitor 2, paladin 1, shaman 2",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (an old reed from a wind instrument)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -12630,7 +12706,7 @@
         "name": "Giant Form",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 8",
+        "levels": "alchemist 6, sorcerer/wizard 7",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
@@ -12765,7 +12841,7 @@
     {
         "name": "Globe of Invulnerability",
         "school": "abjuration",
-        "levels": "sorcerer/wizard 4",
+        "levels": "sorcerer/wizard 6",
         "castingTime": "1 standard action",
         "components": "V, S, M (a glass or crystal bead)",
         "range": "10 ft.",
@@ -12822,7 +12898,7 @@
     {
         "name": "Glyph of Warding",
         "school": "abjuration",
-        "levels": "cleric/oracle 6, inquisitor 6",
+        "levels": "cleric/oracle 3, inquisitor 3, witch 3",
         "castingTime": "10 minutes",
         "components": "V, S, M (powdered diamond worth 200 gp)",
         "range": "touch",
@@ -13048,11 +13124,11 @@
         "name": "Grease",
         "school": "conjuration",
         "subschool": "creation",
-        "levels": "bard 5, magus 5, sorcerer/wizard 5, summoner 5",
+        "levels": "bard 1, magus 1, sorcerer/wizard 1, summoner/unchained summoner 1",
         "castingTime": "1 standard action",
         "components": "V, S, M (butter)",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one object/2 levels or 1 10-ft. square/2 levels; see text",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one object or 10-ft. square",
         "duration": "1 min./level (D)",
         "savingThrow": "see text",
         "spellResistance": "no",
@@ -13151,7 +13227,7 @@
     {
         "name": "Guardian Monument, Lesser",
         "school": "abjuration",
-        "levels": "bard 5, inquisitor 5, occultist 5, psychic 5, sorcerer/wizard 5, witch 5",
+        "levels": "bard 3, inquisitor 3, magus 3, occultist 3, paladin 3, psychic 3, shaman 4, sorcerer/wizard 3, witch 3",
         "castingTime": "1 full round",
         "components": "V, S, F (an unattended, non-magical object)",
         "range": "touch",
@@ -13307,11 +13383,11 @@
     {
         "name": "Halfling Vengeance",
         "school": "divination",
-        "levels": "antipaladin 4, cleric 7, inquisitor 6",
+        "levels": "antipaladin 1, cleric 2, inquisitor 2",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one Small or smaller creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "one Small or smaller creature touched",
         "duration": "1 round/level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -13441,11 +13517,11 @@
     {
         "name": "Harrowing",
         "school": "divination",
-        "levels": "bard 5, sorcerer/wizard 6, witch 6",
+        "levels": "bard 3, shaman 3, sorcerer/wizard 3, witch 3",
         "castingTime": "10 minutes",
-        "components": "V, S, F (a harrow deck)",
+        "components": "V, S, F (a Harrow deck)",
         "range": "touch",
-        "target": "one creature, plus one additional creature for every 3 caster levels",
+        "target": "one creature",
         "duration": "1 day/level or until fulfilled",
         "description": "You use a Harrow deck to tell a fortune for yourself or someone else. If you cast harrowing on another creature, you must remain adjacent to the target for the duration of the casting time. A harrowing must describe one set of events or course of action (for example, “hunting down the pirate king,” or “traveling to Viperwall to search for a magic sword”) that the target of the spell intends to undertake at some point during the spell’s duration. If you have access to a Harrow deck, draw nine cards when this spell is cast. If you do not have a Harrow deck, you can simulate the draws by rolling a d6 and a d10 for each of the nine cards. \nRecord the ability score and alignment associated with each card. Each of these cards grants a luck bonus or a penalty on a specific type of d20 check; the magnitude of the penalty or bonus depends upon how closely that particular card’s alignment matches the target creature’s alignment. If the card and target’s alignments are identical, that card provides a +2 luck bonus on the associated suit’s check. If the card and target’s alignments are of the opposite alignment (see below), the card inflicts a –1 penalty on that associated check. If the card has any other alignment, it provides a +1 luck bonus on the associated suit’s check. \nWhile penalties persist on all associated checks for as long as the harrowing persists, the bonuses are one-use bonuses that the harrowed character can “spend” at any time to modify that card’s associated check. You can spend a bonus to modify an appropriate roll after the die is rolled, but cannot spend the bonus once you know the result of the roll. Since all of the bonuses granted by a harrowing are luck bonuses, they do not stack with each other. Penalties, on the other hand, do stack. Once you spend all of the bonuses granted by a harrowing, or once the spell’s duration ends, the spell ends and the penalties are removed. \nA single creature can only be under the effects of one harrowing at a time. If it is subjected to a second harrowing while a previous harrowing is still in effect, the new harrowing automatically fails. \n"
     },
@@ -13591,11 +13667,11 @@
         "name": "Heal",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "cleric/oracle 9, shaman 9, Domain healing 9",
+        "levels": "alchemist 6, cleric/oracle 6, druid 7, inquisitor 6, shaman 7, witch 7",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "One or more creatures, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "instantaneous",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -13818,20 +13894,6 @@
         "description": "You gift the target with the ability to perfect its actions via mental clarity. On the next attack roll, saving throw, ability check, or skill check the target attempts, it rolls twice and takes the more favorable result. For every 5 caster levels you have, the target can roll twice on an additional attack roll, saving throw, ability check, or skill check (to a maximum of 5 rolls at 20th level). \nHermean potential is countered and dispelled by ill omen, but does not itself counter or dispel ill omen. \n"
     },
     {
-        "name": "Hero’s Defiance",
-        "school": "conjuration",
-        "descripters": [
-            "healing"
-        ],
-        "levels": "paladin 1",
-        "castingTime": "1 immediate action",
-        "components": "V",
-        "range": "personal",
-        "target": "Targets you",
-        "duration": "instantaneous",
-        "description": "The instant before you are reduced to 0 or fewer hit points, you can expend a use of your lay on hands ability to heal yourself as if you had used lay on hands, plus an additional 1d6 hit points. \nIf this healing brings your hit point total above 0 hit points, you do not fall, and may continue to act. If you have no more uses of lay on hands this spell has no effect. \n"
-    },
-    {
         "name": "Heroes’ Feast",
         "school": "conjuration",
         "subschool": "creation",
@@ -13886,15 +13948,29 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 5, psychic 6, sorcerer/wizard 6, spiritualist 6, summoner 5, unchained summoner 6, witch 6",
+        "levels": "alchemist 3, bard 2, bloodrager 3, inquisitor 3, medium 2, psychic 3, sorcerer/wizard 3, spiritualist 3, summoner/unchained summoner 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
         "target": "creature touched",
-        "duration": "1 min./level",
+        "duration": "10 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell functions like heroism, except the creature gains a +4 morale bonus on attack rolls, saves, and skill checks, immunity to fear effects, and temporary hit points equal to your caster level (maximum 20). \r\n"
+    },
+    {
+        "name": "Hero’s Defiance",
+        "school": "conjuration",
+        "descripters": [
+            "healing"
+        ],
+        "levels": "paladin 1",
+        "castingTime": "1 immediate action",
+        "components": "V",
+        "range": "personal",
+        "target": "Targets you",
+        "duration": "instantaneous",
+        "description": "The instant before you are reduced to 0 or fewer hit points, you can expend a use of your lay on hands ability to heal yourself as if you had used lay on hands, plus an additional 1d6 hit points. \nIf this healing brings your hit point total above 0 hit points, you do not fall, and may continue to act. If you have no more uses of lay on hands this spell has no effect. \n"
     },
     {
         "name": "Hex Vulnerability",
@@ -14044,7 +14120,7 @@
     {
         "name": "Hide from Undead",
         "school": "abjuration",
-        "levels": "cleric 3, inquisitor 3",
+        "levels": "cleric/oracle 1, inquisitor 1",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
@@ -14089,7 +14165,7 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "mesmerist 6, psychic 7, sorcerer/wizard 7, witch 7",
+        "levels": "antipaladin 2, bard 2, bloodrager 3, cleric/oracle 2, inquisitor 2, shaman 2, sorcerer/wizard 3, medium 2, mesmerist 2, occultist 3, psychic 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S, F/DF (a small, straight piece of iron)",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -14133,12 +14209,12 @@
             "mind-affecting",
             "ruse"
         ],
-        "levels": "bard 6, psychic 7, sorcerer/wizard 7, witch 7",
+        "levels": "bard 3, bloodrager 4, inquisitor 4, medium 3, psychic 4, sorcerer/wizard 4, spiritualist 4, summoner 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
         "target": "creature touched",
-        "duration": "1 minute/level (D)",
+        "duration": "10 minutes/level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell functions as greater heroism, except that you can reverse the spell by issuing a special command as a standard action if you are within medium range (100 feet + 10 feet per caster level) of the target. The target loses the bonuses and instead takes a –4 penalty on attack rolls, saving throws, and skill checks until the spell’s duration ends (no save), increasing to a –8 penalty against fear effects. Additionally, she takes damage equal to your caster level when you reverse the spell. \n Attempts to identify greater hollow heroism with a skill check incorrectly identify it as greater heroism (see the ruse descriptor). \n"
@@ -14353,7 +14429,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M (a coin)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/4 levels",
+        "target": "one creature of your size or smaller",
         "duration": "1 round/level or until discharged",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
@@ -14392,14 +14468,15 @@
     {
         "name": "Human Potential",
         "school": "transmutation",
-        "levels": "bard 6, psychic 6, sorcerer/wizard 6, summoner 6",
+        "levels": "alchemist 2, bard 2, medium 2, psychic 2, sorcerer/wizard 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a human hair)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "1 minute/level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like human potential, except it affects multiple creatures. Each target can choose a different ability score to be enhanced by this spell. \n "
     },
     {
@@ -14409,7 +14486,7 @@
             "evil",
             "mind-affecting"
         ],
-        "levels": "cleric 7, psychic 7, shaman 7, sorcerer/wizard 7, spiritualist 6, witch 7 Target one humanoid, magical beast, or monstrous humanoid/level, no two of which can be more than 30 feet apart",
+        "levels": "antipaladin 3, cleric 4, psychic 4, shaman 4, sorcerer/wizard 4, spiritualist 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a ghoul fang)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -14774,11 +14851,11 @@
         "descripters": [
             "cold"
         ],
-        "levels": "sorcerer/wizard 9",
+        "levels": "sorcerer/wizard 5",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart.",
+        "target": "one creature",
         "duration": "1 minute/level; see text",
         "savingThrow": "Reflex partial",
         "spellResistance": "yes",
@@ -14833,7 +14910,7 @@
         "name": "Illusion of Treachery",
         "school": "illusion",
         "subschool": "figment",
-        "levels": "antipaladin 4, magus 6, mesmerist 4, occultist 5, psychic 5, sorcerer/wizard 6 Target you and one creature",
+        "levels": "antipaladin 3, magus 4, mesmerist 3, occultist 4, psychic 4, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "S, F (a tiny marionette)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -15167,7 +15244,7 @@
         "descripters": [
             "evil"
         ],
-        "levels": "cleric/oracle 4, magus 4, sorcerer/wizard 4, summoner 4, witch 4",
+        "levels": "cleric/oracle 1, magus 1, sorcerer/wizard 1, summoner 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S, M (1 drop of devil blood or 1 dose of unholy water)",
         "range": "touch",
@@ -15180,11 +15257,11 @@
     {
         "name": "Inflict Light Wounds",
         "school": "necromancy",
-        "levels": "cleric/oracle 5, inquisitor 5, shaman 5, witch 6",
+        "levels": "antipaladin 1, cleric/oracle 1, inquisitor 1, shaman 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "creature touched",
         "duration": "instantaneous",
         "savingThrow": "Will half",
         "spellResistance": "yes",
@@ -15197,7 +15274,7 @@
             "mind-affecting",
             "pain"
         ],
-        "levels": "antipaladin 4, inquisitor 5, medium 4, mesmerist 5, occultist 5, psychic 6, sorcerer/wizard 7, spiritualist 5, witch 7 Target one creature/level, no two of which can be more than 30 ft. apart.",
+        "levels": "antipaladin 2, inquisitor 2, medium 2, mesmerist 2, occultist 2, psychic 2, sorcerer/wizard 3, spiritualist 2, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -15346,7 +15423,7 @@
     {
         "name": "Insect Spies",
         "school": "divination",
-        "levels": "druid 6, sorcerer/wizard 7, summoner 6, witch 7",
+        "levels": "druid 3, ranger 3, sorcerer/wizard 4, summoner 3, witch 4",
         "castingTime": "1 round",
         "components": "V, S, M (a drop of honey)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -15446,12 +15523,12 @@
         "name": "Instant Summons",
         "school": "conjuration",
         "subschool": "summoning",
-        "levels": "psychic 8, sorcerer/wizard 8, witch 8",
+        "levels": "sorcerer/wizard 7, witch 7",
         "castingTime": "1 standard action",
-        "components": "V, S, M (sapphires worth 1,000 gp each)",
+        "components": "V, S, M (sapphire worth 1,000 gp)",
         "range": "see text",
-        "target": "up to one object per 3 caster levels, each weighing 10 lbs. or less whose longest dimension is 6 ft. or less",
-        "duration": "permanent or until discharged",
+        "target": "one object weighing 10 lbs. or less whose longest dimension is 6 ft. or less",
+        "duration": "permanent until discharged",
         "savingThrow": "none",
         "spellResistance": "no",
         "description": "This spell functions as instant summons, except that you can target multiple objects. You must use a separate sapphire worth 1,000 gp for each one. For each item you target, you can touch a creature, granting that creature the ability to speak the special word for that item (each item has its own special word) while crushing the matched gem to call the item to hand. Only you or the touched creature can activate the gem or see the arcane mark upon it. \n"
@@ -15504,7 +15581,7 @@
     {
         "name": "Intellect Fortress I",
         "school": "abjuration",
-        "levels": "psychic 6",
+        "levels": "psychic 4",
         "castingTime": "1 immediate action",
         "components": "V",
         "range": "20 ft.",
@@ -15568,7 +15645,7 @@
             "evil",
             "pain"
         ],
-        "levels": "inquisitor 4, psychic 4",
+        "levels": "inquisitor 1, psychic 1, sorcerer/wizard 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S",
         "range": "touch",
@@ -15616,7 +15693,7 @@
         "descripters": [
             "figment"
         ],
-        "levels": "bard 3, psychic 4",
+        "levels": "bard 1, psychic 1",
         "castingTime": "1 standard action",
         "components": "V",
         "range": "touch",
@@ -15643,11 +15720,11 @@
         "name": "Invisibility Bubble",
         "school": "illusion",
         "subschool": "glamer",
-        "levels": "arcanist 7, mesmerist 6, psychic 7, sorcerer 7, summoner 6, unchained summoner 6, wizard 7",
+        "levels": "alchemist 2, antipaladin 2, arcanist 2, bard 2, inquisitor 2, investigator 2, magus 2, medium 2, mesmerist 2, occultist 2, psychic 2, skald 2, sorcerer 2, spiritualist 2, summoner 2, unchained summoner 2, wizard 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (needle from a sea urchin)",
-        "range": "long (400 ft. + 40 ft./level)",
-        "area": "10-ft.-radius emanation centered on the touched creature’s space",
+        "range": "touch",
+        "area": "touched creature’s space, up to one 5-foot-cube",
         "duration": "1 minute/level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -16013,13 +16090,13 @@
     {
         "name": "Keif Addiction",
         "school": "necromancy",
-        "levels": "sahir-afiyun 3",
-        "castingTime": "1 round",
+        "levels": "sahir-afiyun 5",
+        "castingTime": "10 minutes",
         "components": "V, M (a dose of keif)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one living creature with 7 HD or less",
+        "target": "one living creature",
         "duration": "1 day/level or until discharged (D)",
-        "savingThrow": "Will negates",
+        "savingThrow": "none",
         "spellResistance": "yes",
         "description": "This spell functions like lesser geas, except the only allowed command is “use keif or refined keif.” \n"
     },
@@ -16368,7 +16445,7 @@
     {
         "name": "Lend Judgment",
         "school": "divination",
-        "levels": "inquisitor 5",
+        "levels": "inquisitor 1",
         "castingTime": "1 standard action",
         "components": "V, DF",
         "range": "touch",
@@ -16461,7 +16538,7 @@
         "name": "Life Conduit",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "summoner/unchained summoner 5",
+        "levels": "summoner/unchained summoner 1",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "personal",
@@ -16596,14 +16673,15 @@
     {
         "name": "Lighten Object",
         "school": "transmutation",
-        "levels": "cleric 5, magus 5, sorcerer/wizard 5, summoner 5",
+        "levels": "bard 1, cleric/oracle 1, magus 1, sorcerer/wizard 1, summoner 1",
         "castingTime": "1 standard action",
         "components": "V, M (goose down)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets multiple objects totaling up to 1 cubic ft./level, no two of which can be more than 30 ft. apart",
-        "duration": "10 minutes/level",
+        "target": "1 object of up to 1 cubic ft./level",
+        "duration": "1 minute/level",
         "savingThrow": "Will negates (object)",
         "spellResistance": "yes (object)",
+        "targets": "multiple objects totaling up to 1 cubic ft./level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like lighten object, except that it affects a number of objects equal to half your caster level. \n"
     },
     {
@@ -17050,7 +17128,7 @@
     {
         "name": "Longstrider",
         "school": "transmutation",
-        "levels": "druid 3, ranger 3",
+        "levels": "druid 1, ranger 1",
         "castingTime": "1 standard action",
         "components": "V, S, M (a pinch of dirt)",
         "range": "personal",
@@ -17399,14 +17477,14 @@
         "name": "Magic Aura",
         "school": "illusion",
         "subschool": "glamer",
-        "levels": "bard 3, mesmerist 3, occultist 3, psychic 4, sorcerer/wizard 4",
+        "levels": "bard 1, psychic 1, sorcerer/wizard 1",
         "castingTime": "1 standard action",
-        "components": "V, S, F (a woolen handkerchief)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one creature, or one object weighing up to 20 lbs./level",
+        "components": "V, S, F (a small square of silk that must be passed over the object that receives the aura)",
+        "range": "touch",
+        "target": "one touched object weighing up to 5 lbs./level",
         "duration": "1 day/level (D)",
-        "savingThrow": "none (see text)",
-        "spellResistance": "no",
+        "savingThrow": "none",
+        "spellResistance": "see text",
         "description": "If cast on an object, this spell functions as magic aura, except that if you have identified the unique spellcasting signatures of a specific individual with greater detect magic or a similar spell, you can make the magic aura appear to have been created by that individual. Alternatively, you can simply obscure all identifiers, making it more difficult to determine who cast the spell. In either case, if the object is the subject of a greater detect magic spell, any Spellcraft check made to identify the unique spellcasting identifiers of the aura automatically produce the result you chose unless the observer disbelieves the spell with a successful Will save (as with magic aura, however, detect spells don’t grant a save to disbelieve). \n If cast on a creature, you can make that creature register to detect spells (and spells with similar capabilities) as though it were the subject of any number of spells that you specify, when the spell is cast. Alternatively, you can make the creature register as non-magical, hiding all spell effects that he is currently affected by from such scrutiny. If you choose to make the creature register as being the subject of one or more spells, you can also alter the unique spellcasting identifiers of those spell auras, in the same fashion as described for objects. \n If the target is a creature, you can also alter how the creature registers to arcane sight, making the creature appear to have or not have spellcasting or spell-like abilities, whether those abilities are arcane, divine, or psychic in nature, and the strength of the most powerful spell or spell-like ability they currently have available for use. Similarly, you can alter the way the target appears when viewed with greater detect magic, causing the last spell that he cast to seem to be any spell of your choice. \n"
     },
     {
@@ -17428,12 +17506,12 @@
     {
         "name": "Magic Fang",
         "school": "transmutation",
-        "levels": "druid 3, ranger 3, summoner/unchained summoner 3",
+        "levels": "druid 1, ranger 1, summoner/unchained summoner 1",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one living creature",
-        "duration": "1 hour/level",
+        "range": "touch",
+        "target": "living creature touched",
+        "duration": "1 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell functions like magic fang, except that the enhancement bonus on attack and damage rolls is +1 per four caster levels (maximum +5). This bonus does not allow a natural weapon or unarmed strike to bypass damage reduction aside from magic. \n Alternatively, you may imbue all of the creature’s natural weapons with a +1 enhancement bonus (regardless of your caster level). \n Greater magic fang can be made permanent with a permanency spell. \n"
@@ -17471,12 +17549,12 @@
     {
         "name": "Magic Siege Engine",
         "school": "transmutation",
-        "levels": "antipaladin 4, cleric 5, inquisitor 4, paladin 4, sorcerer/wizard 4",
+        "levels": "antipaladin 2, cleric 2, inquisitor 2, paladin 2, sorcerer/wizard 2",
         "castingTime": "1 standard action",
-        "components": "V, S, M/DF (black powder)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
+        "components": "V, S, DF",
+        "range": "touch",
         "target": "one siege engine touched",
-        "duration": "1 hour/level",
+        "duration": "1 minutes/level",
         "savingThrow": "Will negates (harmless, object)",
         "spellResistance": "yes (harmless, object)",
         "description": "This spell permits an indirect fire siege engine to bombard its targets with greater accuracy, delivering more damage. The siege weapon receives a +1 enhancement bonus on targeting rolls and damage rolls. If used on a direct fire siege weapon, this spell acts a magic weapon. \n"
@@ -17510,12 +17588,12 @@
     {
         "name": "Magic Weapon",
         "school": "transmutation",
-        "levels": "antipaladin 3, bloodrager 3, cleric/oracle 4, inquisitor 3, magus 3, paladin 3, shaman 4, sorcerer/wizard 3",
+        "levels": "antipaladin 1, bloodrager 1, cleric/oracle 1, inquisitor 1, magus 1, paladin 1, shaman 1, sorcerer/wizard 1",
         "castingTime": "1 standard action",
-        "components": "V, S, M/DF (powdered lime and carbon)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one weapon or 50 projectiles (all of which must be together at the time of casting)",
-        "duration": "1 hour/level",
+        "components": "V, S, DF",
+        "range": "touch",
+        "target": "weapon touched",
+        "duration": "1 min./level",
         "savingThrow": "Will negates (harmless, object)",
         "spellResistance": "yes (harmless, object)",
         "description": "This spell functions like magic weapon, except that it gives a weapon an enhancement bonus on attack and damage rolls of +1 per four caster levels (maximum +5). This bonus does not allow a weapon to bypass damage reduction aside from magic. \n Alternatively, you can affect as many as 50 arrows, bolts, or bullets. The projectiles must be of the same kind, and they have to be together (in the same quiver or other container). Projectiles, but not thrown weapons, lose their transmutation after they are used. Treat shuriken as projectiles, rather than as thrown weapons, for the purpose of this spell. \n"
@@ -17587,14 +17665,14 @@
     {
         "name": "Make Whole",
         "school": "transmutation",
-        "levels": "cleric/oracle 4, sorcerer/wizard 4",
-        "castingTime": "1 standard action",
+        "levels": "cleric/oracle 2, occultist 2, psychic 2, sorcerer/wizard 2",
+        "castingTime": "10 minutes",
         "components": "V, S",
-        "range": "10 ft.",
-        "target": "one object of up to 5 lb./level",
-        "duration": "The wording of this spell was updated in the CRB 6th printing to include objects but the update text was not included in the errata document (commonly referred to as “stealth” errata.) In addition, the missing ” when cast on  an object” text was added to the Greater form of the spell below by d20pfsrd.com editors. If your GM prefers the original wording simply remove the text. Additionally, the Casting Time, Components, Duration, Saving Throw, and Spell Resistance information is copied from the mending spell which this spell says it otherwise functions as.",
-        "savingThrow": "Will negates (harmless, object)",
-        "spellResistance": "yes (harmless, object)",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one object of up to 10 cu. ft./level or one construct creature of any size",
+        "duration": "instantaneous",
+        "savingThrow": ": Will negates (harmless, object)",
+        "spellResistance": ": yes (harmless, object)",
         "description": "This spell repairs 1d6 points of damage plus 1 point per level when cast on an object or construct creature (maximum 10d6+10). Greater make whole can fix destroyed magic items or technological items (items at 0 hit points or fewer), and restores the magic properties of the item if your caster level at least equal to that of the item. This spell otherwise functions as make whole. \n"
     },
     {
@@ -17832,7 +17910,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of gauze)",
         "range": "touch",
-        "target": "creatures or objects touched",
+        "target": "Targets creature or object touched",
         "duration": "1 day/level (D)",
         "savingThrow": "none",
         "spellResistance": "see text",
@@ -17884,6 +17962,19 @@
         "description": "You unleash a wave of necromantic energy that snuffs out the life force of those in its path. This wave pulses out from you in a line 5 feet wide and 30 feet long. The wave visibly rips the souls from the bodies of those it passes through, which manifest as screaming, transparent versions of the affected creatures. The wave kills every living creature of 17 or fewer HD in the line, starting with the creature closest to you, to a maximum of 1d4 HD of creatures per caster level. No creature of 18 or more HD can be affected. \nIf a creature succeeds at its saving throw or has too many HD, it doesn’t count against the HD the spell can kill The wave continues to affect creatures as it rolls away from you until you either run out of HD to affect or reach the limit of the spell’s area. If the spell does not kill any creatures, the unreleased necromantic energy violently explodes in the final square of the 60-foot line, dealing 10d6 points of damage + 1 point per caster level to any creature in that square with no saving throw. If several creatures occupy the same square, roll randomly to determine which is affected. \n"
     },
     {
+        "name": "Masterwork Transformation",
+        "school": "transmutation",
+        "levels": "bard 2, cleric/oracle 2, druid 2, sorcerer/wizard 2, witch 2",
+        "castingTime": "1 hour",
+        "components": "V, S, M (see below)",
+        "range": "touch",
+        "target": "one weapon, suit of armor, shield, tool, or skill kit touched",
+        "duration": "instantaneous",
+        "savingThrow": "none",
+        "spellResistance": "no",
+        "description": "You convert a non-masterwork item into its masterwork equivalent. A normal sword becomes a masterwork sword, a suit of leather armor becomes a masterwork suit of leather armor, a set of thieves’ tools becomes masterwork thieves’ tools, and so on. If the target object has no masterwork equivalent, the spell has no effect. You can affect 50 pieces of ammunition as if they were one weapon. You decide if the object’s appearance changes to reflect this improved quality. \nThe material component for the spell is magical reagents worth the cost difference between a normal item and the equivalent masterwork item (typically 300 gp for a weapon, 150 gp for armor, or 50 gp for a tool). If an object has multiple masterwork options (such as a double weapon, or a spiked shield that could be made masterwork as a weapon or armor), you choose one option of the object to affect (though you can cast the spell again to affect another option). \n"
+    },
+    {
         "name": "Master’s Escape",
         "school": "conjuration",
         "subschool": "teleportation",
@@ -17896,19 +17987,6 @@
         "savingThrow": "none",
         "spellResistance": "no",
         "description": "You create an extradimensional link between yourself and one summoned creature you control that allows you to switch places. After casting master’s escape, you can teleport to your summoned creature’s space as a swift action, causing your summoned creature to teleport to your former space. If your summoned creature is reduced to 0 or fewer hit points before you can use this spell’s effect, you can teleport to a space that you can see within 30 feet as an immediate action. After using either of these effects, the spell ends. A summoner can target his eidolon with this spell. \n"
-    },
-    {
-        "name": "Masterwork Transformation",
-        "school": "transmutation",
-        "levels": "bard 2, cleric/oracle 2, druid 2, sorcerer/wizard 2, witch 2",
-        "castingTime": "1 hour",
-        "components": "V, S, M (see below)",
-        "range": "touch",
-        "target": "one weapon, suit of armor, shield, tool, or skill kit touched",
-        "duration": "instantaneous",
-        "savingThrow": "none",
-        "spellResistance": "no",
-        "description": "You convert a non-masterwork item into its masterwork equivalent. A normal sword becomes a masterwork sword, a suit of leather armor becomes a masterwork suit of leather armor, a set of thieves’ tools becomes masterwork thieves’ tools, and so on. If the target object has no masterwork equivalent, the spell has no effect. You can affect 50 pieces of ammunition as if they were one weapon. You decide if the object’s appearance changes to reflect this improved quality. \nThe material component for the spell is magical reagents worth the cost difference between a normal item and the equivalent masterwork item (typically 300 gp for a weapon, 150 gp for armor, or 50 gp for a tool). If an object has multiple masterwork options (such as a double weapon, or a spiked shield that could be made masterwork as a weapon or armor), you choose one option of the object to affect (though you can cast the spell again to affect another option). \n"
     },
     {
         "name": "Matchmaker",
@@ -18005,7 +18083,7 @@
     {
         "name": "Mental Barrier I",
         "school": "abjuration",
-        "levels": "psychic 6",
+        "levels": "psychic 2",
         "castingTime": "1 immediate action",
         "components": "V",
         "range": "personal Target you",
@@ -18172,12 +18250,12 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "psychic 9",
-        "castingTime": "1 minute",
-        "components": "V, S, M (diamonds worth 10,000 gp)",
+        "levels": "medium 3, mesmerist 5, occultist 4, psychic 5, sorcerer/wizard 6, spiritualist 4, summoner 5, witch 6",
+        "castingTime": "1 round",
+        "components": "V, S",
         "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one creature of your same race",
-        "duration": "instantaneous",
+        "target": "one creature",
+        "duration": "1 hour/level (D)",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
         "description": "The spell functions as mind swap, except as noted above. In addition, after 24 hours, instead of using each other’s hit points, You each revert to your original hit points, modified by your new Constitution modifiers. This spell can be reversed only with miracle, wish, or another major mind swap. \n"
@@ -18578,7 +18656,7 @@
         "name": "Monstrous Physique",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 6, magus 6, sorcerer/wizard 6",
+        "levels": "alchemist 3, bloodrager 3, magus 3, sorcerer/wizard 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
@@ -18662,7 +18740,7 @@
         "castingTime": "1 round",
         "components": "V, S, M (a bit of horse hair)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "effect": "up to six mounts",
+        "effect": "one mount",
         "duration": "2 hours/level (D)",
         "savingThrow": "none",
         "spellResistance": "no",
@@ -18784,7 +18862,7 @@
             "darkness",
             "light"
         ],
-        "levels": "bard 5, mesmerist 5, psychic 6, sorcerer/wizard 7, witch 7 Targets one or more living creatures, no two of which can be more than 30 ft. apart",
+        "levels": "bard 3, mesmerist 3, psychic 3, sorcerer/wizard 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels) Targets one living creature",
@@ -18797,7 +18875,7 @@
         "name": "Naga Shape",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 6, bloodrager 6, magus 6, sorcerer/wizard 6",
+        "levels": "alchemist 4, bloodrager 4, magus 4, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you want to assume)",
         "range": "personal",
@@ -18872,6 +18950,19 @@
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "The target instinctively knows the shortest, easiest, and fastest way through the wilderness. For the purpose of determining overland speed, the target treats any trackless terrain as though there were a trail or road, and any terrain with a road or trail as though there were a highway. Up to one creature per caster level traveling with the target can also benefit from the effect. The spell functions only outdoors and does not function in magically altered terrain. \n"
+    },
+    {
+        "name": "Nature’s Ravages",
+        "school": "necromancy",
+        "levels": "cleric 4, witch 3",
+        "castingTime": "1 minute/HD of target",
+        "components": "V, S, M/DF (dried maggots)",
+        "range": "close (25 ft. + 5 ft./level)",
+        "target": "corpse of creature whose total number of HD does not exceed your caster level",
+        "duration": "instantaneous",
+        "savingThrow": "none",
+        "spellResistance": "no",
+        "description": "This spell functions like nature’s ravages, except the target corpse ages a number of years equal to up to 1 year per caster level (maximum 20 years at 20th level). \n"
     },
     {
         "name": "Nauseating Dart",
@@ -18975,7 +19066,7 @@
         "name": "Neutralize Poison",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "alchemist 6, bard 6, cleric 6, druid 5, inquisitor 6, witch 6\nComponents V, S, M/DF (a lump of charcoal)\nDuration instantaneous or 1 hour/level (D)",
+        "levels": "alchemist 4, bard 4, cleric/oracle 4, druid 3, inquisitor 4, paladin 4, ranger 3, shaman 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (charcoal)",
         "range": "touch",
@@ -19101,14 +19192,14 @@
     {
         "name": "Nondetection",
         "school": "abjuration",
-        "levels": "alchemist 2, antipaladin 2, inquisitor 2, ranger 3, sorcerer/wizard 2, summoner 2",
+        "levels": "alchemist 3, antipaladin 3, inquisitor 3, medium 2, mesmerist 3, occultist 3, psychic 3, ranger 4, sorcerer/wizard 3, spiritualist 3, summoner/unchained summoner 3",
         "castingTime": "1 standard action",
-        "components": "V, S, M (a drop of mercury)",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Target creature touched",
-        "duration": "1 minute/level",
-        "savingThrow": "Will negates (harmless)",
-        "spellResistance": "no",
+        "components": "V, S, M (diamond dust worth 50 gp)",
+        "range": "touch",
+        "target": "creature or object touched",
+        "duration": "1 hour/level",
+        "savingThrow": "Will negates (harmless, object)",
+        "spellResistance": "yes (harmless, object)",
         "description": "This spell functions like nondetection, except it blocks the effects of only divination spells and effects that target an area, rather than you or an object in your possession specifically. For example, lesser nondetection doesn’t ward you against a spellcaster who is attempting to scry on you with the scrying spell or find an object in your possession with locate object, but it does protect you against effects that target an area you happen to be in, such as detect spells or clairaudience/clairvoyance. \n"
     },
     {
@@ -19163,12 +19254,12 @@
     {
         "name": "Object Possession, Lesser",
         "school": "necromancy",
-        "levels": "occultist 5, psychic 6, sorcerer/wizard 7, spiritualist 6, witch 7",
+        "levels": "medium 2, mesmerist 3, occultist 2, psychic 3, sorcerer/wizard 4, spiritualist 3, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "unattended Gargantuan or smaller object (minimum Tiny) or construct",
-        "duration": "10 minutes/level (D)",
+        "range": "touch",
+        "target": "unattended Tiny or Small object",
+        "duration": "1 minute/level (D)",
         "savingThrow": "none",
         "spellResistance": "No",
         "description": "This spell functions as lesser object possession, except as noted above. The possessed animated object has a number of Construction Points appropriate for its size (up to 3 CP for Large objects). \n You can return your consciousness to your body as a standard action. On your next turn, you can attempt to possess a different object as a standard action instead of ending the spell. \n "
@@ -19582,7 +19673,7 @@
             "evil",
             "pain"
         ],
-        "levels": "psychic 4, sorcerer/wizard 5, witch 5",
+        "levels": "bloodrager 3, psychic 2, sorcerer/wizard 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -19716,7 +19807,7 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "bard 4, mesmerist 4, psychic 5, sorcerer/wizard 5, witch 5 Target one living creature/level, no two of which can be more than 30 ft. apart",
+        "levels": "bard 2, mesmerist 2, psychic 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -19769,11 +19860,11 @@
     {
         "name": "Peacebond",
         "school": "abjuration",
-        "levels": "inquisitor 4, occultist 4, psychic 5, sorcerer/wizard 5, witch 5",
+        "levels": "inquisitor 1, psychic 1, sorcerer/wizard 1, witch 1",
         "castingTime": "1 standard action",
         "components": "S",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "up to one weapon/level, no two of which can be more than 30 ft. apart",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one sheathed or slung weapon",
         "duration": "1 minute/level",
         "savingThrow": "Will negates (object)",
         "spellResistance": "yes (object)",
@@ -20393,6 +20484,20 @@
         "description": "You create a hideous gray cloud, similar to fog cloud, that occasionally crackles with foul-smelling bolts of sickly green lightning. Creatures in the area must save or contract one of the following diseases: blinding sickness, bubonic plague, cackle fever, demon fever, devil chills, filth fever, leprosy, mindfire, red ache, shakes, or slimy doom (the disease is chosen by you when you cast the spell and applies to all creatures that fail the save). The disease is contracted immediately (the onset period does not apply) and is an instantaneous effect. Use the disease’s listed frequency to determine further effects, but the disease’s save DC increases by +2. \r\nUnlike a fog cloud, the plague storm moves away from you at 10 feet per round, rolling along the surface of the ground. \r\nFigure out the cloud’s new spread each round based on its new point of origin, which is 10 feet farther away from the point of origin where you cast the spell. Because the vapors are heavier than air, they sink to the lowest level of the terrain, even pouring down den or sinkhole openings. The cloud cannot penetrate liquids, nor can it be cast underwater. \r\n"
     },
     {
+        "name": "Planar Adaptation",
+        "school": "transmutation",
+        "levels": "alchemist 5, cleric/oracle 4, sorcerer/wizard 5, summoner/unchained summoner 5",
+        "castingTime": "1 standard action",
+        "components": "V",
+        "range": "personal",
+        "target": "Targets you",
+        "duration": "1 hour/level (D)",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "description": "This spell functions like planar adaptation, except as noted above. \n"
+    },
+    {
         "name": "Planar Aegis",
         "school": "abjuration",
         "levels": "druid 5, occultist 4, ranger 3, sorcerer/wizard 5, summoner 4",
@@ -20473,6 +20578,20 @@
         "savingThrow": "none",
         "spellResistance": "Will disbelief (harmless)",
         "description": "You project an image of the night sky based on your current location and the local time, allowing you to observe the heavens and all of its celestial bodies and features even during the daytime, indoors, or underground. Anyone within the planetarium’s sphere can see the projection, though outside of the sphere the image becomes grainy and indistinct. \n"
+    },
+    {
+        "name": "Planetary Adaptation",
+        "school": "transmutation",
+        "levels": "alchemist 5, cleric/oracle 4, sorcerer/wizard 5, summoner 5",
+        "castingTime": "1 standard action",
+        "components": "V",
+        "range": "personal",
+        "target": "Targets you",
+        "duration": "1 hour/level (D)",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "description": "This spell functions like planetary adaptation, except as noted above. \n"
     },
     {
         "name": "Planned Assault",
@@ -20662,7 +20781,7 @@
         "name": "Polymorph",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 7",
+        "levels": "alchemist 5, sorcerer/wizard 5",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you choose)",
         "range": "touch",
@@ -20706,7 +20825,7 @@
     {
         "name": "Possession",
         "school": "necromancy",
-        "levels": "occultist 6, psychic 8, sorcerer/wizard 8, spiritualist 6, witch 8",
+        "levels": "medium 3, mesmerist 5, occultist 4, psychic 5, sorcerer/wizard 5, spiritualist 4, summoner 5, witch 5",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "medium (100 ft. + 10 ft./level)",
@@ -21049,7 +21168,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, F (a piece of tortoiseshell or turtle shell)",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 hour/level or until discharged",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -21065,7 +21184,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M/DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 min./level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "no",
@@ -21078,7 +21197,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level or until discharged",
         "savingThrow": "Fortitude negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -21094,7 +21213,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M/DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 min./level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "no",
@@ -21110,7 +21229,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M/DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 min./level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "no",
@@ -21126,7 +21245,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, M/DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "1 min./level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "no",
@@ -21219,7 +21338,7 @@
     {
         "name": "Prying Eyes",
         "school": "divination",
-        "levels": "sorcerer/wizard 8, witch 8",
+        "levels": "sorcerer/wizard 5, witch 5",
         "castingTime": "1 minute",
         "components": "V, S, M (a handful of crystal marbles)",
         "range": "1 mile",
@@ -21679,7 +21798,7 @@
         "school": "conjuration",
         "subschool": "summoning",
         "levels": "bard 3, druid 3, psychic 3, shaman 4, sorcerer/wizard 3, summoner/unchained summoner 3, witch 3",
-        "effect": "one swarm of poisonous frogs (see below)",
+        "effect": "one swarm of poisonous frogs",
         "castingTime": "1 round",
         "components": "V, S, M/DF (a square of red cloth)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -22025,11 +22144,11 @@
     {
         "name": "Reduce Person",
         "school": "transmutation",
-        "levels": "bloodrager 4, magus 4, psychic 4, sorcerer/wizard 4, summoner 3, unchained summoner 4",
+        "levels": "alchemist 1, bloodrager 1, magus 1, psychic 1, sorcerer/wizard 1, summoner/unchained summoner 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S, M (a pinch of powdered iron)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one humanoid creature/level, no two of which can be more than 30 ft. apart",
+        "target": "one humanoid creature",
         "duration": "1 min./level (D)",
         "savingThrow": "Fortitude negates",
         "spellResistance": "yes",
@@ -22260,7 +22379,7 @@
         "name": "Remove Radioactivity",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "cleric 8, druid 8, witch 8",
+        "levels": "bard 4, cleric 4, druid 4, inquisitor 4, paladin 4, ranger 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "touch",
@@ -22287,7 +22406,7 @@
     {
         "name": "Rend Body I",
         "school": "evocation",
-        "levels": "psychic 8",
+        "levels": "psychic 5",
         "castingTime": "1 full-round action",
         "components": "S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -22313,14 +22432,15 @@
     {
         "name": "Repair Undead",
         "school": "necromancy",
-        "levels": "sorcerer/wizard 5",
+        "levels": "sorcerer/wizard 1",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one undead creature/level, no two of which can be more than 30 ft. apart",
+        "range": "touch",
+        "target": "one undead creature touched (see text)",
         "duration": "instantaneous",
         "savingThrow": "Will half (harmless)",
         "spellResistance": "yes (harmless)",
+        "targets": "one undead creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions as repair undead, except as noted above, and it cures 1d8 points of damage + 1 point per caster level (maximum +20) on each selected creature. \n"
     },
     {
@@ -22499,7 +22619,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level",
         "savingThrow": "Fortitude negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -22621,6 +22741,20 @@
         "description": "You cast this spell immediately prior to resting. While under the effects of this spell, you and your allies enjoy a restful night’s sleep. If a subject completes a full night’s rest, it regains hit points as if it had undergone a full day of bed rest (regaining twice its character level in hit points). If a subject completes a full day’s rest, it regains three times its character level in hit points. Any significant interruption during the rest (such as being awoken) prevents any healing that night and ends the effect of this spell on the awakened subject. Any healing acquired while under the effects of restful sleep is considered natural healing, and has no affect on effects requiring magical healing to cure. \n"
     },
     {
+        "name": "Restoration",
+        "school": "conjuration",
+        "subschool": "healing",
+        "levels": "alchemist 4, cleric/oracle 4, inquisitor 4, paladin 4, shaman 4",
+        "castingTime": "3 rounds",
+        "components": "V, S, M (diamond dust worth 100 gp or 1,000 gp, see text)",
+        "range": "touch",
+        "target": "creature touched",
+        "duration": "instantaneous",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "description": "This spell functions like lesser restoration, except that it dispels all permanent and temporary negative levels afflicting the healed creature. Greater restoration also dispels all magical effects penalizing the creature’s abilities, cures all temporary ability damage, and restores all points permanently drained from all ability scores. It also eliminates fatigue and exhaustion, and removes all forms of insanity, confusion, and similar mental effects. \n"
+    },
+    {
         "name": "Restore Corpse",
         "school": "necromancy",
         "levels": "cleric/oracle 1, druid 1, psychic 1, sorcerer/wizard 1, witch 1",
@@ -22637,9 +22771,9 @@
         "name": "Restore Eidolon",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "summoner/unchained summoner 2",
-        "castingTime": "3 rounds",
-        "components": "V, S",
+        "levels": "summoner/unchained summoner 3",
+        "castingTime": "1 minute",
+        "components": "V, S, M (diamond dust worth 100 gp or 1,000 gp, see text)",
         "range": "touch",
         "target": "eidolon touched",
         "duration": "instantaneous",
@@ -22813,8 +22947,8 @@
         "name": "Reversion",
         "school": "conjuration",
         "subschool": "healing",
-        "levels": "cleric 5, psychic 4, wizard/sorcerer 5",
-        "castingTime": "20 minutes",
+        "levels": "cleric 3, psychic 2, wizard/sorcerer 3",
+        "castingTime": "10 minutes",
         "components": "V, S",
         "range": "personal",
         "target": "self",
@@ -23435,7 +23569,7 @@
         "name": "Sand Whirlwind",
         "school": "conjuration",
         "subschool": "creation",
-        "levels": "cleric/oracle 5",
+        "levels": "cleric/oracle 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a handful of sand, dust, or fine powder)",
         "range": "medium (100 f. + 10 f./level)",
@@ -23505,12 +23639,12 @@
     {
         "name": "Scale Spikes",
         "school": "transmutation",
-        "levels": "alchemist 4, bloodrager 4, druid 3, ranger 3, shaman 3, sorcerer/wizard 3, witch 3",
+        "levels": "alchemist 2, bloodrager 2, druid 2, ranger 2, shaman 2, sorcerer/wizard 2, witch 2",
         "castingTime": "1 standard action",
-        "components": "V, S, M/DF (a bit of thistle)",
+        "components": "V, S, M/DF (a small thorn)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one living creature/level that is a reptile, has the dragon type, or has the reptilian subtype, and also has a natural armor bonus of at least +1",
-        "duration": "1 hour/level",
+        "target": "one living creature/level that is a reptile, has the dragon type, or has the reptilian subtype, and that also has a natural armor bonus of at least +1",
+        "duration": "1 minute/level",
         "savingThrow": "Fort negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell functions like scale spikes, except that the spikes growing out of the scales have an enhancement bonus on attack and damage rolls equal to +1 for every 4 caster levels (maximum +5). This bonus does not allow the spikes to bypass damage reduction aside from magic.\r\n"
@@ -23731,12 +23865,12 @@
         "name": "Scrying",
         "school": "divination",
         "subschool": "scrying",
-        "levels": "bard 6, cleric/oracle 7, druid 7, shaman 7, sorcerer/wizard 7, witch 7",
-        "castingTime": "1 standard action",
-        "components": "V, S",
+        "levels": "bard 3, cleric/oracle 5, druid 4, shaman 4, sorcerer/wizard 4, witch 4",
+        "castingTime": "1 hour",
+        "components": "V, S, M/DF (a pool of water), F (a silver mirror worth 1,000 gp)",
         "range": "see text",
         "effect": "magical sensor",
-        "duration": "1 hour/level",
+        "duration": "1 min./level",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
         "description": "This spell functions like scrying, except as noted above. Additionally, all of the following spells function reliably through the sensor: detect chaos, detect evil, detect good, detect law, detect magic, message, read magic, and tongues. \n"
@@ -23812,7 +23946,7 @@
     {
         "name": "Sealed Life",
         "school": "abjuration",
-        "levels": "spiritualist 6 Duration 1 minute/level",
+        "levels": "medium 2, spiritualist 3",
         "castingTime": "1 standard action",
         "components": "S",
         "range": "close (25 ft. +5 ft./2 levels)",
@@ -24039,7 +24173,7 @@
             "emotion",
             "mind-affecting"
         ],
-        "levels": "bard 5, medium 4, mesmerist 5, psychic 7, sorcerer/wizard 7, witch 7",
+        "levels": "bard 3, medium 3, mesmerist 3, psychic 4, sorcerer/wizard 4, witch 4",
         "castingTime": "1 standard action",
         "components": "S, M (a rose)",
         "range": "close (25 ft. + 5 ft./2 levels) Targets one creature",
@@ -24337,7 +24471,10 @@
         "name": "Shadow Conjuration",
         "school": "illusion",
         "subschool": "shadow",
-        "levels": "sorcerer/wizard 7",
+        "descripters": [
+            "shadow"
+        ],
+        "levels": "bard 4, sorcerer/wizard 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "see text",
@@ -24370,7 +24507,7 @@
         "descripters": [
             "shadow"
         ],
-        "levels": "bard 6, mesmerist 6, psychic 6, sorcerer/wizard 6",
+        "levels": "bard 3, mesmerist 3, psychic 3, sorcerer/wizard 3",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "see text",
@@ -24480,7 +24617,7 @@
         "descripters": [
             "shadow"
         ],
-        "levels": "shaman 9, sorcerer/wizard 9, witch 9",
+        "levels": "bard 6, medium 6, shaman 6, sorcerer/wizard 6, spiritualist 6, summoner 6, witch 6",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "see text",
@@ -24665,7 +24802,7 @@
         "name": "Shapechanger’s Gift",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 7 Duration 1 hour/level",
+        "levels": "alchemist 5, magus 5, sorcerer/wizard 5",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to grant)",
         "range": "touch",
@@ -24750,7 +24887,7 @@
         "levels": "druid 6, witch 6",
         "castingTime": "Components V, S",
         "components": "Range touch",
-        "target": "one creature touched",
+        "target": "one animal touched",
         "duration": "1 minute/level or until you return to your body",
         "description": "This spell functions like share skin, except as noted here. \n"
     },
@@ -24901,7 +25038,7 @@
             "good",
             "light"
         ],
-        "levels": "bard 6, cleric 6, magus 6",
+        "levels": "bard 4, cleric/oracle 4, magus 4, paladin 4, ranger 4",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "personal",
@@ -24927,7 +25064,7 @@
     {
         "name": "Shield of Fortification",
         "school": "abjuration",
-        "levels": "cleric 4, inquisitor 3, paladin 3, psychic 4",
+        "levels": "cleric 2, inquisitor 1, paladin 1, psychic 2",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
@@ -24978,6 +25115,20 @@
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell wards the subject and creates a mystic connection between you and the subject so that some of its wounds are transferred to you. The subject gains a +1 deflection bonus to AC and a +1 resistance bonus on saves. Additionally, the subject takes only half damage from all wounds and attacks (including those dealt by special abilities) that deal hit point damage. The amount of damage not taken by the warded creature is taken by you. Forms of harm that do not involve hit points, such as charm effects, temporary ability damage, level draining, and death effects, are not affected. If the subject suffers a reduction of hit points from a lowered Constitution score, the reduction is not split with you because it is not hit point damage. When the spell ends, subsequent damage is no longer divided between the subject and you, but damage already split is not reassigned to the subject. \nIf you and the subject of the spell move out of range of each other, the spell ends. \n"
+    },
+    {
+        "name": "Shield Speech",
+        "school": "abjuration",
+        "levels": "bard 1, cleric/oracle 1, druid 1, sorcerer/wizard 1",
+        "castingTime": "1 standard action",
+        "components": "V, S",
+        "range": "10 ft.",
+        "target": "you and one other creature",
+        "duration": "1 minute/level (D)",
+        "savingThrow": "Will negates (harmless)",
+        "spellResistance": "yes (harmless)",
+        "area": "30-ft. emanation centered on you",
+        "description": "This spell functions as shield speech, except all creatures within the dome may communicate with each other as if linked by shield speech. If they speak with anyone outside the area, those outside the area hear them normally. \n"
     },
     {
         "name": "Shield the Banner",
@@ -25135,6 +25286,22 @@
         "description": "This spell works like mirror image, except the illusory doubles it creates discharge an electric shock when destroyed. An opponent that uses a melee attack to destroy one of your images takes 2d6 points of electricity damage. You must overcome a target’s spell resistance the first time you deal this electricity damage to it. Failure renders the target immune to damage from this spell. \n"
     },
     {
+        "name": "Shout",
+        "school": "evocation",
+        "descripters": [
+            "sonic"
+        ],
+        "levels": "bard 4, bloodrager 4, magus 4, sorcerer/wizard 4",
+        "castingTime": "1 standard action",
+        "components": "V",
+        "range": "30 ft.",
+        "area": "cone-shaped burst",
+        "duration": "instantaneous",
+        "savingThrow": "Fortitude partial or Reflex negates (object)",
+        "spellResistance": "see text",
+        "description": "This spell functions like shout, except that the cone deals 10d6 points of sonic damage (or 1d6 points of sonic damage per caster level, maximum 20d6, against exposed brittle or crystalline objects or crystalline creatures). It also causes creatures to be stunned for 1 round and deafened for 4d6 rounds. A creature in the area of the cone can negate the stunning and halve both the damage and the duration of the deafness with a successful Fortitude save. A creature holding vulnerable objects can attempt a Reflex save to negate the damage to those objects. \n"
+    },
+    {
         "name": "Shrink Item",
         "school": "transmutation",
         "levels": "occultist 3, psychic 3, sorcerer/wizard 3",
@@ -25197,7 +25364,7 @@
         "name": "Siege of Trees",
         "school": "transmutation",
         "subschool": "D",
-        "levels": "druid 9 Targets one Gargantuan, Huge, or Large plant per three caster levels Duration 1 hour/level (D) Saving Throw none",
+        "levels": "druid 7",
         "castingTime": "10 minutes",
         "components": "V, S, DF",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -25383,12 +25550,12 @@
         "name": "Simulacrum",
         "school": "illusion",
         "subschool": "shadow",
-        "levels": "sorcerer/wizard 4",
-        "castingTime": "1 hour",
-        "components": "V, S, M (an ice sculpture of the target plus powdered rubies worth 50 gp per HD of the simulacrum)",
+        "levels": "sorcerer/wizard 7, summoner 5",
+        "castingTime": "12 hours",
+        "components": "V, S, M (ice sculpture of the target plus powdered rubies worth 500 gp per HD of the simulacrum)",
         "range": "0 ft.",
         "effect": "one duplicate creature",
-        "duration": "1 hour/level",
+        "duration": "instantaneous",
         "savingThrow": "none",
         "spellResistance": "no",
         "description": "This spell functions as simulacrum, except you can’t create a simulacrum of a creature whose HD or levels exceed your caster level, and it has no magical abilities. The creature is not under your control, though it recognizes you are its creator. \n "
@@ -25687,7 +25854,7 @@
         "components": "V, S, M (a tiny shard of a mirror)",
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one creature",
-        "duration": "10 minute/level (D)",
+        "duration": "instantaneous*",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
         "description": "You cause your target to become overwhelmed by its own importance, talents, and attractiveness. The target cannot help but look at itself in every reflective surface at every possible opportunity. In social situations, the target always tries to comment about how attractive it is or how ugly someone else is by comparison. The target remains constantly distracted, always looking for a reflective surface to gaze upon (such as a mirror, pool of water, a polished shield, and so on). The distraction gives the target a –2 penalty on all skill checks. In combat, the target worries about enemies damaging its appearance, and focuses on defense rather than offense (casting defensive spells rather than offensive spells, using the fight defensively or total defense action, and so on). \n"
@@ -25753,19 +25920,20 @@
     },
     {
         "name": "Snowball",
-        "school": "evocation",
+        "school": "conjuration",
+        "subschool": "creation",
         "descripters": [
             "cold",
             "water"
         ],
-        "levels": "bloodrager 1, druid 1, magus 1, sorcerer/wizard 1, summoner 1, witch 1",
+        "levels": "druid 1, magus 1, sorcerer/wizard 1, summoner 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
         "effect": "one ball of ice and snow",
         "duration": "instantaneous",
-        "savingThrow": "none",
-        "spellResistance": "yes",
+        "savingThrow": "Fortitude partial (see text)",
+        "spellResistance": "no",
         "description": "You throw a ball of elemental ice and snow at a single target as a ranged touch attack. The snowball deals 1d6 points of cold damage per caster level you have (maximum 5d6). \n"
     },
     {
@@ -26267,11 +26435,11 @@
     {
         "name": "Spell Immunity",
         "school": "abjuration",
-        "levels": "cleric 9",
+        "levels": "alchemist 4, cleric/oracle 4, inquisitor 4",
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -26427,11 +26595,11 @@
     {
         "name": "Spider Climb",
         "school": "transmutation",
-        "levels": "alchemist 3, druid 3, occultist 3, psychic 3, sorcerer/wizard 3, summoner/unchained summoner 3",
+        "levels": "alchemist 2, bloodrager 2, druid 2, magus 2, medium 2, occultist 2, psychic 2, sorcerer/wizard 2, summoner/unchained summoner 2",
         "castingTime": "1 standard action",
         "components": "V, S, M (a live spider)",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -26500,14 +26668,15 @@
         "descripters": [
             "water"
         ],
-        "levels": "cleric 4, druid 4, inquisitor 4, paladin 3, ranger 3, shaman 4, spiritualist 4",
+        "levels": "cleric 2, druid 2, inquisitor 2, paladin 1, ranger 1, shaman 2, spiritualist 2",
         "castingTime": "1 immediate action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one creature/level, no two of which can be more than 20 ft. apart",
+        "target": "one creature",
         "duration": "instantaneous",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
+        "targets": "one creature/level, no two of which can be more than 20 ft. apart",
         "description": "You can cast this spell only as a response to a target attempting a saving throw against an effect that would cause the fatigued, shaken, sickened, or staggered conditions. The target can roll its saving throw twice and take the higher result. \n"
     },
     {
@@ -26810,14 +26979,14 @@
     {
         "name": "Status",
         "school": "divination",
-        "levels": "community 4",
+        "levels": "cleric/oracle 2, medium 2, occultist 2, psychic 2, spiritualist 2, witch 2",
         "castingTime": "1 standard action",
-        "components": "V, S, DF",
-        "range": "Level 0, 1st, or 2nd;  touch; Target creature touched; Saving Throw harmless",
-        "target": "one creature touched/three levels",
+        "components": "V, S",
+        "range": "touch",
+        "target": "Targets one living creature touched per three levels",
         "duration": "1 hour/level",
         "savingThrow": "Will negates (harmless)",
-        "spellResistance": "yes",
+        "spellResistance": "yes (harmless)",
         "description": "As status, but you can also cast a limited selection of spells through the link, as if you were touching the target. You can cast any spell that meets all of the following conditions: \nLevel 0, 1st, or 2nd; Range touch; Target creature touched; Saving Throw harmless \n"
     },
     {
@@ -27032,11 +27201,11 @@
     {
         "name": "Stoneskin",
         "school": "abjuration",
-        "levels": "alchemist 5, druid 6, inquisitor 5, sorcerer/wizard 5, summoner 4, unchained summoner 5",
+        "levels": "alchemist 4, bloodrager 4, druid 5, inquisitor 4, magus 4, shaman 5, sorcerer/wizard 4, summoner 3, unchained summoner 4",
         "castingTime": "1 standard action",
-        "components": "V, S, M (granite and diamond dust worth 250 gp per creature affected)",
+        "components": "V, S, M (granite and diamond dust worth 250 gp)",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level or until discharged",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
@@ -27268,14 +27437,15 @@
     {
         "name": "Suffocation",
         "school": "necromancy",
-        "levels": "Level sorcerer/wizard 9, witch 9",
+        "levels": "sorcerer/wizard 5, witch 5",
         "castingTime": "1 standard action",
         "components": "V, S, M (a vial containing a bit of the caster’s breath)",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "Targets one living creature/2 levels (no two of which may be more than 30 feet apart)",
-        "duration": "1 round/level",
+        "target": "Targets one living creature",
+        "duration": "3 rounds",
         "savingThrow": "Fortitude partial",
         "spellResistance": "yes",
+        "targets": "one living creature/2 levels (no two of which may be more than 30 feet apart)",
         "description": "This spell functions as suffocation except as noted above. Note that the duration of this spell is much longer, forcing those suffering from the effect to make far more Fortitude saves to stave off eventual suffocation. \n"
     },
     {
@@ -27286,14 +27456,15 @@
             "language-dependent",
             "mind-affecting"
         ],
-        "levels": "bard 5, medium 4, mesmerist 4, occultist 5, psychic 5, sorcerer/wizard 6, witch 6",
+        "levels": "bard 2, medium 2, mesmerist 2, occultist 3, psychic 2 sorcerer/wizard 3, witch 3",
         "castingTime": "1 standard action",
         "components": "V, M (a snake’s tongue and a honeycomb)",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "Targets one creature/level, no two of which can be more than 30 ft. apart",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one living creature",
         "duration": "1 hour/level or until completed",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
+        "targets": "one creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like suggestion, except that it can affect more creatures. The same suggestion applies to all these creatures. \n"
     },
     {
@@ -27356,7 +27527,7 @@
         "name": "Summon Genie",
         "school": "conjuration",
         "subschool": "summoning",
-        "levels": "cleric 6, sorcerer/wizard 6, summoner 5, witch 6",
+        "levels": "cleric 4, sorcerer/wizard 4, summoner 3, witch 4",
         "castingTime": "1 round",
         "components": "V, S, F/DF (an oil lamp worth at least 50 gp)",
         "range": "close (25 ft. + 5 ft./2 levels) Effect one summoned genie",
@@ -27429,7 +27600,10 @@
         "name": "Summon Monster",
         "school": "conjuration",
         "subschool": "summoning",
-        "levels": "cleric/oracle 9, psychic 9, sorcerer/wizard 9, witch 9",
+        "descripters": [
+            "see text"
+        ],
+        "levels": "antipaladin 1, bard 1, cleric/oracle 1, medium 1, psychic 1, sorcerer/wizard 1, spiritualist 1, summoner/unchained summoner 1, witch 1",
         "castingTime": "1 round",
         "components": "V, S, F/DF (a tiny bag and a small candle)",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -27443,7 +27617,7 @@
         "name": "Summon Nature’s Ally",
         "school": "conjuration",
         "subschool": "summoning",
-        "levels": "druid 9, shaman 9",
+        "levels": "druid 1, ranger 1, shaman 1",
         "castingTime": "1 round",
         "components": "V, S, DF",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -27966,12 +28140,12 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "mesmerist 4, psychic 5",
+        "levels": "mesmerist 3, psychic 3",
         "castingTime": "1 standard action",
         "components": "V",
         "range": "30 ft.",
         "area": "30-ft.-radius spread centered on you",
-        "duration": "1d4 rounds; see text",
+        "duration": "1 round",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
         "description": "You emit a pulsating mental blast that stuns all creatures in range of your psychic shriek for 1d4 rounds. On a successful save, a creature is instead sickened for 1 round. \n"
@@ -28348,7 +28522,7 @@
         "name": "Teleport",
         "school": "conjuration",
         "subschool": "teleportation",
-        "levels": "psychic 7, sorcerer/wizard 7, summoner 5, unchained summoner 6, witch 7",
+        "levels": "magus 5, occultist 5, psychic 5, sorcerer/wizard 5, spiritualist 5, summoner 4, unchained summoner 5, witch 5",
         "castingTime": "1 standard action",
         "components": "V",
         "range": "personal and touch",
@@ -28577,11 +28751,11 @@
     {
         "name": "Thought Shield",
         "school": "abjuration",
-        "levels": "psychic 6",
+        "levels": "psychic 2",
         "castingTime": "1 immediate action",
         "components": "V",
         "range": "personal Target you",
-        "duration": "1 round/level; see text",
+        "duration": "1 round",
         "description": "Sensing an intrusion, you throw up a defense to protect your mind from attack or analysis. This grants you a +4 circumstance bonus on Will saving throws against mind-affecting effects. As long as this spell lasts, spells and effects that allow a creature to read your thoughts receive no information from you. \n"
     },
     {
@@ -28591,7 +28765,7 @@
         "descripters": [
             "mind-affecting"
         ],
-        "levels": "psychic 5 Saving Throw Will partial (see text)",
+        "levels": "psychic 2",
         "castingTime": "1 standard action",
         "components": "S",
         "range": "close (25 ft. + 5 ft./2 levels)",
@@ -28680,10 +28854,10 @@
         "descripters": [
             "earth"
         ],
-        "levels": "bloodrager 3, druid 3, magus 3, ranger 3, sorcerer/wizard 3",
+        "levels": "bloodrager 1, druid 1, magus 1, ranger 1, sorcerer/wizard 1",
         "castingTime": "1 standard action",
         "components": "V, S",
-        "range": "60 ft.",
+        "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one creature",
         "duration": "instantaneous",
         "savingThrow": "none",
@@ -28836,7 +29010,7 @@
         "castingTime": "1 standard action",
         "components": "V, M/DF (a clay model of a ziggurat)",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "creature touched",
         "duration": "10 min./level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "no",
@@ -29679,11 +29853,11 @@
         "descripters": [
             "shadow"
         ],
-        "levels": "cleric 8, sorcerer/wizard 8, witch 8",
+        "levels": "alchemist 4, antipaladin 4, cleric 4, occultist 4, psychic 4, shaman 4, sorcerer/wizard 4, witch 4",
         "castingTime": "1 standard action",
         "components": "V, S",
         "range": "close (25 ft. + 5 ft./2 levels)",
-        "target": "one mindless undead creature/level, no two of which can be more than 30 ft. apart",
+        "target": "one mindless undead creature",
         "duration": "1 minute/level",
         "savingThrow": "Will negates",
         "spellResistance": "yes",
@@ -29809,12 +29983,12 @@
         "name": "Undead Anatomy",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "sorcerer/wizard 8",
+        "levels": "alchemist 3, bloodrager 3, magus 3, sorcerer/wizard 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
         "target": "you",
-        "duration": "1 minute/level (D) (see text)",
+        "duration": "1 minute/level (D)",
         "description": "This spell functions as undead anatomy III, except it allows you to use more abilities. If the form you assume has any of the following abilities, you gain the listed ability: burrow 60 feet, climb 90 feet, fly 120 feet (good maneuverability), swim 120 feet, blindsense 60 feet, darkvision 90 feet, lifesense 60 feet, low-light vision, scent, tremorsense 60 feet, breath weapon, constrict, DR 10/magic and silver, DR 15/bludgeoning and magic, fast healing 5, fiery death, fire aura, grab, incorporeal, jet, poison, pounce, rake, rend, roar, spikes, trample, trip, and web. \n If the creature’s form is incorporeal, the spell’s duration is in rounds per level instead of minutes per level, and your bite and claw (or slam) attacks are incorporeal touch attacks. If the creature has immunity or resistance to any energy types, you gain resistance 30 to those energy types. If the creature has vulnerability to an energy type, you gain that vulnerability. In this form, you gain a +8 bonus on saves against mind-affecting effects, disease, poison, sleep, and stunning. If the form has a vulnerability to an attack (such as sunlight), you gain that vulnerability. \n "
     },
     {
@@ -29992,12 +30166,12 @@
         "descripters": [
             "evil"
         ],
-        "levels": "antipaladin 3, cleric 3, inquisitor 3, sorcerer/wizard 3, witch 3",
+        "levels": "antipaladin 1, cleric 1, inquisitor 1, sorcerer/wizard 1, witch 1",
         "castingTime": "1 standard action",
         "components": "V, S, M/DF (a pinch of dust from a destroyed undead creature)",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one undead creature/level, no two of which can be more than 30 ft. apart, or one undead creature; see text",
-        "duration": "1 hour/level",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one undead creature/level, no two of which can be more than 30 ft. apart",
+        "duration": "1 minute/level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
         "description": "This spell functions as unhallowed blows, except the enhancement bonus is +1 per 4 caster levels (maximum +5). Alternatively, you can imbue all of a creature’s natural weapons with a +1 enhancement bonus (regardless of your caster level). \n Greater unhallowed blows can be made permanent with a permanency spell. In this case, the caster must be at least 11th level and must expend 7,500 gp worth of diamond dust as a material component. \n"
@@ -30567,7 +30741,7 @@
         "name": "Vermin Shape",
         "school": "transmutation",
         "subschool": "polymorph",
-        "levels": "alchemist 5, druid 4, magus 5, sorcerer/wizard 5, witch 4",
+        "levels": "alchemist 4, bloodrager 4, druid 3, magus 4, sorcerer/wizard 4, witch 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a piece of the creature whose form you plan to assume)",
         "range": "personal",
@@ -30762,11 +30936,11 @@
     {
         "name": "Violent Misfire",
         "school": "evocation",
-        "levels": "sorcerer/wizard 6",
+        "levels": "sorcerer/wizard 3",
         "castingTime": "1 standard action",
         "components": "V, S, M (a small piece of flint)",
-        "range": "medium (100 ft. + 10 ft./level)",
-        "target": "one early or advanced firearm/level, no two of which can be more than 30 ft. apart",
+        "range": "close (25 ft. + 5 ft./2 levels)",
+        "target": "one early or advanced firearm",
         "duration": "1 round/level",
         "savingThrow": "Will negates (object)",
         "spellResistance": "yes (object)",
@@ -31485,7 +31659,7 @@
         "castingTime": "1 standard action",
         "components": "V, S, DF",
         "range": "touch",
-        "target": "creatures touched",
+        "target": "Targets one touched creature/level",
         "duration": "10 min./level (D)",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",

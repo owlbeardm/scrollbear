@@ -7,11 +7,11 @@ async function main() {
     const classes = {};
     spells.forEach((value) => {
       value.levels.split(', ').forEach((classLevel) => {
-        const className = classLevel.substring(0,classLevel.length-2);
+        const className = classLevel.substring(0, classLevel.length - 2);
         // classes[className] = true;
         // if(className.includes('cleric/oracle'))
-        if(className == 'community')
-        console.log(value);
+        if (className == 'community')
+          console.log(value);
       });
     });
     // console.log(classes);
@@ -23,6 +23,19 @@ async function main() {
 
 async function format() {
   try {
+    spells.sort(function(a, b) {
+      var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      // names must be equal
+      return 0;
+    });
     fs.writeFileSync('parcer/spells.json', JSON.stringify(spells, null, 4), 'utf8');
   } catch (e) {
     logError(e);

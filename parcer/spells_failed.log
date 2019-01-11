@@ -42,8 +42,6 @@
 	Spell has no Description
 273	http://www.d20pfsrd.com/magic/all-spells/b/bloodhound/
 	Spell has no Description
-300	http://www.d20pfsrd.com/magic/all-spells/b/brand/
-	TypeError: Cannot read property 'replace' of undefined
 307	http://www.d20pfsrd.com/magic/all-spells/b/brightest-light-2/
 	Spell has no Casting Time
 347	http://www.d20pfsrd.com/magic/all-spells/c/call-lightning-storm/
@@ -114,10 +112,6 @@
 	Spell has no Duration
 555	http://www.d20pfsrd.com/magic/all-spells/d/dance-of-a-thousand-cuts/
 	Spell has no Casting Time
-563	http://www.d20pfsrd.com/magic/all-spells/d/darkvision/
-	TypeError: Cannot read property 'replace' of undefined
-568	http://www.d20pfsrd.com/magic/all-spells/d/daze/
-	TypeError: Cannot read property 'replace' of undefined
 569	http://www.d20pfsrd.com/magic/all-spells/d/daze-monster/
 	Spell has no Casting Time
 579	http://www.d20pfsrd.com/magic/all-spells/d/death-from-below/
@@ -220,8 +214,6 @@
 	TypeError: Cannot read property 'replace' of undefined
 788	http://www.d20pfsrd.com/magic/all-spells/e/enlightened-step/
 	Spell has no Description
-793	http://www.d20pfsrd.com/magic/all-spells/e/entice-fey-lesser/
-	TypeError: Cannot read property 'replace' of undefined
 794	http://www.d20pfsrd.com/magic/all-spells/e/enticing-adulation/
 	Spell has no Description
 811	http://www.d20pfsrd.com/magic/all-spells/e/ethereal-jaunt/
@@ -279,7 +271,7 @@
 1033	http://www.d20pfsrd.com/magic/all-spells/g/grasping-tentacles/
 	Spell has no Casting Time
 1051	http://www.d20pfsrd.com/magic/all-spells/g/guards-and-wards/
-	TypeError: Cannot read property 'replace' of undefined
+	Spell has no Description
 1055	http://www.d20pfsrd.com/magic/all-spells/g/gust-of-wind/
 	Spell has no Description
 1061	http://www.d20pfsrd.com/magic/all-spells/h/hallow/
@@ -349,7 +341,7 @@
 1251	http://www.d20pfsrd.com/magic/all-spells/i/invigorating-repose/
 	Spell has no Description
 1252	http://www.d20pfsrd.com/magic/all-spells/i/invisibility/
-	TypeError: Cannot read property 'replace' of undefined
+	Spell has no Description
 1253	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-alarm/
 	Spell has no Casting Time
 1255	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-bubble/
@@ -456,8 +448,6 @@
 	Spell has no Description
 1517	http://www.d20pfsrd.com/magic/all-spells/m/muffle-sound/
 	Spell has no Description
-1529	http://www.d20pfsrd.com/magic/all-spells/n/nature-s-ravages/
-	TypeError: Cannot read property 'replace' of undefined
 1534	http://www.d20pfsrd.com/magic/all-spells/n/negate-aroma/
 	TypeError: Cannot read property 'replace' of undefined
 1547	http://www.d20pfsrd.com/magic/all-spells/n/numerological-evocation/
@@ -488,15 +478,11 @@
 	Spell has no Casting Time
 1630	http://www.d20pfsrd.com/magic/all-spells/p/phantom-steed/
 	Spell has no Description
-1648	http://www.d20pfsrd.com/magic/all-spells/p/planar-adaptation/
-	TypeError: Cannot read property 'replace' of undefined
 1650	http://www.d20pfsrd.com/magic/all-spells/p/planar-ally/
 	TypeError: Cannot read property 'replace' of undefined
 1651	http://www.d20pfsrd.com/magic/all-spells/p/planar-binding/
 	TypeError: Cannot read property 'replace' of undefined
 1652	http://www.d20pfsrd.com/magic/all-spells/p/planar-inquiry/
-	TypeError: Cannot read property 'replace' of undefined
-1658	http://www.d20pfsrd.com/magic/all-spells/p/planetary-adaptation/
 	TypeError: Cannot read property 'replace' of undefined
 1660	http://www.d20pfsrd.com/magic/all-spells/p/plant-growth/
 	Spell has no Description
@@ -542,8 +528,6 @@
 	Spell has no Description
 1826	http://www.d20pfsrd.com/magic/all-spells/r/respectful-quiet/
 	Spell has no Description
-1831	http://www.d20pfsrd.com/magic/all-spells/r/restoration/
-	TypeError: Cannot read property 'replace' of undefined
 1835	http://www.d20pfsrd.com/magic/all-spells/r/resurrection/
 	TypeError: Cannot read property 'replace' of undefined
 1840	http://www.d20pfsrd.com/magic/all-spells/r/returning-weapon/
@@ -602,12 +586,8 @@
 	Spell has no Casting Time
 2021	http://www.d20pfsrd.com/magic/all-spells/s/shield-of-law/
 	Spell has no Description
-2025	http://www.d20pfsrd.com/magic/all-spells/s/shield-speech/
-	TypeError: Cannot read property 'replace' of undefined
 2032	http://www.d20pfsrd.com/magic/all-spells/s/shining-scales/
 	Spell has no Description
-2037	http://www.d20pfsrd.com/magic/all-spells/s/shout/
-	TypeError: Cannot read property 'replace' of undefined
 2041	http://www.d20pfsrd.com/magic/all-spells/s/sickening-entanglement/
 	Spell has no Casting Time
 2049	http://www.d20pfsrd.com/magic/all-spells/s/signs-of-the-land/
