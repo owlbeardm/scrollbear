@@ -170,7 +170,7 @@ function parseSpellPage(parsedData) {
   }
 
   article.childNodes.forEach((value, index, elements) => {
-    if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION') {
+    if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
       let i = index;
       spell.description = '';
       while (elements[i] && (elements[i].tagName === 'p' || !elements[i].tagName)) {
