@@ -5,20 +5,27 @@ const allSpells = require('../../../resources/spells.json');
 angular.module('app.services').factory('spellService', [
   '$log',
   '$window',
-  function($log, $window) {
+  'CLASSES',
+  function($log, $window, CLASSES) {
     const SpellService = {};
     const localStorage = $window['localStorage'];
     const FAV_SPELLS = "FAV_SPELLS";
-    let currentSpells  = [];
+    let currentSpells = [];
 
 
     SpellService.getAllSpells = function() {
       return currentSpells;
     };
 
-    SpellService.setClass = function(className) {
+    SpellService.setClass = function(classSet) {
       currentSpells = allSpells.filter((value) => {
-        return value.levels.includes(className);
+        return value.levels.split(', ').reduce((accumulatorSpell, classLevel) => {
+          const className = classLevel.substring(0, classLevel.length - 2);
+          const isIncludeClass = CLASSES[classSet].search.reduce((accumulator, currentValue) => {
+            return accumulator || className.startsWith(currentValue);
+          }, false);
+          return accumulatorSpell || isIncludeClass;
+        }, false);
       });
     };
 

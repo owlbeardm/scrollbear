@@ -17,19 +17,21 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
     ctrl.classes = CLASSES;
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     const selectedClass = JSON.parse(localStorage.getItem(SELECTED_CLASS));
-    ctrl.classSelected = (selectedClass && CLASSES[selectedClass])
-      ? selectedClass
-      : 'wizard';
-    ctrl.favOnly = favOnly
-      ? favOnly
-      : false;
+    ctrl.classSelected = (selectedClass && CLASSES[selectedClass]) ?
+      selectedClass :
+      'wizard';
+    ctrl.favOnly = favOnly ?
+      favOnly :
+      false;
     ctrl.setClass();
   }
 
   ctrl.chooseSpell = function(index) {
     ctrl.spell = ctrl.spells[index];
     const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-    $state.go('spells', {spellUrl: spell_url});
+    $state.go('spells', {
+      spellUrl: spell_url
+    });
   }
 
   ctrl.isFav = function(index) {
@@ -69,15 +71,25 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
         include = include && spellService.isFav(value);
       }
       if (include) {
-        value.levels.split(', ').forEach((classLevel) => {
+        const place = value.levels.split(', ').reduce((classAccumulator, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          if (className.startsWith(ctrl.classSelected)) {
-            if (!allSells[classLevel.substring(classLevel.length - 1)]) {
-              allSells[classLevel.substring(classLevel.length - 1)] = [];
+          const isIncludeClass = CLASSES[ctrl.classSelected].search.reduce((accumulator, currentValue) => {
+            return accumulator || className.startsWith(currentValue);
+          }, false);
+          if (isIncludeClass) {
+            const newLevel = classLevel.substring(classLevel.length - 1)
+            if (!classAccumulator || newLevel < classAccumulator) {
+              return newLevel;
             }
-            allSells[classLevel.substring(classLevel.length - 1)].push(value);
           }
-        });
+          return classAccumulator;
+        }, undefined);
+        if (place) {
+          if (!allSells[place]) {
+            allSells[place] = [];
+          }
+          allSells[place].push(value);
+        }
       }
     });
     ctrl.total = Object.entries(allSells).reduce(function(total, pair) {
