@@ -58,6 +58,10 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
     ctrl.search();
   }
 
+  ctrl.reset = function() {
+    ctrl.filter = "";
+  }
+
   function getSpells() {
     const allSells = {};
     spellService.getAllSpells().forEach((value) => {
