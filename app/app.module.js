@@ -102,6 +102,16 @@ initiativeApp.run([
         $location.path(p);
       }
     });
+    $transitions.onStart({
+      from: 'spells'
+    }, function(transition) {
+      $location.replace();
+    });
+    $transitions.onStart({
+      to: 'spells'
+    }, function(transition) {
+      $location.replace();
+    });
 
   }
 ]);
