@@ -36,3 +36,13 @@ table.table-fit tbody td, table.table-fit tfoot td {
 .table-sm th, .table-sm td {
   padding: 6px 4px;
 }
+
+.spell-description {
+  margin-bottom: 1rem;
+  padding-left: 1em;
+}
+
+.spell-description p {
+  text-indent: -1em;
+  margin-bottom: 0;
+}
