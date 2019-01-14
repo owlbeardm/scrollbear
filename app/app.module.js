@@ -1,6 +1,9 @@
 'use strict';
 import 'angular';
 import 'angular-ui-router';
+import 'angular-sanitize';
+const showdown = require('showdown');
+// import 'showdown';
 import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
@@ -20,7 +23,7 @@ if ('serviceWorker' in navigator) {
 }
 
 const initiativeApp = angular.module('initiativeApp', [
-  'app.components', 'app.constants', 'app.services', 'ui.router'
+  'app.components', 'app.constants', 'app.services', 'ui.router', 'ngSanitize'
   // 'app.directives'
 ]);
 
@@ -65,8 +68,11 @@ initiativeApp.config([
         '$rootScope',
         function(spell, $rootScope) {
           $rootScope.title = `${spell.name} - `;
-          $rootScope.description = spell.description;
           $rootScope.spell = spell;
+
+          const spellDescription = getSpellDescription(spell.description);
+          $rootScope.description = spell.description;
+          $rootScope.spellDescription = spellDescription;
           const popup = angular.element("#exampleModal");
           popup.modal('show');
         }
@@ -115,3 +121,10 @@ initiativeApp.run([
 
   }
 ]);
+
+function getSpellDescription(md) {
+  const converter = new showdown.Converter({tables: true, strikethrough: true});
+  let html = `<div>${converter.makeHtml(md)}</div>`;
+  html = html.replace(/<table>/g, "<table class='table table-sm'>").replace(/<thead>/g, "<thead class='text-primary'>");
+  return html;
+}
