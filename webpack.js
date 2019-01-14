@@ -73,7 +73,8 @@ module.exports = (env, argv) => {
     config.devServer = {
       contentBase: './dist',
       historyApiFallback: true,
-      publicPath: '/'
+      publicPath: '/',
+      port: 9000
     };
     config.output = {
       path: path.resolve(__dirname, 'dist'),

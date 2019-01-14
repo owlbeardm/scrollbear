@@ -2,6 +2,13 @@ const fs = require('fs');
 const http = require('http');
 const parse = require('node-html-parser').parse;
 const spelllist = require('./spelllist.json');
+const TurndownService = require('turndown');
+const turndownPluginGfm = require('turndown-plugin-gfm');
+const turndownService = new TurndownService();
+turndownService.use(turndownPluginGfm.gfm);
+
+
+// const showdown  = require('showdown');
 // console.log(spelllist);
 // const site = "http://www.d20pfsrd.com/magic/all-spells/b/boneshaker/";
 // const resturl = spelllist[0];
@@ -29,6 +36,7 @@ async function main() {
           throw "Spell has no Description";
 
         // console.log(spell);
+        // console.log(spell.description);
         logSuccess(i, "ok", spell.name);
         if (i !== 0) {
           fs.appendFileSync('parcer/spells.json', ",", 'utf8');
@@ -45,7 +53,7 @@ async function main() {
     }
     fs.appendFileSync('parcer/spells.json', "]", 'utf8');
     logSuccess("Finished\n\n");
-    format();
+    // format();
 
     logSuccess("Successed", s);
     logError("Failed", f);
@@ -164,21 +172,31 @@ function parseSpellPage(parsedData) {
       });
     }
   });
-  const tempDiv = article.querySelector('div');
-  if (!tempDiv.classNames.length) {
-    article = tempDiv;
-  }
+  // const tempDiv = article.querySelector('div');
+  // if (!tempDiv.classNames.length) {
+  //   article = tempDiv;
+  // }
 
   article.childNodes.forEach((value, index, elements) => {
     if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
       let i = index;
-      spell.description = '';
-      while (elements[i] && (elements[i].tagName === 'p' || !elements[i].tagName)) {
-        spell.description = spell.description + elements[i].text;
+      spell.description = undefined;
+      while (
+        elements[i] &&
+        (
+          (
+            (!elements[i].classNames || !elements[i].classNames.includes('comments')) &&
+            (!elements[i].classNames || !elements[i].classNames.includes('section15')) &&
+            elements[i].tagName !== 'h4') ||
+          !elements[i].tagName
+        )
+      ) {
+        spell.description = (spell.description ? spell.description : "") + elements[i].toString();
         i++;
       }
     }
   });
+  spell.description = turndownService.turndown(spell.description);
 
   return spell;
 }
@@ -209,6 +227,7 @@ function getSpell(url) {
       res.on('end', () => {
         try {
           const parsedData = parseSpellPage(rawData);
+          parsedData.url = url;
           resolve(parsedData);
         } catch (e) {
           // console.error(e.message);

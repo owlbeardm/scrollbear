@@ -1,209 +1,107 @@
-21	http://www.d20pfsrd.com/magic/all-spells/a/acid-pit/
-	Spell has no Description
+5	http://www.d20pfsrd.com/magic/all-spells/a/absolution/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 26	http://www.d20pfsrd.com/magic/all-spells/a/adhesive-spittle/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 35	http://www.d20pfsrd.com/magic/all-spells/a/age-resistance/
 	TypeError: Cannot read property 'replace' of undefined
-73	http://www.d20pfsrd.com/magic/all-spells/a/ancestral-gift/
-	Spell has no Description
 82	http://www.d20pfsrd.com/magic/all-spells/a/animal-purpose-training/
-	Spell has no Description
-85	http://www.d20pfsrd.com/magic/all-spells/a/animate-dead/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 93	http://www.d20pfsrd.com/magic/all-spells/a/anti-incorporeal-shell/
-	Spell has no Description
-171	http://www.d20pfsrd.com/magic/all-spells/b/ball-lightning/
-	Spell has no Description
-184	http://www.d20pfsrd.com/magic/all-spells/b/batrachian-surge/
-	Spell has no Description
-187	http://www.d20pfsrd.com/magic/all-spells/b/battlemind-link/
-	Spell has no Description
-226	http://www.d20pfsrd.com/magic/all-spells/b/bladed-dash/
-	Spell has no Description
-247	http://www.d20pfsrd.com/magic/all-spells/b/blessings-of-luck-and-resolve/
-	Spell has no Description
-251	http://www.d20pfsrd.com/magic/all-spells/b/blindness-deafness/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+107	http://www.d20pfsrd.com/magic/all-spells/a/aphasia/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+225	http://www.d20pfsrd.com/magic/all-spells/b/blade-tutor-s-spirit/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+243	http://www.d20pfsrd.com/magic/all-spells/b/blessing-of-liberty/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+254	http://www.d20pfsrd.com/magic/all-spells/b/bloatbomb/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 262	http://www.d20pfsrd.com/magic/all-spells/b/blood-money/
-	Spell has no Description
-273	http://www.d20pfsrd.com/magic/all-spells/b/bloodhound/
-	Spell has no Description
-389	http://www.d20pfsrd.com/magic/all-spells/c/chaos-hammer/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+329	http://www.d20pfsrd.com/magic/all-spells/b/burst-of-adrenaline/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 394	http://www.d20pfsrd.com/magic/all-spells/c/charm-monster/
 	TypeError: Cannot read property 'replace' of undefined
+406	http://www.d20pfsrd.com/magic/all-spells/c/clarion-call/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 412	http://www.d20pfsrd.com/magic/all-spells/c/clenched-fist/
 	TypeError: Cannot read property 'replace' of undefined
-415	http://www.d20pfsrd.com/magic/all-spells/c/cloak-of-chaos/
-	Spell has no Description
-444	http://www.d20pfsrd.com/magic/all-spells/c/compel-hostility/
-	Spell has no Description
+426	http://www.d20pfsrd.com/magic/all-spells/c/cognitive-block/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 448	http://www.d20pfsrd.com/magic/all-spells/c/comprehend-languages/
-	Spell has no Description
-466	http://www.d20pfsrd.com/magic/all-spells/c/contact-other-plane/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 475	http://www.d20pfsrd.com/magic/all-spells/c/contingent-venom/
 	TypeError: Cannot read property 'replace' of undefined
-476	http://www.d20pfsrd.com/magic/all-spells/c/continual-flame/
-	Spell has no Description
-480	http://www.d20pfsrd.com/magic/all-spells/c/control-undead/
-	Spell has no Description
-481	http://www.d20pfsrd.com/magic/all-spells/c/control-vermin/
-	Spell has no Description
-483	http://www.d20pfsrd.com/magic/all-spells/c/control-weather/
-	Spell has no Description
-498	http://www.d20pfsrd.com/magic/all-spells/c/coward-s-cowl/
-	Spell has no Description
-504	http://www.d20pfsrd.com/magic/all-spells/c/create-demiplane/
-	Spell has no Description
-508	http://www.d20pfsrd.com/magic/all-spells/c/create-mindscape/
-	Spell has no Description
-513	http://www.d20pfsrd.com/magic/all-spells/c/create-variant-mummy/
-	Spell has no Description
+525	http://www.d20pfsrd.com/magic/all-spells/c/crushing-hand/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+526	http://www.d20pfsrd.com/magic/all-spells/c/cultural-adaptation/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 542	http://www.d20pfsrd.com/magic/all-spells/c/curse-terrain/
 	TypeError: Cannot read property 'replace' of undefined
 549	http://www.d20pfsrd.com/magic/all-spells/d/daemon-ward/
 	TypeError: Cannot read property 'replace' of undefined
-579	http://www.d20pfsrd.com/magic/all-spells/d/death-from-below/
-	Spell has no Description
-581	http://www.d20pfsrd.com/magic/all-spells/d/death-knell-aura/
-	Spell has no Description
-582	http://www.d20pfsrd.com/magic/all-spells/d/death-pact/
-	Spell has no Description
-584	http://www.d20pfsrd.com/magic/all-spells/d/deathwatch/
-	Spell has no Description
+556	http://www.d20pfsrd.com/magic/all-spells/d/dancing-darkness/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 594	http://www.d20pfsrd.com/magic/all-spells/d/decrepit-disguise/
-	Spell has no Description
-595	http://www.d20pfsrd.com/magic/all-spells/d/deep-slumber/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 598	http://www.d20pfsrd.com/magic/all-spells/d/defending-sword/
 	TypeError: Cannot read property 'replace' of undefined
 606	http://www.d20pfsrd.com/magic/all-spells/d/deja-vu/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 612	http://www.d20pfsrd.com/magic/all-spells/d/delectable-flesh/
 	TypeError: Cannot read property 'replace' of undefined
-623	http://www.d20pfsrd.com/magic/all-spells/d/destruction/
-	Spell has no Description
-625	http://www.d20pfsrd.com/magic/all-spells/d/detect-animals-or-plants/
-	Spell has no Description
 631	http://www.d20pfsrd.com/magic/all-spells/d/detect-evil/
 	TypeError: Cannot read property 'replace' of undefined
 635	http://www.d20pfsrd.com/magic/all-spells/d/detect-magic/
-	Spell has no Description
-637	http://www.d20pfsrd.com/magic/all-spells/d/detect-mindscape/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 639	http://www.d20pfsrd.com/magic/all-spells/d/detect-psychic-significance/
-	Spell has no Description
-641	http://www.d20pfsrd.com/magic/all-spells/d/detect-relations/
-	Spell has no Description
-644	http://www.d20pfsrd.com/magic/all-spells/d/detect-snares-and-pits/
-	Spell has no Description
-646	http://www.d20pfsrd.com/magic/all-spells/d/detect-thoughts/
-	Spell has no Description
-647	http://www.d20pfsrd.com/magic/all-spells/d/detect-undead/
-	Spell has no Description
-661	http://www.d20pfsrd.com/magic/all-spells/d/dimensional-lock/
-	Spell has no Description
-662	http://www.d20pfsrd.com/magic/all-spells/d/diminish-plants/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 668	http://www.d20pfsrd.com/magic/all-spells/d/discern-next-of-kin/
-	Spell has no Description
-669	http://www.d20pfsrd.com/magic/all-spells/d/discern-value/
-	Spell has no Description
-736	http://www.d20pfsrd.com/magic/all-spells/d/dwarven-veil/
-	Spell has no Description
-748	http://www.d20pfsrd.com/magic/all-spells/e/earthquake/
-	Spell has no Description
-752	http://www.d20pfsrd.com/magic/all-spells/e/ectoplasmic-hand/
-	Spell has no Description
-756	http://www.d20pfsrd.com/magic/all-spells/e/eldritch-conduit/
-	Spell has no Description
-764	http://www.d20pfsrd.com/magic/all-spells/e/elemental-touch/
-	Spell has no Description
-767	http://www.d20pfsrd.com/magic/all-spells/e/emblem-of-greed/
-	Spell has no Description
-768	http://www.d20pfsrd.com/magic/all-spells/e/embrace-destiny/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+743	http://www.d20pfsrd.com/magic/all-spells/e/early-judgment/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+751	http://www.d20pfsrd.com/magic/all-spells/e/ectoplasmic-eruption/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+755	http://www.d20pfsrd.com/magic/all-spells/e/ego-whip/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+761	http://www.d20pfsrd.com/magic/all-spells/e/elemental-mastery-ifrit-oread-suli-sylph-undine/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+766	http://www.d20pfsrd.com/magic/all-spells/e/emblazon-crest/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 770	http://www.d20pfsrd.com/magic/all-spells/e/emotive-block/
-	Spell has no Description
-771	http://www.d20pfsrd.com/magic/all-spells/e/empathy-conduit/
-	Spell has no Description
-774	http://www.d20pfsrd.com/magic/all-spells/e/enchantment-sight/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 782	http://www.d20pfsrd.com/magic/all-spells/e/energy-siege-shot/
 	TypeError: Cannot read property 'replace' of undefined
-788	http://www.d20pfsrd.com/magic/all-spells/e/enlightened-step/
-	Spell has no Description
-794	http://www.d20pfsrd.com/magic/all-spells/e/enticing-adulation/
-	Spell has no Description
+796	http://www.d20pfsrd.com/magic/all-spells/e/entrap-spirit/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+801	http://www.d20pfsrd.com/magic/all-spells/e/erase-impressions/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+808	http://www.d20pfsrd.com/magic/all-spells/e/ethereal-envelope/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+809	http://www.d20pfsrd.com/magic/all-spells/e/ethereal-envelopment/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 811	http://www.d20pfsrd.com/magic/all-spells/e/ethereal-jaunt/
-	TypeError: Cannot read property 'classNames' of null
-831	http://www.d20pfsrd.com/magic/all-spells/e/eyebite/
-	Spell has no Description
-845	http://www.d20pfsrd.com/magic/all-spells/f/false-face/
-	Spell has no Description
-862	http://www.d20pfsrd.com/magic/all-spells/f/ferment/
-	Spell has no Description
-870	http://www.d20pfsrd.com/magic/all-spells/f/fiery-shuriken/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+813	http://www.d20pfsrd.com/magic/all-spells/e/etheric-shards/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 871	http://www.d20pfsrd.com/magic/all-spells/f/final-sacrifice/
-	Spell has no Description
-877	http://www.d20pfsrd.com/magic/all-spells/f/fins-to-feet/
-	Spell has no Description
-886	http://www.d20pfsrd.com/magic/all-spells/f/fire-storm/
-	Spell has no Description
-887	http://www.d20pfsrd.com/magic/all-spells/f/fire-trail/
-	Spell has no Description
-888	http://www.d20pfsrd.com/magic/all-spells/f/fire-trap/
-	Spell has no Description
-895	http://www.d20pfsrd.com/magic/all-spells/f/firewalker-s-meditation/
-	Spell has no Description
-900	http://www.d20pfsrd.com/magic/all-spells/f/flames-of-the-faithful/
-	Spell has no Description
-905	http://www.d20pfsrd.com/magic/all-spells/f/flash-fire/
-	Spell has no Description
-911	http://www.d20pfsrd.com/magic/all-spells/f/flesh-to-ooze/
-	Spell has no Description
-912	http://www.d20pfsrd.com/magic/all-spells/f/flesh-to-stone/
-	Spell has no Description
-915	http://www.d20pfsrd.com/magic/all-spells/f/fleshwarping-swarm-drow/
-	Spell has no Description
-934	http://www.d20pfsrd.com/magic/all-spells/f/fool-s-teleport/
-	Spell has no Description
-936	http://www.d20pfsrd.com/magic/all-spells/f/forbid-action/
-	Spell has no Description
-946	http://www.d20pfsrd.com/magic/all-spells/f/forceful-hand/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+906	http://www.d20pfsrd.com/magic/all-spells/f/flash-forward/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 949	http://www.d20pfsrd.com/magic/all-spells/f/forest-friend/
 	TypeError: Cannot read property 'replace' of undefined
-961	http://www.d20pfsrd.com/magic/all-spells/f/free-spirit/
-	Spell has no Description
-988	http://www.d20pfsrd.com/magic/all-spells/g/gate/
-	Spell has no Description
+958	http://www.d20pfsrd.com/magic/all-spells/f/foster-hatred/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 989	http://www.d20pfsrd.com/magic/all-spells/g/geas-quest/
 	TypeError: Cannot read property 'replace' of undefined
-992	http://www.d20pfsrd.com/magic/all-spells/g/genius-avaricious/
-	Spell has no Description
-1051	http://www.d20pfsrd.com/magic/all-spells/g/guards-and-wards/
-	Spell has no Description
-1055	http://www.d20pfsrd.com/magic/all-spells/g/gust-of-wind/
-	Spell has no Description
-1061	http://www.d20pfsrd.com/magic/all-spells/h/hallow/
-	Spell has no Description
 1083	http://www.d20pfsrd.com/magic/all-spells/h/healers-aid/
 	Spell has no School
 1084	http://www.d20pfsrd.com/magic/all-spells/h/healing-flames/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1086	http://www.d20pfsrd.com/magic/all-spells/h/healing-thief/
 	TypeError: Cannot read property 'replace' of undefined
 1087	http://www.d20pfsrd.com/magic/all-spells/h/healing-token/
-	Spell has no Description
-1091	http://www.d20pfsrd.com/magic/all-spells/h/heat-metal/
-	Spell has no Description
-1105	http://www.d20pfsrd.com/magic/all-spells/h/heroic-fortune/
-	Spell has no Description
-1108	http://www.d20pfsrd.com/magic/all-spells/h/hex-glyph/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1115	http://www.d20pfsrd.com/magic/all-spells/h/hidden-speech/
 	TypeError: Cannot read property 'replace' of undefined
 1123	http://www.d20pfsrd.com/magic/all-spells/h/hold-animal/
@@ -212,278 +110,162 @@
 	TypeError: Cannot read property 'replace' of undefined
 1125	http://www.d20pfsrd.com/magic/all-spells/h/hold-monster/
 	TypeError: Cannot read property 'replace' of undefined
-1131	http://www.d20pfsrd.com/magic/all-spells/h/holy-ice/
-	Spell has no Description
-1138	http://www.d20pfsrd.com/magic/all-spells/h/holy-word/
-	Spell has no Description
-1140	http://www.d20pfsrd.com/magic/all-spells/h/honeyed-tongue/
-	Spell has no Description
 1163	http://www.d20pfsrd.com/magic/all-spells/h/hydrophobia/
-	Spell has no Description
-1172	http://www.d20pfsrd.com/magic/all-spells/i/ice-slick/
-	Spell has no Description
-1177	http://www.d20pfsrd.com/magic/all-spells/i/id-insinuation/
-	Spell has no Description
-1179	http://www.d20pfsrd.com/magic/all-spells/i/identify/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1182	http://www.d20pfsrd.com/magic/all-spells/i/illusion-of-calm/
 	TypeError: Cannot read property 'replace' of undefined
-1184	http://www.d20pfsrd.com/magic/all-spells/i/illusory-crowd/
-	Spell has no Description
-1187	http://www.d20pfsrd.com/magic/all-spells/i/illusory-poison/
-	Spell has no Description
-1195	http://www.d20pfsrd.com/magic/all-spells/i/imbue-with-spell-ability/
-	Spell has no Description
+1199	http://www.d20pfsrd.com/magic/all-spells/i/implant-false-reading/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1209	http://www.d20pfsrd.com/magic/all-spells/i/incorporeal-chains/
-	Spell has no Description
-1216	http://www.d20pfsrd.com/magic/all-spells/i/inflict-serious-wounds/
-	Spell has no Description
-1227	http://www.d20pfsrd.com/magic/all-spells/i/insect-scouts/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1215	http://www.d20pfsrd.com/magic/all-spells/i/inflict-pain/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1224	http://www.d20pfsrd.com/magic/all-spells/i/innocuous-shape/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1229	http://www.d20pfsrd.com/magic/all-spells/i/inspiring-recovery/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1235	http://www.d20pfsrd.com/magic/all-spells/i/instant-restoration/
-	Spell has no Description
-1251	http://www.d20pfsrd.com/magic/all-spells/i/invigorating-repose/
-	Spell has no Description
-1252	http://www.d20pfsrd.com/magic/all-spells/i/invisibility/
-	Spell has no Description
-1255	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-bubble/
-	Spell has no Description
-1256	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-purge/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1238	http://www.d20pfsrd.com/magic/all-spells/i/instant-weapon/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1241	http://www.d20pfsrd.com/magic/all-spells/i/intellect-fortress/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1257	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-sphere/
 	TypeError: Cannot read property 'replace' of undefined
 1276	http://www.d20pfsrd.com/magic/all-spells/j/jolting-portent/
 	TypeError: Cannot read property 'replace' of undefined
-1278	http://www.d20pfsrd.com/magic/all-spells/j/judgment-light/
-	Spell has no Description
 1297	http://www.d20pfsrd.com/magic/all-spells/k/knock/
-	Spell has no Description
-1334	http://www.d20pfsrd.com/magic/all-spells/l/lightning-lash-bomb-admixture/
-	Spell has no Description
-1344	http://www.d20pfsrd.com/magic/all-spells/l/litany-of-defense/
-	Spell has no Description
-1348	http://www.d20pfsrd.com/magic/all-spells/l/litany-of-entanglement/
-	Spell has no Description
-1353	http://www.d20pfsrd.com/magic/all-spells/l/litany-of-sight/
-	Spell has no Description
-1355	http://www.d20pfsrd.com/magic/all-spells/l/litany-of-thunder/
-	Spell has no Description
-1358	http://www.d20pfsrd.com/magic/all-spells/l/litany-of-weakness/
-	Spell has no Description
-1360	http://www.d20pfsrd.com/magic/all-spells/l/loathsome-veil/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1361	http://www.d20pfsrd.com/magic/all-spells/l/locate-creature/
 	TypeError: Cannot read property 'replace' of undefined
-1368	http://www.d20pfsrd.com/magic/all-spells/l/locksight/
-	Spell has no Description
+1364	http://www.d20pfsrd.com/magic/all-spells/l/locate-portal/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1369	http://www.d20pfsrd.com/magic/all-spells/l/long-arm/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1374	http://www.d20pfsrd.com/magic/all-spells/l/lost-locale-samsaran/
 	TypeError: Cannot read property 'replace' of undefined
-1377	http://www.d20pfsrd.com/magic/all-spells/l/lucky-number/
-	Spell has no Description
-1403	http://www.d20pfsrd.com/magic/all-spells/m/magic-circle-against-technology/
-	Spell has no Description
-1405	http://www.d20pfsrd.com/magic/all-spells/m/magic-jar/
-	Spell has no Description
-1413	http://www.d20pfsrd.com/magic/all-spells/m/magnetic-field/
-	Spell has no Description
 1416	http://www.d20pfsrd.com/magic/all-spells/m/major-creation/
 	TypeError: Cannot read property 'replace' of undefined
-1426	http://www.d20pfsrd.com/magic/all-spells/m/mantle-of-doubt/
-	Spell has no Description
-1427	http://www.d20pfsrd.com/magic/all-spells/m/mantle-of-the-magic-warriors/
-	Spell has no Description
+1429	http://www.d20pfsrd.com/magic/all-spells/m/marid-s-mastery/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1431	http://www.d20pfsrd.com/magic/all-spells/m/mark-of-blood/
 	TypeError: Cannot read property 'replace' of undefined
-1433	http://www.d20pfsrd.com/magic/all-spells/m/mark-of-justice/
-	Spell has no Description
-1439	http://www.d20pfsrd.com/magic/all-spells/m/martial-telekinesis/
-	Spell has no Description
 1446	http://www.d20pfsrd.com/magic/all-spells/m/master-s-mutation/
-	Spell has no Description
-1449	http://www.d20pfsrd.com/magic/all-spells/m/mathematical-curse/
-	Spell has no Description
-1452	http://www.d20pfsrd.com/magic/all-spells/m/medusa-s-bane/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1454	http://www.d20pfsrd.com/magic/all-spells/m/memorize-page/
-	Spell has no Description
-1456	http://www.d20pfsrd.com/magic/all-spells/m/memory-of-function/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1458	http://www.d20pfsrd.com/magic/all-spells/m/mental-barrier/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1459	http://www.d20pfsrd.com/magic/all-spells/m/mental-block/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1462	http://www.d20pfsrd.com/magic/all-spells/m/metabolic-molting/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1466	http://www.d20pfsrd.com/magic/all-spells/m/miasmatic-form/
 	TypeError: Cannot read property 'replace' of undefined
-1468	http://www.d20pfsrd.com/magic/all-spells/m/mighty-fist-of-the-earth/
-	Spell has no Description
-1470	http://www.d20pfsrd.com/magic/all-spells/m/mind-blank/
-	Spell has no Description
-1471	http://www.d20pfsrd.com/magic/all-spells/m/mind-fog/
-	Spell has no Description
-1473	http://www.d20pfsrd.com/magic/all-spells/m/mind-over-matter/
-	Spell has no Description
-1476	http://www.d20pfsrd.com/magic/all-spells/m/mind-thrust/
-	Spell has no Description
-1493	http://www.d20pfsrd.com/magic/all-spells/m/irrisen-mirror-sight/
-	Spell has no Description
-1502	http://www.d20pfsrd.com/magic/all-spells/m/modify-memory/
-	Spell has no Description
+1467	http://www.d20pfsrd.com/magic/all-spells/m/microcosm/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1474	http://www.d20pfsrd.com/magic/all-spells/m/mind-probe/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1477	http://www.d20pfsrd.com/magic/all-spells/m/mindlink/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1479	http://www.d20pfsrd.com/magic/all-spells/m/mindscape-door/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1481	http://www.d20pfsrd.com/magic/all-spells/m/mindwipe/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1506	http://www.d20pfsrd.com/magic/all-spells/m/monkey-fish/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1517	http://www.d20pfsrd.com/magic/all-spells/m/muffle-sound/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1534	http://www.d20pfsrd.com/magic/all-spells/n/negate-aroma/
 	TypeError: Cannot read property 'replace' of undefined
-1547	http://www.d20pfsrd.com/magic/all-spells/n/numerological-evocation/
-	Spell has no Description
-1551	http://www.d20pfsrd.com/magic/all-spells/o/oath-of-justice/
-	Spell has no Description
-1561	http://www.d20pfsrd.com/magic/all-spells/o/oneiric-horror/
-	Spell has no Description
+1538	http://www.d20pfsrd.com/magic/all-spells/n/neutralize-poison/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1562	http://www.d20pfsrd.com/magic/all-spells/o/ooze-form/
 	TypeError: Cannot read property 'replace' of undefined
-1582	http://www.d20pfsrd.com/magic/all-spells/o/owl-s-wisdom/
-	Spell has no Description
 1596	http://www.d20pfsrd.com/magic/all-spells/p/passwall/
-	Spell has no Description
-1597	http://www.d20pfsrd.com/magic/all-spells/p/path-of-glory/
-	Spell has no Description
-1602	http://www.d20pfsrd.com/magic/all-spells/p/peacemaker-s-parley/
-	Spell has no Description
-1606	http://www.d20pfsrd.com/magic/all-spells/p/perceive-betrayal/
-	Spell has no Description
-1630	http://www.d20pfsrd.com/magic/all-spells/p/phantom-steed/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1650	http://www.d20pfsrd.com/magic/all-spells/p/planar-ally/
 	TypeError: Cannot read property 'replace' of undefined
 1651	http://www.d20pfsrd.com/magic/all-spells/p/planar-binding/
 	TypeError: Cannot read property 'replace' of undefined
 1652	http://www.d20pfsrd.com/magic/all-spells/p/planar-inquiry/
 	TypeError: Cannot read property 'replace' of undefined
-1660	http://www.d20pfsrd.com/magic/all-spells/p/plant-growth/
-	Spell has no Description
-1661	http://www.d20pfsrd.com/magic/all-spells/p/plant-shape-i/
-	Spell has no Description
-1676	http://www.d20pfsrd.com/magic/all-spells/p/polypurpose-panacea/
-	Spell has no Description
-1677	http://www.d20pfsrd.com/magic/all-spells/p/positive-pulse/
-	Spell has no Description
 1678	http://www.d20pfsrd.com/magic/all-spells/p/possess-object/
 	TypeError: Cannot read property 'replace' of undefined
-1687	http://www.d20pfsrd.com/magic/all-spells/p/prayer/
-	Spell has no Description
 1696	http://www.d20pfsrd.com/magic/all-spells/p/prismatic-sphere/
 	TypeError: Cannot read property 'replace' of undefined
 1703	http://www.d20pfsrd.com/magic/all-spells/p/programmed-image/
 	TypeError: Cannot read property 'replace' of undefined
-1717	http://www.d20pfsrd.com/magic/all-spells/p/protection-from-technology/
-	Spell has no Description
-1722	http://www.d20pfsrd.com/magic/all-spells/p/psychic-crush/
-	Spell has no Description
 1727	http://www.d20pfsrd.com/magic/all-spells/p/psychonaut-manifestation/
 	TypeError: Cannot read property 'replace' of undefined
-1739	http://www.d20pfsrd.com/magic/all-spells/p/pyrotechnics/
-	Spell has no Description
 1773	http://www.d20pfsrd.com/magic/all-spells/r/recentering-drone/
-	Spell has no Description
-1789	http://www.d20pfsrd.com/magic/all-spells/r/reinforce-armaments/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1779	http://www.d20pfsrd.com/magic/all-spells/r/red-hand-of-the-killer/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1791	http://www.d20pfsrd.com/magic/all-spells/r/rejuvenate-eidolon/
 	TypeError: Cannot read property 'replace' of undefined
 1792	http://www.d20pfsrd.com/magic/all-spells/r/release-fury/
-	Spell has no Description
-1813	http://www.d20pfsrd.com/magic/all-spells/r/reprobation/
-	Spell has no Description
-1825	http://www.d20pfsrd.com/magic/all-spells/r/resounding-clang/
-	Spell has no Description
-1826	http://www.d20pfsrd.com/magic/all-spells/r/respectful-quiet/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1796	http://www.d20pfsrd.com/magic/all-spells/r/remote-viewing/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1812	http://www.d20pfsrd.com/magic/all-spells/r/repress-memory/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1835	http://www.d20pfsrd.com/magic/all-spells/r/resurrection/
 	TypeError: Cannot read property 'replace' of undefined
-1840	http://www.d20pfsrd.com/magic/all-spells/r/returning-weapon/
-	Spell has no Description
+1839	http://www.d20pfsrd.com/magic/all-spells/r/retrocognition/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1853	http://www.d20pfsrd.com/magic/all-spells/r/riding-possession/
-	Spell has no Description
-1874	http://www.d20pfsrd.com/magic/all-spells/r/rune-of-durability/
-	Spell has no Description
-1876	http://www.d20pfsrd.com/magic/all-spells/r/rune-of-rule/
-	Spell has no Description
-1907	http://www.d20pfsrd.com/magic/all-spells/s/scintillating-pattern/
-	Spell has no Description
-1911	http://www.d20pfsrd.com/magic/all-spells/s/scourge-of-the-horsemen/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1927	http://www.d20pfsrd.com/magic/all-spells/s/sealed-life/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1928	http://www.d20pfsrd.com/magic/all-spells/s/sealed-sending/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1930	http://www.d20pfsrd.com/magic/all-spells/s/searching-shadows/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1931	http://www.d20pfsrd.com/magic/all-spells/s/searing-light/
-	TypeError: Cannot read property 'classNames' of null
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1941	http://www.d20pfsrd.com/magic/all-spells/s/secret-workshop/
 	TypeError: Cannot read property 'replace' of undefined
-1947	http://www.d20pfsrd.com/magic/all-spells/s/see-through-stone/
-	Spell has no Description
+1945	http://www.d20pfsrd.com/magic/all-spells/s/see-beyond/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1950	http://www.d20pfsrd.com/magic/all-spells/s/seek-shelter/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1952	http://www.d20pfsrd.com/magic/all-spells/s/seeming/
 	TypeError: Cannot read property 'replace' of undefined
-1960	http://www.d20pfsrd.com/magic/all-spells/s/sensory-amplifier/
-	Spell has no Description
-1963	http://www.d20pfsrd.com/magic/all-spells/s/sepia-snake-sigil/
-	Spell has no Description
-1964	http://www.d20pfsrd.com/magic/all-spells/s/sequester/
-	Spell has no Description
-1970	http://www.d20pfsrd.com/magic/all-spells/s/shades/
-	Spell has no Description
-1979	http://www.d20pfsrd.com/magic/all-spells/s/shadow-endurance/
-	Spell has no Description
-1980	http://www.d20pfsrd.com/magic/all-spells/s/shadow-evocation/
-	Spell has no Description
+1954	http://www.d20pfsrd.com/magic/all-spells/s/selective-invisibility/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1959	http://www.d20pfsrd.com/magic/all-spells/s/sense-vitals/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1967	http://www.d20pfsrd.com/magic/all-spells/s/sessile-spirit/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+1973	http://www.d20pfsrd.com/magic/all-spells/s/shadow-body/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2005	http://www.d20pfsrd.com/magic/all-spells/s/share-shape/
 	TypeError: Cannot read property 'replace' of undefined
-2013	http://www.d20pfsrd.com/magic/all-spells/s/sheet-lightning/
-	Spell has no Description
-2021	http://www.d20pfsrd.com/magic/all-spells/s/shield-of-law/
-	Spell has no Description
+2018	http://www.d20pfsrd.com/magic/all-spells/s/shield-of-dawn/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2032	http://www.d20pfsrd.com/magic/all-spells/s/shining-scales/
-	Spell has no Description
-2063	http://www.d20pfsrd.com/magic/all-spells/s/skin-tag/
-	Spell has no Description
-2066	http://www.d20pfsrd.com/magic/all-spells/s/sky-swim/
-	Spell has no Description
-2070	http://www.d20pfsrd.com/magic/all-spells/s/sleep/
-	Spell has no Description
-2080	http://www.d20pfsrd.com/magic/all-spells/s/smite-abomination/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2088	http://www.d20pfsrd.com/magic/all-spells/s/solid-fog/
 	TypeError: Cannot read property 'replace' of undefined
-2123	http://www.d20pfsrd.com/magic/all-spells/s/spell-absorption/
-	Spell has no Description
-2128	http://www.d20pfsrd.com/magic/all-spells/s/spell-turning/
-	Spell has no Description
 2131	http://www.d20pfsrd.com/magic/all-spells/s/spellcasting-contract/
 	TypeError: Cannot read property 'replace' of undefined
-2132	http://www.d20pfsrd.com/magic/all-spells/s/spellcrash/
-	Spell has no Description
-2148	http://www.d20pfsrd.com/magic/all-spells/s/spirit-bonds/
-	Spell has no Description
-2150	http://www.d20pfsrd.com/magic/all-spells/s/spirit-share/
-	Spell has no Description
-2158	http://www.d20pfsrd.com/magic/all-spells/s/spontaneous-immolation/
-	Spell has no Description
+2146	http://www.d20pfsrd.com/magic/all-spells/s/spiral-ascent/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2147	http://www.d20pfsrd.com/magic/all-spells/s/spiral-descent/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2151	http://www.d20pfsrd.com/magic/all-spells/s/spirit-bound-blade/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2159	http://www.d20pfsrd.com/magic/all-spells/s/spore-burst/
-	Spell has no Description
-2175	http://www.d20pfsrd.com/magic/all-spells/s/steal-size/
-	Spell has no Description
-2181	http://www.d20pfsrd.com/magic/all-spells/s/stoke-the-inner-fire/
-	Spell has no Description
-2186	http://www.d20pfsrd.com/magic/all-spells/s/stone-shape/
-	TypeError: Cannot read property 'classNames' of null
-2190	http://www.d20pfsrd.com/magic/all-spells/s/stone-to-flesh/
-	Spell has no Description
-2193	http://www.d20pfsrd.com/magic/all-spells/s/storm-of-vengeance/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2195	http://www.d20pfsrd.com/magic/all-spells/s/storm-step/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2205	http://www.d20pfsrd.com/magic/all-spells/s/stunning-barrier/
-	Spell has no Description
-2208	http://www.d20pfsrd.com/magic/all-spells/s/subjective-reality/
-	Spell has no Description
-2213	http://www.d20pfsrd.com/magic/all-spells/s/summon-accuser/
-	Spell has no Description
-2214	http://www.d20pfsrd.com/magic/all-spells/s/summon-ancestral-guardian/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2209	http://www.d20pfsrd.com/magic/all-spells/s/submerge-ship/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2210	http://www.d20pfsrd.com/magic/all-spells/s/substitute-trail/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2215	http://www.d20pfsrd.com/magic/all-spells/s/summon-cacodaemon/
 	TypeError: Cannot read property 'replace' of undefined
 2216	http://www.d20pfsrd.com/magic/all-spells/s/summon-ceustodaemon/
@@ -492,28 +274,26 @@
 	TypeError: Cannot read property 'replace' of undefined
 2220	http://www.d20pfsrd.com/magic/all-spells/s/summon-erodaemon/
 	TypeError: Cannot read property 'replace' of undefined
+2223	http://www.d20pfsrd.com/magic/all-spells/s/summon-genie/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2228	http://www.d20pfsrd.com/magic/all-spells/s/summon-laborers/
-	Spell has no Description
-2229	http://www.d20pfsrd.com/magic/all-spells/s/summon-lesser-psychopomp/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2230	http://www.d20pfsrd.com/magic/all-spells/s/summon-meladaemon/
 	TypeError: Cannot read property 'replace' of undefined
 2237	http://www.d20pfsrd.com/magic/all-spells/s/summon-swarm/
-	TypeError: Cannot read property 'classNames' of null
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2238	http://www.d20pfsrd.com/magic/all-spells/s/summon-thanadaemon/
 	TypeError: Cannot read property 'replace' of undefined
-2239	http://www.d20pfsrd.com/magic/all-spells/s/summon-totem-creature/
-	Spell has no Description
-2240	http://www.d20pfsrd.com/magic/all-spells/s/summon-vanth/
-	Spell has no Description
 2243	http://www.d20pfsrd.com/magic/all-spells/s/suns-disdain/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2246	http://www.d20pfsrd.com/magic/all-spells/s/sunder-breaker/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2248	http://www.d20pfsrd.com/magic/all-spells/s/sundering-shards/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2262	http://www.d20pfsrd.com/magic/all-spells/s/sweat-poison/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2268	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-debauchery/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2272	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-fear/
 	TypeError: Cannot read property 'replace' of undefined
 2273	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-healing/
@@ -542,55 +322,47 @@
 	TypeError: Cannot read property 'replace' of undefined
 2289	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-weakness/
 	TypeError: Cannot read property 'replace' of undefined
-2297	http://www.d20pfsrd.com/magic/all-spells/s/synesthesia/
-	Spell has no Description
-2300	http://www.d20pfsrd.com/magic/all-spells/t/tactical-formation/
-	Spell has no Description
+2294	http://www.d20pfsrd.com/magic/all-spells/s/synapse-overload/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2318	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-assembly/
 	TypeError: Cannot read property 'replace' of undefined
-2324	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-strikes/
-	Spell has no Description
+2319	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-charge/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2321	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-projectile/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2322	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-sphere/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2323	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-storm/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2326	http://www.d20pfsrd.com/magic/all-spells/t/telempathic-projection/
-	Spell has no Description
-2338	http://www.d20pfsrd.com/magic/all-spells/t/temporal-stasis/
-	Spell has no Description
-2359	http://www.d20pfsrd.com/magic/all-spells/t/thunder-fire/
-	Spell has no Description
-2389	http://www.d20pfsrd.com/magic/all-spells/t/tower-of-iron-will/
-	Spell has no Description
-2412	http://www.d20pfsrd.com/magic/all-spells/t/trap-the-soul/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2342	http://www.d20pfsrd.com/magic/all-spells/t/terrible-remorse/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2344	http://www.d20pfsrd.com/magic/all-spells/t/thaumaturgic-circle/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2365	http://www.d20pfsrd.com/magic/all-spells/t/time-stop/
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2415	http://www.d20pfsrd.com/magic/all-spells/t/travelling-dream/
 	TypeError: Cannot read property 'replace' of undefined
 2423	http://www.d20pfsrd.com/magic/all-spells/t/triggered-hallucination/
 	TypeError: Cannot read property 'replace' of undefined
 2454	http://www.d20pfsrd.com/magic/all-spells/u/undeath-to-death/
 	TypeError: Cannot read property 'replace' of undefined
-2464	http://www.d20pfsrd.com/magic/all-spells/u/unhallow/
-	Spell has no Description
 2481	http://www.d20pfsrd.com/magic/all-spells/u/unseen-servant/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2486	http://www.d20pfsrd.com/magic/all-spells/u/unwelcome-halo/
 	TypeError: Cannot read property 'replace' of undefined
 2504	http://www.d20pfsrd.com/magic/all-spells/v/venomous-bite/
-	Spell has no Description
-2523	http://www.d20pfsrd.com/magic/all-spells/v/viper-bomb-admixture/
-	Spell has no Description
-2526	http://www.d20pfsrd.com/magic/all-spells/v/virulence/
-	Spell has no Description
+	TypeError: undefined is not a string, or an element/document/fragment node.
 2528	http://www.d20pfsrd.com/magic/all-spells/v/vision/
 	TypeError: Cannot read property 'replace' of undefined
-2552	http://www.d20pfsrd.com/magic/all-spells/w/wall-of-ice/
-	Spell has no Description
-2567	http://www.d20pfsrd.com/magic/all-spells/w/ward-of-the-season/
-	Spell has no Description
-2575	http://www.d20pfsrd.com/magic/all-spells/w/watchful-eye/
-	Spell has no Description
 2581	http://www.d20pfsrd.com/magic/all-spells/w/wave-form-2/
 	TypeError: Cannot read property 'replace' of undefined
 2582	http://www.d20pfsrd.com/magic/all-spells/w/wave-form/
 	TypeError: Cannot read property 'replace' of undefined
 2607	http://www.d20pfsrd.com/magic/all-spells/w/wilderness-soldiers/
 	TypeError: Cannot read property 'replace' of undefined
-2628	http://www.d20pfsrd.com/magic/all-spells/w/word-of-chaos/
-	Spell has no Description
+2612	http://www.d20pfsrd.com/magic/all-spells/w/windy-escape/
+	TypeError: undefined is not a string, or an element/document/fragment node.
+2620	http://www.d20pfsrd.com/magic/all-spells/w/withdraw-affliction/
+	TypeError: undefined is not a string, or an element/document/fragment node.
