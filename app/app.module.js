@@ -39,8 +39,8 @@ initiativeApp.config([
       onEnter: [
         '$rootScope',
         function($rootScope) {
-          const popup = angular.element("#exampleModal");
-          popup.modal('hide');
+          // const popup = angular.element("#exampleModal");
+          // popup.modal('hide');
           $rootScope.title = '';
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
         }
@@ -70,15 +70,6 @@ initiativeApp.config([
           const popup = angular.element("#exampleModal");
           popup.modal('show');
         }
-      ],
-      onExit: [
-        '$rootScope',
-        function($rootScope) {
-          const popup = angular.element("#exampleModal");
-          popup.modal('hide');
-          $rootScope.title = '';
-          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
-        }
       ]
     });
 
@@ -92,7 +83,7 @@ initiativeApp.run([
   '$location',
   function($log, $transitions, $location) {
     $transitions.onStart({
-      to: 'main'
+      // to: 'main'
     }, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
       // check if the state should be protected
@@ -105,12 +96,18 @@ initiativeApp.run([
     $transitions.onStart({
       from: 'spells'
     }, function(transition) {
-      $location.replace();
+      if (transition.to().name != 'spells') {
+        console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
+        $location.replace();
+      }
     });
     $transitions.onStart({
       to: 'spells'
     }, function(transition) {
-      $location.replace();
+      if (transition.from().name != 'spells') {
+        console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
+        $location.replace();
+      }
     });
 
   }
