@@ -12,7 +12,7 @@
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "parse": "node parcer/script.js",
-    "format": "node parcer/classes.js",
+    "format": "node parcer/format.js",
     "sitemap": "node parcer/sitemap.js"
   },
   "dependencies": {
