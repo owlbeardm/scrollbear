@@ -7,12 +7,6 @@ const turndownPluginGfm = require('turndown-plugin-gfm');
 const turndownService = new TurndownService();
 turndownService.use(turndownPluginGfm.gfm);
 
-
-// const showdown  = require('showdown');
-// console.log(spelllist);
-// const site = "http://www.d20pfsrd.com/magic/all-spells/b/boneshaker/";
-// const resturl = spelllist[0];
-
 async function main() {
   try {
     fs.writeFileSync('parcer/spells.json', "[", 'utf8');
@@ -26,17 +20,10 @@ async function main() {
           throw "Spell has no Name";
         if (!spell.school)
           throw "Spell has no School";
-        // if (!spell.castingTime)
-        //   throw "Spell has no Casting Time";
-        // if (!spell.components)
-        //   throw "Spell has no Components";
-        // if (!spell.duration)
-        //   throw "Spell has no Duration";
         if (!spell.description)
           throw "Spell has no Description";
 
         // console.log(spell);
-        // console.log(spell.description);
         logSuccess(i, "ok", spell.name);
         if (i !== 0) {
           fs.appendFileSync('parcer/spells.json', ",", 'utf8');
@@ -53,8 +40,6 @@ async function main() {
     }
     fs.appendFileSync('parcer/spells.json', "]", 'utf8');
     logSuccess("Finished\n\n");
-    // format();
-
     logSuccess("Successed", s);
     logError("Failed", f);
   } catch (e) {
@@ -62,15 +47,6 @@ async function main() {
   }
 }
 main();
-
-async function format() {
-  try {
-    fs.writeFileSync('parcer/spells.json', JSON.stringify(require('parcer/spells.json'), null, 4), 'utf8');
-    logSuccess("Formated\n\n");
-  } catch (e) {
-    logError(e);
-  }
-}
 
 function loadSpellList(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
@@ -172,10 +148,6 @@ function parseSpellPage(parsedData) {
       });
     }
   });
-  // const tempDiv = article.querySelector('div');
-  // if (!tempDiv.classNames.length) {
-  //   article = tempDiv;
-  // }
 
   article.childNodes.forEach((value, index, elements) => {
     if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
@@ -191,6 +163,12 @@ function parseSpellPage(parsedData) {
           !elements[i].tagName
         )
       ) {
+        if (elements[i].childNodes.length && (elements[i].querySelector('h4') ||
+            elements[i].querySelector('.comments') ||
+            elements[i].querySelector('.section15')
+          )) {
+          break;
+        }
         spell.description = (spell.description ? spell.description : "") + elements[i].toString();
         i++;
       }
