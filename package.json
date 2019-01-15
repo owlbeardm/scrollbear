@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "angular": "^1.7.5",
+    "angular-sanitize": "^1.7.5",
     "angular-ui-bootstrap": "^2.5.6",
     "angular-ui-router": "^1.0.20",
     "mini-css-extract-plugin": "^0.5.0",

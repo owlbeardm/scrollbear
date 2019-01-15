@@ -3,7 +3,6 @@
 function SpellController($log, $rootScope, $state) {
   $log.debug('SpellController create');
   const ctrl = this;
-  ctrl.rootScope = $rootScope;
 
   ctrl.$onInit = function() {
     const popup = angular.element("#exampleModal");
@@ -11,18 +10,26 @@ function SpellController($log, $rootScope, $state) {
     popup.on("hidden.bs.modal", function() {
       $state.go('main');
     });
+
+  }
+
+  ctrl.dd = function() {
+    $log.debug('ctrl.dd');
+    return $rootScope.spellDescription;
   }
 
   ctrl.getDescripters = function() {
     let view = '[';
-    for (let i = 0; i < ctrl.rootScope.spell.descripters.length; i++) {
+    for (let i = 0; i < $rootScope.spell.descripters.length; i++) {
       view = view + (
-        (i != 0) ?
-        ', ' :
-        '') + ctrl.rootScope.spell.descripters[i];
+        (i != 0)
+        ? ', '
+        : '') + $rootScope.spell.descripters[i];
     }
+
     return view + ']';
   }
+
 }
 
 const SpellComponent = {
