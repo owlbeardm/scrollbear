@@ -2,10 +2,52 @@ const fs = require('fs');
 const http = require('http');
 const parse = require('node-html-parser').parse;
 const spelllist = require('./spelllist.json');
+const spelllistfailed = require('./spells_failed.json');
 const TurndownService = require('turndown');
 const turndownPluginGfm = require('turndown-plugin-gfm');
 const turndownService = new TurndownService();
 turndownService.use(turndownPluginGfm.gfm);
+
+async function parseError() {
+  try {
+    fs.writeFileSync('parcer/f_spells.json', "[", 'utf8');
+    fs.writeFileSync('parcer/f_spells_failed.log', "", 'utf8');
+    let s = 0;
+    let f = 0;
+    for (let i = 0; i < spelllistfailed.length; i++) {
+      try {
+        const spell = await getSpell(spelllistfailed[i]);
+        if (!spell.name)
+          throw "Spell has no Name";
+        if (!spell.school)
+          throw "Spell has no School";
+        if (!spell.description)
+          throw "Spell has no Description";
+
+        // console.log(spell);
+        logSuccess(i, "ok", spell.name);
+        if (i !== 0) {
+          fs.appendFileSync('parcer/f_spells.json', ",", 'utf8');
+        }
+        fs.appendFileSync('parcer/f_spells.json', JSON.stringify(spell, null, 4), 'utf8');
+        s++;
+      } catch (e) {
+        logError(i, "Cant parse spell", spelllistfailed[i]);
+        logError("\t", e);
+        fs.appendFileSync('parcer/f_spells_failed.log', i + '\t' + spelllistfailed[i] + '\n', 'utf8');
+        fs.appendFileSync('parcer/f_spells_failed.log', "\t" + e + '\n', 'utf8');
+        f++;
+      }
+    }
+    fs.appendFileSync('parcer/f_spells.json', "]", 'utf8');
+    logSuccess("Finished\n\n");
+    logSuccess("Successed", s);
+    logError("Failed", f);
+  } catch (e) {
+    logError(e);
+  }
+}
+parseError();
 
 async function main() {
   try {
@@ -13,7 +55,7 @@ async function main() {
     fs.writeFileSync('parcer/spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
-    for (let i = 0; i < spelllist.length; i++) {
+    for (let i = 448; i < 450; i++) {
       try {
         const spell = await getSpell(spelllist[i]);
         if (!spell.name)
@@ -46,7 +88,7 @@ async function main() {
     logError(e);
   }
 }
-main();
+// main();
 
 function loadSpellList(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
@@ -101,6 +143,44 @@ function addValue(spell, value, name, key) {
       if (!spell[key] && line.toUpperCase().includes(name.toUpperCase())) {
         spell[key] = removeATag(line.replace(new RegExp(name, "ig"), '')).trim();
       }
+    });
+  }
+}
+
+function setDescription(element, spell) {
+  element.childNodes.forEach((value, index, elements) => {
+    if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
+      let i = index;
+      spell.description = undefined;
+      while (
+        elements[i] &&
+        (
+          (
+            (!elements[i].classNames || !elements[i].classNames.includes('comments')) &&
+            (!elements[i].classNames || !elements[i].classNames.includes('section15')) &&
+            elements[i].tagName !== 'h4') ||
+          !elements[i].tagName
+        )
+      ) {
+        if (elements[i].childNodes.length && (elements[i].querySelector('h4') ||
+            elements[i].querySelector('.comments') ||
+            elements[i].querySelector('.section15')
+          )) {
+          break;
+        }
+        spell.description = (spell.description ? spell.description : "") + elements[i].toString();
+        i++;
+      }
+    }
+  });
+}
+
+function findDescription(element, spell) {
+  setDescription(element, spell);
+  if (!spell.description && element.childNodes.length) {
+    element.childNodes.forEach((value) => {
+      if (!spell.description)
+        findDescription(value, spell);
     });
   }
 }
@@ -162,31 +242,7 @@ function parseSpellPage(parsedData) {
     }
   });
 
-  article.childNodes.forEach((value, index, elements) => {
-    if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
-      let i = index;
-      spell.description = undefined;
-      while (
-        elements[i] &&
-        (
-          (
-            (!elements[i].classNames || !elements[i].classNames.includes('comments')) &&
-            (!elements[i].classNames || !elements[i].classNames.includes('section15')) &&
-            elements[i].tagName !== 'h4') ||
-          !elements[i].tagName
-        )
-      ) {
-        if (elements[i].childNodes.length && (elements[i].querySelector('h4') ||
-            elements[i].querySelector('.comments') ||
-            elements[i].querySelector('.section15')
-          )) {
-          break;
-        }
-        spell.description = (spell.description ? spell.description : "") + elements[i].toString();
-        i++;
-      }
-    }
-  });
+  findDescription(article, spell);
   spell.description = turndownService.turndown(spell.description);
 
   return spell;

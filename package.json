@@ -13,7 +13,9 @@
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "parse": "node parcer/script.js",
     "format": "node parcer/format.js",
-    "sitemap": "node parcer/sitemap.js"
+    "sitemap": "node parcer/sitemap.js",
+    "commit": "git add . && git commit -m 'autocommit'",
+    "parse-commit": "parse && commit"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
