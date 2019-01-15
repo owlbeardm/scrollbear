@@ -94,6 +94,17 @@ function parseSpellDescriptor(data) {
     });
 }
 
+function addValue(spell, value, name, key) {
+  if (!spell[key] && value.innerHTML && value.innerHTML.toUpperCase().includes(name.toUpperCase())) {
+    const array = value.innerHTML.split('<br />');
+    array.forEach((line) => {
+      if (!spell[key] && line.toUpperCase().includes(name.toUpperCase())) {
+        spell[key] = removeATag(line.replace(new RegExp(name, "ig"), '')).trim();
+      }
+    });
+  }
+}
+
 function parseSpellPage(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
   const spell = {};
@@ -110,40 +121,37 @@ function parseSpellPage(parsedData) {
       const levels = value.innerHTML.split(';')[1];
       if (!spell.levels)
         spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
-    } else if (value.innerHTML && (value.innerHTML.includes('<b>Casting Time</b>') ||
-        value.innerHTML.includes('<b>Components</b>'))) {
-      const casting = value.innerHTML.split('<br />');
-      if (!spell.castingTime)
-        spell.castingTime = removeATag(casting[0].replace('<b>Casting Time</b>', '')).trim();
-      if (!spell.components)
-        spell.components = removeATag(casting[1].replace('<b>Components</b>', '')).trim();
-    } else if (value.innerHTML && (value.innerHTML.includes('<b>Range</b>') ||
-        value.innerHTML.includes('<b>Area</b>') ||
-        value.innerHTML.includes('<b>Target</b>') ||
-        value.innerHTML.includes('<b>Effect</b>') ||
-        value.innerHTML.includes('<b>Duration</b>') ||
-        value.innerHTML.includes('<b>Saving Throw</b>') ||
-        value.innerHTML.includes('<b>Spell Resistance</b>'))) {
+    }
+    addValue(spell, value, '<b>Casting Time</b>', 'castingTime');
+    addValue(spell, value, 'Casting Time</b>', 'castingTime');
+    addValue(spell, value, '<b>Components</b>', 'components');
+    addValue(spell, value, 'Components</b>', 'components');
+    addValue(spell, value, '<b>Component</b>', 'components');
+    addValue(spell, value, 'Component</b>', 'components');
+    addValue(spell, value, '<b>Range</b>', 'range');
+    addValue(spell, value, 'Range</b>', 'range');
+    addValue(spell, value, '<b>Area</b>', 'area');
+    addValue(spell, value, 'Area</b>', 'area');
+    if (!spell.targets)
+      addValue(spell, value, '<b>Target</b>', 'target');
+    if (!spell.target)
+      addValue(spell, value, '<b>Targets</b>', 'targets');
+    addValue(spell, value, '<b>Effect</b>', 'effect');
+    addValue(spell, value, 'Effect</b>', 'effect');
+    addValue(spell, value, '<b>Duration</b>', 'duration');
+    addValue(spell, value, 'Duration</b>', 'duration');
+
+    if (value.innerHTML && (value.innerHTML.toUpperCase().includes('<b>Saving Throw</b>'.toUpperCase()) || value.innerHTML.toUpperCase().includes('<b>Spell Resistance</b>'.toUpperCase()))) {
       const effect = value.innerHTML.split('<br />');
       effect.forEach((value) => {
-        if (value.includes('Range') && !spell.range) {
-          spell.range = removeATag(value.replace('<b>Range</b>', '')).trim();
-        } else if (value.includes('Area') && !spell.area) {
-          spell.area = removeATag(value.replace('<b>Area</b>', '')).trim();
-        } else if (value.includes('Target') && !spell.target) {
-          spell.target = removeATag(value.replace('<b>Target</b>', '')).trim();
-        } else if (value.includes('Targets') && !spell.targets && !spell.target) {
-          spell.targets = removeATag(value.replace('<b>Targets</b>', '')).trim();
-        } else if (value.includes('Effect') && !spell.effect) {
-          spell.effect = removeATag(value.replace('<b>Effect</b>', '')).trim();
-        } else if (value.includes('Duration') && !spell.duration) {
-          spell.duration = removeATag(value.replace('<b>Duration</b>', '')).trim();
-        } else if (value.includes('Saving Throw')) {
+        if (value.toUpperCase().includes('<b>Saving Throw</b>'.toUpperCase()) || value.toUpperCase().includes('<b>Spell Resistance</b>'.toUpperCase())) {
           const saving = value.split(';');
-          if (!spell.savingThrow)
-            spell.savingThrow = removeATag(saving[0].replace('<b>Saving Throw</b>', '')).trim();
-          if (!spell.spellResistance)
-            spell.spellResistance = removeATag(saving[1].replace('<b>Spell Resistance</b>', '')).trim();
+          saving.forEach((line) => {
+            if (!spell.savingThrow && line.toUpperCase().includes('<b>Saving Throw</b>'.toUpperCase()))
+              spell.savingThrow = removeATag(line.replace(new RegExp('<b>Saving Throw</b>', "ig"), '')).trim();
+            if (!spell.spellResistance && line.toUpperCase().includes('<b>Spell Resistance</b>'.toUpperCase()))
+              spell.spellResistance = removeATag(line.replace(new RegExp('<b>Spell Resistance</b>', "ig"), '')).trim();
+          });
         }
       });
     }

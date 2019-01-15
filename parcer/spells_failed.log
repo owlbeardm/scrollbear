@@ -3,7 +3,7 @@
 26	http://www.d20pfsrd.com/magic/all-spells/a/adhesive-spittle/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 35	http://www.d20pfsrd.com/magic/all-spells/a/age-resistance/
-	TypeError: Cannot read property 'replace' of undefined
+	TypeError: undefined is not a string, or an element/document/fragment node.
 82	http://www.d20pfsrd.com/magic/all-spells/a/animal-purpose-training/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 93	http://www.d20pfsrd.com/magic/all-spells/a/anti-incorporeal-shell/
@@ -20,38 +20,22 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 329	http://www.d20pfsrd.com/magic/all-spells/b/burst-of-adrenaline/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-394	http://www.d20pfsrd.com/magic/all-spells/c/charm-monster/
-	TypeError: Cannot read property 'replace' of undefined
 406	http://www.d20pfsrd.com/magic/all-spells/c/clarion-call/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-412	http://www.d20pfsrd.com/magic/all-spells/c/clenched-fist/
-	TypeError: Cannot read property 'replace' of undefined
 426	http://www.d20pfsrd.com/magic/all-spells/c/cognitive-block/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 448	http://www.d20pfsrd.com/magic/all-spells/c/comprehend-languages/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-475	http://www.d20pfsrd.com/magic/all-spells/c/contingent-venom/
-	TypeError: Cannot read property 'replace' of undefined
 525	http://www.d20pfsrd.com/magic/all-spells/c/crushing-hand/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 526	http://www.d20pfsrd.com/magic/all-spells/c/cultural-adaptation/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-542	http://www.d20pfsrd.com/magic/all-spells/c/curse-terrain/
-	TypeError: Cannot read property 'replace' of undefined
-549	http://www.d20pfsrd.com/magic/all-spells/d/daemon-ward/
-	TypeError: Cannot read property 'replace' of undefined
 556	http://www.d20pfsrd.com/magic/all-spells/d/dancing-darkness/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 594	http://www.d20pfsrd.com/magic/all-spells/d/decrepit-disguise/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-598	http://www.d20pfsrd.com/magic/all-spells/d/defending-sword/
-	TypeError: Cannot read property 'replace' of undefined
 606	http://www.d20pfsrd.com/magic/all-spells/d/deja-vu/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-612	http://www.d20pfsrd.com/magic/all-spells/d/delectable-flesh/
-	TypeError: Cannot read property 'replace' of undefined
-631	http://www.d20pfsrd.com/magic/all-spells/d/detect-evil/
-	TypeError: Cannot read property 'replace' of undefined
 635	http://www.d20pfsrd.com/magic/all-spells/d/detect-magic/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 639	http://www.d20pfsrd.com/magic/all-spells/d/detect-psychic-significance/
@@ -70,8 +54,6 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 770	http://www.d20pfsrd.com/magic/all-spells/e/emotive-block/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-782	http://www.d20pfsrd.com/magic/all-spells/e/energy-siege-shot/
-	TypeError: Cannot read property 'replace' of undefined
 796	http://www.d20pfsrd.com/magic/all-spells/e/entrap-spirit/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 801	http://www.d20pfsrd.com/magic/all-spells/e/erase-impressions/
@@ -92,8 +74,6 @@
 	TypeError: Cannot read property 'replace' of undefined
 958	http://www.d20pfsrd.com/magic/all-spells/f/foster-hatred/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-989	http://www.d20pfsrd.com/magic/all-spells/g/geas-quest/
-	TypeError: Cannot read property 'replace' of undefined
 1083	http://www.d20pfsrd.com/magic/all-spells/h/healers-aid/
 	Spell has no School
 1084	http://www.d20pfsrd.com/magic/all-spells/h/healing-flames/
@@ -104,16 +84,8 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1115	http://www.d20pfsrd.com/magic/all-spells/h/hidden-speech/
 	TypeError: Cannot read property 'replace' of undefined
-1123	http://www.d20pfsrd.com/magic/all-spells/h/hold-animal/
-	TypeError: Cannot read property 'replace' of undefined
-1124	http://www.d20pfsrd.com/magic/all-spells/h/hold-fey/
-	TypeError: Cannot read property 'replace' of undefined
-1125	http://www.d20pfsrd.com/magic/all-spells/h/hold-monster/
-	TypeError: Cannot read property 'replace' of undefined
 1163	http://www.d20pfsrd.com/magic/all-spells/h/hydrophobia/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1182	http://www.d20pfsrd.com/magic/all-spells/i/illusion-of-calm/
-	TypeError: Cannot read property 'replace' of undefined
 1199	http://www.d20pfsrd.com/magic/all-spells/i/implant-false-reading/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1209	http://www.d20pfsrd.com/magic/all-spells/i/incorporeal-chains/
@@ -130,26 +102,16 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1241	http://www.d20pfsrd.com/magic/all-spells/i/intellect-fortress/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1257	http://www.d20pfsrd.com/magic/all-spells/i/invisibility-sphere/
-	TypeError: Cannot read property 'replace' of undefined
 1276	http://www.d20pfsrd.com/magic/all-spells/j/jolting-portent/
 	TypeError: Cannot read property 'replace' of undefined
 1297	http://www.d20pfsrd.com/magic/all-spells/k/knock/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1361	http://www.d20pfsrd.com/magic/all-spells/l/locate-creature/
-	TypeError: Cannot read property 'replace' of undefined
 1364	http://www.d20pfsrd.com/magic/all-spells/l/locate-portal/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1369	http://www.d20pfsrd.com/magic/all-spells/l/long-arm/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1374	http://www.d20pfsrd.com/magic/all-spells/l/lost-locale-samsaran/
-	TypeError: Cannot read property 'replace' of undefined
-1416	http://www.d20pfsrd.com/magic/all-spells/m/major-creation/
-	TypeError: Cannot read property 'replace' of undefined
 1429	http://www.d20pfsrd.com/magic/all-spells/m/marid-s-mastery/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1431	http://www.d20pfsrd.com/magic/all-spells/m/mark-of-blood/
-	TypeError: Cannot read property 'replace' of undefined
 1446	http://www.d20pfsrd.com/magic/all-spells/m/master-s-mutation/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1454	http://www.d20pfsrd.com/magic/all-spells/m/memorize-page/
@@ -160,8 +122,6 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1462	http://www.d20pfsrd.com/magic/all-spells/m/metabolic-molting/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1466	http://www.d20pfsrd.com/magic/all-spells/m/miasmatic-form/
-	TypeError: Cannot read property 'replace' of undefined
 1467	http://www.d20pfsrd.com/magic/all-spells/m/microcosm/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1474	http://www.d20pfsrd.com/magic/all-spells/m/mind-probe/
@@ -176,42 +136,20 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1517	http://www.d20pfsrd.com/magic/all-spells/m/muffle-sound/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1534	http://www.d20pfsrd.com/magic/all-spells/n/negate-aroma/
-	TypeError: Cannot read property 'replace' of undefined
 1538	http://www.d20pfsrd.com/magic/all-spells/n/neutralize-poison/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1562	http://www.d20pfsrd.com/magic/all-spells/o/ooze-form/
-	TypeError: Cannot read property 'replace' of undefined
 1596	http://www.d20pfsrd.com/magic/all-spells/p/passwall/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1650	http://www.d20pfsrd.com/magic/all-spells/p/planar-ally/
-	TypeError: Cannot read property 'replace' of undefined
-1651	http://www.d20pfsrd.com/magic/all-spells/p/planar-binding/
-	TypeError: Cannot read property 'replace' of undefined
-1652	http://www.d20pfsrd.com/magic/all-spells/p/planar-inquiry/
-	TypeError: Cannot read property 'replace' of undefined
-1678	http://www.d20pfsrd.com/magic/all-spells/p/possess-object/
-	TypeError: Cannot read property 'replace' of undefined
-1696	http://www.d20pfsrd.com/magic/all-spells/p/prismatic-sphere/
-	TypeError: Cannot read property 'replace' of undefined
-1703	http://www.d20pfsrd.com/magic/all-spells/p/programmed-image/
-	TypeError: Cannot read property 'replace' of undefined
-1727	http://www.d20pfsrd.com/magic/all-spells/p/psychonaut-manifestation/
-	TypeError: Cannot read property 'replace' of undefined
 1773	http://www.d20pfsrd.com/magic/all-spells/r/recentering-drone/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1779	http://www.d20pfsrd.com/magic/all-spells/r/red-hand-of-the-killer/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1791	http://www.d20pfsrd.com/magic/all-spells/r/rejuvenate-eidolon/
-	TypeError: Cannot read property 'replace' of undefined
 1792	http://www.d20pfsrd.com/magic/all-spells/r/release-fury/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1796	http://www.d20pfsrd.com/magic/all-spells/r/remote-viewing/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1812	http://www.d20pfsrd.com/magic/all-spells/r/repress-memory/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1835	http://www.d20pfsrd.com/magic/all-spells/r/resurrection/
-	TypeError: Cannot read property 'replace' of undefined
 1839	http://www.d20pfsrd.com/magic/all-spells/r/retrocognition/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1853	http://www.d20pfsrd.com/magic/all-spells/r/riding-possession/
@@ -225,13 +163,11 @@
 1931	http://www.d20pfsrd.com/magic/all-spells/s/searing-light/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1941	http://www.d20pfsrd.com/magic/all-spells/s/secret-workshop/
-	TypeError: Cannot read property 'replace' of undefined
+	TypeError: undefined is not a string, or an element/document/fragment node.
 1945	http://www.d20pfsrd.com/magic/all-spells/s/see-beyond/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1950	http://www.d20pfsrd.com/magic/all-spells/s/seek-shelter/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-1952	http://www.d20pfsrd.com/magic/all-spells/s/seeming/
-	TypeError: Cannot read property 'replace' of undefined
 1954	http://www.d20pfsrd.com/magic/all-spells/s/selective-invisibility/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1959	http://www.d20pfsrd.com/magic/all-spells/s/sense-vitals/
@@ -240,16 +176,10 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 1973	http://www.d20pfsrd.com/magic/all-spells/s/shadow-body/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2005	http://www.d20pfsrd.com/magic/all-spells/s/share-shape/
-	TypeError: Cannot read property 'replace' of undefined
 2018	http://www.d20pfsrd.com/magic/all-spells/s/shield-of-dawn/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2032	http://www.d20pfsrd.com/magic/all-spells/s/shining-scales/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2088	http://www.d20pfsrd.com/magic/all-spells/s/solid-fog/
-	TypeError: Cannot read property 'replace' of undefined
-2131	http://www.d20pfsrd.com/magic/all-spells/s/spellcasting-contract/
-	TypeError: Cannot read property 'replace' of undefined
 2146	http://www.d20pfsrd.com/magic/all-spells/s/spiral-ascent/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2147	http://www.d20pfsrd.com/magic/all-spells/s/spiral-descent/
@@ -266,24 +196,12 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2210	http://www.d20pfsrd.com/magic/all-spells/s/substitute-trail/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2215	http://www.d20pfsrd.com/magic/all-spells/s/summon-cacodaemon/
-	TypeError: Cannot read property 'replace' of undefined
-2216	http://www.d20pfsrd.com/magic/all-spells/s/summon-ceustodaemon/
-	TypeError: Cannot read property 'replace' of undefined
-2217	http://www.d20pfsrd.com/magic/all-spells/s/summon-derghodaemon/
-	TypeError: Cannot read property 'replace' of undefined
-2220	http://www.d20pfsrd.com/magic/all-spells/s/summon-erodaemon/
-	TypeError: Cannot read property 'replace' of undefined
 2223	http://www.d20pfsrd.com/magic/all-spells/s/summon-genie/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2228	http://www.d20pfsrd.com/magic/all-spells/s/summon-laborers/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2230	http://www.d20pfsrd.com/magic/all-spells/s/summon-meladaemon/
-	TypeError: Cannot read property 'replace' of undefined
 2237	http://www.d20pfsrd.com/magic/all-spells/s/summon-swarm/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2238	http://www.d20pfsrd.com/magic/all-spells/s/summon-thanadaemon/
-	TypeError: Cannot read property 'replace' of undefined
 2243	http://www.d20pfsrd.com/magic/all-spells/s/suns-disdain/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2246	http://www.d20pfsrd.com/magic/all-spells/s/sunder-breaker/
@@ -294,38 +212,8 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2268	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-debauchery/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2272	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-fear/
-	TypeError: Cannot read property 'replace' of undefined
-2273	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-healing/
-	TypeError: Cannot read property 'replace' of undefined
-2274	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-insanity/
-	TypeError: Cannot read property 'replace' of undefined
-2276	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-mirroring/
-	TypeError: Cannot read property 'replace' of undefined
-2277	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-pain/
-	TypeError: Cannot read property 'replace' of undefined
-2278	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-persuasion/
-	TypeError: Cannot read property 'replace' of undefined
-2279	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-revelation/
-	TypeError: Cannot read property 'replace' of undefined
-2280	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-scrying/
-	TypeError: Cannot read property 'replace' of undefined
-2282	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-sleep/
-	TypeError: Cannot read property 'replace' of undefined
-2283	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-slowing/
-	TypeError: Cannot read property 'replace' of undefined
-2285	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-strife/
-	TypeError: Cannot read property 'replace' of undefined
-2287	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-stunning/
-	TypeError: Cannot read property 'replace' of undefined
-2288	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-vulnerability/
-	TypeError: Cannot read property 'replace' of undefined
-2289	http://www.d20pfsrd.com/magic/all-spells/s/symbol-of-weakness/
-	TypeError: Cannot read property 'replace' of undefined
 2294	http://www.d20pfsrd.com/magic/all-spells/s/synapse-overload/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2318	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-assembly/
-	TypeError: Cannot read property 'replace' of undefined
 2319	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-charge/
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2321	http://www.d20pfsrd.com/magic/all-spells/t/telekinetic-projectile/
@@ -342,24 +230,10 @@
 	TypeError: undefined is not a string, or an element/document/fragment node.
 2365	http://www.d20pfsrd.com/magic/all-spells/t/time-stop/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2415	http://www.d20pfsrd.com/magic/all-spells/t/travelling-dream/
-	TypeError: Cannot read property 'replace' of undefined
-2423	http://www.d20pfsrd.com/magic/all-spells/t/triggered-hallucination/
-	TypeError: Cannot read property 'replace' of undefined
-2454	http://www.d20pfsrd.com/magic/all-spells/u/undeath-to-death/
-	TypeError: Cannot read property 'replace' of undefined
 2481	http://www.d20pfsrd.com/magic/all-spells/u/unseen-servant/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2486	http://www.d20pfsrd.com/magic/all-spells/u/unwelcome-halo/
-	TypeError: Cannot read property 'replace' of undefined
 2504	http://www.d20pfsrd.com/magic/all-spells/v/venomous-bite/
 	TypeError: undefined is not a string, or an element/document/fragment node.
-2528	http://www.d20pfsrd.com/magic/all-spells/v/vision/
-	TypeError: Cannot read property 'replace' of undefined
-2581	http://www.d20pfsrd.com/magic/all-spells/w/wave-form-2/
-	TypeError: Cannot read property 'replace' of undefined
-2582	http://www.d20pfsrd.com/magic/all-spells/w/wave-form/
-	TypeError: Cannot read property 'replace' of undefined
 2607	http://www.d20pfsrd.com/magic/all-spells/w/wilderness-soldiers/
 	TypeError: Cannot read property 'replace' of undefined
 2612	http://www.d20pfsrd.com/magic/all-spells/w/windy-escape/
