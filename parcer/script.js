@@ -128,6 +128,11 @@ function parseSpellPage(parsedData) {
     addValue(spell, value, 'Components</b>', 'components');
     addValue(spell, value, '<b>Component</b>', 'components');
     addValue(spell, value, 'Component</b>', 'components');
+    addValue(spell, value, '<b>Target, Effect, or Area</b>', 'target');
+    addValue(spell, value, '<b>Target, Effect, or Area</b>', 'effect');
+    addValue(spell, value, '<b>Target, Effect, or Area</b>', 'area');
+    addValue(spell, value, '<b>Target or Area</b>', 'target');
+    addValue(spell, value, '<b>Target or Area</b>', 'area');
     addValue(spell, value, '<b>Range</b>', 'range');
     addValue(spell, value, 'Range</b>', 'range');
     addValue(spell, value, '<b>Area</b>', 'area');

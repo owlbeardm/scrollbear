@@ -12,3 +12,5 @@ Bestow Weapon Proficiency
 Bind Sage
 Blast Barrier
 Defoliate
+Freezing Sphere
+Mislead
