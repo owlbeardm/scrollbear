@@ -23,6 +23,26 @@ async function main() {
 
 async function format() {
   try {
+    spells.forEach((spell) => {
+      let desc = spell.description;
+      const reg = /\[[^\]]+\]\(([^\)](?!all-spells))+\)/g;
+      desc = desc.replace(reg, (match) => {
+        const start = match.indexOf('[');
+        const end = match.indexOf(']');
+        return match.substring(start + 1, end);
+      });
+      const reg2 = /\[[^\]]+\]\([^\)]+all-spells[^\)]+\)/g;
+      let isSpell = false;
+      const newDesc = desc.replace(reg2, (match) => {
+        const start = match.indexOf('[');
+        const end = match.indexOf(']');
+        const name = match.substring(start + 1, end);
+        const url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+        return `[${name}](/spells/${url})`;
+      });
+      desc = newDesc;
+      spell.description = desc;
+    });
     spells.sort(function(a, b) {
       var nameA = a.name.toUpperCase(); // ignore upper and lowercase
       var nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -32,11 +52,14 @@ async function format() {
       if (nameA > nameB) {
         return 1;
       }
-
-      // names must be equal
       return 0;
     });
-    fs.writeFileSync('parcer/spells.json', JSON.stringify(spells, null, 4), 'utf8');
+    fs.writeFileSync('resources/spells.json', JSON.stringify(spells, function replacer(key, value) {
+      if (key === 'url') {
+        return undefined;
+      }
+      return value;
+    }, 4), 'utf8');
   } catch (e) {
     logError(e);
   }
