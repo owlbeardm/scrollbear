@@ -15,7 +15,7 @@
     "format": "node parcer/format.js",
     "sitemap": "node parcer/sitemap.js",
     "commit": "git add . && git commit -m 'autocommit' && git push",
-    "parse-commit": "parse && commit"
+    "parse-commit": "yarn parse && yarn commit"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
