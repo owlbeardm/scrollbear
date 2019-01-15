@@ -14,7 +14,7 @@ async function parseError() {
     fs.writeFileSync('parcer/f_spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
-    for (let i = 0; i < 12 /*spelllistfailed.length*/; i++) {
+    for (let i = 0; i < 12 /*spelllistfailed.length*/ ; i++) {
       try {
         const spell = await getSpell(spelllistfailed[i]);
         if (!spell.name)
@@ -47,7 +47,7 @@ async function parseError() {
     logError(e);
   }
 }
-parseError();
+// parseError();
 
 async function main() {
   try {
@@ -55,7 +55,7 @@ async function main() {
     fs.writeFileSync('parcer/spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
-    for (let i = 448; i < 450; i++) {
+    for (let i = 0; i < spelllist.length; i++) {
       try {
         const spell = await getSpell(spelllist[i]);
         if (!spell.name)
@@ -88,7 +88,7 @@ async function main() {
     logError(e);
   }
 }
-// main();
+main();
 
 function loadSpellList(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
