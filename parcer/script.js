@@ -14,7 +14,7 @@ async function parseError() {
     fs.writeFileSync('parcer/f_spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
-    for (let i = 0; i < 10 /*spelllistfailed.length*/; i++) {
+    for (let i = 0; i < 12 /*spelllistfailed.length*/; i++) {
       try {
         const spell = await getSpell(spelllistfailed[i]);
         if (!spell.name)

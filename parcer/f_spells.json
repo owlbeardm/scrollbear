@@ -134,4 +134,28 @@
     "duration": "Instantaneous",
     "description": "You cast _blood money_ just before casting another spell. As part of this spell’s casting, you must cut one of your hands, releasing a stream of blood that causes you to take 1d6 points of damage. When you cast another spell in that same round, your blood transforms into one material component of your choice required by that second spell. Even valuable [components](http://www.d20pfsrd.com/magic#TOC-Components) worth more than 1 gp can be created, but creating such material [components](http://www.d20pfsrd.com/magic#TOC-Components) requires an additional cost of 1 point of [Strength damage](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Ability-Score-Damage), plus a further point of damage for every full 500 gp of the component’s value (so a component worth 500–999 gp costs a total of 2 points, 1,000–1,500 costs 3, etc.). You cannot create magic items with _blood money_.\n\nFor example, a [sorcerer](http://www.d20pfsrd.com/classes/core-classes/sorcerer) with the spell [stoneskin](http://www.d20pfsrd.com/magic/all-spells/b/s/stoneskin) prepared could cast _blood money_ to create the 250 gp worth of diamond dust required by that spell, taking 1d6 points of damage and 1 point of [Strength damage](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Ability-Score-Damage) in the process.\n\nMaterial [components](http://www.d20pfsrd.com/magic#TOC-Components) created by _blood money_ transform back into blood at the end of the round if they have not been used as a material component. Spellcasters who do not have blood cannot cast _blood money_, and those who are immune to [Strength damage](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Ability-Score-Damage) (such as [undead](http://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types#TOC-Undead) spellcasters) cannot use _blood money_ to create valuable material [components](http://www.d20pfsrd.com/magic#TOC-Components).",
     "url": "http://www.d20pfsrd.com/magic/all-spells/b/blood-money/"
+},{
+    "name": "Burst of Adrenaline",
+    "school": "transmutation",
+    "levels": "mesmerist 1, psychic 1, spiritualist 1",
+    "castingTime": "1 immediate action",
+    "components": "V, S",
+    "range": "personal",
+    "target": "you",
+    "duration": "instantaneous",
+    "savingThrow": "none",
+    "spellResistance": "no",
+    "description": "You draw upon your body’s inner reserves of strength, leaving you winded. When you are about to make a d20 roll based on [Strength](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Strength-Str-), [Dexterity](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Dexterity-Dex-), or [Constitution](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Constitution-Con-), you can cast this spell to gain a +8 [enhancement bonus](http://www.d20pfsrd.com/basics-ability-scores/glossary#TOC-Enhancement-Bonus) to [Strength](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Strength-Str-), [Dexterity](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Dexterity-Dex-), or [Constitution](http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Constitution-Con-) for that roll, but you are [fatigued](http://www.d20pfsrd.com/gamemastering/conditions#TOC-Fatigued) for 1 round afterward.",
+    "url": "http://www.d20pfsrd.com/magic/all-spells/b/burst-of-adrenaline/"
+},{
+    "name": "Clarion Call",
+    "school": "illusion",
+    "levels": "bard 1, cleric 1, magus 1, sorcerer/wizard 1",
+    "range": "touch",
+    "target": "creature touched",
+    "duration": "10 minutes/level",
+    "savingThrow": "Fort negates (harmless)",
+    "spellResistance": "yes (harmless)",
+    "description": "The subject of this spell gains two benefits. First, the affected creature gains the ability to create a sound like the blast of a mighty horn or trumpet simply by miming the action of sounding one. Second, the subject can speak in a booming voice that carries easily over great distances, lowering the DC of any check to hear what is said by –15. This spell is particularly prized by battlefield commanders and champions who wish to make themselves clearly heard or gain the attention of their allies or foes.",
+    "url": "http://www.d20pfsrd.com/magic/all-spells/c/clarion-call/"
 }]
