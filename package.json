@@ -14,7 +14,7 @@
     "parse": "node parcer/script.js",
     "format": "node parcer/format.js",
     "sitemap": "node parcer/sitemap.js",
-    "commit": "git add . && git commit -m 'autocommit'",
+    "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "parse && commit"
   },
   "dependencies": {
