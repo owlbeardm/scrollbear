@@ -24,21 +24,21 @@ async function format() {
         let purl = match.substring(start + 1, end);
         name = name.replace(/_/g, '');
         let url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-        // spells.forEach((newSpell) => {
-        //   const spArr = purl.split("/");
-        //   const nspArr = newSpell.url.split("/");
-        //   // console.log(spArr, nspArr);
-        //
-        //   if (spArr[spArr.length - (
-        //       spArr[spArr.length - 1] == ''
-        //       ? 2
-        //       : 1)] == nspArr[nspArr.length - (
-        //       nspArr[nspArr.length - 1] == ''
-        //       ? 2
-        //       : 1)]) {
-        //     url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-        //   }
-        // });
+        spells.forEach((newSpell) => {
+          const spArr = purl.split("/");
+          const nspArr = newSpell.url.split("/");
+          // console.log(spArr, nspArr);
+
+          if (spArr[spArr.length - (
+              spArr[spArr.length - 1] == ''
+              ? 2
+              : 1)] == nspArr[nspArr.length - (
+              nspArr[nspArr.length - 1] == ''
+              ? 2
+              : 1)]) {
+            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+          }
+        });
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
