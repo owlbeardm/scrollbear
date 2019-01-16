@@ -24,13 +24,7 @@
     // sessionStorage.redirect = location.href;
     var l = window.location;
     console.log('What an url 200', l);
-    l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1).join('/') + '/#!/' +
-      l.pathname.slice(1).split('/').slice(0).join('/').replace(/&/g, '~and~') +
-      (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-      l.hash
-    );
+    l.replace('https://scrollbear.com/#!/spells/boneshaker');
   </script>
 
   <!-- Immediately redirect to the base URL so we can use the SPA routing. -->
