@@ -15,10 +15,30 @@ async function format() {
       const reg2 = /\[[^\]]+\]\([^\)]+all-spells[^\)]+\)/g;
       let isSpell = false;
       const newDesc = desc.replace(reg2, (match) => {
-        const start = match.indexOf('[');
-        const end = match.indexOf(']');
-        const name = match.substring(start + 1, end);
-        const url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+
+        let start = match.indexOf('[');
+        let end = match.indexOf(']');
+        let name = match.substring(start + 1, end);
+        start = match.indexOf('(');
+        end = match.indexOf(')');
+        let purl = match.substring(start + 1, end);
+        name = name.replace(/_/g, '');
+        let url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+        // spells.forEach((newSpell) => {
+        //   const spArr = purl.split("/");
+        //   const nspArr = newSpell.url.split("/");
+        //   // console.log(spArr, nspArr);
+        //
+        //   if (spArr[spArr.length - (
+        //       spArr[spArr.length - 1] == ''
+        //       ? 2
+        //       : 1)] == nspArr[nspArr.length - (
+        //       nspArr[nspArr.length - 1] == ''
+        //       ? 2
+        //       : 1)]) {
+        //     url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+        //   }
+        // });
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
