@@ -34,7 +34,8 @@ table.table-fit tbody td, table.table-fit tfoot td {
 }
 
 .table-sm th, .table-sm td {
-  padding: 6px 4px;
+  padding: 6px 4px !important;
+  
 }
 
 .spell-description {
@@ -45,4 +46,20 @@ table.table-fit tbody td, table.table-fit tfoot td {
 .spell-description p {
   text-indent: -1em;
   margin-bottom: 0;
+}
+
+div[aria-expanded="true"] i.fa-chevron-down {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+  transition-duration: 0.2s;
+}
+
+div[aria-expanded="false"] i.fa-chevron-down {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition-duration: 0.2s;
 }

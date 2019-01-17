@@ -120,8 +120,14 @@ initiativeApp.run([
 ]);
 
 function getSpellDescription(md) {
-  const converter = new showdown.Converter({tables: true, strikethrough: true});
+  const converter = new showdown.Converter({
+    tables: true,
+    strikethrough: true
+  });
   let html = `<div>${converter.makeHtml(md)}</div>`;
-  html = html.replace(/<table>/g, "<table class='table table-sm'>").replace(/<thead>/g, "<thead class='text-primary'>");
+  html = html
+    .replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>")
+    .replace(/<\/table>/g, "</table></div>")
+    .replace(/<thead>/g, "<thead class='text-primary'>");
   return html;
 }
