@@ -15,7 +15,6 @@ async function format() {
       const reg2 = /\[[^\]]+\]\([^\)]+all-spells[^\)]+\)/g;
       let isSpell = false;
       const newDesc = desc.replace(reg2, (match) => {
-
         let start = match.indexOf('[');
         let end = match.indexOf(']');
         let name = match.substring(start + 1, end);
@@ -42,6 +41,10 @@ async function format() {
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
+      const reg3 = /_\[[^\]]+\]\([^\)]+\)_/g;
+      desc = desc.replace(reg3, (match) => {
+        return match.substring(1, match.length-1);
+      });
       spell.description = desc;
     });
     spells.sort(function(a, b) {
