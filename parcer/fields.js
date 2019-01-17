@@ -14,12 +14,23 @@ async function fields() {
         ) {
           return;
         }
-        if (!fields[key])
+        if (!fields[key]) {
           fields[key] = {};
-        if (!fields[key][spell[key]]) {
-          fields[key][spell[key]] = 1;
+        }
+        if (!Array.isArray(spell[key])) {
+          if (!fields[key][spell[key]]) {
+            fields[key][spell[key]] = 1;
+          } else {
+            fields[key][spell[key]]++;
+          }
         } else {
-          fields[key][spell[key]]++;
+          spell[key].forEach((value)=>{
+            if (!fields[key][value]) {
+              fields[key][value] = 1;
+            } else {
+              fields[key][value]++;
+            }
+          });
         }
       });
     });
