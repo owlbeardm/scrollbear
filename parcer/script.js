@@ -104,6 +104,7 @@ async function main() {
           throw "Spell has no School";
         if (!spell.description)
           throw "Spell has no Description";
+        spell.url = spelllist[index];
 
         // console.log(spell);
         logSuccess(index, "ok", spell.name);
