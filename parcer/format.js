@@ -1,6 +1,5 @@
 const fs = require('fs');
-const http = require('http');
-const spells = require('./spells.json');
+const spells = require('./res/spells.json');
 
 async function format() {
   try {
