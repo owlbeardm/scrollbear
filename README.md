@@ -1,2 +1,2 @@
 # scrollbear
-spellbooks at hand
+Scrollbear spellbook reference for Pathfinder RPG.
