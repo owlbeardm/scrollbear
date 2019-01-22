@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const parse = require('node-html-parser').parse;
 const spelllist = require('./spelllist.json');
+const spellhtmls = require('./res/spell_htmls.json');
 const spelllistfailed = require('./spells_failed.json');
 const TurndownService = require('turndown');
 const turndownPluginGfm = require('turndown-plugin-gfm');
@@ -49,10 +50,10 @@ async function parseError() {
 }
 // parseError();
 
-async function main() {
+async function main_old() {
   try {
-    fs.writeFileSync('parcer/spells.json', "[", 'utf8');
-    fs.writeFileSync('parcer/spells_failed.log', "", 'utf8');
+    fs.writeFileSync('parcer/res/spells.json', "[", 'utf8');
+    fs.writeFileSync('parcer/res/spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
     for (let i = 0; i < spelllist.length; i++) {
@@ -68,19 +69,57 @@ async function main() {
         // console.log(spell);
         logSuccess(i, "ok", spell.name);
         if (i !== 0) {
-          fs.appendFileSync('parcer/spells.json', ",", 'utf8');
+          fs.appendFileSync('parcer/res/spells.json', ",", 'utf8');
         }
-        fs.appendFileSync('parcer/spells.json', JSON.stringify(spell, null, 4), 'utf8');
+        fs.appendFileSync('parcer/res/spells.json', JSON.stringify(spell, null, 4), 'utf8');
         s++;
       } catch (e) {
         logError(i, "Cant parse spell", spelllist[i]);
         logError("\t", e);
-        fs.appendFileSync('parcer/spells_failed.log', i + '\t' + spelllist[i] + '\n', 'utf8');
-        fs.appendFileSync('parcer/spells_failed.log', "\t" + e + '\n', 'utf8');
+        fs.appendFileSync('parcer/res/spells_failed.log', i + '\t' + spelllist[i] + '\n', 'utf8');
+        fs.appendFileSync('parcer/res/spells_failed.log', "\t" + e + '\n', 'utf8');
         f++;
       }
     }
-    fs.appendFileSync('parcer/spells.json', "]", 'utf8');
+    fs.appendFileSync('parcer/res/spells.json', "]", 'utf8');
+    logSuccess("Finished\n\n");
+    logSuccess("Successed", s);
+    logError("Failed", f);
+  } catch (e) {
+    logError(e);
+  }
+}
+async function main() {
+  try {
+    fs.writeFileSync('parcer/res/spells.json', "[", 'utf8');
+    fs.writeFileSync('parcer/res/spells_failed.log', "", 'utf8');
+    let s = 0;
+    let f = 0;
+    spellhtmls.forEach((spellsHtml, index) => {
+      try {
+        const spell = parseSpellPage(parse(spellsHtml));
+        if (!spell.name)
+          throw "Spell has no Name";
+        if (!spell.school)
+          throw "Spell has no School";
+        if (!spell.description)
+          throw "Spell has no Description";
+
+        // console.log(spell);
+        logSuccess(index, "ok", spell.name);
+        if (index !== 0) {
+          fs.appendFileSync('parcer/res/spells.json', ",", 'utf8');
+        }
+        fs.appendFileSync('parcer/res/spells.json', JSON.stringify(spell, null, 4), 'utf8');
+        s++;
+      } catch (e) {
+        logError(index, "Cant parse spell", spelllist[index]);
+        logError("\t", e);
+        fs.appendFileSync('parcer/res/spells_failed.log', index + "\t" + e + '\n', 'utf8');
+        f++;
+      }
+    });
+    fs.appendFileSync('parcer/res/spells.json', "]", 'utf8');
     logSuccess("Finished\n\n");
     logSuccess("Successed", s);
     logError("Failed", f);
@@ -89,6 +128,30 @@ async function main() {
   }
 }
 main();
+
+async function loadSpells() {
+  try {
+    fs.writeFileSync('parcer/res/spell_htmls.json', "[", 'utf8');
+    for (let i = 0; i < spelllist.length; i++) {
+      try {
+        const spell = await getSpellHtml(spelllist[i]);
+        logSuccess(i, "ok", spelllist[i]);
+        if (i !== 0) {
+          fs.appendFileSync('parcer/res/spell_htmls.json', ",", 'utf8');
+        }
+        fs.appendFileSync('parcer/res/spell_htmls.json', JSON.stringify(spell, null, 4), 'utf8');
+      } catch (e) {
+        logError(i, "Cant parse spell", spelllist[i]);
+        logError("\t", e);
+      }
+    }
+    fs.appendFileSync('parcer/res/spell_htmls.json', "]", 'utf8');
+    logSuccess("Finished\n\n");
+  } catch (e) {
+    logError(e);
+  }
+}
+// loadSpells();
 
 function loadSpellList(parsedData) {
   const rootVar = parse(parsedData).querySelector("body").querySelector("article");
@@ -185,8 +248,7 @@ function findDescription(element, spell) {
   }
 }
 
-function parseSpellPage(parsedData) {
-  const rootVar = parse(parsedData).querySelector("body").querySelector("article");
+function parseSpellPage(rootVar) {
   const spell = {};
   spell.name = rootVar.querySelector('h1').text;
   let article = rootVar.querySelector('.article-content');
@@ -248,7 +310,7 @@ function parseSpellPage(parsedData) {
   return spell;
 }
 
-function getSpell(url) {
+function getSpell_old(url) {
   return new Promise(function(resolve, reject) {
     http.get(url, (res) => {
       const {
@@ -276,6 +338,47 @@ function getSpell(url) {
           const parsedData = parseSpellPage(rawData);
           parsedData.url = url;
           resolve(parsedData);
+        } catch (e) {
+          // console.error(e.message);
+          reject(e);
+        }
+      });
+    }).on('error', (e) => {
+      // console.error(`Got error: ${e.message}`);
+      reject(e);
+    });
+  });
+}
+
+
+
+function getSpellHtml(url) {
+  return new Promise(function(resolve, reject) {
+    http.get(url, (res) => {
+      const {
+        statusCode
+      } = res;
+      const contentType = res.headers['content-type'];
+      let error;
+      if (statusCode !== 200) {
+        error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
+      }
+      if (error) {
+        // console.error(error.message);
+        reject(error);
+        res.resume();
+        return;
+      }
+
+      res.setEncoding('utf8');
+      let rawData = '';
+      res.on('data', (chunk) => {
+        rawData += chunk;
+      });
+      res.on('end', () => {
+        try {
+          const rootVar = parse(rawData).querySelector("body").querySelector("article");
+          resolve(rootVar.innerHTML);
         } catch (e) {
           // console.error(e.message);
           reject(e);
