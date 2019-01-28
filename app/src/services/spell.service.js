@@ -21,7 +21,7 @@ angular.module('app.services').factory('spellService', [
       currentSpells = allSpells.filter((value) => {
         return value.levels.split(', ').reduce((accumulatorSpell, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = CLASSES[classSet].search.reduce((accumulator, currentValue) => {
+          const isIncludeClass = (!CLASSES[classSet].search) ? true : CLASSES[classSet].search.reduce((accumulator, currentValue) => {
             return accumulator || className.startsWith(currentValue);
           }, false);
           return accumulatorSpell || isIncludeClass;

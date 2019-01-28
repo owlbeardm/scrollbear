@@ -77,7 +77,7 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
       if (include) {
         const place = value.levels.split(', ').reduce((classAccumulator, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = CLASSES[ctrl.classSelected].search.reduce((accumulator, currentValue) => {
+          const isIncludeClass = (!CLASSES[ctrl.classSelected].search) ? true : CLASSES[ctrl.classSelected].search.reduce((accumulator, currentValue) => {
             return accumulator || className.startsWith(currentValue);
           }, false);
           if (isIncludeClass) {
