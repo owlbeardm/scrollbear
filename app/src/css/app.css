@@ -64,7 +64,7 @@ div[aria-expanded="false"] i.fa-chevron-down {
   transition-duration: 0.2s;
 }
 
-.main-panel>.footer {
+pagefooter>.footer {
     border-top: none;
     color: #a3917a;
 }
