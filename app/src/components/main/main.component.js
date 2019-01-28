@@ -1,6 +1,6 @@
 "use strict";
 
-function MainController(spellService, $window, $state, $log, CLASSES) {
+function MainController(filterService, spellService, $window, $state, $log, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -20,26 +20,8 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
     ctrl.classSelected = (selectedClass && CLASSES[selectedClass]) ?
       selectedClass :
       'wizard';
-    ctrl.favOnly = favOnly ?
-      favOnly :
-      false;
+    ctrl.favOnly = filterService.favOnly;
     ctrl.setClass();
-  }
-
-  ctrl.chooseSpell = function(index) {
-    ctrl.spell = ctrl.spells[index];
-    const spell_url = ctrl.spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
-  }
-
-  ctrl.isFav = function(index) {
-    return spellService.isFav(ctrl.spells[index]);
-  }
-
-  ctrl.changeFav = function(index) {
-    spellService.changeFav(ctrl.spells[index]);
   }
 
   ctrl.search = function() {
@@ -54,7 +36,7 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
   }
 
   ctrl.setFavOnly = function() {
-    localStorage.setItem(FAV_ONLY, JSON.stringify(ctrl.favOnly));
+    filterService.setFavOnly(ctrl.favOnly);
     ctrl.search();
   }
 
@@ -63,39 +45,7 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
   }
 
   function getSpells() {
-    const allSells = {};
-    spellService.getAllSpells().forEach((value) => {
-      let include = false;
-      if (!ctrl.filter) {
-        include = true;
-      } else {
-        include = value.name.toLowerCase().includes(ctrl.filter.toLowerCase())
-      }
-      if (ctrl.favOnly) {
-        include = include && spellService.isFav(value);
-      }
-      if (include) {
-        const place = value.levels.split(', ').reduce((classAccumulator, classLevel) => {
-          const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = (!CLASSES[ctrl.classSelected].search) ? true : CLASSES[ctrl.classSelected].search.reduce((accumulator, currentValue) => {
-            return accumulator || className.startsWith(currentValue);
-          }, false);
-          if (isIncludeClass) {
-            const newLevel = classLevel.substring(classLevel.length - 1)
-            if (!classAccumulator || newLevel < classAccumulator) {
-              return newLevel;
-            }
-          }
-          return classAccumulator;
-        }, undefined);
-        if (place) {
-          if (!allSells[place]) {
-            allSells[place] = [];
-          }
-          allSells[place].push(value);
-        }
-      }
-    });
+    const allSells = spellService.getSpellsSplited();
     ctrl.total = Object.entries(allSells).reduce(function(total, pair) {
       return total + (pair[1].length);
     }, 0);
@@ -106,6 +56,7 @@ function MainController(spellService, $window, $state, $log, CLASSES) {
 const MainComponent = {
   template: require('./main.html'),
   controller: [
+    'filterService',
     'spellService',
     '$window',
     '$state',
