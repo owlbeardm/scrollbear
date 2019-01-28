@@ -10,6 +10,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
 function getCommonConfig() {
   return {
@@ -49,8 +50,6 @@ function getCommonConfig() {
         filename: '[name].[contenthash].css'
       }),
       new webpack.HashedModuleIdsPlugin(),
-
-
       new CopyWebpackPlugin([{
         from: 'assets/CNAME'
       }, {
@@ -161,6 +160,7 @@ module.exports = (env, argv) => {
         "type": "image/png"
       }]
     }));
+
     config.optimization = {
       minimizer: [
         new TerserPlugin(), new OptimizeCSSAssetsPlugin({})
@@ -189,6 +189,24 @@ module.exports = (env, argv) => {
         }
       }
     };
+    const spells = require('./resources/spells.json');
+    spells.forEach((spell, index) => {
+      const spellUrl = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+      if (index > 100) {
+        return;
+      }
+      config.plugins.push(new HtmlWebpackPlugin({
+        templateParameters: {
+          'title': `${spell.name} - ScrollBear`,
+          'description': `${spell.description}`,
+          'url': spellUrl
+        },
+        template: 'assets/spell.ejs',
+        filename: 'spells/' + spellUrl + '.html',
+        excludeAssets: [/app.*.js/, /app.*.css/, /styles.*.js/, /styles.*.css/, /res.*.js/, /res.*.css/, /vendor.*.js/, /vendor.*.css/]
+      }));
+    });
+    config.plugins.push(new HtmlWebpackExcludeAssetsPlugin());
   }
 
   return config;

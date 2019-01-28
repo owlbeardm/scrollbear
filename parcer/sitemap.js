@@ -15,9 +15,15 @@ async function main() {
     fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${(new Date()).toISOString()}</lastmod>\n`, 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     spells.forEach((spell) => {
+      const url = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+      const url1 = `https://scrollbear.com/spells/${url}`;
       fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
-      const url = `https://scrollbear.com/spells/${spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_')}`;
-      fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url}</loc>\n`, 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url1}</loc>\n`, 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
+      const url2 = `https://scrollbear.com/#!/spells/${url}`;
+      fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url2}</loc>\n`, 'utf8');
       fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
       fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     });
