@@ -3,6 +3,9 @@
 const appConstants = angular.module('app.constants', []);
 
 appConstants.constant('CLASSES', {
+  'all': {
+    name: 'All'
+  },
   'alchemist': {
     name: 'Alchemist',
     search: ['alchemist']
@@ -106,5 +109,46 @@ appConstants.constant('CLASSES', {
   'wizard': {
     name: 'Wizard',
     search: ['wizard', 'sorcerer']
+  }
+});
+
+appConstants.constant('SCHOOL', {
+  "transmutation": {
+    name: 'Transmutation',
+    search: ['transmutation']
+  },
+  "conjuration": {
+    name: 'Conjuration',
+    search: ['conjuration']
+  },
+  "evocation": {
+    name: 'Evocation',
+    search: ['evocation']
+  },
+  "enchantment": {
+    name: 'Enchantment',
+    search: ['enchantment']
+  },
+  "abjuration": {
+    name: 'Abjuration',
+    search: ['abjuration']
+  },
+  "necromancy": {
+    name: 'Necromancy',
+    search: ['necromancy']
+  },
+  "divination": {
+    name: 'Divination',
+    search: ['divination']
+  },
+  "illusion": {
+    name: 'Illusion',
+    search: ['illusion']
+  },
+  "other": {
+    name: 'Other',
+    search: (spell) => {
+      return !['transmutation', 'conjuration', 'evocation', 'enchantment', 'abjuration', 'necromancy', 'divination', 'illusion'].includes(spell.school)
+    }
   }
 });

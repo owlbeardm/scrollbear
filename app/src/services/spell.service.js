@@ -5,23 +5,51 @@ const allSpells = require('../../../resources/spells.json');
 angular.module('app.services').factory('spellService', [
   '$log',
   '$window',
+  'filterService',
   'CLASSES',
-  function($log, $window, CLASSES) {
+  function($log, $window, filterService, CLASSES) {
     const SpellService = {};
     const localStorage = $window['localStorage'];
-    const FAV_SPELLS = "FAV_SPELLS";
-    let currentSpells = [];
-
+    SpellService.currentSpells = [];
+    SpellService.classSet = [];
 
     SpellService.getAllSpells = function() {
-      return currentSpells;
+      return SpellService.currentSpells;
+    };
+
+    SpellService.getSpellsSplited = function() {
+      const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
+      const allSells = {};
+      spellsTmp.forEach((value) => {
+        const place = value.levels.split(', ').reduce((classAccumulator, classLevel) => {
+          const className = classLevel.substring(0, classLevel.length - 2);
+          const isIncludeClass = (!CLASSES[SpellService.classSet].search) ? true : CLASSES[SpellService.classSet].search.reduce((accumulator, currentValue) => {
+            return accumulator || className.startsWith(currentValue);
+          }, false);
+          if (isIncludeClass) {
+            const newLevel = classLevel.substring(classLevel.length - 1)
+            if (!classAccumulator || newLevel < classAccumulator) {
+              return newLevel;
+            }
+          }
+          return classAccumulator;
+        }, undefined);
+        if (place) {
+          if (!allSells[place]) {
+            allSells[place] = [];
+          }
+          allSells[place].push(value);
+        }
+      });
+      return allSells;
     };
 
     SpellService.setClass = function(classSet) {
-      currentSpells = allSpells.filter((value) => {
+      SpellService.classSet = classSet;
+      SpellService.currentSpells = allSpells.filter((value) => {
         return value.levels.split(', ').reduce((accumulatorSpell, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = CLASSES[classSet].search.reduce((accumulator, currentValue) => {
+          const isIncludeClass = (!CLASSES[classSet].search) ? true : CLASSES[classSet].search.reduce((accumulator, currentValue) => {
             return accumulator || className.startsWith(currentValue);
           }, false);
           return accumulatorSpell || isIncludeClass;
@@ -31,30 +59,17 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getSpellByUrl = function(url) {
       return allSpells.find((spell) => {
-        return spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_') == url;
+        return SpellService.spellNameToUrl(spell.name) == url;
       });
     };
 
-    SpellService.isFav = function(spell) {
-      let favSpellsNames = JSON.parse(localStorage.getItem(FAV_SPELLS));
-      if (!favSpellsNames || !favSpellsNames.length) {
-        favSpellsNames = [];
-      }
-      return favSpellsNames.includes(spell.name);
-    };
+    SpellService.spellNameToUrl = function(name) {
+      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+    }
 
-    SpellService.changeFav = function(spell) {
-      let favSpellsNames = JSON.parse(localStorage.getItem(FAV_SPELLS));
-      if (!favSpellsNames || !favSpellsNames.length) {
-        favSpellsNames = [];
-      }
-      if (favSpellsNames.includes(spell.name)) {
-        favSpellsNames.splice(favSpellsNames.indexOf(spell.name), 1);
-      } else {
-        favSpellsNames.push(spell.name);
-      }
-      localStorage.setItem(FAV_SPELLS, JSON.stringify(favSpellsNames));
-    };
+    SpellService.getSpellsCountByFilter = function() {
+      return allSpells.filter(filterService.filter).length;
+    }
 
     return SpellService;
   }
