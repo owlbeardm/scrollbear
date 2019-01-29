@@ -1,0 +1,27 @@
+<spell spell="$ctrl.spell"></spell>
+<div class="card">
+  <div class="card-header">
+    <form ng-submit="$ctrl.search()">
+      <div class="form-row">
+        <div class="col col-centered ">
+          <select class="form-control" ng-change="$ctrl.setClass()" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected">
+            <option ng-repeat="(key, value) in $ctrl.classes" value="{{key}}">{{value.name}}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <filter></filter>
+  </div>
+  <div class="card-body">
+    <spelllist spells="$ctrl.spells" class-name="$ctrl.classSelected"></spelllist>
+    <button ng-if="$ctrl.otherSpellsCount" ng-click="$ctrl.classToAll()" class='btn btn-warning'>Found <strong>{{$ctrl.otherSpellsCount}}</strong> spell{{$ctrl.otherSpellsCount!=1?'s':''}} in other classes</button>
+  </div>
+  <div class="card-footer">
+    <div class="container">
+      <span class="float-right">
+        Total: {{$ctrl.total}}
+      </span>
+    </div>
+  </div>
+</div>
+<ui-view></ui-view>
