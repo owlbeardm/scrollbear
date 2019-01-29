@@ -67,6 +67,10 @@ angular.module('app.services').factory('spellService', [
       return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
     }
 
+    SpellService.getSpellsCountByFilter = function() {
+      return allSpells.filter(filterService.filter).length;
+    }
+
     return SpellService;
   }
 ]);

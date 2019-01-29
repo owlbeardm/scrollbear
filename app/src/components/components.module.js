@@ -14,5 +14,8 @@ appComponents.component('pageheader', PageHeaderComponent);
 import PageFooterComponent from './main/pagefooter.component.js';
 appComponents.component('pagefooter', PageFooterComponent);
 
+import FilterComponent from './main/filter.component.js';
+appComponents.component('filter', FilterComponent);
+
 import MainComponent from './main/main.component.js';
 appComponents.component('main', MainComponent);

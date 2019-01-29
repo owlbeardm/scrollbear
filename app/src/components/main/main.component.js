@@ -1,10 +1,9 @@
 "use strict";
 
-function MainController(filterService, spellService, $window, $state, $log, CLASSES) {
+function MainController(notificationService, filterService, spellService, $window, $state, $scope, $log, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
-  const FAV_ONLY = "FAV_ONLY";
   const SELECTED_CLASS = "SELECTED_CLASS";
 
   ctrl.$onInit = function() {
@@ -15,13 +14,14 @@ function MainController(filterService, spellService, $window, $state, $log, CLAS
       $state.go('main');
     });
     ctrl.classes = CLASSES;
-    const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     const selectedClass = JSON.parse(localStorage.getItem(SELECTED_CLASS));
     ctrl.classSelected = (selectedClass && CLASSES[selectedClass]) ?
       selectedClass :
       'wizard';
-    ctrl.favOnly = filterService.favOnly;
     ctrl.setClass();
+    notificationService.subscribe($scope, notificationService.FILTER_CHANGED, (event, param) => {
+      ctrl.spells = getSpells();
+    });
   }
 
   ctrl.search = function() {
@@ -35,20 +35,20 @@ function MainController(filterService, spellService, $window, $state, $log, CLAS
     ctrl.search();
   }
 
-  ctrl.setFavOnly = function() {
-    filterService.setFavOnly(ctrl.favOnly);
-    ctrl.search();
-  }
-
-  ctrl.reset = function() {
-    ctrl.filter = "";
+  ctrl.classToAll = function() {
+    ctrl.classSelected = 'all';
+    ctrl.setClass();
   }
 
   function getSpells() {
+    ctrl.otherSpellsCount = 0;
     const allSells = spellService.getSpellsSplited();
     ctrl.total = Object.entries(allSells).reduce(function(total, pair) {
       return total + (pair[1].length);
     }, 0);
+    if (!ctrl.total) {
+      ctrl.otherSpellsCount = spellService.getSpellsCountByFilter();
+    }
     return allSells;
   }
 }
@@ -56,10 +56,12 @@ function MainController(filterService, spellService, $window, $state, $log, CLAS
 const MainComponent = {
   template: require('./main.html'),
   controller: [
+    'notificationService',
     'filterService',
     'spellService',
     '$window',
     '$state',
+    '$scope',
     '$log',
     'CLASSES',
     MainController
