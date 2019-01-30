@@ -1,5 +1,6 @@
 const fs = require('fs');
 const spells = require('./res/spells.json');
+const manualSpells = require('./res/manual_spells.json');
 
 async function format() {
   try {
@@ -28,12 +29,12 @@ async function format() {
           // console.log(spArr, nspArr);
 
           if (spArr[spArr.length - (
-              spArr[spArr.length - 1] == ''
-              ? 2
-              : 1)] == nspArr[nspArr.length - (
-              nspArr[nspArr.length - 1] == ''
-              ? 2
-              : 1)]) {
+              spArr[spArr.length - 1] == '' ?
+              2 :
+              1)] == nspArr[nspArr.length - (
+              nspArr[nspArr.length - 1] == '' ?
+              2 :
+              1)]) {
             url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
           }
         });
@@ -42,9 +43,19 @@ async function format() {
       desc = newDesc;
       const reg3 = /_\[[^\]]+\]\([^\)]+\)_/g;
       desc = desc.replace(reg3, (match) => {
-        return match.substring(1, match.length-1);
+        return match.substring(1, match.length - 1);
       });
       spell.description = desc;
+    });
+    spells.forEach((spell) => {
+      const manualSpell = manualSpells.find((mspell) => {
+        return spell.name == mspell.name;
+      });
+      if (manualSpell) {
+        Object.entries(manualSpell).forEach(([key, value]) => {
+          spell[key] = value;
+        });
+      }
     });
     spells.sort(function(a, b) {
       var nameA = a.name.toUpperCase(); // ignore upper and lowercase
