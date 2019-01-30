@@ -22,22 +22,27 @@ async function format() {
         end = match.indexOf(')');
         let purl = match.substring(start + 1, end);
         name = name.replace(/_/g, '');
-        let url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+        let url = undefined;
         spells.forEach((newSpell) => {
+          if (url) {
+            return;
+          }
           const spArr = purl.split("/");
           const nspArr = newSpell.url.split("/");
           // console.log(spArr, nspArr);
 
           if (spArr[spArr.length - (
-              spArr[spArr.length - 1] == '' ?
-              2 :
-              1)] == nspArr[nspArr.length - (
-              nspArr[nspArr.length - 1] == '' ?
-              2 :
-              1)]) {
+              spArr[spArr.length - 1] == ''
+              ? 2
+              : 1)] == nspArr[nspArr.length - (
+              nspArr[nspArr.length - 1] == ''
+              ? 2
+              : 1)]) {
             url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
           }
         });
+        if (!url)
+          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
@@ -46,15 +51,16 @@ async function format() {
         return match.substring(1, match.length - 1);
       });
       spell.description = desc;
-      if(spell.levels)
-      spell.levels = spell.levels.split(',').map(function(level) {
-        return level.trim();
-      });
-      if(spell.components)
-      spell.components = spell.components.split(', ').map(function(component) {
-        return component.trim();
-      });
-    });
+      if (spell.levels)
+        spell.levels = spell.levels.split(',').map(function(level) {
+          return level.trim();
+        });
+      if (spell.components)
+        spell.components = spell.components.split(', ').map(function(component) {
+          return component.trim();
+        });
+      }
+    );
     spells.forEach((spell) => {
       const manualSpell = manualSpells.find((mspell) => {
         return spell.name == mspell.name;
