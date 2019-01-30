@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellListController($log, $state, filterService, CLASSES) {
+function SpellListController($log, $state, filterService, spellService, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
 
@@ -11,7 +11,7 @@ function SpellListController($log, $state, filterService, CLASSES) {
 
   ctrl.chooseSpell = function(spell) {
     ctrl.spell = spell;
-    const spell_url = SpellService.spellNameToUrl(ctrl.spell.name);
+    const spell_url = spellService.spellNameToUrl(ctrl.spell.name);
     $state.go('spells', {
       spellUrl: spell_url
     });
@@ -29,7 +29,7 @@ function SpellListController($log, $state, filterService, CLASSES) {
 
 const SpellListComponent = {
   template: require('./spelllist.html'),
-  controller: ['$log', '$state', 'filterService', 'CLASSES', SpellListController],
+  controller: ['$log', '$state', 'filterService', 'spellService', 'CLASSES', SpellListController],
   bindings: {
     spells: '<',
     className: '<'
