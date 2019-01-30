@@ -21,7 +21,7 @@ angular.module('app.services').factory('spellService', [
       const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
       const allSells = {};
       spellsTmp.forEach((value) => {
-        const place = value.levels.split(', ').reduce((classAccumulator, classLevel) => {
+        const place = value.levels.reduce((classAccumulator, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
           const isIncludeClass = (!CLASSES[SpellService.classSet].search) ? true : CLASSES[SpellService.classSet].search.reduce((accumulator, currentValue) => {
             return accumulator || className.startsWith(currentValue);
@@ -47,7 +47,10 @@ angular.module('app.services').factory('spellService', [
     SpellService.setClass = function(classSet) {
       SpellService.classSet = classSet;
       SpellService.currentSpells = allSpells.filter((value) => {
-        return value.levels.split(', ').reduce((accumulatorSpell, classLevel) => {
+        if(!value.levels){
+          return false;
+        }
+        return value.levels.reduce((accumulatorSpell, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
           const isIncludeClass = (!CLASSES[classSet].search) ? true : CLASSES[classSet].search.reduce((accumulator, currentValue) => {
             return accumulator || className.startsWith(currentValue);

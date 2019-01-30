@@ -11,9 +11,9 @@
         <div>
           <div class="spell-description">
             <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters"> {{$ctrl.getDescripters()}}</span>;
-              <b>Level </b>{{$root.spell.levels}}</p>
+              <b>Level </b><span>{{$root.spell.levels | array}}</span></p>
             <p><b>Casting Time </b> {{$root.spell.castingTime}}</p>
-            <p><b>Components </b> {{$root.spell.components}}</p>
+            <p><b>Components </b> {{$root.spell.components | array}}</p>
             <p><span ng-if="$root.spell.range"><b>Range </b>{{$root.spell.range}}</span></p>
             <p><span ng-if="$root.spell.area"><b>Area </b>{{$root.spell.area}}</span></p>
             <p><span ng-if="$root.spell.target"><b>Target </b>{{$root.spell.target}}</span></p>
