@@ -26,7 +26,7 @@ turndownService.use(turndownPluginGfm.gfm);
 //         if (!spell.description)
 //           throw "Spell has no Description";
 //
-//         // console.log(spell);
+//          console.log(spell);
 //         logSuccess(i, "ok", spell.name);
 //         if (i !== 0) {
 //           fs.appendFileSync('parcer/f_spells.json', ",", 'utf8');
@@ -49,7 +49,7 @@ turndownService.use(turndownPluginGfm.gfm);
 //     logError(e);
 //   }
 // }
-// // parseError();
+//  parseError();
 
 async function main_old() {
   try {
@@ -102,6 +102,7 @@ async function main() {
         spells.forEach((spell) => {
           if (!spell.name)
             throw "Spell has no Name";
+
           // if (!spell.description)
           //   throw "Spell has no Description";
           spell.url = spelllist[index];
@@ -188,7 +189,7 @@ function parseSpellSubschool(data) {
   const subschoolVar = data.match(subschool);
   if (subschoolVar)
     return removeATag(subschoolVar[0].substring(1, subschoolVar[0].length - 1).trim());
-}
+  }
 //   [Descriptor]
 function parseSpellDescriptor(data) {
   const descripters = /\[(.*?)\]/g;
@@ -199,7 +200,7 @@ function parseSpellDescriptor(data) {
     return descriptersVar[0].substring(1, descriptersVar[0].length - 1).split(',').map((value) => {
       return removeATag(value.trim())
     });
-}
+  }
 
 function addValue(spell, value, name, key) {
   if (!spell[key] && value.innerHTML && value.innerHTML.toUpperCase().includes(name.toUpperCase())) {
@@ -217,23 +218,14 @@ function setDescription(element, spell) {
     if (index > 1 && elements[index - 2].innerHTML === 'DESCRIPTION' && !spell.description) {
       let i = index;
       spell.description = undefined;
-      while (
-        elements[i] &&
-        (
-          (
-            (!elements[i].classNames || !elements[i].classNames.includes('comments')) &&
-            (!elements[i].classNames || !elements[i].classNames.includes('section15')) &&
-            elements[i].tagName !== 'h4') ||
-          !elements[i].tagName
-        )
-      ) {
-        if (elements[i].childNodes.length && (elements[i].querySelector('h4') ||
-            elements[i].querySelector('.comments') ||
-            elements[i].querySelector('.section15')
-          )) {
+      while (elements[i] && (((!elements[i].classNames || !elements[i].classNames.includes('comments')) && (!elements[i].classNames || !elements[i].classNames.includes('section15')) && elements[i].tagName !== 'h4') || !elements[i].tagName)) {
+        if (elements[i].childNodes.length && (elements[i].querySelector('h4') || elements[i].querySelector('.comments') || elements[i].querySelector('.section15'))) {
           break;
         }
-        spell.description = (spell.description ? spell.description : "") + elements[i].toString();
+        spell.description = (
+          spell.description
+          ? spell.description
+          : "") + elements[i].toString();
         i++;
       }
     }
@@ -246,7 +238,8 @@ function findDescription_(element, spell) {
     element.childNodes.forEach((value) => {
       if (!spell.description)
         findDescription_(value, spell);
-    });
+      }
+    );
   }
 }
 
@@ -267,7 +260,7 @@ function populateSpell(article, spell) {
       const levels = value.innerHTML.split(';')[1];
       if (!spell.levels)
         spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
-    }
+      }
     addValue(spell, value, '<b>Casting Time</b>', 'castingTime');
     addValue(spell, value, 'Casting Time</b>', 'castingTime');
     addValue(spell, value, '<b>Components</b>', 'components');
@@ -302,7 +295,8 @@ function populateSpell(article, spell) {
               spell.savingThrow = removeATag(line.replace(new RegExp('<b>Saving Throw</b>', "ig"), '')).trim();
             if (!spell.spellResistance && line.toUpperCase().includes('<b>Spell Resistance</b>'.toUpperCase()))
               spell.spellResistance = removeATag(line.replace(new RegExp('<b>Spell Resistance</b>', "ig"), '')).trim();
-          });
+            }
+          );
         }
       });
     }
@@ -317,10 +311,18 @@ function parseSpellPage(rootVar) {
   populateSpell(article, spell);
   findDescription(article, spell);
   result.push(spell);
-  article.childNodes.forEach((value, index, elements) => {
+  article.childNodes.forEach((child, index, elements) => {
     spellsPrefixes.forEach((prefix) => {
+      let value = undefined;
       try {
-        if (value.innerHTML && value.innerHTML.includes(spell.name) && value.innerHTML.includes(prefix)) {
+        if (child.innerHTML && child.innerHTML.includes(spell.name) && child.innerHTML.includes(prefix)) {
+          let valueAdded = '<div>';
+          for (let i = index; i < elements.length; i++) {
+            valueAdded += elements[i].toString();
+          }
+          valueAdded += '</div>';
+          value = parse(valueAdded);
+          // console.log(valueAdded);
           const altSpell = {};
           altSpell.name = spell.name + ", " + prefix;
           populateSpell(value, altSpell);
@@ -340,9 +342,7 @@ function parseSpellPage(rootVar) {
 function getSpell_old(url) {
   return new Promise(function(resolve, reject) {
     http.get(url, (res) => {
-      const {
-        statusCode
-      } = res;
+      const {statusCode} = res;
       const contentType = res.headers['content-type'];
       let error;
       if (statusCode !== 200) {
@@ -377,14 +377,10 @@ function getSpell_old(url) {
   });
 }
 
-
-
 function getSpellHtml(url) {
   return new Promise(function(resolve, reject) {
     http.get(url, (res) => {
-      const {
-        statusCode
-      } = res;
+      const {statusCode} = res;
       const contentType = res.headers['content-type'];
       let error;
       if (statusCode !== 200) {
