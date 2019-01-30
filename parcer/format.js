@@ -46,6 +46,14 @@ async function format() {
         return match.substring(1, match.length - 1);
       });
       spell.description = desc;
+      if(spell.levels)
+      spell.levels = spell.levels.split(',').map(function(level) {
+        return level.trim();
+      });
+      if(spell.components)
+      spell.components = spell.components.split(', ').map(function(component) {
+        return component.trim();
+      });
     });
     spells.forEach((spell) => {
       const manualSpell = manualSpells.find((mspell) => {
