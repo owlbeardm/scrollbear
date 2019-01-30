@@ -8,6 +8,7 @@ import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
 import './src/components/components.module.js';
+import './src/filter/filters.module.js';
 import './src/services/services.module.js';
 import './src/constants/constants.module.js';
 // import './src/directives/directives.module.js';
@@ -23,7 +24,7 @@ if ('serviceWorker' in navigator) {
 }
 
 const initiativeApp = angular.module('initiativeApp', [
-  'app.components', 'app.constants', 'app.services', 'ui.router', 'ngSanitize'
+  'app.components', 'app.constants', 'app.services', 'app.filters', 'ui.router', 'ngSanitize'
   // 'app.directives'
 ]);
 
