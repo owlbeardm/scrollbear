@@ -5,6 +5,7 @@ const spelllist = require('./spelllist.json');
 const spellhtmls = require('./res/spell_htmls.json');
 // const spelllistfailed = require('./res/spells_failed.json');
 const spellsPrefixes = require('./spells_prefixes.json');
+const spellsNumbers = require('./spells_numbers.json');
 const TurndownService = require('turndown');
 const turndownPluginGfm = require('turndown-plugin-gfm');
 const turndownService = new TurndownService();
@@ -325,6 +326,30 @@ function parseSpellPage(rootVar) {
           // console.log(valueAdded);
           const altSpell = {};
           altSpell.name = spell.name + ", " + prefix;
+          populateSpell(value, altSpell);
+          findDescription(value, altSpell);
+          result.push(altSpell);
+        }
+      } catch (ex) {
+        logError(ex);
+        console.log(value.innerHTML);
+      }
+    });
+    spellsNumbers.forEach((number, ind, elems) => {
+      let value = undefined;
+      try {
+        if (child.innerHTML && child.innerHTML.includes(spell.name + " " + number)
+         // && !child.innerHTML.includes(spell.name + " " + elems[ind+1])
+       ) {
+          let valueAdded = '<div>';
+          for (let i = index; i < elements.length; i++) {
+            valueAdded += elements[i].toString();
+          }
+          valueAdded += '</div>';
+          value = parse(valueAdded);
+          // console.log(valueAdded);
+          const altSpell = {};
+          altSpell.name = spell.name + " " + number;
           populateSpell(value, altSpell);
           findDescription(value, altSpell);
           result.push(altSpell);
