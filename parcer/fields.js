@@ -1,5 +1,5 @@
 const fs = require('fs');
-const spells = require('./spells.json');
+const spells = require('../resources/spells.json');
 
 async function fields() {
   try {
@@ -9,7 +9,7 @@ async function fields() {
         if (key === 'description' ||
           key === 'url' ||
           key === 'name' ||
-          key === 'levels' ||
+          // key === 'levels' ||
           key === 'components'
         ) {
           return;

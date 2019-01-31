@@ -915,7 +915,7 @@
             "druid 4",
             "magus 4",
             "sorcerer/wizard 4",
-            "witch 4 Saving Throw Reflex negates and Fort negates (see text)"
+            "witch 4"
         ],
         "savingThrow": "Reflex negates and Fort negates (see text)",
         "spellResistance": "yes",
@@ -3547,9 +3547,7 @@
             "sorcerer/wizard 4",
             "spiritualist 4",
             "summoner 4",
-            "witch 4 Components V",
-            "S",
-            "F (corpse or likeness of the deceased creature whose form you plan to assume)"
+            "witch 4"
         ],
         "components": [
             "V",
@@ -5427,7 +5425,7 @@
         ],
         "levels": [
             "druid 6",
-            "sorcerer/wizard 6 Area 120-ft.-radius spread"
+            "sorcerer/wizard 6"
         ],
         "area": "120-ft.-radius spread",
         "description": "This spell causes tall grass, weeds, and other plants to swell into Gargantuan vines and tendrils that erupt from the ground, reaching for any structure or any creature of evil alignment, functioning like _black tentacles_ except as noted. When you are determining the tendrils’ CMB, the tendrils use your caster level as their base attack bonus and have a +13 bonus due to their Strength. Any tendril that succeeds in grappling a foe deals 4d6+13 points of damage to the grappled creature. Additionally, the tendrils created by this spell can [detect evil](/spells/detect-evil) auras, as if they had spent 3 rounds observing all creatures and objects within the spell’s area using [detect evil](/spells/detect-evil), and attack and impede the movement of only evil creatures, though they also attack any structures in their area. Each structure suffers a single attack each round; your caster level acts as the base attack bonus for these attacks, and the tendrils deal 4d6+13 points of damage on each successful attack. Creatures that lack evil auras are not attacked or impeded by this spell."
@@ -11853,7 +11851,7 @@
         ],
         "levels": [
             "bard 4",
-            "sorcerer/wizard 4 Duration 1 hour/level (D)"
+            "sorcerer/wizard 4"
         ],
         "duration": "1 hour/level (D)",
         "description": "This spell functions as [whispering wind](/spells/whispering-wind), except it can carry responses and doesn’t end after delivering its first message.\n\nAfter the wind completes its initial message, it waits for 1 round, then copies what it hear, and returns at the same speed and by the same route. It delivers what it heard to the location where the spell was originally cast. The wind continues back and forth in this way until the duration ends or the spell is dismissed."
@@ -13479,11 +13477,7 @@
         "school": "transmutation",
         "subschool": "oils worth 5,000 gp",
         "levels": [
-            "druid 6 Components V",
-            "S",
-            "M",
-            "DF (oils worth 5",
-            "000 gp)"
+            "druid 6"
         ],
         "components": [
             "V",
@@ -14457,7 +14451,7 @@
         ],
         "levels": [
             "psychic 5",
-            "witch 5 Target one creature/4 levels"
+            "witch 5"
         ],
         "target": "one creature/4 levels",
         "description": "This spell functions as per _debilitating pain_, except you can target one creature for every 4 caster levels you have."
@@ -14727,9 +14721,10 @@
             "force"
         ],
         "levels": [
-            "sorcerer/wizard 9 Effects up to one sword per 3 levels"
+            "sorcerer/wizard 9"
         ],
-        "description": "This spell functions as _defending sword_, except you can create one sword per 5 caster levels, each of which must defend a different creature within range."
+        "description": "This spell functions as _defending sword_, except you can create one sword per 5 caster levels, each of which must defend a different creature within range.",
+        "effect": "up to one sword per 3 levels"
     },
     {
         "name": "Defensive Grace",
@@ -16430,8 +16425,7 @@
             "cleric 6",
             "magus 6",
             "sorcerer/wizard 6",
-            "witch 6 Target or Area one creature or technological object",
-            "or a 20-ft.-radius burst"
+            "witch 6"
         ],
         "target": "or Area one creature or technological object, or a 20-ft.-radius burst",
         "description": "This spell functions as discharge, except it can discharge multiple technological objects and can be used to target an area.\n\nYou choose to use greater discharge in one of two ways: an area discharge or a targeted discharge.\n\n**Area Discharge**: When greater discharge is used in this way, the spell affects everything within a 20-foot-radius burst. Each creature in the area is affected as though by discharge (affecting only one object in the creature’s possession), and each unattended object is similarly affected.\n\n**Targeted Discharge**: This spell functions as discharge, but if the target is a creature, it can discharge one randomly determined object from the target’s charged or electrically powered possessions for every 4 caster levels you possess."
@@ -20555,11 +20549,7 @@
             "ruse"
         ],
         "levels": [
-            "cleric 9 Components V",
-            "S",
-            "M (diamond worth 25",
-            "000 gp)",
-            "DF Duration permanent"
+            "cleric 9"
         ],
         "components": [
             "V",
@@ -21932,7 +21922,7 @@
             "bloodrager 4",
             "druid 4",
             "magus 4",
-            "sorcerer/wizard 4 Saving Throw Reflex negates (see text)"
+            "sorcerer/wizard 4"
         ],
         "savingThrow": "Reflex negates (see text)",
         "spellResistance": "yes",
@@ -22249,7 +22239,7 @@
         "levels": [
             "sorcerer/wizard 3",
             "summoner 3",
-            "witch 3 Duration concentration + 2 rounds and 1 hour/level (see text)"
+            "witch 3"
         ],
         "duration": "concentration + 2 rounds and 1 hour/level (see text)",
         "description": "This spell functions as [summon swarm](/spells/summon-swarm), except that living and undead creatures that fail their saving throw against the swarm’s distraction find that their limbs twist and spasm, as their bodies become susceptible to transmutations. Such creatures take a –4 penalty to Dexterity and on saving throws against transmutation effects for 1 hour per caster level.\n\n ![](http://www.amazon.com/gp/product/1601257228/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257228&linkCode=as2&tag=httpwwwd20pfs-20&linkId=4FMYQLPXYPJS57RH) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo1ampa1601257228)  Get this book AND support this site!"
@@ -26889,7 +26879,7 @@
         "subschool": "object",
         "levels": [
             "shaman 3",
-            "witch 3 Saving Throw see text"
+            "witch 3"
         ],
         "savingThrow": "see text",
         "spellResistance": "no (object) and yes (see text)",
@@ -27956,10 +27946,7 @@
             "shaman 7",
             "sorcerer/wizard 7",
             "spiritualist 6",
-            "witch 7 Target one humanoid",
-            "magical beast",
-            "or monstrous humanoid/level",
-            "no two of which can be more than 30 feet apart"
+            "witch 7"
         ],
         "target": "one humanoid, magical beast, or monstrous humanoid/level, no two of which can be more than 30 feet apart",
         "description": "This spell functions like _hunger for flesh_, except that it affects multiple targets. When forced to feed by the spell, affected creatures attack creatures not affected by this spell if there are any such appropriate creatures nearby, but otherwise they attack other affected creatures."
@@ -28753,7 +28740,7 @@
             "mesmerist 4",
             "occultist 5",
             "psychic 5",
-            "sorcerer/wizard 6 Target you and one creature"
+            "sorcerer/wizard 6"
         ],
         "target": "you and one creature",
         "description": "This spell functions as illusion of treachery except that it also conceals your own actions (as [illusion of calm](/spells/illusion-of-calm)) and renders invisible all spell effects and ranged attacks originating from you until they reach the attack’s target (this doesn’t cause the attack’s target to be unable to avoid the attack, as they still see the attack originating from the spell’s target)."
@@ -29267,7 +29254,7 @@
         ],
         "levels": [
             "occultist 1",
-            "sorcerer/wizard 1 Saving Throw Reflex partial"
+            "sorcerer/wizard 1"
         ],
         "savingThrow": "Reflex partial",
         "spellResistance": "yes",
@@ -29328,7 +29315,9 @@
             "lawful"
         ],
         "levels": [
-            "see text"
+            "cleric 3",
+            "sorcerer/wizard 3",
+            "summoner 3"
         ],
         "castingTime": "1 round",
         "components": [
@@ -29519,8 +29508,7 @@
             "psychic 6",
             "sorcerer/wizard 7",
             "spiritualist 5",
-            "witch 7 Target one creature/level",
-            "no two of which can be more than 30 ft. apart."
+            "witch 7"
         ],
         "target": "one creature/level, no two of which can be more than 30 ft. apart.",
         "description": "You telepathically wrack the target’s mind and body with agonizing pain that imposes a –4 penalty on attack rolls, skill checks, and ability checks. A successful Will save reduces the duration to 1 round."
@@ -30400,7 +30388,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "cleric/oracle 5 (Magrim)"
+            "cleric/oracle 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -30453,7 +30441,7 @@
             "inquisitor 1",
             "psychic 1",
             "ranger 1",
-            "sorcerer/wizard 1 Duration 10 minutes/level"
+            "sorcerer/wizard 1"
         ],
         "duration": "10 minutes/level",
         "description": "This spell functions as [alarm](/spells/alarm), except it is triggered only by invisible creatures entering or leaving the warded area. The spell has a different mental alarm depending on whether the invisible creature is entering or leaving the area. This spell does not aid you in sensing or pinpointing the location of an invisible creature within the spell’s area.\n\n_Invisibility alarm_ can be made permanent with a [permanency](/spells/permanency) spell by a caster of 9th level or higher at a cost of 2,500 gp."
@@ -31702,7 +31690,8 @@
         "levels": [
             "cleric 6",
             "magus 5",
-            "sorcerer/"
+            "sorcerer/wizard 6",
+            "witch 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33923,7 +33912,7 @@
         ],
         "levels": [
             "cleric 2",
-            "druid 2 Target up to three boulders touched"
+            "druid 2"
         ],
         "target": "up to three boulders touched",
         "description": "This spell works like [magic stone](/spells/magic-stone), except you transmute as many as three boulders (rocks up to two size categories smaller than yourself) to use with the rock throwing ability or as siege engine ammunition. The boulder’s damage increases by one step, and the boulder gains a +1 enhancement bonus on attack and damage rolls."
@@ -34891,7 +34880,7 @@
             "occultist 4",
             "psychic 3",
             "sorcerer/wizard 4",
-            "spiritualist 4 Duration instantaneous"
+            "spiritualist 4"
         ],
         "duration": "instantaneous",
         "description": "You mingle the power of your mind and body to exert force beyond your reach. This spell functions as the combat maneuver version of [telekinesis](/spells/telekinesis), except as noted above. Alternatively, you can inflict a telekinetic unarmed strike with this spell, using your own unarmed strike damage and applying your primary spellcasting ability score modifier to the damage in place of your Strength modifier.\n\n ![](http://www.amazon.com/gp/product/1601257228/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257228&linkCode=as2&tag=httpwwwd20pfs-20&linkId=4FMYQLPXYPJS57RH) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo1ampa1601257228)  Get this book AND support this site!"
@@ -37367,9 +37356,7 @@
             "cleric 6",
             "druid 5",
             "inquisitor 6",
-            "witch 6\nComponents V",
-            "S",
-            "M/DF (a lump of charcoal)\nDuration instantaneous or 1 hour/level (D)"
+            "witch 6"
         ],
         "components": [
             "V",
@@ -37719,7 +37706,7 @@
         "subschool": "Kols",
         "levels": [
             "cleric/oracle 3",
-            "paladin 2 (Kols)"
+            "paladin 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38826,8 +38813,7 @@
             "mesmerist 4",
             "psychic 5",
             "sorcerer/wizard 5",
-            "witch 5 Target one living creature/level",
-            "no two of which can be more than 30 ft. apart"
+            "witch 5"
         ],
         "target": "one living creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions as per _passing fancy_ except as noted."
@@ -38966,7 +38952,7 @@
             "mind- affecting"
         ],
         "levels": [
-            "cleric/oracle 2 (Grundinnar)"
+            "cleric/oracle 2"
         ],
         "castingTime": "1 swift action",
         "components": [
@@ -40399,7 +40385,7 @@
         "levels": [
             "cleric/oracle 3",
             "paladin 3",
-            "ranger 4 (Angradd)"
+            "ranger 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -46814,7 +46800,7 @@
         "name": "Sealed Life, Greater",
         "school": "abjuration",
         "levels": [
-            "spiritualist 6 Duration 1 minute/level"
+            "spiritualist 6"
         ],
         "duration": "1 minute/level",
         "description": "You seal the life force within the target, preventing it from sharing its vitality with others. Affected creatures can’t transfer damage to or from another, such as through [shield other](/spells/shield-other), a spiritualist’s life bond, or a summoner’s life link. Effects such as [vampiric touch](/spells/vampiric-touch) that steal vitality from others deal damage normally, but provide no benefits."
@@ -48509,7 +48495,7 @@
         "school": "transmutation",
         "subschool": "polymorph",
         "levels": [
-            "sorcerer/wizard 7 Duration 1 hour/level"
+            "sorcerer/wizard 7"
         ],
         "duration": "1 hour/level",
         "description": "This spell functions as shapechanger’s gift except the chosen form can be an animal (as per [beast shape I](/spells/beast-shape)), elemental (as per [elemental body I](/spells/elemental-body)), fey (as per _fey form I_), humanoid (as per [alter self](/spells/alter-self)), monstrous humanoid (as per [monstrous physique I](/spells/monstrous-physique)), or vermin (as per [vermin shape I](/spells/vermin-shape)) and the chosen form can have a fly speed."
@@ -49527,7 +49513,7 @@
         "levels": [
             "druid 2",
             "ranger 2",
-            "shaman 2 Saving Throw Reflex partial and Fort negates (see text)"
+            "shaman 2"
         ],
         "savingThrow": "Reflex partial and Fort negates (see text)",
         "spellResistance": "no",
@@ -49584,9 +49570,7 @@
         "school": "transmutation",
         "subschool": "D",
         "levels": [
-            "druid 9 Targets one Gargantuan",
-            "Huge",
-            "or Large plant per three caster levels Duration 1 hour/level (D) Saving Throw none"
+            "druid 9"
         ],
         "targets": "one Gargantuan, Huge, or Large plant per three caster levels",
         "duration": "1 hour/level (D)",
@@ -51646,7 +51630,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 7 (must worship the associated deity)"
+            "cleric/oracle 7"
         ],
         "components": [
             "V",
@@ -51662,7 +51646,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 9 (must worship the associated deity)"
+            "cleric/oracle 9"
         ],
         "description": "This spell functions like _lesser spellcasting contract_, except if the target has 13 HD or more you can imbue him with one or two 4th- level spells and one 5th-level spell."
     },
@@ -51671,7 +51655,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 5 (must worship the associated deity)"
+            "cleric/oracle 5"
         ],
         "components": [
             "V",
@@ -53480,7 +53464,7 @@
             "inquisitor 3",
             "paladin 3",
             "psychic 3",
-            "sorcerer/wizard 3 Duration 1 round/level or until discharged"
+            "sorcerer/wizard 3"
         ],
         "duration": "1 round/level or until discharged",
         "description": "You are closely surrounded by a barely visible magical field. The field provides a +1 deflection bonus to AC and a +1 resistance bonus on saves. Any creature that strikes you with a melee attack is stunned for 1 round (Will negates). Once the field has stunned an opponent, the spell is discharged."
@@ -53976,7 +53960,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -53989,7 +53973,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -54002,7 +53986,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -54059,7 +54043,7 @@
         "school": "conjuration",
         "levels": [
             "druid 5",
-            "shaman 5 Effect one or more kami"
+            "shaman 5"
         ],
         "effect": "one or more kami",
         "description": "This spell functions as [summon nature’s ally V](/spells/summon-nature_s-ally), except you can summon one kodama, 1d3 fukujin, or 1d4+1 shikigami."
@@ -55476,11 +55460,7 @@
         ],
         "levels": [
             "sorcerer/wizard 4",
-            "witch 4 Components V",
-            "S",
-            "M (mercury and phosphorus",
-            "plus powdered diamond and opal worth a total of 1",
-            "000 gp) Saving Throw Will negates"
+            "witch 4"
         ],
         "components": [
             "V",
@@ -58749,7 +58729,7 @@
         "levels": [
             "bard 3",
             "sorcerer/wizard 4",
-            "witch 4 Duration 1 day/level or until completed"
+            "witch 4"
         ],
         "duration": "1 day/level or until completed",
         "description": "This spell functions as [suggestion](/spells/suggestion), except you can use it only to specify a condition that triggers a special activity, and the subject does not remember that you made the [suggestion](/spells/suggestion). For example, you could use _triggered suggestion_ on a palace guard to make him attack the king the next time he and the king are alone, and the guard would not remember the [suggestion](/spells/suggestion) to do so until the trigger occurred."
@@ -59845,9 +59825,7 @@
         ],
         "levels": [
             "cleric 2",
-            "inquisitor 2 Components V",
-            "S",
-            "M (a flask of unholy water or 5 pounds of powdered silver worth 25 gp)"
+            "inquisitor 2"
         ],
         "components": [
             "V",
@@ -62319,7 +62297,7 @@
         "subschool": "Folgrit",
         "levels": [
             "cleric/oracle 1",
-            "paladin 1 (Folgrit)"
+            "paladin 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -63011,7 +62989,7 @@
         "school": "transmutation",
         "levels": [
             "antipaladin 2",
-            "paladin 2 Casting Time 1 standard action Components V"
+            "paladin 2"
         ],
         "castingTime": "1 standard action",
         "components": [

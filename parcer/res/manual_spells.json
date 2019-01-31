@@ -3,4 +3,49 @@
   "components": [
     "V", "S"
   ]
+}, {
+  "name": "Siege of Trees, Greater",
+  "levels": ["druid 9"]
+}, {
+  "name": "Shapechanger’s Gift, Greater",
+  "levels": ["sorcerer/wizard 7"]
+}, {
+  "name": "Sealed Life, Greater",
+  "levels": [
+    "spiritualist 6"
+  ]
+}, {
+  "name": "Lash of the Astradaemon",
+  "levels": [
+    "cleric 6",
+    "magus 5",
+    "sorcerer/wizard 6",
+    "witch 6"
+  ]
+}, {
+  "name": "Inflict Pain, Mass",
+  "levels": [
+    "antipaladin 4",
+    "inquisitor 5",
+    "medium 4",
+    "mesmerist 5",
+    "occultist 5",
+    "psychic 6",
+    "sorcerer/wizard 7",
+    "spiritualist 5",
+    "witch 7"
+  ]
+}, {
+  "name": "Infernal Challenger",
+  "levels": [
+    "cleric 3",
+    "sorcerer/wizard 3",
+    "summoner 3"
+  ]
+}, {
+  "name": "Defending Sword, Mass",
+  "levels": [
+    "sorcerer/wizard 9"
+  ],
+  "effect": "up to one sword per 3 levels"
 }]
