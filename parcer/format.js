@@ -53,7 +53,12 @@ async function format() {
       spell.description = desc;
       if (spell.levels)
         spell.levels = spell.levels.split(',').map(function(level) {
-          return level.replace(/\((?!unchained).+\)/g, '').trim();
+          return level
+            .replace(/\((?!unchained).+\)/g, '')
+            .replace('unchained summoner', 'summoner (unchained)')
+            .replace('sorcerer/ wizard', 'sorcerer/wizard')
+            .replace('wizard/sorcerer', 'sorcerer/wizard')
+            .trim();
         });
       if (spell.components)
         spell.components = spell.components.split(', ').map(function(component) {

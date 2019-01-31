@@ -48,4 +48,41 @@
     "sorcerer/wizard 9"
   ],
   "effect": "up to one sword per 3 levels"
+}, {
+  "name": "Plague Bearer",
+  "levels": [
+    "alchemist 6",
+    "cleric/oracle 6",
+    "druid 6",
+    "inquisitor 6",
+    "sorcerer/wizard 7",
+    "witch 6"
+  ]
+}, {
+  "name": "Marionette Possession",
+  "levels": [
+    "alchemist 3",
+    "mesmerist 3",
+    "psychic 3",
+    "sorcerer/wizard 3",
+    "summoner/unchained summoner 3",
+    "witch 3"
+  ]
+}, {
+  "name": "Morning Sun",
+  "levels": [
+    "cleric/oracle 7",
+    "druid 7",
+    "shaman 7"
+  ]
+}, {
+  "name": "Mydriatic Spontaneity, Mass",
+  "levels": [
+    "bard 5",
+    "mesmerist 5",
+    "psychic 6",
+    "sorcerer/wizard 7",
+    "witch 7"
+  ],
+  "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
 }]

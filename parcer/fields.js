@@ -24,7 +24,8 @@ async function fields() {
             fields[key][spell[key]]++;
           }
         } else {
-          spell[key].forEach((value)=>{
+          spell[key].forEach((valueL)=>{
+            const value = valueL.substring(0, valueL.length-2);
             if (!fields[key][value]) {
               fields[key][value] = 1;
             } else {

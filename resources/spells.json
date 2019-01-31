@@ -54,7 +54,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -440,7 +440,7 @@
         "levels": [
             "magus 6",
             "sorcerer/wizard 6",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -486,7 +486,7 @@
         ],
         "levels": [
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -513,7 +513,7 @@
             "inquisitor 0",
             "magus 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -676,7 +676,7 @@
             "magus 4",
             "shaman 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -933,7 +933,7 @@
             "cleric/oracle 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1243,7 +1243,7 @@
             "ranger 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1558,7 +1558,7 @@
         "levels": [
             "cleric 4",
             "druid 4",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1584,7 +1584,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -2292,7 +2292,7 @@
             "psychic 1",
             "ranger 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2317,7 +2317,7 @@
             "psychic 2",
             "ranger 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2338,7 +2338,7 @@
         "subschool": "polymorph",
         "levels": [
             "druid 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -2403,7 +2403,7 @@
             "bard 1",
             "psychic 1",
             "ranger 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2631,7 +2631,7 @@
             "bard 4",
             "mesmerist 4",
             "psychic 5",
-            "sorcerer/ wizard 5",
+            "sorcerer/wizard 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -2845,7 +2845,7 @@
             "druid 3",
             "magus 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -3034,7 +3034,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -4142,7 +4142,7 @@
             "shaman 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -4324,7 +4324,7 @@
             "shaman 6",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4466,7 +4466,7 @@
             "druid 2",
             "ranger 2",
             "shaman 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4674,7 +4674,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4702,7 +4702,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -5401,7 +5401,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -6256,7 +6256,7 @@
             "bloodrager 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -6796,7 +6796,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -6820,7 +6820,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -7639,7 +7639,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -7667,7 +7667,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -8834,7 +8834,7 @@
             "magus 2",
             "ranger 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -8859,7 +8859,7 @@
             "psychic 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -9504,7 +9504,7 @@
             "bard 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "target": "one living creature",
@@ -10204,7 +10204,7 @@
         "levels": [
             "cleric 2",
             "druid 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -10244,7 +10244,7 @@
         "levels": [
             "magus 5",
             "sorcerer/wizard 5",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -10725,7 +10725,7 @@
             "paladin 1",
             "psychic 1",
             "ranger 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -11122,7 +11122,7 @@
         ],
         "levels": [
             "sorcerer/wizard 6",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 round",
         "components": [
@@ -11375,7 +11375,7 @@
             "alchemist 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "10 minutes",
@@ -11607,7 +11607,7 @@
         ],
         "levels": [
             "shaman 4",
-            "sorcerer/ wizard 4"
+            "sorcerer/wizard 4"
         ],
         "components": [
             "V",
@@ -11691,7 +11691,7 @@
             "bard 3",
             "cleric/oracle 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -11950,8 +11950,8 @@
         "levels": [
             "bloodrager 1",
             "magus 1",
-            "sorcerer/ wizard 1",
-            "summoner/unchained summoner 1"
+            "sorcerer/wizard 1",
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -12308,7 +12308,7 @@
             "cleric/oracle 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "2 hours",
@@ -12418,7 +12418,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -12569,7 +12569,7 @@
             "druid 7",
             "shaman 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -12593,7 +12593,7 @@
             "druid 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -13190,7 +13190,7 @@
         "levels": [
             "cleric/oracle 5",
             "inquisitor 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 round",
@@ -13458,7 +13458,7 @@
         "levels": [
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -13987,7 +13987,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -14015,7 +14015,7 @@
             "bloodrager 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 2"
         ],
         "range": "medium (100 ft. + 10 ft./level)",
@@ -14034,7 +14034,7 @@
             "inquisitor 4",
             "psychic 3",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -15578,7 +15578,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -15858,7 +15858,7 @@
             "inquisitor 2",
             "psychic 1",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -16001,7 +16001,7 @@
         "levels": [
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16115,7 +16115,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -16137,7 +16137,7 @@
             "inquisitor 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16179,7 +16179,7 @@
         "subschool": "teleportation",
         "levels": [
             "sorcerer/wizard 7",
-            "summoner/unchained summoner 6",
+            "summoner/summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "1 standard action",
@@ -16593,7 +16593,7 @@
             "shaman 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16712,7 +16712,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -16742,7 +16742,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "spiritualist 6",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 6"
         ],
         "target": "one spellcaster, creature, or object; or a 20-ft.-radius burst",
@@ -16763,7 +16763,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -17941,7 +17941,7 @@
         ],
         "levels": [
             "druid 6",
-            "summoner/unchained summoner 6"
+            "summoner/summoner (unchained) 6"
         ],
         "castingTime": "1 round",
         "components": [
@@ -18014,7 +18014,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -18039,7 +18039,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "One creature/level, no two of which can be more than 30 ft. apart",
@@ -18880,7 +18880,7 @@
             "ranger 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -19100,7 +19100,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -19495,7 +19495,7 @@
         "levels": [
             "cleric 2",
             "druid 2",
-            "wizard/sorcerer 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -19775,7 +19775,7 @@
         "name": "Evolution Surge",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -19794,7 +19794,7 @@
         "name": "Evolution Surge, Greater",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "description": "This spell causes your eidolon to take on new characteristics.\n\nYou can grant the eidolon any evolution whose total cost does not exceed 2 evolution points. You may only grant one evolution with this spell, even if that evolution can be taken multiple times.\n\nYou can grant an evolution that allows you to spend additional evolution points to upgrade that evolution. This spell cannot be used to grant an upgrade to an evolution that the eidolon already possesses. The eidolon must meet any prerequisites of the selected evolution. This spell does not allow an eidolon to exceed its maximum number of natural attacks.\n\n**Evolution Surge, Greater**\n\n**School** transmutation; **Level** summoner/unchained summoner 4\n\nDESCRIPTION\n\nThis spell functions as _lesser evolution surge_ (see above), except that you can grant any two evolutions whose total cost does not exceed 6 evolution points."
     },
@@ -19802,7 +19802,7 @@
         "name": "Evolution Surge, Lesser",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "description": "This spell causes your eidolon to take on new characteristics.\n\nYou can grant the eidolon any evolution whose total cost does not exceed 2 evolution points. You may only grant one evolution with this spell, even if that evolution can be taken multiple times.\n\nYou can grant an evolution that allows you to spend additional evolution points to upgrade that evolution. This spell cannot be used to grant an upgrade to an evolution that the eidolon already possesses. The eidolon must meet any prerequisites of the selected evolution. This spell does not allow an eidolon to exceed its maximum number of natural attacks.\n\n**Evolution Surge, Greater**\n\n**School** transmutation; **Level** summoner/unchained summoner 4\n\nDESCRIPTION\n\nThis spell functions as _lesser evolution surge_ (see above), except that you can grant any two evolutions whose total cost does not exceed 6 evolution points."
     },
@@ -19891,7 +19891,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -20506,7 +20506,7 @@
             "alchemist 4",
             "bloodrager 4",
             "shaman 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "description": "This spell functions as _false life_, except you gain temporary hit points equal to 2d10 + 1 point per caster level (maximum +20). The effects of this spell do not stack with those of _false life_."
@@ -20831,7 +20831,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 immediate action",
         "components": [
@@ -21457,7 +21457,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -22473,7 +22473,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -22559,7 +22559,7 @@
             "magus 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -23290,7 +23290,7 @@
             "bard 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -23313,7 +23313,7 @@
             "psychic 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -24547,7 +24547,7 @@
         "subschool": "polymorph",
         "levels": [
             "cleric 4",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -24628,7 +24628,7 @@
             "ranger 1",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -24718,7 +24718,7 @@
             "bloodrager 2",
             "magus 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -24829,7 +24829,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -25246,7 +25246,7 @@
             "bard 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -25333,7 +25333,7 @@
             "cleric 7",
             "magus 6",
             "shaman 7",
-            "sorcerer/ wizard 7",
+            "sorcerer/wizard 7",
             "summoner 6",
             "witch 7"
         ],
@@ -25555,7 +25555,7 @@
             "cleric/oracle 0",
             "druid 0",
             "inquisitor 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -26094,7 +26094,7 @@
             "sorcerer/wizard 3",
             "spiritualist 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -26821,7 +26821,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -26849,7 +26849,7 @@
             "sorcerer/wizard 6",
             "spiritualist 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "duration": "1 min./level",
@@ -27260,7 +27260,7 @@
             "inquisitor 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "components": [
@@ -27792,7 +27792,7 @@
         "levels": [
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -27851,7 +27851,7 @@
             "inquisitor 2",
             "mesmerist 2",
             "psychic 2",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "spiritualist 3",
             "witch 3"
         ],
@@ -28000,7 +28000,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -28413,9 +28413,9 @@
             "cold"
         ],
         "levels": [
-            "sorcerer/ wizard 6",
+            "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "castingTime": "1 standard action",
@@ -28515,7 +28515,7 @@
         "levels": [
             "bloodrager 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -28615,7 +28615,7 @@
             "bard 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -28642,7 +28642,7 @@
             "druid 3",
             "medium 2",
             "ranger 2",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -29746,7 +29746,7 @@
             "druid 5",
             "shaman 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 round",
         "components": [
@@ -30417,7 +30417,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -30466,7 +30466,7 @@
             "sorcerer 2",
             "spiritualist 2",
             "summoner 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "wizard 2"
         ],
         "castingTime": "1 standard action",
@@ -30532,7 +30532,7 @@
             "skald 3",
             "sorcerer 3",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "wizard 3"
         ],
         "castingTime": "1 standard action",
@@ -30601,7 +30601,7 @@
             "occultist 3",
             "psychic 3",
             "sorcerer/wizard 3",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "components": [
             ": V",
@@ -31116,7 +31116,7 @@
             "psychic 1",
             "ranger 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -31160,7 +31160,7 @@
             "bard 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -31950,7 +31950,7 @@
             "shaman 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -32055,7 +32055,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -32072,7 +32072,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -32229,7 +32229,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -33005,7 +33005,7 @@
         "levels": [
             "mesmerist 3",
             "psychic 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -33028,7 +33028,7 @@
             "bard 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -33218,7 +33218,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -33507,7 +33507,7 @@
             "bard 3",
             "druid 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 round",
         "components": [
@@ -33586,7 +33586,7 @@
             "bloodrager 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -33610,7 +33610,7 @@
             "magus 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0"
+            "summoner/summoner (unchained) 0"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33696,7 +33696,7 @@
         "levels": [
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33780,7 +33780,7 @@
             "bard 1",
             "cleric 1",
             "magus 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33929,7 +33929,7 @@
             "paladin 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from chaos](/spells/protection-from-chaos) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-lawful called creature."
     },
@@ -33945,7 +33945,7 @@
             "paladin 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33972,7 +33972,7 @@
             "inquisitor 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from good](/spells/protection-from-good) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-evil called creature."
     },
@@ -33988,7 +33988,7 @@
             "inquisitor 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from law](/spells/protection-from-law) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-chaotic called creature."
     },
@@ -34017,7 +34017,7 @@
         "levels": [
             "druid 1",
             "ranger 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -34038,7 +34038,7 @@
         "levels": [
             "druid 3",
             "ranger 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one living creature",
@@ -34052,7 +34052,7 @@
             "alchemist 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -34103,7 +34103,7 @@
             "occultist 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -34343,7 +34343,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 5"
         ],
         "castingTime": ": 10 minutes",
@@ -34670,7 +34670,7 @@
             "alchemist 3",
             "mesmerist 3",
             "psychic 3",
-            "sorcerer/wizard",
+            "sorcerer/wizard 3",
             "summoner/unchained summoner 3",
             "witch 3"
         ],
@@ -34721,7 +34721,7 @@
             "skald 3",
             "sorcerer 3",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "warpriest 3",
             "wizard 3"
         ],
@@ -34969,7 +34969,7 @@
             "magus 4",
             "occultist 4",
             "shaman 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -35292,7 +35292,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "10 minutes",
@@ -35373,7 +35373,7 @@
             "bard 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -35872,8 +35872,8 @@
         "school": "conjuration",
         "subschool": "creation",
         "levels": [
-            "sorcerer/ wizard 4",
-            "summoner/unchained summoner 3",
+            "sorcerer/wizard 4",
+            "summoner/summoner (unchained) 3",
             "witch 4"
         ],
         "castingTime": "1 minute",
@@ -36214,7 +36214,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -36572,7 +36572,6 @@
         "levels": [
             "cleric/oracle 7",
             "druid 7",
-            "inquisitor 7",
             "shaman 7"
         ],
         "castingTime": "1 standard action",
@@ -36659,7 +36658,7 @@
             "bloodrager 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -36906,10 +36905,10 @@
             "mesmerist 5",
             "psychic 6",
             "sorcerer/wizard 7",
-            "witch 7 Targets one or more living creatures",
-            "no two of which can be more than 30 ft. apart"
+            "witch 7"
         ],
-        "description": "This spell functions as _mydriatic spontaneity_, except it can affect multiple creatures."
+        "description": "This spell functions as _mydriatic spontaneity_, except it can affect multiple creatures.",
+        "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
     },
     {
         "name": "Naga Shape",
@@ -37557,7 +37556,7 @@
             "ranger 4",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -37869,7 +37868,7 @@
             "magus 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "unchained summoner 1",
+            "summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -37895,7 +37894,7 @@
             "druid 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38087,7 +38086,7 @@
             "magus 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0"
+            "summoner/summoner (unchained) 0"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38308,7 +38307,7 @@
             "shaman 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -38462,7 +38461,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38999,7 +38998,7 @@
             "magus 4",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -39578,7 +39577,7 @@
             "bloodrager 3",
             "magus 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -39945,7 +39944,6 @@
         ],
         "levels": [
             "alchemist 6",
-            "antipaladin 6",
             "cleric/oracle 6",
             "druid 6",
             "inquisitor 6",
@@ -40021,7 +40019,7 @@
             "alchemist 5",
             "cleric/oracle 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -40040,7 +40038,7 @@
         "levels": [
             "cleric/oracle 6",
             "sorcerer/wizard 7",
-            "summoner/unchained summoner 6"
+            "summoner/summoner (unchained) 6"
         ],
         "components": [
             "V",
@@ -40158,7 +40156,7 @@
         "levels": [
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "components": [
             "V",
@@ -40274,7 +40272,7 @@
             "shaman 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "1 standard action",
@@ -41557,7 +41555,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41590,7 +41588,7 @@
             "paladin 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41625,7 +41623,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41657,7 +41655,7 @@
             "paladin 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41689,7 +41687,7 @@
             "inquisitor 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41721,7 +41719,7 @@
             "inquisitor 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -42212,7 +42210,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -42618,7 +42616,7 @@
             "mesmerist 2",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -42735,7 +42733,7 @@
             "psychic 3",
             "shaman 4",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "effect": "one swarm of poisonous frogs",
@@ -42985,7 +42983,7 @@
             "cleric/oracle 1",
             "druid 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "description": "This spell functions as [ray of exhaustion](/spells/ray-of-exhaustion), except the target is sickened if it fails its save and unaffected if it makes its save."
@@ -43005,7 +43003,7 @@
             "ranger 1",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -43346,7 +43344,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -43371,7 +43369,7 @@
             "psychic 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "target": "one humanoid creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like _reduce person_, except that it affects multiple creatures.\n\n### Mythic\n\nYou can decrease the target’s size by up to two categories, to a minimum of Tiny. If the target shrinks two sizes, its weight decreases by a factor of 16 and it gains a +4 size bonus to Dexterity, a –4 size penalty to Strength, and a +2 bonus on attack rolls and to AC because of its decreased size. A Medium or Small humanoid creature whose size decreases to Tiny has a space of 2-1/2 feet and a natural reach of 0 feet.\n\nMythic _reduce person_ counters and dispels mythic _enlarge person._"
@@ -43566,7 +43564,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "components": [
             "V",
@@ -43586,7 +43584,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "components": [
             "V",
@@ -43606,7 +43604,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44145,7 +44143,7 @@
             "inquisitor 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44260,7 +44258,7 @@
             "shaman 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44314,7 +44312,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -44603,7 +44601,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 minute",
         "components": [
@@ -44624,7 +44622,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "3 rounds",
         "components": [
@@ -44953,7 +44951,7 @@
         "levels": [
             "cleric 3",
             "psychic 2",
-            "wizard/sorcerer 3"
+            "sorcerer/wizard 3"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -44972,7 +44970,7 @@
         "levels": [
             "cleric 6",
             "psychic 5",
-            "wizard/sorcerer 6"
+            "sorcerer/wizard 6"
         ],
         "castingTime": "30 minutes",
         "components": [
@@ -44991,7 +44989,7 @@
         "levels": [
             "cleric 6",
             "psychic 5",
-            "wizard/sorcerer 6"
+            "sorcerer/wizard 6"
         ],
         "castingTime": "30 minutes",
         "components": [
@@ -46856,7 +46854,7 @@
         ],
         "levels": [
             "bard 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -47167,7 +47165,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -47304,7 +47302,7 @@
             "psychic 2",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -47402,7 +47400,7 @@
             "shaman 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -47611,7 +47609,7 @@
         "levels": [
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -48138,7 +48136,7 @@
         ],
         "levels": [
             "bard 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -48842,7 +48840,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -48876,7 +48874,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -50392,7 +50390,7 @@
             "sorcerer/wizard 3",
             "spiritualist 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -50521,7 +50519,7 @@
         ],
         "levels": [
             "bard 2",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -50637,7 +50635,7 @@
             "magus 4",
             "shaman 4",
             "sorcerer/wizard 4",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -51564,7 +51562,7 @@
         "levels": [
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51847,7 +51845,7 @@
             "occultist 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51871,7 +51869,7 @@
             "occultist 3",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51958,7 +51956,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -52438,7 +52436,7 @@
             "ranger 2",
             "shaman 2",
             "summoner 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "warpriest 2"
         ],
         "castingTime": "1 standard action",
@@ -52841,7 +52839,7 @@
             "magus 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -53104,7 +53102,7 @@
             "shaman 5",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -53128,7 +53126,7 @@
             "inquisitor 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -53768,7 +53766,7 @@
         "school": "conjuration",
         "subschool": "summoning",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 round",
         "components": [
@@ -54145,7 +54143,7 @@
             "cleric/oracle 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54176,7 +54174,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54207,7 +54205,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54238,7 +54236,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54269,7 +54267,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54300,7 +54298,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54331,7 +54329,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54362,7 +54360,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54393,7 +54391,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54424,7 +54422,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54455,7 +54453,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54486,7 +54484,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54560,7 +54558,7 @@
             "skald 4",
             "sorcerer 4",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "warpriest 4",
             "wizard 4"
         ],
@@ -54671,7 +54669,7 @@
         "levels": [
             "cleric 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -54967,7 +54965,7 @@
             "bard 1",
             "cleric 1",
             "inquisitor 1",
-            "sorcerer/ wizard 1",
+            "sorcerer/wizard 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -55114,7 +55112,7 @@
         "levels": [
             "druid 3",
             "psychic 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "summoner 3",
             "witch 3"
         ],
@@ -55177,7 +55175,7 @@
         "levels": [
             "magus 1",
             "paladin 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -56259,7 +56257,7 @@
             "druid 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -56296,7 +56294,7 @@
         "levels": [
             "alchemist 2",
             "bard 2",
-            "sorcerer/ wizard 2",
+            "sorcerer/wizard 2",
             "witch 2"
         ],
         "castingTime": "1 minute",
@@ -56526,7 +56524,7 @@
         "levels": [
             "magus 2",
             "psychic 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -56676,7 +56674,7 @@
             "sorcerer/wizard 5",
             "spiritualist 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -56754,7 +56752,7 @@
             "psychic 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "description": "This spell functions like _teleport_, except that there is no range limit and there is no chance you arrive off target. In addition, you need not have seen the destination, but in that case you must have at least a reliable description of the place to which you are teleporting. If you attempt to teleport with insufficient information (or with misleading information), you disappear and simply reappear in your original location. Interplanar travel is not possible."
@@ -57396,7 +57394,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -57584,7 +57582,7 @@
             "shaman 4",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -58278,7 +58276,7 @@
         "name": "Transmogrify",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 hour",
         "components": [
@@ -58840,7 +58838,7 @@
             "shaman 5",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "castingTime": "1 standard action",
@@ -59081,7 +59079,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -59639,7 +59637,7 @@
         "name": "Unfetter",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -60103,7 +60101,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -60212,7 +60210,7 @@
             "mesmerist 4",
             "paladin 3",
             "psychic 5",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -60681,7 +60679,7 @@
             "bard 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61334,7 +61332,7 @@
             "alchemist 4",
             "bloodrager 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61728,7 +61726,7 @@
             "shaman 5",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61777,7 +61775,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61800,7 +61798,7 @@
             "magus 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61970,7 +61968,7 @@
         "levels": [
             "bard 3",
             "cleric 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "inquisitor 3",
             "magus 3",
             "occultist 3",
@@ -62002,7 +62000,7 @@
             "shaman 6",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62179,7 +62177,7 @@
             "occultist 1",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62321,7 +62319,7 @@
             "psychic 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62774,7 +62772,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 minute",
@@ -62848,7 +62846,7 @@
             "bard 6",
             "druid 6",
             "sorcerer/wizard 6",
-            "summoner/unchained summoner 6",
+            "summoner/summoner (unchained) 6",
             "witch 6"
         ],
         "description": "This spell functions as [whip of spiders](/spells/whip-of-spiders), except it summons army ants, and any creature you strike with the whip takes swarm damage as if it were attacked by an army ant swarm (3d6 points of damage plus poison and distraction). If you transform the whip into an army ant swarm, it has 16 hit points."
@@ -62861,7 +62859,7 @@
             "bard 5",
             "druid 5",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 5"
         ],
         "description": "This spell functions as [whip of spiders](/spells/whip-of-spiders), except it summons centipedes, and any creature you strike with the whip takes swarm damage as if it were attacked by a centipede swarm (2d6 points of damage plus poison and distraction). If you transform the whip into a centipede swarm, it has 10 hit points."
@@ -62874,7 +62872,7 @@
             "bard 2",
             "druid 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -63084,7 +63082,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -63655,7 +63653,7 @@
             "bloodrager 4",
             "magus 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
