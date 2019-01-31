@@ -58,7 +58,7 @@ async function main_old() {
     fs.writeFileSync('parcer/res/spells_failed.log', "", 'utf8');
     let s = 0;
     let f = 0;
-    for (let i = 0; i < spelllist.length; i++) {
+    for (let i = 37; i < 38/*spelllist.length*/; i++) {
       try {
         const spell = await getSpell(spelllist[i]);
         if (!spell.name)
@@ -98,6 +98,9 @@ async function main() {
     let s = 0;
     let f = 0;
     spellhtmls.forEach((spellsHtml, index) => {
+      // if(index!=37){
+      //   return;
+      // }
       try {
         const spells = parseSpellPage(parse(spellsHtml));
         spells.forEach((spell) => {
@@ -258,7 +261,7 @@ function populateSpell(article, spell) {
         spell.subschool = parseSpellSubschool(value.innerHTML);
       if (!spell.descripters)
         spell.descripters = parseSpellDescriptor(value.innerHTML);
-      const levels = value.innerHTML.split(';')[1];
+      const levels = value.innerHTML.split(/;|\n|<br>|<br \/>|<br\/>/g)[1];
       if (!spell.levels)
         spell.levels = removeATag(levels.replace('<b>Level</b>', '')).trim();
       }
