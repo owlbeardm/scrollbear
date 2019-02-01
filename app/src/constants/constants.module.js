@@ -112,7 +112,13 @@ appConstants.constant('CLASSES', {
   }
 });
 
-appConstants.constant('SCHOOL', {
+appConstants.constant('SCHOOLS', {
+  "any": {
+    name: 'Any',
+    search: (spell) => {
+      return true;
+    }
+  },
   "transmutation": {
     name: 'Transmutation',
     search: ['transmutation']
