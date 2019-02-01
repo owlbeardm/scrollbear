@@ -4,11 +4,13 @@ angular.module('app.services').factory('filterService', [
   '$log',
   '$window',
   'CLASSES',
-  function($log, $window, CLASSES) {
+  'SCHOOLS',
+  function($log, $window, CLASSES, SCHOOLS) {
     const FilterService = {};
     const FAV_SPELLS = "FAV_SPELLS";
     const FAV_ONLY = "FAV_ONLY";
     const localStorage = $window['localStorage'];
+    FilterService.school = 'any';
 
     FilterService.favOnly = JSON.parse(localStorage.getItem(FAV_ONLY)) ?
       JSON.parse(localStorage.getItem(FAV_ONLY)) :
@@ -26,8 +28,15 @@ angular.module('app.services').factory('filterService', [
       } else {
         include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
       }
-      if (FilterService.favOnly) {
+      if (include && FilterService.favOnly) {
         include = include && FilterService.isFav(spell);
+      }
+      if (include) {
+        if (Array.isArray(SCHOOLS[FilterService.school].search)) {
+          include = include && SCHOOLS[FilterService.school].search.includes(spell.school);
+        } else {
+          include = include && SCHOOLS[FilterService.school].search(spell);
+        }
       }
       return include;
     }
