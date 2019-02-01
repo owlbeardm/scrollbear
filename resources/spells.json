@@ -5437,7 +5437,6 @@
             "darkness"
         ],
         "levels": [
-            "darkness 3",
             "sorcerer/wizard 3"
         ],
         "castingTime": "1 standard action",
@@ -13399,10 +13398,13 @@
         "school": "necromancy",
         "descripters": [
             "curse",
-            "evil; see text"
+            "evil",
+            "see text"
         ],
         "levels": [
-            "see text]"
+            "cleric/oracle 9",
+            "sorcerer/wizard 9",
+            "witch 9"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -16200,8 +16202,7 @@
         "levels": [
             "cleric/oracle 8",
             "sorcerer/wizard 8",
-            "summoner 6",
-            "Bloodline accursed 8"
+            "summoner 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -18981,10 +18982,11 @@
             "acid",
             "cold",
             "electricity",
-            "or fire; see below"
+            "fire",
+            "see below"
         ],
         "levels": [
-            "see below]"
+            "sorcerer/wizard 4"
         ],
         "castingTime": "1 immediate action",
         "components": [
@@ -25599,7 +25601,7 @@
             "mind-affecting"
         ],
         "levels": [
-            "Level antipaladin 3",
+            "antipaladin 3",
             "bard 3",
             "inquisitor 3",
             "mesmerist 3",
@@ -26306,8 +26308,7 @@
         "subschool": "healing",
         "levels": [
             "cleric/oracle 9",
-            "shaman 9",
-            "Domain healing 9"
+            "shaman 9"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "One or more creatures, no two of which can be more than 30 ft. apart",
@@ -26344,8 +26345,8 @@
         "name": "Healing Leak",
         "school": "necromancy",
         "levels": [
-            "antipaladin",
-            "2 cleric 3",
+            "antipaladin 2",
+            "cleric 3",
             "paladin 2",
             "sorcerer/wizard 3",
             "witch 3"
@@ -29763,7 +29764,7 @@
     },
     {
         "name": "Insect Scouts",
-        "school": "antipaladin",
+        "school": "divination",
         "levels": [
             "antipaladin 4",
             "bard 4",
@@ -29786,7 +29787,7 @@
         "duration": "1d6 hours, plus 1 hour/level; see text",
         "savingThrow": "none",
         "spellResistance": "no",
-        "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n\n![](https://www.amazon.com/gp/product/1601258445/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601258445&linkCode=as2&tag=httpwwwd20pfs-20&linkId=fd1b8f484ae13edb2ab97989e30b8762) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplam2ampo-2ampa-260-2258445-2)"
+        "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n"
     },
     {
         "name": "Insect Spies",
@@ -33188,10 +33189,10 @@
     },
     {
         "name": "Locksight",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
-            "antipaladin",
+            "antipaladin 1",
             "bard 1",
             "inquisitor 1",
             "sorcerer/wizard 1"
@@ -33207,7 +33208,7 @@
         "duration": "1 hour/level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
-        "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n\n ![](http://www.amazon.com/gp/product/1601257694/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257694&linkCode=as2&tag=httpwwwd20pfs-20&linkId=DBWOIQO4ITNW4EF3) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo-2ampa-260-2257694-2)  Get this book AND support this site!"
+        "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n"
     },
     {
         "name": "Long Arm",
@@ -36546,9 +36547,10 @@
             "mind-affecting"
         ],
         "levels": [
-            "Subdomain insanity 4",
-            "moon 4",
-            "rage 6"
+            "bloodrager 4",
+            "druid 4",
+            "sorcerer/wizard 4",
+            "witch 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38880,7 +38882,7 @@
         "school": "abjuration",
         "levels": [
             "bard 1",
-            "cleric",
+            "cleric 1",
             "druid 1",
             "inquisitor 1",
             "paladin 1",
@@ -40178,7 +40180,7 @@
             "see text"
         ],
         "levels": [
-            ": sorcerer/wizard 8",
+            "sorcerer/wizard 8",
             "summoner 6"
         ],
         "components": [
@@ -45556,9 +45558,9 @@
     },
     {
         "name": "Rune of Durability",
-        "school": "transmutation<",
+        "school": "transmutation",
         "levels": [
-            "Level sorcerer/wizard 3"
+            "sorcerer/wizard 3"
         ],
         "castingTime": "1 minute",
         "components": [
@@ -47487,7 +47489,7 @@
     },
     {
         "name": "Sense Vitals",
-        "school": "antipaladin",
+        "school": "divination",
         "levels": [
             "antipaladin 2",
             "bard 2",
@@ -53597,7 +53599,7 @@
         "name": "Suffocation, Mass",
         "school": "necromancy",
         "levels": [
-            "Level sorcerer/wizard 9",
+            "sorcerer/wizard 9",
             "witch 9"
         ],
         "targets": "one living creature/2 levels (no two of which may be more than 30 feet apart)",
@@ -53617,7 +53619,8 @@
             "medium 2",
             "mesmerist 2",
             "occultist 3",
-            "psychic 2 sorcerer/wizard 3",
+            "psychic 2",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -58881,7 +58884,8 @@
         "levels": [
             "alchemist 1",
             "bloodrager 1",
-            "inquisitor 1 magus 1",
+            "inquisitor 1",
+            "magus 1",
             "psychic 1",
             "sorcerer/wizard 1"
         ],

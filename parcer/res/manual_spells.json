@@ -85,4 +85,147 @@
     "witch 7"
   ],
   "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
+}, {
+  "name": "Rune of Durability",
+  "school": "transmutation",
+  "levels": [
+    "sorcerer/wizard 3"
+  ]
+}, {
+  "name": "Suffocation, Mass",
+  "levels": [
+    "sorcerer/wizard 9",
+    "witch 9"
+  ]
+}, {
+  "name": "Healing Leak",
+  "levels": [
+    "antipaladin 2",
+    "cleric 3",
+    "paladin 2",
+    "sorcerer/wizard 3",
+    "witch 3"
+  ]
+}, {
+  "name": "Insect Scouts",
+  "school": "divination",
+  "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n"
+}, {
+  "name": "Locksight",
+  "school": "divination",
+  "levels": [
+    "alchemist 1",
+    "antipaladin 1",
+    "bard 1",
+    "inquisitor 1",
+    "sorcerer/wizard 1"
+  ],
+  "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n"
+}, {
+  "name": "Sense Vitals",
+  "school": "divination"
+}, {
+  "name": "Cursed Earth",
+  "descripters": [
+    "curse",
+    "evil",
+    "see text"
+  ],
+  "levels": [
+    "cleric/oracle 9",
+    "sorcerer/wizard 9",
+    "witch 9"
+  ]
+}, {
+  "name": "Moonstruck",
+  "school": "enchantment",
+  "subschool": "compulsion",
+  "descripters": [
+    "emotion",
+    "mind-affecting"
+  ],
+  "levels": [
+    "bloodrager 4", "druid 4", "sorcerer/wizard 4", "witch 4"
+  ]
+}, {
+  "name": "Energy Hack",
+  "descripters": [
+    "acid",
+    "cold",
+    "electricity",
+    "fire",
+    "see below"
+  ],
+  "levels": [
+    "sorcerer/wizard 4"
+  ]
+}, {
+  "name": "Suggestion",
+  "levels": [
+    "bard 2",
+    "medium 2",
+    "mesmerist 2",
+    "occultist 3",
+    "psychic 2",
+    "sorcerer/wizard 3",
+    "witch 3"
+  ]
+}, {
+  "name": "True Strike",
+  "school": "divination",
+  "levels": [
+    "alchemist 1",
+    "bloodrager 1",
+    "inquisitor 1",
+    "magus 1",
+    "psychic 1",
+    "sorcerer/wizard 1"
+  ]
+}, {
+  "name": "Peace Bond",
+  "levels": [
+    "bard 1",
+    "cleric 1",
+    "druid 1",
+    "inquisitor 1",
+    "paladin 1",
+    "shaman 1",
+    "sorcerer/wizard 1",
+    "witch 1"
+  ]
+}, {
+  "name": "Gullibility",
+  "levels": [
+    "antipaladin 3",
+    "bard 3",
+    "inquisitor 3",
+    "mesmerist 3",
+    "psychic 3",
+    "sorcerer/wizard 3",
+    "witch 3"
+  ]
+}, {
+  "name": "Heal, Mass",
+  "levels": [
+    "cleric/oracle 9",
+    "shaman 9"
+  ]
+}, {
+  "name": "Dimensional Lock",
+  "levels": [
+    "cleric/oracle 8",
+    "sorcerer/wizard 8",
+    "summoner 6"
+  ]
+}, {
+  "name": "Planar Binding, Greater",
+  "levels": [
+    "sorcerer/wizard 8",
+    "summoner 6"
+  ]
+}, {
+  "name": "Blacklight(3.5E)",
+  "levels": [
+    "sorcerer/wizard 3"
+  ]
 }]
