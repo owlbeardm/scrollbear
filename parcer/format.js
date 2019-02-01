@@ -30,11 +30,11 @@ async function format() {
           }
           const newName = newSpell.name.split(',').reduce((acc, part) => part + ' ' + acc, '').trim();
           if (newName.toUpperCase() == name.trim().toUpperCase()) {
-            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
           }
         });
         if (!url)
-          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
