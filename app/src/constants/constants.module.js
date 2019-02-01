@@ -119,37 +119,37 @@ appConstants.constant('SCHOOLS', {
       return true;
     }
   },
-  "transmutation": {
-    name: 'Transmutation',
-    search: ['transmutation']
+  "abjuration": {
+    name: 'Abjuration',
+    search: ['abjuration']
   },
   "conjuration": {
     name: 'Conjuration',
     search: ['conjuration']
   },
-  "evocation": {
-    name: 'Evocation',
-    search: ['evocation']
+  "divination": {
+    name: 'Divination',
+    search: ['divination']
   },
   "enchantment": {
     name: 'Enchantment',
     search: ['enchantment']
   },
-  "abjuration": {
-    name: 'Abjuration',
-    search: ['abjuration']
+  "evocation": {
+    name: 'Evocation',
+    search: ['evocation']
+  },
+  "illusion": {
+    name: 'Illusion',
+    search: ['illusion']
   },
   "necromancy": {
     name: 'Necromancy',
     search: ['necromancy']
   },
-  "divination": {
-    name: 'Divination',
-    search: ['divination']
-  },
-  "illusion": {
-    name: 'Illusion',
-    search: ['illusion']
+  "transmutation": {
+    name: 'Transmutation',
+    search: ['transmutation']
   },
   "other": {
     name: 'Other',

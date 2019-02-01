@@ -1151,7 +1151,7 @@
     },
     {
         "name": "Air Walk, Communal",
-        "school": "alchemist",
+        "school": "transmutation",
         "descripters": [
             "air"
         ],
@@ -1175,7 +1175,7 @@
     },
     {
         "name": "Akashic Communion",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 3",
             "medium 3",
@@ -2810,7 +2810,7 @@
     },
     {
         "name": "Aquatic Trail",
-        "school": "druid",
+        "school": "divination",
         "descripters": [
             "water"
         ],
@@ -3028,7 +3028,7 @@
     },
     {
         "name": "Arcane Mark",
-        "school": "magus",
+        "school": "universal",
         "levels": [
             "magus 0",
             "psychic 0",
@@ -3942,7 +3942,7 @@
     },
     {
         "name": "Authenticating Gaze",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "cleric 1",
@@ -4800,7 +4800,7 @@
     },
     {
         "name": "Beastspeak",
-        "school": "druid",
+        "school": "divination",
         "levels": [
             "druid 2",
             "shaman 2",
@@ -4896,7 +4896,7 @@
     },
     {
         "name": "Beloved of the Forge",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 2",
             "bard 2",
@@ -7533,7 +7533,7 @@
     },
     {
         "name": "Brow Gasher",
-        "school": "bloodrager",
+        "school": "necromancy",
         "levels": [
             "bloodrager 2",
             "inquisitor 2",
@@ -9990,7 +9990,7 @@
     },
     {
         "name": "Cleromancy",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 2",
             "druid 3",
@@ -10382,7 +10382,7 @@
     },
     {
         "name": "Collaborative Thaumaturgy",
-        "school": "bard",
+        "school": "universal",
         "levels": [
             "bard 3",
             "cleric 3",
@@ -10591,7 +10591,7 @@
     },
     {
         "name": "Commune With Texts",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 5",
             "cleric 6",
@@ -11349,7 +11349,7 @@
     },
     {
         "name": "Contact Nalfeshnee",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 6",
             "sorcerer/wizard 6",
@@ -11971,7 +11971,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "antipaladin 2",
@@ -15454,7 +15454,7 @@
     },
     {
         "name": "Detect Demon",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 1",
             "inquisitor 1",
@@ -15928,7 +15928,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 4",
@@ -16352,7 +16352,7 @@
     },
     {
         "name": "Discern Next of Kin",
-        "school": "mind-affecting] <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-bard/\">bard</a>",
+        "school": "divination",
         "descripters": [
             "mind-affecting"
         ],
@@ -17118,7 +17118,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "oracle 8"
@@ -17293,7 +17293,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 3",
@@ -17378,7 +17378,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 4",
@@ -18095,7 +18095,7 @@
     },
     {
         "name": "Ears of the City",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -18445,7 +18445,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 3",
@@ -18560,7 +18560,7 @@
             "air",
             "earth",
             "fire",
-            "or water"
+            "water"
         ],
         "levels": [
             "bard 3",
@@ -18610,7 +18610,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 2",
@@ -18921,7 +18921,7 @@
     },
     {
         "name": "Enemy Insight",
-        "school": "ranger",
+        "school": "divination",
         "levels": [
             "ranger 2"
         ],
@@ -22583,7 +22583,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "inquisitor 2"
@@ -26035,7 +26035,7 @@
     },
     {
         "name": "Harvest Knowledge",
-        "school": "mind-affecting] <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/formulae-lists-alchemist/\">alchemist</a>",
+        "school": "divination",
         "descripters": [
             "mind-affecting"
         ],
@@ -26651,7 +26651,7 @@
         "descripters": [
             "acid",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "bloodrager 4",
@@ -26788,7 +26788,7 @@
         "school": "enchantment",
         "subschool": "compulsion",
         "descripters": [
-            "mind affecting"
+            "mind-affecting"
         ],
         "levels": [
             "sorcerer/wizard 9",
@@ -31134,7 +31134,7 @@
     },
     {
         "name": "Jungle Mind",
-        "school": "druid",
+        "school": "divination",
         "subschool": "scrying",
         "levels": [
             "druid 5",
@@ -31179,7 +31179,7 @@
     },
     {
         "name": "Karmic Blessing",
-        "school": "cleric",
+        "school": "divination",
         "descripters": [
             "good"
         ],
@@ -31707,7 +31707,7 @@
     },
     {
         "name": "Lay of the Land",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 2",
             "bard 2",
@@ -32457,7 +32457,7 @@
     },
     {
         "name": "Limited Wish",
-        "school": "sorcerer/wizard",
+        "school": "universal",
         "levels": [
             "sorcerer/wizard 7"
         ],
@@ -32468,11 +32468,13 @@
             "M (diamond worth 1,500 gp)"
         ],
         "range": "see text",
-        "area": "Target, Effect,  see text",
+        "area": "see text",
         "duration": "see text",
         "savingThrow": "none, see text",
         "spellResistance": "yes",
-        "description": "A _limited wish_ lets you create nearly any type of effect. For example, a _limited wish_ can do any of the following things.\n\n*   Duplicate any sorcerer/wizard spell of 6th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 5th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 5th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 4th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many spells, such as [insanity](/spells/insanity).\n*   Produce any other effect whose power level is in line with the above effects, such as a single creature automatically hitting on its next attack or taking a -7 penalty on its next saving throw.\n\nA duplicated spell allows saving throws and spell resistance as normal, but the save DC is for a 7th-level spell. When a _limited wish_ spell duplicates a spell with a material component that costs more than 1,000 gp, you must provide that component (in addition to the 1,500 gp diamond component for this spell)."
+        "description": "A _limited wish_ lets you create nearly any type of effect. For example, a _limited wish_ can do any of the following things.\n\n*   Duplicate any sorcerer/wizard spell of 6th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 5th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 5th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 4th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many spells, such as [insanity](/spells/insanity).\n*   Produce any other effect whose power level is in line with the above effects, such as a single creature automatically hitting on its next attack or taking a -7 penalty on its next saving throw.\n\nA duplicated spell allows saving throws and spell resistance as normal, but the save DC is for a 7th-level spell. When a _limited wish_ spell duplicates a spell with a material component that costs more than 1,000 gp, you must provide that component (in addition to the 1,500 gp diamond component for this spell).",
+        "target": "see text",
+        "effect": "see text"
     },
     {
         "name": "Limp Lash",
@@ -38950,7 +38952,7 @@
         "subschool": "charm",
         "descripters": [
             "language-dependent",
-            "mind- affecting"
+            "mind-affecting"
         ],
         "levels": [
             "cleric/oracle 2"
@@ -39114,10 +39116,8 @@
     },
     {
         "name": "Permanency",
-        "school": "sorcerer/wizard",
-        "descripters": [
-            "subdomain"
-        ],
+        "school": "universal",
+        "descripters": [],
         "levels": [
             "sorcerer/wizard 5"
         ],
@@ -41268,7 +41268,7 @@
     },
     {
         "name": "Prestidigitation",
-        "school": "bard",
+        "school": "universal",
         "levels": [
             "bard 0",
             "magus 0",
@@ -41384,7 +41384,7 @@
     },
     {
         "name": "Probe History (Half-Elf)",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 3",
             "cleric 4",
@@ -51133,7 +51133,7 @@
     },
     {
         "name": "Speak Local Language",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -51283,7 +51283,7 @@
     },
     {
         "name": "Speak With Waves",
-        "school": "druid",
+        "school": "divination",
         "descripters": [
             "water"
         ],
@@ -52564,7 +52564,7 @@
     },
     {
         "name": "Starsight",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "bard 1",
@@ -56362,7 +56362,7 @@
     },
     {
         "name": "Tectonic Communion",
-        "school": "druid",
+        "school": "divination",
         "levels": [
             "druid 7"
         ],
@@ -58737,7 +58737,7 @@
     },
     {
         "name": "True Appraisal",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -58859,7 +58859,7 @@
     },
     {
         "name": "True Skill",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "bard 1",
@@ -59034,7 +59034,7 @@
     },
     {
         "name": "Twisted Futures",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 2",
@@ -62271,7 +62271,7 @@
     },
     {
         "name": "Watchful Animal",
-        "school": "scrying) <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-druid/\">druid</a>",
+        "school": "divination",
         "subschool": "scrying",
         "levels": [
             "druid 4",
@@ -63267,7 +63267,7 @@
     },
     {
         "name": "Wish",
-        "school": "sorcerer/wizard",
+        "school": "universal",
         "levels": [
             "sorcerer/wizard 9"
         ],
@@ -63278,11 +63278,13 @@
             "M (diamond worth 25,000 gp)"
         ],
         "range": "see text",
-        "area": "Target, Effect,  see text",
+        "area": "see text",
         "duration": "see text",
         "savingThrow": "none, see text",
         "spellResistance": "yes",
-        "description": "_Wish_ is the mightiest spell a wizard or sorcerer can cast. By simply speaking aloud, you can alter reality to better suit you. Even _wish_, however, has its limits. A _wish_ can produce any one of the following effects.\n\n*   Duplicate any sorcerer/wizard spell of 8th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 7th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 7th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 6th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many other spells, such as [geas/quest](/spells/geas/quest) or [insanity](/spells/insanity).\n*   Grant a creature a +1 inherent bonus to an ability score. Two to five _wish_ spells cast in immediate succession can grant a creature a +2 to +5 inherent bonus to an ability score (two _wishes_ for a +2 inherent bonus, three _wishes_ for a +3 inherent bonus, and so on). Inherent bonuses are instantaneous, so they cannot be dispelled. _Note_: An inherent bonus may not exceed +5 for a single ability score, and inherent bonuses to a particular ability score do not stack, so only the best one applies.\n*   Remove injuries and afflictions. A single _wish_ can aid one creature per caster level, and all subjects are cured of the same kind of affliction. For example, you could heal all the damage you and your companions have taken, or remove all poison effects from everyone in the party, but not do both with the same _wish_.\n*   Revive the dead. A _wish_ can bring a dead creature back to life by duplicating a [resurrection](/spells/resurrection) spell. A _wish_ can revive a dead creature whose body has been destroyed, but the task takes two _wishes_: one to recreate the body and another to infuse the body with life again. A _wish_ cannot prevent a character who was brought back to life from gaining a permanent negative level.\n*   Transport travelers. A _wish_ can lift one creature per caster level from anywhere on any plane and place those creatures anywhere else on any plane regardless of local conditions. An unwilling target gets a Will save to negate the effect, and spell resistance (if any) applies.\n*   Undo misfortune. A _wish_ can undo a single recent event. The _wish_ forces a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a _wish_ could undo an opponent’s successful save, a foe’s successful critical hit (either the attack roll or the critical roll), a friend’s failed save, and so on. The re-roll, however, may be as bad as or worse than the original roll. An unwilling target gets a Will save to negate the effect, and Spell Resistance (if any) applies.\n\nYou may try to use a _wish_ to produce greater effects than these, but doing so is dangerous. (The _wish_ may pervert your intent into a literal but undesirable fulfillment or only a partial fulfillment, at the GM’s discretion.)\n\nDuplicated spells allow saves and Spell Resistance as normal (but save DCs are for 9th-level spells).\n\nWhen a _wish_ duplicates a spell with a material component that costs more than 10,000 gp, you must provide that component (in addition to the 25,000 gp diamond component for this spell)."
+        "description": "_Wish_ is the mightiest spell a wizard or sorcerer can cast. By simply speaking aloud, you can alter reality to better suit you. Even _wish_, however, has its limits. A _wish_ can produce any one of the following effects.\n\n*   Duplicate any sorcerer/wizard spell of 8th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 7th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 7th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 6th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many other spells, such as [geas/quest](/spells/geas/quest) or [insanity](/spells/insanity).\n*   Grant a creature a +1 inherent bonus to an ability score. Two to five _wish_ spells cast in immediate succession can grant a creature a +2 to +5 inherent bonus to an ability score (two _wishes_ for a +2 inherent bonus, three _wishes_ for a +3 inherent bonus, and so on). Inherent bonuses are instantaneous, so they cannot be dispelled. _Note_: An inherent bonus may not exceed +5 for a single ability score, and inherent bonuses to a particular ability score do not stack, so only the best one applies.\n*   Remove injuries and afflictions. A single _wish_ can aid one creature per caster level, and all subjects are cured of the same kind of affliction. For example, you could heal all the damage you and your companions have taken, or remove all poison effects from everyone in the party, but not do both with the same _wish_.\n*   Revive the dead. A _wish_ can bring a dead creature back to life by duplicating a [resurrection](/spells/resurrection) spell. A _wish_ can revive a dead creature whose body has been destroyed, but the task takes two _wishes_: one to recreate the body and another to infuse the body with life again. A _wish_ cannot prevent a character who was brought back to life from gaining a permanent negative level.\n*   Transport travelers. A _wish_ can lift one creature per caster level from anywhere on any plane and place those creatures anywhere else on any plane regardless of local conditions. An unwilling target gets a Will save to negate the effect, and spell resistance (if any) applies.\n*   Undo misfortune. A _wish_ can undo a single recent event. The _wish_ forces a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a _wish_ could undo an opponent’s successful save, a foe’s successful critical hit (either the attack roll or the critical roll), a friend’s failed save, and so on. The re-roll, however, may be as bad as or worse than the original roll. An unwilling target gets a Will save to negate the effect, and Spell Resistance (if any) applies.\n\nYou may try to use a _wish_ to produce greater effects than these, but doing so is dangerous. (The _wish_ may pervert your intent into a literal but undesirable fulfillment or only a partial fulfillment, at the GM’s discretion.)\n\nDuplicated spells allow saves and Spell Resistance as normal (but save DCs are for 9th-level spells).\n\nWhen a _wish_ duplicates a spell with a material component that costs more than 10,000 gp, you must provide that component (in addition to the 25,000 gp diamond component for this spell).",
+        "target": "see text",
+        "effect": "see text"
     },
     {
         "name": "With the Wind",

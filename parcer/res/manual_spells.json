@@ -228,4 +228,110 @@
   "levels": [
     "sorcerer/wizard 3"
   ]
+}, {
+  "name": "Watchful Animal",
+  "school": "divination"
+}, {
+  "name": "Enemy Insight",
+  "school": "divination"
+}, {
+  "name": "Harvest Knowledge",
+  "school": "divination"
+}, {
+  "name": "Discern Next of Kin",
+  "school": "divination"
+}, {
+  "name": "Arcane Mark",
+  "school": "universal"
+}, {
+  "name": "Brow Gasher",
+  "school": "necromancy"
+}, {
+  "name": "Limited Wish",
+  "area": "see text",
+  "target": "see text",
+  "effect": "see text",
+  "school": "universal"
+}, {
+  "name": "Permanency",
+  "school": "universal",
+  "descripters": []
+}, {
+  "name": "Wish",
+  "school": "universal",
+  "area": "see text",
+  "target": "see text",
+  "effect": "see text"
+}, {
+  "name": "Aquatic Trail",
+  "school": "divination"
+}, {
+  "name": "Beastspeak",
+  "school": "divination"
+}, {
+  "name": "Jungle Mind",
+  "school": "divination"
+}, {
+  "name": "Speak With Waves",
+  "school": "divination"
+}, {
+  "name": "Tectonic Communion",
+  "school": "divination"
+}, {
+  "name": "Cleromancy",
+  "school": "divination"
+}, {
+  "name": "Contact Nalfeshnee",
+  "school": "divination"
+}, {
+  "name": "Detect Demon",
+  "school": "divination"
+}, {
+  "name": "Karmic Blessing",
+  "school": "divination"
+}, {
+  "name": "Lay of the Land",
+  "school": "divination"
+}, {
+  "name": "Air Walk, Communal",
+  "school": "transmutation"
+}, {
+  "name": "Authenticating Gaze",
+  "school": "divination"
+}, {
+  "name": "Beloved of the Forge",
+  "school": "divination"
+}, {
+  "name": "Starsight",
+  "school": "divination"
+}, {
+  "name": "True Skill",
+  "school": "divination"
+}, {
+  "name": "Akashic Communion",
+  "school": "divination"
+}, {
+  "name": "Collaborative Thaumaturgy",
+  "school": "universal"
+}, {
+  "name": "Commune With Texts",
+  "school": "divination"
+}, {
+  "name": "Ears of the City",
+  "school": "divination"
+}, {
+  "name": "Prestidigitation",
+  "school": "universal"
+}, {
+  "name": "Probe History (Half-Elf)",
+  "school": "divination"
+}, {
+  "name": "Speak Local Language",
+  "school": "divination"
+}, {
+  "name": "True Appraisal",
+  "school": "divination"
+}, {
+  "name": "Twisted Futures",
+  "school": "divination"
 }]
