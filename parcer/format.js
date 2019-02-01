@@ -60,6 +60,14 @@ async function format() {
             .replace('wizard/sorcerer', 'sorcerer/wizard')
             .trim();
         });
+      if (spell.descripters)
+          spell.descripters = spell.descripters.map(function(descripter) {
+            return descripter
+              .replace(/^or /g, '')
+              .replace('mind affecting', 'mind-affecting')
+              .replace('mind- affecting', 'mind-affecting')
+              .trim();
+          });
       if (spell.components)
         spell.components = spell.components.split(', ').map(function(component) {
           return component.trim();
