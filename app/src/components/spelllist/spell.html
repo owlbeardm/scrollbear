@@ -10,7 +10,7 @@
       <div class="modal-body">
         <div>
           <div class="spell-description">
-            <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters"> {{$ctrl.getDescripters()}}</span>;
+            <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters.length"> [{{$root.spell.descripters | array}}]</span>;
               <b>Level </b><span>{{$root.spell.levels | array}}</span></p>
             <p><b>Casting Time </b> {{$root.spell.castingTime}}</p>
             <p><b>Components </b> {{$root.spell.components | array}}</p>

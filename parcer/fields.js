@@ -1,5 +1,5 @@
 const fs = require('fs');
-const spells = require('./spells.json');
+const spells = require('../resources/spells.json');
 
 async function fields() {
   try {
@@ -9,7 +9,7 @@ async function fields() {
         if (key === 'description' ||
           key === 'url' ||
           key === 'name' ||
-          key === 'levels' ||
+          // key === 'levels' ||
           key === 'components'
         ) {
           return;
@@ -24,7 +24,8 @@ async function fields() {
             fields[key][spell[key]]++;
           }
         } else {
-          spell[key].forEach((value)=>{
+          spell[key].forEach((valueL)=>{
+            const value = valueL.substring(0, valueL.length);
             if (!fields[key][value]) {
               fields[key][value] = 1;
             } else {

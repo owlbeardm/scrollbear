@@ -54,7 +54,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -440,7 +440,7 @@
         "levels": [
             "magus 6",
             "sorcerer/wizard 6",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -486,7 +486,7 @@
         ],
         "levels": [
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -513,7 +513,7 @@
             "inquisitor 0",
             "magus 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -676,7 +676,7 @@
             "magus 4",
             "shaman 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -915,7 +915,7 @@
             "druid 4",
             "magus 4",
             "sorcerer/wizard 4",
-            "witch 4 Saving Throw Reflex negates and Fort negates (see text)"
+            "witch 4"
         ],
         "savingThrow": "Reflex negates and Fort negates (see text)",
         "spellResistance": "yes",
@@ -933,7 +933,7 @@
             "cleric/oracle 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1151,7 +1151,7 @@
     },
     {
         "name": "Air Walk, Communal",
-        "school": "alchemist",
+        "school": "transmutation",
         "descripters": [
             "air"
         ],
@@ -1175,7 +1175,7 @@
     },
     {
         "name": "Akashic Communion",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 3",
             "medium 3",
@@ -1243,7 +1243,7 @@
             "ranger 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1558,7 +1558,7 @@
         "levels": [
             "cleric 4",
             "druid 4",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -1584,7 +1584,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -2292,7 +2292,7 @@
             "psychic 1",
             "ranger 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2317,7 +2317,7 @@
             "psychic 2",
             "ranger 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2338,7 +2338,7 @@
         "subschool": "polymorph",
         "levels": [
             "druid 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -2403,7 +2403,7 @@
             "bard 1",
             "psychic 1",
             "ranger 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -2631,7 +2631,7 @@
             "bard 4",
             "mesmerist 4",
             "psychic 5",
-            "sorcerer/ wizard 5",
+            "sorcerer/wizard 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -2810,7 +2810,7 @@
     },
     {
         "name": "Aquatic Trail",
-        "school": "druid",
+        "school": "divination",
         "descripters": [
             "water"
         ],
@@ -2845,7 +2845,7 @@
             "druid 3",
             "magus 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -3028,13 +3028,13 @@
     },
     {
         "name": "Arcane Mark",
-        "school": "magus",
+        "school": "universal",
         "levels": [
             "magus 0",
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -3547,9 +3547,7 @@
             "sorcerer/wizard 4",
             "spiritualist 4",
             "summoner 4",
-            "witch 4 Components V",
-            "S",
-            "F (corpse or likeness of the deceased creature whose form you plan to assume)"
+            "witch 4"
         ],
         "components": [
             "V",
@@ -3944,7 +3942,7 @@
     },
     {
         "name": "Authenticating Gaze",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "cleric 1",
@@ -4144,7 +4142,7 @@
             "shaman 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -4326,7 +4324,7 @@
             "shaman 6",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4468,7 +4466,7 @@
             "druid 2",
             "ranger 2",
             "shaman 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4676,7 +4674,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -4704,7 +4702,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -4802,7 +4800,7 @@
     },
     {
         "name": "Beastspeak",
-        "school": "druid",
+        "school": "divination",
         "levels": [
             "druid 2",
             "shaman 2",
@@ -4898,7 +4896,7 @@
     },
     {
         "name": "Beloved of the Forge",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 2",
             "bard 2",
@@ -5403,7 +5401,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -5427,7 +5425,7 @@
         ],
         "levels": [
             "druid 6",
-            "sorcerer/wizard 6 Area 120-ft.-radius spread"
+            "sorcerer/wizard 6"
         ],
         "area": "120-ft.-radius spread",
         "description": "This spell causes tall grass, weeds, and other plants to swell into Gargantuan vines and tendrils that erupt from the ground, reaching for any structure or any creature of evil alignment, functioning like _black tentacles_ except as noted. When you are determining the tendrils’ CMB, the tendrils use your caster level as their base attack bonus and have a +13 bonus due to their Strength. Any tendril that succeeds in grappling a foe deals 4d6+13 points of damage to the grappled creature. Additionally, the tendrils created by this spell can [detect evil](/spells/detect-evil) auras, as if they had spent 3 rounds observing all creatures and objects within the spell’s area using [detect evil](/spells/detect-evil), and attack and impede the movement of only evil creatures, though they also attack any structures in their area. Each structure suffers a single attack each round; your caster level acts as the base attack bonus for these attacks, and the tendrils deal 4d6+13 points of damage on each successful attack. Creatures that lack evil auras are not attacked or impeded by this spell."
@@ -5439,7 +5437,6 @@
             "darkness"
         ],
         "levels": [
-            "darkness 3",
             "sorcerer/wizard 3"
         ],
         "castingTime": "1 standard action",
@@ -6258,7 +6255,7 @@
             "bloodrager 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -6798,7 +6795,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -6822,7 +6819,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -7536,7 +7533,7 @@
     },
     {
         "name": "Brow Gasher",
-        "school": "bloodrager",
+        "school": "necromancy",
         "levels": [
             "bloodrager 2",
             "inquisitor 2",
@@ -7641,7 +7638,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -7669,7 +7666,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -8836,7 +8833,7 @@
             "magus 2",
             "ranger 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -8861,7 +8858,7 @@
             "psychic 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "targets": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -9506,7 +9503,7 @@
             "bard 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "target": "one living creature",
@@ -9993,7 +9990,7 @@
     },
     {
         "name": "Cleromancy",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 2",
             "druid 3",
@@ -10206,7 +10203,7 @@
         "levels": [
             "cleric 2",
             "druid 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -10246,7 +10243,7 @@
         "levels": [
             "magus 5",
             "sorcerer/wizard 5",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -10385,7 +10382,7 @@
     },
     {
         "name": "Collaborative Thaumaturgy",
-        "school": "bard",
+        "school": "universal",
         "levels": [
             "bard 3",
             "cleric 3",
@@ -10594,7 +10591,7 @@
     },
     {
         "name": "Commune With Texts",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 5",
             "cleric 6",
@@ -10727,7 +10724,7 @@
             "paladin 1",
             "psychic 1",
             "ranger 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -11124,7 +11121,7 @@
         ],
         "levels": [
             "sorcerer/wizard 6",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 round",
         "components": [
@@ -11352,7 +11349,7 @@
     },
     {
         "name": "Contact Nalfeshnee",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 6",
             "sorcerer/wizard 6",
@@ -11377,7 +11374,7 @@
             "alchemist 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "10 minutes",
@@ -11609,7 +11606,7 @@
         ],
         "levels": [
             "shaman 4",
-            "sorcerer/ wizard 4"
+            "sorcerer/wizard 4"
         ],
         "components": [
             "V",
@@ -11693,7 +11690,7 @@
             "bard 3",
             "cleric/oracle 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -11853,7 +11850,7 @@
         ],
         "levels": [
             "bard 4",
-            "sorcerer/wizard 4 Duration 1 hour/level (D)"
+            "sorcerer/wizard 4"
         ],
         "duration": "1 hour/level (D)",
         "description": "This spell functions as [whispering wind](/spells/whispering-wind), except it can carry responses and doesn’t end after delivering its first message.\n\nAfter the wind completes its initial message, it waits for 1 round, then copies what it hear, and returns at the same speed and by the same route. It delivers what it heard to the location where the spell was originally cast. The wind continues back and forth in this way until the duration ends or the spell is dismissed."
@@ -11952,8 +11949,8 @@
         "levels": [
             "bloodrager 1",
             "magus 1",
-            "sorcerer/ wizard 1",
-            "summoner/unchained summoner 1"
+            "sorcerer/wizard 1",
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -11974,7 +11971,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "antipaladin 2",
@@ -12310,7 +12307,7 @@
             "cleric/oracle 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "2 hours",
@@ -12420,7 +12417,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -12571,7 +12568,7 @@
             "druid 7",
             "shaman 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -12595,7 +12592,7 @@
             "druid 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -13192,7 +13189,7 @@
         "levels": [
             "cleric/oracle 5",
             "inquisitor 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 round",
@@ -13401,10 +13398,13 @@
         "school": "necromancy",
         "descripters": [
             "curse",
-            "evil; see text"
+            "evil",
+            "see text"
         ],
         "levels": [
-            "see text]"
+            "cleric/oracle 9",
+            "sorcerer/wizard 9",
+            "witch 9"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -13460,7 +13460,7 @@
         "levels": [
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -13479,11 +13479,7 @@
         "school": "transmutation",
         "subschool": "oils worth 5,000 gp",
         "levels": [
-            "druid 6 Components V",
-            "S",
-            "M",
-            "DF (oils worth 5",
-            "000 gp)"
+            "druid 6"
         ],
         "components": [
             "V",
@@ -13993,7 +13989,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -14021,7 +14017,7 @@
             "bloodrager 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 2"
         ],
         "range": "medium (100 ft. + 10 ft./level)",
@@ -14040,7 +14036,7 @@
             "inquisitor 4",
             "psychic 3",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -14457,7 +14453,7 @@
         ],
         "levels": [
             "psychic 5",
-            "witch 5 Target one creature/4 levels"
+            "witch 5"
         ],
         "target": "one creature/4 levels",
         "description": "This spell functions as per _debilitating pain_, except you can target one creature for every 4 caster levels you have."
@@ -14727,9 +14723,10 @@
             "force"
         ],
         "levels": [
-            "sorcerer/wizard 9 Effects up to one sword per 3 levels"
+            "sorcerer/wizard 9"
         ],
-        "description": "This spell functions as _defending sword_, except you can create one sword per 5 caster levels, each of which must defend a different creature within range."
+        "description": "This spell functions as _defending sword_, except you can create one sword per 5 caster levels, each of which must defend a different creature within range.",
+        "effect": "up to one sword per 3 levels"
     },
     {
         "name": "Defensive Grace",
@@ -15457,7 +15454,7 @@
     },
     {
         "name": "Detect Demon",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 1",
             "inquisitor 1",
@@ -15583,7 +15580,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -15863,7 +15860,7 @@
             "inquisitor 2",
             "psychic 1",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -15931,7 +15928,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 4",
@@ -16006,7 +16003,7 @@
         "levels": [
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16120,7 +16117,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -16142,7 +16139,7 @@
             "inquisitor 3",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16184,7 +16181,7 @@
         "subschool": "teleportation",
         "levels": [
             "sorcerer/wizard 7",
-            "summoner/unchained summoner 6",
+            "summoner/summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "1 standard action",
@@ -16205,8 +16202,7 @@
         "levels": [
             "cleric/oracle 8",
             "sorcerer/wizard 8",
-            "summoner 6",
-            "Bloodline accursed 8"
+            "summoner 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16356,7 +16352,7 @@
     },
     {
         "name": "Discern Next of Kin",
-        "school": "mind-affecting] <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-bard/\">bard</a>",
+        "school": "divination",
         "descripters": [
             "mind-affecting"
         ],
@@ -16430,8 +16426,7 @@
             "cleric 6",
             "magus 6",
             "sorcerer/wizard 6",
-            "witch 6 Target or Area one creature or technological object",
-            "or a 20-ft.-radius burst"
+            "witch 6"
         ],
         "target": "or Area one creature or technological object, or a 20-ft.-radius burst",
         "description": "This spell functions as discharge, except it can discharge multiple technological objects and can be used to target an area.\n\nYou choose to use greater discharge in one of two ways: an area discharge or a targeted discharge.\n\n**Area Discharge**: When greater discharge is used in this way, the spell affects everything within a 20-foot-radius burst. Each creature in the area is affected as though by discharge (affecting only one object in the creature’s possession), and each unattended object is similarly affected.\n\n**Targeted Discharge**: This spell functions as discharge, but if the target is a creature, it can discharge one randomly determined object from the target’s charged or electrically powered possessions for every 4 caster levels you possess."
@@ -16599,7 +16594,7 @@
             "shaman 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -16718,7 +16713,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -16748,7 +16743,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "spiritualist 6",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 6"
         ],
         "target": "one spellcaster, creature, or object; or a 20-ft.-radius burst",
@@ -16769,7 +16764,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -17123,7 +17118,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "oracle 8"
@@ -17298,7 +17293,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 3",
@@ -17383,7 +17378,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 4",
@@ -17947,7 +17942,7 @@
         ],
         "levels": [
             "druid 6",
-            "summoner/unchained summoner 6"
+            "summoner/summoner (unchained) 6"
         ],
         "castingTime": "1 round",
         "components": [
@@ -18020,7 +18015,7 @@
             "psychic 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -18045,7 +18040,7 @@
             "shaman 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "One creature/level, no two of which can be more than 30 ft. apart",
@@ -18100,7 +18095,7 @@
     },
     {
         "name": "Ears of the City",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -18450,7 +18445,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 3",
@@ -18565,7 +18560,7 @@
             "air",
             "earth",
             "fire",
-            "or water"
+            "water"
         ],
         "levels": [
             "bard 3",
@@ -18615,7 +18610,7 @@
             "acid",
             "cold",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "alchemist 2",
@@ -18886,7 +18881,7 @@
             "ranger 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -18926,7 +18921,7 @@
     },
     {
         "name": "Enemy Insight",
-        "school": "ranger",
+        "school": "divination",
         "levels": [
             "ranger 2"
         ],
@@ -18987,10 +18982,11 @@
             "acid",
             "cold",
             "electricity",
-            "or fire; see below"
+            "fire",
+            "see below"
         ],
         "levels": [
-            "see below]"
+            "sorcerer/wizard 4"
         ],
         "castingTime": "1 immediate action",
         "components": [
@@ -19106,7 +19102,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -19501,7 +19497,7 @@
         "levels": [
             "cleric 2",
             "druid 2",
-            "wizard/sorcerer 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -19781,7 +19777,7 @@
         "name": "Evolution Surge",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -19800,7 +19796,7 @@
         "name": "Evolution Surge, Greater",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "description": "This spell causes your eidolon to take on new characteristics.\n\nYou can grant the eidolon any evolution whose total cost does not exceed 2 evolution points. You may only grant one evolution with this spell, even if that evolution can be taken multiple times.\n\nYou can grant an evolution that allows you to spend additional evolution points to upgrade that evolution. This spell cannot be used to grant an upgrade to an evolution that the eidolon already possesses. The eidolon must meet any prerequisites of the selected evolution. This spell does not allow an eidolon to exceed its maximum number of natural attacks.\n\n**Evolution Surge, Greater**\n\n**School** transmutation; **Level** summoner/unchained summoner 4\n\nDESCRIPTION\n\nThis spell functions as _lesser evolution surge_ (see above), except that you can grant any two evolutions whose total cost does not exceed 6 evolution points."
     },
@@ -19808,7 +19804,7 @@
         "name": "Evolution Surge, Lesser",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "description": "This spell causes your eidolon to take on new characteristics.\n\nYou can grant the eidolon any evolution whose total cost does not exceed 2 evolution points. You may only grant one evolution with this spell, even if that evolution can be taken multiple times.\n\nYou can grant an evolution that allows you to spend additional evolution points to upgrade that evolution. This spell cannot be used to grant an upgrade to an evolution that the eidolon already possesses. The eidolon must meet any prerequisites of the selected evolution. This spell does not allow an eidolon to exceed its maximum number of natural attacks.\n\n**Evolution Surge, Greater**\n\n**School** transmutation; **Level** summoner/unchained summoner 4\n\nDESCRIPTION\n\nThis spell functions as _lesser evolution surge_ (see above), except that you can grant any two evolutions whose total cost does not exceed 6 evolution points."
     },
@@ -19897,7 +19893,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -20512,7 +20508,7 @@
             "alchemist 4",
             "bloodrager 4",
             "shaman 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "description": "This spell functions as _false life_, except you gain temporary hit points equal to 2d10 + 1 point per caster level (maximum +20). The effects of this spell do not stack with those of _false life_."
@@ -20555,11 +20551,7 @@
             "ruse"
         ],
         "levels": [
-            "cleric 9 Components V",
-            "S",
-            "M (diamond worth 25",
-            "000 gp)",
-            "DF Duration permanent"
+            "cleric 9"
         ],
         "components": [
             "V",
@@ -20841,7 +20833,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 immediate action",
         "components": [
@@ -21467,7 +21459,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -21932,7 +21924,7 @@
             "bloodrager 4",
             "druid 4",
             "magus 4",
-            "sorcerer/wizard 4 Saving Throw Reflex negates (see text)"
+            "sorcerer/wizard 4"
         ],
         "savingThrow": "Reflex negates (see text)",
         "spellResistance": "yes",
@@ -22249,7 +22241,7 @@
         "levels": [
             "sorcerer/wizard 3",
             "summoner 3",
-            "witch 3 Duration concentration + 2 rounds and 1 hour/level (see text)"
+            "witch 3"
         ],
         "duration": "concentration + 2 rounds and 1 hour/level (see text)",
         "description": "This spell functions as [summon swarm](/spells/summon-swarm), except that living and undead creatures that fail their saving throw against the swarm’s distraction find that their limbs twist and spasm, as their bodies become susceptible to transmutations. Such creatures take a –4 penalty to Dexterity and on saving throws against transmutation effects for 1 hour per caster level.\n\n ![](http://www.amazon.com/gp/product/1601257228/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257228&linkCode=as2&tag=httpwwwd20pfs-20&linkId=4FMYQLPXYPJS57RH) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo1ampa1601257228)  Get this book AND support this site!"
@@ -22483,7 +22475,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -22569,7 +22561,7 @@
             "magus 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -22591,7 +22583,7 @@
             "chaotic",
             "evil",
             "good",
-            "or lawful"
+            "lawful"
         ],
         "levels": [
             "inquisitor 2"
@@ -23300,7 +23292,7 @@
             "bard 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -23323,7 +23315,7 @@
             "psychic 6",
             "sorcerer/wizard 6",
             "summoner 4",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one creature/level, no two of which can be more than 30 ft. apart",
@@ -24557,7 +24549,7 @@
         "subschool": "polymorph",
         "levels": [
             "cleric 4",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -24638,7 +24630,7 @@
             "ranger 1",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -24728,7 +24720,7 @@
             "bloodrager 2",
             "magus 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -24839,7 +24831,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -25256,7 +25248,7 @@
             "bard 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -25343,7 +25335,7 @@
             "cleric 7",
             "magus 6",
             "shaman 7",
-            "sorcerer/ wizard 7",
+            "sorcerer/wizard 7",
             "summoner 6",
             "witch 7"
         ],
@@ -25565,7 +25557,7 @@
             "cleric/oracle 0",
             "druid 0",
             "inquisitor 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -25609,7 +25601,7 @@
             "mind-affecting"
         ],
         "levels": [
-            "Level antipaladin 3",
+            "antipaladin 3",
             "bard 3",
             "inquisitor 3",
             "mesmerist 3",
@@ -26043,7 +26035,7 @@
     },
     {
         "name": "Harvest Knowledge",
-        "school": "mind-affecting] <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/formulae-lists-alchemist/\">alchemist</a>",
+        "school": "divination",
         "descripters": [
             "mind-affecting"
         ],
@@ -26104,7 +26096,7 @@
             "sorcerer/wizard 3",
             "spiritualist 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -26316,8 +26308,7 @@
         "subschool": "healing",
         "levels": [
             "cleric/oracle 9",
-            "shaman 9",
-            "Domain healing 9"
+            "shaman 9"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "One or more creatures, no two of which can be more than 30 ft. apart",
@@ -26354,8 +26345,8 @@
         "name": "Healing Leak",
         "school": "necromancy",
         "levels": [
-            "antipaladin",
-            "2 cleric 3",
+            "antipaladin 2",
+            "cleric 3",
             "paladin 2",
             "sorcerer/wizard 3",
             "witch 3"
@@ -26660,7 +26651,7 @@
         "descripters": [
             "acid",
             "electricity",
-            "or fire"
+            "fire"
         ],
         "levels": [
             "bloodrager 4",
@@ -26797,7 +26788,7 @@
         "school": "enchantment",
         "subschool": "compulsion",
         "descripters": [
-            "mind affecting"
+            "mind-affecting"
         ],
         "levels": [
             "sorcerer/wizard 9",
@@ -26831,7 +26822,7 @@
             "psychic 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -26859,7 +26850,7 @@
             "sorcerer/wizard 6",
             "spiritualist 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "duration": "1 min./level",
@@ -26889,7 +26880,7 @@
         "subschool": "object",
         "levels": [
             "shaman 3",
-            "witch 3 Saving Throw see text"
+            "witch 3"
         ],
         "savingThrow": "see text",
         "spellResistance": "no (object) and yes (see text)",
@@ -27270,7 +27261,7 @@
             "inquisitor 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "components": [
@@ -27802,7 +27793,7 @@
         "levels": [
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -27861,7 +27852,7 @@
             "inquisitor 2",
             "mesmerist 2",
             "psychic 2",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "spiritualist 3",
             "witch 3"
         ],
@@ -27956,10 +27947,7 @@
             "shaman 7",
             "sorcerer/wizard 7",
             "spiritualist 6",
-            "witch 7 Target one humanoid",
-            "magical beast",
-            "or monstrous humanoid/level",
-            "no two of which can be more than 30 feet apart"
+            "witch 7"
         ],
         "target": "one humanoid, magical beast, or monstrous humanoid/level, no two of which can be more than 30 feet apart",
         "description": "This spell functions like _hunger for flesh_, except that it affects multiple targets. When forced to feed by the spell, affected creatures attack creatures not affected by this spell if there are any such appropriate creatures nearby, but otherwise they attack other affected creatures."
@@ -28013,7 +28001,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -28426,9 +28414,9 @@
             "cold"
         ],
         "levels": [
-            "sorcerer/ wizard 6",
+            "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "castingTime": "1 standard action",
@@ -28528,7 +28516,7 @@
         "levels": [
             "bloodrager 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -28628,7 +28616,7 @@
             "bard 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -28655,7 +28643,7 @@
             "druid 3",
             "medium 2",
             "ranger 2",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -28753,7 +28741,7 @@
             "mesmerist 4",
             "occultist 5",
             "psychic 5",
-            "sorcerer/wizard 6 Target you and one creature"
+            "sorcerer/wizard 6"
         ],
         "target": "you and one creature",
         "description": "This spell functions as illusion of treachery except that it also conceals your own actions (as [illusion of calm](/spells/illusion-of-calm)) and renders invisible all spell effects and ranged attacks originating from you until they reach the attack’s target (this doesn’t cause the attack’s target to be unable to avoid the attack, as they still see the attack originating from the spell’s target)."
@@ -29267,7 +29255,7 @@
         ],
         "levels": [
             "occultist 1",
-            "sorcerer/wizard 1 Saving Throw Reflex partial"
+            "sorcerer/wizard 1"
         ],
         "savingThrow": "Reflex partial",
         "spellResistance": "yes",
@@ -29328,7 +29316,9 @@
             "lawful"
         ],
         "levels": [
-            "see text"
+            "cleric 3",
+            "sorcerer/wizard 3",
+            "summoner 3"
         ],
         "castingTime": "1 round",
         "components": [
@@ -29519,8 +29509,7 @@
             "psychic 6",
             "sorcerer/wizard 7",
             "spiritualist 5",
-            "witch 7 Target one creature/level",
-            "no two of which can be more than 30 ft. apart."
+            "witch 7"
         ],
         "target": "one creature/level, no two of which can be more than 30 ft. apart.",
         "description": "You telepathically wrack the target’s mind and body with agonizing pain that imposes a –4 penalty on attack rolls, skill checks, and ability checks. A successful Will save reduces the duration to 1 round."
@@ -29758,7 +29747,7 @@
             "druid 5",
             "shaman 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 round",
         "components": [
@@ -29775,7 +29764,7 @@
     },
     {
         "name": "Insect Scouts",
-        "school": "antipaladin",
+        "school": "divination",
         "levels": [
             "antipaladin 4",
             "bard 4",
@@ -29798,7 +29787,7 @@
         "duration": "1d6 hours, plus 1 hour/level; see text",
         "savingThrow": "none",
         "spellResistance": "no",
-        "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n\n![](https://www.amazon.com/gp/product/1601258445/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601258445&linkCode=as2&tag=httpwwwd20pfs-20&linkId=fd1b8f484ae13edb2ab97989e30b8762) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplam2ampo-2ampa-260-2258445-2)"
+        "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n"
     },
     {
         "name": "Insect Spies",
@@ -30400,7 +30389,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "cleric/oracle 5 (Magrim)"
+            "cleric/oracle 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -30429,7 +30418,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -30453,7 +30442,7 @@
             "inquisitor 1",
             "psychic 1",
             "ranger 1",
-            "sorcerer/wizard 1 Duration 10 minutes/level"
+            "sorcerer/wizard 1"
         ],
         "duration": "10 minutes/level",
         "description": "This spell functions as [alarm](/spells/alarm), except it is triggered only by invisible creatures entering or leaving the warded area. The spell has a different mental alarm depending on whether the invisible creature is entering or leaving the area. This spell does not aid you in sensing or pinpointing the location of an invisible creature within the spell’s area.\n\n_Invisibility alarm_ can be made permanent with a [permanency](/spells/permanency) spell by a caster of 9th level or higher at a cost of 2,500 gp."
@@ -30478,7 +30467,7 @@
             "sorcerer 2",
             "spiritualist 2",
             "summoner 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "wizard 2"
         ],
         "castingTime": "1 standard action",
@@ -30544,7 +30533,7 @@
             "skald 3",
             "sorcerer 3",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "wizard 3"
         ],
         "castingTime": "1 standard action",
@@ -30613,7 +30602,7 @@
             "occultist 3",
             "psychic 3",
             "sorcerer/wizard 3",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "components": [
             ": V",
@@ -31128,7 +31117,7 @@
             "psychic 1",
             "ranger 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -31145,7 +31134,7 @@
     },
     {
         "name": "Jungle Mind",
-        "school": "druid",
+        "school": "divination",
         "subschool": "scrying",
         "levels": [
             "druid 5",
@@ -31172,7 +31161,7 @@
             "bard 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -31190,7 +31179,7 @@
     },
     {
         "name": "Karmic Blessing",
-        "school": "cleric",
+        "school": "divination",
         "descripters": [
             "good"
         ],
@@ -31702,7 +31691,8 @@
         "levels": [
             "cleric 6",
             "magus 5",
-            "sorcerer/"
+            "sorcerer/wizard 6",
+            "witch 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -31717,7 +31707,7 @@
     },
     {
         "name": "Lay of the Land",
-        "school": "cleric",
+        "school": "divination",
         "levels": [
             "cleric 2",
             "bard 2",
@@ -31961,7 +31951,7 @@
             "shaman 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -32066,7 +32056,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -32083,7 +32073,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -32240,7 +32230,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -32467,7 +32457,7 @@
     },
     {
         "name": "Limited Wish",
-        "school": "sorcerer/wizard",
+        "school": "universal",
         "levels": [
             "sorcerer/wizard 7"
         ],
@@ -32478,11 +32468,13 @@
             "M (diamond worth 1,500 gp)"
         ],
         "range": "see text",
-        "area": "Target, Effect,  see text",
+        "area": "see text",
         "duration": "see text",
         "savingThrow": "none, see text",
         "spellResistance": "yes",
-        "description": "A _limited wish_ lets you create nearly any type of effect. For example, a _limited wish_ can do any of the following things.\n\n*   Duplicate any sorcerer/wizard spell of 6th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 5th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 5th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 4th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many spells, such as [insanity](/spells/insanity).\n*   Produce any other effect whose power level is in line with the above effects, such as a single creature automatically hitting on its next attack or taking a -7 penalty on its next saving throw.\n\nA duplicated spell allows saving throws and spell resistance as normal, but the save DC is for a 7th-level spell. When a _limited wish_ spell duplicates a spell with a material component that costs more than 1,000 gp, you must provide that component (in addition to the 1,500 gp diamond component for this spell)."
+        "description": "A _limited wish_ lets you create nearly any type of effect. For example, a _limited wish_ can do any of the following things.\n\n*   Duplicate any sorcerer/wizard spell of 6th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 5th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 5th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 4th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many spells, such as [insanity](/spells/insanity).\n*   Produce any other effect whose power level is in line with the above effects, such as a single creature automatically hitting on its next attack or taking a -7 penalty on its next saving throw.\n\nA duplicated spell allows saving throws and spell resistance as normal, but the save DC is for a 7th-level spell. When a _limited wish_ spell duplicates a spell with a material component that costs more than 1,000 gp, you must provide that component (in addition to the 1,500 gp diamond component for this spell).",
+        "target": "see text",
+        "effect": "see text"
     },
     {
         "name": "Limp Lash",
@@ -33016,7 +33008,7 @@
         "levels": [
             "mesmerist 3",
             "psychic 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -33039,7 +33031,7 @@
             "bard 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -33199,10 +33191,10 @@
     },
     {
         "name": "Locksight",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
-            "antipaladin",
+            "antipaladin 1",
             "bard 1",
             "inquisitor 1",
             "sorcerer/wizard 1"
@@ -33218,7 +33210,7 @@
         "duration": "1 hour/level",
         "savingThrow": "Will negates (harmless)",
         "spellResistance": "yes (harmless)",
-        "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n\n ![](http://www.amazon.com/gp/product/1601257694/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257694&linkCode=as2&tag=httpwwwd20pfs-20&linkId=DBWOIQO4ITNW4EF3) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo-2ampa-260-2257694-2)  Get this book AND support this site!"
+        "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n"
     },
     {
         "name": "Long Arm",
@@ -33229,7 +33221,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -33518,7 +33510,7 @@
             "bard 3",
             "druid 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 round",
         "components": [
@@ -33597,7 +33589,7 @@
             "bloodrager 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -33621,7 +33613,7 @@
             "magus 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0"
+            "summoner/summoner (unchained) 0"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33707,7 +33699,7 @@
         "levels": [
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33791,7 +33783,7 @@
             "bard 1",
             "cleric 1",
             "magus 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33923,7 +33915,7 @@
         ],
         "levels": [
             "cleric 2",
-            "druid 2 Target up to three boulders touched"
+            "druid 2"
         ],
         "target": "up to three boulders touched",
         "description": "This spell works like [magic stone](/spells/magic-stone), except you transmute as many as three boulders (rocks up to two size categories smaller than yourself) to use with the rock throwing ability or as siege engine ammunition. The boulder’s damage increases by one step, and the boulder gains a +1 enhancement bonus on attack and damage rolls."
@@ -33940,7 +33932,7 @@
             "paladin 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from chaos](/spells/protection-from-chaos) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-lawful called creature."
     },
@@ -33956,7 +33948,7 @@
             "paladin 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -33983,7 +33975,7 @@
             "inquisitor 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from good](/spells/protection-from-good) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-evil called creature."
     },
@@ -33999,7 +33991,7 @@
             "inquisitor 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "description": "This spell functions like [magic circle against evil](/spells/magic-circle-against-evil), except that it is similar to [protection from law](/spells/protection-from-law) instead of [protection from evil](/spells/protection-from-evil), and it can imprison a non-chaotic called creature."
     },
@@ -34028,7 +34020,7 @@
         "levels": [
             "druid 1",
             "ranger 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -34049,7 +34041,7 @@
         "levels": [
             "druid 3",
             "ranger 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "range": "close (25 ft. + 5 ft./2 levels)",
         "target": "one living creature",
@@ -34063,7 +34055,7 @@
             "alchemist 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -34114,7 +34106,7 @@
             "occultist 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -34354,7 +34346,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 5"
         ],
         "castingTime": ": 10 minutes",
@@ -34681,7 +34673,7 @@
             "alchemist 3",
             "mesmerist 3",
             "psychic 3",
-            "sorcerer/wizard",
+            "sorcerer/wizard 3",
             "summoner/unchained summoner 3",
             "witch 3"
         ],
@@ -34732,7 +34724,7 @@
             "skald 3",
             "sorcerer 3",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "warpriest 3",
             "wizard 3"
         ],
@@ -34891,7 +34883,7 @@
             "occultist 4",
             "psychic 3",
             "sorcerer/wizard 4",
-            "spiritualist 4 Duration instantaneous"
+            "spiritualist 4"
         ],
         "duration": "instantaneous",
         "description": "You mingle the power of your mind and body to exert force beyond your reach. This spell functions as the combat maneuver version of [telekinesis](/spells/telekinesis), except as noted above. Alternatively, you can inflict a telekinetic unarmed strike with this spell, using your own unarmed strike damage and applying your primary spellcasting ability score modifier to the damage in place of your Strength modifier.\n\n ![](http://www.amazon.com/gp/product/1601257228/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1601257228&linkCode=as2&tag=httpwwwd20pfs-20&linkId=4FMYQLPXYPJS57RH) ![](http://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/irthttpwwwd20pfs-20amplas2ampo1ampa1601257228)  Get this book AND support this site!"
@@ -34980,7 +34972,7 @@
             "magus 4",
             "occultist 4",
             "shaman 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -35303,7 +35295,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "10 minutes",
@@ -35384,7 +35376,7 @@
             "bard 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -35883,8 +35875,8 @@
         "school": "conjuration",
         "subschool": "creation",
         "levels": [
-            "sorcerer/ wizard 4",
-            "summoner/unchained summoner 3",
+            "sorcerer/wizard 4",
+            "summoner/summoner (unchained) 3",
             "witch 4"
         ],
         "castingTime": "1 minute",
@@ -36225,7 +36217,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -36557,9 +36549,10 @@
             "mind-affecting"
         ],
         "levels": [
-            "Subdomain insanity 4",
-            "moon 4",
-            "rage 6"
+            "bloodrager 4",
+            "druid 4",
+            "sorcerer/wizard 4",
+            "witch 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -36583,7 +36576,6 @@
         "levels": [
             "cleric/oracle 7",
             "druid 7",
-            "inquisitor 7",
             "shaman 7"
         ],
         "castingTime": "1 standard action",
@@ -36670,7 +36662,7 @@
             "bloodrager 1",
             "magus 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -36917,10 +36909,10 @@
             "mesmerist 5",
             "psychic 6",
             "sorcerer/wizard 7",
-            "witch 7 Targets one or more living creatures",
-            "no two of which can be more than 30 ft. apart"
+            "witch 7"
         ],
-        "description": "This spell functions as _mydriatic spontaneity_, except it can affect multiple creatures."
+        "description": "This spell functions as _mydriatic spontaneity_, except it can affect multiple creatures.",
+        "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
     },
     {
         "name": "Naga Shape",
@@ -37367,9 +37359,7 @@
             "cleric 6",
             "druid 5",
             "inquisitor 6",
-            "witch 6\nComponents V",
-            "S",
-            "M/DF (a lump of charcoal)\nDuration instantaneous or 1 hour/level (D)"
+            "witch 6"
         ],
         "components": [
             "V",
@@ -37570,7 +37560,7 @@
             "ranger 4",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -37719,7 +37709,7 @@
         "subschool": "Kols",
         "levels": [
             "cleric/oracle 3",
-            "paladin 2 (Kols)"
+            "paladin 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -37882,7 +37872,7 @@
             "magus 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "unchained summoner 1",
+            "summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -37908,7 +37898,7 @@
             "druid 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38100,7 +38090,7 @@
             "magus 0",
             "psychic 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0"
+            "summoner/summoner (unchained) 0"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38321,7 +38311,7 @@
             "shaman 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -38475,7 +38465,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -38826,8 +38816,7 @@
             "mesmerist 4",
             "psychic 5",
             "sorcerer/wizard 5",
-            "witch 5 Target one living creature/level",
-            "no two of which can be more than 30 ft. apart"
+            "witch 5"
         ],
         "target": "one living creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions as per _passing fancy_ except as noted."
@@ -38895,7 +38884,7 @@
         "school": "abjuration",
         "levels": [
             "bard 1",
-            "cleric",
+            "cleric 1",
             "druid 1",
             "inquisitor 1",
             "paladin 1",
@@ -38963,10 +38952,10 @@
         "subschool": "charm",
         "descripters": [
             "language-dependent",
-            "mind- affecting"
+            "mind-affecting"
         ],
         "levels": [
-            "cleric/oracle 2 (Grundinnar)"
+            "cleric/oracle 2"
         ],
         "castingTime": "1 swift action",
         "components": [
@@ -39013,7 +39002,7 @@
             "magus 4",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -39127,10 +39116,8 @@
     },
     {
         "name": "Permanency",
-        "school": "sorcerer/wizard",
-        "descripters": [
-            "subdomain"
-        ],
+        "school": "universal",
+        "descripters": [],
         "levels": [
             "sorcerer/wizard 5"
         ],
@@ -39592,7 +39579,7 @@
             "bloodrager 3",
             "magus 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -39959,7 +39946,6 @@
         ],
         "levels": [
             "alchemist 6",
-            "antipaladin 6",
             "cleric/oracle 6",
             "druid 6",
             "inquisitor 6",
@@ -40035,7 +40021,7 @@
             "alchemist 5",
             "cleric/oracle 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -40054,7 +40040,7 @@
         "levels": [
             "cleric/oracle 6",
             "sorcerer/wizard 7",
-            "summoner/unchained summoner 6"
+            "summoner/summoner (unchained) 6"
         ],
         "components": [
             "V",
@@ -40172,7 +40158,7 @@
         "levels": [
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "components": [
             "V",
@@ -40194,7 +40180,7 @@
             "see text"
         ],
         "levels": [
-            ": sorcerer/wizard 8",
+            "sorcerer/wizard 8",
             "summoner 6"
         ],
         "components": [
@@ -40288,7 +40274,7 @@
             "shaman 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "castingTime": "1 standard action",
@@ -40399,7 +40385,7 @@
         "levels": [
             "cleric/oracle 3",
             "paladin 3",
-            "ranger 4 (Angradd)"
+            "ranger 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41282,7 +41268,7 @@
     },
     {
         "name": "Prestidigitation",
-        "school": "bard",
+        "school": "universal",
         "levels": [
             "bard 0",
             "magus 0",
@@ -41398,7 +41384,7 @@
     },
     {
         "name": "Probe History (Half-Elf)",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 3",
             "cleric 4",
@@ -41571,7 +41557,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41604,7 +41590,7 @@
             "paladin 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41639,7 +41625,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41671,7 +41657,7 @@
             "paladin 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41703,7 +41689,7 @@
             "inquisitor 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -41735,7 +41721,7 @@
             "inquisitor 1",
             "shaman 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -42226,7 +42212,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -42632,7 +42618,7 @@
             "mesmerist 2",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -42749,7 +42735,7 @@
             "psychic 3",
             "shaman 4",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "effect": "one swarm of poisonous frogs",
@@ -42999,7 +42985,7 @@
             "cleric/oracle 1",
             "druid 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "description": "This spell functions as [ray of exhaustion](/spells/ray-of-exhaustion), except the target is sickened if it fails its save and unaffected if it makes its save."
@@ -43019,7 +43005,7 @@
             "ranger 1",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -43360,7 +43346,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -43385,7 +43371,7 @@
             "psychic 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "target": "one humanoid creature/level, no two of which can be more than 30 ft. apart",
         "description": "This spell functions like _reduce person_, except that it affects multiple creatures.\n\n### Mythic\n\nYou can decrease the target’s size by up to two categories, to a minimum of Tiny. If the target shrinks two sizes, its weight decreases by a factor of 16 and it gains a +4 size bonus to Dexterity, a –4 size penalty to Strength, and a +2 bonus on attack rolls and to AC because of its decreased size. A Medium or Small humanoid creature whose size decreases to Tiny has a space of 2-1/2 feet and a natural reach of 0 feet.\n\nMythic _reduce person_ counters and dispels mythic _enlarge person._"
@@ -43580,7 +43566,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "components": [
             "V",
@@ -43600,7 +43586,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 5"
+            "summoner/summoner (unchained) 5"
         ],
         "components": [
             "V",
@@ -43620,7 +43606,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44159,7 +44145,7 @@
             "inquisitor 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44274,7 +44260,7 @@
             "shaman 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -44328,7 +44314,7 @@
             "psychic 0",
             "shaman 0",
             "sorcerer/wizard 0",
-            "summoner/unchained summoner 0",
+            "summoner/summoner (unchained) 0",
             "witch 0"
         ],
         "castingTime": "1 standard action",
@@ -44617,7 +44603,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 minute",
         "components": [
@@ -44638,7 +44624,7 @@
         "school": "conjuration",
         "subschool": "healing",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "3 rounds",
         "components": [
@@ -44967,7 +44953,7 @@
         "levels": [
             "cleric 3",
             "psychic 2",
-            "wizard/sorcerer 3"
+            "sorcerer/wizard 3"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -44986,7 +44972,7 @@
         "levels": [
             "cleric 6",
             "psychic 5",
-            "wizard/sorcerer 6"
+            "sorcerer/wizard 6"
         ],
         "castingTime": "30 minutes",
         "components": [
@@ -45005,7 +44991,7 @@
         "levels": [
             "cleric 6",
             "psychic 5",
-            "wizard/sorcerer 6"
+            "sorcerer/wizard 6"
         ],
         "castingTime": "30 minutes",
         "components": [
@@ -45572,9 +45558,9 @@
     },
     {
         "name": "Rune of Durability",
-        "school": "transmutation<",
+        "school": "transmutation",
         "levels": [
-            "Level sorcerer/wizard 3"
+            "sorcerer/wizard 3"
         ],
         "castingTime": "1 minute",
         "components": [
@@ -46814,7 +46800,7 @@
         "name": "Sealed Life, Greater",
         "school": "abjuration",
         "levels": [
-            "spiritualist 6 Duration 1 minute/level"
+            "spiritualist 6"
         ],
         "duration": "1 minute/level",
         "description": "You seal the life force within the target, preventing it from sharing its vitality with others. Affected creatures can’t transfer damage to or from another, such as through [shield other](/spells/shield-other), a spiritualist’s life bond, or a summoner’s life link. Effects such as [vampiric touch](/spells/vampiric-touch) that steal vitality from others deal damage normally, but provide no benefits."
@@ -46870,7 +46856,7 @@
         ],
         "levels": [
             "bard 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -47181,7 +47167,7 @@
             "psychic 2",
             "sorcerer/wizard 2",
             "spiritualist 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -47318,7 +47304,7 @@
             "psychic 2",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -47416,7 +47402,7 @@
             "shaman 4",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "10 minutes",
         "components": [
@@ -47503,7 +47489,7 @@
     },
     {
         "name": "Sense Vitals",
-        "school": "antipaladin",
+        "school": "divination",
         "levels": [
             "antipaladin 2",
             "bard 2",
@@ -47625,7 +47611,7 @@
         "levels": [
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -48152,7 +48138,7 @@
         ],
         "levels": [
             "bard 4",
-            "sorcerer/ wizard 4",
+            "sorcerer/wizard 4",
             "witch 4"
         ],
         "castingTime": "1 standard action",
@@ -48509,7 +48495,7 @@
         "school": "transmutation",
         "subschool": "polymorph",
         "levels": [
-            "sorcerer/wizard 7 Duration 1 hour/level"
+            "sorcerer/wizard 7"
         ],
         "duration": "1 hour/level",
         "description": "This spell functions as shapechanger’s gift except the chosen form can be an animal (as per [beast shape I](/spells/beast-shape)), elemental (as per [elemental body I](/spells/elemental-body)), fey (as per _fey form I_), humanoid (as per [alter self](/spells/alter-self)), monstrous humanoid (as per [monstrous physique I](/spells/monstrous-physique)), or vermin (as per [vermin shape I](/spells/vermin-shape)) and the chosen form can have a fly speed."
@@ -48856,7 +48842,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -48890,7 +48876,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -49527,7 +49513,7 @@
         "levels": [
             "druid 2",
             "ranger 2",
-            "shaman 2 Saving Throw Reflex partial and Fort negates (see text)"
+            "shaman 2"
         ],
         "savingThrow": "Reflex partial and Fort negates (see text)",
         "spellResistance": "no",
@@ -49584,9 +49570,7 @@
         "school": "transmutation",
         "subschool": "D",
         "levels": [
-            "druid 9 Targets one Gargantuan",
-            "Huge",
-            "or Large plant per three caster levels Duration 1 hour/level (D) Saving Throw none"
+            "druid 9"
         ],
         "targets": "one Gargantuan, Huge, or Large plant per three caster levels",
         "duration": "1 hour/level (D)",
@@ -50408,7 +50392,7 @@
             "sorcerer/wizard 3",
             "spiritualist 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -50537,7 +50521,7 @@
         ],
         "levels": [
             "bard 2",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -50653,7 +50637,7 @@
             "magus 4",
             "shaman 4",
             "sorcerer/wizard 4",
-            "unchained summoner 4",
+            "summoner (unchained) 4",
             "witch 4"
         ],
         "components": [
@@ -51149,7 +51133,7 @@
     },
     {
         "name": "Speak Local Language",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -51299,7 +51283,7 @@
     },
     {
         "name": "Speak With Waves",
-        "school": "druid",
+        "school": "divination",
         "descripters": [
             "water"
         ],
@@ -51580,7 +51564,7 @@
         "levels": [
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51646,7 +51630,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 7 (must worship the associated deity)"
+            "cleric/oracle 7"
         ],
         "components": [
             "V",
@@ -51662,7 +51646,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 9 (must worship the associated deity)"
+            "cleric/oracle 9"
         ],
         "description": "This spell functions like _lesser spellcasting contract_, except if the target has 13 HD or more you can imbue him with one or two 4th- level spells and one 5th-level spell."
     },
@@ -51671,7 +51655,7 @@
         "school": "evocation",
         "subschool": "must worship the associated deity",
         "levels": [
-            "cleric/oracle 5 (must worship the associated deity)"
+            "cleric/oracle 5"
         ],
         "components": [
             "V",
@@ -51863,7 +51847,7 @@
             "occultist 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51887,7 +51871,7 @@
             "occultist 3",
             "psychic 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -51974,7 +51958,7 @@
         "subschool": "creation",
         "levels": [
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -52454,7 +52438,7 @@
             "ranger 2",
             "shaman 2",
             "summoner 2",
-            "unchained summoner 2",
+            "summoner (unchained) 2",
             "warpriest 2"
         ],
         "castingTime": "1 standard action",
@@ -52580,7 +52564,7 @@
     },
     {
         "name": "Starsight",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "bard 1",
@@ -52857,7 +52841,7 @@
             "magus 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -53120,7 +53104,7 @@
             "shaman 5",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -53144,7 +53128,7 @@
             "inquisitor 5",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -53480,7 +53464,7 @@
             "inquisitor 3",
             "paladin 3",
             "psychic 3",
-            "sorcerer/wizard 3 Duration 1 round/level or until discharged"
+            "sorcerer/wizard 3"
         ],
         "duration": "1 round/level or until discharged",
         "description": "You are closely surrounded by a barely visible magical field. The field provides a +1 deflection bonus to AC and a +1 resistance bonus on saves. Any creature that strikes you with a melee attack is stunned for 1 round (Will negates). Once the field has stunned an opponent, the spell is discharged."
@@ -53615,7 +53599,7 @@
         "name": "Suffocation, Mass",
         "school": "necromancy",
         "levels": [
-            "Level sorcerer/wizard 9",
+            "sorcerer/wizard 9",
             "witch 9"
         ],
         "targets": "one living creature/2 levels (no two of which may be more than 30 feet apart)",
@@ -53635,7 +53619,8 @@
             "medium 2",
             "mesmerist 2",
             "occultist 3",
-            "psychic 2 sorcerer/wizard 3",
+            "psychic 2",
+            "sorcerer/wizard 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -53784,7 +53769,7 @@
         "school": "conjuration",
         "subschool": "summoning",
         "levels": [
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 round",
         "components": [
@@ -53976,7 +53961,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -53989,7 +53974,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -54002,7 +53987,7 @@
             "see text"
         ],
         "levels": [
-            "druid 7 Effect one or more giants"
+            "druid 7"
         ],
         "effect": "one or more giants",
         "description": "This spell functions as summon giant ally I, except you can summon one desert, fire, frost, or jungle giant or 1d3 cave, hill, marsh, river, slag, stone, or wood giants."
@@ -54059,7 +54044,7 @@
         "school": "conjuration",
         "levels": [
             "druid 5",
-            "shaman 5 Effect one or more kami"
+            "shaman 5"
         ],
         "effect": "one or more kami",
         "description": "This spell functions as [summon nature’s ally V](/spells/summon-nature_s-ally), except you can summon one kodama, 1d3 fukujin, or 1d4+1 shikigami."
@@ -54161,7 +54146,7 @@
             "cleric/oracle 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54192,7 +54177,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54223,7 +54208,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54254,7 +54239,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54285,7 +54270,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54316,7 +54301,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54347,7 +54332,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54378,7 +54363,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54409,7 +54394,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54440,7 +54425,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54471,7 +54456,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54502,7 +54487,7 @@
             "psychic 1",
             "sorcerer/wizard 1",
             "spiritualist 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 round",
@@ -54576,7 +54561,7 @@
             "skald 4",
             "sorcerer 4",
             "summoner 3",
-            "unchained summoner 3",
+            "summoner (unchained) 3",
             "warpriest 4",
             "wizard 4"
         ],
@@ -54687,7 +54672,7 @@
         "levels": [
             "cleric 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 4",
+            "summoner/summoner (unchained) 4",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -54983,7 +54968,7 @@
             "bard 1",
             "cleric 1",
             "inquisitor 1",
-            "sorcerer/ wizard 1",
+            "sorcerer/wizard 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -55130,7 +55115,7 @@
         "levels": [
             "druid 3",
             "psychic 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "summoner 3",
             "witch 3"
         ],
@@ -55193,7 +55178,7 @@
         "levels": [
             "magus 1",
             "paladin 1",
-            "sorcerer/ wizard 1"
+            "sorcerer/wizard 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -55476,11 +55461,7 @@
         ],
         "levels": [
             "sorcerer/wizard 4",
-            "witch 4 Components V",
-            "S",
-            "M (mercury and phosphorus",
-            "plus powdered diamond and opal worth a total of 1",
-            "000 gp) Saving Throw Will negates"
+            "witch 4"
         ],
         "components": [
             "V",
@@ -56279,7 +56260,7 @@
             "druid 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -56316,7 +56297,7 @@
         "levels": [
             "alchemist 2",
             "bard 2",
-            "sorcerer/ wizard 2",
+            "sorcerer/wizard 2",
             "witch 2"
         ],
         "castingTime": "1 minute",
@@ -56381,7 +56362,7 @@
     },
     {
         "name": "Tectonic Communion",
-        "school": "druid",
+        "school": "divination",
         "levels": [
             "druid 7"
         ],
@@ -56546,7 +56527,7 @@
         "levels": [
             "magus 2",
             "psychic 2",
-            "sorcerer/ wizard 2"
+            "sorcerer/wizard 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -56696,7 +56677,7 @@
             "sorcerer/wizard 5",
             "spiritualist 5",
             "summoner 4",
-            "unchained summoner 5",
+            "summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
@@ -56774,7 +56755,7 @@
             "psychic 7",
             "sorcerer/wizard 7",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 7"
         ],
         "description": "This spell functions like _teleport_, except that there is no range limit and there is no chance you arrive off target. In addition, you need not have seen the destination, but in that case you must have at least a reliable description of the place to which you are teleporting. If you attempt to teleport with insufficient information (or with misleading information), you disappear and simply reappear in your original location. Interplanar travel is not possible."
@@ -57416,7 +57397,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -57604,7 +57585,7 @@
             "shaman 4",
             "sorcerer/wizard 3",
             "spiritualist 3",
-            "summoner/unchained summoner 3",
+            "summoner/summoner (unchained) 3",
             "witch 3"
         ],
         "castingTime": "1 standard action",
@@ -58298,7 +58279,7 @@
         "name": "Transmogrify",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 hour",
         "components": [
@@ -58749,14 +58730,14 @@
         "levels": [
             "bard 3",
             "sorcerer/wizard 4",
-            "witch 4 Duration 1 day/level or until completed"
+            "witch 4"
         ],
         "duration": "1 day/level or until completed",
         "description": "This spell functions as [suggestion](/spells/suggestion), except you can use it only to specify a condition that triggers a special activity, and the subject does not remember that you made the [suggestion](/spells/suggestion). For example, you could use _triggered suggestion_ on a palace guard to make him attack the king the next time he and the king are alone, and the guard would not remember the [suggestion](/spells/suggestion) to do so until the trigger occurred."
     },
     {
         "name": "True Appraisal",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 1",
@@ -58860,7 +58841,7 @@
             "shaman 5",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6",
+            "summoner (unchained) 6",
             "witch 6"
         ],
         "castingTime": "1 standard action",
@@ -58878,7 +58859,7 @@
     },
     {
         "name": "True Skill",
-        "school": "alchemist",
+        "school": "divination",
         "levels": [
             "alchemist 1",
             "bard 1",
@@ -58903,7 +58884,8 @@
         "levels": [
             "alchemist 1",
             "bloodrager 1",
-            "inquisitor 1 magus 1",
+            "inquisitor 1",
+            "magus 1",
             "psychic 1",
             "sorcerer/wizard 1"
         ],
@@ -59052,7 +59034,7 @@
     },
     {
         "name": "Twisted Futures",
-        "school": "bard",
+        "school": "divination",
         "levels": [
             "bard 1",
             "cleric 2",
@@ -59101,7 +59083,7 @@
             "magus 2",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -59659,7 +59641,7 @@
         "name": "Unfetter",
         "school": "transmutation",
         "levels": [
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -59845,9 +59827,7 @@
         ],
         "levels": [
             "cleric 2",
-            "inquisitor 2 Components V",
-            "S",
-            "M (a flask of unholy water or 5 pounds of powdered silver worth 25 gp)"
+            "inquisitor 2"
         ],
         "components": [
             "V",
@@ -60125,7 +60105,7 @@
             "magus 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1",
+            "summoner/summoner (unchained) 1",
             "witch 1"
         ],
         "castingTime": "1 standard action",
@@ -60234,7 +60214,7 @@
             "mesmerist 4",
             "paladin 3",
             "psychic 5",
-            "sorcerer/ wizard 5"
+            "sorcerer/wizard 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -60703,7 +60683,7 @@
             "bard 1",
             "psychic 1",
             "sorcerer/wizard 1",
-            "summoner/unchained summoner 1"
+            "summoner/summoner (unchained) 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61356,7 +61336,7 @@
             "alchemist 4",
             "bloodrager 4",
             "sorcerer/wizard 4",
-            "summoner/unchained summoner 4"
+            "summoner/summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61750,7 +61730,7 @@
             "shaman 5",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61799,7 +61779,7 @@
             "magus 4",
             "sorcerer/wizard 4",
             "summoner 3",
-            "unchained summoner 4"
+            "summoner (unchained) 4"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61822,7 +61802,7 @@
             "magus 6",
             "sorcerer/wizard 6",
             "summoner 5",
-            "unchained summoner 6"
+            "summoner (unchained) 6"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -61992,7 +61972,7 @@
         "levels": [
             "bard 3",
             "cleric 3",
-            "sorcerer/ wizard 3",
+            "sorcerer/wizard 3",
             "inquisitor 3",
             "magus 3",
             "occultist 3",
@@ -62024,7 +62004,7 @@
             "shaman 6",
             "sorcerer/wizard 5",
             "summoner 4",
-            "unchained summoner 5"
+            "summoner (unchained) 5"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62201,7 +62181,7 @@
             "occultist 1",
             "psychic 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2"
+            "summoner/summoner (unchained) 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62291,7 +62271,7 @@
     },
     {
         "name": "Watchful Animal",
-        "school": "scrying) <b>Level</b> <a href=\"http://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-druid/\">druid</a>",
+        "school": "divination",
         "subschool": "scrying",
         "levels": [
             "druid 4",
@@ -62319,7 +62299,7 @@
         "subschool": "Folgrit",
         "levels": [
             "cleric/oracle 1",
-            "paladin 1 (Folgrit)"
+            "paladin 1"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62343,7 +62323,7 @@
             "psychic 3",
             "shaman 3",
             "sorcerer/wizard 3",
-            "summoner/unchained summoner 3"
+            "summoner/summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -62796,7 +62776,7 @@
             "ranger 2",
             "shaman 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 minute",
@@ -62870,7 +62850,7 @@
             "bard 6",
             "druid 6",
             "sorcerer/wizard 6",
-            "summoner/unchained summoner 6",
+            "summoner/summoner (unchained) 6",
             "witch 6"
         ],
         "description": "This spell functions as [whip of spiders](/spells/whip-of-spiders), except it summons army ants, and any creature you strike with the whip takes swarm damage as if it were attacked by an army ant swarm (3d6 points of damage plus poison and distraction). If you transform the whip into an army ant swarm, it has 16 hit points."
@@ -62883,7 +62863,7 @@
             "bard 5",
             "druid 5",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 5"
         ],
         "description": "This spell functions as [whip of spiders](/spells/whip-of-spiders), except it summons centipedes, and any creature you strike with the whip takes swarm damage as if it were attacked by a centipede swarm (2d6 points of damage plus poison and distraction). If you transform the whip into a centipede swarm, it has 10 hit points."
@@ -62896,7 +62876,7 @@
             "bard 2",
             "druid 2",
             "sorcerer/wizard 2",
-            "summoner/unchained summoner 2",
+            "summoner/summoner (unchained) 2",
             "witch 2"
         ],
         "castingTime": "1 standard action",
@@ -63011,7 +62991,7 @@
         "school": "transmutation",
         "levels": [
             "antipaladin 2",
-            "paladin 2 Casting Time 1 standard action Components V"
+            "paladin 2"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -63106,7 +63086,7 @@
             "shaman 3",
             "sorcerer/wizard 3",
             "summoner 2",
-            "unchained summoner 3"
+            "summoner (unchained) 3"
         ],
         "castingTime": "1 standard action",
         "components": [
@@ -63287,7 +63267,7 @@
     },
     {
         "name": "Wish",
-        "school": "sorcerer/wizard",
+        "school": "universal",
         "levels": [
             "sorcerer/wizard 9"
         ],
@@ -63298,11 +63278,13 @@
             "M (diamond worth 25,000 gp)"
         ],
         "range": "see text",
-        "area": "Target, Effect,  see text",
+        "area": "see text",
         "duration": "see text",
         "savingThrow": "none, see text",
         "spellResistance": "yes",
-        "description": "_Wish_ is the mightiest spell a wizard or sorcerer can cast. By simply speaking aloud, you can alter reality to better suit you. Even _wish_, however, has its limits. A _wish_ can produce any one of the following effects.\n\n*   Duplicate any sorcerer/wizard spell of 8th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 7th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 7th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 6th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many other spells, such as [geas/quest](/spells/geas/quest) or [insanity](/spells/insanity).\n*   Grant a creature a +1 inherent bonus to an ability score. Two to five _wish_ spells cast in immediate succession can grant a creature a +2 to +5 inherent bonus to an ability score (two _wishes_ for a +2 inherent bonus, three _wishes_ for a +3 inherent bonus, and so on). Inherent bonuses are instantaneous, so they cannot be dispelled. _Note_: An inherent bonus may not exceed +5 for a single ability score, and inherent bonuses to a particular ability score do not stack, so only the best one applies.\n*   Remove injuries and afflictions. A single _wish_ can aid one creature per caster level, and all subjects are cured of the same kind of affliction. For example, you could heal all the damage you and your companions have taken, or remove all poison effects from everyone in the party, but not do both with the same _wish_.\n*   Revive the dead. A _wish_ can bring a dead creature back to life by duplicating a [resurrection](/spells/resurrection) spell. A _wish_ can revive a dead creature whose body has been destroyed, but the task takes two _wishes_: one to recreate the body and another to infuse the body with life again. A _wish_ cannot prevent a character who was brought back to life from gaining a permanent negative level.\n*   Transport travelers. A _wish_ can lift one creature per caster level from anywhere on any plane and place those creatures anywhere else on any plane regardless of local conditions. An unwilling target gets a Will save to negate the effect, and spell resistance (if any) applies.\n*   Undo misfortune. A _wish_ can undo a single recent event. The _wish_ forces a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a _wish_ could undo an opponent’s successful save, a foe’s successful critical hit (either the attack roll or the critical roll), a friend’s failed save, and so on. The re-roll, however, may be as bad as or worse than the original roll. An unwilling target gets a Will save to negate the effect, and Spell Resistance (if any) applies.\n\nYou may try to use a _wish_ to produce greater effects than these, but doing so is dangerous. (The _wish_ may pervert your intent into a literal but undesirable fulfillment or only a partial fulfillment, at the GM’s discretion.)\n\nDuplicated spells allow saves and Spell Resistance as normal (but save DCs are for 9th-level spells).\n\nWhen a _wish_ duplicates a spell with a material component that costs more than 10,000 gp, you must provide that component (in addition to the 25,000 gp diamond component for this spell)."
+        "description": "_Wish_ is the mightiest spell a wizard or sorcerer can cast. By simply speaking aloud, you can alter reality to better suit you. Even _wish_, however, has its limits. A _wish_ can produce any one of the following effects.\n\n*   Duplicate any sorcerer/wizard spell of 8th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 7th level or lower, provided the spell does not belong to one of your opposition schools.\n*   Duplicate any sorcerer/wizard spell of 7th level or lower, even if it belongs to one of your opposition schools.\n*   Duplicate any non-sorcerer/wizard spell of 6th level or lower, even if it belongs to one of your opposition schools.\n*   Undo the harmful effects of many other spells, such as [geas/quest](/spells/geas/quest) or [insanity](/spells/insanity).\n*   Grant a creature a +1 inherent bonus to an ability score. Two to five _wish_ spells cast in immediate succession can grant a creature a +2 to +5 inherent bonus to an ability score (two _wishes_ for a +2 inherent bonus, three _wishes_ for a +3 inherent bonus, and so on). Inherent bonuses are instantaneous, so they cannot be dispelled. _Note_: An inherent bonus may not exceed +5 for a single ability score, and inherent bonuses to a particular ability score do not stack, so only the best one applies.\n*   Remove injuries and afflictions. A single _wish_ can aid one creature per caster level, and all subjects are cured of the same kind of affliction. For example, you could heal all the damage you and your companions have taken, or remove all poison effects from everyone in the party, but not do both with the same _wish_.\n*   Revive the dead. A _wish_ can bring a dead creature back to life by duplicating a [resurrection](/spells/resurrection) spell. A _wish_ can revive a dead creature whose body has been destroyed, but the task takes two _wishes_: one to recreate the body and another to infuse the body with life again. A _wish_ cannot prevent a character who was brought back to life from gaining a permanent negative level.\n*   Transport travelers. A _wish_ can lift one creature per caster level from anywhere on any plane and place those creatures anywhere else on any plane regardless of local conditions. An unwilling target gets a Will save to negate the effect, and spell resistance (if any) applies.\n*   Undo misfortune. A _wish_ can undo a single recent event. The _wish_ forces a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a _wish_ could undo an opponent’s successful save, a foe’s successful critical hit (either the attack roll or the critical roll), a friend’s failed save, and so on. The re-roll, however, may be as bad as or worse than the original roll. An unwilling target gets a Will save to negate the effect, and Spell Resistance (if any) applies.\n\nYou may try to use a _wish_ to produce greater effects than these, but doing so is dangerous. (The _wish_ may pervert your intent into a literal but undesirable fulfillment or only a partial fulfillment, at the GM’s discretion.)\n\nDuplicated spells allow saves and Spell Resistance as normal (but save DCs are for 9th-level spells).\n\nWhen a _wish_ duplicates a spell with a material component that costs more than 10,000 gp, you must provide that component (in addition to the 25,000 gp diamond component for this spell).",
+        "target": "see text",
+        "effect": "see text"
     },
     {
         "name": "With the Wind",
@@ -63677,7 +63659,7 @@
             "bloodrager 4",
             "magus 4",
             "sorcerer/wizard 5",
-            "summoner/unchained summoner 5",
+            "summoner/summoner (unchained) 5",
             "witch 5"
         ],
         "castingTime": "1 standard action",
