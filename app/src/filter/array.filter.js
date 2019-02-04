@@ -8,10 +8,8 @@ angular.module('app.filters').filter('array', [
         return '';
       }
       if (!Array.isArray(input)) {
-        $log.debug('app.filters Array.isArray', input);
         return input;
       }
-      $log.debug('app.filters', input);
       return input.reduce((accumulator, currentValue, currentIndex) => {
         return accumulator + (
           (currentIndex == 0) ?
