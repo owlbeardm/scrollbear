@@ -1,27 +1,42 @@
-<spell spell="$ctrl.spell"></spell>
-<div class="card">
-  <div class="card-header">
-    <form ng-submit="$ctrl.search()">
-      <div class="form-row">
-        <div class="col col-centered ">
-          <select class="form-control" ng-change="$ctrl.setClass()" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected">
-            <option ng-repeat="(key, value) in $ctrl.classes" value="{{key}}">{{value.name}}</option>
-          </select>
-        </div>
+<div class="card card-nav-tabs">
+  <div class="card-header card-header-primary">
+    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+    <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="spellbook.characters" ui-sref-active="active">
+              <i class="fas fa-user"></i>Characters
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.prepared" ui-sref-active="active">
+              <i class="fas fa-scroll"></i> Prepared Spells
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.book" ui-sref-active="active">
+              <i class="fas fa-book"></i> Spellbook
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.list" ui-sref-active="active">
+              <i class="fas fa-hat-wizard"></i> Spell List
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+        </ul>
       </div>
-    </form>
-    <filter></filter>
+    </div>
   </div>
-  <div class="card-body">
-    <spelllist spells="$ctrl.spells" class-name="$ctrl.classSelected"></spelllist>
-    <button ng-if="$ctrl.otherSpellsCount" ng-click="$ctrl.classToAll()" class='btn btn-warning'>Found <strong>{{$ctrl.otherSpellsCount}}</strong> spell{{$ctrl.otherSpellsCount!=1?'s':''}} in other classes</button>
-  </div>
-  <div class="card-footer">
-    <div class="container">
-      <span class="float-right">
-        Total: {{$ctrl.total}}
-      </span>
+  <div class="card-body ">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active">
+        <ui-view></ui-view>
+      </div>
     </div>
   </div>
 </div>
-<ui-view></ui-view>

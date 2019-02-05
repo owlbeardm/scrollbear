@@ -1,20 +1,23 @@
 "use strict";
 
-function SpellbookController($log) {
+function SpellbookController($log, spellbookService) {
   $log.debug('SpellbookController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {
     $log.debug("SpellbookController init");
-
   }
 
+  ctrl.isCharacterSelected = function() {
+    return !!spellbookService.characterSelected();
+  }
 }
 
 const SpellbookComponent = {
   template: require('./spellbook.html'),
   controller: [
     '$log',
+    'spellbookService',
     SpellbookController
   ]
 }

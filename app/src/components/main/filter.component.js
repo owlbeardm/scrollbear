@@ -39,6 +39,8 @@ function FilterController(notificationService, filterService, $log, $window, SCH
   ctrl.reset = function() {
     ctrl.filter = "";
     ctrl.schoolSelected = 'any';
+    filterService.school = ctrl.schoolSelected;
+    // ctrl.search();
   }
 
 }

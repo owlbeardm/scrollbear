@@ -3,7 +3,6 @@ import 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
 const showdown = require('showdown');
-// import 'showdown';
 import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
@@ -58,10 +57,22 @@ initiativeApp.config([
       onEnter: [
         '$rootScope',
         function($rootScope) {
-          $rootScope.title = '';
+          $rootScope.title = 'Spellbook - ';
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
         }
       ]
+    }).state({
+      name: 'spellbook.characters',
+      url: '/characters',
+      component: 'characters'
+    }).state({
+      name: 'spellbook.newcharacter',
+      url: '/characters/new',
+      component: 'newcharacter'
+    }).state({
+      name: 'spellbook.prepared',
+      url: '/prepared',
+      component: 'prepared'
     });
 
     $stateProvider.state({
@@ -126,9 +137,7 @@ initiativeApp.run([
   '$rootScope',
   function($log, $transitions, $location, $state, $rootScope) {
     let prevSpellsLocation;
-    $transitions.onStart({
-      // to: 'main'
-    }, function(transition) {
+    $transitions.onStart({}, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
       // check if the state should be protected
       if ($location.search()._escaped_fragment_) {
@@ -141,20 +150,7 @@ initiativeApp.run([
       from: 'spells'
     }, function(transition) {
       $rootScope.newstate = transition.to();
-      // if (transition.to().name != 'spells') {
-      //   console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
-      //   $location.replace();
-      // }
     });
-    // $transitions.onStart({
-    //   to: 'spells'
-    // }, function(transition) {
-    //   if (transition.from().name != 'spells') {
-    //     console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
-    //     $location.replace();
-    //   }
-    // });
-
   }
 ]);
 
