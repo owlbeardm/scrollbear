@@ -71,7 +71,7 @@ angular.module('app.services').factory('spellService', [
     };
 
     SpellService.spellNameToUrl = function(name) {
-      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
     }
 
     SpellService.getSpellsCountByFilter = function() {

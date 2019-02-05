@@ -1,0 +1,42 @@
+<div class="card card-nav-tabs">
+  <div class="card-header card-header-primary">
+    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+    <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="spellbook.characters" ui-sref-active="active">
+              <i class="fas fa-user"></i>Characters
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.prepared" ui-sref-active="active">
+              <i class="fas fa-scroll"></i> Prepared Spells
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.book" ui-sref-active="active">
+              <i class="fas fa-book"></i> Spellbook
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item" ng-if="$ctrl.isCharacterSelected()">
+            <a class="nav-link" ui-sref="spellbook.list" ui-sref-active="active">
+              <i class="fas fa-hat-wizard"></i> Spell List
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card-body ">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active">
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </div>
+</div>

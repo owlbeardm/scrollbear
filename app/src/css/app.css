@@ -68,3 +68,8 @@ pagefooter>.footer {
     border-top: none;
     color: #a3917a;
 }
+
+form .form-group .error {
+    font-size: .8rem;
+    color: #f44336;
+}
