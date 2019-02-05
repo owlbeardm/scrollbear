@@ -1,5 +1,5 @@
-<div class="alert alert-info" role="alert">
-  This is a info alert—check it out!
+<div ng-if='!$ctrl.characters.length' class="alert alert-info" role="alert">
+  There are no characters!
 </div>
 <div class="list-group">
   <div class='row' ng-repeat="character in $ctrl.characters track by $index">
@@ -8,7 +8,7 @@
         <div class='row'>
           <div class='col'>
             <span>{{character.name}}</span>
-            <br><span class='text-dark'><small>spells 13 - {{$index}}</small></span>
+            <br><span class='text-dark'><small>{{character.prepared?'prepared':'Spontaneous'}} {{$ctrl.classes[character.class].name}}</small></span>
           </div>
           <div class='col'>
             <i class="fas fa-lg fa-chevron-right float-right mt-2"></i>

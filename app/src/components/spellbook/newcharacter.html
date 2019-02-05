@@ -11,8 +11,8 @@
   <div class="form-group">
     <div class="form-check form-check-radio">
       <label class="form-check-label text-dark">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        Spontanious casting
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" ng-model="$ctrl.prepared" ng-value="false">
+        Spontaneous casting
         <span class="circle">
           <span class="check"></span>
         </span>
@@ -20,7 +20,7 @@
     </div>
     <div class="form-check form-check-radio">
       <label class="form-check-label text-dark">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" ng-model="$ctrl.prepared" ng-value="true">
         Prepared casting
         <span class="circle">
           <span class="check"></span>
@@ -31,7 +31,7 @@
   <div class="form-group">
     <div class="form-check">
       <label class="form-check-label text-dark">
-        <input class="form-check-input" type="checkbox" value="">
+        <input class="form-check-input" type="checkbox" ng-model="$ctrl.spellbook">
         Include spellbook (witch's familiar, etc)
         <span class="form-check-sign">
           <span class="check"></span>
@@ -48,7 +48,7 @@
   </div>
   <div class="form-group">
     <!-- ng-disabled="addPcForm.$invalid" -->
-    <button type="submit" class="btn btn-primary" disabled>Add</button>
+    <button type="submit" class="btn btn-primary" ng-disabled='!$ctrl.classSelected || !$ctrl.name'>Add</button>
     <button type="button" class="btn btn-danger" ng-click="$ctrl.goBack()">Cancel</button>
   </div>
 </form>

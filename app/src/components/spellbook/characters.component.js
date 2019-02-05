@@ -6,32 +6,16 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
 
   ctrl.$onInit = function() {
     $log.debug("CharactersController init");
-    ctrl.classes = Object.assign({}, CLASSES);
-    delete ctrl.classes.all;
-    ctrl.characters = [{
-      name: 'first'
-    }, {
-      name: 'second'
-    }];
+    ctrl.classes = CLASSES;
+    ctrl.characters = spellbookService.characters;
   }
 
   ctrl.delete = function(id) {
     $log.debug("CharactersController delete", id);
-
     ctrl.characters.splice(id, 1);
   }
 
-  ctrl.go = function(character) {
-    $log.debug("CharactersController go", character);
-    if (ctrl.characters.includes(character)) {
-      $log.debug("CharactersController go go");
-    }
-  }
-
   ctrl.add = function() {
-    ctrl.characters.push({
-      name: 'newName' + Date.now()
-    })
     $state.go('spellbook.newcharacter');
   }
 
