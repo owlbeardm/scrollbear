@@ -1,6 +1,7 @@
 <form name="addCharacterForm" ng-submit="$ctrl.add()">
-  <div class="form-group label-floating" ng-class="{'has-danger': addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.name == 'exists'), 'has-success': addCharacterForm.name.$dirty && $ctrl.name && $ctrl.name != 'exists'}">
-    <input id='name' name="name" type="text" placeholder="Name" ng-model='$ctrl.name' class="form-control">
+  <div class="form-group label-floating bmd-form-group" ng-class="{'has-danger': addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.name == 'exists'), 'has-success': addCharacterForm.name.$dirty && $ctrl.name && $ctrl.name != 'exists'}">
+    <label class="control-label bmd-label-static" for="classSelect">Name</label>
+    <input id='name' name="name" type="text" ng-model='$ctrl.name' class="form-control">
     <span class="form-control-feedback">
       <i class="material-icons" ng-if="addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.name == 'exists')">clear</i>
       <i class="material-icons" ng-if="addCharacterForm.name.$dirty && $ctrl.name && $ctrl.name != 'exists'">done</i>
@@ -39,8 +40,8 @@
       </label>
     </div>
   </div>
-  <div class="form-group">
-    <!-- <label for="inputState">Class</label> -->
+  <div class="form-group label-floating bmd-form-group">
+    <label class="control-label bmd-label-static" for="classSelect">Class</label>
     <select class="form-control" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected">
       <option ng-repeat="(key, value) in $ctrl.classes" value="{{key}}">{{value.name}}</option>
     </select>
