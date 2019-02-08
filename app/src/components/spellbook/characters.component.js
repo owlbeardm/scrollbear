@@ -25,7 +25,12 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
   }
 
   ctrl.selectCharacter = function(character) {
-    spellbookService.selectCharacter(character)
+    spellbookService.selectCharacter(character);
+    if (character.prepared) {
+      $state.go('spellbook.prepared');
+    } else {
+      $state.go('spellbook.known');
+    }
   }
 
 }

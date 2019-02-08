@@ -8,8 +8,8 @@ function SpellbookController($log, spellbookService) {
     $log.debug("SpellbookController init");
   }
 
-  ctrl.isCharacterSelected = function() {
-    return !!spellbookService.selectedCharacter;
+  ctrl.selectedCharacter = function() {
+    return spellbookService.selectedCharacter;
   }
 }
 

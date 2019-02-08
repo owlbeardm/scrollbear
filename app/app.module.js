@@ -23,7 +23,12 @@ if ('serviceWorker' in navigator) {
 }
 
 const initiativeApp = angular.module('initiativeApp', [
-  'app.components', 'app.constants', 'app.services', 'app.filters', 'ui.router', 'ngSanitize'
+  'app.components',
+  'app.constants',
+  'app.services',
+  'app.filters',
+  'ui.router',
+  'ngSanitize'
   // 'app.directives'
 ]);
 
@@ -34,7 +39,8 @@ initiativeApp.component('app', AppComponent);
 initiativeApp.config([
   '$stateProvider',
   '$locationProvider',
-  function($stateProvider, $locationProvider) {
+  '$urlRouterProvider',
+  function($stateProvider, $locationProvider, $urlRouterProvider) {
     $stateProvider.state({
       name: 'main',
       url: '/',
@@ -61,23 +67,7 @@ initiativeApp.config([
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
         }
       ]
-    }).state({
-      name: 'spellbook.characters',
-      url: '/characters',
-      component: 'characters'
-    }).state({
-      name: 'spellbook.newcharacter',
-      url: '/characters/new',
-      component: 'newcharacter'
-    }).state({
-      name: 'spellbook.prepared',
-      url: '/prepared',
-      component: 'prepared'
-    }).state({
-      name: 'spellbook.list',
-      url: '/list',
-      component: 'spellbookSpelllist'
-    });
+    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'}).state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'}).state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'}).state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'});
 
     $stateProvider.state({
       name: 'spells',
@@ -129,6 +119,7 @@ initiativeApp.config([
       ]
     });
 
+    $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
   }
 ]);
@@ -159,14 +150,8 @@ initiativeApp.run([
 ]);
 
 function getSpellDescription(md) {
-  const converter = new showdown.Converter({
-    tables: true,
-    strikethrough: true
-  });
+  const converter = new showdown.Converter({tables: true, strikethrough: true});
   let html = `<div>${converter.makeHtml(md)}</div>`;
-  html = html
-    .replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>")
-    .replace(/<\/table>/g, "</table></div>")
-    .replace(/<thead>/g, "<thead class='text-primary'>");
+  html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
   return html;
 }
