@@ -17,7 +17,7 @@ async function main() {
       const start = match.indexOf('[');
       const end = match.indexOf(']');
       const name = match.substring(start + 1, end);
-      const url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+      const url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
       return `[${name}](/spells/${url})`;
     });
     console.log(newDesc2);

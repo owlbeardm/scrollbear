@@ -18,6 +18,25 @@
         </div>
       </div>
       <div class="form-row">
+        <div class="col-auto">
+          <a href="#" class="collapsed" data-toggle="collapse" data-target="#moreFilters" aria-expanded="false">
+            More filters
+            <span ng-if="$ctrl.filters.length">
+              ({{$ctrl.filters | array}})
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="collapse" id="moreFilters" style="">
+        <div class="form-row">
+          <div class="col col-centered ">
+            <select class="form-control" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected">
+              <option ng-repeat="(key, value) in $ctrl.schools" value="{{key}}">{{value.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
         <div class="col">
           <button class="btn btn-sm" ng-click="$ctrl.reset()">Reset</button>
         </div>

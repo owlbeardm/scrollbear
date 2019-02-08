@@ -1,0 +1,22 @@
+<div ng-if='!$ctrl.characters.length' class="alert alert-info" role="alert">
+  There are no characters!
+</div>
+<div class="list-group">
+  <div class='row' ng-repeat="character in $ctrl.characters track by $index">
+    <div class='col'>
+      <a ng-click="$ctrl.go(character)" class="list-group-item list-group-item-action btn" ng-class="{'btn-primary': $ctrl.characterSelected() == $index, 'btn-secondary': $ctrl.characterSelected() != $index}">
+        <div class='row'>
+          <div class='col'>
+            <span>{{character.name}}</span>
+            <br><span class='text-dark'><small>{{character.prepared?'prepared':'Spontaneous'}} {{$ctrl.classes[character.class].name}}</small></span>
+          </div>
+          <div class='col'>
+            <i class="fas fa-lg fa-chevron-right float-right mt-2"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+    <button class='btn btn-sm btn-danger float-right mt-2' ng-click="$ctrl.delete($index)"><i class="fas fa-trash"></i></button>
+  </div>
+</div>
+<button class='btn btn-success' ng-click="$ctrl.add()">Add new character</button>

@@ -23,26 +23,18 @@ async function format() {
         let purl = match.substring(start + 1, end);
         name = name.replace(/_/g, '');
         let url = undefined;
+        // console.log(name);
         spells.forEach((newSpell) => {
           if (url) {
             return;
           }
-          const spArr = purl.split("/");
-          const nspArr = newSpell.url.split("/");
-          // console.log(spArr, nspArr);
-
-          if (spArr[spArr.length - (
-              spArr[spArr.length - 1] == ''
-              ? 2
-              : 1)] == nspArr[nspArr.length - (
-              nspArr[nspArr.length - 1] == ''
-              ? 2
-              : 1)]) {
-            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+          const newName = newSpell.name.split(',').reduce((acc, part) => part + ' ' + acc, '').trim();
+          if (newName.toUpperCase() == name.trim().toUpperCase()) {
+            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
           }
         });
         if (!url)
-          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
         return `[${name}](/spells/${url})`;
       });
       desc = newDesc;
@@ -53,14 +45,26 @@ async function format() {
       spell.description = desc;
       if (spell.levels)
         spell.levels = spell.levels.split(',').map(function(level) {
-          return level.trim();
+          return level
+            .replace(/\((?!unchained).+\)/g, '')
+            .replace('unchained summoner', 'summoner (unchained)')
+            .replace('sorcerer/ wizard', 'sorcerer/wizard')
+            .replace('wizard/sorcerer', 'sorcerer/wizard')
+            .trim();
+        });
+      if (spell.descripters)
+        spell.descripters = spell.descripters.map(function(descripter) {
+          return descripter
+            .replace(/^or /g, '')
+            .replace('mind affecting', 'mind-affecting')
+            .replace('mind- affecting', 'mind-affecting')
+            .trim();
         });
       if (spell.components)
         spell.components = spell.components.split(', ').map(function(component) {
           return component.trim();
         });
-      }
-    );
+    });
     spells.forEach((spell) => {
       const manualSpell = manualSpells.find((mspell) => {
         return spell.name == mspell.name;

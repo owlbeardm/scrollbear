@@ -1,27 +1,33 @@
 "use strict";
 
-function FilterController(notificationService, filterService, $log, $window, CLASSES) {
+function FilterController(notificationService, filterService, $log, $window, SCHOOLS) {
   $log.debug('FilterController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
   const FAV_ONLY = "FAV_ONLY";
-  const SELECTED_CLASS = "SELECTED_CLASS";
 
   ctrl.$onInit = function() {
     $log.debug('FilterController init ');
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
+    ctrl.schools = SCHOOLS;
+    ctrl.schoolSelected = 'any';
+    ctrl.filters = [];
+    ctrl.setSchool();
   }
 
   ctrl.search = function() {
     $log.debug("AppController ctrl.search", ctrl.filter);
+    ctrl.filters = [];
+    if (ctrl.schoolSelected != 'any') {
+      ctrl.filters.push(SCHOOLS[ctrl.schoolSelected].name);
+    }
     filterService.filterText = ctrl.filter;
     notificationService.notify(notificationService.FILTER_CHANGED, undefined);
   }
 
-  ctrl.setClass = function() {
-    // spellService.setClass(ctrl.classSelected);
-    localStorage.setItem(SELECTED_CLASS, JSON.stringify(ctrl.classSelected));
+  ctrl.setSchool = function() {
+    filterService.school = ctrl.schoolSelected;
     ctrl.search();
   }
 
@@ -32,6 +38,9 @@ function FilterController(notificationService, filterService, $log, $window, CLA
 
   ctrl.reset = function() {
     ctrl.filter = "";
+    ctrl.schoolSelected = 'any';
+    filterService.school = ctrl.schoolSelected;
+    // ctrl.search();
   }
 
 }
@@ -39,7 +48,7 @@ function FilterController(notificationService, filterService, $log, $window, CLA
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', 'CLASSES', FilterController
+    'notificationService', 'filterService', '$log', '$window', 'SCHOOLS', FilterController
   ],
   bindings: {}
 }

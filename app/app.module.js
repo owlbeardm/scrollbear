@@ -3,7 +3,6 @@ import 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
 const showdown = require('showdown');
-// import 'showdown';
 import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
@@ -52,6 +51,31 @@ initiativeApp.config([
     });
 
     $stateProvider.state({
+      name: 'spellbook',
+      url: '/spellbook',
+      component: 'spellbook',
+      onEnter: [
+        '$rootScope',
+        function($rootScope) {
+          $rootScope.title = 'Spellbook - ';
+          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+        }
+      ]
+    }).state({
+      name: 'spellbook.characters',
+      url: '/characters',
+      component: 'characters'
+    }).state({
+      name: 'spellbook.newcharacter',
+      url: '/characters/new',
+      component: 'newcharacter'
+    }).state({
+      name: 'spellbook.prepared',
+      url: '/prepared',
+      component: 'prepared'
+    });
+
+    $stateProvider.state({
       name: 'spells',
       url: 'spells/:spellUrl',
       parent: 'main',
@@ -62,6 +86,15 @@ initiativeApp.config([
           function(spellService, $stateParams) {
             return spellService.getSpellByUrl($stateParams.spellUrl);
           }
+        ],
+        prevstate: [
+          '$transition$',
+          '$rootScope',
+          function($transition$, $rootScope) {
+            console.log('prevState', $transition$.from());
+            $rootScope.newstate = $transition$.from().name;
+            return $transition$.from();
+          }
         ]
       },
       onEnter: [
@@ -70,12 +103,24 @@ initiativeApp.config([
         function(spell, $rootScope) {
           $rootScope.title = `${spell.name} - `;
           $rootScope.spell = spell;
-
           const spellDescription = getSpellDescription(spell.description);
           $rootScope.description = spell.description;
           $rootScope.spellDescription = spellDescription;
           const popup = angular.element("#exampleModal");
           popup.modal('show');
+        }
+      ],
+      onExit: [
+        '$transition$',
+        function($transition$) {
+          if ($transition$.to().name != 'spells') {
+            const popup = angular.element("#exampleModal");
+            popup.modal('hide');
+            const modalBackdrop = angular.element('.modal-backdrop');
+            modalBackdrop.remove();
+            const body = angular.element('body');
+            body.removeClass('modal-open');
+          }
         }
       ]
     });
@@ -88,10 +133,11 @@ initiativeApp.run([
   '$log',
   '$transitions',
   '$location',
-  function($log, $transitions, $location) {
-    $transitions.onStart({
-      // to: 'main'
-    }, function(transition) {
+  '$state',
+  '$rootScope',
+  function($log, $transitions, $location, $state, $rootScope) {
+    let prevSpellsLocation;
+    $transitions.onStart({}, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
       // check if the state should be protected
       if ($location.search()._escaped_fragment_) {
@@ -103,20 +149,8 @@ initiativeApp.run([
     $transitions.onStart({
       from: 'spells'
     }, function(transition) {
-      if (transition.to().name != 'spells') {
-        console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
-        $location.replace();
-      }
+      $rootScope.newstate = transition.to();
     });
-    $transitions.onStart({
-      to: 'spells'
-    }, function(transition) {
-      if (transition.from().name != 'spells') {
-        console.log("onStart replace Transition from " + transition.from().name + " to " + transition.to().name);
-        $location.replace();
-      }
-    });
-
   }
 ]);
 

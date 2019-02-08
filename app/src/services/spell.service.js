@@ -18,6 +18,7 @@ angular.module('app.services').factory('spellService', [
     };
 
     SpellService.getSpellsSplited = function() {
+      console.time("SpellService.getSpellsSplited");
       const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
       const allSells = {};
       spellsTmp.forEach((value) => {
@@ -41,13 +42,15 @@ angular.module('app.services').factory('spellService', [
           allSells[place].push(value);
         }
       });
+      console.timeEnd("SpellService.getSpellsSplited");
       return allSells;
     };
 
     SpellService.setClass = function(classSet) {
+      console.time("SpellService.setClass");
       SpellService.classSet = classSet;
       SpellService.currentSpells = allSpells.filter((value) => {
-        if(!value.levels){
+        if (!value.levels) {
           return false;
         }
         return value.levels.reduce((accumulatorSpell, classLevel) => {
@@ -58,6 +61,7 @@ angular.module('app.services').factory('spellService', [
           return accumulatorSpell || isIncludeClass;
         }, false);
       });
+      console.timeEnd("SpellService.setClass");
     };
 
     SpellService.getSpellByUrl = function(url) {
@@ -67,7 +71,7 @@ angular.module('app.services').factory('spellService', [
     };
 
     SpellService.spellNameToUrl = function(name) {
-      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
     }
 
     SpellService.getSpellsCountByFilter = function() {

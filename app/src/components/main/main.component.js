@@ -8,11 +8,6 @@ function MainController(notificationService, filterService, spellService, $windo
 
   ctrl.$onInit = function() {
     $log.debug("AppController init");
-    const popup = angular.element("#exampleModal");
-    $log.debug('Modal popup', popup);
-    popup.on("hidden.bs.modal", function() {
-      $state.go('main');
-    });
     ctrl.classes = CLASSES;
     const selectedClass = JSON.parse(localStorage.getItem(SELECTED_CLASS));
     ctrl.classSelected = (selectedClass && CLASSES[selectedClass]) ?
