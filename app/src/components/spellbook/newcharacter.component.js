@@ -13,7 +13,7 @@ function NewCharacterController($log, $state, spellbookService, CLASSES) {
   }
 
   ctrl.add = function() {
-    spellbookService.characters.push({
+    spellbookService.addCharacter({
       "name": ctrl.name,
       "prepared": ctrl.prepared,
       "spellbook": ctrl.spellbook,

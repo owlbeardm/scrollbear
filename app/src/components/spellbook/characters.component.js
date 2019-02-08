@@ -12,7 +12,8 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
 
   ctrl.delete = function(id) {
     $log.debug("CharactersController delete", id);
-    ctrl.characters.splice(id, 1);
+    spellbookService.deleteCharacter(id);
+    ctrl.characters = spellbookService.characters;
   }
 
   ctrl.add = function() {
@@ -20,20 +21,18 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
   }
 
   ctrl.characterSelected = function() {
-    return spellbookService.characterSelected();
+    return ctrl.characters.indexOf(spellbookService.selectedCharacter);
+  }
+
+  ctrl.selectCharacter = function(character) {
+    spellbookService.selectCharacter(character)
   }
 
 }
 
 const CharactersComponent = {
   template: require('./characters.html'),
-  controller: [
-    '$log',
-    '$state',
-    'spellbookService',
-    'CLASSES',
-    CharactersController
-  ]
+  controller: ['$log', '$state', 'spellbookService', 'CLASSES', CharactersController]
 }
 
 export default CharactersComponent;

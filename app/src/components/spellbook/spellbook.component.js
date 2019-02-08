@@ -9,7 +9,7 @@ function SpellbookController($log, spellbookService) {
   }
 
   ctrl.isCharacterSelected = function() {
-    return !!spellbookService.characterSelected();
+    return !!spellbookService.selectedCharacter;
   }
 }
 

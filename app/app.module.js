@@ -73,6 +73,10 @@ initiativeApp.config([
       name: 'spellbook.prepared',
       url: '/prepared',
       component: 'prepared'
+    }).state({
+      name: 'spellbook.list',
+      url: '/list',
+      component: 'spellbookSpelllist'
     });
 
     $stateProvider.state({

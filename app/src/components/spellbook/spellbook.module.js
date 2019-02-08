@@ -12,3 +12,6 @@ spellbookComponents.component('newcharacter', NewCharacterComponent);
 
 import PreparedComponent from './prepared.component.js';
 spellbookComponents.component('prepared', PreparedComponent);
+
+import SpellbookSpellListComponent from './spellbookspelllist.component.js';
+spellbookComponents.component('spellbookSpelllist', SpellbookSpellListComponent);
