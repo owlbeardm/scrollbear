@@ -1,13 +1,13 @@
 <form name="addCharacterForm" ng-submit="$ctrl.add()">
-  <div class="form-group label-floating bmd-form-group" ng-class="{'has-danger': addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.name == 'exists'), 'has-success': addCharacterForm.name.$dirty && $ctrl.name && $ctrl.name != 'exists'}">
+  <div class="form-group label-floating bmd-form-group" ng-class="{'has-danger': addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.isNameExists), 'has-success': addCharacterForm.name.$dirty && $ctrl.name && !$ctrl.isNameExists}">
     <label class="control-label bmd-label-static" for="classSelect">Name</label>
-    <input id='name' name="name" type="text" ng-model='$ctrl.name' class="form-control">
+    <input id='name' name="name" type="text" ng-model='$ctrl.name' ng-change='$ctrl.checkIfNameExists()' class="form-control">
     <span class="form-control-feedback">
-      <i class="material-icons" ng-if="addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.name == 'exists')">clear</i>
-      <i class="material-icons" ng-if="addCharacterForm.name.$dirty && $ctrl.name && $ctrl.name != 'exists'">done</i>
+      <i class="material-icons" ng-if="addCharacterForm.name.$dirty && (!$ctrl.name || $ctrl.isNameExists)">clear</i>
+      <i class="material-icons" ng-if="addCharacterForm.name.$dirty && $ctrl.name && !$ctrl.isNameExists">done</i>
     </span>
     <label id="name-empy-error" ng-class="{'error': addCharacterForm.name.$dirty}" ng-if='!$ctrl.name' for="name">This field is required.</label>
-    <label id="name-double-error" ng-if="$ctrl.name == 'exists'" class="error" for="name">Character with this name already exists.</label>
+    <label id="name-double-error" ng-if="$ctrl.isNameExists" class="error" for="name">Character with this name already exists.</label>
   </div>
   <div class="form-group">
     <div class="form-check form-check-radio">
@@ -49,7 +49,7 @@
   </div>
   <div class="form-group">
     <!-- ng-disabled="addPcForm.$invalid" -->
-    <button type="submit" class="btn btn-primary" ng-disabled='!$ctrl.classSelected || !$ctrl.name'>Add</button>
+    <button type="submit" class="btn btn-primary" ng-disabled='!$ctrl.classSelected || !$ctrl.name || $ctrl.isNameExists'>Add</button>
     <button type="button" class="btn btn-danger" ng-click="$ctrl.goBack()">Cancel</button>
   </div>
 </form>

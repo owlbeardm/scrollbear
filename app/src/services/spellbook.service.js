@@ -32,6 +32,12 @@ angular.module('app.services').factory('spellbookService', [
       SpellbookService.selectedCharacter = character;
     }
 
+    SpellbookService.isNameExists = function(name) {
+      return !!SpellbookService.characters.find(function(character) {
+        return name.toUpperCase() == character.name.toUpperCase();
+      });
+    }
+
     function saveCharacters() {
       localStorage.setItem(CHARACTERS, JSON.stringify(SpellbookService.characters));
     }
