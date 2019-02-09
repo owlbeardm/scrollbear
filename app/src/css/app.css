@@ -35,7 +35,6 @@ table.table-fit tbody td, table.table-fit tfoot td {
 
 .table-sm th, .table-sm td {
   padding: 6px 4px !important;
-
 }
 
 .spell-description {
@@ -65,11 +64,25 @@ div[aria-expanded="false"] i.fa-chevron-down {
 }
 
 pagefooter>.footer {
-    border-top: none;
-    color: #a3917a;
+  border-top: none;
+  color: #a3917a;
 }
 
 form .form-group .error {
-    font-size: .8rem;
-    color: #f44336;
+  font-size: .8rem;
+  color: #f44336;
+}
+
+.characters .btn-secondary {
+  background-color: #f4f3e7 !important;
+}
+
+.main-panel>.content {
+  min-height: calc(100vh - 208px);
+}
+
+@media (min-width: 775px) {
+  .main-panel>.content {
+    min-height: calc(100vh - 154px);
+  }
 }

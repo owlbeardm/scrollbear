@@ -13,15 +13,20 @@ function NewCharacterController($log, $state, spellbookService, CLASSES) {
   }
 
   ctrl.add = function() {
-    spellbookService.characters.push({
+    const character = {
       "name": ctrl.name,
       "prepared": ctrl.prepared,
       "spellbook": ctrl.spellbook,
       "class": ctrl.classSelected
-    });
-    $state.go('spellbook.characters');
+    };
+    spellbookService.addCharacter(character);
+    spellbookService.selectCharacter(character);
+    if (character.prepared) {
+      $state.go('spellbook.prepared');
+    } else {
+      $state.go('spellbook.known');
+    }
   }
-
 
   ctrl.goBack = function() {
     $state.go('spellbook.characters');
@@ -31,13 +36,7 @@ function NewCharacterController($log, $state, spellbookService, CLASSES) {
 
 const NewCharacterComponent = {
   template: require('./newcharacter.html'),
-  controller: [
-    '$log',
-    '$state',
-    'spellbookService',
-    'CLASSES',
-    NewCharacterController
-  ]
+  controller: ['$log', '$state', 'spellbookService', 'CLASSES', NewCharacterController]
 }
 
 export default NewCharacterComponent;
