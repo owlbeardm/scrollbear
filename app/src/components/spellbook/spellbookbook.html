@@ -1,9 +1,9 @@
 <div class="accordion" id="accordionExample">
-  <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">
+  <div ng-repeat="(key, value) in $ctrl.book" class="card card-collapse">
     <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
       <h5 class="mb-0 text-primary">
         <a >
-          {{$ctrl.classes[$ctrl.classSelected].name}} {{key}}
+          Level {{key}}
           <i class="float-right fas fa-chevron-down expanded-flip"></i>
           <div><small class='text-muted'>count {{value.length}}</small></div>
         </a>
@@ -14,26 +14,25 @@
       <div class="card-body">
         <table class="table table-sm">
           <tbody>
-            <tr ng-repeat="spell in value track by $index">
+            <tr ng-repeat="spell in value | orderBy:'toString()'">
               <td ng-click="$ctrl.chooseSpell(spell)">
                 <a href="#" class="text-dark">
-                  {{spell.name}}
+                  {{spell}}
                 </a>
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
               <td class="float-right">
-                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.addToBook(spell)">
-                  <i class="fas fa-lg fa-book text-warning"></i>
+                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.delete(key, $index)">
+                  <i class="fas fa-lg fa-trash text-danger"></i>
                   <div class="ripple-container"></div>
                 </button>
               </td>
               <td class="float-right">
-                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.changeFav(spell)">
+                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$asd(spell)">
                   <i class="fas fa-lg fa-scroll text-warning"></i>
                   <div class="ripple-container"></div>
                 </button>
               </td>
-
             </tr>
           </tbody>
         </table>

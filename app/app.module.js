@@ -67,7 +67,11 @@ initiativeApp.config([
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
         }
       ]
-    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'}).state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'}).state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'}).state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'});
+    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'})
+    .state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'})
+    .state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'})
+    .state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'})
+    .state({name: 'spellbook.book', url: '/book', component: 'spellbookBook'});
 
     $stateProvider.state({
       name: 'spells',

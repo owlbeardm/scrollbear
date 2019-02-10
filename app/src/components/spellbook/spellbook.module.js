@@ -15,3 +15,6 @@ spellbookComponents.component('prepared', PreparedComponent);
 
 import SpellbookSpellListComponent from './spellbookspelllist.component.js';
 spellbookComponents.component('spellbookSpelllist', SpellbookSpellListComponent);
+
+import SpellbookBookComponent from './spellbookbook.component.js';
+spellbookComponents.component('spellbookBook', SpellbookBookComponent);
