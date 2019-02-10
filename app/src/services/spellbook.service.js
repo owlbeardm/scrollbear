@@ -38,7 +38,7 @@ angular.module('app.services').factory('spellbookService', [
       });
     }
 
-    function saveCharacters() {
+    SpellbookService.saveCharacters = function() {
       localStorage.setItem(CHARACTERS, JSON.stringify(SpellbookService.characters));
     }
 

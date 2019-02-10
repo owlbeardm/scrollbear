@@ -1,12 +1,12 @@
 "use strict";
 
 function SpellbookSpellListController($log, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+  $log.debug('SpellbookSpellListController create');
   const ctrl = this;
   const SELECTED_CLASS = "SELECTED_CLASS";
 
   ctrl.$onInit = function() {
-    $log.debug("AppController init");
+    $log.debug("SpellbookSpellListController init");
     ctrl.classes = CLASSES;
     ctrl.classSelected = spellbookService.selectedCharacter.class;
     ctrl.setClass();
@@ -16,7 +16,7 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
   }
 
   ctrl.search = function() {
-    $log.debug("AppController ctrl.search", ctrl.filter);
+    $log.debug("SpellbookSpellListController ctrl.search", ctrl.filter);
     ctrl.spells = getSpells();
   }
 
@@ -28,6 +28,21 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
   ctrl.classToAll = function() {
     ctrl.classSelected = 'all';
     ctrl.setClass();
+  }
+
+  ctrl.addToBook = function(spell) {
+    if (!spellbookService.selectedCharacter.book) {
+      spellbookService.selectedCharacter.book = {};
+    }
+    let level = spell.levels.find((level) => {
+      return level.startsWith(ctrl.classSelected);
+    });
+    level = level.substring(level.length - 1);
+    if (!spellbookService.selectedCharacter.book[level]) {
+      spellbookService.selectedCharacter.book[level] = [];
+    }
+    spellbookService.selectedCharacter.book[level].push(spell.name);
+    spellbookService.saveCharacters()
   }
 
   function getSpells() {
