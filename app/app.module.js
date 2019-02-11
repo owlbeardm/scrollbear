@@ -44,11 +44,23 @@ initiativeApp.config([
     $stateProvider.state({
       name: 'main',
       url: '/',
+      template: '<ui-view></ui-view>',
+      onEnter: [
+        '$rootScope',
+        function($rootScope) {
+          $rootScope.title = '';
+          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+        }
+      ]
+    });
+
+    $stateProvider.state({
+      name: 'list',
+      url: '/',
       component: 'main',
       onEnter: [
         '$rootScope',
         function($rootScope) {
-          // const popup = angular.element("#exampleModal");
           // popup.modal('hide');
           $rootScope.title = '';
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
@@ -67,28 +79,34 @@ initiativeApp.config([
           $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
         }
       ]
-    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'})
-    .state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'})
-    .state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'})
-    .state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'})
-    .state({name: 'spellbook.book', url: '/book', component: 'spellbookBook'});
+    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'}).state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'}).state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'}).state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'}).state({name: 'spellbook.book', url: '/book', component: 'spellbookBook'});
 
     $stateProvider.state({
       name: 'spells',
       url: 'spells/:spellUrl',
+      component: 'spell',
       parent: 'main',
       resolve: {
         spell: [
+          '$rootScope',
           'spellService',
           '$stateParams',
-          function(spellService, $stateParams) {
-            return spellService.getSpellByUrl($stateParams.spellUrl);
+          function($rootScope, spellService, $stateParams) {
+            console.log('spells spell', spell);
+            const spell = spellService.getSpellByUrl($stateParams.spellUrl)
+            $rootScope.title = `${spell.name} - `;
+            $rootScope.spell = spell;
+            const spellDescription = getSpellDescription(spell.description);
+            $rootScope.description = spell.description;
+            $rootScope.spellDescription = spellDescription;
+            return spell;
           }
         ],
         prevstate: [
           '$transition$',
           '$rootScope',
           function($transition$, $rootScope) {
+            console.log('spells prevState');
             console.log('prevState', $transition$.from());
             $rootScope.newstate = $transition$.from().name;
             return $transition$.from();
@@ -99,12 +117,8 @@ initiativeApp.config([
         'spell',
         '$rootScope',
         function(spell, $rootScope) {
-          $rootScope.title = `${spell.name} - `;
-          $rootScope.spell = spell;
-          const spellDescription = getSpellDescription(spell.description);
-          $rootScope.description = spell.description;
-          $rootScope.spellDescription = spellDescription;
           const popup = angular.element("#exampleModal");
+          console.log('spells onEnter', spell, popup);
           popup.modal('show');
         }
       ],
@@ -123,7 +137,7 @@ initiativeApp.config([
       ]
     });
 
-    $urlRouterProvider.otherwise('/');
+    // $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
   }
 ]);
