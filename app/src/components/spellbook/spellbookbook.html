@@ -1,6 +1,9 @@
+<div ng-if='!$ctrl.total' class="alert alert-info" role="alert">
+  There are no spells in spellbook!
+</div>
 <div class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.book" class="card card-collapse">
-    <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+    <div class="card-header" ng-if="value.length" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
       <h5 class="mb-0 text-primary">
         <a >
           Level {{key}}
@@ -10,11 +13,11 @@
       </h5>
     </div>
 
-    <div id="collapse{{$index}}" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
+    <div id="collapse{{$index}}" ng-if="value.length" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
       <div class="card-body">
         <table class="table table-sm">
           <tbody>
-            <tr ng-repeat="spell in value | orderBy:'toString()'">
+            <tr ng-repeat="spell in value">
               <td ng-click="$ctrl.chooseSpell(spell)">
                 <a href="#" class="text-dark">
                   {{spell}}
@@ -22,16 +25,19 @@
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
               <td class="float-right">
-                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.delete(key, $index)">
-                  <i class="fas fa-lg fa-trash text-danger"></i>
+                <a href="#" class="ml-2 mr-3" ng-click="$asd(spell)">
+                  <i class="fas fa-scroll text-warning"></i>
                   <div class="ripple-container"></div>
-                </button>
-              </td>
-              <td class="float-right">
-                <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$asd(spell)">
-                  <i class="fas fa-lg fa-scroll text-warning"></i>
+                </a>
+                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete(key, $index)">
+                  <i class="fas fa-trash text-danger"></i>
                   <div class="ripple-container"></div>
-                </button>
+                </a>
+                <a href="#" class="ml-2" ng-click="$">
+                  <i class="fas fa-chevron-circle-down"></i>
+                  <div class="ripple-container"></div>
+                  <!-- <i class="fas fa-chevron-circle-down"></i> -->
+                </a>
               </td>
             </tr>
           </tbody>
@@ -40,5 +46,3 @@
     </div>
   </div>
 </div>
-<button ng-if="$ctrl.otherSpellsCount" ng-click="$ctrl.classToAll()" class='btn btn-warning'>Found <strong>{{$ctrl.otherSpellsCount}}</strong> spell{{$ctrl.otherSpellsCount!=1?'s':''}} in other classes</button>
-<!-- <ui-view></ui-view> -->

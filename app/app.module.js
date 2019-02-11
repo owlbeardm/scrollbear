@@ -164,6 +164,20 @@ initiativeApp.run([
     }, function(transition) {
       $rootScope.newstate = transition.to();
     });
+    $transitions.onStart({
+      to: 'main'
+    }, function(transition) {
+      console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
+      return transition.router.stateService.target('list');
+      // $rootScope.newstate = transition.to();
+    });
+    $transitions.onStart({
+      to: 'spellbook'
+    }, function(transition) {
+      console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
+      return transition.router.stateService.target('spellbook.characters');
+      // $rootScope.newstate = transition.to();
+    });
   }
 ]);
 
