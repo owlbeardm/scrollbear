@@ -15,6 +15,11 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
     });
   }
 
+  ctrl.chooseSpell = function(spell) {
+    const spell_url = spellService.spellNameToUrl(spell.name);
+    $state.go('spells', {spellUrl: spell_url});
+  }
+
   ctrl.search = function() {
     $log.debug("SpellbookSpellListController ctrl.search", ctrl.filter);
     ctrl.spells = getSpells();

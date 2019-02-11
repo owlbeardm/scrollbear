@@ -7,9 +7,21 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
 
   ctrl.$onInit = function() {
     $log.debug("AppController init");
-    if (spellbookService.selectedCharacter)
+    if (spellbookService.selectedCharacter) {
       ctrl.book = spellbookService.selectedCharacter.book;
+      Object.entries(ctrl.book).forEach(function(pair) {
+        pair[1].sort();
+        const unique = [];
+        ctrl.book[pair[0]] = pair[1].filter((spell) => {
+          const result = !unique.includes(spell);
+          unique.push(spell);
+          return result;
+        });
+      });
     }
+    spellbookService.saveCharacters();
+    calculateTotal();
+  }
 
   ctrl.chooseSpell = function(spell) {
     const spell_url = spellService.spellNameToUrl(spell);
@@ -20,18 +32,13 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     $log.debug("SpellbookBookController ctrl.delete", key, id);
     spellbookService.selectedCharacter.book[key].splice(id, 1);
     spellbookService.saveCharacters();
+    calculateTotal();
   }
 
-  function getSpells() {
-    ctrl.otherSpellsCount = 0;
-    const allSells = spellService.getSpellsSplited();
-    ctrl.total = Object.entries(allSells).reduce(function(total, pair) {
+  function calculateTotal() {
+    ctrl.total = Object.entries(ctrl.book).reduce(function(total, pair) {
       return total + (pair[1].length);
     }, 0);
-    if (!ctrl.total) {
-      ctrl.otherSpellsCount = spellService.getSpellsCountByFilter();
-    }
-    return allSells;
   }
 
 }
