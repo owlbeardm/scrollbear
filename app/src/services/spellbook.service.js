@@ -20,12 +20,12 @@ angular.module('app.services').factory('spellbookService', [
 
     SpellbookService.addCharacter = function(character) {
       SpellbookService.characters.push(character);
-      saveCharacters();
+      SpellbookService.saveCharacters();
     }
 
     SpellbookService.deleteCharacter = function(id) {
       SpellbookService.characters.splice(id, 1);
-      saveCharacters();
+      SpellbookService.saveCharacters();
     }
 
     SpellbookService.selectCharacter = function(character) {

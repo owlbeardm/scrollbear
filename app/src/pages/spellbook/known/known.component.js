@@ -7,6 +7,9 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
   ctrl.$onInit = function() {
     $log.debug("KnownController init");
     if (spellbookService.selectedCharacter) {
+      if (!spellbookService.selectedCharacter.knownSpells) {
+        spellbookService.selectedCharacter.knownSpells = {};
+      }
       ctrl.spells = spellbookService.selectedCharacter.knownSpells;
       Object.entries(ctrl.spells).forEach(function(pair) {
         if (!pair[1].spells) {
@@ -44,11 +47,25 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
     spellbookService.saveCharacters();
   }
 
+  ctrl.resetCast = function() {
+    Object.entries(ctrl.spells).forEach(function(pair) {
+      pair[1].cast = 0
+    });
+    spellbookService.saveCharacters();
+  }
 }
 
 const KnownComponent = {
   template: require('./known.html'),
-  controller: ['$log', '$state', 'filterService', 'spellService', 'spellbookService', 'CLASSES', KnownController],
+  controller: [
+    '$log',
+    '$state',
+    'filterService',
+    'spellService',
+    'spellbookService',
+    'CLASSES',
+    KnownController
+  ],
   bindings: {
     spells: '<',
     className: '<'
