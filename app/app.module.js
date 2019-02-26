@@ -70,17 +70,43 @@ scrollbearApp.config([
     });
 
     $stateProvider.state({
-      name: 'spellbook',
-      url: '/spellbook',
-      component: 'spellbook',
-      onEnter: [
-        '$rootScope',
-        function($rootScope) {
-          $rootScope.title = 'Spellbook - ';
-          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
-        }
-      ]
-    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'}).state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'}).state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'}).state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'}).state({name: 'spellbook.book', url: '/book', component: 'spellbookBook'});
+        name: 'spellbook',
+        url: '/spellbook',
+        component: 'spellbook',
+        onEnter: [
+          '$rootScope',
+          function($rootScope) {
+            $rootScope.title = 'Spellbook - ';
+            $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+          }
+        ]
+      }).state({
+        name: 'spellbook.characters',
+        url: '/characters',
+        component: 'characters'
+      })
+      .state({
+        name: 'spellbook.newcharacter',
+        url: '/characters/new',
+        component: 'newcharacter'
+      })
+      .state({
+        name: 'spellbook.prepared',
+        url: '/prepared',
+        component: 'prepared'
+      }).state({
+        name: 'spellbook.known',
+        url: '/known',
+        component: 'known'
+      }).state({
+        name: 'spellbook.list',
+        url: '/list',
+        component: 'spellbookSpelllist'
+      }).state({
+        name: 'spellbook.book',
+        url: '/book',
+        component: 'spellbookBook'
+      });
 
     $stateProvider.state({
       name: 'spells',
@@ -183,7 +209,10 @@ scrollbearApp.run([
 ]);
 
 function getSpellDescription(md) {
-  const converter = new showdown.Converter({tables: true, strikethrough: true});
+  const converter = new showdown.Converter({
+    tables: true,
+    strikethrough: true
+  });
   let html = `<div>${converter.makeHtml(md)}</div>`;
   html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
   return html;
