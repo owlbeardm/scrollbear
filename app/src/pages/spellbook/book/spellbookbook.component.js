@@ -25,7 +25,9 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
 
   ctrl.chooseSpell = function(spell) {
     const spell_url = spellService.spellNameToUrl(spell);
-    $state.go('spells', {spellUrl: spell_url});
+    $state.go('spells', {
+      spellUrl: spell_url
+    });
   }
 
   ctrl.delete = function(key, id) {
@@ -33,6 +35,33 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     spellbookService.selectedCharacter.book[key].splice(id, 1);
     spellbookService.saveCharacters();
     calculateTotal();
+  }
+
+  ctrl.addSpell = function(level, spell) {
+    console.log(level, spell);
+    if (!spellbookService.selectedCharacter.prepared) {
+      if (!spellbookService.selectedCharacter.knownSpells) {
+        spellbookService.selectedCharacter.knownSpells = {};
+      }
+      if (!spellbookService.selectedCharacter.knownSpells[level]) {
+        spellbookService.selectedCharacter.knownSpells[level] = {
+          spells: []
+        };
+      }
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spell);
+    } else {
+      if (!spellbookService.selectedCharacter.preparedSpells) {
+        spellbookService.selectedCharacter.preparedSpells = {};
+      }
+      if (!spellbookService.selectedCharacter.preparedSpells[level]) {
+        spellbookService.selectedCharacter.preparedSpells[level] = {
+          spells: []
+        };
+      }
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spell);
+    }
+    spellbookService.saveCharacters();
+    console.log(spellbookService.selectedCharacter);
   }
 
   function calculateTotal() {

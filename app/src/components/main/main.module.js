@@ -10,6 +10,3 @@ mainComponents.component('pagefooter', PageFooterComponent);
 
 import FilterComponent from './filter.component.js';
 mainComponents.component('filter', FilterComponent);
-
-import MainComponent from './main.component.js';
-mainComponents.component('main', MainComponent);

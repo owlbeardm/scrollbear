@@ -7,6 +7,7 @@ import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
 import './src/components/components.module.js';
+import './src/pages/pages.module.js';
 import './src/filter/filters.module.js';
 import './src/services/services.module.js';
 import './src/constants/constants.module.js';
@@ -22,7 +23,8 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-const initiativeApp = angular.module('initiativeApp', [
+const scrollbearApp = angular.module('scrollbearApp', [
+  'pages.components',
   'app.components',
   'app.constants',
   'app.services',
@@ -32,11 +34,10 @@ const initiativeApp = angular.module('initiativeApp', [
   // 'app.directives'
 ]);
 
-import AppComponent from './src/app.component.js';
+import AppComponent from './src/pages/app.component.js';
+scrollbearApp.component('app', AppComponent);
 
-initiativeApp.component('app', AppComponent);
-
-initiativeApp.config([
+scrollbearApp.config([
   '$stateProvider',
   '$locationProvider',
   '$urlRouterProvider',
@@ -69,17 +70,43 @@ initiativeApp.config([
     });
 
     $stateProvider.state({
-      name: 'spellbook',
-      url: '/spellbook',
-      component: 'spellbook',
-      onEnter: [
-        '$rootScope',
-        function($rootScope) {
-          $rootScope.title = 'Spellbook - ';
-          $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
-        }
-      ]
-    }).state({name: 'spellbook.characters', url: '/characters', component: 'characters'}).state({name: 'spellbook.newcharacter', url: '/characters/new', component: 'newcharacter'}).state({name: 'spellbook.prepared', url: '/prepared', component: 'prepared'}).state({name: 'spellbook.list', url: '/list', component: 'spellbookSpelllist'}).state({name: 'spellbook.book', url: '/book', component: 'spellbookBook'});
+        name: 'spellbook',
+        url: '/spellbook',
+        component: 'spellbook',
+        onEnter: [
+          '$rootScope',
+          function($rootScope) {
+            $rootScope.title = 'Spellbook - ';
+            $rootScope.description = 'Scrollbear spellbook reference for Pathfinder RPG.';
+          }
+        ]
+      }).state({
+        name: 'spellbook.characters',
+        url: '/characters',
+        component: 'characters'
+      })
+      .state({
+        name: 'spellbook.newcharacter',
+        url: '/characters/new',
+        component: 'newcharacter'
+      })
+      .state({
+        name: 'spellbook.prepared',
+        url: '/prepared',
+        component: 'prepared'
+      }).state({
+        name: 'spellbook.known',
+        url: '/known',
+        component: 'known'
+      }).state({
+        name: 'spellbook.list',
+        url: '/list',
+        component: 'spellbookSpelllist'
+      }).state({
+        name: 'spellbook.book',
+        url: '/book',
+        component: 'spellbookBook'
+      });
 
     $stateProvider.state({
       name: 'spells',
@@ -142,7 +169,7 @@ initiativeApp.config([
   }
 ]);
 
-initiativeApp.run([
+scrollbearApp.run([
   '$log',
   '$transitions',
   '$location',
@@ -182,7 +209,10 @@ initiativeApp.run([
 ]);
 
 function getSpellDescription(md) {
-  const converter = new showdown.Converter({tables: true, strikethrough: true});
+  const converter = new showdown.Converter({
+    tables: true,
+    strikethrough: true
+  });
   let html = `<div>${converter.makeHtml(md)}</div>`;
   html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
   return html;
