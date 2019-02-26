@@ -7,6 +7,7 @@ import './src/css/material-dashboard.css';
 import './src/css/app.css';
 
 import './src/components/components.module.js';
+import './src/pages/pages.module.js';
 import './src/filter/filters.module.js';
 import './src/services/services.module.js';
 import './src/constants/constants.module.js';
@@ -22,7 +23,8 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-const initiativeApp = angular.module('initiativeApp', [
+const scrollbearApp = angular.module('scrollbearApp', [
+  'pages.components',
   'app.components',
   'app.constants',
   'app.services',
@@ -32,11 +34,10 @@ const initiativeApp = angular.module('initiativeApp', [
   // 'app.directives'
 ]);
 
-import AppComponent from './src/app.component.js';
+import AppComponent from './src/pages/app.component.js';
+scrollbearApp.component('app', AppComponent);
 
-initiativeApp.component('app', AppComponent);
-
-initiativeApp.config([
+scrollbearApp.config([
   '$stateProvider',
   '$locationProvider',
   '$urlRouterProvider',
@@ -142,7 +143,7 @@ initiativeApp.config([
   }
 ]);
 
-initiativeApp.run([
+scrollbearApp.run([
   '$log',
   '$transitions',
   '$location',
