@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-icon-114x114.png"
   },
   {
-    "revision": "d94d07e8fef4dc35d3d5779f50fcf17f",
-    "url": "icons/apple-touch-icon-152x152.png"
-  },
-  {
     "revision": "e0f40eb4492ac1a872454db8412817bf",
     "url": "icons/apple-touch-icon-120x120.png"
+  },
+  {
+    "revision": "d94d07e8fef4dc35d3d5779f50fcf17f",
+    "url": "icons/apple-touch-icon-152x152.png"
   },
   {
     "revision": "7b07d82cadf4c61668ccebd6828898b5",
@@ -172,28 +172,28 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-startup-image-748x1024.png"
   },
   {
-    "revision": "919fdc68d476ae465c4a9c3776b173ca",
-    "url": "icons/apple-touch-startup-image-750x1294.png"
-  },
-  {
     "revision": "f3960e04e7f0504ba6a6fb24e7826849",
     "url": "icons/apple-touch-startup-image-768x1004.png"
   },
   {
-    "revision": "ca737674ff26392c67a621a3dbdb14a0",
-    "url": "icons/apple-touch-startup-image-1242x2148.png"
+    "revision": "919fdc68d476ae465c4a9c3776b173ca",
+    "url": "icons/apple-touch-startup-image-750x1294.png"
   },
   {
     "revision": "659674d5fa858df434d7f4c21edad6ad",
     "url": "icons/apple-touch-startup-image-1182x2208.png"
   },
   {
-    "revision": "1b0f1acf30348919f6fb545a654dbae8",
-    "url": "icons/apple-touch-startup-image-1536x2008.png"
+    "revision": "ca737674ff26392c67a621a3dbdb14a0",
+    "url": "icons/apple-touch-startup-image-1242x2148.png"
   },
   {
     "revision": "e602c180e219f82c1e4c782e1a87d84f",
     "url": "icons/apple-touch-startup-image-1496x2048.png"
+  },
+  {
+    "revision": "1b0f1acf30348919f6fb545a654dbae8",
+    "url": "icons/apple-touch-startup-image-1536x2008.png"
   },
   {
     "revision": "c87fe7c6688235477b1567983ef72d1e",
@@ -212,11 +212,11 @@ self.__precacheManifest = [
     "url": "icons/manifest.webapp"
   },
   {
-    "revision": "d4ba8ba8dca1c51d7e23e4bc6eca9893",
+    "revision": "8a42de5bfadad1996db9d87fe1750ea8",
     "url": "icons/.cache"
   },
   {
-    "revision": "c38fe407888c77d49e962633a6ee9914",
+    "revision": "15409531f3d35ef05b2ac55bfea03306",
     "url": "sitemap.xml"
   },
   {
