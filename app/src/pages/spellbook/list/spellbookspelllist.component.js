@@ -7,6 +7,9 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
 
   ctrl.$onInit = function() {
     $log.debug("SpellbookSpellListController init");
+    if (!spellbookService.selectedCharacter) {
+      $state.go('spellbook.characters');
+    }
     ctrl.classes = CLASSES;
     ctrl.classSelected = spellbookService.selectedCharacter.class;
     ctrl.setClass();
@@ -17,7 +20,9 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
 
   ctrl.chooseSpell = function(spell) {
     const spell_url = spellService.spellNameToUrl(spell.name);
-    $state.go('spells', {spellUrl: spell_url});
+    $state.go('spells', {
+      spellUrl: spell_url
+    });
   }
 
   ctrl.search = function() {
@@ -35,14 +40,45 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
     ctrl.setClass();
   }
 
+  ctrl.isInSpellBook = function(spellName) {
+    if (spellbookService.selectedCharacter.book) {
+      const present = Object.entries(spellbookService.selectedCharacter.book).reduce(
+        (acc, curr) => acc || curr[1].reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+      return present;
+    }
+    return false;
+  }
+
+  ctrl.isSpellPrepared = function(spellName) {
+    if (!spellbookService.selectedCharacter.prepared) {
+      if (spellbookService.selectedCharacter.knownSpells) {
+        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
+          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+        return present;
+      }
+    }
+    return false;
+  }
+
   ctrl.addToBook = function(spell) {
     if (!spellbookService.selectedCharacter.book) {
       spellbookService.selectedCharacter.book = {};
     }
-    let level = spell.levels.find((level) => {
-      return level.startsWith(ctrl.classSelected);
-    });
-    level = level.substring(level.length - 1);
+    console.log(spell.levels);
+    let level = spell.levels.reduce((accumulator, currentValue) => {
+      if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
+          return acc || currentValue.startsWith(curr);
+        }, false)) {
+        const level = currentValue.substring(currentValue.length - 1);
+        if (!accumulator || accumulator > level) {
+          return level;
+        }
+      }
+      return accumulator;
+    }, undefined);
+    // if(level == undefined){
+    //   level = '0';
+    // }
     if (!spellbookService.selectedCharacter.book[level]) {
       spellbookService.selectedCharacter.book[level] = [];
     }
