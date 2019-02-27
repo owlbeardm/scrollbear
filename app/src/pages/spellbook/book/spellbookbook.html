@@ -25,7 +25,8 @@
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
               <td class="float-right">
-                <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': !$ctrl.isSpellPrepared(spell), 'text-muted': $ctrl.isSpellPrepared(spell)}" ng-disable="$ctrl.isSpellPrepared(spell)" ng-click="$ctrl.addSpell(key, spell)">
+                <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell)}" ng-disable="!$ctrl.prepared && $ctrl.isSpellPrepared(spell)" ng-click="$ctrl.addSpell(key, spell)">
+                  <span class="badge badge-secondary" ng-if="$ctrl.prepared && $ctrl.isSpellPrepared(spell)"><small>{{$ctrl.isSpellPrepared(spell)}}</small></span>
                   <i class="fas fa-scroll"></i>
                   <div class="ripple-container"></div>
                 </a>
