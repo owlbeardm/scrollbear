@@ -22,19 +22,18 @@
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
               <td class="float-right mb-1">
-                <!-- <a href="#" class="ml-2 mr-3" ng-click="$ctrl.changeFav(spell)">
-                  <i class="fas fa-scroll text-warning"></i>
+                <a href="#" class="ml-2 mr-3 text-primary" ng-class="{'text-primary': !$ctrl.isSpellPrepared(spell.name), 'text-muted': $ctrl.isSpellPrepared(spell.name)}" ng-disable="$ctrl.isSpellPrepared(spell.name)" ng-click="$ctrl.addSpell(key, spell)">
+                  <i class="fas fa-scroll"></i>
+                  <div class="ripple-container"></div>
+                </a>
+                <a href="#" class="ml-2 mr-3 text-primary" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name)}" ng-disable="$ctrl.isInSpellBook(spell.name)" ng-click="$ctrl.addToBook(spell)">
+                  <i class="fas fa-book"></i>
+                  <div class="ripple-container"></div>
+                </a>
+                <!-- <a href="#" class="ml-2" ng-click="$">
+                  <i class="fas fa-chevron-circle-down text-primary"></i>
                   <div class="ripple-container"></div>
                 </a> -->
-                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.addToBook(spell)">
-                  <i class="fas fa-book text-warning"></i>
-                  <div class="ripple-container"></div>
-                </a>
-                <a href="#" class="ml-2" ng-click="$">
-                  <i class="fas fa-chevron-circle-down"></i>
-                  <div class="ripple-container"></div>
-                  <!-- <i class="fas fa-chevron-circle-down"></i> -->
-                </a>
               </td>
             </tr>
           </tbody>

@@ -18,6 +18,8 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
           return result;
         });
       });
+    } else {
+      $state.go('spellbook.characters');
     }
     spellbookService.saveCharacters();
     calculateTotal();
@@ -62,6 +64,17 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
+  }
+
+  ctrl.isSpellPrepared = function(spellName) {
+    if (!spellbookService.selectedCharacter.prepared) {
+      if (spellbookService.selectedCharacter.knownSpells) {
+        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
+          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+        return present;
+      }
+    }
+    return false;
   }
 
   function calculateTotal() {

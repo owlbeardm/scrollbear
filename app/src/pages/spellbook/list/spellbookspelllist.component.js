@@ -7,6 +7,9 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
 
   ctrl.$onInit = function() {
     $log.debug("SpellbookSpellListController init");
+    if (!spellbookService.selectedCharacter) {
+      $state.go('spellbook.characters');
+    }
     ctrl.classes = CLASSES;
     ctrl.classSelected = spellbookService.selectedCharacter.class;
     ctrl.setClass();
@@ -35,6 +38,26 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
   ctrl.classToAll = function() {
     ctrl.classSelected = 'all';
     ctrl.setClass();
+  }
+
+  ctrl.isInSpellBook = function(spellName) {
+    if (spellbookService.selectedCharacter.book) {
+      const present = Object.entries(spellbookService.selectedCharacter.book).reduce(
+        (acc, curr) => acc || curr[1].reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+      return present;
+    }
+    return false;
+  }
+
+  ctrl.isSpellPrepared = function(spellName) {
+    if (!spellbookService.selectedCharacter.prepared) {
+      if (spellbookService.selectedCharacter.knownSpells) {
+        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
+          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+        return present;
+      }
+    }
+    return false;
   }
 
   ctrl.addToBook = function(spell) {
