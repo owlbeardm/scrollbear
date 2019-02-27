@@ -1,33 +1,36 @@
+<div ng-if='!$ctrl.total' class="alert alert-info" role="alert">
+  There are no spells in spellbook!
+</div>
 <div class="accordion" id="accordionExample">
-  <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">
-    <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+  <div ng-repeat="(key, value) in $ctrl.book" class="card card-collapse">
+    <div class="card-header" ng-if="value.length" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
       <h5 class="mb-0 text-primary">
         <a >
-          {{$ctrl.classes[$ctrl.classSelected].name}} {{key}}
+          Level {{key}}
           <i class="float-right fas fa-chevron-down expanded-flip"></i>
           <div><small class='text-muted'>count {{value.length}}</small></div>
         </a>
       </h5>
     </div>
 
-    <div id="collapse{{$index}}" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
+    <div id="collapse{{$index}}" ng-if="value.length" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
       <div class="card-body">
         <table class="table table-sm">
           <tbody>
-            <tr ng-repeat="spell in value track by $index">
+            <tr ng-repeat="spell in value">
               <td ng-click="$ctrl.chooseSpell(spell)">
                 <a href="#" class="text-dark">
-                  {{spell.name}}
+                  {{spell}}
                 </a>
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
-              <td class="float-right mb-1">
-                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.changeFav(spell)">
+              <td class="float-right">
+                <a href="#" class="ml-2 mr-3" ng-click="$asd(spell)">
                   <i class="fas fa-scroll text-warning"></i>
                   <div class="ripple-container"></div>
                 </a>
-                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.addToBook(spell)">
-                  <i class="fas fa-book text-warning"></i>
+                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete(key, $index)">
+                  <i class="fas fa-trash text-danger"></i>
                   <div class="ripple-container"></div>
                 </a>
                 <a href="#" class="ml-2" ng-click="$">
@@ -43,5 +46,3 @@
     </div>
   </div>
 </div>
-<button ng-if="$ctrl.otherSpellsCount" ng-click="$ctrl.classToAll()" class='btn btn-warning'>Found <strong>{{$ctrl.otherSpellsCount}}</strong> spell{{$ctrl.otherSpellsCount!=1?'s':''}} in other classes</button>
-<!-- <ui-view></ui-view> -->

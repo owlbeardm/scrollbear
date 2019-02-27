@@ -2,31 +2,28 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">{{$root.spell.name}}</h3>
+        <h3 class="modal-title" id="exampleModalLabel">{{$ctrl.root.spell.name}}</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="fas fa-times"></span>
         </button>
-        <a ui-sref="spellbook">
-          spellbook
-        </a>
       </div>
       <div class="modal-body">
         <div>
           <div class="spell-description">
-            <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters.length"> [{{$root.spell.descripters | array}}]</span>;
-              <b>Level </b><span>{{$root.spell.levels | array}}</span></p>
-            <p><b>Casting Time </b> {{$root.spell.castingTime}}</p>
-            <p><b>Components </b> {{$root.spell.components | array}}</p>
-            <p><span ng-if="$root.spell.range"><b>Range </b>{{$root.spell.range}}</span></p>
-            <p><span ng-if="$root.spell.area"><b>Area </b>{{$root.spell.area}}</span></p>
-            <p><span ng-if="$root.spell.target"><b>Target </b>{{$root.spell.target}}</span></p>
-            <p><span ng-if="$root.spell.targets"><b>Targets </b>{{$root.spell.targets}}</span></p>
-            <p><span ng-if="$root.spell.effect"><b>Effect </b>{{$root.spell.effect}}</span></p>
-            <p><span ng-if="$root.spell.duration"><b>Duration </b>{{$root.spell.duration}}</span></p>
-            <p><span ng-if="$root.spell.savingThrow"><b>Saving Throw </b>{{$root.spell.savingThrow}}; <b>Spell Resistance </b>{{$root.spell.spellResistance}}</span></p>
+            <p><b>School </b> {{$ctrl.root.spell.school}}<span ng-if="$ctrl.root.spell.subschool"> ({{$ctrl.root.spell.subschool}})</span><span ng-if="$ctrl.root.spell.descripters.length"> [{{$ctrl.root.spell.descripters | array}}]</span>;
+              <b>Level </b><span>{{$ctrl.root.spell.levels | array}}</span></p>
+            <p><b>Casting Time </b> {{$ctrl.root.spell.castingTime}}</p>
+            <p><b>Components </b> {{$ctrl.root.spell.components | array}}</p>
+            <p><span ng-if="$ctrl.root.spell.range"><b>Range </b>{{$ctrl.root.spell.range}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.area"><b>Area </b>{{$ctrl.root.spell.area}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.target"><b>Target </b>{{$ctrl.root.spell.target}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.targets"><b>Targets </b>{{$ctrl.root.spell.targets}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.effect"><b>Effect </b>{{$ctrl.root.spell.effect}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.duration"><b>Duration </b>{{$ctrl.root.spell.duration}}</span></p>
+            <p><span ng-if="$ctrl.root.spell.savingThrow"><b>Saving Throw </b>{{$ctrl.root.spell.savingThrow}}; <b>Spell Resistance </b>{{$ctrl.root.spell.spellResistance}}</span></p>
           </div>
-          <!-- <p ng-repeat="paragraph in $root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
-          <ng-bind-html ng-bind-html="$root.spellDescription"></ng-bind-html>
+          <!-- <p ng-repeat="paragraph in $ctrl.root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
+          <ng-bind-html ng-bind-html="$ctrl.root.spellDescription"></ng-bind-html>
         </div>
       </div>
       <div class="modal-footer">

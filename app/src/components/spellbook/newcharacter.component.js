@@ -10,6 +10,7 @@ function NewCharacterController($log, $state, spellbookService, CLASSES) {
     delete ctrl.classes.all;
     ctrl.prepared = false;
     ctrl.spellbook = false;
+    ctrl.isNameExists = false;
   }
 
   ctrl.add = function() {
@@ -30,6 +31,10 @@ function NewCharacterController($log, $state, spellbookService, CLASSES) {
 
   ctrl.goBack = function() {
     $state.go('spellbook.characters');
+  }
+
+  ctrl.checkIfNameExists = function() {
+    ctrl.isNameExists = spellbookService.isNameExists(ctrl.name);
   }
 
 }
