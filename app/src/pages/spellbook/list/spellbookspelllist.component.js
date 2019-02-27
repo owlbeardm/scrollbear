@@ -10,6 +10,7 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
     if (!spellbookService.selectedCharacter) {
       $state.go('spellbook.characters');
     }
+    ctrl.prepared = spellbookService.selectedCharacter.prepared;
     ctrl.classes = CLASSES;
     ctrl.classSelected = spellbookService.selectedCharacter.class;
     ctrl.setClass();
@@ -56,6 +57,12 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
           (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
         return present;
       }
+    } else {
+      if (spellbookService.selectedCharacter.preparedSpells) {
+        const present = Object.entries(spellbookService.selectedCharacter.preparedSpells).reduce(
+          (acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (curr2.name == spellName?1:0), 0), 0);
+        return present;
+      }
     }
     return false;
   }
@@ -84,6 +91,33 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
     }
     spellbookService.selectedCharacter.book[level].push(spell.name);
     spellbookService.saveCharacters()
+  }
+
+  ctrl.addSpell = function(level, spell) {
+    console.log(level, spell);
+    if (!spellbookService.selectedCharacter.prepared) {
+      if (!spellbookService.selectedCharacter.knownSpells) {
+        spellbookService.selectedCharacter.knownSpells = {};
+      }
+      if (!spellbookService.selectedCharacter.knownSpells[level]) {
+        spellbookService.selectedCharacter.knownSpells[level] = {
+          spells: []
+        };
+      }
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spell);
+    } else {
+      if (!spellbookService.selectedCharacter.preparedSpells) {
+        spellbookService.selectedCharacter.preparedSpells = {};
+      }
+      if (!spellbookService.selectedCharacter.preparedSpells[level]) {
+        spellbookService.selectedCharacter.preparedSpells[level] = {
+          spells: []
+        };
+      }
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spell);
+    }
+    spellbookService.saveCharacters();
+    console.log(spellbookService.selectedCharacter);
   }
 
   function getSpells() {

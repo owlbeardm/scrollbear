@@ -8,6 +8,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
   ctrl.$onInit = function() {
     $log.debug("AppController init");
     if (spellbookService.selectedCharacter) {
+      ctrl.prepared = spellbookService.selectedCharacter.prepared;
       ctrl.book = spellbookService.selectedCharacter.book;
       Object.entries(ctrl.book).forEach(function(pair) {
         pair[1].sort();
@@ -60,7 +61,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spell);
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push({name:spell});
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
@@ -71,6 +72,12 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
       if (spellbookService.selectedCharacter.knownSpells) {
         const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
           (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+        return present;
+      }
+    } else {
+      if (spellbookService.selectedCharacter.preparedSpells) {
+        const present = Object.entries(spellbookService.selectedCharacter.preparedSpells).reduce(
+          (acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (curr2.name == spellName?1:0), 0), 0);
         return present;
       }
     }
