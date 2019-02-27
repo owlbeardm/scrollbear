@@ -2,67 +2,6 @@
 
 <div class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">
-    <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
-      <h5 class="mb-0 text-primary">
-        <a>
-          Level {{key}}
-          <i class="float-right fas fa-chevron-down expanded-flip"></i>
-          <button class="btn btn-sm btn-round float-right mr-4" ng-class="{'btn-danger': value.cast >= value.perDay, 'btn-success': value.cast < value.perDay}" ng-click="$ctrl.cast(key);$event.stopPropagation();">cast</button>
-          <button class="btn btn-sm btn-round float-right mr-1" ng-click="$ctrl.cast(key);$event.stopPropagation();">edit</button>
-        </a>
-      </h5>
-      <div>
-        <small class='text-dark'>Known <span ng-class="{'text-danger': value.spells.length>value.known, 'text-warning': value.spells.length<value.known}">{{value.spells.length}}/{{value.known}}</span></small>
-        <small class='ml-2'>Cast <span ng-class="{'text-danger': value.cast>=value.perDay}">{{value.cast}}/{{value.perDay}}</span></small>
-      </div>
-      <div>
-        <form name="addCharacterForm" ng-submit="$ctrl.add()">
-          <div class="row">
-            <div class="form-group label-floating bmd-form-group col-6">
-              <label class="control-label bmd-label-static pl-3" for="classSelect">Spells Known</label>
-              <input id='name' name="name" type="text" ng-model='$ctrl.name' ng-change='$ctrl.checkIfNameExists()' class="form-control">
-            </div>
-            <div class="form-group label-floating bmd-form-group col-6">
-              <label class="control-label bmd-label-static pl-3" for="classSelect">Spells per Day</label>
-              <input id='name' name="name" type="text" ng-model='$ctrl.name' ng-change='$ctrl.checkIfNameExists()' class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <!-- ng-disabled="addPcForm.$invalid" -->
-            <button type="submit" class="btn btn-primary" ng-disabled='!$ctrl.classSelected || !$ctrl.name || $ctrl.isNameExists'>Add</button>
-            <button type="button" class="btn btn-danger" ng-click="$ctrl.goBack()">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div id="collapse{{$index}}" ng-if="value.spells.length" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
-      <div class="card-body">
-        <table class="table table-sm">
-          <tbody>
-            <tr ng-repeat="spell in value.spells">
-              <td ng-click="$ctrl.chooseSpell(spell)">
-                <a href="#" class="text-dark">
-                  {{spell}}
-                </a>
-                <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
-              </td>
-              <td class="float-right">
-                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete(key, $index)">
-                  <i class="fas fa-trash text-danger"></i>
-                  <div class="ripple-container"></div>
-                </a>
-              </td>
-              <td class="float-right">
-                <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast(key)">
-                  <i class="fas fa-scroll" ng-class="{'text-muted': value.cast >= value.perDay, 'text-success': value.cast < value.perDay}"></i>
-                  <div class="ripple-container"></div>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <known-spell-level spell-level="value" level="key" index="$index"></known-spell-level>
   </div>
 </div>

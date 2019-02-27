@@ -4,6 +4,7 @@ import 'angular-ui-router';
 import 'angular-sanitize';
 const showdown = require('showdown');
 import './src/css/material-dashboard.css';
+// import './src/js/material-dashboard.js';
 import './src/css/app.css';
 
 import './src/components/components.module.js';
