@@ -20,12 +20,12 @@ async function main() {
       fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
       fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url1}</loc>\n`, 'utf8');
       fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
-      fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
-      const url2 = `https://scrollbear.com/#!/spells/${url}`;
-      fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
-      fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url2}</loc>\n`, 'utf8');
-      fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
-      fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
+      fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'wutf8');
+      // const url2 = `https://scrollbear.com/#!/spells/${url}`;
+      // fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+      // fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>${url2}</loc>\n`, 'utf8');
+      // fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
+      // fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     });
     fs.appendFileSync('assets/sitemap.xml', '</urlset>', 'utf8');
     logSuccess(`\n\nFinished sitemap with ${spells.length+1} links \n\tCurrent date     ${(new Date()).toISOString()} \n\tspells.json date ${mtime} \n\n`);

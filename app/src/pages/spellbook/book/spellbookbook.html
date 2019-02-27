@@ -25,19 +25,18 @@
                 <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
               </td>
               <td class="float-right">
-                <a href="#" class="ml-2 mr-3" ng-click="$asd(spell)">
-                  <i class="fas fa-scroll text-warning"></i>
+                <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': !$ctrl.isSpellPrepared(spell), 'text-muted': $ctrl.isSpellPrepared(spell)}" ng-disable="$ctrl.isSpellPrepared(spell)" ng-click="$ctrl.addSpell(key, spell)">
+                  <i class="fas fa-scroll"></i>
                   <div class="ripple-container"></div>
                 </a>
                 <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete(key, $index)">
                   <i class="fas fa-trash text-danger"></i>
                   <div class="ripple-container"></div>
                 </a>
-                <a href="#" class="ml-2" ng-click="$">
-                  <i class="fas fa-chevron-circle-down"></i>
+                <!-- <a href="#" class="ml-2" ng-click="$">
+                  <i class="fas fa-chevron-circle-down text-primary"></i>
                   <div class="ripple-container"></div>
-                  <!-- <i class="fas fa-chevron-circle-down"></i> -->
-                </a>
+                </a> -->
               </td>
             </tr>
           </tbody>
