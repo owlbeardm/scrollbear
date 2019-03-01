@@ -6,6 +6,9 @@ function PageFooterController($log) {
 
   ctrl.$onInit = function() {
     $log.debug('PageFooterController init ');
+    if (APP_VERSION) {
+      ctrl.version = APP_VERSION;
+    }
   }
 
 }
