@@ -36,6 +36,7 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
       $state.go('spellbook.characters');
     }
     spellbookService.saveCharacters();
+    calculateTotal();
   }
 
   ctrl.cast = function(key) {
@@ -54,6 +55,12 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
       pair[1].cast = 0
     });
     spellbookService.saveCharacters();
+  }
+
+  function calculateTotal() {
+    ctrl.total = Object.entries(ctrl.spells).reduce(function(total, pair) {
+      return total + (pair[1].spells.length);
+    }, 0);
   }
 }
 
