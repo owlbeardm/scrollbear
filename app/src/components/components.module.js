@@ -10,3 +10,6 @@ appComponents.component('knownSpellLevel', KnownSpelLevel);
 
 import PreparedSpelLevel from './prepared-spell-level/prepared-spell-level.component.js';
 appComponents.component('preparedSpellLevel', PreparedSpelLevel);
+
+import CharacterItem from './character-item/character-item.component.js';
+appComponents.component('characterItem', CharacterItem);
