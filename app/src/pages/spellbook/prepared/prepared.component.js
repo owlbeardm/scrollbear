@@ -36,6 +36,7 @@ function PreparedController($log, $state, filterService, spellService, spellbook
       $state.go('spellbook.characters');
     }
     spellbookService.saveCharacters();
+    calculateTotal();
   }
 
   ctrl.cast = function(key) {
@@ -56,6 +57,12 @@ function PreparedController($log, $state, filterService, spellService, spellbook
       });
     });
     spellbookService.saveCharacters();
+  }
+
+  function calculateTotal() {
+    ctrl.total = Object.entries(ctrl.spells).reduce(function(total, pair) {
+      return total + (pair[1].spells.length);
+    }, 0);
   }
 }
 

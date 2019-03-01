@@ -1,6 +1,10 @@
-<button ng-click="$ctrl.resetCast()" class='btn btn-primary mb-3 float-right mr-4'>Reset cast</button>
+<div ng-if='!$ctrl.total' class="alert alert-info" role="alert">
+  There are no prepared spells! You can add ones from <a ui-sref="spellbook.list" class="alert-link">spell list</a>.
+</div>
 
-<div class="accordion" id="accordionExample">
+<button ng-if='$ctrl.total' ng-click="$ctrl.resetCast()" class='btn btn-primary mb-3 float-right mr-4'>Reset cast</button>
+
+<div ng-if='$ctrl.total' class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">
     <prepared-spell-level spell-level="value" level="key" index="$index"></prepared-spell-level>
   </div>

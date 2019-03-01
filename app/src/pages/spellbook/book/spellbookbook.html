@@ -1,6 +1,7 @@
 <div ng-if='!$ctrl.total' class="alert alert-info" role="alert">
-  There are no spells in spellbook!
+  There are no spells in spellbook!  You can add ones from <a ui-sref="spellbook.list" class="alert-link">spell list</a>.
 </div>
+
 <div class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.book" class="card card-collapse">
     <div class="card-header" ng-if="value.length" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
