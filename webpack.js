@@ -81,6 +81,10 @@ module.exports = (env, argv) => {
     };
   }
 
+  config.plugins.push(new webpack.DefinePlugin({
+    APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : false
+  }));
+
   if (argv.mode === 'production') {
     config.output = {
       path: path.resolve(__dirname, 'dist'),

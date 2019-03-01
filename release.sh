@@ -12,7 +12,7 @@ echo "Releasing scrollbear.com $1"
 git stash
 git flow release start $1
 yarn sitemap
-yarn build
+yarn build --env.version=$1
 git add -A
 git commit -am "prerelease $1"
 git flow release publish $1
