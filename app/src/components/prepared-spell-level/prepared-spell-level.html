@@ -1,23 +1,19 @@
+
 <div class="card-header" role="tab" id="heading{{$ctrl.index}}" data-toggle="collapse" href="#collapse{{$ctrl.index}}" aria-expanded="false" aria-controls="collapse{{$ctrl.index}}">
   <h5 class="mb-0 text-primary">
     <a>
       Level {{$ctrl.level}}
       <i class="float-right fas fa-chevron-down expanded-flip"></i>
-      <button ng-if="!$ctrl.editMode" class="btn btn-sm btn-round float-right mr-4" ng-class="{'btn-danger': $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay, 'btn-success': $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay}" ng-click="$ctrl.cast($ctrl.level);$event.stopPropagation();">cast</button>
       <button ng-if="!$ctrl.editMode" class="btn btn-sm btn-round float-right mr-1" ng-click="$ctrl.edit();$event.stopPropagation();">edit</button>
     </a>
   </h5>
   <div ng-if="!$ctrl.editMode">
-    <small class='text-dark'>Known <span ng-class="{'text-danger': $ctrl.spellLevel.spells.length>$ctrl.spellLevel.known, 'text-warning': $ctrl.spellLevel.spells.length<$ctrl.spellLevel.known}">{{$ctrl.spellLevel.spells.length}}/{{$ctrl.spellLevel.known}}</span></small>
-    <small class='ml-2'>Cast <span ng-class="{'text-danger': $ctrl.spellLevel.cast>=$ctrl.spellLevel.perDay}">{{$ctrl.spellLevel.cast}}/{{$ctrl.spellLevel.perDay}}</span></small>
+    <small class='text-dark'>Prepared <span ng-class="{'text-danger': $ctrl.spellLevel.spells.length>$ctrl.spellLevel.perDay, 'text-warning': $ctrl.spellLevel.spells.length<$ctrl.spellLevel.perDay}">{{$ctrl.spellLevel.spells.length}}/{{$ctrl.spellLevel.perDay}}</span></small>
+    <small class='ml-2'>Cast {{$ctrl.castSpells()}}/{{$ctrl.spellLevel.perDay}}</small>
   </div>
   <div class="mt-2" ng-if="$ctrl.editMode">
     <form name="addCharacterForm" ng-submit="$ctrl.saveEdit()" ng-click="$event.stopPropagation();">
       <div class="row">
-        <div class="form-group label-floating bmd-form-group col-6">
-          <label class="control-label bmd-label-static pl-3" for="classSelect">Spells Known</label>
-          <input id='known' name="known" type="number" ng-model='$ctrl.known' class="form-control">
-        </div>
         <div class="form-group label-floating bmd-form-group col-6">
           <label class="control-label bmd-label-static pl-3" for="perDay">Spells per Day</label>
           <input id='perDay' name="perDay" type="number" ng-model='$ctrl.perDay' class="form-control">
@@ -37,9 +33,9 @@
     <table class="table table-sm">
       <tbody>
         <tr ng-repeat="spell in $ctrl.spellLevel.spells">
-          <td ng-click="$ctrl.chooseSpell(spell)">
+          <td ng-click="$ctrl.chooseSpell(spell.name)">
             <a href="#" class="text-dark">
-              {{spell}}
+              {{spell.name}}
             </a>
             <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
           </td>
@@ -50,8 +46,8 @@
             </a>
           </td>
           <td class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast($ctrl.level)">
-              <i class="fas fa-scroll" ng-class="{'text-muted': $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay, 'text-success': $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay}"></i>
+            <a href="#" class="ml-2 mr-3" ng-disabled="spell.cast" ng-click="$ctrl.cast($ctrl.level, $index)">
+              <i class="fas fa-scroll" ng-class="{'text-muted': spell.cast, 'text-success': !spell.cast}"></i>
               <div class="ripple-container"></div>
             </a>
           </td>
