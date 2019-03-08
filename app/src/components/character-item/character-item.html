@@ -1,0 +1,20 @@
+<div class='row'>
+  <div class='col'>
+    <a ng-click="$ctrl.selectCharacter($ctrl.character)" class="list-group-item list-group-item-action btn" ng-class="{'btn-primary': $ctrl.selected, 'btn-secondary': !$ctrl.selected}">
+      <div class='row'>
+        <div class='col'>
+          <span>{{$ctrl.character.name}}</span>
+          <br><span class='text-dark'><small>{{$ctrl.classes[$ctrl.character.class].name}}</small></span>
+        </div>
+        <div class='col'>
+          <i class="fas fa-lg fa-chevron-right float-right mt-2"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class='col-auto'>
+  <button ng-if="$ctrl.deleteMode" class='btn btn btn-danger mt-2' ng-click="$ctrl.delete()">confirm <i class="fas fa-trash  ml-1"></i></button>
+  <button ng-if="$ctrl.deleteMode" class='btn btn mt-2 ml-1' ng-click="$ctrl.cancelDelete()">cancel</button>
+  <button ng-if="!$ctrl.deleteMode" class='btn btn btn-danger mt-2' ng-click="$ctrl.startDelete()"><i class="fas fa-trash"></i></button>
+  </div>
+</div>
