@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "29299d8f90c17b6d1f8cc6b53100c0b2",
-    "url": "icons/mstile-150x150.png"
+    "revision": "cb1d12955828aea04dd524f266c95606",
+    "url": "icons/favicon.ico"
   },
   {
-    "revision": "7ddee1727f26a90835af5c1894f4ee38",
-    "url": "google989809d758b4217a.html"
+    "revision": "afcb18c7e5fb88b9a846",
+    "url": "app.04c4115d5b3632272ca6.js"
   },
   {
     "revision": "3397b8a62a98513e4b75",
@@ -112,26 +112,6 @@ self.__precacheManifest = [
     "url": "icons/yandex-browser-50x50.png"
   },
   {
-    "revision": "d7d24daea29de901eda2d5536a00f666",
-    "url": "icons/mstile-70x70.png"
-  },
-  {
-    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
-    "url": "icons/mstile-144x144.png"
-  },
-  {
-    "revision": "65be9aa2922ba94332f4",
-    "url": "res.a9fc8cc6461e17e92e98.js"
-  },
-  {
-    "revision": "bef71dd5828f76d36a44cdc7dcde4fdc",
-    "url": "icons/mstile-310x150.png"
-  },
-  {
-    "revision": "91616443ed77d508d321ade353a0b831",
-    "url": "icons/mstile-310x310.png"
-  },
-  {
     "revision": "6a3dfcffaaeb727ffeb7003c3c30face",
     "url": "icons/favicon-16x16.png"
   },
@@ -140,8 +120,28 @@ self.__precacheManifest = [
     "url": "icons/favicon-32x32.png"
   },
   {
-    "revision": "cb1d12955828aea04dd524f266c95606",
-    "url": "icons/favicon.ico"
+    "revision": "65be9aa2922ba94332f4",
+    "url": "res.a9fc8cc6461e17e92e98.js"
+  },
+  {
+    "revision": "d7d24daea29de901eda2d5536a00f666",
+    "url": "icons/mstile-70x70.png"
+  },
+  {
+    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
+    "url": "icons/mstile-144x144.png"
+  },
+  {
+    "revision": "29299d8f90c17b6d1f8cc6b53100c0b2",
+    "url": "icons/mstile-150x150.png"
+  },
+  {
+    "revision": "bef71dd5828f76d36a44cdc7dcde4fdc",
+    "url": "icons/mstile-310x150.png"
+  },
+  {
+    "revision": "91616443ed77d508d321ade353a0b831",
+    "url": "icons/mstile-310x310.png"
   },
   {
     "revision": "000d2d0a304044ddc93e4fc98f31cf17",
@@ -212,15 +212,15 @@ self.__precacheManifest = [
     "url": "icons/manifest.webapp"
   },
   {
-    "revision": "8a42de5bfadad1996db9d87fe1750ea8",
+    "revision": "f063c21e2556b80ae91ef431ef23aee6",
     "url": "icons/.cache"
   },
   {
-    "revision": "15409531f3d35ef05b2ac55bfea03306",
-    "url": "sitemap.xml"
+    "revision": "7ddee1727f26a90835af5c1894f4ee38",
+    "url": "google989809d758b4217a.html"
   },
   {
-    "revision": "fba6cce84ade2b537b89f0a6dc4ffd86",
+    "revision": "2bc0511897ffcabc08674dff751986bd",
     "url": "index.html"
   },
   {
@@ -228,8 +228,8 @@ self.__precacheManifest = [
     "url": "logo.png"
   },
   {
-    "revision": "7cbcfb88f55809ea31c0",
-    "url": "app.a2f5f1a6952a2dcb4a7f.js"
+    "revision": "fcbccf85be9dc915fc5ba140b4fbe07f",
+    "url": "sitemap.xml"
   },
   {
     "revision": "098a775ecfcaca19e5a361ac68fae7f8",
