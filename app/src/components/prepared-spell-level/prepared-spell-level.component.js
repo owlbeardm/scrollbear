@@ -45,8 +45,7 @@ function PreparedSpelLevelController($log, $state, filterService, focusService, 
   }
 
   ctrl.chooseSpell = function(spell) {
-    const spell_url = spellService.spellNameToUrl(spell);
-    $state.go('spells', {spellUrl: spell_url});
+    spellService.showSpell(spell);
   }
 
 }

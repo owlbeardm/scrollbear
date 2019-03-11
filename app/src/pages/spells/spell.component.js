@@ -20,8 +20,6 @@ function SpellController($log, $rootScope, $state) {
       ctrl.root = $rootScope;
     });
     popup.modal('show');
-
-
   }
 }
 

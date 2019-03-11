@@ -38,10 +38,7 @@ function KnownSpelLevelController($log, $state, filterService, focusService, spe
   }
 
   ctrl.chooseSpell = function(spell) {
-    const spell_url = spellService.spellNameToUrl(spell);
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
+    spellService.showSpell(spell);
   }
 
 }

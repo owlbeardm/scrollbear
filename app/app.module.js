@@ -144,7 +144,8 @@ scrollbearApp.config([
       onEnter: [
         'spell',
         '$rootScope',
-        function(spell, $rootScope) {
+        '$state',
+        function(spell, $rootScope, $state) {
           const popup = angular.element("#exampleModal");
           console.log('spells onEnter', spell, popup);
           popup.modal('show');
@@ -152,7 +153,9 @@ scrollbearApp.config([
       ],
       onExit: [
         '$transition$',
-        function($transition$) {
+        '$rootScope',
+        '$state',
+        function($transition$, $rootScope) {
           if ($transition$.to().name != 'spells') {
             const popup = angular.element("#exampleModal");
             popup.modal('hide');
@@ -165,7 +168,7 @@ scrollbearApp.config([
       ]
     });
 
-    // $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
   }
 ]);
