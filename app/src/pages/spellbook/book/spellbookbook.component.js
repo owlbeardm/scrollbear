@@ -27,10 +27,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
   }
 
   ctrl.chooseSpell = function(spell) {
-    const spell_url = spellService.spellNameToUrl(spell);
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
+    spellService.showSpell(spell);
   }
 
   ctrl.delete = function(key, id) {

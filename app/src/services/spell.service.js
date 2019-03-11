@@ -5,9 +5,10 @@ const allSpells = require('../../../resources/spells.json');
 angular.module('app.services').factory('spellService', [
   '$log',
   '$window',
+  '$rootScope',
   'filterService',
   'CLASSES',
-  function($log, $window, filterService, CLASSES) {
+  function($log, $window, $rootScope, filterService, CLASSES) {
     const SpellService = {};
     const localStorage = $window['localStorage'];
     SpellService.currentSpells = [];
@@ -77,6 +78,16 @@ angular.module('app.services').factory('spellService', [
     SpellService.getSpellsCountByFilter = function() {
       return allSpells.filter(filterService.filter).length;
     }
+
+    SpellService.showSpell = function(spellName) {
+      const spell = allSpells.find((spell) => {
+        return spell.name == spellName;
+      });
+      $rootScope.spell = spell;
+      const popup = angular.element("#modalSpell");
+      popup.modal('show');
+    }
+
 
     return SpellService;
   }
