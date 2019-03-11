@@ -165,34 +165,34 @@ module.exports = (env, argv) => {
       }]
     }));
 
-    config.optimization = {
-      minimizer: [
-        new TerserPlugin(), new OptimizeCSSAssetsPlugin({})
-      ],
-      splitChunks: {
-        chunks: 'all',
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.css$/,
-            chunks: 'all',
-            enforce: true
-          },
-          res: {
-            name: 'res',
-            test: /\.json/,
-            chunks: 'all',
-            enforce: true
-          },
-          vendor: {
-            name: 'vendor',
-            test: /[\\/]node_modules[\\/]/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
-    };
+    // config.optimization = {
+    //   minimizer: [
+    //     new TerserPlugin(), new OptimizeCSSAssetsPlugin({})
+    //   ],
+    //   splitChunks: {
+    //     chunks: 'all',
+    //     cacheGroups: {
+    //       styles: {
+    //         name: 'styles',
+    //         test: /\.css$/,
+    //         chunks: 'all',
+    //         enforce: true
+    //       },
+    //       res: {
+    //         name: 'res',
+    //         test: /\.json/,
+    //         chunks: 'all',
+    //         enforce: true
+    //       },
+    //       vendor: {
+    //         name: 'vendor',
+    //         test: /[\\/]node_modules[\\/]/,
+    //         chunks: 'all',
+    //         enforce: true
+    //       }
+    //     }
+    //   }
+    // };
     if (false) {
       const spells = require('./resources/spells.json');
       spells.forEach((spell, index) => {
