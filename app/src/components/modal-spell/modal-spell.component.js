@@ -1,6 +1,6 @@
 "use strict";
 
-function ModalSpellController($log, $rootScope, $location, spellService) {
+function ModalSpellController($log, $rootScope, $location, spellService, filterService) {
   $log.debug('ModalSpellController create');
   const ctrl = this;
 
@@ -19,12 +19,20 @@ function ModalSpellController($log, $rootScope, $location, spellService) {
       $rootScope.title = ``;
     });
   }
+
+  ctrl.isFav = function(spell) {
+    return filterService.isFav($rootScope.spell);
+  }
+
+  ctrl.changeFav = function(spell) {
+    filterService.changeFav($rootScope.spell);
+  }
 }
 
 const ModalSpellComponent = {
   template: require('./modal-spell.html'),
   controller: [
-    '$log', '$rootScope', '$location', 'spellService', ModalSpellController
+    '$log', '$rootScope', '$location', 'spellService', 'filterService', ModalSpellController
   ]
 }
 
