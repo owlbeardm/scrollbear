@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "bef71dd5828f76d36a44cdc7dcde4fdc",
-    "url": "icons/mstile-310x150.png"
+    "revision": "29299d8f90c17b6d1f8cc6b53100c0b2",
+    "url": "icons/mstile-150x150.png"
   },
   {
-    "revision": "8b8f7673c0b5faa698f64f1681076ce5",
+    "revision": "34d0a08de1f19d64243d94fb633e30d7",
     "url": "sitemap.xml"
   },
   {
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "logo.png"
   },
   {
-    "revision": "95d3821dfcbcde76d813b8ee50bca8d9",
+    "revision": "8477296659af2fe08635c4bad8e44ee5",
     "url": "index.html"
   },
   {
@@ -88,16 +88,16 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-startup-image-1242x2148.png"
   },
   {
+    "revision": "7949f34dab9798fb48e3ad6859676d82",
+    "url": "icons/apple-touch-startup-image-748x1024.png"
+  },
+  {
     "revision": "919fdc68d476ae465c4a9c3776b173ca",
     "url": "icons/apple-touch-startup-image-750x1294.png"
   },
   {
     "revision": "f3960e04e7f0504ba6a6fb24e7826849",
     "url": "icons/apple-touch-startup-image-768x1004.png"
-  },
-  {
-    "revision": "7949f34dab9798fb48e3ad6859676d82",
-    "url": "icons/apple-touch-startup-image-748x1024.png"
   },
   {
     "revision": "5e37a00074dce925398cbfd4229d501e",
@@ -112,20 +112,20 @@ self.__precacheManifest = [
     "url": "icons/yandex-browser-50x50.png"
   },
   {
-    "revision": "d7d24daea29de901eda2d5536a00f666",
-    "url": "icons/mstile-70x70.png"
+    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
+    "url": "icons/mstile-144x144.png"
   },
   {
-    "revision": "29299d8f90c17b6d1f8cc6b53100c0b2",
-    "url": "icons/mstile-150x150.png"
+    "revision": "d7d24daea29de901eda2d5536a00f666",
+    "url": "icons/mstile-70x70.png"
   },
   {
     "revision": "65be9aa2922ba94332f4",
     "url": "res.a9fc8cc6461e17e92e98.js"
   },
   {
-    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
-    "url": "icons/mstile-144x144.png"
+    "revision": "bef71dd5828f76d36a44cdc7dcde4fdc",
+    "url": "icons/mstile-310x150.png"
   },
   {
     "revision": "91616443ed77d508d321ade353a0b831",
@@ -144,12 +144,12 @@ self.__precacheManifest = [
     "url": "icons/favicon.ico"
   },
   {
-    "revision": "cacf77fde42dea4e1e2d686042257172",
-    "url": "icons/firefox_app_128x128.png"
-  },
-  {
     "revision": "000d2d0a304044ddc93e4fc98f31cf17",
     "url": "icons/firefox_app_60x60.png"
+  },
+  {
+    "revision": "cacf77fde42dea4e1e2d686042257172",
+    "url": "icons/firefox_app_128x128.png"
   },
   {
     "revision": "497a5b7513c51cd3fc130995475e57f7",
@@ -168,12 +168,12 @@ self.__precacheManifest = [
     "url": "icons/android-chrome-512x512.png"
   },
   {
-    "revision": "1f92ca4c36682bb6ee30c02dd3059d7b",
-    "url": "icons/apple-touch-icon-114x114.png"
-  },
-  {
     "revision": "e0f40eb4492ac1a872454db8412817bf",
     "url": "icons/apple-touch-icon-120x120.png"
+  },
+  {
+    "revision": "1f92ca4c36682bb6ee30c02dd3059d7b",
+    "url": "icons/apple-touch-icon-114x114.png"
   },
   {
     "revision": "d94d07e8fef4dc35d3d5779f50fcf17f",
@@ -196,8 +196,8 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-icon-180x180.png"
   },
   {
-    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
-    "url": "icons/android-chrome-144x144.png"
+    "revision": "799d180251e3405cea9658b0bfefa5db",
+    "url": "icons/android-chrome-192x192.png"
   },
   {
     "revision": "95daa3517d572fa0f3302182c698c0b2",
@@ -216,11 +216,11 @@ self.__precacheManifest = [
     "url": "icons/android-chrome-256x256.png"
   },
   {
-    "revision": "799d180251e3405cea9658b0bfefa5db",
-    "url": "icons/android-chrome-192x192.png"
+    "revision": "28403fe9a25e772a6ed8c1d103781a5e",
+    "url": "icons/android-chrome-144x144.png"
   },
   {
-    "revision": "ce5fcda36d3b332c1cbba420f7c63e73",
+    "revision": "51197f537eabdb26bec69db091ce1c9c",
     "url": "icons/.cache"
   },
   {
@@ -228,8 +228,8 @@ self.__precacheManifest = [
     "url": "google989809d758b4217a.html"
   },
   {
-    "revision": "cdf33c961e89b27cbd06",
-    "url": "app.3272be8dcd3abc3bb269.js"
+    "revision": "d981501b7b771bf2b650",
+    "url": "app.bba641968852ef24746f.js"
   },
   {
     "revision": "098a775ecfcaca19e5a361ac68fae7f8",
