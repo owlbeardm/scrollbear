@@ -7,6 +7,7 @@
   "author": "Mikita Kukavenka <godinfrog@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "yarn build && yarn build-dev",
     "build": "webpack --config webpack.js --mode=production",
     "build-dev": "webpack --config webpack.js --mode=development",
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
