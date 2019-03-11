@@ -19,7 +19,6 @@
       </div>
       <div class="modal-body">
         <div>
-          {{$ctrl.prevUrl}}
           <div class="spell-description">
             <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters.length"> [{{$root.spell.descripters | array}}]</span>;
               <b>Level </b><span>{{$root.spell.levels | array}}</span></p>
