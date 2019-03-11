@@ -1,6 +1,7 @@
 "use strict";
 
 const allSpells = require('../../../resources/spells.json');
+const showdown = require('showdown');
 
 angular.module('app.services').factory('spellService', [
   '$log',
@@ -84,8 +85,20 @@ angular.module('app.services').factory('spellService', [
         return spell.name == spellName;
       });
       $rootScope.spell = spell;
+      $rootScope.description = spell.description;
+      $rootScope.spellDescription = SpellService.getSpellDescription(spell.description);
       const popup = angular.element("#modalSpell");
       popup.modal('show');
+    }
+
+    SpellService.getSpellDescription = function(md) {
+      const converter = new showdown.Converter({
+        tables: true,
+        strikethrough: true
+      });
+      let html = `<div>${converter.makeHtml(md)}</div>`;
+      html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
+      return html;
     }
 
 
