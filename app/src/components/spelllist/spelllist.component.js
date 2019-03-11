@@ -10,11 +10,7 @@ function SpellListController($log, $state, filterService, spellService, CLASSES)
   }
 
   ctrl.chooseSpell = function(spell) {
-    ctrl.spell = spell;
-    const spell_url = spellService.spellNameToUrl(ctrl.spell.name);
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
+    spellService.showSpell(spell.name);
   }
 
   ctrl.isFav = function(spell) {

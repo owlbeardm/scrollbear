@@ -1,6 +1,6 @@
 "use strict";
 
-function KnownSpelLevelController($log, $state, filterService, spellService, spellbookService, CLASSES) {
+function KnownSpelLevelController($log, $state, filterService, focusService, spellService, spellbookService, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
 
@@ -23,6 +23,7 @@ function KnownSpelLevelController($log, $state, filterService, spellService, spe
     ctrl.perDay = ctrl.spellLevel.perDay;
     ctrl.known = ctrl.spellLevel.known;
     ctrl.editMode = true;
+    focusService.setFocus('known');
   }
 
   ctrl.saveEdit = function() {
@@ -37,10 +38,7 @@ function KnownSpelLevelController($log, $state, filterService, spellService, spe
   }
 
   ctrl.chooseSpell = function(spell) {
-    const spell_url = spellService.spellNameToUrl(spell);
-    $state.go('spells', {
-      spellUrl: spell_url
-    });
+    spellService.showSpell(spell);
   }
 
 }
@@ -51,6 +49,7 @@ const KnownSpelLevelComponent = {
     '$log',
     '$state',
     'filterService',
+    'focusService',
     'spellService',
     'spellbookService',
     'CLASSES',

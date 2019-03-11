@@ -1,0 +1,46 @@
+<div class="modal fade" id="modalSpell" tabindex="-1" role="dialog" aria-labelledby="modalSpellLabel" aria-hidden="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <td class="float-right">
+
+        </td>
+        <h3 class="modal-title" id="modalSpellLabel">
+          <a href="#" class="mr-2" ng-click="$ctrl.changeFav()">
+            <i class="fa-star" ng-class="{'fas text-primary': $ctrl.isFav(), 'far text-muted': !$ctrl.isFav()}"></i>
+            <div class="ripple-container"></div>
+          </a>
+          {{$root.spell.name}}
+        </h3>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fas fa-times"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="spell-description">
+            <p><b>School </b> {{$root.spell.school}}<span ng-if="$root.spell.subschool"> ({{$root.spell.subschool}})</span><span ng-if="$root.spell.descripters.length"> [{{$root.spell.descripters | array}}]</span>;
+              <b>Level </b><span>{{$root.spell.levels | array}}</span></p>
+            <p><b>Casting Time </b> {{$root.spell.castingTime}}</p>
+            <p><b>Components </b> {{$root.spell.components | array}}</p>
+            <p><span ng-if="$root.spell.range"><b>Range </b>{{$root.spell.range}}</span></p>
+            <p><span ng-if="$root.spell.area"><b>Area </b>{{$root.spell.area}}</span></p>
+            <p><span ng-if="$root.spell.target"><b>Target </b>{{$root.spell.target}}</span></p>
+            <p><span ng-if="$root.spell.targets"><b>Targets </b>{{$root.spell.targets}}</span></p>
+            <p><span ng-if="$root.spell.effect"><b>Effect </b>{{$root.spell.effect}}</span></p>
+            <p><span ng-if="$root.spell.duration"><b>Duration </b>{{$root.spell.duration}}</span></p>
+            <p><span ng-if="$root.spell.savingThrow"><b>Saving Throw </b>{{$root.spell.savingThrow}}; <b>Spell Resistance </b>{{$root.spell.spellResistance}}</span></p>
+          </div>
+          <!-- <p ng-repeat="paragraph in $root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
+          <ng-bind-html ng-bind-html="$root.spellDescription"></ng-bind-html>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-sm btn-primary" disabled data-dismiss="modal">Prepare</button> -->
+        <!-- <button type="button" class="btn btn-sm" data-dismiss="modal">Add to spellbook</button> -->
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

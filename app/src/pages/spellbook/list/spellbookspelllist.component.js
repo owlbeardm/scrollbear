@@ -21,8 +21,7 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
   }
 
   ctrl.chooseSpell = function(spell) {
-    const spell_url = spellService.spellNameToUrl(spell.name);
-    $state.go('spells', {spellUrl: spell_url});
+    spellService.showSpell(spell.name);
   }
 
   ctrl.search = function() {

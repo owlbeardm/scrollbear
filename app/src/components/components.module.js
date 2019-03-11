@@ -13,3 +13,6 @@ appComponents.component('preparedSpellLevel', PreparedSpelLevel);
 
 import CharacterItem from './character-item/character-item.component.js';
 appComponents.component('characterItem', CharacterItem);
+
+import ModalSpell from './modal-spell/modal-spell.component.js';
+appComponents.component('modalSpell', ModalSpell);
