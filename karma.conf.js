@@ -1,10 +1,18 @@
 const webpackConf = require("./webpack.js");
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function(config) {
   config.set({
-    browsers: ['Chrome'],
+    browsers: ['HeadlessChrome'],
+    customLaunchers:{
+      HeadlessChrome:{
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
     frameworks: ['jasmine'],
-    reporters: ["spec"],
+    reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
@@ -21,19 +29,18 @@ module.exports = function(config) {
       showSpecTiming: false, // print the time elapsed for each spec
       failFast: false // test would finish with error when a first fail occurs.
     },
-    autoWatch: true,
-    singleRun: false,
+    autoWatch: !config.singleRun,
     colors: true,
     port: 9876,
     basePath: '',
     files: [
       'node_modules/jquery/dist/jquery.js',
-      'app/dapp/dapp.module.js',
+      'app/app.module.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'app/index_test.js'
     ],
     preprocessors: {
-      'app/dapp/dapp.module.js': ['webpack', 'sourcemap'],
+      'app/app.module.js': ['webpack', 'sourcemap'],
       'app/index_test.js': ['webpack', 'sourcemap']
     },
     exclude: [],
