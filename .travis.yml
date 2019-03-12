@@ -6,7 +6,7 @@ cache:
 notifications:
   email:
     recipients:
-      - godinfrog@gmail.com
+      - owlbeardm@gmail.com
 
 install:
   - yarn
