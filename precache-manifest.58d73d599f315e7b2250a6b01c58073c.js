@@ -1,10 +1,10 @@
-self.__precacheManifest = (self.__precacheManifest || []).concat([
+self.__precacheManifest = [
   {
     "revision": "29299d8f90c17b6d1f8cc6b53100c0b2",
     "url": "icons/mstile-150x150.png"
   },
   {
-    "revision": "83cf2477a0acd77c36bc7042f062dcd6",
+    "revision": "74aec35ea61eda4842f4375e901d8f57",
     "url": "sitemap.xml"
   },
   {
@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "logo.png"
   },
   {
-    "revision": "1a849b4fc3f6763db7003842be7f220f",
+    "revision": "78f88e307ec88eec8f4327c355c17cc8",
     "url": "index.html"
   },
   {
@@ -200,16 +200,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "icons/android-chrome-192x192.png"
   },
   {
-    "revision": "95daa3517d572fa0f3302182c698c0b2",
-    "url": "icons/android-chrome-36x36.png"
-  },
-  {
     "revision": "c1aa9760d6670617beef496e3c5e93a9",
     "url": "icons/android-chrome-48x48.png"
   },
   {
     "revision": "7ce2bf7edc5e37dcc9b129b921287607",
     "url": "icons/android-chrome-384x384.png"
+  },
+  {
+    "revision": "95daa3517d572fa0f3302182c698c0b2",
+    "url": "icons/android-chrome-36x36.png"
   },
   {
     "revision": "80b542d2ea60e0a9a2c4137f8444be43",
@@ -220,7 +220,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "icons/android-chrome-144x144.png"
   },
   {
-    "revision": "cbc6efcfb2f3c919be57c6e13374f9c9",
+    "revision": "248cf8dd2a45e9f7a88f4bcc36ed5219",
     "url": "icons/.cache"
   },
   {
@@ -228,8 +228,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google989809d758b4217a.html"
   },
   {
-    "revision": "47cfc5a5f9df030c0ba4",
-    "url": "app.cc98b64eb82602e41864.js"
+    "revision": "2027bc533523d102c133",
+    "url": "app.c4687bad5302ea9049c1.js"
   },
   {
     "revision": "098a775ecfcaca19e5a361ac68fae7f8",
@@ -242,4 +242,4 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "url": "29c29b1671ae5a81d788b944e8611181.png"
   }
-]);
+];
