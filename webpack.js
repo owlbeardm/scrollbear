@@ -17,7 +17,6 @@ function getCommonConfig() {
     entry: {
       app: './app/app.module.js'
     },
-
     module: {
       rules: [{
         test: /\.js$/,
@@ -81,9 +80,11 @@ module.exports = (env, argv) => {
     };
   }
 
-  config.plugins.push(new webpack.DefinePlugin({
-    APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : false
-  }));
+  if (argv.mode === 'test') {
+    config.optimization = {
+      minimize: false
+    }
+  }
 
   if (argv.mode === 'production') {
     config.output = {
@@ -95,6 +96,34 @@ module.exports = (env, argv) => {
       contentBase: './dist',
       historyApiFallback: true,
       publicPath: '/'
+    };
+    config.optimization = {
+      minimizer: [
+        new TerserPlugin(), new OptimizeCSSAssetsPlugin({})
+      ],
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.css$/,
+            chunks: 'all',
+            enforce: true
+          },
+          res: {
+            name: 'res',
+            test: /\.json/,
+            chunks: 'all',
+            enforce: true
+          },
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
     };
     config.plugins.push(new FaviconsWebpackPlugin({
       logo: './assets/logo.png',
@@ -165,54 +194,30 @@ module.exports = (env, argv) => {
       }]
     }));
 
-    // config.optimization = {
-    //   minimizer: [
-    //     new TerserPlugin(), new OptimizeCSSAssetsPlugin({})
-    //   ],
-    //   splitChunks: {
-    //     chunks: 'all',
-    //     cacheGroups: {
-    //       styles: {
-    //         name: 'styles',
-    //         test: /\.css$/,
-    //         chunks: 'all',
-    //         enforce: true
-    //       },
-    //       res: {
-    //         name: 'res',
-    //         test: /\.json/,
-    //         chunks: 'all',
-    //         enforce: true
-    //       },
-    //       vendor: {
-    //         name: 'vendor',
-    //         test: /[\\/]node_modules[\\/]/,
-    //         chunks: 'all',
-    //         enforce: true
-    //       }
+    config.plugins.push(new webpack.DefinePlugin({
+      APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : false
+    }));
+
+    // if (false) {
+    //   const spells = require('./resources/spells.json');
+    //   spells.forEach((spell, index) => {
+    //     const spellUrl = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+    //     if (index > 3000 || index < 2800) {
+    //       return;
     //     }
-    //   }
-    // };
-    if (false) {
-      const spells = require('./resources/spells.json');
-      spells.forEach((spell, index) => {
-        const spellUrl = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-        if (index > 3000 || index < 2800) {
-          return;
-        }
-        config.plugins.push(new HtmlWebpackPlugin({
-          templateParameters: {
-            'title': `${spell.name} - ScrollBear`,
-            'description': `${spell.description}`,
-            'url': spellUrl
-          },
-          template: 'assets/spell.ejs',
-          filename: 'spells/' + spellUrl + '.html',
-          excludeAssets: [/app.*.js/, /app.*.css/, /styles.*.js/, /styles.*.css/, /res.*.js/, /res.*.css/, /vendor.*.js/, /vendor.*.css/]
-        }));
-      });
-      config.plugins.push(new HtmlWebpackExcludeAssetsPlugin());
-    }
+    //     config.plugins.push(new HtmlWebpackPlugin({
+    //       templateParameters: {
+    //         'title': `${spell.name} - ScrollBear`,
+    //         'description': `${spell.description}`,
+    //         'url': spellUrl
+    //       },
+    //       template: 'assets/spell.ejs',
+    //       filename: 'spells/' + spellUrl + '.html',
+    //       excludeAssets: [/app.*.js/, /app.*.css/, /styles.*.js/, /styles.*.css/, /res.*.js/, /res.*.css/, /vendor.*.js/, /vendor.*.css/]
+    //     }));
+    //   });
+    //   config.plugins.push(new HtmlWebpackExcludeAssetsPlugin());
+    // }
   }
 
   return config;

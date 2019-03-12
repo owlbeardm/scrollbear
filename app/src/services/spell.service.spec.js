@@ -9,11 +9,11 @@ describe('spellService', () => {
 
   beforeEach(() => {
     angular.mock.module('app.services');
+    angular.mock.module('app.constants');
     // angular.mock.module(($provide) => {
-    //   $provide.service('authService', () => {
-    //     return authService;
+    //   $provide.service('filterService', () => {
+    //     return {};
     //   });
-    //   $provide.constant('__env', __env);
     // });
     inject((_spellService_) => {
       spellService = _spellService_;

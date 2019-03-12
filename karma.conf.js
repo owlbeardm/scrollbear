@@ -1,8 +1,16 @@
 const webpackConf = require("./webpack.js");
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function(config) {
   config.set({
-    browsers: ['Chrome'],
+    browsers: ['HeadlessChrome'],
+    customLaunchers:{
+      HeadlessChrome:{
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
@@ -21,8 +29,7 @@ module.exports = function(config) {
       showSpecTiming: false, // print the time elapsed for each spec
       failFast: false // test would finish with error when a first fail occurs.
     },
-    autoWatch: true,
-    singleRun: false,
+    autoWatch: !config.singleRun,
     colors: true,
     port: 9876,
     basePath: '',
