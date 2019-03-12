@@ -1,3 +1,14 @@
 language: node_js
+node_js:
+  - "node"
 cache:
   yarn: true
+notifications:
+  email:
+    recipients:
+      - godinfrog@gmail.com
+
+install:
+  - yarn
+script:
+  - yarn test
