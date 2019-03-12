@@ -13,7 +13,7 @@ function PageHeaderController($log) {
 }
 
 const PageHeaderComponent = {
-  template: require('./pageheader.html'),
+  template: require('./page-header.html'),
   controller: [
     '$log', PageHeaderController
   ],

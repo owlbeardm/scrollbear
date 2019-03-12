@@ -1,5 +1,7 @@
 "use strict";
 
+import './page-footer.css';
+
 function PageFooterController($log) {
   $log.debug('PageFooterController create');
   const ctrl = this;
@@ -14,7 +16,7 @@ function PageFooterController($log) {
 }
 
 const PageFooterComponent = {
-  template: require('./pagefooter.html'),
+  template: require('./page-footer.html'),
   controller: [
     '$log', PageFooterController
   ],

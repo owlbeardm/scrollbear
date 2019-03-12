@@ -24,7 +24,7 @@ function SpellListController($log, $state, filterService, spellService, CLASSES)
 }
 
 const SpellListComponent = {
-  template: require('./spelllist.html'),
+  template: require('./spell-list.html'),
   controller: ['$log', '$state', 'filterService', 'spellService', 'CLASSES', SpellListController],
   bindings: {
     spells: '<',
