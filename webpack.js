@@ -40,7 +40,7 @@ function getCommonConfig() {
       }]
     },
     plugins: [
-      new CleanWebpackPlugin(['dist']),
+      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './app/index.html',
         filename: 'index.html'
