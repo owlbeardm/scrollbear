@@ -63,11 +63,6 @@ div[aria-expanded="false"] i.fa-chevron-down {
   transition-duration: 0.2s;
 }
 
-pagefooter>.footer {
-  border-top: none;
-  color: #a3917a;
-}
-
 form .form-group .error {
   font-size: .8rem;
   color: #f44336;
