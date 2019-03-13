@@ -7,15 +7,12 @@ function CharacterItemController($log, $state, spellbookService, CLASSES) {
   ctrl.$onInit = function() {
     $log.debug("CharacterItemController init");
     ctrl.classes = CLASSES;
+    ctrl.characterSelected = ctrl.characters.indexOf(spellbookService.selectedCharacter);
   }
 
   ctrl.delete = function() {
     spellbookService.deleteCharacter(ctrl.id);
     ctrl.deleteMode = false;
-  }
-
-  ctrl.characterSelected = function() {
-    return ctrl.characters.indexOf(spellbookService.selectedCharacter);
   }
 
   ctrl.selectCharacter = function(character) {
