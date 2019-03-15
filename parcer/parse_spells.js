@@ -103,7 +103,7 @@ function parseSpellDescriptor(data) {
 }
 
 function addValue(spell, child, nextChild, name, key) {
-  if (child.toString() == name) {
+  if (!spell[key] && child.toString() == name) {
     spell[key] = nextChild.toString().replace(';', '').trim();
   }
 }
