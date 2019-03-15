@@ -139,12 +139,28 @@ function findDescription_(element, spell) {
 
 function findDescription(element, spell) {
   findDescription_(element, spell);
+  spell.description = spell.description.replace(/h2/gi, 'h4');
   spell.description = turndownService.turndown(spell.description);
 }
 
 function populateSpell(article, spell) {
   article.firstChild.childNodes.forEach((child, index, elements) => {
     const nextChild = elements[index + 1];
+    if (!spell.source && child.toString() == "<b>Source</b>") {
+      let addSource = false;
+      let valueAdded = '<div>';
+      for (let i = index + 1; i < elements.length; i++) {
+        if (elements[i].toString() == "<b>School</b>") {
+          addSource = true;
+          break;
+        }
+        valueAdded += elements[i].toString();
+      }
+      valueAdded += '</div>';
+      if (addSource) {
+        spell.source = turndownService.turndown(parse(valueAdded).toString());
+      }
+    }
     if (!spell.school && child.toString() == "<b>School</b>") {
       spell.school = parseSpellSchool(nextChild.text);
       spell.subschool = parseSpellSubschool(nextChild.text);
@@ -198,6 +214,19 @@ function parseSpellPage(rootVar) {
   let span = [...rootVar.querySelectorAll('span')].find((element) => {
     return !!element.innerHTML;
   });
+  let source;
+  span.childNodes.forEach((child, index, elements) => {
+    if (!source && child.toString() == "<b>Source</b>") {
+      let valueAdded = '<div>';
+      for (let i = index + 1; i < elements.length; i++) {
+        if (elements[i].toString() == "<b>School</b>")
+          break;
+        valueAdded += elements[i].toString();
+      }
+      valueAdded += '</div>';
+      source = turndownService.turndown(parse(valueAdded).toString());
+    }
+  });
   span.childNodes.forEach((child, index, elements) => {
     if (child.innerHTML && child.tagName === 'h1') {
       let valueAdded = '<div>';
@@ -211,6 +240,9 @@ function parseSpellPage(rootVar) {
       spell.name = changeName(child.text.trim());
       populateSpell(value, spell);
       findDescription(value, spell);
+      if (!spell.source) {
+        spell.source = source;
+      }
       result.push(spell);
     }
   });

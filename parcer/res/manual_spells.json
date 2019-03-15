@@ -1,354 +1,354 @@
 [{
-  "name": "Stabilize",
-  "components": [
-    "V", "S"
-  ]
-}, {
-  "name": "Siege of Trees, Greater",
-  "levels": ["druid 9"]
-}, {
-  "name": "Shapechanger’s Gift, Greater",
-  "levels": ["sorcerer/wizard 7"]
-}, {
-  "name": "Sealed Life, Greater",
-  "levels": [
-    "spiritualist 6"
-  ]
-}, {
-  "name": "Lash of the Astradaemon",
-  "levels": [
-    "cleric 6",
-    "magus 5",
-    "sorcerer/wizard 6",
-    "witch 6"
-  ]
-}, {
-  "name": "Inflict Pain, Mass",
-  "levels": [
-    "antipaladin 4",
-    "inquisitor 5",
-    "medium 4",
-    "mesmerist 5",
-    "occultist 5",
-    "psychic 6",
-    "sorcerer/wizard 7",
-    "spiritualist 5",
-    "witch 7"
-  ]
-}, {
-  "name": "Infernal Challenger",
-  "levels": [
-    "cleric 3",
-    "sorcerer/wizard 3",
-    "summoner 3"
-  ]
-}, {
-  "name": "Defending Sword, Mass",
-  "levels": [
-    "sorcerer/wizard 9"
-  ],
-  "effect": "up to one sword per 3 levels"
-}, {
-  "name": "Plague Bearer",
-  "levels": [
-    "alchemist 6",
-    "cleric/oracle 6",
-    "druid 6",
-    "inquisitor 6",
-    "sorcerer/wizard 7",
-    "witch 6"
-  ]
-}, {
-  "name": "Marionette Possession",
-  "levels": [
-    "alchemist 3",
-    "mesmerist 3",
-    "psychic 3",
-    "sorcerer/wizard 3",
-    "summoner/unchained summoner 3",
-    "witch 3"
-  ]
-}, {
-  "name": "Morning Sun",
-  "levels": [
-    "cleric/oracle 7",
-    "druid 7",
-    "shaman 7"
-  ]
-}, {
-  "name": "Mydriatic Spontaneity, Mass",
-  "levels": [
-    "bard 5",
-    "mesmerist 5",
-    "psychic 6",
-    "sorcerer/wizard 7",
-    "witch 7"
-  ],
-  "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
-}, {
-  "name": "Rune of Durability",
-  "school": "transmutation",
-  "levels": [
-    "sorcerer/wizard 3"
-  ]
-}, {
-  "name": "Suffocation, Mass",
-  "levels": [
-    "sorcerer/wizard 9",
-    "witch 9"
-  ]
-}, {
-  "name": "Healing Leak",
-  "levels": [
-    "antipaladin 2",
-    "cleric 3",
-    "paladin 2",
-    "sorcerer/wizard 3",
-    "witch 3"
-  ]
-}, {
-  "name": "Insect Scouts",
-  "school": "divination",
-  "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n"
-}, {
-  "name": "Locksight",
-  "school": "divination",
-  "levels": [
-    "alchemist 1",
-    "antipaladin 1",
-    "bard 1",
-    "inquisitor 1",
-    "sorcerer/wizard 1"
-  ],
-  "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n"
-}, {
-  "name": "Sense Vitals",
-  "school": "divination"
-}, {
-  "name": "Cursed Earth",
-  "descripters": [
-    "curse",
-    "evil",
-    "see text"
-  ],
-  "levels": [
-    "cleric/oracle 9",
-    "sorcerer/wizard 9",
-    "witch 9"
-  ]
-}, {
-  "name": "Moonstruck",
-  "school": "enchantment",
-  "subschool": "compulsion",
-  "descripters": [
-    "emotion",
-    "mind-affecting"
-  ],
-  "levels": [
-    "bloodrager 4", "druid 4", "sorcerer/wizard 4", "witch 4"
-  ]
-}, {
-  "name": "Energy Hack",
-  "descripters": [
-    "acid",
-    "cold",
-    "electricity",
-    "fire",
-    "see below"
-  ],
-  "levels": [
-    "sorcerer/wizard 4"
-  ]
-}, {
-  "name": "Suggestion",
-  "levels": [
-    "bard 2",
-    "medium 2",
-    "mesmerist 2",
-    "occultist 3",
-    "psychic 2",
-    "sorcerer/wizard 3",
-    "witch 3"
-  ]
-}, {
-  "name": "True Strike",
-  "school": "divination",
-  "levels": [
-    "alchemist 1",
-    "bloodrager 1",
-    "inquisitor 1",
-    "magus 1",
-    "psychic 1",
-    "sorcerer/wizard 1"
-  ]
-}, {
-  "name": "Peace Bond",
-  "levels": [
-    "bard 1",
-    "cleric 1",
-    "druid 1",
-    "inquisitor 1",
-    "paladin 1",
-    "shaman 1",
-    "sorcerer/wizard 1",
-    "witch 1"
-  ]
-}, {
-  "name": "Gullibility",
-  "levels": [
-    "antipaladin 3",
-    "bard 3",
-    "inquisitor 3",
-    "mesmerist 3",
-    "psychic 3",
-    "sorcerer/wizard 3",
-    "witch 3"
-  ]
-}, {
-  "name": "Heal, Mass",
-  "levels": [
-    "cleric/oracle 9",
-    "shaman 9"
-  ]
-}, {
-  "name": "Dimensional Lock",
-  "levels": [
-    "cleric/oracle 8",
-    "sorcerer/wizard 8",
-    "summoner 6"
-  ]
-}, {
-  "name": "Planar Binding, Greater",
-  "levels": [
-    "sorcerer/wizard 8",
-    "summoner 6"
-  ]
-}, {
-  "name": "Blacklight(3.5E)",
-  "levels": [
-    "sorcerer/wizard 3"
-  ]
-}, {
-  "name": "Watchful Animal",
-  "school": "divination"
-}, {
-  "name": "Enemy Insight",
-  "school": "divination"
-}, {
-  "name": "Harvest Knowledge",
-  "school": "divination"
-}, {
-  "name": "Discern Next of Kin",
-  "school": "divination"
-}, {
-  "name": "Arcane Mark",
-  "school": "universal"
-}, {
-  "name": "Brow Gasher",
-  "school": "necromancy"
-}, {
-  "name": "Limited Wish",
-  "area": "see text",
-  "target": "see text",
-  "effect": "see text",
-  "school": "universal"
-}, {
-  "name": "Permanency",
-  "school": "universal",
-  "descripters": []
-}, {
-  "name": "Wish",
-  "school": "universal",
-  "area": "see text",
-  "target": "see text",
-  "effect": "see text"
-}, {
-  "name": "Aquatic Trail",
-  "school": "divination"
-}, {
-  "name": "Beastspeak",
-  "school": "divination"
-}, {
-  "name": "Jungle Mind",
-  "school": "divination"
-}, {
-  "name": "Speak With Waves",
-  "school": "divination"
-}, {
-  "name": "Tectonic Communion",
-  "school": "divination"
-}, {
-  "name": "Cleromancy",
-  "school": "divination"
-}, {
-  "name": "Contact Nalfeshnee",
-  "school": "divination"
-}, {
-  "name": "Detect Demon",
-  "school": "divination"
-}, {
-  "name": "Karmic Blessing",
-  "school": "divination"
-}, {
-  "name": "Lay of the Land",
-  "school": "divination"
-}, {
-  "name": "Air Walk, Communal",
-  "school": "transmutation"
-}, {
-  "name": "Authenticating Gaze",
-  "school": "divination"
-}, {
-  "name": "Beloved of the Forge",
-  "school": "divination"
-}, {
-  "name": "Starsight",
-  "school": "divination"
-}, {
-  "name": "True Skill",
-  "school": "divination"
-}, {
-  "name": "Akashic Communion",
-  "school": "divination"
-}, {
-  "name": "Collaborative Thaumaturgy",
-  "school": "universal"
-}, {
-  "name": "Commune With Texts",
-  "school": "divination"
-}, {
-  "name": "Ears of the City",
-  "school": "divination"
-}, {
-  "name": "Prestidigitation",
-  "school": "universal"
-}, {
-  "name": "Probe History (Half-Elf)",
-  "school": "divination"
-}, {
-  "name": "Speak Local Language",
-  "school": "divination"
-}, {
-  "name": "True Appraisal",
-  "school": "divination"
-}, {
-  "name": "Twisted Futures",
-  "school": "divination"
-}, {
-  "name": "Lost Legacy",
-  "school": "enchantment"
-}, {
-  "name": "Inhibiting Patterns",
-  "school": "illusion"
-}, {
-  "name": "Shroud of Innocuity",
-  "school": "illusion"
-}, {
-  "name": "Verminous Transformation",
-  "school": "transmutation"
-}, {
-  "name": "Elemental Mastery",
-  "levels": [
+    "name": "Stabilize",
+    "components": [
+      "V", "S"
+    ]
+  }, {
+    "name": "Siege of Trees, Greater",
+    "levels": ["druid 9"]
+  }, {
+    "name": "Shapechanger’s Gift, Greater",
+    "levels": ["sorcerer/wizard 7"]
+  }, {
+    "name": "Sealed Life, Greater",
+    "levels": [
+      "spiritualist 6"
+    ]
+  }, {
+    "name": "Lash of the Astradaemon",
+    "levels": [
+      "cleric 6",
+      "magus 5",
+      "sorcerer/wizard 6",
+      "witch 6"
+    ]
+  }, {
+    "name": "Inflict Pain, Mass",
+    "levels": [
+      "antipaladin 4",
+      "inquisitor 5",
+      "medium 4",
+      "mesmerist 5",
+      "occultist 5",
+      "psychic 6",
+      "sorcerer/wizard 7",
+      "spiritualist 5",
+      "witch 7"
+    ]
+  }, {
+    "name": "Infernal Challenger",
+    "levels": [
+      "cleric 3",
+      "sorcerer/wizard 3",
+      "summoner 3"
+    ]
+  }, {
+    "name": "Defending Sword, Mass",
+    "levels": [
+      "sorcerer/wizard 9"
+    ],
+    "effect": "up to one sword per 3 levels"
+  }, {
+    "name": "Plague Bearer",
+    "levels": [
+      "alchemist 6",
+      "cleric/oracle 6",
+      "druid 6",
+      "inquisitor 6",
+      "sorcerer/wizard 7",
+      "witch 6"
+    ]
+  }, {
+    "name": "Marionette Possession",
+    "levels": [
+      "alchemist 3",
+      "mesmerist 3",
+      "psychic 3",
+      "sorcerer/wizard 3",
+      "summoner/unchained summoner 3",
+      "witch 3"
+    ]
+  }, {
+    "name": "Morning Sun",
+    "levels": [
+      "cleric/oracle 7",
+      "druid 7",
+      "shaman 7"
+    ]
+  }, {
+    "name": "Mydriatic Spontaneity, Mass",
+    "levels": [
+      "bard 5",
+      "mesmerist 5",
+      "psychic 6",
+      "sorcerer/wizard 7",
+      "witch 7"
+    ],
+    "targets": "one or more living creatures no two of which can be more than 30 ft. apart"
+  }, {
+    "name": "Rune of Durability",
+    "school": "transmutation",
+    "levels": [
+      "sorcerer/wizard 3"
+    ]
+  }, {
+    "name": "Suffocation, Mass",
+    "levels": [
+      "sorcerer/wizard 9",
+      "witch 9"
+    ]
+  }, {
+    "name": "Healing Leak",
+    "levels": [
+      "antipaladin 2",
+      "cleric 3",
+      "paladin 2",
+      "sorcerer/wizard 3",
+      "witch 3"
+    ]
+  }, {
+    "name": "Insect Scouts",
+    "school": "divination",
+    "description": "This spell summons one or more vermin to investigate a single location or building you can see. Your scouts must spend 1d6 hours investigating the target location, but need no oversight. When done, they return unerringly to you with their findings, traveling up to 1 mile per caster level you have to rejoin their master. Each insect’s size is Fine. Each insect has 1 hit point, AC 20 (+2 Dexterity, +8 size), a movement speed of 5 feet, a climb speed of 5 feet, and a fly speed of 20 feet (perfect maneuverability). The insects use your saving throw bonuses, have a total Perception skill bonus equal to 5 + 1/2 your caster level, and can’t attack. Because of their incredibly small size and magical nature, they can attempt Stealth checks to avoid being noticed even if they lack a source of cover or concealment, and they have a total Stealth skill bonus equal to 18 + 1/2 your caster level.\n\nEach scout that returns passes along memories of specific structural flaws, defenses, and alarms, granting you the ability to reroll one failed skill check per scout, as long as the skill check involves that specific location’s layout, such as a Stealth check to sneak in, a Disable Device check to silence an alarm, or a Perception check to notice a trap. If even one scout returns, you also gain a rough understanding of the building’s layout (at least, any portions your scouts could access). All insight (and the associated rerolls) fades 1 hour per caster level you have after the scouts return. Your insects remember nothing about creatures, and so provide no information about guardians or any conversations they may overhear.\n"
+  }, {
+    "name": "Locksight",
+    "school": "divination",
+    "levels": [
+      "alchemist 1",
+      "antipaladin 1",
+      "bard 1",
+      "inquisitor 1",
+      "sorcerer/wizard 1"
+    ],
+    "description": "The target can observe for 1 full round a lock that he is aware of (or object that includes a lock, such as a chest or door) that is within 60 feet to automatically determine whether it is open, closed, or jammed.\n\nIf the target creature is trained in Disable Device, by concentrating on a lock for 3 rounds, he can also determine the quality of the lock (simple, average, good, or superior). This spell does not enable the target to see hidden locks, such as those on secret doors.\n"
+  }, {
+    "name": "Sense Vitals",
+    "school": "divination"
+  }, {
+    "name": "Cursed Earth",
+    "descripters": [
+      "curse",
+      "evil",
+      "see text"
+    ],
+    "levels": [
+      "cleric/oracle 9",
+      "sorcerer/wizard 9",
+      "witch 9"
+    ]
+  }, {
+    "name": "Moonstruck",
+    "school": "enchantment",
+    "subschool": "compulsion",
+    "descripters": [
+      "emotion",
+      "mind-affecting"
+    ],
+    "levels": [
+      "bloodrager 4", "druid 4", "sorcerer/wizard 4", "witch 4"
+    ]
+  }, {
+    "name": "Energy Hack",
+    "descripters": [
+      "acid",
+      "cold",
+      "electricity",
+      "fire",
+      "see below"
+    ],
+    "levels": [
+      "sorcerer/wizard 4"
+    ]
+  }, {
+    "name": "Suggestion",
+    "levels": [
+      "bard 2",
+      "medium 2",
+      "mesmerist 2",
+      "occultist 3",
+      "psychic 2",
+      "sorcerer/wizard 3",
+      "witch 3"
+    ]
+  }, {
+    "name": "True Strike",
+    "school": "divination",
+    "levels": [
+      "alchemist 1",
+      "bloodrager 1",
+      "inquisitor 1",
+      "magus 1",
+      "psychic 1",
+      "sorcerer/wizard 1"
+    ]
+  }, {
+    "name": "Peace Bond",
+    "levels": [
+      "bard 1",
+      "cleric 1",
+      "druid 1",
+      "inquisitor 1",
+      "paladin 1",
+      "shaman 1",
+      "sorcerer/wizard 1",
+      "witch 1"
+    ]
+  }, {
+    "name": "Gullibility",
+    "levels": [
+      "antipaladin 3",
+      "bard 3",
+      "inquisitor 3",
+      "mesmerist 3",
+      "psychic 3",
+      "sorcerer/wizard 3",
+      "witch 3"
+    ]
+  }, {
+    "name": "Heal, Mass",
+    "levels": [
+      "cleric/oracle 9",
+      "shaman 9"
+    ]
+  }, {
+    "name": "Dimensional Lock",
+    "levels": [
+      "cleric/oracle 8",
+      "sorcerer/wizard 8",
+      "summoner 6"
+    ]
+  }, {
+    "name": "Planar Binding, Greater",
+    "levels": [
+      "sorcerer/wizard 8",
+      "summoner 6"
+    ]
+  }, {
+    "name": "Blacklight(3.5E)",
+    "levels": [
+      "sorcerer/wizard 3"
+    ]
+  }, {
+    "name": "Watchful Animal",
+    "school": "divination"
+  }, {
+    "name": "Enemy Insight",
+    "school": "divination"
+  }, {
+    "name": "Harvest Knowledge",
+    "school": "divination"
+  }, {
+    "name": "Discern Next of Kin",
+    "school": "divination"
+  }, {
+    "name": "Arcane Mark",
+    "school": "universal"
+  }, {
+    "name": "Brow Gasher",
+    "school": "necromancy"
+  }, {
+    "name": "Limited Wish",
+    "area": "see text",
+    "target": "see text",
+    "effect": "see text",
+    "school": "universal"
+  }, {
+    "name": "Permanency",
+    "school": "universal",
+    "descripters": []
+  }, {
+    "name": "Wish",
+    "school": "universal",
+    "area": "see text",
+    "target": "see text",
+    "effect": "see text"
+  }, {
+    "name": "Aquatic Trail",
+    "school": "divination"
+  }, {
+    "name": "Beastspeak",
+    "school": "divination"
+  }, {
+    "name": "Jungle Mind",
+    "school": "divination"
+  }, {
+    "name": "Speak With Waves",
+    "school": "divination"
+  }, {
+    "name": "Tectonic Communion",
+    "school": "divination"
+  }, {
+    "name": "Cleromancy",
+    "school": "divination"
+  }, {
+    "name": "Contact Nalfeshnee",
+    "school": "divination"
+  }, {
+    "name": "Detect Demon",
+    "school": "divination"
+  }, {
+    "name": "Karmic Blessing",
+    "school": "divination"
+  }, {
+    "name": "Lay of the Land",
+    "school": "divination"
+  }, {
+    "name": "Air Walk, Communal",
+    "school": "transmutation"
+  }, {
+    "name": "Authenticating Gaze",
+    "school": "divination"
+  }, {
+    "name": "Beloved of the Forge",
+    "school": "divination"
+  }, {
+    "name": "Starsight",
+    "school": "divination"
+  }, {
+    "name": "True Skill",
+    "school": "divination"
+  }, {
+    "name": "Akashic Communion",
+    "school": "divination"
+  }, {
+    "name": "Collaborative Thaumaturgy",
+    "school": "universal"
+  }, {
+    "name": "Commune With Texts",
+    "school": "divination"
+  }, {
+    "name": "Ears of the City",
+    "school": "divination"
+  }, {
+    "name": "Prestidigitation",
+    "school": "universal"
+  }, {
+    "name": "Probe History (Half-Elf)",
+    "school": "divination"
+  }, {
+    "name": "Speak Local Language",
+    "school": "divination"
+  }, {
+    "name": "True Appraisal",
+    "school": "divination"
+  }, {
+    "name": "Twisted Futures",
+    "school": "divination"
+  }, {
+    "name": "Lost Legacy",
+    "school": "enchantment"
+  }, {
+    "name": "Inhibiting Patterns",
+    "school": "illusion"
+  }, {
+    "name": "Shroud of Innocuity",
+    "school": "illusion"
+  }, {
+    "name": "Verminous Transformation",
+    "school": "transmutation"
+  }, {
+    "name": "Elemental Mastery",
+    "levels": [
       "arcanist 4",
       "bloodrager 4",
       "druid 4",
@@ -357,5 +357,30 @@
       "ranger 4",
       "sorcerer 4",
       "wizard 4"
-  ]
-  }]
+    ]
+  },
+  {
+    "name": "Anywhere but Here",
+    "description": "This spell functions similarly to [_plane shift_](/spells/plane-shift), but instead of transporting the targets to a destination near an intended location on a specific plane, _anywhere but here_ transports affected creatures to a random plane. A creature can be affected by _anywhere but here_ only if it is currently not on its home plane (although targets can, by chance, end up traveling to their home plane as a result of this spell). Subjects always appear in a location that is not inherently harmful, but the exact destination is otherwise random. The specific plane is determined by the table below; the location on the destination plane where the transported creatures arrive is completely subject to the GM’s whim.\n\n<table class=\"inner\"><tbody><tr><td><b>d%</b></td><td><b>Planar Destination</b></td></tr><tr><td>1-7</td><td>Abyss</td></tr><tr><td>8-14</td><td>Abaddon</td></tr><tr><td>15-20</td><td>Hell</td></tr><tr><td>21-24</td><td>Shadow Plane</td></tr><tr><td>25-28</td><td>First World</td></tr><tr><td>29-35</td><td>Maelstrom</td></tr><tr><td>36-42</td><td>Boneyard</td></tr><tr><td>43-49</td><td>Axis</td></tr><tr><td>50-56</td><td>Ethereal Plane</td></tr><tr><td>57-63</td><td>Elysium</td></tr><tr><td>64-70</td><td>Nirvana</td></tr><tr><td>71-77</td><td>Heaven</td></tr><tr><td>78-84</td><td>Astral Plane</td></tr><tr><td>85-90</td><td>Random demiplane</td></tr><tr><td>91-95</td><td>Material Plane (random world)</td></tr><tr><td>96-100</td><td>GM's choice</td></tr></tbody></table>\n\nA creature that is transported by _anywhere but here_ cannot be affected by a subsequent casting of _anywhere but here_ for 24 hours afterward (but can be affected normally by other forms of planar travel)."
+  },
+  {
+    "name": "Bestow Planar Infusion I",
+    "description": "This spell draws upon the latent planar energy of the caster’s surroundings, allowing her to temporarily infuse a creature with the plane’s power. The touched creature gains that plane’s basic infusion for the spell’s duration. This spell has no effect if cast on the Material Plane, and it ends as soon as the spell’s target leaves the plane with which it has been infused. Details on planar infusions can be found in each plane’s Infusion section.  \n  \nOnce a creature gains the benefits of _bestow planar infusion I_, it remains attuned to that plane for 24 hours. Additional castings of _bestow planar infusion I_ during this time bestow the same infusion that was granted by the initial casting that day. Planar infusions that can be used a limited number of times per day are not refreshed by multiple castings of _bestow planar infusion I_."
+  },
+  {
+    "name": "False Resurrection, Greater",
+    "description": "This spell functions as false resurrection except that it calls a belier devil with the young simple template (_Pathfinder RPG Bestiary 2 85, 292_) to possess the body and all parts of [_false resurrection_](/spells/false-resurrection) that function like _resurrection instead function like _true resurrection_.  \n  \nAttempts to identify _greater false resurrection_ with a skill check incorrectly identify it as _true resurrection_ (see the ruse descriptor). A fooled viewer mistakes _greater false resurrection’s_ aura as the lingering aura of an instantaneous conjuration effect."
+  },
+  {
+    "name": "Phantom Steed",
+    "effect": "one quasi-real, horselike creature"
+  },
+  {
+      "name": "Shield Of Shards",
+      "description": "This defensive spell must be cast on a shield you are currently wielding, and fractures the shield into two shards, plus one additional shard per 2 caster levels (to a maximum of 12 shards at 20th level). While _shield of shards is active, you lose your shield’s bonus to AC as its broken pieces orbit you. On your turn, you can direct the shards to attack an adjacent opponent as a move action. The shards’ attack bonus is equal to your caster level + the modifier for the ability score that determines your spell save DCs. The shards deal an amount of slashing and piercing damage equal to 1d4 points + 1 point per shard beyond the first, and have a threat range of 19–20. They are considered magic weapons for the purpose of bypassing damage reduction. Additionally, if your shield is made from a special material (such as adamantine), the shards penetrate damage reduction and hardness as if they were weapons made from the same material.  \n  \nAt the end of this spell’s duration, the shards reform into their original shield form. You regain its shield bonus to AC, provided you still have a free hand in which to wield it. Otherwise, the shield falls at your feet in your square."
+  },
+  {
+      "name": "Spiritual Squire",
+      "description": "This spell causes an ally made of pure force to appear in a single 5-foot square within range. The ally takes the form of a servant of your god (if any) or an ancestor. The spiritual squire occupies its space, though you and your allies can move through it, since it is your ally. While the spiritual squire appears to wear armor and carry a weapon, it cannot make attacks and does not threaten any spaces. On your turn, the spiritual squire can do one of the following: retrieve one stowed item from your possessions, carry an object weighing no more than 10 pounds per caster level, hand you an object it is carrying, perform the aid another action on your behalf or for one of your allies, or help one creature of your choice don armor (which then takes half the normal time). When the spiritual squire attempts the aid another action in combat, its attack bonus is equal to your base attack bonus + your Wisdom modifier.  \n  \nEach round after the first as a swift action, you can order the spiritual squire to move. It has a speed of 30 feet. Being a construct of force, the spiritual squire cannot be harmed by any physical attacks, but _disintegrate, dispel magic, a _rod of cancellation, or a _sphere of annihilation affects it. A spiritual ally’s AC against touch attacks is 10."
+  }
+]
