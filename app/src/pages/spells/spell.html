@@ -1,11 +1,11 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-  <div class="modal-dialog modal-lg" role="document">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+  <div class="modal-dialog modal-lg" role="document"> -->
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">{{$ctrl.root.spell.name}}</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="fas fa-times"></span>
-        </button>
+        </button> -->
       </div>
       <div class="modal-body">
         <div>
@@ -24,11 +24,12 @@
           </div>
           <!-- <p ng-repeat="paragraph in $ctrl.root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
           <ng-bind-html ng-bind-html="$ctrl.root.spellDescription"></ng-bind-html>
+          <div ng-if="$root.spellSource"><small><ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html></small></div>
         </div>
       </div>
       <!-- <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div> -->
     </div>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
