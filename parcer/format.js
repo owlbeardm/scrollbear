@@ -86,7 +86,13 @@ async function format() {
       }
       return 0;
     });
-    fs.writeFileSync('resources/spells.json', JSON.stringify(spells, function replacer(key, value) {
+    const unique = ["Status, Greater"];
+    const resultSpells = spells.filter((spell) => {
+      const result = !unique.includes(spell.name);
+      unique.push(spell.name);
+      return result;
+    });
+    fs.writeFileSync('resources/spells.json', JSON.stringify(resultSpells, function replacer(key, value) {
       if (key === 'url') {
         return undefined;
       }

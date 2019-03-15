@@ -145,12 +145,12 @@ function findDescription(element, spell) {
 function populateSpell(article, spell) {
   article.firstChild.childNodes.forEach((child, index, elements) => {
     const nextChild = elements[index + 1];
-    if (child.toString() == "<b>School</b>") {
+    if (!spell.school && child.toString() == "<b>School</b>") {
       spell.school = parseSpellSchool(nextChild.text);
       spell.subschool = parseSpellSubschool(nextChild.text);
       spell.descripters = parseSpellDescriptor(nextChild.text);
     }
-    if (child.toString() == "<b>Level</b>") {
+    if (!spell.levels && child.toString() == "<b>Level</b>") {
       spell.levels = nextChild.text;
     }
     addValue(spell, child, nextChild, '<b>Casting Time</b>', 'castingTime');

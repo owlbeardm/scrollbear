@@ -334,4 +334,28 @@
 }, {
   "name": "Twisted Futures",
   "school": "divination"
-}]
+}, {
+  "name": "Lost Legacy",
+  "school": "enchantment"
+}, {
+  "name": "Inhibiting Patterns",
+  "school": "illusion"
+}, {
+  "name": "Shroud of Innocuity",
+  "school": "illusion"
+}, {
+  "name": "Verminous Transformation",
+  "school": "transmutation"
+}, {
+  "name": "Elemental Mastery",
+  "levels": [
+      "arcanist 4",
+      "bloodrager 4",
+      "druid 4",
+      "hunter 4",
+      "magus 4",
+      "ranger 4",
+      "sorcerer 4",
+      "wizard 4"
+  ]
+  }]
