@@ -87,6 +87,7 @@ angular.module('app.services').factory('spellService', [
       $rootScope.spell = spell;
       $rootScope.description = spell.description;
       $rootScope.spellDescription = SpellService.getSpellDescription(spell.description);
+      $rootScope.spellSource = SpellService.getSpellSource(spell.source);
       const popup = angular.element("#modalSpell");
       popup.modal('show');
     }
@@ -98,6 +99,15 @@ angular.module('app.services').factory('spellService', [
       });
       let html = `<div>${converter.makeHtml(md)}</div>`;
       html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
+      return html;
+    }
+
+    SpellService.getSpellSource = function(md) {
+      const converter = new showdown.Converter({
+        tables: true,
+        strikethrough: true
+      });
+      let html = `<div>${converter.makeHtml(md)}</div>`;
       return html;
     }
 

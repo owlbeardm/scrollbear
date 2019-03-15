@@ -3,7 +3,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <td class="float-right">
-
         </td>
         <h3 class="modal-title" id="modalSpellLabel">
           <a href="#" class="mr-2" ng-click="$ctrl.changeFav()">
@@ -12,7 +11,6 @@
           </a>
           {{$root.spell.name}}
         </h3>
-
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="fas fa-times"></span>
         </button>
@@ -34,9 +32,11 @@
           </div>
           <!-- <p ng-repeat="paragraph in $root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
           <ng-bind-html ng-bind-html="$root.spellDescription"></ng-bind-html>
+          <div ng-if="$root.spellSource"><small><ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html></small></div>
         </div>
       </div>
       <div class="modal-footer">
+
         <!-- <button type="button" class="btn btn-sm btn-primary" disabled data-dismiss="modal">Prepare</button> -->
         <!-- <button type="button" class="btn btn-sm" data-dismiss="modal">Add to spellbook</button> -->
         <button type="button" class="btn" data-dismiss="modal">Close</button>
