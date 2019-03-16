@@ -7,14 +7,16 @@
   "author": "Mikita Kukavenka <godinfrog@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "make-url": "node parcer/make_url.js",
+    "get-spells-html": "node parcer/get_spells_html.js",
+    "parse-spells": "node parcer/parse_spells.js",
+    "format": "node parcer/format.js",
+    "fields": "node parcer/fields.js",
+    "sitemap": "node parcer/sitemap.js",
     "build": "webpack --config webpack.js --mode=production",
     "build-dev": "webpack --config webpack.js --mode=development",
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
-    "parse": "node parcer/script.js",
-    "format": "node parcer/format.js",
-    "fields": "node parcer/fields.js",
-    "sitemap": "node parcer/sitemap.js",
     "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "yarn parse && yarn commit",
     "test": "yarn karma start --singleRun"
@@ -60,9 +62,9 @@
     "turndown-plugin-gfm": "^1.0.2",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
+    "webpack-dev-server": "^3.1.11",
     "webpack-merge": "^4.1.4",
     "webpack-pwa-manifest": "^4.0.0",
-    "workbox-webpack-plugin": "^4.1.0"
+    "workbox-webpack-plugin": "^3.6.3"
   }
 }

@@ -9,7 +9,7 @@ async function fields() {
         if (key === 'description' ||
           key === 'url' ||
           key === 'name' ||
-          // key === 'levels' ||
+          key === 'source' ||
           key === 'components'
         ) {
           return;
