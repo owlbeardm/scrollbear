@@ -25,3 +25,9 @@ appComponents.component('pageFooter', PageFooterComponent);
 
 import FilterComponent from './filter/filter.component.js';
 appComponents.component('filter', FilterComponent);
+
+import SidebarToggleComponent from './sidebar-toggle/sidebar-toggle.component.js';
+appComponents.component('sidebarToggle', SidebarToggleComponent);
+
+import SidebarComponent from './sidebar/sidebar.component.js';
+appComponents.component('sidebar', SidebarComponent);
