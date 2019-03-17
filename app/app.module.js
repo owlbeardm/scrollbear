@@ -179,7 +179,8 @@ scrollbearApp.run([
   '$location',
   '$state',
   '$rootScope',
-  function($log, $transitions, $location, $state, $rootScope) {
+  'sidebarService',
+  function($log, $transitions, $location, $state, $rootScope, sidebarService) {
     let prevSpellsLocation;
     $transitions.onStart({}, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
@@ -189,6 +190,10 @@ scrollbearApp.run([
         $location.search({});
         $location.path(p);
       }
+    });
+    $transitions.onFinish({}, function(transition) {
+      console.log("onFinish Transition");
+      sidebarService.disableSidebar();
     });
     $transitions.onStart({
       from: 'spells'
