@@ -1,13 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
-    <div class="navbar-wrapper">
+    <div class="navbar-wrapper" style="width: 100%;">
       <a ui-sref="main"><img src="../../../../assets/header.png" style="width: 72px;" class="img-fluid float-left" alt="Responsive image"></a>
-      <h2 class="text-light ml-3 align-top">
-        <span>{{$ctrl.title}}</span>
-      </h2>
-      <h6 class="text-primary ml-3 align-top" ng-if="$ctrl.subtitle">
-        <span>{{$ctrl.subtitle}}</span>
-      </h6>
+      <div class="ml-4 container">
+        <div class="row">
+          <h3 class="text-light mt-1 mb-1">
+            <span>{{$ctrl.title}}</span>
+          </h3>
+        </div>
+        <div class="row">
+          <h6 class="text-primary" ng-if="$ctrl.subtitle">
+            <span>{{$ctrl.subtitle}}</span>
+          </h6>
+        </div>
+      </div>
+      <sidebar-toggle></sidebar-toggle>
     </div>
+
   </div>
+
 </nav>
