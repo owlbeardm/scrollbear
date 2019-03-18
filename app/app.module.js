@@ -146,9 +146,12 @@ scrollbearApp.config([
         '$rootScope',
         '$state',
         function(spell, $rootScope, $state) {
-          const popup = angular.element("#exampleModal");
-          console.log('spells onEnter', spell, popup);
-          popup.modal('show');
+          // const popup = angular.element("#exampleModal");
+          // popup.modal('hide');
+          // const modalBackdrop = angular.element('.modal-backdrop');
+          // modalBackdrop.remove();
+          // const body = angular.element('body');
+          // body.removeClass('modal-open');
         }
       ],
       onExit: [
@@ -190,9 +193,16 @@ scrollbearApp.run([
         $location.search({});
         $location.path(p);
       }
+      const popup = angular.element("#modalSpell");
+      popup.modal('hide');
+      const modalBackdrop = angular.element('.modal-backdrop');
+      modalBackdrop.remove();
+      const body = angular.element('body');
+      body.removeClass('modal-open');
     });
     $transitions.onFinish({}, function(transition) {
       console.log("onFinish Transition");
+
       sidebarService.disableSidebar();
     });
     $transitions.onStart({
