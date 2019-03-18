@@ -14,6 +14,9 @@ appComponents.component('modalSpell', ModalSpell);
 import PreparedSpelLevel from './prepared-spell-level/prepared-spell-level.component.js';
 appComponents.component('preparedSpellLevel', PreparedSpelLevel);
 
+import SpellbookSpelllistLightComponent from './spellbook-spelllist-light/spellbook-spelllist-light.component.js';
+appComponents.component('spellbookSpelllistLight', SpellbookSpelllistLightComponent);
+
 import SpellListComponent from './spell-list/spell-list.component.js';
 appComponents.component('spellList', SpellListComponent);
 

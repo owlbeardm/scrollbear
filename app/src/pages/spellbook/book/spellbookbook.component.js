@@ -1,7 +1,7 @@
 "use strict";
 
 function SpellbookBookController($log, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+  $log.debug('SpellbookBookController create');
   const ctrl = this;
   const SELECTED_CLASS = "SELECTED_CLASS";
 

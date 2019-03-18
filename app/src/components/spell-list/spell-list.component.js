@@ -1,12 +1,13 @@
 "use strict";
 
 function SpellListController($log, $state, $rootScope, $scope, $timeout, filterService, spellService, CLASSES, $window, $document) {
-  $log.debug('SpellController create');
+  $log.debug('SpellListController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {
     $log.debug("SpellListController init");
     ctrl.classesC = CLASSES
+
   }
 
   ctrl.chooseSpell = function(spell) {
@@ -19,6 +20,11 @@ function SpellListController($log, $state, $rootScope, $scope, $timeout, filterS
 
   ctrl.changeFav = function(spell) {
     filterService.changeFav(spell);
+  }
+
+  ctrl.click = function(name) {
+    const top = $document.scrollTop();// angular.element('#heading' + name).offset().top;
+    $timeout($document.scrollTop(top));
   }
 
 }

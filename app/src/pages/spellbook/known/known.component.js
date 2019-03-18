@@ -1,7 +1,7 @@
 "use strict";
 
 function KnownController($log, $state, filterService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+  $log.debug('KnownController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {
