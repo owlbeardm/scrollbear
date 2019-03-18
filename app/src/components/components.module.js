@@ -17,6 +17,9 @@ appComponents.component('preparedSpellLevel', PreparedSpelLevel);
 import SpellListComponent from './spell-list/spell-list.component.js';
 appComponents.component('spellList', SpellListComponent);
 
+import SpellListLightComponent from './spell-list/spell-list-light.component.js';
+appComponents.component('spellListLight', SpellListLightComponent);
+
 import PageHeaderComponent from './page-header/page-header.component.js';
 appComponents.component('pageHeader', PageHeaderComponent);
 

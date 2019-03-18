@@ -1,22 +1,17 @@
 "use strict";
 
-function SpellListController($log, $state, $scope, $timeout, filterService, spellService, CLASSES, $window, $document) {
+function SpellListLightController($log, $state, $scope, $timeout, filterService, spellService, $window, $document) {
   $log.debug('SpellController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {
-    $log.debug("SpellListController init");
-    ctrl.classesC = CLASSES;
-    let i = 0;
+    $log.debug("SpellListLightController init");
     ctrl.redraw();
     angular.element($window).bind('scroll', function() {
       ctrl.redraw();
     })
     angular.element($window).bind('resize', function() {
       ctrl.redraw();
-    });
-    $scope.$watch('$ctrl.classes', function(newClasses, oldClasses) {
-      // $scope.$digest();
     });
   }
 
@@ -29,23 +24,21 @@ function SpellListController($log, $state, $scope, $timeout, filterService, spel
         ctrl.elementHeight = 0;
         return;
       }
-
     }
     ctrl.scroll = $document.scrollTop();
-    ctrl.offsetTop = angular.element($document.find('#list-new')).offset();
-    if (ctrl.offsetTop && ctrl.scroll > ctrl.offsetTop.top + ctrl.spells[0].length * 52) {
+    ctrl.offsetTop = angular.element($document.find('#list-new-'+ctrl.collapseName)).offset();
+    if (ctrl.offsetTop && ctrl.scroll > ctrl.offsetTop.top + ctrl.spells.length * 52) {
       return;
     }
-    ctrl.elementHeight = ctrl.spells[0].length*52;
+    ctrl.elementHeight = ctrl.spells.length*52;
     ctrl.height = $window.innerHeight;
     if (ctrl.offsetTop) {
-      if (ctrl.scroll > ctrl.offsetTop.top + ctrl.spells[0] * 52) {
+      if (ctrl.scroll > ctrl.offsetTop.top + ctrl.spells * 52) {
         return;
       }
       const elements = ctrl.height / 52  + 1;
-      // console.log(Math.floor((ctrl.scroll - ctrl.offsetTop.top)) / 52));
-      ctrl.start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 52)), ctrl.spells[0].length);
-      ctrl.spellsL = ctrl.spells[0].slice(ctrl.start, ctrl.start + elements);
+      ctrl.start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 52)), ctrl.spells.length);
+      ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + elements);
       $scope.$digest();
     }
   }
@@ -64,13 +57,13 @@ function SpellListController($log, $state, $scope, $timeout, filterService, spel
 
 }
 
-const SpellListComponent = {
-  template: require('./spell-list.html'),
-  controller: ['$log', '$state', '$scope', '$timeout', 'filterService', 'spellService', 'CLASSES', '$window', '$document', SpellListController],
+const SpellListLightComponent = {
+  template: require('./spell-list-light.html'),
+  controller: ['$log', '$state', '$scope', '$timeout', 'filterService', 'spellService', '$window', '$document', SpellListLightController],
   bindings: {
     spells: '<',
-    className: '<'
+    collapseName: '<'
   }
 }
 
-export default SpellListComponent;
+export default SpellListLightComponent;
