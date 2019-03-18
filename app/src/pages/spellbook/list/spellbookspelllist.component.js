@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellbookSpellListController($log, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
+function SpellbookSpellListController($log, $state, $scope, $document, $timeout, notificationService, filterService, spellService, spellbookService, CLASSES) {
   $log.debug('SpellbookSpellListController create');
   const ctrl = this;
   const SELECTED_CLASS = "SELECTED_CLASS";
@@ -143,6 +143,11 @@ function SpellbookSpellListController($log, $state, $scope, notificationService,
     return allSells;
   }
 
+  ctrl.click = function(name) {
+    const top = $document.scrollTop();// angular.element('#heading' + name).offset().top;
+    $timeout($document.scrollTop(top));
+  }
+
 }
 
 const SpellbookSpellListComponent = {
@@ -151,6 +156,8 @@ const SpellbookSpellListComponent = {
     '$log',
     '$state',
     '$scope',
+    '$document',
+    '$timeout',
     'notificationService',
     'filterService',
     'spellService',

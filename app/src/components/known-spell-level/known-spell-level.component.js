@@ -1,7 +1,7 @@
 "use strict";
 
 function KnownSpelLevelController($log, $state, filterService, focusService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+  $log.debug('KnownSpelLevelController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {

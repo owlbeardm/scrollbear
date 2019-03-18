@@ -1,0 +1,24 @@
+<div id="list-new-{{$ctrl.collapseName}}" style="height:{{$ctrl.elementHeight}}px; padding-top:{{$ctrl.start*40}}px">
+  <table class="table table-sm">
+    <tbody>
+      <tr ng-repeat="spell in $ctrl.spellsL track by $index">
+        <td ng-click="$ctrl.chooseSpell(spell)">
+          <a href="#" class="text-dark">
+            {{spell.name}}
+          </a>
+        </td>
+        <td class="float-right mb-1">
+          <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}" ng-disable="!$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)" ng-click="$ctrl.addSpell(key, spell)">
+            <span class="badge badge-secondary" ng-if="$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)"><small>{{$ctrl.isSpellPrepared(spell.name)}}</small></span>
+            <i class="fas fa-scroll"></i>
+            <div class="ripple-container"></div>
+          </a>
+          <a href="#" ng-if="$ctrl.spellbook" class="ml-2 mr-3 text-primary" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name)}" ng-disable="$ctrl.isInSpellBook(spell.name)" ng-click="$ctrl.addToBook(key, spell)">
+            <i class="fas fa-book"></i>
+            <div class="ripple-container"></div>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

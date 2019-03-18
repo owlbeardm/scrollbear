@@ -1,7 +1,7 @@
 "use strict";
 
 function NewCharacterController($log, $state, spellbookService, CLASSES) {
-  $log.debug('CharactersController create');
+  $log.debug('NewCharacterController create');
   const ctrl = this;
 
   ctrl.$onInit = function() {
