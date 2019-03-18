@@ -1,7 +1,7 @@
 "use strict";
 
 function MainController(notificationService, filterService, spellService, $window, $state, $scope, $log, CLASSES) {
-  $log.debug('SpellController create');
+  $log.debug('MainController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
   const SELECTED_CLASS = "SELECTED_CLASS";

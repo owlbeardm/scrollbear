@@ -1,0 +1,19 @@
+<div id="list-new-{{$ctrl.collapseName}}" style="height:{{$ctrl.elementHeight}}px; padding-top:{{$ctrl.start*52}}px">
+  <table class="table table-sm" style="">
+    <tbody>
+      <tr ng-repeat="spell in $ctrl.spellsL track by $index">
+        <td ng-click="$ctrl.chooseSpell(spell)">
+          <a href="#" class="text-dark">
+            {{spell.name}}
+          </a>
+        </td>
+        <td class="float-right">
+          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-lg fa-star" ng-class="{'fas text-primary': $ctrl.isFav(spell), 'far text-muted': !$ctrl.isFav(spell)}"></i>
+            <div class="ripple-container"></div>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
