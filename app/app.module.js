@@ -71,6 +71,12 @@ scrollbearApp.config([
     });
 
     $stateProvider.state({
+      name: 'license',
+      url: '/legal',
+      component: 'license'
+    });
+
+    $stateProvider.state({
         name: 'spellbook',
         url: '/spellbook',
         component: 'spellbook',
