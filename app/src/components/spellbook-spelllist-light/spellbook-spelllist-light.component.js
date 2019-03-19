@@ -33,8 +33,12 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           return;
         }
         const elements = ctrl.height / 40 + 2;
-        ctrl.start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 40)), ctrl.spells.length);
-        ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + elements);
+        const start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 40)), ctrl.spells.length);
+        if (elements != ctrl.elements || start != ctrl.start) {
+          ctrl.start = start;
+          ctrl.elements = elements;
+          ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+        }
       }
     }
   }

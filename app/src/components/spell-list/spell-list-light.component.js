@@ -31,8 +31,12 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
           return;
         }
         const elements = ctrl.height / 52 + 2;
-        ctrl.start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 52)), ctrl.spells.length);
-        ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + elements);
+        const start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 52)), ctrl.spells.length);
+        if (elements != ctrl.elements || start != ctrl.start) {
+          ctrl.start = start;
+          ctrl.elements = elements;
+          ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+        }
       }
     }
   }
