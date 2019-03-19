@@ -24,5 +24,8 @@ pagesComponents.component('spellbookBook', SpellbookBookComponent);
 import MainComponent from './main/main.component.js';
 pagesComponents.component('main', MainComponent);
 
+import LicenseComponent from './license/license.component.js';
+pagesComponents.component('license', LicenseComponent);
+
 import SpellComponent from './spells/spell.component.js';
 pagesComponents.component('spell', SpellComponent);

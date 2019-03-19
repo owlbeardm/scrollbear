@@ -107,20 +107,23 @@ module.exports = (env, argv) => {
           styles: {
             name: 'styles',
             test: /\.css$/,
-            chunks: 'all',
-            enforce: true
+            // chunks: 'all',
+            enforce: true,
+            maxSize: 244000
           },
           res: {
             name: 'res',
             test: /\.json/,
-            chunks: 'all',
-            enforce: true
+            // chunks: 'all',
+            enforce: true,
+            maxSize: 244000
           },
           vendor: {
             name: 'vendor',
             test: /[\\/]node_modules[\\/]/,
-            chunks: 'all',
-            enforce: true
+            // chunks: 'all',
+            enforce: true,
+            maxSize: 244000
           }
         }
       }
