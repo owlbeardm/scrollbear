@@ -20,6 +20,7 @@ function ModalSpellController($log, $rootScope, $location, spellService, filterS
 
   ctrl.changeFav = function(spell) {
     filterService.changeFav($rootScope.spell);
+    ctrl.isFav = filterService.isFav($rootScope.spell);
   }
 }
 

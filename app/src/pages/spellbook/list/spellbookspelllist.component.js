@@ -10,8 +10,6 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
     if (!spellbookService.selectedCharacter) {
       $state.go('spellbook.characters');
     }
-    ctrl.prepared = spellbookService.selectedCharacter.prepared;
-    ctrl.spellbook = spellbookService.selectedCharacter.spellbook;
     ctrl.classes = CLASSES;
     ctrl.classSelected = spellbookService.selectedCharacter.class;
     ctrl.setClass();
