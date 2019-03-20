@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.051b9e055e47abc2788981ce8314cc3a.js"
+  "precache-manifest.73cf835aeb252cc8d5061d67433abf9e.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -22,6 +22,8 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
