@@ -8,7 +8,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
@@ -107,9 +107,9 @@ module.exports = (env, argv) => {
           styles: {
             name: 'styles',
             test: /\.css$/,
-            // chunks: 'all',
+            chunks: 'all',
             enforce: true,
-            maxSize: 244000
+            // maxSize: 244000
           },
           res: {
             name: 'res',
@@ -144,7 +144,7 @@ module.exports = (env, argv) => {
         windows: true
       }
     }));
-    config.plugins.push(new WorkboxPlugin.GenerateSW({
+    config.plugins.push(new GenerateSW({
       clientsClaim: true,
       skipWaiting: true
     }));
