@@ -22,6 +22,9 @@ angular.module('app.services').factory('spellService', [
     SpellService.getSpellsSplited = function() {
       console.time("SpellService.getSpellsSplited");
       const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
+      if(spellsTmp.length < 10){
+        console.log(spellsTmp);
+      }
       const allSells = {};
       spellsTmp.forEach((value) => {
         const place = value.levels.reduce((classAccumulator, classLevel) => {

@@ -35,6 +35,13 @@
             </select>
           </div>
         </div>
+        <div class="form-row">
+          <div class="col col-centered ">
+            <select class="form-control" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected">
+              <option ng-repeat="(key, value) in $ctrl.castingTimes" value="{{key}}">{{value.name}}</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="form-row">
         <div class="col">

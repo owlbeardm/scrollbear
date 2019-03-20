@@ -2,7 +2,7 @@
   There are no prepared spells! You can add ones from <a ui-sref="spellbook.list" class="alert-link">spell list</a>.
 </div>
 
-<button ng-if='$ctrl.total' ng-click="$ctrl.resetCast()" class='btn btn-primary mb-3 float-right mr-4'>Reset cast</button>
+<button ng-if='$ctrl.total' ng-click="$ctrl.resetCast()" class='btn btn-primary mb-3 float-right mr-4'><i class="fas fa-redo mr-1"></i> Reset spell slots</button>
 
 <div ng-if='$ctrl.total' class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">

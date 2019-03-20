@@ -5,12 +5,14 @@ angular.module('app.services').factory('filterService', [
   '$window',
   'CLASSES',
   'SCHOOLS',
-  function($log, $window, CLASSES, SCHOOLS) {
+  'CASTING_TIME',
+  function($log, $window, CLASSES, SCHOOLS, CASTING_TIME) {
     const FilterService = {};
     const FAV_SPELLS = "FAV_SPELLS";
     const FAV_ONLY = "FAV_ONLY";
     const localStorage = $window['localStorage'];
     FilterService.school = 'any';
+    FilterService.castingTime = 'any';
 
     FilterService.favOnly = JSON.parse(localStorage.getItem(FAV_ONLY)) ?
       JSON.parse(localStorage.getItem(FAV_ONLY)) :
@@ -36,6 +38,13 @@ angular.module('app.services').factory('filterService', [
           include = include && SCHOOLS[FilterService.school].search.includes(spell.school);
         } else {
           include = include && SCHOOLS[FilterService.school].search(spell);
+        }
+      }
+      if (include) {
+        if (Array.isArray(CASTING_TIME[FilterService.castingTime].search)) {
+          include = include && CASTING_TIME[FilterService.castingTime].search.includes(spell.castingTime);
+        } else {
+          include = include && CASTING_TIME[FilterService.castingTime].search(spell);
         }
       }
       return include;
