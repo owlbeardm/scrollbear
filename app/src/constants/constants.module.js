@@ -68,7 +68,7 @@ appConstants.constant('CLASSES', {
   },
   'paladin': {
     name: 'Paladin',
-    search: ['paladin']
+    search: [/^paladin/gi]
   },
   'psychic': {
     name: 'Psychic',
@@ -96,7 +96,11 @@ appConstants.constant('CLASSES', {
   },
   'summoner': {
     name: 'Summoner',
-    search: ['summoner']
+    search: [/^summoner/gi]
+  },
+  'summoner (unchained)': {
+    name: 'Summoner Unchained',
+    search: [/summoner \(unchained\)/gi]
   },
   'warpriest': {
     name: 'Warpriest',
@@ -155,6 +159,65 @@ appConstants.constant('SCHOOLS', {
     name: 'Other',
     search: (spell) => {
       return !['transmutation', 'conjuration', 'evocation', 'enchantment', 'abjuration', 'necromancy', 'divination', 'illusion'].includes(spell.school)
+    }
+  }
+});
+
+appConstants.constant('CASTING_TIME', {
+  "any": {
+    name: 'Any',
+    search: (spell) => {
+      return true;
+    }
+  },
+  "1 standard action": {
+    name: '1 standard action',
+    search: ['1 standard action']
+  },
+  "1 immediate action": {
+    name: '1 immediate action',
+    search: ['1 immediate action']
+  },
+  "1 swift action": {
+    name: '1 swift action',
+    search: ['1 swift action']
+  },
+  "1 full-round action": {
+    name: '1 full-round action',
+    search: ['1 full-round action', '1 full-round action, special see below']
+  },
+  "1 round": {
+    name: '1 round',
+    search: ['1 round', '1 full round']
+  },
+  "3 rounds": {
+    name: '3 rounds',
+    search: ['3 rounds']
+  },
+  "10 minutes": {
+    name: '10 minutes',
+    search: ['10 minutes', '10 minutes see text', '10 minutes (see text)']
+  },
+  "30 minutes": {
+    name: '30 minutes',
+    search: ['30 minutes']
+  },
+  "1 hour": {
+    name: '1 hour',
+    search: ['1 hour']
+  },
+  "8 hours": {
+    name: '8 hours',
+    search: ['8 hours']
+  },
+  "24 hours": {
+    name: '24 hours',
+    search: ['24 hours']
+  },
+  "other": {
+    name: 'Other',
+    search: (spell) => {
+      return !['1 standard action', '1 immediate action', '1 swift action', '1 full-round action', '1 round', '1 full round', '3 rounds', '10 minutes', '30 minutes', '1 hour', '8 hours', '24 hours'].includes(spell.school)
     }
   }
 });

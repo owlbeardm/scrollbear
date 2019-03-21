@@ -15,6 +15,11 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
 
   }
 
+  ctrl.$onChanges = function(ch) {
+    ctrl.elementHeight = ctrl.spells.length * 52;
+    ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+  }
+
   ctrl.$doCheck = function() {
     ctrl.collapse = angular.element('#' + ctrl.collapseName);
     if (ctrl.collapse.attr('class')) {
