@@ -17,6 +17,11 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     $log.debug(angular.element('#' + ctrl.collapseName));
   }
 
+  ctrl.$onChanges = function(ch) {
+    ctrl.elementHeight = ctrl.spells.length * 40;
+    ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+  }
+
   ctrl.$doCheck = function() {
     ctrl.collapse = angular.element('#' + ctrl.collapseName);
     if (ctrl.collapse.attr('class')) {
