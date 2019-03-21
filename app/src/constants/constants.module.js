@@ -68,7 +68,7 @@ appConstants.constant('CLASSES', {
   },
   'paladin': {
     name: 'Paladin',
-    search: ['paladin']
+    search: [/^paladin/gi]
   },
   'psychic': {
     name: 'Psychic',
@@ -96,7 +96,11 @@ appConstants.constant('CLASSES', {
   },
   'summoner': {
     name: 'Summoner',
-    search: ['summoner']
+    search: [/^summoner/gi]
+  },
+  'summoner (unchained)': {
+    name: 'Summoner Unchained',
+    search: [/summoner \(unchained\)/gi]
   },
   'warpriest': {
     name: 'Warpriest',
