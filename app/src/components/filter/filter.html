@@ -30,14 +30,21 @@
       <div class="collapse" id="moreFilters" style="">
         <div class="form-row">
           <div class="col col-centered ">
-            <select class="form-control" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected">
+            <select class="form-control selectpicker" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected">
               <option ng-repeat="(key, value) in $ctrl.schools" value="{{key}}">{{value.name}}</option>
             </select>
           </div>
         </div>
         <div class="form-row">
           <div class="col col-centered ">
-            <select class="form-control" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected">
+            <select class="form-control selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected">
+              <option ng-repeat="(key, value) in $ctrl.castingTimes" value="{{key}}">{{value.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col col-centered ">
+            <select multiple title="Select source books" class="form-control selectpicker" data-live-search="true" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.mcastingTimeSelected">
               <option ng-repeat="(key, value) in $ctrl.castingTimes" value="{{key}}">{{value.name}}</option>
             </select>
           </div>
