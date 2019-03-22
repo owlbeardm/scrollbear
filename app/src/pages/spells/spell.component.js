@@ -1,5 +1,7 @@
 "use strict";
 
+import './spell.css';
+
 function SpellController($log, $rootScope, $state) {
   $log.debug('SpellController create');
   const ctrl = this;
