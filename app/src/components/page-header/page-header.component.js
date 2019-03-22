@@ -1,5 +1,7 @@
 "use strict";
 
+import './page-header.css';
+
 function PageHeaderController($log) {
   $log.debug('PageHeaderController create');
   const ctrl = this;
