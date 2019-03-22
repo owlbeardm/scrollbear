@@ -146,7 +146,7 @@ module.exports = (env, argv) => {
     }));
     config.plugins.push(new GenerateSW({
       clientsClaim: true,
-      skipWaiting: false
+      skipWaiting: true
     }));
     config.plugins.push(new WebpackPwaManifest({
       name: 'ScrollBear Spellbook',
