@@ -118,7 +118,7 @@ appConstants.constant('CLASSES', {
 
 appConstants.constant('SCHOOLS', {
   "any": {
-    name: 'Any',
+    name: 'Any school',
     search: (spell) => {
       return true;
     }
@@ -156,7 +156,7 @@ appConstants.constant('SCHOOLS', {
     search: ['transmutation']
   },
   "other": {
-    name: 'Other',
+    name: 'Other shools',
     search: (spell) => {
       return !['transmutation', 'conjuration', 'evocation', 'enchantment', 'abjuration', 'necromancy', 'divination', 'illusion'].includes(spell.school)
     }
@@ -165,7 +165,7 @@ appConstants.constant('SCHOOLS', {
 
 appConstants.constant('CASTING_TIME', {
   "any": {
-    name: 'Any',
+    name: 'Any casting time',
     search: (spell) => {
       return true;
     }
@@ -215,7 +215,7 @@ appConstants.constant('CASTING_TIME', {
     search: ['24 hours']
   },
   "other": {
-    name: 'Other',
+    name: 'Other casting time',
     search: (spell) => {
       return !['1 standard action', '1 immediate action', '1 swift action', '1 full-round action', '1 round', '1 full round', '3 rounds', '10 minutes', '30 minutes', '1 hour', '8 hours', '24 hours'].includes(spell.school)
     }
