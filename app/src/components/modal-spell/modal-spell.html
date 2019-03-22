@@ -30,15 +30,11 @@
             <p><span ng-if="$root.spell.duration"><b>Duration </b>{{$root.spell.duration}}</span></p>
             <p><span ng-if="$root.spell.savingThrow"><b>Saving Throw </b>{{$root.spell.savingThrow}}; <b>Spell Resistance </b>{{$root.spell.spellResistance}}</span></p>
           </div>
-          <!-- <p ng-repeat="paragraph in $root.spell.description.split('\n') track by $index">{{paragraph}}</p> -->
           <ng-bind-html ng-bind-html="$root.spellDescription"></ng-bind-html>
-          <div ng-if="$root.spellSource"><small><ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html></small></div>
+          <div ng-if="$root.spellSource" class='mt-1 float-right'><small><ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html></small></div>
         </div>
       </div>
       <div class="modal-footer">
-
-        <!-- <button type="button" class="btn btn-sm btn-primary" disabled data-dismiss="modal">Prepare</button> -->
-        <!-- <button type="button" class="btn btn-sm" data-dismiss="modal">Add to spellbook</button> -->
         <button type="button" class="btn" data-dismiss="modal">Close</button>
       </div>
     </div>

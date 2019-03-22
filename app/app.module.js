@@ -133,6 +133,7 @@ scrollbearApp.config([
             const spellDescription = getSpellDescription(spell.description);
             $rootScope.description = spell.description;
             $rootScope.spellDescription = spellDescription;
+            $rootScope.spellSource = spellService.getSpellSource(spell.source);
             return spell;
           }
         ],
