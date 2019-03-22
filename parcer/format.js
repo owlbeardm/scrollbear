@@ -27,13 +27,13 @@ async function format() {
             }
           });
         }
-        if (url){
+        if (url) {
           descChanged = true;
           return `[${match}](/spells/${url})`;
         }
         return match;
       });
-      if(spell.name == 'Suggestion, Mass'){
+      if (spell.name == 'Suggestion, Mass') {
         console.log(desc);
       }
 
@@ -52,6 +52,8 @@ async function format() {
             .replace('wizard/sorcerer', 'sorcerer/wizard')
             .trim();
         });
+      if (spell.source)
+        spell.source = spell.source.replace('\n)',')');
       if (spell.descripters)
         spell.descripters = spell.descripters.map(function(descripter) {
           return descripter
