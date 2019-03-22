@@ -118,15 +118,14 @@ scrollbearApp.config([
     $stateProvider.state({
       name: 'spells',
       url: 'spells/:spellUrl',
-      component: 'spell',
       parent: 'main',
+      component: 'spell',
       resolve: {
         spell: [
           '$rootScope',
           'spellService',
           '$stateParams',
           function($rootScope, spellService, $stateParams) {
-            console.log('spells spell', spell);
             const spell = spellService.getSpellByUrl($stateParams.spellUrl)
             $rootScope.title = `${spell.name} - `;
             $rootScope.spell = spell;
@@ -136,46 +135,8 @@ scrollbearApp.config([
             $rootScope.spellSource = spellService.getSpellSource(spell.source);
             return spell;
           }
-        ],
-        prevstate: [
-          '$transition$',
-          '$rootScope',
-          function($transition$, $rootScope) {
-            console.log('spells prevState');
-            console.log('prevState', $transition$.from());
-            $rootScope.newstate = $transition$.from().name;
-            return $transition$.from();
-          }
         ]
-      },
-      onEnter: [
-        'spell',
-        '$rootScope',
-        '$state',
-        function(spell, $rootScope, $state) {
-          // const popup = angular.element("#exampleModal");
-          // popup.modal('hide');
-          // const modalBackdrop = angular.element('.modal-backdrop');
-          // modalBackdrop.remove();
-          // const body = angular.element('body');
-          // body.removeClass('modal-open');
-        }
-      ],
-      onExit: [
-        '$transition$',
-        '$rootScope',
-        '$state',
-        function($transition$, $rootScope) {
-          if ($transition$.to().name != 'spells') {
-            const popup = angular.element("#exampleModal");
-            popup.modal('hide');
-            const modalBackdrop = angular.element('.modal-backdrop');
-            modalBackdrop.remove();
-            const body = angular.element('body');
-            body.removeClass('modal-open');
-          }
-        }
-      ]
+      }
     });
 
     $urlRouterProvider.otherwise('/');
@@ -194,7 +155,6 @@ scrollbearApp.run([
     let prevSpellsLocation;
     $transitions.onStart({}, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
-      // check if the state should be protected
       if ($location.search()._escaped_fragment_) {
         const p = $location.search()._escaped_fragment_;
         $location.search({});
@@ -209,27 +169,18 @@ scrollbearApp.run([
     });
     $transitions.onFinish({}, function(transition) {
       console.log("onFinish Transition");
-
       sidebarService.disableSidebar();
-    });
-    $transitions.onStart({
-      from: 'spells'
-    }, function(transition) {
-      $rootScope.newstate = transition.to();
     });
     $transitions.onStart({
       to: 'main'
     }, function(transition) {
-      console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
       return transition.router.stateService.target('list');
-      // $rootScope.newstate = transition.to();
     });
     $transitions.onStart({
       to: 'spellbook'
     }, function(transition) {
       console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
       return transition.router.stateService.target('spellbook.characters');
-      // $rootScope.newstate = transition.to();
     });
   }
 ]);

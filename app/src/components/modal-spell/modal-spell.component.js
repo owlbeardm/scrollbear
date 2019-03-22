@@ -5,12 +5,13 @@ function ModalSpellController($log, $rootScope, $location, spellService, filterS
   const ctrl = this;
 
   ctrl.$onInit = function() {
-    const popup = angular.element("#modalSpell");
 
+    const popup = angular.element("#modalSpell");
     popup.on("show.bs.modal", function() {
       $log.debug('ModalSpellController show.bs.modal');
       $rootScope.title = `${$rootScope.spell.name} - `;
       ctrl.isFav = filterService.isFav($rootScope.spell);
+      ctrl.spellUrl = spellService.spellNameToUrl($rootScope.spell.name);
     });
     popup.on("hidden.bs.modal", function() {
       $log.debug('ModalSpellController hidden.bs.modal', JSON.stringify($location.url()));

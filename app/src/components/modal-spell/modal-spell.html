@@ -10,6 +10,12 @@
             <div class="ripple-container"></div>
           </a>
           {{$root.spell.name}}
+          <small>
+            <a ng-href="spells/{{$ctrl.spellUrl}}" target="_blank" class="ml-1">
+              <i class="fas fa-external-link-alt text-muted"></i>
+              <div class="ripple-container"></div>
+            </a>
+          </small>
         </h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="fas fa-times"></span>
@@ -31,7 +37,9 @@
             <p><span ng-if="$root.spell.savingThrow"><b>Saving Throw </b>{{$root.spell.savingThrow}}; <b>Spell Resistance </b>{{$root.spell.spellResistance}}</span></p>
           </div>
           <ng-bind-html ng-bind-html="$root.spellDescription"></ng-bind-html>
-          <div ng-if="$root.spellSource" class='mt-1 float-right'><small><ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html></small></div>
+          <div ng-if="$root.spellSource" class='mt-1 float-right'><small>
+              <ng-bind-html ng-bind-html="$root.spellSource"></ng-bind-html>
+            </small></div>
         </div>
       </div>
       <div class="modal-footer">
