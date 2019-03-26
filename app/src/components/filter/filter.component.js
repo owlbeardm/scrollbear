@@ -19,6 +19,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     filterService.school = ctrl.schoolSelected;
     filterService.castingTime = ctrl.castingTimeSelected;
     ctrl.search();
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
   }
 
   ctrl.search = function() {
