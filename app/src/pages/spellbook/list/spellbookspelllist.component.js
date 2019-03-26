@@ -16,6 +16,18 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
     notificationService.subscribe($scope, notificationService.FILTER_CHANGED, (event, param) => {
       ctrl.spells = getSpells();
     });
+    notificationService.subscribe($scope, notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, (event, param) => {
+      $log.debug("SpellbookSpellListController notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED", param);
+      if (param) {
+        ctrl.classSelected = spellbookService.selectedCharacter.class;
+        ctrl.setClass();
+      } else {
+        ctrl.classToAll();
+      }
+    });
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
   }
 
   ctrl.chooseSpell = function(spell) {
@@ -28,6 +40,7 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
   }
 
   ctrl.setClass = function() {
+    $log.debug("SpellbookSpellListController ctrl.search", ctrl.classSelected);
     spellService.setClass(ctrl.classSelected);
     ctrl.search();
   }
@@ -54,9 +67,9 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
     } else {
       if (spellbookService.selectedCharacter.preparedSpells) {
         const present = Object.entries(spellbookService.selectedCharacter.preparedSpells).reduce((acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (
-          curr2.name == spellName
-          ? 1
-          : 0), 0), 0);
+          curr2.name == spellName ?
+          1 :
+          0), 0), 0);
         return present;
       }
     }
@@ -70,8 +83,8 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
     console.log(spell.levels);
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-        return acc || currentValue.startsWith(curr);
-      }, false)) {
+          return acc || currentValue.startsWith(curr);
+        }, false)) {
         const level = currentValue.substring(currentValue.length - 1);
         if (!accumulator || accumulator > level) {
           return level;
@@ -92,8 +105,8 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
   ctrl.addSpell = function(lvl, spell) {
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-        return acc || currentValue.startsWith(curr);
-      }, false)) {
+          return acc || currentValue.startsWith(curr);
+        }, false)) {
         const level = currentValue.substring(currentValue.length - 1);
         if (!accumulator || accumulator > level) {
           return level;
@@ -123,7 +136,9 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push({name: spell.name});
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push({
+        name: spell.name
+      });
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
@@ -142,7 +157,7 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
   }
 
   ctrl.click = function(name) {
-    const top = $document.scrollTop();// angular.element('#heading' + name).offset().top;
+    const top = $document.scrollTop(); // angular.element('#heading' + name).offset().top;
     $timeout($document.scrollTop(top));
   }
 
