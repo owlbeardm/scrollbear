@@ -6,6 +6,7 @@ angular.module('app.services').factory('notificationService', [
   function($rootScope, $log) {
     const NotificationService = {};
     NotificationService.FILTER_CHANGED = 'Filter:Changed';
+    NotificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED = 'FilterOnlyClass:Changed';
 
     NotificationService.subscribe = function(scope, eventName, callback) {
       const handler = $rootScope.$on(eventName, callback);
