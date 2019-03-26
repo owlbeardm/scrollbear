@@ -8,6 +8,7 @@ function FilterController(notificationService, filterService, $log, $window, SCH
 
   ctrl.$onInit = function() {
     $log.debug('FilterController init ');
+    ctrl.onlyClassSpells = true;
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
     ctrl.schools = SCHOOLS;
@@ -21,7 +22,7 @@ function FilterController(notificationService, filterService, $log, $window, SCH
   }
 
   ctrl.search = function() {
-    $log.debug("AppController ctrl.search", ctrl.filter);
+    $log.debug("FilterController ctrl.search", ctrl.filter);
     ctrl.filters = [];
     if (ctrl.schoolSelected != 'any') {
       ctrl.filters.push(SCHOOLS[ctrl.schoolSelected].name);
@@ -57,6 +58,10 @@ function FilterController(notificationService, filterService, $log, $window, SCH
     // ctrl.search();
   }
 
+  ctrl.onlyClassSpellsChanges = function() {
+    notificationService.notify(notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, ctrl.onlyClassSpells);
+  }
+
 }
 
 const FilterComponent = {
@@ -64,7 +69,9 @@ const FilterComponent = {
   controller: [
     'notificationService', 'filterService', '$log', '$window', 'SCHOOLS', 'CASTING_TIME', FilterController
   ],
-  bindings: {}
+  bindings: {
+    onlyClassSpellsEnabled: '<'
+  }
 }
 
 export default FilterComponent;
