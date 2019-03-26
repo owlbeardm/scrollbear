@@ -1,6 +1,6 @@
 "use strict";
 
-function MainController(notificationService, filterService, spellService, $window, $state, $scope, $log, CLASSES) {
+function MainController(notificationService, filterService, spellService, $window, $timeout, $state, $scope, $log, CLASSES) {
   $log.debug('MainController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -28,6 +28,9 @@ function MainController(notificationService, filterService, spellService, $windo
     spellService.setClass(ctrl.classSelected);
     localStorage.setItem(SELECTED_CLASS, JSON.stringify(ctrl.classSelected));
     ctrl.search();
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
   }
 
   ctrl.classToAll = function() {
@@ -55,6 +58,7 @@ const MainComponent = {
     'filterService',
     'spellService',
     '$window',
+    '$timeout',
     '$state',
     '$scope',
     '$log',
