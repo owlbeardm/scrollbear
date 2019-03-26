@@ -1,13 +1,9 @@
-
 <div class="card">
   <div class="card-header">
     <form ng-submit="$ctrl.search()">
       <div class="form-row">
-        <div class="col col-centered ">
-          <select class="form-control" ng-change="$ctrl.setClass()" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected">
-            <option ng-repeat="(key, value) in $ctrl.classes" value="{{key}}">{{value.name}}</option>
-          </select>
-        </div>
+        <select class="col selectpicker" ng-change="$ctrl.setClass()" name="classSelect" id="classSelect" ng-model="$ctrl.classSelected"
+        ng-options="key as value.name for (key , value) in $ctrl.classes"></select>
       </div>
     </form>
     <filter></filter>

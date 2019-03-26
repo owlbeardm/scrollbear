@@ -51,8 +51,7 @@ table.table-fit tbody td, table.table-fit tfoot td {
   margin-bottom: 0;
 }
 
-div[aria-expanded="true"] i.fa-chevron-down,
-a[aria-expanded="true"] i.fa-angle-double-down {
+div[aria-expanded="true"] i.fa-chevron-down, a[aria-expanded="true"] i.fa-angle-double-down {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
@@ -60,8 +59,7 @@ a[aria-expanded="true"] i.fa-angle-double-down {
   transition-duration: 0.2s;
 }
 
-div[aria-expanded="false"] i.fa-chevron-down,
-a[aria-expanded="false"] i.fa-angle-double-down {
+div[aria-expanded="false"] i.fa-chevron-down, a[aria-expanded="false"] i.fa-angle-double-down {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
@@ -90,4 +88,52 @@ form .form-group .error {
 
 .main-panel>.content {
   padding: 15px 15px;
+}
+
+.bootstrap-select>.btn-light {
+  color: #343a40;
+  background-color: #f4f3e7;
+  border-color: #DEDDD2;
+  border-bottom: 1px solid #DEDDD2;
+  box-shadow: none;
+  text-transform: capitalize;
+}
+
+.bootstrap-select>.btn-light:hover {
+  color: #343a40;
+  background-color: #DEDDD2;
+  border-color: #C8C7BE;
+}
+
+.bootstrap-select>.btn-light:focus, .bootstrap-select>.btn-light.focus {
+  box-shadow: none, 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+  color: #343a40;
+  background-color: #f4f3e7;
+  border-color: #f4f3e7;
+}
+
+.bootstrap-select>.btn-light.disabled, .bootstrap-select>.btn-light:disabled {
+  color: #343a40;
+  background-color: #f4f3e7;
+  border-color: #f4f3e7;
+}
+
+.bootstrap-select>.btn-light:not(:disabled):not(.disabled):active, .bootstrap-select>.btn-light:not(:disabled):not(.disabled).active, .bootstrap-select .show>.btn-light.dropdown-toggle {
+  color: #343a40;
+  background-color: #DEDDD2;
+  border-color: #C8C7BE;
+}
+
+.bootstrap-select>.btn-light:not(:disabled):not(.disabled):active:focus, .bootstrap-select>.btn-light:not(:disabled):not(.disabled).active:focus, .bootstrap-select .show>.btn-light.dropdown-toggle:focus {
+  box-shadow: none, 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.bootstrap-select .show>.btn.dropdown-toggle:hover {
+  color: #343a40;
+  background-color: #DEDDD2;
+  border-color: #C8C7BE;
+}
+
+.card .card-header {
+  z-index: auto !important;
 }

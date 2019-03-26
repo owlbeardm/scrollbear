@@ -1,6 +1,6 @@
 "use strict";
 
-function FilterController(notificationService, filterService, $log, $window, SCHOOLS, CASTING_TIME) {
+function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, CASTING_TIME) {
   $log.debug('FilterController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -19,6 +19,9 @@ function FilterController(notificationService, filterService, $log, $window, SCH
     filterService.school = ctrl.schoolSelected;
     filterService.castingTime = ctrl.castingTimeSelected;
     ctrl.search();
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
   }
 
   ctrl.search = function() {
@@ -37,6 +40,7 @@ function FilterController(notificationService, filterService, $log, $window, SCH
   ctrl.setSchool = function() {
     filterService.school = ctrl.schoolSelected;
     ctrl.search();
+
   }
 
   ctrl.setCastingTime = function() {
@@ -56,6 +60,10 @@ function FilterController(notificationService, filterService, $log, $window, SCH
     ctrl.castingTimeSelected = 'any';
     filterService.castingTime = ctrl.schoolSelected;
     // ctrl.search();
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
+
   }
 
   ctrl.onlyClassSpellsChanges = function() {
@@ -67,7 +75,7 @@ function FilterController(notificationService, filterService, $log, $window, SCH
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', 'SCHOOLS', 'CASTING_TIME', FilterController
+    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'CASTING_TIME', FilterController
   ],
   bindings: {
     onlyClassSpellsEnabled: '<'

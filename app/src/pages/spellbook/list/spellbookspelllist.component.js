@@ -25,6 +25,9 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
         ctrl.classToAll();
       }
     });
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
   }
 
   ctrl.chooseSpell = function(spell) {
