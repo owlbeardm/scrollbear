@@ -18,7 +18,7 @@
       <div class="card-body">
         <table class="table table-sm">
           <tbody>
-            <tr ng-repeat="spell in value">
+            <tr ng-repeat="spell in value | orderBy:'toString()'">
               <td ng-click="$ctrl.chooseSpell(spell)">
                 <a href="#" class="text-dark">
                   {{spell}}
