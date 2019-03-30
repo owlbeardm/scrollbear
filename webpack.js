@@ -202,5 +202,27 @@ module.exports = (env, argv) => {
     APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : JSON.stringify('0.0.0')
   }));
 
+// 3013
+  // if (true) {
+  //   const spells = require('./resources/spells.json');
+  //   spells.forEach((spell, index) => {
+  //     const spellUrl = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
+  //     if (index > 250 || index < 0) {
+  //       return;
+  //     }
+  //     config.plugins.push(new HtmlWebpackPlugin({
+  //       templateParameters: {
+  //         'title': `${spell.name} - ScrollBear`,
+  //         'description': `${spell.description}`,
+  //         'url': spellUrl
+  //       },
+  //       template: 'assets/spell.ejs',
+  //       filename: 'spells/' + spellUrl + '.html',
+  //       excludeAssets: [/app.*.js/, /app.*.css/, /styles.*.js/, /styles.*.css/, /res.*.js/, /res.*.css/, /vendor.*.js/, /vendor.*.css/]
+  //     }));
+  //   });
+  //   config.plugins.push(new HtmlWebpackExcludeAssetsPlugin());
+  // }
+
   return config;
 }

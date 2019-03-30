@@ -5,10 +5,11 @@ function SpellbookController($log, spellbookService) {
   const ctrl = this;
 
   ctrl.$onInit = function() {
-    $log.debug("SpellbookController init");
+    $log.debug("SpellbookController init", spellbookService.selectedCharacter);
   }
 
   ctrl.selectedCharacter = function() {
+    $log.debug("SpellbookController ctrl.selectedCharacter");
     return spellbookService.selectedCharacter;
   }
 }

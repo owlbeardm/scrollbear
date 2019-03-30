@@ -9,7 +9,12 @@ function KnownSpelLevelController($log, $state, filterService, focusService, spe
   }
 
   ctrl.cast = function(key) {
-    spellbookService.selectedCharacter.knownSpells[key].cast++;
+    spellbookService.selectedCharacter.knownSpells[key].cast= Math.min(spellbookService.selectedCharacter.knownSpells[key].perDay, spellbookService.selectedCharacter.knownSpells[key].cast+1);
+    spellbookService.saveCharacters();
+  }
+
+  ctrl.restoreSlot = function(key) {
+    spellbookService.selectedCharacter.knownSpells[key].cast = Math.max(0, spellbookService.selectedCharacter.knownSpells[key].cast-1);
     spellbookService.saveCharacters();
   }
 

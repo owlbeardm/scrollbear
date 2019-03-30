@@ -2,7 +2,7 @@
   <div class="flextable-item">
     <form ng-submit="$ctrl.search()">
       <div class="form-row ">
-        <div class="col">
+        <div class="col-md">
           <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
         </div>
         <div class="col-auto">
@@ -16,18 +16,20 @@
         </div>
       </div>
       <div ng-if="$ctrl.onlyClassSpellsEnabled" class="form-row">
-        <div class="togglebutton form-check">
-          <label class="text-info">
+        <div class="col-auto">
+          <div class="togglebutton form-check">
+            <label class="text-info">
             <input type="checkbox" checked="" ng-model="$ctrl.onlyClassSpells" ng-change="$ctrl.onlyClassSpellsChanges()">
             <span class="toggle"></span>
-            Show only class spells
+            Show spells from all classes
           </label>
+          </div>
         </div>
       </div>
 
       <div class="form-row mt-3">
         <div class="col-auto">
-          <a href="#" class="collapsed" data-toggle="collapse" data-target="#moreFilters" aria-expanded="false">
+          <a href="#" class="collapsed text-primary" data-toggle="collapse" data-target="#moreFilters" aria-expanded="false">
             <h6>
               More filters
               <small><i class="ml-1 fas fa-angle-double-down expanded-flip"></i></small>
@@ -40,12 +42,10 @@
       </div>
       <div class="collapse" id="moreFilters" style="">
         <div class="form-row">
-          <select class="col selectpicker" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect"  ng-model="$ctrl.schoolSelected"
-          ng-options="key as value.name for (key , value) in $ctrl.schools"></select>
+          <select class="col selectpicker" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected" ng-options="key as value.name for (key , value) in $ctrl.schools"></select>
         </div>
         <div class="form-row">
-          <select class="col selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected"
-          ng-options="key as value.name for (key , value) in $ctrl.castingTimes">
+          <select class="col selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected" ng-options="key as value.name for (key , value) in $ctrl.castingTimes">
           </select>
         </div>
         <!-- <div class="form-row">

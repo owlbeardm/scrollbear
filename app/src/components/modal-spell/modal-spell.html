@@ -5,8 +5,8 @@
         <td class="float-right">
         </td>
         <h3 class="modal-title" id="modalSpellLabel">
-          <a href="#" class="mr-2" ng-click="$ctrl.changeFav()">
-            <i class="fa-star" ng-class="{'fas text-primary': $ctrl.isFav, 'far text-muted': !$ctrl.isFav}"></i>
+          <a href="#" class="mr-2" ng-class="{'fas text-primary': $ctrl.isFav, 'far text-muted': !$ctrl.isFav}" ng-click="$ctrl.changeFav()">
+            <i class="fa-star push-shadow" ng-class="{'fas': $ctrl.isFav, 'far': !$ctrl.isFav}" ></i>
             <div class="ripple-container"></div>
           </a>
           {{$root.spell.name}}

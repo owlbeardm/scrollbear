@@ -8,14 +8,12 @@
           </a>
         </td>
         <td class="float-right mb-1">
-          <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}" ng-disable="!$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)" ng-click="$ctrl.addSpell(key, spell)">
+          <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name), 'disabled': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}" ng-click="$ctrl.addSpell(key, spell)">
             <span class="badge badge-secondary" ng-if="$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)"><small>{{$ctrl.isSpellPrepared(spell.name)}}</small></span>
-            <i class="fas fa-scroll"></i>
-            <div class="ripple-container"></div>
+            <i class="fas fa-scroll push-shadow"></i>
           </a>
-          <a href="#" ng-if="$ctrl.spellbook" class="ml-2 mr-3 text-primary" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name)}" ng-disable="$ctrl.isInSpellBook(spell.name)" ng-click="$ctrl.addToBook(key, spell)">
-            <i class="fas fa-book"></i>
-            <div class="ripple-container"></div>
+          <a href="#" ng-if="$ctrl.spellbook" class="ml-2 mr-3" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name), 'disabled': $ctrl.isInSpellBook(spell.name)}" ng-click="$ctrl.addToBook(key, spell)">
+            <i class="fas fa-book push-shadow"></i>
           </a>
         </td>
       </tr>

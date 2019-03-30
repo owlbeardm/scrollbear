@@ -31,7 +31,7 @@
   <div class="card-body">
     <table class="table table-sm">
       <tbody>
-        <tr ng-repeat="spell in $ctrl.spellLevel.spells">
+        <tr ng-repeat="spell in $ctrl.spellLevel.spells | orderBy:'name'">
           <td ng-click="$ctrl.chooseSpell(spell.name)">
             <a href="#" class="text-dark">
               {{spell.name}}
@@ -39,15 +39,18 @@
             <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
           </td>
           <td class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete($ctrl.level, $index)">
-              <i class="fas fa-trash text-danger"></i>
-              <div class="ripple-container"></div>
+            <a href="#" class="ml-2 mr-3 text-danger" ng-click="$ctrl.delete($ctrl.level, $index)">
+              <i class="fas fa-trash push-shadow"></i>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-disabled="spell.cast" ng-click="$ctrl.cast($ctrl.level, $index)">
-              <i class="fas fa-scroll" ng-class="{'text-muted': spell.cast, 'text-success': !spell.cast}"></i>
-              <div class="ripple-container"></div>
+          <td ng-if="!spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3 text-success" ng-click="$ctrl.cast($ctrl.level, $index)">
+              <i class="fas fa-scroll push-shadow"></i>
+            </a>
+          </td>
+          <td ng-if="spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3 text-muted" ng-click="$ctrl.restore($ctrl.level, $index)">
+              <i class="fas fa-undo-alt push-shadow"></i>
             </a>
           </td>
         </tr>
