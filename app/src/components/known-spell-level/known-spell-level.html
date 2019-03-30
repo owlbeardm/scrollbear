@@ -3,13 +3,17 @@
     <a>
       Level {{$ctrl.level}}
       <i class="float-right fas fa-chevron-down expanded-flip"></i>
-      <button ng-if="$ctrl.level!='0'" ng-if="!$ctrl.editMode" class="btn btn-sm btn-round float-right mr-4" ng-class="{'btn-danger': $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay, 'btn-success': $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay}" ng-click="$ctrl.cast($ctrl.level);$event.stopPropagation();">cast</button>
-      <button ng-if="!$ctrl.editMode" ng-class="{'mr-4': $ctrl.level =='0'}" class="btn btn-sm btn-round float-right mr-1" ng-click="$ctrl.edit();$event.stopPropagation();">edit</button>
+      <!-- <button ng-if="$ctrl.level!='0'" ng-if="!$ctrl.editMode" class="btn btn-sm btn-round float-right mr-4" ng-class="{'btn-danger': $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay, 'btn-success': $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay}" ng-click="$ctrl.cast($ctrl.level);$event.stopPropagation();">cast</button> -->
+      <button ng-if="!$ctrl.editMode" ng-class="{'mr-4': $ctrl.level =='0'}" class="btn btn-sm btn-round float-right mr-4" ng-click="$ctrl.edit();$event.stopPropagation();">edit</button>
     </a>
   </h5>
   <div ng-if="!$ctrl.editMode" class='text-dark'>
     <small ng-class="{'text-danger': $ctrl.spellLevel.spells.length>$ctrl.spellLevel.known, 'text-warning': $ctrl.spellLevel.spells.length<$ctrl.spellLevel.known}">Known <span >{{$ctrl.spellLevel.spells.length}}/{{$ctrl.spellLevel.known}}</span></small>
     <small ng-if="$ctrl.level!='0'" class='ml-2' ng-class="{'text-danger': $ctrl.spellLevel.cast>=$ctrl.spellLevel.perDay}">Cast <span >{{$ctrl.spellLevel.cast}}/{{$ctrl.spellLevel.perDay}}</span></small>
+    <!-- <a href="#" class="ml-1" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"> -->
+      <i class="fas fa-undo-alt text-muted ml-1" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"></i>
+      <!-- <div class="ripple-container"></div> -->
+    <!-- </a> -->
   </div>
   <div class="mt-2" ng-if="$ctrl.editMode">
     <form name="addCharacterForm" ng-submit="$ctrl.saveEdit()" ng-click="$event.stopPropagation();">
@@ -49,9 +53,16 @@
               <div class="ripple-container"></div>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0'" class="float-right">
+          <td ng-if="$ctrl.level!='0' && $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay" class="float-right">
             <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast($ctrl.level)">
-              <i class="fas fa-scroll" ng-class="{'text-muted': $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay, 'text-success': $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay}"></i>
+              <span class="badge badge-secondary" ng-if="$ctrl.spellLevel.perDay > $ctrl.spellLevel.cast"><small>{{$ctrl.spellLevel.perDay - $ctrl.spellLevel.cast}}</small></span>
+              <i class="fas fa-scroll text-success"></i>
+              <div class="ripple-container"></div>
+            </a>
+          </td>
+          <td ng-if="$ctrl.level!='0' && $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay" class="float-right">
+            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.restoreSlot($ctrl.level)">
+              <i class="fas fa-undo-alt text-muted"></i>
               <div class="ripple-container"></div>
             </a>
           </td>

@@ -15,6 +15,7 @@
     "sitemap": "node parcer/sitemap.js",
     "build": "webpack --config webpack.js --mode=production",
     "build-dev": "webpack --config webpack.js --mode=development",
+    "make-spells": "node parcer/make_spells_htmls.js",
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "commit": "git add . && git commit -m 'autocommit' && git push",

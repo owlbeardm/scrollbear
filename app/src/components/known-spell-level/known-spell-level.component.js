@@ -13,6 +13,11 @@ function KnownSpelLevelController($log, $state, filterService, focusService, spe
     spellbookService.saveCharacters();
   }
 
+  ctrl.restoreSlot = function(key) {
+    spellbookService.selectedCharacter.knownSpells[key].cast = Math.max(0, spellbookService.selectedCharacter.knownSpells[key].cast-1);
+    spellbookService.saveCharacters();
+  }
+
   ctrl.delete = function(key, id) {
     $log.debug("SpellbookBookController ctrl.delete", key, id);
     spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);

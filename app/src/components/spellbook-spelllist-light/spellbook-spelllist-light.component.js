@@ -82,9 +82,9 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     } else {
       if (spellbookService.selectedCharacter.preparedSpells) {
         const present = Object.entries(spellbookService.selectedCharacter.preparedSpells).reduce((acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (
-          curr2.name == spellName
-          ? 1
-          : 0), 0), 0);
+          curr2.name == spellName ?
+          1 :
+          0), 0), 0);
         return present;
       }
     }
@@ -97,14 +97,15 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     }
     console.log(spell.levels);
     let level = spell.levels.reduce((accumulator, currentValue) => {
-      if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-        return acc || currentValue.startsWith(curr);
-      }, false)) {
-        const level = currentValue.substring(currentValue.length - 1);
-        if (!accumulator || accumulator > level) {
-          return level;
+      if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
+        if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
+            return acc || currentValue.startsWith(curr);
+          }, false)) {
+          const level = currentValue.substring(currentValue.length - 1);
+          if (!accumulator || accumulator > level) {
+            return level;
+          }
         }
-      }
       return accumulator;
     }, undefined);
     if (level == undefined) {
@@ -119,14 +120,15 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
 
   ctrl.addSpell = function(lvl, spell) {
     let level = spell.levels.reduce((accumulator, currentValue) => {
-      if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-        return acc || currentValue.startsWith(curr);
-      }, false)) {
-        const level = currentValue.substring(currentValue.length - 1);
-        if (!accumulator || accumulator > level) {
-          return level;
+      if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
+        if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
+            return acc || currentValue.startsWith(curr);
+          }, false)) {
+          const level = currentValue.substring(currentValue.length - 1);
+          if (!accumulator || accumulator > level) {
+            return level;
+          }
         }
-      }
       return accumulator;
     }, undefined);
     if (level == undefined) {
@@ -151,7 +153,9 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push({name: spell.name});
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push({
+        name: spell.name
+      });
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);

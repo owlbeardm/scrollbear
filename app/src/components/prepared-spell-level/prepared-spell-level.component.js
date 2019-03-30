@@ -13,6 +13,11 @@ function PreparedSpelLevelController($log, $state, filterService, focusService, 
     spellbookService.saveCharacters();
   }
 
+  ctrl.restore = function(key, id) {
+    delete spellbookService.selectedCharacter.preparedSpells[key].spells[id].cast;
+    spellbookService.saveCharacters();
+  }
+
   ctrl.delete = function(key, id) {
     $log.debug("SpellbookBookController ctrl.delete", key, id);
     spellbookService.selectedCharacter.preparedSpells[key].spells.splice(id, 1);

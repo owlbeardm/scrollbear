@@ -44,10 +44,14 @@
               <div class="ripple-container"></div>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-disabled="spell.cast" ng-click="$ctrl.cast($ctrl.level, $index)">
-              <i class="fas fa-scroll" ng-class="{'text-muted': spell.cast, 'text-success': !spell.cast}"></i>
-              <div class="ripple-container"></div>
+          <td ng-if="!spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast($ctrl.level, $index)">
+              <i class="fas fa-scroll text-success"></i>
+            </a>
+          </td>
+          <td ng-if="spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.restore($ctrl.level, $index)">
+              <i class="fas fa-undo-alt text-muted"></i>
             </a>
           </td>
         </tr>
