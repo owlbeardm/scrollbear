@@ -10,21 +10,22 @@
   <div ng-if="!$ctrl.editMode" class='text-dark'>
     <small ng-class="{'text-danger': $ctrl.spellLevel.spells.length>$ctrl.spellLevel.known, 'text-warning': $ctrl.spellLevel.spells.length<$ctrl.spellLevel.known}">Known <span >{{$ctrl.spellLevel.spells.length}}/{{$ctrl.spellLevel.known}}</span></small>
     <small ng-if="$ctrl.level!='0'" class='ml-2' ng-class="{'text-danger': $ctrl.spellLevel.cast>=$ctrl.spellLevel.perDay}">Cast <span >{{$ctrl.spellLevel.cast}}/{{$ctrl.spellLevel.perDay}}</span></small>
-    <!-- <a href="#" class="ml-1" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"> -->
-      <i class="fas fa-undo-alt text-muted ml-1" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"></i>
-      <!-- <div class="ripple-container"></div> -->
-    <!-- </a> -->
+    <!-- <button ng-if="$ctrl.level!='0'" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"> -->
+    <span class="text-muted" ng-class="{'disabled': $ctrl.spellLevel.cast<=0}" ng-if="$ctrl.level!='0' ">
+      <i class="fas fa-undo-alt ml-1 push-shadow" ng-click="$ctrl.restoreSlot($ctrl.level);$event.stopPropagation()"></i>
+    </span>
+    <!-- </button> -->
   </div>
   <div class="mt-2" ng-if="$ctrl.editMode">
     <form name="addCharacterForm" ng-submit="$ctrl.saveEdit()" ng-click="$event.stopPropagation();">
       <div class="row">
         <div class="form-group label-floating bmd-form-group col-6">
           <label class="control-label bmd-label-static pl-3" for="classSelect">Spells Known</label>
-          <input id='known' name="known"  min='0' step='1' type="number" ng-model='$ctrl.known' class="form-control">
+          <input id='known' name="known" min='0' step='1' type="number" ng-model='$ctrl.known' class="form-control">
         </div>
         <div ng-if="$ctrl.level!='0'" class="form-group label-floating bmd-form-group col-6">
           <label class="control-label bmd-label-static pl-3" for="perDay">Spells per Day</label>
-          <input id='perDay' name="perDay"  min='0' step='1' type="number" ng-model='$ctrl.perDay' class="form-control">
+          <input id='perDay' name="perDay" min='0' step='1' type="number" ng-model='$ctrl.perDay' class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -49,23 +50,20 @@
           </td>
           <td class="float-right">
             <a href="#" class="ml-2 mr-3 text-danger" ng-click="$ctrl.delete($ctrl.level, $index)">
-              <i class="fas fa-trash"></i>
-              <div class="ripple-container"></div>
+              <i class="fas fa-trash push-shadow"></i>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0' && $ctrl.spellLevel.cast < $ctrl.spellLevel.perDay" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast($ctrl.level)">
+          <td ng-if="$ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3" ng-class="{'text-success': $ctrl.spellLevel.perDay > $ctrl.spellLevel.cast, 'text-muted disabled': $ctrl.spellLevel.perDay <= $ctrl.spellLevel.cast}" ng-click="$ctrl.cast($ctrl.level)">
               <span class="badge badge-secondary" ng-if="$ctrl.spellLevel.perDay > $ctrl.spellLevel.cast"><small>{{$ctrl.spellLevel.perDay - $ctrl.spellLevel.cast}}</small></span>
-              <i class="fas fa-scroll text-success"></i>
-              <div class="ripple-container"></div>
+              <i class="fas fa-scroll push-shadow"></i>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0' && $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.restoreSlot($ctrl.level)">
-              <i class="fas fa-undo-alt text-muted"></i>
-              <div class="ripple-container"></div>
+          <!-- <td ng-if="$ctrl.level!='0' && $ctrl.spellLevel.cast >= $ctrl.spellLevel.perDay" class="float-right">
+            <a href="#" class="ml-2 mr-3 text-muted" ng-click="$ctrl.restoreSlot($ctrl.level)">
+              <i class="fas fa-undo-alt push-shadow"></i>
             </a>
-          </td>
+          </td> -->
         </tr>
       </tbody>
     </table>

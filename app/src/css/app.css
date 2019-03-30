@@ -138,6 +138,49 @@ form .form-group .error {
   z-index: auto !important;
 }
 
-tr a.text-primary>i.fas  {
+.push-shadow {
+  transition: text-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),  color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: text-shadow, transform;
+}
+:not(:disabled):not(.disabled):active> .push-shadow {
+  text-shadow: none;
+}
+.disabled> .push-shadow {
+  text-shadow: none!important;
+}
+
+.text-primary> .push-shadow {
   text-shadow: 0 1px 2px rgba(202, 148, 92, 0.14), 0 2px 1px rgba(202, 148, 92, 0.2), 0 0px 5px rgba(202, 148, 92, 0.12);
+}
+.text-primary:focus> .push-shadow,
+.text-primary:active> .push-shadow,
+.text-primary:hover> .push-shadow {
+  text-shadow: 0 5px 5px rgba(202, 148, 92, 0.42), 0 3px 2px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(202, 148, 92, 0.2);
+}
+
+.text-muted> .push-shadow {
+  text-shadow: 0 1px 2px rgba(210, 210, 210, 0.14), 0 2px 1px rgba(210, 210, 210, 0.2), 0 0px 5px rgba(210, 210, 210, 0.12);
+}
+.text-muted:focus> .push-shadow,
+.text-muted:active> .push-shadow,
+.text-muted:hover> .push-shadow {
+  text-shadow: 0 5px 5px rgba(210, 210, 210, 0.42), 0 3px 2px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(210, 210, 210, 0.2);
+}
+
+.text-success> .push-shadow {
+  text-shadow: 0 1px 2px rgba(114, 167, 84, 0.14), 0 2px 1px rgba(114, 167, 84, 0.2), 0 0px 5px rgba(114, 167, 84, 0.12);
+}
+.text-success:focus> .push-shadow,
+.text-success:active> .push-shadow,
+.text-success:hover> .push-shadow {
+  text-shadow: 0 5px 5px rgba(114, 167, 84, 0.42), 0 3px 2px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(114, 167, 84, 0.2);
+}
+
+.text-danger> .push-shadow {
+  text-shadow: 0 1px 2px rgba(244, 67, 54, 0.14), 0 2px 1px rgba(244, 67, 54, 0.2), 0 0px 5px rgba(244, 67, 54, 0.12);
+}
+.text-danger:focus> .push-shadow,
+.text-danger:active> .push-shadow,
+.text-danger:hover> .push-shadow {
+  text-shadow: 0 5px 5px rgba(244, 67, 54, 0.42), 0 3px 2px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(244, 67, 54, 0.2);
 }

@@ -40,18 +40,17 @@
           </td>
           <td class="float-right">
             <a href="#" class="ml-2 mr-3 text-danger" ng-click="$ctrl.delete($ctrl.level, $index)">
-              <i class="fas fa-trash"></i>
-              <div class="ripple-container"></div>
+              <i class="fas fa-trash push-shadow"></i>
             </a>
           </td>
           <td ng-if="!spell.cast && $ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.cast($ctrl.level, $index)">
-              <i class="fas fa-scroll text-success"></i>
+            <a href="#" class="ml-2 mr-3 text-success" ng-click="$ctrl.cast($ctrl.level, $index)">
+              <i class="fas fa-scroll push-shadow"></i>
             </a>
           </td>
           <td ng-if="spell.cast && $ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.restore($ctrl.level, $index)">
-              <i class="fas fa-undo-alt text-muted"></i>
+            <a href="#" class="ml-2 mr-3 text-muted" ng-click="$ctrl.restore($ctrl.level, $index)">
+              <i class="fas fa-undo-alt push-shadow"></i>
             </a>
           </td>
         </tr>

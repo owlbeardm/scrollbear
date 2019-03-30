@@ -99,7 +99,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
         if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-            return acc || currentValue.startsWith(curr);
+            return acc || currentValue.search(curr) != -1;
           }, false)) {
           const level = currentValue.substring(currentValue.length - 1);
           if (!accumulator || accumulator > level) {
@@ -122,7 +122,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
         if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
-            return acc || currentValue.startsWith(curr);
+            return acc || currentValue.search(curr) != -1;
           }, false)) {
           const level = currentValue.substring(currentValue.length - 1);
           if (!accumulator || accumulator > level) {

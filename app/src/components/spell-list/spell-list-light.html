@@ -8,10 +8,10 @@
           </a>
         </td>
         <td class="float-right">
-          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" ng-class="{'text-primary': $ctrl.isFav(spell), 'text-muted': !$ctrl.isFav(spell)}" ng-click="$ctrl.changeFav(spell)">
-            <i class="fa-lg fa-star" ng-class="{'fas': $ctrl.isFav(spell), 'far': !$ctrl.isFav(spell)}"></i>
+          <a href="#" class="" ng-class="{'text-primary': $ctrl.isFav(spell), 'text-muted': !$ctrl.isFav(spell)}" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.isFav(spell), 'far': !$ctrl.isFav(spell)}"></i>
             <div class="ripple-container"></div>
-          </button>
+            </a>
         </td>
       </tr>
     </tbody>
