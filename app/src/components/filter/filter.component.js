@@ -8,7 +8,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 
   ctrl.$onInit = function() {
     $log.debug('FilterController init ');
-    ctrl.onlyClassSpells = true;
+    ctrl.onlyClassSpells = false;
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
     ctrl.schools = SCHOOLS;
@@ -67,7 +67,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
   }
 
   ctrl.onlyClassSpellsChanges = function() {
-    notificationService.notify(notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, ctrl.onlyClassSpells);
+    notificationService.notify(notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, !ctrl.onlyClassSpells);
   }
 
 }
