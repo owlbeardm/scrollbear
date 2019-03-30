@@ -16,7 +16,7 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
   }
 
   ctrl.$onChanges = function(ch) {
-    ctrl.elementHeight = ctrl.spells.length * 52;
+    ctrl.elementHeight = ctrl.spells.length * 43;
     ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
   }
 
@@ -26,17 +26,17 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
       ctrl.classes = ctrl.collapse.attr('class').split(" ");
       ctrl.scroll = $document.scrollTop();
       ctrl.offsetTop = angular.element('#list-new-' + ctrl.collapseName).offset();
-      if (ctrl.offsetTop && ctrl.scroll > ctrl.offsetTop.top + ctrl.spells.length * 52) {
+      if (ctrl.offsetTop && ctrl.scroll > ctrl.offsetTop.top + ctrl.spells.length * 43) {
         return;
       }
-      ctrl.elementHeight = ctrl.spells.length * 52;
+      ctrl.elementHeight = ctrl.spells.length * 43;
       ctrl.height = $window.innerHeight;
       if (ctrl.offsetTop) {
-        if (ctrl.scroll > ctrl.offsetTop.top + ctrl.spells * 52) {
+        if (ctrl.scroll > ctrl.offsetTop.top + ctrl.spells * 43) {
           return;
         }
-        const elements = ctrl.height / 52 + 2;
-        const start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 52)), ctrl.spells.length);
+        const elements = ctrl.height / 43 + 2;
+        const start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 43)), ctrl.spells.length);
         if (elements != ctrl.elements || start != ctrl.start) {
           ctrl.start = start;
           ctrl.elements = elements;
