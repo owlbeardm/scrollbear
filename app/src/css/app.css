@@ -181,16 +181,16 @@ form .form-group .error {
   text-shadow: 0 5px 5px rgba(244, 67, 54, 0.42), 0 3px 2px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(244, 67, 54, 0.2);
 }
 
-a.text-success:focus {
+a:not(:hover):not(:active).text-success:focus {
     color: #72a754 !important;
 }
-a.text-danger:focus {
+a:not(:hover):not(:active).text-danger:focus {
     color: #f44336 !important;
 }
-a.text-primary:focus {
+a:not(:hover):not(:active).text-primary:focus {
     color: #ca945c !important;
 }
-a.text-muted:focus {
+a:not(:hover):not(:active).text-muted:focus {
     color: #d4d4d3 !important;
 }
 a:not(.disabled).text-muted:active,
