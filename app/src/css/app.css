@@ -197,3 +197,8 @@ a:not(.disabled).text-muted:active,
 a:not(.disabled).text-muted:hover {
     color: #a3a3a0 !important;
 }
+
+.dropleft .dropdown-toggle::before,
+.dropleft .dropdown-toggle::after{
+  content: none;
+  }

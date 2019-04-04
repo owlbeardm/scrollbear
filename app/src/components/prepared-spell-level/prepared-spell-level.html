@@ -35,6 +35,9 @@
           <td ng-click="$ctrl.chooseSpell(spell.name)">
             <a href="#" class="text-dark">
               {{spell.name}}
+              <span ng-if="spell.domain" class="badge badge-warning">D</span>
+              <span ng-if="spell.special" class="badge badge-info">S</span>
+              <span ng-if="spell.metamagic" class="badge badge-danger">M: extended</span>
             </a>
             <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
           </td>

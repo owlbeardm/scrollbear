@@ -119,6 +119,33 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
   }
 
   ctrl.addSpell = function(lvl, spell) {
+    console.log("ctrl.addSpell", lvl, spell);
+    const spellToAdd = {
+      name: spell.name
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsDomain = function(lvl, spell) {
+    console.log("ctrl.addSpellAsDomain", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      domain: true
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsSpecial = function(lvl, spell) {
+    console.log("ctrl.addSpellAsSpecial", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      special: true
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  function addSpell(lvl, spell, spellToAdd) {
+    console.log("addSpell", lvl, spellToAdd, spell);
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
         if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
@@ -143,7 +170,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.knownSpells[level].spells.push(spell.name);
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd.name);
     } else {
       if (!spellbookService.selectedCharacter.preparedSpells) {
         spellbookService.selectedCharacter.preparedSpells = {};
@@ -153,9 +180,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push({
-        name: spell.name
-      });
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spellToAdd);
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
