@@ -1,6 +1,6 @@
 "use strict";
 
-function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, CASTING_TIME) {
+function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, CASTING_TIME, SOURCE_BOOK) {
   $log.debug('FilterController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -13,6 +13,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     ctrl.favOnly = filterService.favOnly;
     ctrl.schools = SCHOOLS;
     ctrl.castingTimes = CASTING_TIME;
+    ctrl.sourceBooks = SOURCE_BOOK;
     ctrl.schoolSelected = 'any';
     ctrl.castingTimeSelected = 'any';
     ctrl.filters = [];
@@ -75,7 +76,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'CASTING_TIME', FilterController
+    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'CASTING_TIME', 'SOURCE_BOOK', FilterController
   ],
   bindings: {
     onlyClassSpellsEnabled: '<'
