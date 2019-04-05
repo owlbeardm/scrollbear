@@ -50,20 +50,22 @@
         </div>
         <div class="form-row">
             <select multiple title="Select source books"
-            data-selected-text-format="count > 2" data-actions-box="true"
+            data-selected-text-format="count > 2"
             class="col selectpicker" data-live-search="true" ng-change="$ctrl.setCastingTime()"
             name="castingTimeSelect" id="castingTimeSelect"
             ng-model="$ctrl.sourceBookSelected"
             ng-options="book as book for book in $ctrl.sourceBooks| orderBy:'toString()'">
             </select>
         </div>
-        <div class="form-row">
+        <div class="form-group">
             <select multiple title="Select source books"
-            data-selected-text-format="count > 2" data-actions-box="true"
-            class="col selectpicker" data-live-search="true" ng-change="$ctrl.setCastingTime()"
-            data-width="100px" data-mobile="true" name="castingTimeSelect" id="castingTimeSelect"
-            ng-model="$ctrl.sourceBookSelected"
-            ng-options="book as book for book in $ctrl.sourceBooks| orderBy:'toString()'">
+            data-selected-text-format="count > 2"
+            class="selectpicker" data-live-search="true" ng-change="$ctrl.setCastingTime()"
+            data-width="100%" data-mobile="true" name="castingTimeSelect" id="castingTimeSelect"
+            ng-model="$ctrl.sourceBookSelected">
+            <option ng-repeat="book in $ctrl.sourceBooks| orderBy:'toString()'" value='book'>{{ book | limitTo: 30 }}{{book.length > 30 ? '...' : ''}}</option>
+            <!-- {{ myString | limitTo: 20 }}{{myString.length > 20 ? '...' : ''}} -->
+
             </select>
         </div>
       </div>
