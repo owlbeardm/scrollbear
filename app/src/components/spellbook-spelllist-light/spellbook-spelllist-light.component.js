@@ -144,6 +144,15 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
     addSpell(lvl, spell, spellToAdd);
   }
 
+  ctrl.addSpellAsMetamagic = function(lvl, spell) {
+    console.log("ctrl.addSpellAsMetamagic", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      metamagic: true
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
   function addSpell(lvl, spell, spellToAdd) {
     console.log("addSpell", lvl, spellToAdd, spell);
     let level = spell.levels.reduce((accumulator, currentValue) => {

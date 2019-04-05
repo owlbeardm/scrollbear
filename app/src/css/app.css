@@ -135,7 +135,7 @@ form .form-group .error {
 }
 
 .card .card-header {
-  z-index: auto !important;
+  z-index: 0 !important;
 }
 
 .push-shadow {
@@ -202,3 +202,7 @@ a:not(.disabled).text-muted:hover {
 .dropleft .dropdown-toggle::after{
   content: none;
   }
+
+.accordion .card {
+  overflow: visible;
+}
