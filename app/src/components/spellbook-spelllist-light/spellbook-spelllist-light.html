@@ -8,13 +8,25 @@
           </a>
         </td>
         <td class="float-right mb-1">
-          <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name), 'disabled': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}" ng-click="$ctrl.addSpell(key, spell)">
+          <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name), 'disabled': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}"
+            ng-click="$ctrl.addSpell(key, spell)">
             <span class="badge badge-secondary" ng-if="$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)"><small>{{$ctrl.isSpellPrepared(spell.name)}}</small></span>
             <i class="fas fa-scroll push-shadow"></i>
           </a>
           <a href="#" ng-if="$ctrl.spellbook" class="ml-2 mr-3" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name), 'disabled': $ctrl.isInSpellBook(spell.name)}" ng-click="$ctrl.addToBook(key, spell)">
             <i class="fas fa-book push-shadow"></i>
           </a>
+          <div ng-if="$ctrl.prepared" class="float-right dropleft">
+            <a href="#" class="ml-2 text-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-chevron-circle-down push-shadow"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <!-- <a class="dropdown-item" href="#" ng-click="$ctrl.addSpellAsMetamagic(key, spell)">Prepare with metamagic</a> -->
+              <a class="dropdown-item" href="#" ng-click="$ctrl.addSpellAsDomain(key, spell)">Prepare as domain spell</a>
+              <a class="dropdown-item" href="#" ng-click="$ctrl.addSpellAsSpecial(key, spell)">Prepare as special slot spell</a>
+              <!-- <a class="dropdown-item" href="#">Prepare at another level</a> -->
+            </div>
+          </div>
         </td>
       </tr>
     </tbody>

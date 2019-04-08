@@ -7,12 +7,14 @@ import './src/css/material-dashboard.css';
 // import './src/js/material-dashboard.js';
 import './src/css/app.css';
 
+
 import './src/components/components.module.js';
 import './src/pages/pages.module.js';
 import './src/filter/filters.module.js';
 import './src/services/services.module.js';
 import './src/constants/constants.module.js';
 // import './src/directives/directives.module.js';
+import 'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -31,6 +33,7 @@ const scrollbearApp = angular.module('scrollbearApp', [
   'app.services',
   'app.filters',
   'ui.router',
+  'ui.bootstrap',
   'ngSanitize'
   // 'app.directives'
 ]);

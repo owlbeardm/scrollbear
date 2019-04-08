@@ -37,3 +37,6 @@ appComponents.component('sidebarToggle', SidebarToggleComponent);
 
 import SidebarComponent from './sidebar/sidebar.component.js';
 appComponents.component('sidebar', SidebarComponent);
+
+import YesNoModalComponent from './yes-no-modal/yes-no-modal.component.js';
+appComponents.component('yesNoModal', YesNoModalComponent);

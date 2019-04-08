@@ -1,0 +1,30 @@
+<!-- <div class="modal fade show" id="modalMetamagic" tabindex="-1" role="dialog" aria-labelledby="modalMetamagicLabel" aria-hidden="false"> -->
+<!-- <div class="modal-dialog modal-lg" role="document"> -->
+<!-- <div class="modal-content"> -->
+<div class="modal-header">
+  <h3 class="modal-title" id="modalMetamagicLabel">
+    Add with Metamagic
+  </h3>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span class="fas fa-times"></span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class='form-row'>
+      <div class='col'>
+        Final level:
+      </div>
+      <div class='col'>
+        <select class="form-row selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.finalLevel" ng-options="key as key for key in $ctrl.levels">
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn" data-dismiss="modal">Close</button>
+</div>
+<!-- </div>
+  </div>
+</div> -->

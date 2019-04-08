@@ -13,6 +13,21 @@ angular.module('app.services').factory('spellbookService', [
     SpellbookService.characters = JSON.parse(localStorage.getItem(CHARACTERS))
       ? JSON.parse(localStorage.getItem(CHARACTERS))
       : [];
+    // migrating from 1.9.3
+    SpellbookService.characters.forEach((character)=>{
+      if(!character.prepared){
+        if(character.knownSpells){
+          Object.entries(character.knownSpells).forEach((level)=>{
+            level[1].spells = level[1].spells.map((currentValue, index, array) =>{
+              if(currentValue && typeof currentValue !== 'object'){
+                return {name:currentValue};
+              }
+              return currentValue;
+            });
+          });
+        }
+      }
+    });
 
     SpellbookService.selectedCharacter = JSON.parse(localStorage.getItem(SELECTED_CHARACTER))
       ? JSON.parse(localStorage.getItem(SELECTED_CHARACTER))

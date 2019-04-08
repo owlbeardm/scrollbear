@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $timeout, filterService, spellService, spellbookService, $window, $document, CLASSES) {
+function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $uibModal, $timeout, filterService, spellService, spellbookService, $window, $document, CLASSES) {
   $log.debug('SpellbookSpelllistLightController create');
   const ctrl = this;
 
@@ -119,6 +119,69 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
   }
 
   ctrl.addSpell = function(lvl, spell) {
+    console.log("ctrl.addSpell", lvl, spell);
+    const spellToAdd = {
+      name: spell.name
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsDomain = function(lvl, spell) {
+    console.log("ctrl.addSpellAsDomain", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      domain: true
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsSpecial = function(lvl, spell) {
+    console.log("ctrl.addSpellAsSpecial", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      special: true
+    };
+    addSpell(lvl, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsMetamagic = function(lvl, spell) {
+    console.log("ctrl.addSpellAsMetamagic", lvl, spell);
+    const spellToAdd = {
+      name: spell.name,
+      metamagic: true
+    };
+    let modal = $uibModal.open({
+      // animation: false,
+      component: 'yesNoModal',
+      backdropClass: 'fade show',
+      windowClass: 'fade show',
+      // windowTopClass: '',
+      size: 'lg',
+      resolve: {
+        noLabel: () => {
+          return "asd";
+        },
+        title: () => {
+          return "asd";
+        },
+        yesLabel: () => {
+          return "asd";
+        },
+        modalText: () => {
+          return "asd";
+        }
+      }
+    });
+    modal.result.then(() => {
+      console.log('modal result');
+    }, () => {
+      console.log('modal second');
+    });
+    // addSpell(lvl, spell, spellToAdd);
+  }
+
+  function addSpell(lvl, spell, spellToAdd) {
+    console.log("addSpell", lvl, spellToAdd, spell);
     let level = spell.levels.reduce((accumulator, currentValue) => {
       if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length)
         if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => {
@@ -143,7 +206,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.knownSpells[level].spells.push(spell.name);
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd);
     } else {
       if (!spellbookService.selectedCharacter.preparedSpells) {
         spellbookService.selectedCharacter.preparedSpells = {};
@@ -153,9 +216,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push({
-        name: spell.name
-      });
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spellToAdd);
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
@@ -165,7 +226,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
 
 const SpellbookSpelllistLightComponent = {
   template: require('./spellbook-spelllist-light.html'),
-  controller: ['$log', '$state', '$scope', '$rootScope', '$timeout', 'filterService', 'spellService', 'spellbookService', '$window', '$document', 'CLASSES', SpellbookSpelllistLightController],
+  controller: ['$log', '$state', '$scope', '$rootScope', '$uibModal', '$timeout', 'filterService', 'spellService', 'spellbookService', '$window', '$document', 'CLASSES', SpellbookSpelllistLightController],
   bindings: {
     spells: '<',
     collapseName: '<',
