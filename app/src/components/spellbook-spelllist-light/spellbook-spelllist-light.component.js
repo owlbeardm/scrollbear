@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $timeout, filterService, spellService, spellbookService, $window, $document, CLASSES) {
+function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $uibModal, $timeout, filterService, spellService, spellbookService, $window, $document, CLASSES) {
   $log.debug('SpellbookSpelllistLightController create');
   const ctrl = this;
 
@@ -150,7 +150,34 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
       name: spell.name,
       metamagic: true
     };
-    addSpell(lvl, spell, spellToAdd);
+    let modal = $uibModal.open({
+      // animation: false,
+      component: 'yesNoModal',
+      backdropClass: 'fade show',
+      windowClass: 'fade show',
+      // windowTopClass: '',
+      size: 'lg',
+      resolve: {
+        noLabel: () => {
+          return "asd";
+        },
+        title: () => {
+          return "asd";
+        },
+        yesLabel: () => {
+          return "asd";
+        },
+        modalText: () => {
+          return "asd";
+        }
+      }
+    });
+    modal.result.then(() => {
+      console.log('modal result');
+    }, () => {
+      console.log('modal second');
+    });
+    // addSpell(lvl, spell, spellToAdd);
   }
 
   function addSpell(lvl, spell, spellToAdd) {
@@ -179,7 +206,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
           spells: []
         };
       }
-      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd.name);
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd);
     } else {
       if (!spellbookService.selectedCharacter.preparedSpells) {
         spellbookService.selectedCharacter.preparedSpells = {};
@@ -199,7 +226,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ti
 
 const SpellbookSpelllistLightComponent = {
   template: require('./spellbook-spelllist-light.html'),
-  controller: ['$log', '$state', '$scope', '$rootScope', '$timeout', 'filterService', 'spellService', 'spellbookService', '$window', '$document', 'CLASSES', SpellbookSpelllistLightController],
+  controller: ['$log', '$state', '$scope', '$rootScope', '$uibModal', '$timeout', 'filterService', 'spellService', 'spellbookService', '$window', '$document', 'CLASSES', SpellbookSpelllistLightController],
   bindings: {
     spells: '<',
     collapseName: '<',
