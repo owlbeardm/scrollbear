@@ -134,7 +134,7 @@ form .form-group .error {
   border-color: #C8C7BE;
 }
 
-.card .card-header {
+.accordion .card .card-header {
   z-index: 0 !important;
 }
 
