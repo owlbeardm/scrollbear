@@ -31,10 +31,13 @@
   <div class="card-body">
     <table class="table table-sm">
       <tbody>
-        <tr ng-repeat="spell in $ctrl.spellLevel.spells">
+        <tr ng-repeat="spell in $ctrl.spellLevel.spells track by $index">
           <td ng-click="$ctrl.chooseSpell(spell.name)">
             <a href="#" class="text-dark">
               {{spell.name}}
+              <span ng-if="spell.domain" class="badge badge-primary ml-1" data-toggle="tooltip" data-placement="top" title="Domain">D</span>
+              <span ng-if="spell.special" class="badge badge-warning ml-1" data-toggle="tooltip" data-placement="top" title="Special">S</span>
+              <span ng-if="spell.metamagic" class="badge badge-info ml-1" data-toggle="tooltip" data-placement="top" title="Metamagic">M</span>
             </a>
             <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
           </td>
