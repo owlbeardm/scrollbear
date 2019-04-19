@@ -12,3 +12,16 @@ install:
   - yarn
 script:
   - yarn test
+
+before_deploy:
+  - yarn build
+deploy:
+  - on:
+      # all_branches: true
+      branch: master
+    local_dir: ./dist
+    keep_history: true
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    provider: pages
+    wait-until-deployed: true
