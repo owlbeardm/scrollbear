@@ -37,8 +37,35 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     calculateTotal();
   }
 
-  ctrl.addSpell = function(level, spell) {
-    console.log(level, spell);
+  ctrl.addSpell = function(lvlToAdd, spell) {
+    console.log("ctrl.addSpell", ctrl.collapseName, spell);
+    const spellToAdd = {
+      name: spell
+    };
+    addSpell(lvlToAdd, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsDomain = function(lvlToAdd, spell) {
+    console.log("ctrl.addSpellAsDomain", spell);
+    const spellToAdd = {
+      name: spell,
+      domain: true
+    };
+    addSpell(lvlToAdd, spell, spellToAdd);
+  }
+
+  ctrl.addSpellAsSpecial = function(lvlToAdd, spell) {
+    console.log("ctrl.addSpellAsSpecial", spell);
+    const spellToAdd = {
+      name: spell,
+      special: true
+    };
+    addSpell(lvlToAdd, spell, spellToAdd);
+  }
+
+  function addSpell(lvlToAdd, spell, spellToAdd) {
+    console.log("addSpell 1", spellToAdd, spell);
+    let level = lvlToAdd;
     if (!spellbookService.selectedCharacter.prepared) {
       if (!spellbookService.selectedCharacter.knownSpells) {
         spellbookService.selectedCharacter.knownSpells = {};
@@ -48,7 +75,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
           spells: []
         };
       }
-      spellbookService.selectedCharacter.knownSpells[level].spells.push(spell);
+      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd);
     } else {
       if (!spellbookService.selectedCharacter.preparedSpells) {
         spellbookService.selectedCharacter.preparedSpells = {};
@@ -58,7 +85,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
           spells: []
         };
       }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push({name:spell});
+      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spellToAdd);
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
@@ -68,7 +95,7 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     if (!spellbookService.selectedCharacter.prepared) {
       if (spellbookService.selectedCharacter.knownSpells) {
         const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
-          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2.name == spellName), false), false);
         return present;
       }
     } else {

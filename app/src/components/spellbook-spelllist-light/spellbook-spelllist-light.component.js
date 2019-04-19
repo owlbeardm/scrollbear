@@ -76,7 +76,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
   ctrl.isSpellPrepared = function(spellName) {
     if (!spellbookService.selectedCharacter.prepared) {
       if (spellbookService.selectedCharacter.knownSpells) {
-        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce((acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2 == spellName), false), false);
+        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce((acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2.name == spellName), false), false);
         return present;
       }
     } else {
