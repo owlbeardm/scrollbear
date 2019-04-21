@@ -11,13 +11,15 @@ install:
 - yarn
 script:
 - yarn test
+
+after_success:
+  - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
+  - export GIT_TAG_VERSION=$((LAST_GIT_TAG_VERSION+1))
+
 before_deploy:
 - yarn build
 
-deploy:
-  - on:
-      all_branches: true
-      condition: $TRAVIS_BRANCH != master
+-: &s3_deploy
     secret_access_key: $AMAZON_S3
     provider: s3
     access_key_id: "AKIATNSKVPXD72674NCL"
@@ -25,4 +27,21 @@ deploy:
     skip_cleanup: true
     wait-until-deployed: true
     local_dir: "./dist"
+
+deploy:
+  # release a snapshot for each commit on any branch except master
+  - <<: *s3_deploy
+    on:
+      branch: develop
     upload-dir: snapshot/${TRAVIS_COMMIT::7}
+# release a version when on master and commit is tagged
+  - <<: *s3_deploy
+    on:
+      tags: true
+    upload-dir: ${TRAVIS_TAG:1}
+# update version, and commit tag when on master and not tagged
+  - on:
+      branch: master
+      condition: -z $(git tag --points-at $TRAVIS_COMMIT)
+    provider: script
+    script: $TRAVIS_BUILD_DIR/travis_release.sh
