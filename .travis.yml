@@ -18,10 +18,9 @@ deploy:
   - on:
       all_branches: true
       condition: $TRAVIS_BRANCH != master
-    secret_access_key:
-      secure: eXCPJRq8iT7K3BSo60cgxwmwijtk2pk2WLvTAGYH48xDIO9753F3sbTsyzAC8fU+hJyzZtBfsVtY+lrSx8tKjCkfA5vBjChPSGex1KBEut9qls2X/8VPcYYhVOK0SB4Epr3ykGfpNytgsl5K2lPz1He/EU1VGEA5Lj728clGC0vB0JJJx1fseXdFEawKvzTh0BjMUWJDUeC/bJSrp26qk2poFzWkWzYlKsTeSUlOiQ/0W/MgJkpAwL3KSKvYHsAAEAhnZeZSTv4KgBK8kzgjPO2PoqiZYTRsvlZKt2iTCCNKR8NbBejv2KT6/x2MCFFkWPNuniU2x7kuyrF9c2m+J9i4/58RhMRI0ESeADJ6dOvcEjPziXkaVYOP6UDC9pEPUw57/zqebsnxljCLJqbcjVXyNAAjSn9ZLXTAVC1R402MtcAutWk7peZLvoqF+U/bHlnIiElsG/xwBTkV/vCjZGORRplBVUYqWKKey3TVrXZmHdqLdlzKg3U+eS6OVRjSHsXsWq3axXmP6U8wWQ3oypVKU6kTyV4Sl04vf5qDB26dwyeRIbBAVKg064eI0FC9r4zV5pAXa7M7AC0f+4nsy6JG8YXgOKxWW0F95KVBrImAl65Qt/aTWH4fvl6mo4RC/zFzVtodxV2ROKQ0meRIInJDTAdPnRJa52XM/ijVVtM=
+    secret_access_key: $AMAZON_S3
     provider: s3
-    access_key_id: "AKIATNSKVPXDZDZMOXYQ"
+    access_key_id: "AKIATNSKVPXD72674NCL"
     bucket: "scrollbear-artifacts"
     skip_cleanup: true
     wait-until-deployed: true
