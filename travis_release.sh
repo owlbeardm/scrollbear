@@ -3,8 +3,8 @@ set -e
 
 npm version $GIT_TAG_VERSION --no-git-tag-version
 
-git config --global user.email "build@travis-ci.com"
-git config --global user.name "travis-ci"
+git config --global user.email "deploy@travis-ci.org"
+git config --global user.name "Deployment Bot (from Travis CI)"
 
 git checkout $TRAVIS_BRANCH
 
