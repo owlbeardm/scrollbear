@@ -4,7 +4,7 @@ set -e
 npm version $GIT_TAG_VERSION --no-git-tag-version
 
 git config --global user.email "build@travis-ci.com"
-git config --global user.name "Travis CI"
+git config --global user.name "travis-ci"
 
 git checkout $TRAVIS_BRANCH
 
