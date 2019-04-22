@@ -8,7 +8,7 @@ git config --global user.name "Travis CI"
 
 git checkout $TRAVIS_BRANCH
 
-git add $TRAVIS_BUILD_DIR/package.json $TRAVIS_BUILD_DIR/package-lock.json
+git add -A
 
 git commit -m "Setting version to $GIT_TAG_VERSION"
 git tag v$GIT_TAG_VERSION -a -m "Tagging version v$GIT_TAG_VERSION"
