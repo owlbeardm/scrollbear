@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-npm version $GIT_TAG_VERSION.0.0 --no-git-tag-version
+npm version $GIT_TAG_VERSION --no-git-tag-version
 
 git config --global user.email "build@travis-ci.com"
 git config --global user.name "Travis CI"
