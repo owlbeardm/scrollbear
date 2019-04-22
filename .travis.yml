@@ -34,11 +34,13 @@ deploy:
     on:
       branch: develop
     upload-dir: snapshot/${TRAVIS_COMMIT::7}
+
 # release a version when on master and commit is tagged
   - <<: *s3_deploy
     on:
       tags: true
     upload-dir: ${TRAVIS_TAG:1}
+    
 # update version, and commit tag when on master and not tagged
   - on:
       branch: master
