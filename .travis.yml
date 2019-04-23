@@ -17,12 +17,12 @@ after_success:
 #   - export GIT_TAG_VERSION=$(echo $LAST_GIT_TAG_VERSION | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
 
 before_deploy:
-- yarn build --env.version=${LAST_GIT_TAG_VERSION}-snapshot
+- yarn build --env.version=s$LAST_GIT_TAG_VERSION-$TRAVIS_BUILD_NUMBER
 - if ! [[ $TRAVIS_TAG ]]; then
     yarn build --env.version=${TRAVIS_TAG:1}
     cd dist &&
     zip scrollbear.zip -r *
-    && cd ..
+    && cd ..;
   fi
 
 -: &s3_deploy
