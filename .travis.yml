@@ -19,9 +19,11 @@ after_success:
 before_deploy:
 -
 - if ! [[ $TRAVIS_TAG ]]; then
-    yarn build --env.version=$GIT_TAG_VERSION-rc.$TRAVIS_BUILD_NUMBER;
+    yarn sitemap &&
+    yarn build --env.version=$GIT_TAG_VERSION-alpha.$TRAVIS_BUILD_NUMBER;
   fi
 - if [[ $TRAVIS_TAG ]]; then
+    yarn sitemap &&
     yarn build --env.version=${TRAVIS_TAG:1} &&
     cd dist &&
     zip scrollbear.zip -r * &&

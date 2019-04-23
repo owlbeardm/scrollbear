@@ -8,8 +8,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const {GenerateSW} = require('workbox-webpack-plugin')
+const {
+  GenerateSW
+} = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const VersionFile = require('webpack-version-file');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
 function getCommonConfig() {
@@ -40,7 +43,10 @@ function getCommonConfig() {
       }]
     },
     plugins: [
-      new CleanWebpackPlugin(),
+      new CleanWebpackPlugin({
+        verbose: true,
+        cleanOnceBeforeBuildPatterns: ['!version.txt'],
+      }),
       new HtmlWebpackPlugin({
         template: './app/index.html',
         filename: 'index.html'
@@ -128,6 +134,12 @@ module.exports = (env, argv) => {
         }
       }
     };
+    config.plugins.push(
+      new VersionFile({
+        output: './dist/version.txt',
+        verbose: true
+      })
+    );
     config.plugins.push(new FaviconsWebpackPlugin({
       logo: './assets/logo.png',
       prefix: 'icons/',
@@ -202,7 +214,9 @@ module.exports = (env, argv) => {
     APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : JSON.stringify('0.0.0')
   }));
 
-// 3013
+
+
+  // 3013
   // if (true) {
   //   const spells = require('./resources/spells.json');
   //   spells.forEach((spell, index) => {
