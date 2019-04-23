@@ -28,8 +28,6 @@ rm *.html
 cp -a dist/. .
 git add -A
 git commit -am "gh-pages release $1"
-git tag "v$1-gh"
 git push
 git checkout release/$1
-git flow release finish -m "$1" $1
-git push origin --tags
+git flow release finish -nm "$1" $1

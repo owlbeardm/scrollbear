@@ -1,14 +1,52 @@
 language: node_js
 node_js:
-  - "node"
+- node
 cache:
   yarn: true
 notifications:
   email:
     recipients:
-      - owlbeardm@gmail.com
-
+    - owlbeardm@gmail.com
 install:
-  - yarn
+- yarn
 script:
-  - yarn test
+- yarn test
+
+after_success:
+  - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
+  - export GIT_TAG_VERSION=$(echo $LAST_GIT_TAG_VERSION | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
+
+before_deploy:
+-
+- if ! [[ $TRAVIS_TAG ]]; then
+    yarn build --env.version=$GIT_TAG_VERSION-rc.$TRAVIS_BUILD_NUMBER;
+  fi
+- if [[ $TRAVIS_TAG ]]; then
+    yarn build --env.version=${TRAVIS_TAG:1} &&
+    cd dist &&
+    zip scrollbear.zip -r * &&
+    cd ..;
+  fi
+
+-: &s3_deploy
+    secret_access_key: $AMAZON_S3
+    provider: s3
+    access_key_id: "AKIATNSKVPXD72674NCL"
+    skip_cleanup: true
+    wait-until-deployed: true
+
+deploy:
+  # release a snapshot for each commit on any branch except master
+  - <<: *s3_deploy
+    on:
+      branch: develop
+    bucket: "dev.scrollbear.com"
+    local_dir: "./dist"
+
+# release a version when on master and commit is tagged
+  - <<: *s3_deploy
+    on:
+      tags: true
+    upload-dir: release
+    bucket: "scrollbear-artifacts"
+    local_dir: "./dist/scrollbear.zip"
