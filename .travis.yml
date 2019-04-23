@@ -27,6 +27,8 @@ before_deploy:
     yarn build --env.version=${TRAVIS_TAG:1} &&
     cd dist &&
     zip scrollbear.zip -r * &&
+    mkdir release &&
+    mv scrollbear.zip release/scrollbear.zip &&
     cd ..;
   fi
 
@@ -51,4 +53,4 @@ deploy:
       tags: true
     upload-dir: release
     bucket: "scrollbear-artifacts"
-    local_dir: "./dist/scrollbear.zip"
+    local_dir: "./dist/release"
