@@ -14,15 +14,18 @@ script:
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
-#   - export GIT_TAG_VERSION=$(echo $LAST_GIT_TAG_VERSION | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
+  - export GIT_TAG_VERSION=$(echo $LAST_GIT_TAG_VERSION | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
 
 before_deploy:
-- yarn build --env.version=${LAST_GIT_TAG_VERSION}-snapshot
+-
+- if [[ $TRAVIS_TAG ]]; then
+    yarn build --env.version=$GIT_TAG_VERSION-rc.$TRAVIS_BUILD_NUMBER;
+  fi
 - if ! [[ $TRAVIS_TAG ]]; then
-    yarn build --env.version=${TRAVIS_TAG:1}
+    yarn build --env.version=${TRAVIS_TAG:1} &&
     cd dist &&
-    zip scrollbear.zip -r *
-    && cd ..
+    zip scrollbear.zip -r * &&
+    cd ..;
   fi
 
 -: &s3_deploy
