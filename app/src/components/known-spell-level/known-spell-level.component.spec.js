@@ -2,7 +2,7 @@
 
 describe('KnownSpelLevelComponent', () => {
 
-  let $componentController, $compile, $rootScope, $provide;
+  let $componentController, $rootScope, $provide;
   let $log, $state, CLASSES;
   let spellService, filterService, focusService, spellbookService;
   let controller;
@@ -36,9 +36,8 @@ describe('KnownSpelLevelComponent', () => {
       });
     });
 
-    inject((_$componentController_, _$compile_, _$rootScope_, _$log_, _$state_, _CLASSES_) => {
+    inject((_$componentController_, _$rootScope_, _$log_, _$state_, _CLASSES_) => {
       $componentController = _$componentController_;
-      $compile = _$compile_;
       $rootScope = _$rootScope_;
       $log = _$log_;
       $state = _$state_;
@@ -58,29 +57,6 @@ describe('KnownSpelLevelComponent', () => {
 
   it('exists', () => {
     expect(controller).toBeDefined();
-  });
-
-  describe('component html', () => {
-
-    it('Replaces the element with the appropriate content', function() {
-      const element = angular.element("<known-spell-level></known-spell-level>");
-      $compile(element)($rootScope.$new());
-      const controller = element.controller("knownSpellLevel");
-      $rootScope.$digest();
-      expect(element.html().length).not.toEqual(0);
-    });
-    //   xit('Changes html view when gas selecting', function() {
-    //     const element = angular.element("<preferences></preferences>");
-    //     $compile(element)($rootScope.$new());
-    //     const controller = element.controller("preferences");
-    //     controller.beginGasPriceSelection();
-    //     $rootScope.$digest();
-    //     const begin = element.html();
-    //     controller.finishGasPriceSelection();
-    //     $rootScope.$digest();
-    //     const end = element.html();
-    //     expect(begin).not.toEqual(end);
-    //   });
   });
 
   describe('controller', () => {
