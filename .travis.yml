@@ -9,8 +9,8 @@ notifications:
     - owlbeardm@gmail.com
 install:
 - yarn
-script:
-- yarn test
+# script:
+# - yarn test
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
