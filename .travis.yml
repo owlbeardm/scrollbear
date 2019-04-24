@@ -1,8 +1,8 @@
 language: node_js
 node_js:
 - node
-cache:
-  yarn: true
+# cache:
+#   yarn: true
 notifications:
   email:
     recipients:
@@ -10,7 +10,7 @@ notifications:
 install:
 - yarn
 script:
-- yarn test
+- 
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}

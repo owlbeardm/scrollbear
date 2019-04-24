@@ -43,7 +43,7 @@ function KnownSpelLevelController($log, $state, filterService, focusService, spe
   }
 
   ctrl.chooseSpell = function(spell) {
-    spellService.showSpell(spell);
+    spellService.showSpell(spell.name);
   }
 
 }
