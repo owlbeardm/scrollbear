@@ -20,7 +20,7 @@
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "yarn parse && yarn commit",
-    "test": "yarn karma start --singleRun"
+    "test": "yarn karma start"
   },
   "dependencies": {
     "angular": "^1.7.6",
@@ -44,7 +44,7 @@
     "jasmine-core": "^3.2.1",
     "jasmine-reporters": "^2.3.2",
     "jquery": "^3.3.1",
-    "karma": "^4.0.1",
+    "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^2.0.1",
     "karma-sourcemap-loader": "^0.3.7",

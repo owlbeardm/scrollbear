@@ -37,7 +37,8 @@ module.exports = function(config) {
       showSpecTiming: false, // print the time elapsed for each spec
       failFast: false // test would finish with error when a first fail occurs.
     },
-    autoWatch: !config.singleRun,
+    // autoWatch: !config.singleRun,
+    singleRun: true,
     colors: true,
     port: 9876,
     basePath: '',
