@@ -1,23 +1,32 @@
 const webpackConf = require("./webpack.js");
-const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
+// const puppeteer = require('puppeteer');
+// process.env.CHROME_BIN = puppeteer.executablePath();
+// process.env.CHROMIUM_BIN = puppeteer.executablePath();
+
 
 module.exports = function(config) {
   config.set({
-    browsers: ['HeadlessChrome'],
-    customLaunchers:{
-      HeadlessChrome:{
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['PhantomJS'],
+    // customLaunchers: {
+    //   HeadlessChrome: {
+    //     base: 'ChromeHeadless',
+    //     flags: [
+    //       '--no-sandbox',
+    //       '--headless',
+    //       '--disable-gpu',
+    //       '--disable-translate',
+    //       '--disable-extensions',
+    //       '--no-proxy-server'
+    //     ]
+    //   }
+    // },
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
       'karma-webpack',
-      'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
     specReporter: {
@@ -29,7 +38,8 @@ module.exports = function(config) {
       showSpecTiming: false, // print the time elapsed for each spec
       failFast: false // test would finish with error when a first fail occurs.
     },
-    autoWatch: !config.singleRun,
+    // autoWatch: !config.singleRun,
+    singleRun: true,
     colors: true,
     port: 9876,
     basePath: '',
@@ -44,7 +54,9 @@ module.exports = function(config) {
       'app/index_test.js': ['webpack', 'sourcemap']
     },
     exclude: [],
-    webpack: webpackConf(undefined, {'mode':'test'}),
+    webpack: webpackConf(undefined, {
+      'mode': 'test'
+    }),
     webpackMiddleware: {
       noInfo: true,
       stats: 'errors-only'

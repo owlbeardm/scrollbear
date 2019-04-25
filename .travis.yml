@@ -9,8 +9,9 @@ notifications:
     - owlbeardm@gmail.com
 install:
 - yarn
+- yarn install --force
 script:
-- yarn test
+- # yarn test --single-run
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
@@ -19,12 +20,16 @@ after_success:
 before_deploy:
 -
 - if ! [[ $TRAVIS_TAG ]]; then
-    yarn build --env.version=$GIT_TAG_VERSION-rc.$TRAVIS_BUILD_NUMBER;
+    yarn sitemap &&
+    yarn build --env.version=$GIT_TAG_VERSION-$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER;
   fi
 - if [[ $TRAVIS_TAG ]]; then
+    yarn sitemap &&
     yarn build --env.version=${TRAVIS_TAG:1} &&
     cd dist &&
     zip scrollbear.zip -r * &&
+    mkdir release &&
+    mv scrollbear.zip release/scrollbear.zip &&
     cd ..;
   fi
 
@@ -39,7 +44,8 @@ deploy:
   # release a snapshot for each commit on any branch except master
   - <<: *s3_deploy
     on:
-      branch: develop
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ ^develop$|^feature\/
     bucket: "dev.scrollbear.com"
     local_dir: "./dist"
 
@@ -49,4 +55,4 @@ deploy:
       tags: true
     upload-dir: release
     bucket: "scrollbear-artifacts"
-    local_dir: "./dist/scrollbear.zip"
+    local_dir: "./dist/release"
