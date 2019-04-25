@@ -1,4 +1,4 @@
-import 'angular';
+// import 'angular';
 
 const testsContext = require.context(".", true, /\.spec$/)
 
