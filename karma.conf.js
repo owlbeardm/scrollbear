@@ -1,21 +1,22 @@
 const webpackConf = require("./webpack.js");
-const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
-process.env.CHROMIUM_BIN = puppeteer.executablePath();
+// const puppeteer = require('puppeteer');
+// process.env.CHROME_BIN = puppeteer.executablePath();
+// process.env.CHROMIUM_BIN = puppeteer.executablePath();
 
 
 module.exports = function(config) {
   config.set({
-    browsers: ['ChromeHeadlessCustom'],
+    browsers: ['HeadlessChrome'],
     customLaunchers: {
-      'ChromeHeadlessCustom': {
-        base: 'ChromiumHeadless',
+      HeadlessChrome: {
+        base: 'ChromeHeadless',
         flags: [
           '--no-sandbox',
           '--headless',
           '--disable-gpu',
           '--disable-translate',
-          '--disable-extensions'
+          '--disable-extensions',
+          '--no-proxy-server'
         ]
       }
     },
