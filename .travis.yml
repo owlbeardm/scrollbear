@@ -44,6 +44,7 @@ deploy:
   # release a snapshot for each commit on any branch except master
   - <<: *s3_deploy
     on:
+      all_branches: true
       condition: $TRAVIS_BRANCH =~ ^develop$|^feature\/
     bucket: "dev.scrollbear.com"
     local_dir: "./dist"
