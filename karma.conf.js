@@ -6,27 +6,27 @@ const webpackConf = require("./webpack.js");
 
 module.exports = function(config) {
   config.set({
-    browsers: ['HeadlessChrome'],
-    customLaunchers: {
-      HeadlessChrome: {
-        base: 'ChromeHeadless',
-        flags: [
-          '--no-sandbox',
-          '--headless',
-          '--disable-gpu',
-          '--disable-translate',
-          '--disable-extensions',
-          '--no-proxy-server'
-        ]
-      }
-    },
+    browsers: ['PhantomJS'],
+    // customLaunchers: {
+    //   HeadlessChrome: {
+    //     base: 'ChromeHeadless',
+    //     flags: [
+    //       '--no-sandbox',
+    //       '--headless',
+    //       '--disable-gpu',
+    //       '--disable-translate',
+    //       '--disable-extensions',
+    //       '--no-proxy-server'
+    //     ]
+    //   }
+    // },
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
       'karma-webpack',
-      'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
     specReporter: {
