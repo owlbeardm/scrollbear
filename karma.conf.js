@@ -1,31 +1,32 @@
 const webpackConf = require("./webpack.js");
-const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
-process.env.CHROMIUM_BIN = puppeteer.executablePath();
+// const puppeteer = require('puppeteer');
+// process.env.CHROME_BIN = puppeteer.executablePath();
+// process.env.CHROMIUM_BIN = puppeteer.executablePath();
 
 
 module.exports = function(config) {
   config.set({
-    browsers: ['ChromeHeadlessCustom'],
-    customLaunchers: {
-      'ChromeHeadlessCustom': {
-        base: 'ChromiumHeadless',
-        flags: [
-          '--no-sandbox',
-          '--headless',
-          '--disable-gpu',
-          '--disable-translate',
-          '--disable-extensions'
-        ]
-      }
-    },
+    browsers: ['PhantomJS'],
+    // customLaunchers: {
+    //   HeadlessChrome: {
+    //     base: 'ChromeHeadless',
+    //     flags: [
+    //       '--no-sandbox',
+    //       '--headless',
+    //       '--disable-gpu',
+    //       '--disable-translate',
+    //       '--disable-extensions',
+    //       '--no-proxy-server'
+    //     ]
+    //   }
+    // },
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
       'karma-webpack',
-      'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
     specReporter: {

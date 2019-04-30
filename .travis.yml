@@ -1,16 +1,17 @@
 language: node_js
 node_js:
 - node
-# cache:
-#   yarn: true
+cache:
+  yarn: true
 notifications:
   email:
     recipients:
     - owlbeardm@gmail.com
 install:
 - yarn
+- yarn install --force
 script:
-- 
+- # yarn test --single-run
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --abbrev=0 --tags) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
@@ -20,7 +21,7 @@ before_deploy:
 -
 - if ! [[ $TRAVIS_TAG ]]; then
     yarn sitemap &&
-    yarn build --env.version=$GIT_TAG_VERSION-alpha.$TRAVIS_BUILD_NUMBER;
+    yarn build --env.version=$GIT_TAG_VERSION-$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER;
   fi
 - if [[ $TRAVIS_TAG ]]; then
     yarn sitemap &&
@@ -43,7 +44,8 @@ deploy:
   # release a snapshot for each commit on any branch except master
   - <<: *s3_deploy
     on:
-      branch: develop
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ ^develop$|^feature\/
     bucket: "dev.scrollbear.com"
     local_dir: "./dist"
 

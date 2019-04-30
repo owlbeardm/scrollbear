@@ -3870,6 +3870,14 @@ karma-jasmine@^2.0.1:
   dependencies:
     jasmine-core "^3.3"
 
+karma-phantomjs-launcher@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/karma-phantomjs-launcher/-/karma-phantomjs-launcher-1.0.4.tgz#d23ca34801bda9863ad318e3bb4bd4062b13acd2"
+  integrity sha1-0jyjSAG9qYY60xjju0vUBisTrNI=
+  dependencies:
+    lodash "^4.0.1"
+    phantomjs-prebuilt "^2.1.7"
+
 karma-sourcemap-loader@^0.3.7:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/karma-sourcemap-loader/-/karma-sourcemap-loader-0.3.7.tgz#91322c77f8f13d46fed062b042e1009d4c4505d8"
@@ -4090,7 +4098,7 @@ lodash@^3.2.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.11.1, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
+lodash@^4.0.1, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -4912,7 +4920,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-phantomjs-prebuilt@^2.1.10:
+phantomjs-prebuilt@^2.1.10, phantomjs-prebuilt@^2.1.7:
   version "2.1.16"
   resolved "https://registry.yarnpkg.com/phantomjs-prebuilt/-/phantomjs-prebuilt-2.1.16.tgz#efd212a4a3966d3647684ea8ba788549be2aefef"
   dependencies:

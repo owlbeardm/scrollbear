@@ -1,3 +1,9 @@
 spell .card {
-    font-size: 1rem;
+  font-size: 1rem;
+}
+
+spell h1 {
+  font-size: 1.5625rem;
+  margin: 20px 0 0;
+  line-height: 1.5;
 }

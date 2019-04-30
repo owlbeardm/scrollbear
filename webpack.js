@@ -58,7 +58,7 @@ function getCommonConfig() {
       new CopyWebpackPlugin([{
         from: 'assets/CNAME'
       }, {
-        from: 'assets/404.html'
+        from: 'assets/robots.txt'
       }, {
         from: 'assets/sitemap.xml'
       }, {
