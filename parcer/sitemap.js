@@ -8,7 +8,7 @@ async function main() {
   try {
     // const stats = fs.statSync("resources/spells.json");
     // const mtime = new Date(stats.mtime).toISOString();
-    const mtime = "2019-04-24T14:05:29.278Z";
+    const mtime = "2019-04-30T12:48:06.645Z";
     fs.writeFileSync('assets/sitemap.xml', "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n", 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n', 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
