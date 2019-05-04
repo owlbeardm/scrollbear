@@ -1,6 +1,6 @@
 "use strict";
 
-function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, CASTING_TIME) {
+function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, SUBSCHOOLS, CASTING_TIME) {
   $log.debug('FilterController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -13,7 +13,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     ctrl.favOnly = filterService.favOnly;
     ctrl.schools = SCHOOLS;
     ctrl.castingTimes = CASTING_TIME;
+    ctrl.SUBSCHOOLS = SUBSCHOOLS;
     ctrl.schoolSelected = 'any';
+    ctrl.subSchoolSelected = 'any';
     ctrl.castingTimeSelected = 'any';
     ctrl.filters = [];
     filterService.school = ctrl.schoolSelected;
@@ -30,6 +32,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     if (ctrl.schoolSelected != 'any') {
       ctrl.filters.push(SCHOOLS[ctrl.schoolSelected].name);
     }
+    if (ctrl.subSchoolSelected != 'any') {
+      ctrl.filters.push(SUBSCHOOLS[ctrl.subSchoolSelected].name);
+    }
     if (ctrl.castingTimeSelected != 'any') {
       ctrl.filters.push(CASTING_TIME[ctrl.castingTimeSelected].name);
     }
@@ -39,8 +44,18 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 
   ctrl.setSchool = function() {
     filterService.school = ctrl.schoolSelected;
+    ctrl.subSchools = SCHOOLS[ctrl.schoolSelected].subschool;
+    ctrl.subSchoolSelected = 'any';
+    filterService.subSchool = ctrl.subSchoolSelected;
     ctrl.search();
+    $timeout(() => {
+      angular.element('.selectpicker').selectpicker('refresh')
+    });
+  }
 
+  ctrl.setSubSchool = function() {
+    filterService.subSchool = ctrl.subSchoolSelected;
+    ctrl.search();
   }
 
   ctrl.setCastingTime = function() {
@@ -57,6 +72,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     ctrl.filter = "";
     ctrl.schoolSelected = 'any';
     filterService.school = ctrl.schoolSelected;
+    ctrl.subSchools = undefined;
+    ctrl.subSchoolSelected = 'any';
+    filterService.subSchool = ctrl.subSchoolSelected;
     ctrl.castingTimeSelected = 'any';
     filterService.castingTime = ctrl.schoolSelected;
     // ctrl.search();
@@ -75,7 +93,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'CASTING_TIME', FilterController
+    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'SUBSCHOOLS', 'CASTING_TIME', FilterController
   ],
   bindings: {
     onlyClassSpellsEnabled: '<'
