@@ -129,14 +129,17 @@ appConstants.constant('SCHOOLS', {
   },
   "conjuration": {
     name: 'Conjuration',
+    subschool: ['any', 'calling', 'creation', 'healing', 'summoning', 'teleportation'],
     search: ['conjuration']
   },
   "divination": {
     name: 'Divination',
+    subschool: ['any', 'scrying'],
     search: ['divination']
   },
   "enchantment": {
     name: 'Enchantment',
+    subschool: ['any', 'charm', 'compulsion'],
     search: ['enchantment']
   },
   "evocation": {
@@ -145,6 +148,7 @@ appConstants.constant('SCHOOLS', {
   },
   "illusion": {
     name: 'Illusion',
+    subschool: ['any', 'figment', 'glamer', 'pattern', 'phantasm', 'shadow'],
     search: ['illusion']
   },
   "necromancy": {
@@ -153,6 +157,7 @@ appConstants.constant('SCHOOLS', {
   },
   "transmutation": {
     name: 'Transmutation',
+    subschool: ['any', 'polymorph'],
     search: ['transmutation']
   },
   "other": {
@@ -160,6 +165,71 @@ appConstants.constant('SCHOOLS', {
     search: (spell) => {
       return !['transmutation', 'conjuration', 'evocation', 'enchantment', 'abjuration', 'necromancy', 'divination', 'illusion'].includes(spell.school)
     }
+  }
+});
+
+appConstants.constant('SUBSCHOOLS', {
+  "any": {
+    name: 'Any subschool',
+    search: (spell) => {
+      return true;
+    }
+  },
+  "calling": {
+    name: 'Calling',
+    search: ['calling']
+  },
+  "charm": {
+    name: 'Charm',
+    search: ['charm']
+  },
+  "compulsion": {
+    name: 'Compulsion',
+    search: ['compulsion']
+  },
+  "creation": {
+    name: 'Creation',
+    search: ['creation']
+  },
+  "figment": {
+    name: 'Figment',
+    search: ['figment']
+  },
+  "glamer": {
+    name: 'Glamer',
+    search: ['glamer']
+  },
+  "healing": {
+    name: 'Healing',
+    search: ['healing']
+  },
+  "pattern": {
+    name: 'Pattern',
+    search: ['pattern']
+  },
+  "phantasm": {
+    name: 'Phantasm',
+    search: ['phantasm']
+  },
+  "polymorph": {
+    name: 'Polymorph',
+    search: ['polymorph']
+  },
+  "scrying": {
+    name: 'Scrying',
+    search: ['scrying']
+  },
+  "shadow": {
+    name: 'Shadow',
+    search: ['shadow']
+  },
+  "summoning": {
+    name: 'Summoning',
+    search: ['summoning']
+  },
+  "teleportation": {
+    name: 'Teleportation',
+    search: ['teleportation']
   }
 });
 

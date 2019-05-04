@@ -44,7 +44,10 @@
         <div class="form-row">
           <select class="col selectpicker" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected" ng-options="key as value.name for (key , value) in $ctrl.schools"></select>
         </div>
-        <div class="form-row">
+        <div class="form-row" ng-if="!!$ctrl.subSchools">
+          <select class="col selectpicker" ng-change="$ctrl.setSubSchool()" name="subSchoolSelect" id="subSchoolSelect" ng-model="$ctrl.subSchoolSelected" ng-options="sub as $ctrl.SUBSCHOOLS[sub].name for sub in $ctrl.subSchools"></select>
+        </div>
+        <div class="form-row" >
           <select class="col selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected" ng-options="key as value.name for (key , value) in $ctrl.castingTimes">
           </select>
         </div>
