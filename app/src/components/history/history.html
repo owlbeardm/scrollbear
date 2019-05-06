@@ -1,4 +1,4 @@
-<a class="badge text-muted mr-4" role="button" data-toggle="modal" data-target=".history-modal">
+<a class="badge text-muted mr-4" role="button" data-toggle="modal" data-target=".history-modal" ng-click="$ctrl.changeHistory()">
   <i class="fas fa-3x fa-history push-shadow"></i>
 </a>
 
@@ -18,13 +18,18 @@
       <div class="modal-body">
         <table class="table table-sm">
           <tbody>
-            <tr>
-              <!-- <tr ng-repeat="spell in $ctrl.spellLevel.spells track by $index"> -->
-              <td>
+            <tr ng-repeat="history in $ctrl.history | orderBy:'-' track by $index">
+              <td ng-if="!history.reset">
                 <i class="text-primary fas fa-scroll">
               </td>
-              <td>
-                Level 2: Acid splash
+              <td ng-if="history.reset">
+                <i class="text-muted fas fa-undo-alt ml-1">
+              </td>
+              <td ng-if="!history.reset">
+                Level {{history.level}}: {{history.name}}
+              </td>
+              <td ng-if="history.reset && history.spontaneous">
+                Reset slot: Level {{history.level}}
               </td>
             </tr>
             <tr>
