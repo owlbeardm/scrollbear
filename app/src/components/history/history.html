@@ -35,6 +35,9 @@
               <td ng-if="history.reset && history.spontaneous">
                 Reset slot: Level {{history.level}}
               </td>
+              <td ng-if="history.reset && history.prepared">
+                Reset Level {{history.level}}: {{history.name}}
+              </td>
             </tr>
           </tbody>
         </table>

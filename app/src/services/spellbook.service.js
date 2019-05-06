@@ -90,10 +90,44 @@ angular.module('app.services').factory('spellbookService', [
       SpellbookService.saveCharacters();
     }
 
-    SpellbookService.resetCast = function() {
-      Object.entries(SpellbookService.selectedCharacter.knownSpells).forEach(function(pair) {
-        pair[1].cast = 0
+    SpellbookService.preparedCast = function(key, id) {
+      if (SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast) {
+        return;
+      }
+      SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast = true;
+      SpellbookService.selectedCharacter.history.push({
+        prepared: true,
+        level: key,
+        name: SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name
       });
+      SpellbookService.saveCharacters();
+    }
+
+    SpellbookService.preparedRestore = function(key, id) {
+      if (!(SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast)) {
+        return;
+      }
+      delete SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast;
+      SpellbookService.selectedCharacter.history.push({
+        reset: true,
+        prepared: true,
+        level: key,
+        name: SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name
+      });
+      SpellbookService.saveCharacters();
+    }
+
+    SpellbookService.resetCast = function() {
+      if (SpellbookService.selectedCharacter.knownSpells)
+        Object.entries(SpellbookService.selectedCharacter.knownSpells).forEach(function(pair) {
+          pair[1].cast = 0
+        });
+      if (SpellbookService.selectedCharacter.preparedSpells)
+        Object.entries(SpellbookService.selectedCharacter.preparedSpells).forEach(function(pair) {
+          pair[1].spells.forEach(function(spell) {
+            delete spell.cast;
+          });
+        });
       SpellbookService.selectedCharacter.history = [];
       SpellbookService.saveCharacters();
     }
