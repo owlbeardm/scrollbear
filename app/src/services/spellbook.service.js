@@ -65,6 +65,9 @@ angular.module('app.services').factory('spellbookService', [
     }
 
     SpellbookService.spontaneousCast = function(key, name) {
+      if (!(SpellbookService.selectedCharacter.knownSpells[key].cast < SpellbookService.selectedCharacter.knownSpells[key].perDay)) {
+        return;
+      }
       SpellbookService.selectedCharacter.knownSpells[key].cast = Math.min(SpellbookService.selectedCharacter.knownSpells[key].perDay, SpellbookService.selectedCharacter.knownSpells[key].cast + 1);
       SpellbookService.selectedCharacter.history.push({
         spontaneous: true,
@@ -75,6 +78,9 @@ angular.module('app.services').factory('spellbookService', [
     }
 
     SpellbookService.spontaneousRestore = function(key) {
+      if (!(SpellbookService.selectedCharacter.knownSpells[key].cast > 0)) {
+        return;
+      }
       SpellbookService.selectedCharacter.knownSpells[key].cast = Math.max(0, SpellbookService.selectedCharacter.knownSpells[key].cast - 1);
       SpellbookService.selectedCharacter.history.push({
         reset: true,

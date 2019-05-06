@@ -16,6 +16,10 @@
         </button>
       </div>
       <div class="modal-body">
+        <div ng-if='!$ctrl.history || !$ctrl.history.length' class="alert alert-info" role="alert">
+          No spells were cast today.
+        </div>
+
         <table class="table table-sm">
           <tbody>
             <tr ng-repeat="history in $ctrl.history | orderBy:'-' track by $index">
@@ -30,15 +34,6 @@
               </td>
               <td ng-if="history.reset && history.spontaneous">
                 Reset slot: Level {{history.level}}
-              </td>
-            </tr>
-            <tr>
-            <!-- <tr ng-repeat="spell in $ctrl.spellLevel.spells track by $index"> -->
-              <td>
-                <i class="text-muted fas fa-undo-alt ml-1">
-              </td>
-              <td>
-                Reset slot: Level 2
               </td>
             </tr>
           </tbody>

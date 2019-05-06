@@ -9,7 +9,7 @@ function KnownSpelLevelController($log, $state, filterService, focusService, spe
   }
 
   ctrl.cast = function(key, name) {
-      $log.debug("KnownSpelLevelController cast", key);
+    $log.debug("KnownSpelLevelController cast", key);
     spellbookService.spontaneousCast(key, name);
   }
 
