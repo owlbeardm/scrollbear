@@ -51,12 +51,7 @@ function PreparedController($log, $state, filterService, spellService, spellbook
   }
 
   ctrl.resetCast = function() {
-    Object.entries(ctrl.spells).forEach(function(pair) {
-      pair[1].spells.forEach(function(spell) {
-        delete  spell.cast;
-      });
-    });
-    spellbookService.saveCharacters();
+    spellbookService.resetCast();
   }
 
   function calculateTotal() {

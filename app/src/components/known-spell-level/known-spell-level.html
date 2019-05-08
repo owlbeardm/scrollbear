@@ -57,7 +57,7 @@
             </a>
           </td>
           <td ng-if="$ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-class="{'text-success': $ctrl.spellLevel.perDay > $ctrl.spellLevel.cast, 'text-muted disabled': $ctrl.spellLevel.perDay <= $ctrl.spellLevel.cast}" ng-click="$ctrl.cast($ctrl.level)">
+            <a href="#" class="ml-2 mr-3" ng-class="{'text-success': $ctrl.spellLevel.perDay > $ctrl.spellLevel.cast, 'text-muted disabled': $ctrl.spellLevel.perDay <= $ctrl.spellLevel.cast}" ng-click="$ctrl.cast($ctrl.level, spell.name)">
               <span class="badge badge-secondary" ng-if="$ctrl.spellLevel.perDay > $ctrl.spellLevel.cast"><small>{{$ctrl.spellLevel.perDay - $ctrl.spellLevel.cast}}</small></span>
               <i class="fas fa-scroll push-shadow"></i>
             </a>
