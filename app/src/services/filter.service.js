@@ -11,18 +11,26 @@ angular.module('app.services').factory('filterService', [
     const FilterService = {};
     const FAV_SPELLS = "FAV_SPELLS";
     const FAV_ONLY = "FAV_ONLY";
+    const SOURCE_BOOKS = "SOURCE_BOOKS";
     const localStorage = $window['localStorage'];
     FilterService.school = 'any';
     FilterService.subSchool = 'any';
     FilterService.castingTime = 'any';
-
     FilterService.favOnly = JSON.parse(localStorage.getItem(FAV_ONLY)) ?
       JSON.parse(localStorage.getItem(FAV_ONLY)) :
       false;
+    FilterService.sourceBooks = JSON.parse(localStorage.getItem(SOURCE_BOOKS)) ?
+      JSON.parse(localStorage.getItem(SOURCE_BOOKS)) : [];
+
 
     FilterService.setFavOnly = function(favOnly) {
       FilterService.favOnly = favOnly;
       localStorage.setItem(FAV_ONLY, JSON.stringify(FilterService.favOnly));
+    }
+
+    FilterService.setSourceBook = function(sourceBooks) {
+      FilterService.sourceBooks = sourceBooks;
+      localStorage.setItem(SOURCE_BOOKS, JSON.stringify(FilterService.sourceBooks));
     }
 
     FilterService.filter = function(spell) {
@@ -34,6 +42,11 @@ angular.module('app.services').factory('filterService', [
       }
       if (include && FilterService.favOnly) {
         include = include && FilterService.isFav(spell);
+      }
+      if (include && FilterService.sourceBooks.length) {
+        console.log(FilterService.sourceBooks);
+        console.log(spell.source);
+        include = include && FilterService.sourceBooks.includes(spell.source.substring(2, spell.source.indexOf(' pg.')));
       }
       if (include) {
         if (Array.isArray(SCHOOLS[FilterService.school].search)) {

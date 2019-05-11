@@ -1,6 +1,6 @@
 "use strict";
 
-function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, SUBSCHOOLS, CASTING_TIME) {
+function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, SUBSCHOOLS, CASTING_TIME, SOURCE_BOOK) {
   $log.debug('FilterController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -11,8 +11,10 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     ctrl.onlyClassSpells = false;
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
+    ctrl.sourceBookSelected = filterService.sourceBooks;
     ctrl.schools = SCHOOLS;
     ctrl.castingTimes = CASTING_TIME;
+    ctrl.sourceBooks = SOURCE_BOOK;
     ctrl.SUBSCHOOLS = SUBSCHOOLS;
     ctrl.schoolSelected = 'any';
     ctrl.subSchoolSelected = 'any';
@@ -38,6 +40,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     if (ctrl.castingTimeSelected != 'any') {
       ctrl.filters.push(CASTING_TIME[ctrl.castingTimeSelected].name);
     }
+    if (ctrl.sourceBookSelected.length) {
+      ctrl.filters.push(`${ctrl.sourceBookSelected.length} source${ctrl.sourceBookSelected.length>1?'s':''}`);
+    }
     filterService.filterText = ctrl.filter;
     notificationService.notify(notificationService.FILTER_CHANGED, undefined);
   }
@@ -60,6 +65,11 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 
   ctrl.setCastingTime = function() {
     filterService.castingTime = ctrl.castingTimeSelected;
+    ctrl.search();
+  }
+
+  ctrl.setSourceBook = function() {
+    filterService.setSourceBook(ctrl.sourceBookSelected);
     ctrl.search();
   }
 
@@ -93,7 +103,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'SUBSCHOOLS', 'CASTING_TIME', FilterController
+    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'SUBSCHOOLS', 'CASTING_TIME', 'SOURCE_BOOK', FilterController
   ],
   bindings: {
     onlyClassSpellsEnabled: '<'
