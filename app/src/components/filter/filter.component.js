@@ -11,6 +11,7 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     ctrl.onlyClassSpells = false;
     const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
+    ctrl.sourceBookSelected = filterService.sourceBooks;
     ctrl.schools = SCHOOLS;
     ctrl.castingTimes = CASTING_TIME;
     ctrl.sourceBooks = SOURCE_BOOK;
@@ -39,6 +40,9 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     if (ctrl.castingTimeSelected != 'any') {
       ctrl.filters.push(CASTING_TIME[ctrl.castingTimeSelected].name);
     }
+    if (ctrl.sourceBookSelected.length) {
+      ctrl.filters.push(`${ctrl.sourceBookSelected.length} source${ctrl.sourceBookSelected.length>1?'s':''}`);
+    }
     filterService.filterText = ctrl.filter;
     notificationService.notify(notificationService.FILTER_CHANGED, undefined);
   }
@@ -61,6 +65,11 @@ function FilterController(notificationService, filterService, $log, $window, $ti
 
   ctrl.setCastingTime = function() {
     filterService.castingTime = ctrl.castingTimeSelected;
+    ctrl.search();
+  }
+
+  ctrl.setSourceBook = function() {
+    filterService.setSourceBook(ctrl.sourceBookSelected);
     ctrl.search();
   }
 
