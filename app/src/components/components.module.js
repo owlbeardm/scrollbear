@@ -2,6 +2,9 @@
 
 const appComponents = angular.module('app.components', []);
 
+import History from './history/history.component.js';
+appComponents.component('history', History);
+
 import CharacterItem from './character-item/character-item.component.js';
 appComponents.component('characterItem', CharacterItem);
 

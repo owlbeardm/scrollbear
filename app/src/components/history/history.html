@@ -1,0 +1,52 @@
+<a class="badge text-muted mr-4" role="button" data-toggle="modal" data-target=".history-modal" ng-click="$ctrl.changeHistory()">
+  <i class="fas fa-3x fa-history push-shadow"></i>
+</a>
+
+<div class="modal fade history-modal" id="modalHistory" tabindex="-1" role="dialog" aria-labelledby="modalHistoryLabel" aria-hidden="false">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <td class="float-right">
+        </td>
+        <h3 class="modal-title" id="modalSpellLabel">
+          Spellcasting history
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fas fa-times"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div ng-if='!$ctrl.history || !$ctrl.history.length' class="alert alert-info" role="alert">
+          No spells were cast today.
+        </div>
+
+        <table class="table table-sm">
+          <tbody>
+            <tr ng-repeat="history in $ctrl.history | orderBy:'-' track by $index">
+              <td ng-if="!history.reset">
+                <i class="text-primary fas fa-scroll">
+              </td>
+              <td ng-if="history.reset">
+                <i class="text-muted fas fa-undo-alt ml-1">
+              </td>
+              <td ng-if="!history.reset">
+                Level {{history.level}}: {{history.name}}
+              </td>
+              <td ng-if="history.reset && history.spontaneous">
+                Reset slot: Level {{history.level}}
+              </td>
+              <td ng-if="history.reset && history.prepared">
+                Reset Level {{history.level}}: {{history.name}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <i class="text-primary fas fa-scroll"></i> Level 2: Acid splash<br> -->
+                <!-- <i class="text-primary fas fa-undo-alt"></i> Reset Level 2 slot<br> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

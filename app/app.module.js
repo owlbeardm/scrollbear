@@ -133,7 +133,7 @@ scrollbearApp.config([
             $rootScope.title = `${spell.name} - `;
             $rootScope.spell = spell;
             const spellDescription = getSpellDescription(spell.description);
-            $rootScope.description = spell.description;
+            $rootScope.description = `${spell.name}\ in ScrollBear spellbook app. Pathfinder RPG spell from ${spellService.getPlainSpellSource(spell.source)}.`;
             $rootScope.spellDescription = spellDescription;
             $rootScope.spellSource = spellService.getSpellSource(spell.source);
             return spell;

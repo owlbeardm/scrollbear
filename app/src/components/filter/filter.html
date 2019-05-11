@@ -19,14 +19,13 @@
         <div class="col-auto">
           <div class="togglebutton form-check">
             <label class="text-info">
-            <input type="checkbox" checked="" ng-model="$ctrl.onlyClassSpells" ng-change="$ctrl.onlyClassSpellsChanges()">
-            <span class="toggle"></span>
-            Show spells from all classes
-          </label>
+              <input type="checkbox" checked="" ng-model="$ctrl.onlyClassSpells" ng-change="$ctrl.onlyClassSpellsChanges()">
+              <span class="toggle"></span>
+              Show spells from all classes
+            </label>
           </div>
         </div>
       </div>
-
       <div class="form-row mt-3">
         <div class="col-auto">
           <a href="#" class="collapsed text-primary" data-toggle="collapse" data-target="#moreFilters" aria-expanded="false">
@@ -44,16 +43,19 @@
         <div class="form-row">
           <select class="col selectpicker" ng-change="$ctrl.setSchool()" name="schoolSelect" id="schoolSelect" ng-model="$ctrl.schoolSelected" ng-options="key as value.name for (key , value) in $ctrl.schools"></select>
         </div>
-        <div class="form-row">
+        <div class="form-row" ng-if="!!$ctrl.subSchools">
+          <select class="col selectpicker" ng-change="$ctrl.setSubSchool()" name="subSchoolSelect" id="subSchoolSelect" ng-model="$ctrl.subSchoolSelected" ng-options="sub as $ctrl.SUBSCHOOLS[sub].name for sub in $ctrl.subSchools"></select>
+        </div>
+        <div class="form-row" >
           <select class="col selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected" ng-options="key as value.name for (key , value) in $ctrl.castingTimes">
           </select>
         </div>
-        <!-- <div class="form-row">
-            <select multiple title="Select source books" data-selected-text-format="count > 2" data-actions-box="true" class="col selectpicker" data-live-search="true" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect"
-              ng-model="$ctrl.mcastingTimeSelected">
-              <option ng-repeat="(key, value) in $ctrl.castingTimes" value="{{key}}">{{value.name}}</option>
-            </select>
-        </div> -->
+        <div class="form-row">
+          <select multiple title="All source books enabled" data-selected-text-format="count > 2" data-count-selected-text="Selected {0} source books" class="selectpicker" data-live-search="true" ng-change="$ctrl.setSourceBook()" data-width="100%"
+            data-mobile="true" name="sourceBookSelect" id="sourceBookSelect" data-actions-box="true" ng-model="$ctrl.sourceBookSelected">
+            <option ng-repeat="book in $ctrl.sourceBooks" value='{{book}}'>{{ book | limitTo: 32 }}{{book.length > 32 ? '...' : ''}}</option>
+          </select>
+        </div>
       </div>
       <div class="form-row">
         <div class="col">
