@@ -39,22 +39,8 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
     calculateTotal();
   }
 
-  ctrl.cast = function(key) {
-    spellbookService.selectedCharacter.knownSpells[key].cast++;
-    spellbookService.saveCharacters();
-  }
-
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
-  }
-
   ctrl.resetCast = function() {
-    Object.entries(ctrl.spells).forEach(function(pair) {
-      pair[1].cast = 0
-    });
-    spellbookService.saveCharacters();
+    spellbookService.resetCast();
   }
 
   function calculateTotal() {
