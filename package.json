@@ -1,6 +1,6 @@
 {
   "name": "scrollbear",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "scrollbear site",
   "main": "index.js",
   "repository": "git@github.com:owlbeardm/scrollbear.git",
