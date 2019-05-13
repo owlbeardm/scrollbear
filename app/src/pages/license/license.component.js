@@ -1,7 +1,6 @@
 "use strict";
 
-const license = require('../../../../resources/license.json');
-const showdown = require('showdown');
+const license = require('./license.md');
 
 function LicenseController($log) {
   $log.debug('LicenseController create');
@@ -9,11 +8,7 @@ function LicenseController($log) {
 
   ctrl.$onInit = function() {
     $log.debug("LicenseController init");
-    const converter = new showdown.Converter({
-      tables: true,
-      strikethrough: true
-    });
-    ctrl.legal = `<div>${converter.makeHtml(license.license)}</div>`;
+    ctrl.legal = `<div>${license}</div>`;
   }
 }
 

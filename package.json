@@ -69,6 +69,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "devDependencies": {
-    "karma-phantomjs-launcher": "^1.0.4"
+    "karma-phantomjs-launcher": "^1.0.4",
+    "markdown-loader": "^5.0.0"
   }
 }
