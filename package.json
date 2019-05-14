@@ -69,6 +69,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "devDependencies": {
-    "karma-phantomjs-launcher": "^1.0.4"
+    "karma-phantomjs-launcher": "^1.0.4",
+    "sw-offline-google-analytics": "^0.0.25"
   }
 }
