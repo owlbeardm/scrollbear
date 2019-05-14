@@ -172,7 +172,13 @@ scrollbearApp.run([
     });
     $transitions.onFinish({}, function(transition) {
       console.log("onFinish Transition");
+      if(!transition.from().abstract){
+        // console.log("onFinish Transition", window.ga.getAll()[0]);
+        window.ga('set', 'page', $location.url());
+        window.ga('send', 'pageview');
+      }
       sidebarService.disableSidebar();
+
     });
     $transitions.onStart({
       to: 'main'

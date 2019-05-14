@@ -1,6 +1,6 @@
 {
   "name": "scrollbear",
-  "version": "1.10.3",
+  "version": "1.10.4",
   "description": "scrollbear site",
   "main": "index.js",
   "repository": "git@github.com:owlbeardm/scrollbear.git",
@@ -69,6 +69,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "devDependencies": {
-    "karma-phantomjs-launcher": "^1.0.4"
+    "karma-phantomjs-launcher": "^1.0.4",
+    "sw-offline-google-analytics": "^0.0.25"
   }
 }

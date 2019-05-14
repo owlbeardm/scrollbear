@@ -44,8 +44,6 @@ angular.module('app.services').factory('filterService', [
         include = include && FilterService.isFav(spell);
       }
       if (include && FilterService.sourceBooks.length) {
-        console.log(FilterService.sourceBooks);
-        console.log(spell.source);
         include = include && FilterService.sourceBooks.includes(spell.source.substring(2, spell.source.indexOf(' pg.')));
       }
       if (include) {
