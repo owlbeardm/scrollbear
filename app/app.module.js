@@ -26,6 +26,18 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', function($log) {
+  return function myExceptionHandler(exception, cause) {
+    // logErrorsToBackend(exception, cause);
+    $log.error(exception, cause);
+    $log.debug(exception.message);
+    ga('send', 'exception', {
+      'exDescription': exception,
+      'exFatal': false
+    });
+  };
+}]);
+
 const scrollbearApp = angular.module('scrollbearApp', [
   'pages.components',
   'app.components',
@@ -34,9 +46,12 @@ const scrollbearApp = angular.module('scrollbearApp', [
   'app.filters',
   'ui.router',
   'ui.bootstrap',
-  'ngSanitize'
+  'ngSanitize',
+  'exceptionOverwrite'
   // 'app.directives'
 ]);
+
+
 
 import AppComponent from './src/pages/app.component.js';
 scrollbearApp.component('app', AppComponent);
