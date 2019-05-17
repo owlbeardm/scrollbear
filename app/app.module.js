@@ -155,6 +155,9 @@ scrollbearApp.run([
   '$rootScope',
   'sidebarService',
   function($log, $transitions, $location, $state, $rootScope, sidebarService) {
+    if (window.performance) {
+       ga('send', 'timing', 'JS Dependencies', 'load', Math.round(performance.now()));
+    }
     let prevSpellsLocation;
     $transitions.onStart({}, function(transition) {
       console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
@@ -172,7 +175,7 @@ scrollbearApp.run([
     });
     $transitions.onFinish({}, function(transition) {
       console.log("onFinish Transition");
-      if(!transition.from().abstract){
+      if (!transition.from().abstract) {
         // console.log("onFinish Transition", window.ga.getAll()[0]);
         window.ga('set', 'page', $location.url());
         window.ga('send', 'pageview');
