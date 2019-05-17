@@ -1,6 +1,6 @@
 "use strict";
 
-function CharactersController($log, $state, spellbookService, CLASSES) {
+function CharactersController($log, $rootScope, $state, spellbookService, CLASSES) {
   $log.debug('CharactersController create');
   const ctrl = this;
 
@@ -8,6 +8,9 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
     $log.debug("CharactersController init");
     ctrl.classes = CLASSES;
     ctrl.characters = spellbookService.characters;
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.add = function() {
@@ -22,7 +25,7 @@ function CharactersController($log, $state, spellbookService, CLASSES) {
 
 const CharactersComponent = {
   template: require('./characters.html'),
-  controller: ['$log', '$state', 'spellbookService', 'CLASSES', CharactersController]
+  controller: ['$log', '$rootScope', '$state', 'spellbookService', 'CLASSES', CharactersController]
 }
 
 export default CharactersComponent;

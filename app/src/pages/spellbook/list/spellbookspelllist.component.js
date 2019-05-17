@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellbookSpellListController($log, $state, $scope, $document, $timeout, notificationService, filterService, spellService, spellbookService, CLASSES) {
+function SpellbookSpellListController($log, $state, $rootScope, $scope, $document, $timeout, notificationService, filterService, spellService, spellbookService, CLASSES) {
   $log.debug('SpellbookSpellListController create');
   const ctrl = this;
   const SELECTED_CLASS = "SELECTED_CLASS";
@@ -28,6 +28,9 @@ function SpellbookSpellListController($log, $state, $scope, $document, $timeout,
     $timeout(() => {
       angular.element('.selectpicker').selectpicker('refresh')
     });
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.chooseSpell = function(spell) {
@@ -74,6 +77,7 @@ const SpellbookSpellListComponent = {
   controller: [
     '$log',
     '$state',
+    '$rootScope',
     '$scope',
     '$document',
     '$timeout',

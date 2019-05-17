@@ -156,32 +156,32 @@ scrollbearApp.run([
   'sidebarService',
   function($log, $transitions, $location, $state, $rootScope, sidebarService) {
     if (window.performance) {
-       ga('send', 'timing', 'JS Dependencies', 'load', Math.round(performance.now()));
+      ga('send', 'timing', 'JS Dependencies', 'load', Math.round(performance.now()));
     }
     let prevSpellsLocation;
     $transitions.onStart({}, function(transition) {
-      console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
-      if ($location.search()._escaped_fragment_) {
-        const p = $location.search()._escaped_fragment_;
-        $location.search({});
-        $location.path(p);
-      }
       const popup = angular.element("#modalSpell");
       popup.modal('hide');
       const modalBackdrop = angular.element('.modal-backdrop');
       modalBackdrop.remove();
       const body = angular.element('body');
       body.removeClass('modal-open');
+      console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
+      if (window.performance) {
+        $rootScope.onStartTime = Math.round(performance.now());
+      }
     });
     $transitions.onFinish({}, function(transition) {
-      console.log("onFinish Transition");
+      console.log("onFinish Transition", transition.params());
       if (!transition.from().abstract) {
         // console.log("onFinish Transition", window.ga.getAll()[0]);
         window.ga('set', 'page', $location.url());
         window.ga('send', 'pageview');
       }
       sidebarService.disableSidebar();
-
+      if (window.performance) {
+        ga('send', 'timing', 'Transition', 'onFinish', Math.round(performance.now()) - $rootScope.onStartTime, transition.to().name);
+      }
     });
     $transitions.onStart({
       to: 'main'
