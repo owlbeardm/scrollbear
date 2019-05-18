@@ -40,6 +40,7 @@ angular.module('app.services').factory('spellbookService', [
     SpellbookService.addCharacter = function(character) {
       SpellbookService.characters.push(character);
       SpellbookService.saveCharacters();
+      ga('send', 'event', 'characters', 'new', character.class);
     }
 
     SpellbookService.deleteCharacter = function(id) {
@@ -52,6 +53,7 @@ angular.module('app.services').factory('spellbookService', [
       if (SpellbookService.selectedCharacter && !SpellbookService.selectedCharacter.history) {
         SpellbookService.selectedCharacter.history = [];
       }
+      ga('send', 'event', 'characters', 'select', character.class);
     }
 
     SpellbookService.isNameExists = function(name) {
@@ -75,6 +77,7 @@ angular.module('app.services').factory('spellbookService', [
         name: name
       });
       SpellbookService.saveCharacters();
+      ga('send', 'event', 'cast', name, SpellbookService.selectedCharacter.class);
     }
 
     SpellbookService.spontaneousRestore = function(key) {
@@ -101,6 +104,7 @@ angular.module('app.services').factory('spellbookService', [
         name: SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name
       });
       SpellbookService.saveCharacters();
+      ga('send', 'event', 'cast', SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name, SpellbookService.selectedCharacter.class);
     }
 
     SpellbookService.preparedRestore = function(key, id) {
@@ -130,6 +134,7 @@ angular.module('app.services').factory('spellbookService', [
         });
       SpellbookService.selectedCharacter.history = [];
       SpellbookService.saveCharacters();
+
     }
 
     return SpellbookService;
