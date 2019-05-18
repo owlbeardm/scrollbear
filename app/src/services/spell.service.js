@@ -114,6 +114,14 @@ angular.module('app.services').factory('spellService', [
       return html;
     }
 
+    SpellService.getPlainSpellSource = function(md) {
+      let close = md.indexOf('_]')
+      if(close == -1){
+        return md
+      }
+      return md.substring(2, close);
+    }
+
 
     return SpellService;
   }

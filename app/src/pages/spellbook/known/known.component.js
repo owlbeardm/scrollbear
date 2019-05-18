@@ -1,6 +1,6 @@
 "use strict";
 
-function KnownController($log, $state, filterService, spellService, spellbookService, CLASSES) {
+function KnownController($log, $rootScope, $state, filterService, spellService, spellbookService, CLASSES) {
   $log.debug('KnownController create');
   const ctrl = this;
 
@@ -37,24 +37,13 @@ function KnownController($log, $state, filterService, spellService, spellbookSer
     }
     spellbookService.saveCharacters();
     calculateTotal();
-  }
-
-  ctrl.cast = function(key) {
-    spellbookService.selectedCharacter.knownSpells[key].cast++;
-    spellbookService.saveCharacters();
-  }
-
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.resetCast = function() {
-    Object.entries(ctrl.spells).forEach(function(pair) {
-      pair[1].cast = 0
-    });
-    spellbookService.saveCharacters();
+    spellbookService.resetCast();
   }
 
   function calculateTotal() {
@@ -68,6 +57,7 @@ const KnownComponent = {
   template: require('./known.html'),
   controller: [
     '$log',
+    '$rootScope',
     '$state',
     'filterService',
     'spellService',

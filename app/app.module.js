@@ -26,6 +26,18 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', function($log) {
+  return function myExceptionHandler(exception, cause) {
+    // logErrorsToBackend(exception, cause);
+    $log.error(exception, cause);
+    $log.debug(exception.message);
+    ga('send', 'exception', {
+      'exDescription': exception,
+      'exFatal': false
+    });
+  };
+}]);
+
 const scrollbearApp = angular.module('scrollbearApp', [
   'pages.components',
   'app.components',
@@ -34,9 +46,12 @@ const scrollbearApp = angular.module('scrollbearApp', [
   'app.filters',
   'ui.router',
   'ui.bootstrap',
-  'ngSanitize'
+  'ngSanitize',
+  'exceptionOverwrite'
   // 'app.directives'
 ]);
+
+
 
 import AppComponent from './src/pages/app.component.js';
 scrollbearApp.component('app', AppComponent);
@@ -133,7 +148,7 @@ scrollbearApp.config([
             $rootScope.title = `${spell.name} - `;
             $rootScope.spell = spell;
             const spellDescription = getSpellDescription(spell.description);
-            $rootScope.description = spell.description;
+            $rootScope.description = `${spell.name}\ in ScrollBear spellbook app. Pathfinder RPG spell from ${spellService.getPlainSpellSource(spell.source)}.`;
             $rootScope.spellDescription = spellDescription;
             $rootScope.spellSource = spellService.getSpellSource(spell.source);
             return spell;
@@ -155,24 +170,33 @@ scrollbearApp.run([
   '$rootScope',
   'sidebarService',
   function($log, $transitions, $location, $state, $rootScope, sidebarService) {
+    if (window.performance) {
+      ga('send', 'timing', 'JS Dependencies', 'load', Math.round(performance.now()));
+    }
     let prevSpellsLocation;
     $transitions.onStart({}, function(transition) {
-      console.log("onBefore Transition from " + transition.from().name + " to " + transition.to().name);
-      if ($location.search()._escaped_fragment_) {
-        const p = $location.search()._escaped_fragment_;
-        $location.search({});
-        $location.path(p);
-      }
       const popup = angular.element("#modalSpell");
       popup.modal('hide');
       const modalBackdrop = angular.element('.modal-backdrop');
       modalBackdrop.remove();
       const body = angular.element('body');
       body.removeClass('modal-open');
+      console.log("onStart Transition from " + transition.from().name + " to " + transition.to().name);
+      if (window.performance) {
+        $rootScope.onStartTime = Math.round(performance.now());
+      }
     });
     $transitions.onFinish({}, function(transition) {
-      console.log("onFinish Transition");
+      console.log("onFinish Transition", transition.params());
+      if (!transition.from().abstract) {
+        // console.log("onFinish Transition", window.ga.getAll()[0]);
+        window.ga('set', 'page', $location.url());
+        window.ga('send', 'pageview');
+      }
       sidebarService.disableSidebar();
+      if (window.performance) {
+        ga('send', 'timing', 'Transition', 'onFinish', Math.round(performance.now()) - $rootScope.onStartTime, transition.to().name);
+      }
     });
     $transitions.onStart({
       to: 'main'

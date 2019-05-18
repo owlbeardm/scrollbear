@@ -22,6 +22,9 @@ function SpellController($log, $rootScope, $state) {
       ctrl.root = $rootScope;
     });
     popup.modal('show');
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 }
 

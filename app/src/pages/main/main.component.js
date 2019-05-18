@@ -1,6 +1,6 @@
 "use strict";
 
-function MainController(notificationService, filterService, spellService, $window, $timeout, $state, $scope, $log, CLASSES) {
+function MainController(notificationService, filterService, spellService, $window, $timeout, $state, $scope, $rootScope, $log, CLASSES) {
   $log.debug('MainController create');
   const ctrl = this;
   const localStorage = $window['localStorage'];
@@ -17,6 +17,9 @@ function MainController(notificationService, filterService, spellService, $windo
     notificationService.subscribe($scope, notificationService.FILTER_CHANGED, (event, param) => {
       ctrl.spells = getSpells();
     });
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.search = function() {
@@ -61,6 +64,7 @@ const MainComponent = {
     '$timeout',
     '$state',
     '$scope',
+    '$rootScope',
     '$log',
     'CLASSES',
     MainController

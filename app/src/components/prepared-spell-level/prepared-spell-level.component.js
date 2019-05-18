@@ -21,13 +21,11 @@ function PreparedSpelLevelController($log, $state, filterService, focusService, 
   }
 
   ctrl.cast = function(key, id) {
-    spellbookService.selectedCharacter.preparedSpells[key].spells[id].cast = true;
-    spellbookService.saveCharacters();
+    spellbookService.preparedCast(key, id);
   }
 
   ctrl.restore = function(key, id) {
-    delete spellbookService.selectedCharacter.preparedSpells[key].spells[id].cast;
-    spellbookService.saveCharacters();
+    spellbookService.preparedRestore(key, id);
   }
 
   ctrl.delete = function(key, id) {
