@@ -46,6 +46,12 @@
         <div class="form-row" ng-if="!!$ctrl.subSchools">
           <select class="col selectpicker" ng-change="$ctrl.setSubSchool()" name="subSchoolSelect" id="subSchoolSelect" ng-model="$ctrl.subSchoolSelected" ng-options="sub as $ctrl.SUBSCHOOLS[sub].name for sub in $ctrl.subSchools"></select>
         </div>
+        <div class="form-row">
+          <select multiple title="Select descriptors" data-selected-text-format="count > 3" data-count-selected-text="Selected {0} descriptors" class="selectpicker" data-live-search="true" ng-change="$ctrl.setDescriptors()" data-width="100%"
+            data-mobile="true" name="descriptorsSelect" id="descriptorsSelect" data-actions-box="true" ng-model="$ctrl.descriptorsSelected">
+            <option ng-repeat="descriptor in $ctrl.descriptors" value='{{descriptor}}'>{{descriptor}}</option>
+          </select>
+        </div>
         <div class="form-row" >
           <select class="col selectpicker" ng-change="$ctrl.setCastingTime()" name="castingTimeSelect" id="castingTimeSelect" ng-model="$ctrl.castingTimeSelected" ng-options="key as value.name for (key , value) in $ctrl.castingTimes">
           </select>
