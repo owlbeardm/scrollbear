@@ -83,12 +83,19 @@ angular.module('app.services').factory('filterService', [
       if (!favSpellsNames || !favSpellsNames.length) {
         favSpellsNames = [];
       }
-      if (favSpellsNames.includes(spell.name)) {
+      const includes = favSpellsNames.includes(spell.name);
+      if (includes) {
         favSpellsNames.splice(favSpellsNames.indexOf(spell.name), 1);
       } else {
         favSpellsNames.push(spell.name);
       }
       localStorage.setItem(FAV_SPELLS, JSON.stringify(favSpellsNames));
+
+      if (includes) {
+        ga('send', 'event', 'favourites', spell.name, 'remove');
+      } else {
+        ga('send', 'event', 'favourites', spell.name, 'add');
+      }
     };
 
     return FilterService;
