@@ -92,6 +92,11 @@ function SpellbookBookController($log, $rootScope, $state, $scope, notificationS
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
+    if (!spellbookService.selectedCharacter.prepared) {
+      ga('send', 'event', 'known_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    } else {
+      ga('send', 'event', 'prepared_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    }
   }
 
   ctrl.isSpellPrepared = function(spellName) {
