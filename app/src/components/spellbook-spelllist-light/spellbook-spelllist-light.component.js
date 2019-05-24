@@ -115,7 +115,8 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
       spellbookService.selectedCharacter.book[level] = [];
     }
     spellbookService.selectedCharacter.book[level].push(spell.name);
-    spellbookService.saveCharacters()
+    spellbookService.saveCharacters();
+    ga('send', 'event', 'spellbook_add', spell.name, spellbookService.selectedCharacter.class);
   }
 
   ctrl.addSpell = function(spell) {
@@ -221,6 +222,11 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
+    if (!spellbookService.selectedCharacter.prepared) {
+      ga('send', 'event', 'known_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    } else {
+      ga('send', 'event', 'prepared_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    }
   }
 
 }
