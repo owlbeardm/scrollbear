@@ -26,10 +26,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', function($log) {
+angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', '$state', function($log, $state) {
   return function myExceptionHandler(exception, cause) {
-    $log.error(exception, cause);
-    ga('send', 'event', 'exception', exception.message, cause);
+    $log.error(exception, cause, $state.$current.name);
+    ga('send', 'event', 'exception', exception.message, $state.$current.name);
   };
 }]);
 
