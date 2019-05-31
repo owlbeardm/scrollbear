@@ -43,3 +43,6 @@ appComponents.component('sidebar', SidebarComponent);
 
 import YesNoModalComponent from './yes-no-modal/yes-no-modal.component.js';
 appComponents.component('yesNoModal', YesNoModalComponent);
+
+import ModalMetamagicComponent from './modal-metamagic/modal-metamagic.component.js';
+appComponents.component('modalMetamagic', ModalMetamagicComponent);

@@ -1,0 +1,60 @@
+<div class="modal fade" id="modalMetamagic" tabindex="-1" role="dialog" aria-labelledby="modalSpellLabel" aria-hidden="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalSpellLabel">
+          Add with metamagic
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fas fa-times"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div>
+          <div class="accordion border border-primary" id="accordionExample">
+            <div class="card card-collapse">
+              <div class="card-header" role="tab" id="heading{{$index}}">
+                <h5 class="mb-0 text-primary">
+                  <a>
+                    Level 5
+                    <i class="float-right fas fa-chevron-down expanded-flip"></i>
+                  </a>
+                </h5>
+              </div>
+
+              <div class="collapse show">
+                <div class="card-body">
+                  <table class="table table-sm" style="">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a class="text-dark">
+                            Phantasmal Web
+                            <span class="badge badge-info ml-1" data-toggle="tooltip" data-placement="top" title="Metamagic">M: maximized, extended</span>
+                          </a>
+                        </td>
+                        <td class="float-right">
+                          <a class='text-success'>
+                            <i class="fas fa-scroll mt-2 mb-2 ml-4 mr-4 push-shadow"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+        <button type="button" class="btn" data-dismiss="modal">cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
