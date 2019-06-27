@@ -1,5 +1,4 @@
 "use strict";
-import FuzzySearch from 'fuzzy-search';
 
 const allSpells = require('../../../resources/spells.json');
 const showdown = require('showdown');
@@ -22,14 +21,7 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getSpellsSplited = function() {
       console.time("SpellService.getSpellsSplited");
-      let spellsTmp = SpellService.currentSpells;
-      if (filterService.filterText) {
-        const searcher = new FuzzySearch(spellsTmp, ['name'], {
-          sort: true
-        });
-        const spellsTmp = searcher.search(filterService.filterText);
-      }
-      spellsTmp = spellsTmp.filter(filterService.filter);
+      const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
       if(spellsTmp.length < 10){
         console.log(spellsTmp);
       }
