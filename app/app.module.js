@@ -26,10 +26,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', function($log) {
+angular.module('exceptionOverwrite', []).factory('$exceptionHandler', ['$log', '$state', function($log, $state) {
   return function myExceptionHandler(exception, cause) {
-    $log.error(exception, cause);
-    ga('send', 'event', 'exception', exception.message, cause);
+    $log.error(exception, cause, $state.$current.name);
+    ga('send', 'event', 'exception', exception.message, $state.$current.name);
   };
 }]);
 
@@ -143,7 +143,7 @@ scrollbearApp.config([
             $rootScope.title = `${spell.name} - `;
             $rootScope.spell = spell;
             const spellDescription = getSpellDescription(spell.description);
-            $rootScope.description = `${spell.name}\ in ScrollBear spellbook app. Pathfinder RPG spell from ${spellService.getPlainSpellSource(spell.source)}.`;
+            $rootScope.description = `\"${spell.name}\" Pathfinder spell from ${spellService.getPlainSpellSource(spell.source)}: ${spell.description}`;
             $rootScope.spellDescription = spellDescription;
             $rootScope.spellSource = spellService.getSpellSource(spell.source);
             return spell;

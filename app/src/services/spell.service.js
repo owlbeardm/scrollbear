@@ -1,4 +1,5 @@
 "use strict";
+import FuzzySearch from 'fuzzy-search';
 
 const allSpells = require('../../../resources/spells.json');
 const showdown = require('showdown');
@@ -21,7 +22,14 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getSpellsSplited = function() {
       console.time("SpellService.getSpellsSplited");
-      const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
+      let spellsTmp = SpellService.currentSpells;
+      if (filterService.filterText) {
+        const searcher = new FuzzySearch(spellsTmp, ['name'], {
+          sort: true
+        });
+        const spellsTmp = searcher.search(filterService.filterText);
+      }
+      spellsTmp = spellsTmp.filter(filterService.filter);
       if(spellsTmp.length < 10){
         console.log(spellsTmp);
       }
@@ -115,7 +123,7 @@ angular.module('app.services').factory('spellService', [
     }
 
     SpellService.getPlainSpellSource = function(md) {
-      let close = md.indexOf('_]')
+      let close = md.indexOf(' pg. ')
       if(close == -1){
         return md
       }
