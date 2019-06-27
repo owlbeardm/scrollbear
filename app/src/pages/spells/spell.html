@@ -1,7 +1,13 @@
 <div class="card">
   <div class="modal-content">
     <div class="modal-header">
-      <h1 class="modal-title" id="exampleModalLabel">{{$ctrl.root.spell.name}}</h1>
+      <h1 class="modal-title" id="exampleModalLabel">
+        <a ui-sref="main" class="mr-2 text-primary">
+          <i class="fas fa-home push-shadow"></i>
+          <div class="ripple-container"></div>
+        </a>
+        {{$ctrl.root.spell.name}}
+      </h1>
     </div>
     <div class="modal-body">
       <div>
