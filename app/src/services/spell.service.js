@@ -123,7 +123,7 @@ angular.module('app.services').factory('spellService', [
     }
 
     SpellService.getPlainSpellSource = function(md) {
-      let close = md.indexOf('_]')
+      let close = md.indexOf(' pg. ')
       if(close == -1){
         return md
       }
