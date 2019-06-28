@@ -41,6 +41,7 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
           ctrl.start = start;
           ctrl.elements = elements;
           ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+          redrawFavList();
         }
       }
     }
@@ -61,6 +62,14 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
 
   ctrl.changeFav = function(spell) {
     filterService.changeFav(spell);
+    redrawFavList()
+  }
+
+  function redrawFavList(){
+    ctrl.favL = [];
+    ctrl.spellsL.forEach((spell) => {
+      ctrl.favL.push(ctrl.isFav(spell));
+    });
   }
 
 }
