@@ -12,10 +12,15 @@ function ModalSpellController($log, $rootScope, $location, spellService, filterS
       $rootScope.title = `${$rootScope.spell.name} - `;
       ctrl.isFav = filterService.isFav($rootScope.spell);
       ctrl.spellUrl = spellService.spellNameToUrl($rootScope.spell.name);
+      $log.debug('ModalSpellController show.bs.modal', ctrl.spellUrl);
+      window.ga('set', 'page', `/spells/${ctrl.spellUrl}`);
+      window.ga('send', 'pageview');
     });
     popup.on("hidden.bs.modal", function() {
       $log.debug('ModalSpellController hidden.bs.modal', JSON.stringify($location.url()));
       $rootScope.title = ``;
+      window.ga('set', 'page', $location.url());
+      window.ga('send', 'pageview');
     });
   }
 

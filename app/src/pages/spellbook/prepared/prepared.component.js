@@ -1,6 +1,6 @@
 "use strict";
 
-function PreparedController($log, $state, filterService, spellService, spellbookService, CLASSES) {
+function PreparedController($log, $rootScope, $state, filterService, spellService, spellbookService, CLASSES) {
   $log.debug('SpellController create');
   const ctrl = this;
 
@@ -37,6 +37,9 @@ function PreparedController($log, $state, filterService, spellService, spellbook
     }
     spellbookService.saveCharacters();
     calculateTotal();
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.cast = function(key) {
@@ -65,6 +68,7 @@ const PreparedComponent = {
   template: require('./prepared.html'),
   controller: [
     '$log',
+    '$rootScope',
     '$state',
     'filterService',
     'spellService',

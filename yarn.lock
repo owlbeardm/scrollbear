@@ -2873,6 +2873,11 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
+fuzzy-search@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/fuzzy-search/-/fuzzy-search-3.0.1.tgz#14a4964508a9607d6e9a88818e7ff634108260b6"
+  integrity sha512-rjUvzdsMlOyarm0oD5k6zVQwgvt4Tb5Xe3YdIGU+Vogw54+ueAGPUTMU2B9jfPQEie5cD11i/S9J9d+MNBSQ3Q==
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -6321,6 +6326,11 @@ svgo@^1.0.0:
     stable "~0.1.6"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+sw-offline-google-analytics@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/sw-offline-google-analytics/-/sw-offline-google-analytics-0.0.25.tgz#5dc3f52117d207584eb3541935a2d413e1308d58"
+  integrity sha1-XcP1IRfSB1hOs1QZNaLUE+EwjVg=
 
 symbol-tree@^3.2.2:
   version "3.2.2"

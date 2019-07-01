@@ -1,6 +1,6 @@
 "use strict";
 
-function SpellbookBookController($log, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
+function SpellbookBookController($log, $rootScope, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
   $log.debug('SpellbookBookController create');
   const ctrl = this;
   const SELECTED_CLASS = "SELECTED_CLASS";
@@ -24,6 +24,9 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     }
     spellbookService.saveCharacters();
     calculateTotal();
+    if (window.performance) {
+      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+    }
   }
 
   ctrl.chooseSpell = function(spell) {
@@ -89,6 +92,11 @@ function SpellbookBookController($log, $state, $scope, notificationService, filt
     }
     spellbookService.saveCharacters();
     console.log(spellbookService.selectedCharacter);
+    if (!spellbookService.selectedCharacter.prepared) {
+      ga('send', 'event', 'known_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    } else {
+      ga('send', 'event', 'prepared_add', spellToAdd.name, spellbookService.selectedCharacter.class);
+    }
   }
 
   ctrl.isSpellPrepared = function(spellName) {
@@ -120,6 +128,7 @@ const SpellbookBookComponent = {
   template: require('./spellbookbook.html'),
   controller: [
     '$log',
+    '$rootScope',
     '$state',
     '$scope',
     'notificationService',

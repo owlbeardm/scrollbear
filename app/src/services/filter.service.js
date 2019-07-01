@@ -1,4 +1,5 @@
 "use strict";
+import FuzzySearch from 'fuzzy-search';
 
 angular.module('app.services').factory('filterService', [
   '$log',
@@ -38,14 +39,17 @@ angular.module('app.services').factory('filterService', [
       if (!FilterService.filterText) {
         include = true;
       } else {
-        include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
+        const searcher = new FuzzySearch([spell], ['name'], {
+          caseSensitive: false,
+        });
+        const result = searcher.search(FilterService.filterText);
+        // include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
+        include = result && !!result.length;
       }
       if (include && FilterService.favOnly) {
         include = include && FilterService.isFav(spell);
       }
       if (include && FilterService.sourceBooks.length) {
-        console.log(FilterService.sourceBooks);
-        console.log(spell.source);
         include = include && FilterService.sourceBooks.includes(spell.source.substring(2, spell.source.indexOf(' pg.')));
       }
       if (include) {
@@ -85,12 +89,19 @@ angular.module('app.services').factory('filterService', [
       if (!favSpellsNames || !favSpellsNames.length) {
         favSpellsNames = [];
       }
-      if (favSpellsNames.includes(spell.name)) {
+      const includes = favSpellsNames.includes(spell.name);
+      if (includes) {
         favSpellsNames.splice(favSpellsNames.indexOf(spell.name), 1);
       } else {
         favSpellsNames.push(spell.name);
       }
       localStorage.setItem(FAV_SPELLS, JSON.stringify(favSpellsNames));
+
+      if (includes) {
+        ga('send', 'event', 'favourites', spell.name, 'remove');
+      } else {
+        ga('send', 'event', 'favourites', spell.name, 'add');
+      }
     };
 
     return FilterService;
