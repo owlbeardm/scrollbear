@@ -40,6 +40,15 @@ function getCommonConfig() {
       }, {
         test: /\.properties$/,
         use: ['properties-loader']
+      }, {
+        test: /\.md$/,
+        use: [{
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+          }
+        ]
       }]
     },
     plugins: [
