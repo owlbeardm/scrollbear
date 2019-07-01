@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "make-url": "node parcer/make_url.js",
+    "make-license": "node parcer/license_make.js",
     "get-spells-html": "node parcer/get_spells_html.js",
     "parse-spells": "node parcer/parse_spells.js",
     "format": "node parcer/format.js",
