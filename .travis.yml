@@ -11,7 +11,7 @@ install:
 - yarn
 - yarn install --force
 script:
-- # yarn test --single-run
+- yarn test --single-run
 
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
