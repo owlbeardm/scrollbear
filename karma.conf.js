@@ -6,7 +6,7 @@ const webpackConf = require("./webpack.js");
 
 module.exports = function(config) {
   config.set({
-    browsers: ['Firefox'],
+    browsers: ['NoSandFirefox'],
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
@@ -25,8 +25,15 @@ module.exports = function(config) {
       showSpecTiming: true, // print the time elapsed for each spec
       failFast: true // test would finish with error when a first fail occurs.
     },
+    customLaunchers: {
+      NoSandFirefox: {
+        base: 'Firefox',
+        flags: ['--no-sandbox']
+      }
+    },
     // autoWatch: !config.singleRun,
     singleRun: true,
+    browserDisconnectTimeout:10000,
     colors: true,
     port: 9876,
     basePath: '',
