@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://scrollbear.com/</loc>
-		<lastmod>2019-06-27T10:49:11.678Z</lastmod>
+		<lastmod>2019-07-08T13:26:17.712Z</lastmod>
+	</url>
+	<url>
+		<loc>https://scrollbear.com/about</loc>
+		<lastmod>2019-06-27T10:48:41.312Z</lastmod>
 	</url>
 	<url>
 		<loc>https://scrollbear.com/spells/abadar's-truthtelling</loc>

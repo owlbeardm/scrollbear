@@ -29,3 +29,6 @@ pagesComponents.component('license', LicenseComponent);
 
 import SpellComponent from './spells/spell.component.js';
 pagesComponents.component('spell', SpellComponent);
+
+import AboutComponent from './about/about.component.js';
+pagesComponents.component('about', AboutComponent);

@@ -90,6 +90,12 @@ scrollbearApp.config([
     });
 
     $stateProvider.state({
+      name: 'about',
+      url: '/about',
+      component: 'about'
+    });
+
+    $stateProvider.state({
         name: 'spellbook',
         url: '/spellbook',
         component: 'spellbook',
