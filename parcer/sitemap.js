@@ -15,6 +15,10 @@ async function main() {
     fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>https://scrollbear.com/</loc>\n`, 'utf8');
     fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${(new Date()).toISOString()}</lastmod>\n`, 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>https://scrollbear.com/about</loc>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     spells.forEach((spell) => {
       const url = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
       const url1 = `https://scrollbear.com/spells/${url}`;
