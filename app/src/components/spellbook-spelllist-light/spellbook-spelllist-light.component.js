@@ -43,6 +43,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
           ctrl.start = start;
           ctrl.elements = elements;
           ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
+          redrawPreparedBookLists();
         }
       }
     }
@@ -116,6 +117,7 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
     }
     spellbookService.selectedCharacter.book[level].push(spell.name);
     spellbookService.saveCharacters();
+    redrawPreparedBookLists();
     ga('send', 'event', 'spellbook_add', spell.name, spellbookService.selectedCharacter.class);
   }
 
@@ -221,12 +223,24 @@ function SpellbookSpelllistLightController($log, $state, $scope, $rootScope, $ui
       spellbookService.selectedCharacter.preparedSpells[level].spells.push(spellToAdd);
     }
     spellbookService.saveCharacters();
+    redrawPreparedBookLists();
     console.log(spellbookService.selectedCharacter);
     if (!spellbookService.selectedCharacter.prepared) {
       ga('send', 'event', 'known_add', spellToAdd.name, spellbookService.selectedCharacter.class);
     } else {
       ga('send', 'event', 'prepared_add', spellToAdd.name, spellbookService.selectedCharacter.class);
     }
+  }
+
+  function redrawPreparedBookLists(){
+    ctrl.bookL = [];
+    ctrl.spellsL.forEach((spell) => {
+      ctrl.bookL.push(ctrl.isInSpellBook(spell.name));
+    });
+    ctrl.preparedL = [];
+    ctrl.spellsL.forEach((spell) => {
+      ctrl.preparedL.push(ctrl.isSpellPrepared(spell.name));
+    });
   }
 
 }

@@ -8,10 +8,14 @@
           </a>
         </td>
         <td class="float-right">
-          <a href="#" class="" ng-class="{'text-primary': $ctrl.isFav(spell), 'text-muted': !$ctrl.isFav(spell)}" ng-click="$ctrl.changeFav(spell)">
-            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.isFav(spell), 'far': !$ctrl.isFav(spell)}"></i>
+          <a href="#" class="" ng-if="$ctrl.favL[$index]" ng-class="{'text-primary': $ctrl.favL[$index], 'text-muted': !$ctrl.favL[$index]}" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.favL[$index], 'far': !$ctrl.favL[$index]}"></i>
             <div class="ripple-container"></div>
-            </a>
+          </a>
+          <a href="#" class="" ng-if="!$ctrl.favL[$index]" ng-class="{'text-primary': $ctrl.favL[$index], 'text-muted': !$ctrl.favL[$index]}" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.favL[$index], 'far': !$ctrl.favL[$index]}"></i>
+            <div class="ripple-container"></div>
+          </a>
         </td>
       </tr>
     </tbody>

@@ -6,40 +6,34 @@ const webpackConf = require("./webpack.js");
 
 module.exports = function(config) {
   config.set({
-    browsers: ['PhantomJS'],
-    // customLaunchers: {
-    //   HeadlessChrome: {
-    //     base: 'ChromeHeadless',
-    //     flags: [
-    //       '--no-sandbox',
-    //       '--headless',
-    //       '--disable-gpu',
-    //       '--disable-translate',
-    //       '--disable-extensions',
-    //       '--no-proxy-server'
-    //     ]
-    //   }
-    // },
+    browsers: ['NoSandFirefox'],
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
       'karma-webpack',
-      'karma-phantomjs-launcher',
+      'karma-firefox-launcher',
       'karma-jasmine'
     ],
     specReporter: {
       maxLogLines: 5, // limit number of lines logged per test
-      suppressErrorSummary: true, // do not print error summary
+      suppressErrorSummary: false, // do not print error summary
       suppressFailed: false, // do not print information about failed tests
       suppressPassed: false, // do not print information about passed tests
       suppressSkipped: true, // do not print information about skipped tests
-      showSpecTiming: false, // print the time elapsed for each spec
-      failFast: false // test would finish with error when a first fail occurs.
+      showSpecTiming: true, // print the time elapsed for each spec
+      failFast: true // test would finish with error when a first fail occurs.
+    },
+    customLaunchers: {
+      NoSandFirefox: {
+        base: 'Firefox',
+        flags: ['--no-sandbox']
+      }
     },
     // autoWatch: !config.singleRun,
     singleRun: true,
+    browserDisconnectTimeout:10000,
     colors: true,
     port: 9876,
     basePath: '',

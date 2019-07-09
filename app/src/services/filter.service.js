@@ -1,4 +1,5 @@
 "use strict";
+import FuzzySearch from 'fuzzy-search';
 
 angular.module('app.services').factory('filterService', [
   '$log',
@@ -38,7 +39,12 @@ angular.module('app.services').factory('filterService', [
       if (!FilterService.filterText) {
         include = true;
       } else {
-        include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
+        const searcher = new FuzzySearch([spell], ['name'], {
+          caseSensitive: false,
+        });
+        const result = searcher.search(FilterService.filterText);
+        // include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
+        include = result && !!result.length;
       }
       if (include && FilterService.favOnly) {
         include = include && FilterService.isFav(spell);

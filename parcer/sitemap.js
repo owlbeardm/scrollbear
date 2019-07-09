@@ -8,12 +8,16 @@ async function main() {
   try {
     // const stats = fs.statSync("resources/spells.json");
     // const mtime = new Date(stats.mtime).toISOString();
-    const mtime = "2019-05-11T16:47:47.667Z";
+    const mtime = "2019-06-27T10:48:41.312Z";
     fs.writeFileSync('assets/sitemap.xml', "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n", 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n', 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
     fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>https://scrollbear.com/</loc>\n`, 'utf8');
     fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${(new Date()).toISOString()}</lastmod>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', '\t<url>\n', 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<loc>https://scrollbear.com/about</loc>\n`, 'utf8');
+    fs.appendFileSync('assets/sitemap.xml', `\t\t<lastmod>${mtime}</lastmod>\n`, 'utf8');
     fs.appendFileSync('assets/sitemap.xml', '\t</url>\n', 'utf8');
     spells.forEach((spell) => {
       const url = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
