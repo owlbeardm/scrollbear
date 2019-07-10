@@ -14,7 +14,7 @@
 
           <div class="form-group ">
             <label class="control-label" for="levelSelect">Level increase:</label>
-            <select ng-change="$ctrl.refresh()" class="form-control selectpicker mb-3" name="levelSelect" id="levelSelect" ng-model="$ctrl.levelSelected" ng-options="key as value.name for (key , value) in $ctrl.levelIncreases"></select>
+            <select ng-change="$ctrl.refresh()" class="form-control selectpicker mb-3" name="levelSelect" id="levelSelect" ng-model="$ctrl.levelSelected" ng-options="value as value for (idx , value) in $ctrl.levelIncreases"></select>
           </div>
 
           <div class="form-group pb-1 mt-1" ng-repeat="label in $ctrl.labels track by $index">
