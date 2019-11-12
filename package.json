@@ -59,7 +59,7 @@
     "properties-loader": "^0.0.1",
     "puppeteer": "^1.13.0",
     "showdown": "^1.9.0",
-    "style-loader": "^0.23.1",
+    "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.2.1",
     "turndown": "^5.0.1",
     "turndown-plugin-gfm": "^1.0.2",
