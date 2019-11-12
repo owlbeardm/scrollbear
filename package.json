@@ -55,7 +55,7 @@
     "karma-webpack": "^4.0.0-rc.2",
     "mini-css-extract-plugin": "^0.7.0",
     "node-html-parser": "^1.1.16",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "properties-loader": "^0.0.1",
     "puppeteer": "^2.0.0",
     "showdown": "^1.9.0",
