@@ -689,9 +689,10 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@uirouter/core@5.0.21":
-  version "5.0.21"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.21.tgz#b6c4c311e9416a1e8ce76b072e042a60224d1b3a"
+"@uirouter/core@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.1.tgz#93b02a5d178a7ab7313f34b7b3f019a000d23396"
+  integrity sha512-mHCutiHtDDRKYmrJ92XPKDoSb2bgqaDyUpHdF4hUE+riwgkCvGdBjL8u+VDTcV3slBAk6B0LBIOIajjWkkObbQ==
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
@@ -944,11 +945,12 @@ angular-ui-bootstrap@^2.5.6:
   resolved "https://registry.yarnpkg.com/angular-ui-bootstrap/-/angular-ui-bootstrap-2.5.6.tgz#23937322ec641a6fbee16498cc32452aa199e7c5"
   integrity sha512-yzcHpPMLQl0232nDzm5P4iAFTFQ9dMw0QgFLuKYbDj9M0xJ62z0oudYD/Lvh1pWfRsukiytP4Xj6BHOSrSXP8A==
 
-angular-ui-router@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-1.0.20.tgz#86dbaaa3368df0c319f3328f4ace616a246cf394"
+angular-ui-router@^1.0.23:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-1.0.23.tgz#c0af56dbe930faa5963cdcb133401e6744e1f9a8"
+  integrity sha512-l1bzkqCtcP9CrhlFQ0vJ8pGAfwF/bxRedCO2yB3HCYdrDkf487/ZNSreYc2jR5t9rgF/6oM++ZplCcCFMxRoWg==
   dependencies:
-    "@uirouter/core" "5.0.21"
+    "@uirouter/core" "6.0.1"
 
 angular@^1.7.6:
   version "1.7.8"
