@@ -15,7 +15,7 @@ install:
 - yarn
 - yarn install --force
 script:
-- #yarn test
+- yarn test
 
 
 after_success:
