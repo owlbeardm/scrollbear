@@ -1,9 +1,10 @@
 language: node_js
 node_js:
 - node
+services:
+  - xvfb
 before_script:
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 cache:
   yarn: true
 notifications:
@@ -14,7 +15,7 @@ install:
 - yarn
 - yarn install --force
 script:
-- #yarn test
+- yarn test
 
 
 after_success:
