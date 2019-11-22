@@ -1,5 +1,6 @@
 "use strict";
 import FuzzySearch from 'fuzzy-search';
+import Fuse from 'fuse.js';
 
 angular.module('app.services').factory('filterService', [
   '$log',
@@ -34,18 +35,53 @@ angular.module('app.services').factory('filterService', [
       localStorage.setItem(SOURCE_BOOKS, JSON.stringify(FilterService.sourceBooks));
     }
 
+    FilterService.filterByText = function(spells) {
+      if (!FilterService.filterText)
+        return spells;
+      console.log(spells[0]);
+      var options = {
+        shouldSort: true,
+        threshold: 0.1,
+        location: 0,
+        distance: 1000000000,
+        // includeScore: true,
+        includeMatches: true,
+        maxPatternLength: 32,
+        minMatchCharLength: 2,
+        keys: [{
+          name: "name",
+          weight: 0.65
+        }, {
+          name: "school",
+          weight: 0.1
+        }, {
+          name: "subschool",
+          weight: 0.1
+        }, {
+          name: "descripters",
+          weight: 0.1
+        }, {
+          name: "description",
+          weight: 0.05
+        }]
+      };
+      var fuse = new Fuse(spells, options); // "list" is the item array
+      var result = fuse.search(FilterService.filterText);
+      return result;
+    }
+
     FilterService.filter = function(spell) {
-      let include = false;
-      if (!FilterService.filterText) {
-        include = true;
-      } else {
-        const searcher = new FuzzySearch([spell], ['name'], {
-          caseSensitive: false,
-        });
-        const result = searcher.search(FilterService.filterText);
-        // include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
-        include = result && !!result.length;
-      }
+      let include = true;
+      // if (!FilterService.filterText) {
+      //   include = true;
+      // } else {
+      //   const searcher = new FuzzySearch([spell], ['name'], {
+      //     caseSensitive: false,
+      //   });
+      //   const result = searcher.search(FilterService.filterText);
+      //   // include = spell.name.toUpperCase().includes(FilterService.filterText.toUpperCase())
+      //   include = result && !!result.length;
+      // }
       if (include && FilterService.favOnly) {
         include = include && FilterService.isFav(spell);
       }

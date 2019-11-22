@@ -21,13 +21,16 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getSpellsSplited = function() {
       console.time("SpellService.getSpellsSplited");
-      const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
-      if(spellsTmp.length < 10){
+      const spellsTmp = filterService.filterByText(SpellService.currentSpells).filter(filterService.filter);
+      if (spellsTmp.length < 10) {
         console.log(spellsTmp);
+      } else {
+        console.log(spellsTmp[0]);
       }
       const allSells = {};
       spellsTmp.forEach((value) => {
-        const place = value.levels.reduce((classAccumulator, classLevel) => {
+        const val = (value.item) ? value.item : value;
+        const place = val.levels.reduce((classAccumulator, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
           const isIncludeClass = (!CLASSES[SpellService.classSet].search) ? true : CLASSES[SpellService.classSet].search.reduce((accumulator, currentValue) => {
             return accumulator || className.search(currentValue) != -1;
@@ -44,7 +47,14 @@ angular.module('app.services').factory('spellService', [
           if (!allSells[place]) {
             allSells[place] = [];
           }
-          allSells[place].push(value);
+          if (value.matches) {
+            if (!val.matches)
+              val.matches = {};
+            value.matches.forEach((match) => {
+              val.matches[match.key] = match;
+            });
+          }
+          allSells[place].push(val);
         }
       });
       console.timeEnd("SpellService.getSpellsSplited");
@@ -116,7 +126,7 @@ angular.module('app.services').factory('spellService', [
 
     SpellService.getPlainSpellSource = function(md) {
       let close = md.indexOf(' pg. ')
-      if(close == -1){
+      if (close == -1) {
         return md
       }
       return md.substring(2, close);

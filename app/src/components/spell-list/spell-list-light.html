@@ -4,7 +4,7 @@
       <tr ng-repeat="spell in $ctrl.spellsL track by $index">
         <td ng-click="$ctrl.chooseSpell(spell)">
           <a href="#" class="text-dark">
-            {{spell.name}}
+            {{spell.name.substring(0, spell.matches.name.indices[0][0])}}<span ng-repeat="ind in spell.matches.name.indices"><strong>{{spell.name.substring(ind[0], ind[1]+1)}}</strong>{{spell.name.substring(ind[1]+1)}}<span>
           </a>
         </td>
         <td class="float-right">
