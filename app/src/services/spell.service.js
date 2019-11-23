@@ -47,7 +47,7 @@ angular.module('app.services').factory('spellService', [
           if (!allSells[place]) {
             allSells[place] = [];
           }
-          if (value.matches) {
+          if (value.matches && value.matches.length) {
             if (!val.matches)
               val.matches = {};
             value.matches.forEach((match) => {

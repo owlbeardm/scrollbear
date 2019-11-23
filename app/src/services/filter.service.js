@@ -50,18 +50,15 @@ angular.module('app.services').factory('filterService', [
         minMatchCharLength: 2,
         keys: [{
           name: "name",
-          weight: 0.65
+          weight: 0.85
         }, {
           name: "school",
-          weight: 0.1
+          weight: 0.05
         }, {
           name: "subschool",
-          weight: 0.1
+          weight: 0.05
         }, {
           name: "descripters",
-          weight: 0.1
-        }, {
-          name: "description",
           weight: 0.05
         }]
       };
