@@ -24,11 +24,11 @@
     "test": "karma start --browsers NoSandFirefox --single-run"
   },
   "dependencies": {
-    "@babel/core": "^7.7.2",
+    "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "angular": "^1.7.9",
     "angular-mocks": "^1.7.9",
-    "angular-sanitize": "^1.7.8",
+    "angular-sanitize": "^1.7.9",
     "angular-ui-bootstrap": "^2.5.6",
     "angular-ui-router": "^1.0.23",
     "babel-loader": "^8.0.6",
