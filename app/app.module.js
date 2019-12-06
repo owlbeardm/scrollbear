@@ -3,8 +3,7 @@ import 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
 const showdown = require('showdown');
-import './src/css/material-dashboard.css';
-// import './src/js/material-dashboard.js';
+import './src/css/owlbear-style/scss/material-dashboard.scss';
 import './src/css/app.css';
 
 
