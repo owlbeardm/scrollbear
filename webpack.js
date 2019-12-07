@@ -42,7 +42,12 @@ function getCommonConfig() {
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       }, {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: [{
+          loader: 'file-loader',
+          options: {
+            esModule: false,
+          }
+        }]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
