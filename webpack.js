@@ -130,7 +130,7 @@ module.exports = (env, argv) => {
         cacheGroups: {
           styles: {
             name: 'styles',
-            test: /\.css$/,
+            test: /\.((s[ac])|c)ss$/,
             chunks: 'all',
             enforce: true,
             // maxSize: 244000
