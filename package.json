@@ -58,6 +58,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "properties-loader": "^0.0.1",
     "puppeteer": "^2.0.0",
+    "sass-loader": "^8.0.0",
     "showdown": "^1.9.1",
     "style-loader": "^1.0.1",
     "terser-webpack-plugin": "^2.2.1",
@@ -74,6 +75,7 @@
   "devDependencies": {
     "karma-phantomjs-launcher": "^1.0.4",
     "markdown-loader": "^5.1.0",
+    "node-sass": "^4.13.0",
     "sw-offline-google-analytics": "^0.0.25"
   }
 }

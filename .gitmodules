@@ -1,0 +1,3 @@
+[submodule "app/src/css/owlbear-style"]
+	path = app/src/css/owlbear-style
+	url = https://github.com/owlbeardm/owlbear-style.git
