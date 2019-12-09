@@ -23,7 +23,7 @@ after_failure:
 after_success:
   - export LAST_GIT_TAG_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`) && export LAST_GIT_TAG_VERSION=${LAST_GIT_TAG_VERSION:1}
   - export GIT_TAG_VERSION=$(echo $LAST_GIT_TAG_VERSION | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
-  - curl -X POST https://api.telegram.org/bot759756758:$TELEGRAM_NOTIFY/sendMessage -d chat_id=-350674648 -d "text=*Build success* for \`$TRAVIS_BRANCH\` [#$TRAVIS_BUILD_NUMBER]($TRAVIS_BUILD_WEB_URL).  %0D %0A %0D $TRAVIS_COMMIT_MESSAGE" -d "parse_mode=Markdown"
+  - curl -X POST https://api.telegram.org/bot759756758:$TELEGRAM_NOTIFY/sendMessage -d chat_id=-350674648 -d "text=*Build success* for \`$TRAVIS_BRANCH\` [#$TRAVIS_BUILD_NUMBER]($TRAVIS_BUILD_WEB_URL). %0D %0D $TRAVIS_COMMIT_MESSAGE" -d "parse_mode=Markdown"
 
 before_deploy:
 -
