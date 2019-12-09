@@ -24,7 +24,7 @@ describe('spellService', () => {
   });
 
   it('service exists', () => {
-    expect(spellService).not.toBeDefined();
+    expect(spellService).toBeDefined();
   });
 
 });
