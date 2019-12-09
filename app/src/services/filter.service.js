@@ -1,4 +1,3 @@
-"use strict";
 import FuzzySearch from 'fuzzy-search';
 
 angular.module('app.services').factory('filterService', [
@@ -8,33 +7,34 @@ angular.module('app.services').factory('filterService', [
   'SCHOOLS',
   'SUBSCHOOLS',
   'CASTING_TIME',
-  function($log, $window, CLASSES, SCHOOLS, SUBSCHOOLS, CASTING_TIME) {
+  ($log, $window, CLASSES, SCHOOLS, SUBSCHOOLS, CASTING_TIME) => {
     const FilterService = {};
-    const FAV_SPELLS = "FAV_SPELLS";
-    const FAV_ONLY = "FAV_ONLY";
-    const SOURCE_BOOKS = "SOURCE_BOOKS";
-    const localStorage = $window['localStorage'];
+    const FAV_SPELLS = 'FAV_SPELLS';
+    const FAV_ONLY = 'FAV_ONLY';
+    const SOURCE_BOOKS = 'SOURCE_BOOKS';
+    const {
+      localStorage,
+    } = $window;
     FilterService.school = 'any';
     FilterService.subSchool = 'any';
     FilterService.castingTime = 'any';
-    FilterService.favOnly = JSON.parse(localStorage.getItem(FAV_ONLY)) ?
-      JSON.parse(localStorage.getItem(FAV_ONLY)) :
-      false;
-    FilterService.sourceBooks = JSON.parse(localStorage.getItem(SOURCE_BOOKS)) ?
-      JSON.parse(localStorage.getItem(SOURCE_BOOKS)) : [];
+    FilterService.favOnly = JSON.parse(localStorage.getItem(FAV_ONLY))
+      ? JSON.parse(localStorage.getItem(FAV_ONLY))
+      : false;
+    FilterService.sourceBooks = JSON.parse(localStorage.getItem(SOURCE_BOOKS))
+      ? JSON.parse(localStorage.getItem(SOURCE_BOOKS)) : [];
 
-
-    FilterService.setFavOnly = function(favOnly) {
+    FilterService.setFavOnly = (favOnly) => {
       FilterService.favOnly = favOnly;
       localStorage.setItem(FAV_ONLY, JSON.stringify(FilterService.favOnly));
-    }
+    };
 
-    FilterService.setSourceBook = function(sourceBooks) {
+    FilterService.setSourceBook = (sourceBooks) => {
       FilterService.sourceBooks = sourceBooks;
       localStorage.setItem(SOURCE_BOOKS, JSON.stringify(FilterService.sourceBooks));
-    }
+    };
 
-    FilterService.filter = function(spell) {
+    FilterService.filter = (spell) => {
       let include = false;
       if (!FilterService.filterText) {
         include = true;
@@ -50,7 +50,8 @@ angular.module('app.services').factory('filterService', [
         include = include && FilterService.isFav(spell);
       }
       if (include && FilterService.sourceBooks.length) {
-        include = include && FilterService.sourceBooks.includes(spell.source.substring(2, spell.source.indexOf(' pg.')));
+        include = include
+          && FilterService.sourceBooks.includes(spell.source.substring(2, spell.source.indexOf(' pg.')));
       }
       if (include) {
         if (Array.isArray(SCHOOLS[FilterService.school].search)) {
@@ -74,9 +75,9 @@ angular.module('app.services').factory('filterService', [
         }
       }
       return include;
-    }
+    };
 
-    FilterService.isFav = function(spell) {
+    FilterService.isFav = (spell) => {
       let favSpellsNames = JSON.parse(localStorage.getItem(FAV_SPELLS));
       if (!favSpellsNames || !favSpellsNames.length) {
         favSpellsNames = [];
@@ -84,7 +85,7 @@ angular.module('app.services').factory('filterService', [
       return favSpellsNames.includes(spell.name);
     };
 
-    FilterService.changeFav = function(spell) {
+    FilterService.changeFav = (spell) => {
       let favSpellsNames = JSON.parse(localStorage.getItem(FAV_SPELLS));
       if (!favSpellsNames || !favSpellsNames.length) {
         favSpellsNames = [];
@@ -105,5 +106,5 @@ angular.module('app.services').factory('filterService', [
     };
 
     return FilterService;
-  }
+  },
 ]);

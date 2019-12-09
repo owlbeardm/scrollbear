@@ -1,31 +1,45 @@
-"use strict";
-
-function SpellListLightController($log, $state, $scope, $rootScope, $timeout, filterService, spellService, $window, $document) {
+function SpellListLightController(
+  $log,
+  $state,
+  $scope,
+  $rootScope,
+  $timeout,
+  filterService,
+  spellService,
+  $window,
+  $document,
+) {
   $log.debug('SpellListLightController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("SpellListLightController init");
-    angular.element($window).bind('scroll', function() {
-      ctrl.redraw();
-    })
-    angular.element($window).bind('resize', function() {
+  function redrawFavList() {
+    ctrl.favL = [];
+    ctrl.spellsL.forEach((spell) => {
+      ctrl.favL.push(ctrl.isFav(spell));
+    });
+  }
+
+  ctrl.$onInit = () => {
+    $log.debug('SpellListLightController init');
+    angular.element($window).bind('scroll', () => {
       ctrl.redraw();
     });
+    angular.element($window).bind('resize', () => {
+      ctrl.redraw();
+    });
+  };
 
-  }
-
-  ctrl.$onChanges = function(ch) {
+  ctrl.$onChanges = () => {
     ctrl.elementHeight = ctrl.spells.length * 43;
     ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
-  }
+  };
 
-  ctrl.$doCheck = function() {
-    ctrl.collapse = angular.element('#' + ctrl.collapseName);
+  ctrl.$doCheck = () => {
+    ctrl.collapse = angular.element(`#${ctrl.collapseName}`);
     if (ctrl.collapse.attr('class')) {
-      ctrl.classes = ctrl.collapse.attr('class').split(" ");
+      ctrl.classes = ctrl.collapse.attr('class').split(' ');
       ctrl.scroll = $document.scrollTop();
-      ctrl.offsetTop = angular.element('#list-new-' + ctrl.collapseName).offset();
+      ctrl.offsetTop = angular.element(`#list-new-${ctrl.collapseName}`).offset();
       if (ctrl.offsetTop && ctrl.scroll > ctrl.offsetTop.top + ctrl.spells.length * 43) {
         return;
       }
@@ -36,8 +50,11 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
           return;
         }
         const elements = ctrl.height / 43 + 2;
-        const start = Math.min(Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 43)), ctrl.spells.length);
-        if (elements != ctrl.elements || start != ctrl.start) {
+        const start = Math.min(
+          Math.max(0, Math.floor((ctrl.scroll - ctrl.offsetTop.top) / 43)),
+          ctrl.spells.length,
+        );
+        if (elements !== ctrl.elements || start !== ctrl.start) {
           ctrl.start = start;
           ctrl.elements = elements;
           ctrl.spellsL = ctrl.spells.slice(ctrl.start, ctrl.start + ctrl.elements);
@@ -45,42 +62,43 @@ function SpellListLightController($log, $state, $scope, $rootScope, $timeout, fi
         }
       }
     }
-  }
+  };
 
-  ctrl.redraw = function() {
+  ctrl.redraw = () => {
     ctrl.$doCheck();
     $scope.$digest();
-  }
+  };
 
-  ctrl.chooseSpell = function(spell) {
+  ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell.name);
-  }
+  };
 
-  ctrl.isFav = function(spell) {
-    return filterService.isFav(spell);
-  }
+  ctrl.isFav = (spell) => filterService.isFav(spell);
 
-  ctrl.changeFav = function(spell) {
+  ctrl.changeFav = (spell) => {
     filterService.changeFav(spell);
-    redrawFavList()
-  }
-
-  function redrawFavList(){
-    ctrl.favL = [];
-    ctrl.spellsL.forEach((spell) => {
-      ctrl.favL.push(ctrl.isFav(spell));
-    });
-  }
-
+    redrawFavList();
+  };
 }
 
 const SpellListLightComponent = {
   template: require('./spell-list-light.html'),
-  controller: ['$log', '$state', '$scope', '$rootScope', '$timeout', 'filterService', 'spellService', '$window', '$document', SpellListLightController],
+  controller: [
+    '$log',
+    '$state',
+    '$scope',
+    '$rootScope',
+    '$timeout',
+    'filterService',
+    'spellService',
+    '$window',
+    '$document',
+    SpellListLightController,
+  ],
   bindings: {
     spells: '<',
-    collapseName: '<'
-  }
-}
+    collapseName: '<',
+  },
+};
 
 export default SpellListLightComponent;

@@ -1,14 +1,13 @@
-"use strict";
 
 angular.module('app.services').factory('focusService', [
   '$log',
   '$timeout',
   '$window',
-  function($log, $timeout, $window) {
+  ($log, $timeout, $window) => {
     const FocusService = {};
 
-    FocusService.setFocus = function(id) {
-      $timeout(function() {
+    FocusService.setFocus = (id) => {
+      $timeout(() => {
         const element = $window.document.getElementById(id);
         if (element) {
           element.focus();
@@ -17,5 +16,5 @@ angular.module('app.services').factory('focusService', [
     };
 
     return FocusService;
-  }
+  },
 ]);

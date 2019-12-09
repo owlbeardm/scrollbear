@@ -1,40 +1,35 @@
-"use strict";
-
 function CharacterItemController($log, $state, spellbookService, CLASSES) {
   $log.debug('CharacterItemController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("CharacterItemController init");
+  ctrl.$onInit = () => {
+    $log.debug('CharacterItemController init');
     ctrl.classes = CLASSES;
-  }
+  };
 
-  ctrl.delete = function() {
+  ctrl.delete = () => {
     spellbookService.deleteCharacter(ctrl.id);
     ctrl.deleteMode = false;
-  }
+  };
 
-  ctrl.characterSelected = function() {
-    return ctrl.characters.indexOf(spellbookService.selectedCharacter);
-  }
+  ctrl.characterSelected = () => ctrl.characters.indexOf(spellbookService.selectedCharacter);
 
-  ctrl.selectCharacter = function(character) {
+  ctrl.selectCharacter = (character) => {
     spellbookService.selectCharacter(character);
     if (character.prepared) {
       $state.go('spellbook.prepared');
     } else {
       $state.go('spellbook.known');
     }
-  }
+  };
 
-  ctrl.startDelete = function() {
+  ctrl.startDelete = () => {
     ctrl.deleteMode = true;
-  }
+  };
 
-  ctrl.cancelDelete = function() {
+  ctrl.cancelDelete = () => {
     ctrl.deleteMode = false;
-  }
-
+  };
 }
 
 const CharacterItemComponent = {
@@ -43,8 +38,8 @@ const CharacterItemComponent = {
   bindings: {
     character: '<',
     selected: '<',
-    id: '<'
-  }
-}
+    id: '<',
+  },
+};
 
 export default CharacterItemComponent;

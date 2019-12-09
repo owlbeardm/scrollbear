@@ -1,4 +1,3 @@
-"use strict";
 
 describe('characters service', () => {
   let characterService;
@@ -6,9 +5,7 @@ describe('characters service', () => {
 
   beforeAll(() => {
     const mockLocalStorage = {
-      getItem: (key) => {
-        return key in store ? store[key] : null;
-      },
+      getItem: (key) => (key in store ? store[key] : null),
       setItem: (key, value) => {
         store[key] = `${value}`;
       },
@@ -17,7 +14,7 @@ describe('characters service', () => {
       },
       clear: () => {
         store = {};
-      }
+      },
     };
     spyOn(Object.getPrototypeOf(localStorage), 'getItem')
       .and.callFake(mockLocalStorage.getItem);
@@ -28,10 +25,9 @@ describe('characters service', () => {
     spyOn(Object.getPrototypeOf(localStorage), 'clear')
       .and.callFake(mockLocalStorage.clear);
 
-    window.ga = function () { }
+    window.ga = () => { };
     spyOn(window, 'ga')
       .and.callFake(() => { });
-
   });
 
   beforeEach(() => {
@@ -46,48 +42,44 @@ describe('characters service', () => {
       characterService = _characterService_;
     });
     store = {};
-
   });
 
-  afterEach(function () {
+  afterEach(() => {
   });
 
   it('saves current characters to the localstorage', () => {
-
     characterService.persist();
 
-    expect(Object.getPrototypeOf(localStorage).setItem).toHaveBeenCalledWith("CHARACTERS", jasmine.anything());
-  })
+    expect(Object.getPrototypeOf(localStorage).setItem).toHaveBeenCalledWith('CHARACTERS', jasmine.anything());
+  });
 
   it('adds new character', () => {
-    const newCharacter = { name: "New Character" };
+    const newCharacter = { name: 'New Character' };
 
     characterService.addCharacter(newCharacter);
 
-    expect(JSON.parse(store['CHARACTERS'])).toEqual(jasmine.arrayContaining([newCharacter]));
+    expect(JSON.parse(store.CHARACTERS)).toEqual(jasmine.arrayContaining([newCharacter]));
   });
 
   it('doesn\'t add new character if name exists', () => {
-    const character = { name: "Character" };
+    const character = { name: 'Character' };
     characterService.addCharacter(character);
-    const oldStore = angular.copy(store['CHARACTERS']);
-    const newCharacter = { name: "Character" };
+    const oldStore = angular.copy(store.CHARACTERS);
+    const newCharacter = { name: 'Character' };
 
     characterService.addCharacter(newCharacter);
 
-    expect(store['CHARACTERS']).toEqual(oldStore);
+    expect(store.CHARACTERS).toEqual(oldStore);
   });
 
   it('doesn\'t add new character if name in different case exists', () => {
-    const character = { name: "Character" };
+    const character = { name: 'Character' };
     characterService.addCharacter(character);
-    const oldStore = angular.copy(store['CHARACTERS']);
-    const newCharacter = { name: "CHARACTER" };
+    const oldStore = angular.copy(store.CHARACTERS);
+    const newCharacter = { name: 'CHARACTER' };
 
     characterService.addCharacter(newCharacter);
 
-    expect(store['CHARACTERS']).toEqual(oldStore);
+    expect(store.CHARACTERS).toEqual(oldStore);
   });
-
-
 });
