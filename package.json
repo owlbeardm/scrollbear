@@ -21,7 +21,8 @@
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
     "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "yarn parse && yarn commit",
-    "test": "karma start --browsers NoSandFirefox --single-run"
+    "test": "karma start --browsers NoSandFirefox --single-run",
+    "start-test": "karma start --browsers NoSandFirefox --single-run=false"
   },
   "dependencies": {
     "@babel/core": "^7.7.4",
