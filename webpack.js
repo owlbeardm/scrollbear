@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -29,11 +31,23 @@ function getCommonConfig() {
         test: /\.html$/,
         use: ['html-loader']
       }, {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      }, {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       }, {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: [{
+          loader: 'file-loader',
+          options: {
+            esModule: false,
+          }
+        }]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
@@ -121,7 +135,7 @@ module.exports = (env, argv) => {
         cacheGroups: {
           styles: {
             name: 'styles',
-            test: /\.css$/,
+            test: /\.((s[ac])|c)ss$/,
             chunks: 'all',
             enforce: true,
             // maxSize: 244000

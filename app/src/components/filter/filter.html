@@ -3,7 +3,7 @@
     <form ng-submit="$ctrl.search()">
       <div class="form-row ">
         <div class="col-md">
-          <input type="text" class="form-control input-block" placeholder="Search" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
+          <input  type="text" class="form-control input-block" placeholder="Search" onkeydown="return event.key != 'Enter';" ng-change="$ctrl.search()" ng-model="$ctrl.filter">
         </div>
         <div class="col-auto">
           <div class="form-check togglebutton">
