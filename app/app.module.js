@@ -1,7 +1,7 @@
 import 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
-import './src/css/owlbear-style/scss/material-dashboard.scss';
+import './src/css/styles.1.0.2.ef0599e0b4ae2fdc662b.css';
 import './src/css/app.css';
 
 import './src/components/components.module';
