@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
     "angular": "^1.7.9",
     "angular-mocks": "^1.7.9",
     "angular-sanitize": "^1.7.9",
