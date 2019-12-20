@@ -64,7 +64,7 @@
     "terser-webpack-plugin": "^2.3.0",
     "turndown": "^5.0.3",
     "turndown-plugin-gfm": "^1.0.2",
-    "webpack": "^4.41.3",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2",
