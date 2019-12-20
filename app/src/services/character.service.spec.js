@@ -33,11 +33,6 @@ describe('characters service', () => {
   beforeEach(() => {
     angular.mock.module('app.services');
     angular.mock.module('app.constants');
-    // angular.mock.module(($provide) => {
-    //   $provide.service('filterService', () => {
-    //     return {};
-    //   });
-    // });
     inject((_characterService_) => {
       characterService = _characterService_;
     });
@@ -82,4 +77,29 @@ describe('characters service', () => {
 
     expect(store.CHARACTERS).toEqual(oldStore);
   });
+
+  it('deletes character by id', () => {
+    const character = { name: 'Character' };
+    const character2 = { name: 'Character2' };
+    const character3 = { name: 'Character3' };
+    characterService.addCharacter(character);
+    characterService.addCharacter(character2);
+    characterService.addCharacter(character3);
+
+    characterService.deleteCharacter(1);
+
+    expect(JSON.parse(store.CHARACTERS)).toEqual([character, character3]);
+  });
+
+  // it('deletes character by id', () => {
+  //   const character = { name: 'Character' };
+  //   const character2 = { name: 'Character2' };
+  //
+  //   characterService.addCharacter(character);
+  //   characterService.addCharacter(character2);
+  //
+  //   characterService.deleteCharacter(1);
+  //
+  //   expect(JSON.parse(store.CHARACTERS)).toEqual([character, character3]);
+  // });
 });

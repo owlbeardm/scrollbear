@@ -22,8 +22,9 @@
     "start-test": "karma start --browsers NoSandFirefox --single-run=false",
     "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "yarn parse && yarn commit",
-    "lint": "eslint app/",
-    "test": "karma start --browsers NoSandFirefox --single-run"
+    "lint": "eslint app/ && eslint e2e/",
+    "test": "karma start --browsers NoSandFirefox --single-run",
+    "e2e": "webdriver-manager start && protractor"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
@@ -87,6 +88,8 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "markdown-loader": "^5.1.0",
     "node-sass": "^4.13.0",
-    "sw-offline-google-analytics": "^0.0.25"
+    "protractor": "^5.4.2",
+    "sw-offline-google-analytics": "^0.0.25",
+    "webdriver-manager": "^12.1.7"
   }
 }
