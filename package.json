@@ -60,7 +60,7 @@
     "puppeteer": "^2.0.0",
     "sass-loader": "^8.0.0",
     "showdown": "^1.9.1",
-    "style-loader": "^1.0.2",
+    "style-loader": "^1.1.1",
     "terser-webpack-plugin": "^2.3.0",
     "turndown": "^5.0.3",
     "turndown-plugin-gfm": "^1.0.2",
