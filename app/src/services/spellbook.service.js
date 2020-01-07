@@ -1,72 +1,12 @@
 angular.module('app.services').factory('spellbookService', [
   '$log',
-  '$window',
-  ($log, $window) => {
+  ($log) => {
     const SpellbookService = {};
-    const CHARACTERS = 'CHARACTERS';
-    const SELECTED_CHARACTER = 'SELECTED_CHARACTER';
-    const {
-      localStorage,
-    } = $window;
-    SpellbookService.characters = [];
-
-    SpellbookService.characters = JSON.parse(localStorage.getItem(CHARACTERS))
-      ? JSON.parse(localStorage.getItem(CHARACTERS)) : [];
-    // migrating from 1.9.3
-    SpellbookService.characters.forEach((character) => {
-      if (!character.prepared) {
-        if (character.knownSpells) {
-          Object.entries(character.knownSpells).forEach((level) => {
-            level[1].spells = level[1].spells.map((currentValue) => {
-              if (currentValue && typeof currentValue !== 'object') {
-                return {
-                  name: currentValue,
-                };
-              }
-              return currentValue;
-            });
-          });
-        }
-      }
-    });
-
-    SpellbookService.selectedCharacter = JSON.parse(localStorage.getItem(SELECTED_CHARACTER))
-      ? JSON.parse(localStorage.getItem(SELECTED_CHARACTER))
-      : undefined;
-    if (SpellbookService.selectedCharacter && !SpellbookService.selectedCharacter.history) {
-      SpellbookService.selectedCharacter.history = [];
-    }
-
-    SpellbookService.addCharacter = (character) => {
-      SpellbookService.characters.push(character);
-      SpellbookService.saveCharacters();
-      ga('send', 'event', 'characters', 'new', character.class);
-    };
-
-    SpellbookService.deleteCharacter = (id) => {
-      SpellbookService.characters.splice(id, 1);
-      SpellbookService.saveCharacters();
-    };
-
-    SpellbookService.selectCharacter = (character) => {
-      SpellbookService.selectedCharacter = character;
-      if (SpellbookService.selectedCharacter && !SpellbookService.selectedCharacter.history) {
-        SpellbookService.selectedCharacter.history = [];
-      }
-      ga('send', 'event', 'characters', 'select', character.class);
-    };
-
-    SpellbookService.isNameExists = (name) => !!SpellbookService.characters.find(
-      (character) => name.toUpperCase() === character.name.toUpperCase(),
-    );
-
-    SpellbookService.saveCharacters = () => {
-      localStorage.setItem(CHARACTERS, JSON.stringify(SpellbookService.characters));
-    };
+    $log.debug('SpellbookService started');
 
     SpellbookService.spontaneousCast = (key, name) => {
       if (!(SpellbookService.selectedCharacter.knownSpells[key].cast
-          < SpellbookService.selectedCharacter.knownSpells[key].perDay)) {
+        < SpellbookService.selectedCharacter.knownSpells[key].perDay)) {
         return;
       }
       SpellbookService.selectedCharacter.knownSpells[key].cast = Math.min(

@@ -1,7 +1,8 @@
 angular.module('app.services').factory('characterService', [
   '$log',
   '$window',
-  ($log, $window) => {
+  'migrationService',
+  ($log, $window, migrationService) => {
     const CharacterService = {};
     const Internal = {};
     //
@@ -21,10 +22,7 @@ angular.module('app.services').factory('characterService', [
     //
     // On Init Finish
     //
-
-    // TODO: Add migration
-    // 1. from version
-    // 2. add history
+    migrationService.migrateCharacters(Internal.characters);
 
     // Internal functions
     Internal.saveCharactersToStore = () => {
