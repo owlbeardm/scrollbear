@@ -1,4 +1,5 @@
 angular.module('app.services', []);
+require('./migration.service');
 require('./character.service');
 require('./spell.service');
 require('./sidebar.service');

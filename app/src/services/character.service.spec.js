@@ -87,7 +87,7 @@ describe('characters service', () => {
     characterService.addCharacter(character3);
 
     characterService.deleteCharacter(1);
-
+    // console.log(store.CHARACTERS);
     expect(JSON.parse(store.CHARACTERS)).toEqual([character, character3]);
   });
 
