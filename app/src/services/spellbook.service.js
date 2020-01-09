@@ -1,87 +1,88 @@
 angular.module('app.services').factory('spellbookService', [
   '$log',
-  ($log) => {
+  'characterService',
+  ($log, characterService) => {
     const SpellbookService = {};
     $log.debug('SpellbookService started');
 
     SpellbookService.spontaneousCast = (key, name) => {
-      if (!(SpellbookService.selectedCharacter.knownSpells[key].cast
-        < SpellbookService.selectedCharacter.knownSpells[key].perDay)) {
+      if (!(characterService.getSelectedCharacter().knownSpells[key].cast
+        < characterService.getSelectedCharacter().knownSpells[key].perDay)) {
         return;
       }
-      SpellbookService.selectedCharacter.knownSpells[key].cast = Math.min(
-        SpellbookService.selectedCharacter.knownSpells[key].perDay,
-        SpellbookService.selectedCharacter.knownSpells[key].cast + 1,
+      characterService.getSelectedCharacter().knownSpells[key].cast = Math.min(
+        characterService.getSelectedCharacter().knownSpells[key].perDay,
+        characterService.getSelectedCharacter().knownSpells[key].cast + 1,
       );
-      SpellbookService.selectedCharacter.history.push({
+      characterService.getSelectedCharacter().history.push({
         spontaneous: true,
         level: key,
         name,
       });
-      SpellbookService.saveCharacters();
-      ga('send', 'event', 'cast', name, SpellbookService.selectedCharacter.class);
+      characterService.persist();
+      ga('send', 'event', 'cast', name, characterService.getSelectedCharacter().class);
     };
 
     SpellbookService.spontaneousRestore = (key) => {
-      if (!(SpellbookService.selectedCharacter.knownSpells[key].cast > 0)) {
+      if (!(characterService.getSelectedCharacter().knownSpells[key].cast > 0)) {
         return;
       }
-      SpellbookService.selectedCharacter.knownSpells[key].cast = Math.max(
+      characterService.getSelectedCharacter().knownSpells[key].cast = Math.max(
         0,
-        SpellbookService.selectedCharacter.knownSpells[key].cast - 1,
+        characterService.getSelectedCharacter().knownSpells[key].cast - 1,
       );
-      SpellbookService.selectedCharacter.history.push({
+      characterService.getSelectedCharacter().history.push({
         reset: true,
         spontaneous: true,
         level: key,
       });
-      SpellbookService.saveCharacters();
+      characterService.persist();
     };
 
     SpellbookService.preparedCast = (key, id) => {
-      if (SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast) {
+      if (characterService.getSelectedCharacter().preparedSpells[key].spells[id].cast) {
         return;
       }
-      SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast = true;
-      SpellbookService.selectedCharacter.history.push({
+      characterService.getSelectedCharacter().preparedSpells[key].spells[id].cast = true;
+      characterService.getSelectedCharacter().history.push({
         prepared: true,
         level: key,
-        name: SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name,
+        name: characterService.getSelectedCharacter().preparedSpells[key].spells[id].name,
       });
-      SpellbookService.saveCharacters();
-      ga('send', 'event', 'cast', SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name,
-        SpellbookService.selectedCharacter.class);
+      characterService.persist();
+      ga('send', 'event', 'cast', characterService.getSelectedCharacter().preparedSpells[key].spells[id].name,
+        characterService.getSelectedCharacter().class);
     };
 
     SpellbookService.preparedRestore = (key, id) => {
-      if (!(SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast)) {
+      if (!(characterService.getSelectedCharacter().preparedSpells[key].spells[id].cast)) {
         return;
       }
-      delete SpellbookService.selectedCharacter.preparedSpells[key].spells[id].cast;
-      SpellbookService.selectedCharacter.history.push({
+      delete characterService.getSelectedCharacter().preparedSpells[key].spells[id].cast;
+      characterService.getSelectedCharacter().history.push({
         reset: true,
         prepared: true,
         level: key,
-        name: SpellbookService.selectedCharacter.preparedSpells[key].spells[id].name,
+        name: characterService.getSelectedCharacter().preparedSpells[key].spells[id].name,
       });
-      SpellbookService.saveCharacters();
+      characterService.persist();
     };
 
     SpellbookService.resetCast = () => {
-      if (SpellbookService.selectedCharacter.knownSpells) {
-        Object.entries(SpellbookService.selectedCharacter.knownSpells).forEach((pair) => {
+      if (characterService.getSelectedCharacter().knownSpells) {
+        Object.entries(characterService.getSelectedCharacter().knownSpells).forEach((pair) => {
           pair[1].cast = 0;
         });
       }
-      if (SpellbookService.selectedCharacter.preparedSpells) {
-        Object.entries(SpellbookService.selectedCharacter.preparedSpells).forEach((pair) => {
+      if (characterService.getSelectedCharacter().preparedSpells) {
+        Object.entries(characterService.getSelectedCharacter().preparedSpells).forEach((pair) => {
           pair[1].spells.forEach((spell) => {
             delete spell.cast;
           });
         });
       }
-      SpellbookService.selectedCharacter.history = [];
-      SpellbookService.saveCharacters();
+      characterService.getSelectedCharacter().history = [];
+      characterService.persist();
     };
 
     return SpellbookService;

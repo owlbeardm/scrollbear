@@ -1,4 +1,4 @@
-function HistoryController($log, $state, spellbookService) {
+function HistoryController($log, $state, characterService) {
   $log.debug('HistoryController create');
   const ctrl = this;
 
@@ -7,14 +7,14 @@ function HistoryController($log, $state, spellbookService) {
   };
 
   ctrl.changeHistory = () => {
-    ctrl.history = spellbookService.selectedCharacter.history;
-    $log.debug('HistoryController changeHistory', spellbookService.selectedCharacter);
+    ctrl.history = characterService.getSelectedCharacter().history;
+    $log.debug('HistoryController changeHistory', characterService.getSelectedCharacter());
   };
 }
 
 const HistoryComponent = {
   template: require('./history.html'),
-  controller: ['$log', '$state', 'spellbookService', HistoryController],
+  controller: ['$log', '$state', 'characterService', HistoryController],
   bindings: {},
 };
 

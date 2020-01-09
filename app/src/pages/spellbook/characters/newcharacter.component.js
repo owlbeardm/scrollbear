@@ -1,4 +1,4 @@
-function NewCharacterController($log, $rootScope, $state, spellbookService, CLASSES) {
+function NewCharacterController($log, $rootScope, $state, characterService, CLASSES) {
   $log.debug('NewCharacterController create');
   const ctrl = this;
 
@@ -23,8 +23,8 @@ function NewCharacterController($log, $rootScope, $state, spellbookService, CLAS
       spellbook: ctrl.spellbook,
       class: ctrl.classSelected,
     };
-    spellbookService.addCharacter(character);
-    spellbookService.selectCharacter(character);
+    characterService.addCharacter(character);
+    characterService.selectCharacter(character);
     if (character.prepared) {
       $state.go('spellbook.prepared');
     } else {
@@ -37,13 +37,13 @@ function NewCharacterController($log, $rootScope, $state, spellbookService, CLAS
   };
 
   ctrl.checkIfNameExists = () => {
-    ctrl.isNameExists = spellbookService.isNameExists(ctrl.name);
+    ctrl.isNameExists = characterService.isCharacterNameExists(ctrl.name);
   };
 }
 
 const NewCharacterComponent = {
   template: require('./newcharacter.html'),
-  controller: ['$log', '$rootScope', '$state', 'spellbookService', 'CLASSES', NewCharacterController],
+  controller: ['$log', '$rootScope', '$state', 'characterService', 'CLASSES', NewCharacterController],
 };
 
 export default NewCharacterComponent;

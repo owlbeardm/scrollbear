@@ -1,7 +1,6 @@
 function KnownSpelLevelController(
   $log,
-  $state,
-  filterService,
+  characterService,
   focusService,
   spellService,
   spellbookService,
@@ -24,8 +23,8 @@ function KnownSpelLevelController(
 
   ctrl.delete = (key, id) => {
     $log.debug('SpellbookBookController ctrl.delete', key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
+    characterService.getSelectedCharacter().knownSpells[key].spells.splice(id, 1);
+    characterService.persist();
   };
 
   ctrl.edit = () => {
@@ -39,7 +38,7 @@ function KnownSpelLevelController(
     ctrl.spellLevel.perDay = ctrl.perDay;
     ctrl.spellLevel.known = ctrl.known;
     ctrl.editMode = false;
-    spellbookService.saveCharacters();
+    characterService.persist();
   };
 
   ctrl.cancelEdit = () => {
@@ -55,8 +54,7 @@ const KnownSpelLevelComponent = {
   template: require('./known-spell-level.html'),
   controller: [
     '$log',
-    '$state',
-    'filterService',
+    'characterService',
     'focusService',
     'spellService',
     'spellbookService',

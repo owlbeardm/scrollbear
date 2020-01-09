@@ -1,11 +1,11 @@
-function CharactersController($log, $rootScope, $state, spellbookService, CLASSES) {
+function CharactersController($log, $rootScope, $state, characterService, CLASSES) {
   $log.debug('CharactersController create');
   const ctrl = this;
 
   ctrl.$onInit = () => {
     $log.debug('CharactersController init');
     ctrl.classes = CLASSES;
-    ctrl.characters = spellbookService.characters;
+    ctrl.characters = characterService.getCharacters();
     if (window.performance) {
       ga('send', 'timing', 'Transition', 'onInit',
         Math.round(performance.now()) - $rootScope.onStartTime,
@@ -17,12 +17,12 @@ function CharactersController($log, $rootScope, $state, spellbookService, CLASSE
     $state.go('spellbook.newcharacter');
   };
 
-  ctrl.characterSelected = () => ctrl.characters.indexOf(spellbookService.selectedCharacter);
+  ctrl.characterSelected = () => ctrl.characters.indexOf(characterService.getSelectedCharacter());
 }
 
 const CharactersComponent = {
   template: require('./characters.html'),
-  controller: ['$log', '$rootScope', '$state', 'spellbookService', 'CLASSES', CharactersController],
+  controller: ['$log', '$rootScope', '$state', 'characterService', 'CLASSES', CharactersController],
 };
 
 export default CharactersComponent;

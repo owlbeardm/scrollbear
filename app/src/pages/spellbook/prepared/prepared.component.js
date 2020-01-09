@@ -1,4 +1,4 @@
-function PreparedController($log, $rootScope, $state, filterService, spellService, spellbookService) {
+function PreparedController($log, $rootScope, $state, characterService, spellbookService) {
   const ctrl = this;
   $log.debug('SpellController create');
 
@@ -8,11 +8,11 @@ function PreparedController($log, $rootScope, $state, filterService, spellServic
 
   ctrl.$onInit = () => {
     $log.debug('PreparedController init');
-    if (spellbookService.selectedCharacter) {
-      if (!spellbookService.selectedCharacter.preparedSpells) {
-        spellbookService.selectedCharacter.preparedSpells = {};
+    if (characterService.getSelectedCharacter()) {
+      if (!characterService.getSelectedCharacter().preparedSpells) {
+        characterService.getSelectedCharacter().preparedSpells = {};
       }
-      ctrl.spells = spellbookService.selectedCharacter.preparedSpells;
+      ctrl.spells = characterService.getSelectedCharacter().preparedSpells;
       Object.entries(ctrl.spells).forEach((pair) => {
         if (!pair[1].spells) {
           pair[1].spells = [];
@@ -37,7 +37,7 @@ function PreparedController($log, $rootScope, $state, filterService, spellServic
     } else {
       $state.go('spellbook.characters');
     }
-    spellbookService.saveCharacters();
+    characterService.persist();
     calculateTotal();
     if (window.performance) {
       ga('send', 'timing', 'Transition', 'onInit',
@@ -47,14 +47,14 @@ function PreparedController($log, $rootScope, $state, filterService, spellServic
   };
 
   ctrl.cast = (key) => {
-    spellbookService.selectedCharacter.knownSpells[key].cast += 1;
-    spellbookService.saveCharacters();
+    characterService.getSelectedCharacter().knownSpells[key].cast += 1;
+    characterService.persist();
   };
 
   ctrl.delete = (key, id) => {
     $log.debug('SpellbookBookController ctrl.delete', key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
+    characterService.getSelectedCharacter().knownSpells[key].spells.splice(id, 1);
+    characterService.persist();
   };
 
   ctrl.resetCast = () => {
@@ -68,8 +68,7 @@ const PreparedComponent = {
     '$log',
     '$rootScope',
     '$state',
-    'filterService',
-    'spellService',
+    'characterService',
     'spellbookService',
     PreparedController,
   ],

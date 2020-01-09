@@ -1,19 +1,19 @@
-function SpellbookController($log, spellbookService) {
+function SpellbookController($log, characterService) {
   $log.debug('SpellbookController create');
   const ctrl = this;
 
   ctrl.$onInit = () => {
-    $log.debug('SpellbookController init', spellbookService.selectedCharacter);
+    $log.debug('SpellbookController init', characterService.getSelectedCharacter());
   };
 
-  ctrl.selectedCharacter = () => spellbookService.selectedCharacter;
+  ctrl.selectedCharacter = () => characterService.getSelectedCharacter();
 }
 
 const SpellbookComponent = {
   template: require('./spellbook.html'),
   controller: [
     '$log',
-    'spellbookService',
+    'characterService',
     SpellbookController,
   ],
 };

@@ -29,6 +29,10 @@ angular.module('app.services').factory('characterService', [
       localStorage.setItem(CHARACTERS, JSON.stringify(Internal.characters));
     };
 
+    CharacterService.getCharacters = () => Internal.characters;
+
+    CharacterService.getSelectedCharacter = () => Internal.selectedCharacter;
+
     CharacterService.addCharacter = (character) => {
       if (CharacterService.isCharacterNameExists(character.name)) return;
       Internal.characters.push(character);

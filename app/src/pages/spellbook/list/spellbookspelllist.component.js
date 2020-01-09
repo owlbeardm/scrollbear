@@ -6,9 +6,8 @@ function SpellbookSpellListController(
   $document,
   $timeout,
   notificationService,
-  filterService,
   spellService,
-  spellbookService,
+  characterService,
   CLASSES,
 ) {
   const ctrl = this;
@@ -26,11 +25,11 @@ function SpellbookSpellListController(
 
   ctrl.$onInit = () => {
     $log.debug('SpellbookSpellListController init');
-    if (!spellbookService.selectedCharacter) {
+    if (!characterService.getSelectedCharacter()) {
       $state.go('spellbook.characters');
     }
     ctrl.classes = CLASSES;
-    ctrl.classSelected = spellbookService.selectedCharacter.class;
+    ctrl.classSelected = characterService.getSelectedCharacter().class;
     ctrl.setClass();
     notificationService.subscribe($scope, notificationService.FILTER_CHANGED, () => {
       ctrl.spells = getSpells();
@@ -38,7 +37,7 @@ function SpellbookSpellListController(
     notificationService.subscribe($scope, notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, (event, param) => {
       $log.debug('SpellbookSpellListController notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED', param);
       if (param) {
-        ctrl.classSelected = spellbookService.selectedCharacter.class;
+        ctrl.classSelected = characterService.getSelectedCharacter().class;
         ctrl.setClass();
       } else {
         ctrl.classToAll();
@@ -90,9 +89,8 @@ const SpellbookSpellListComponent = {
     '$document',
     '$timeout',
     'notificationService',
-    'filterService',
     'spellService',
-    'spellbookService',
+    'characterService',
     'CLASSES',
     SpellbookSpellListController,
   ],

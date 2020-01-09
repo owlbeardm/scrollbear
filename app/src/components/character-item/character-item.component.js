@@ -1,4 +1,4 @@
-function CharacterItemController($log, $state, spellbookService, CLASSES) {
+function CharacterItemController($log, $state, characterService, CLASSES) {
   $log.debug('CharacterItemController create');
   const ctrl = this;
 
@@ -8,14 +8,14 @@ function CharacterItemController($log, $state, spellbookService, CLASSES) {
   };
 
   ctrl.delete = () => {
-    spellbookService.deleteCharacter(ctrl.id);
+    characterService.deleteCharacter(ctrl.id);
     ctrl.deleteMode = false;
   };
 
-  ctrl.characterSelected = () => ctrl.characters.indexOf(spellbookService.selectedCharacter);
+  ctrl.characterSelected = () => ctrl.characters.indexOf(characterService.getSelectedCharacter());
 
   ctrl.selectCharacter = (character) => {
-    spellbookService.selectCharacter(character);
+    characterService.selectCharacter(character);
     if (character.prepared) {
       $state.go('spellbook.prepared');
     } else {
@@ -34,7 +34,7 @@ function CharacterItemController($log, $state, spellbookService, CLASSES) {
 
 const CharacterItemComponent = {
   template: require('./character-item.html'),
-  controller: ['$log', '$state', 'spellbookService', 'CLASSES', CharacterItemController],
+  controller: ['$log', '$state', 'characterService', 'CLASSES', CharacterItemController],
   bindings: {
     character: '<',
     selected: '<',

@@ -1,4 +1,4 @@
-function KnownController($log, $rootScope, $state, filterService, spellService, spellbookService) {
+function KnownController($log, $rootScope, $state, characterService, spellbookService) {
   const ctrl = this;
   $log.debug('KnownController create');
 
@@ -8,11 +8,11 @@ function KnownController($log, $rootScope, $state, filterService, spellService, 
 
   ctrl.$onInit = () => {
     $log.debug('KnownController init');
-    if (spellbookService.selectedCharacter) {
-      if (!spellbookService.selectedCharacter.knownSpells) {
-        spellbookService.selectedCharacter.knownSpells = {};
+    if (characterService.getSelectedCharacter()) {
+      if (!characterService.getSelectedCharacter().knownSpells) {
+        characterService.getSelectedCharacter().knownSpells = {};
       }
-      ctrl.spells = spellbookService.selectedCharacter.knownSpells;
+      ctrl.spells = characterService.getSelectedCharacter().knownSpells;
       Object.entries(ctrl.spells).forEach((pair) => {
         if (!pair[1].spells) {
           pair[1].spells = [];
@@ -37,7 +37,7 @@ function KnownController($log, $rootScope, $state, filterService, spellService, 
     } else {
       $state.go('spellbook.characters');
     }
-    spellbookService.saveCharacters();
+    characterService.persist();
     calculateTotal();
     if (window.performance) {
       ga('send', 'timing', 'Transition', 'onInit',
@@ -57,8 +57,7 @@ const KnownComponent = {
     '$log',
     '$rootScope',
     '$state',
-    'filterService',
-    'spellService',
+    'characterService',
     'spellbookService',
     KnownController,
   ],
