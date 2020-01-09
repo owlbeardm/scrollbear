@@ -4,6 +4,7 @@ function SpellbookSpelllistLightController(
   filterService,
   characterService,
   spellService,
+  spellbookService,
   $window,
   $document,
   CLASSES,
@@ -23,51 +24,8 @@ function SpellbookSpelllistLightController(
   }
 
   function addSpell(spell, spellToAdd) {
-    $log.debug('addSpell 1', spellToAdd, spell);
-    let level = spell.levels.reduce((accumulator, currentValue) => {
-      if (CLASSES[ctrl.classSelected].search && CLASSES[ctrl.classSelected].search.length) {
-        if (CLASSES[ctrl.classSelected].search.reduce((acc, curr) => acc || currentValue.search(curr) !== -1, false)) {
-          const curLevel = currentValue.substring(currentValue.length - 1);
-          if (!accumulator || accumulator > curLevel) {
-            return curLevel;
-          }
-        }
-      }
-      return accumulator;
-    }, undefined);
-    $log.debug('addSpell 2', ctrl.lvl, level, spellToAdd);
-    if (!level) {
-      level = ctrl.lvl;
-    }
-    if (!characterService.getSelectedCharacter().prepared) {
-      if (!characterService.getSelectedCharacter().knownSpells) {
-        characterService.getSelectedCharacter().knownSpells = {};
-      }
-      if (!characterService.getSelectedCharacter().knownSpells[level]) {
-        characterService.getSelectedCharacter().knownSpells[level] = {
-          spells: [],
-        };
-      }
-      characterService.getSelectedCharacter().knownSpells[level].spells.push(spellToAdd);
-    } else {
-      if (!characterService.getSelectedCharacter().preparedSpells) {
-        characterService.getSelectedCharacter().preparedSpells = {};
-      }
-      if (!characterService.getSelectedCharacter().preparedSpells[level]) {
-        characterService.getSelectedCharacter().preparedSpells[level] = {
-          spells: [],
-        };
-      }
-      characterService.getSelectedCharacter().preparedSpells[level].spells.push(spellToAdd);
-    }
-    characterService.persist();
+    spellbookService.addSpell(spell, spellToAdd, ctrl.classSelected, ctrl.lvl);
     redrawPreparedBookLists();
-    $log.debug(characterService.getSelectedCharacter());
-    if (!characterService.getSelectedCharacter().prepared) {
-      ga('send', 'event', 'known_add', spellToAdd.name, characterService.getSelectedCharacter().class);
-    } else {
-      ga('send', 'event', 'prepared_add', spellToAdd.name, characterService.getSelectedCharacter().class);
-    }
   }
 
   ctrl.$onInit = () => {
@@ -253,6 +211,7 @@ const SpellbookSpelllistLightComponent = {
     'filterService',
     'characterService',
     'spellService',
+    'spellbookService',
     '$window',
     '$document',
     'CLASSES',

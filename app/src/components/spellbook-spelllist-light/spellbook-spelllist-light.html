@@ -26,7 +26,7 @@
           <a href="#" ng-if="$ctrl.spellbook && $ctrl.bookL[$index]" class="ml-2 mr-3" ng-class="{'text-primary': !$ctrl.bookL[$index], 'text-muted': $ctrl.isInSpellBook(spell.name), 'disabled': $ctrl.bookL[$index]}" ng-click="$ctrl.addToBook(spell)">
             <i class="fas fa-book push-shadow"></i>
           </a>
-          <div ng-if="$ctrl.prepared" class="float-right dropleft">
+          <div class="float-right dropleft">
             <a href="#" class="ml-2 text-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-chevron-circle-down push-shadow"></i>
             </a>
