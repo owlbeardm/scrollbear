@@ -48,9 +48,6 @@ angular.module('app.services').factory('characterService', [
 
     CharacterService.selectCharacter = (character) => {
       Internal.selectedCharacter = character;
-      if (Internal.selectedCharacter && Internal.selectedCharacter.history) {
-        Internal.selectedCharacter.history = [];
-      }
       ga('send', 'event', 'characters', 'select', character.class);
     };
 
