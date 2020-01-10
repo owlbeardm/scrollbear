@@ -9,7 +9,7 @@ async function fields() {
         if (key === 'description' ||
           key === 'url' ||
           key === 'name' ||
-          // key === 'levels' ||
+          // key === 'source' ||
           key === 'components'
         ) {
           return;
@@ -18,13 +18,17 @@ async function fields() {
           fields[key] = {};
         }
         if (!Array.isArray(spell[key])) {
-          if (!fields[key][spell[key]]) {
-            fields[key][spell[key]] = 1;
+          let value = spell[key];
+          if (key === 'source') {
+            value = value.substring(2, value.indexOf(' pg.'));
+          }
+          if (!fields[key][value]) {
+            fields[key][value] = 1;
           } else {
-            fields[key][spell[key]]++;
+            fields[key][value]++;
           }
         } else {
-          spell[key].forEach((valueL)=>{
+          spell[key].forEach((valueL) => {
             const value = valueL.substring(0, valueL.length);
             if (!fields[key][value]) {
               fields[key][value] = 1;

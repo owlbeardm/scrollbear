@@ -1,35 +1,39 @@
 const webpackConf = require("./webpack.js");
-const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
+// const puppeteer = require('puppeteer');
+// process.env.CHROME_BIN = puppeteer.executablePath();
+// process.env.CHROMIUM_BIN = puppeteer.executablePath();
+
 
 module.exports = function(config) {
   config.set({
-    browsers: ['HeadlessChrome'],
-    customLaunchers:{
-      HeadlessChrome:{
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['NoSandFirefox'],
     frameworks: ['jasmine'],
     reporters: ['spec'],
     plugins: [
       'karma-spec-reporter',
       'karma-sourcemap-loader',
       'karma-webpack',
-      'karma-chrome-launcher',
+      'karma-firefox-launcher',
       'karma-jasmine'
     ],
     specReporter: {
       maxLogLines: 5, // limit number of lines logged per test
-      suppressErrorSummary: true, // do not print error summary
+      suppressErrorSummary: false, // do not print error summary
       suppressFailed: false, // do not print information about failed tests
       suppressPassed: false, // do not print information about passed tests
       suppressSkipped: true, // do not print information about skipped tests
-      showSpecTiming: false, // print the time elapsed for each spec
-      failFast: false // test would finish with error when a first fail occurs.
+      showSpecTiming: true, // print the time elapsed for each spec
+      failFast: true // test would finish with error when a first fail occurs.
     },
-    autoWatch: !config.singleRun,
+    customLaunchers: {
+      NoSandFirefox: {
+        base: 'Firefox',
+        flags: ['--no-sandbox']
+      }
+    },
+    // autoWatch: !config.singleRun,
+    singleRun: false,
+    browserDisconnectTimeout:10000,
     colors: true,
     port: 9876,
     basePath: '',
@@ -44,7 +48,9 @@ module.exports = function(config) {
       'app/index_test.js': ['webpack', 'sourcemap']
     },
     exclude: [],
-    webpack: webpackConf(undefined, {'mode':'test'}),
+    webpack: webpackConf(undefined, {
+      'mode': 'test'
+    }),
     webpackMiddleware: {
       noInfo: true,
       stats: 'errors-only'

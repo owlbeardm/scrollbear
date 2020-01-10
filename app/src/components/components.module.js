@@ -1,27 +1,46 @@
-"use strict";
+import History from './history/history.component';
+
+import CharacterItem from './character-item/character-item.component';
+
+import KnownSpelLevel from './known-spell-level/known-spell-level.component';
+
+import ModalSpell from './modal-spell/modal-spell.component';
+
+import PreparedSpelLevel from './prepared-spell-level/prepared-spell-level.component';
+
+import SpellbookSpelllistLightComponent from './spellbook-spelllist-light/spellbook-spelllist-light.component';
+
+import SpellListComponent from './spell-list/spell-list.component';
+
+import SpellListLightComponent from './spell-list/spell-list-light.component';
+
+import PageHeaderComponent from './page-header/page-header.component';
+
+import PageFooterComponent from './page-footer/page-footer.component';
+
+import FilterComponent from './filter/filter.component';
+
+import SidebarToggleComponent from './sidebar-toggle/sidebar-toggle.component';
+
+import SidebarComponent from './sidebar/sidebar.component';
+
+import YesNoModalComponent from './yes-no-modal/yes-no-modal.component';
+
+import ModalMetamagicComponent from './modal-metamagic/modal-metamagic.component';
 
 const appComponents = angular.module('app.components', []);
-
-import CharacterItem from './character-item/character-item.component.js';
+appComponents.component('history', History);
 appComponents.component('characterItem', CharacterItem);
-
-import KnownSpelLevel from './known-spell-level/known-spell-level.component.js';
 appComponents.component('knownSpellLevel', KnownSpelLevel);
-
-import ModalSpell from './modal-spell/modal-spell.component.js';
 appComponents.component('modalSpell', ModalSpell);
-
-import PreparedSpelLevel from './prepared-spell-level/prepared-spell-level.component.js';
 appComponents.component('preparedSpellLevel', PreparedSpelLevel);
-
-import SpellListComponent from './spell-list/spell-list.component.js';
+appComponents.component('spellbookSpelllistLight', SpellbookSpelllistLightComponent);
 appComponents.component('spellList', SpellListComponent);
-
-import PageHeaderComponent from './page-header/page-header.component.js';
+appComponents.component('spellListLight', SpellListLightComponent);
 appComponents.component('pageHeader', PageHeaderComponent);
-
-import PageFooterComponent from './page-footer/page-footer.component.js';
 appComponents.component('pageFooter', PageFooterComponent);
-
-import FilterComponent from './filter/filter.component.js';
 appComponents.component('filter', FilterComponent);
+appComponents.component('sidebarToggle', SidebarToggleComponent);
+appComponents.component('sidebar', SidebarComponent);
+appComponents.component('yesNoModal', YesNoModalComponent);
+appComponents.component('modalMetamagic', ModalMetamagicComponent);

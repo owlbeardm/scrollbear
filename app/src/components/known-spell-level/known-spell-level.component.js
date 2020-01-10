@@ -1,65 +1,75 @@
-"use strict";
-
-function KnownSpelLevelController($log, $state, filterService, focusService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+function KnownSpelLevelController(
+  $log,
+  characterService,
+  focusService,
+  spellService,
+  spellbookService,
+) {
+  $log.debug('KnownSpelLevelController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("KnownSpelLevelController init");
-  }
+  ctrl.$onInit = () => {
+    $log.debug('KnownSpelLevelController init');
+  };
 
-  ctrl.cast = function(key) {
-    spellbookService.selectedCharacter.knownSpells[key].cast++;
-    spellbookService.saveCharacters();
-  }
+  ctrl.cast = (key, name) => {
+    $log.debug('KnownSpelLevelController cast', key);
+    spellbookService.spontaneousCast(key, name);
+  };
 
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
-  }
+  ctrl.restoreSlot = (key) => {
+    spellbookService.spontaneousRestore(key);
+  };
 
-  ctrl.edit = function() {
+  ctrl.delete = (key, id) => {
+    $log.debug('SpellbookBookController ctrl.delete', key, id);
+    characterService.getSelectedCharacter().knownSpells[key].spells.splice(id, 1);
+    characterService.persist();
+  };
+
+  ctrl.edit = () => {
     ctrl.perDay = ctrl.spellLevel.perDay;
     ctrl.known = ctrl.spellLevel.known;
     ctrl.editMode = true;
     focusService.setFocus('known');
-  }
+  };
 
-  ctrl.saveEdit = function() {
+  ctrl.saveEdit = () => {
     ctrl.spellLevel.perDay = ctrl.perDay;
     ctrl.spellLevel.known = ctrl.known;
     ctrl.editMode = false;
-    spellbookService.saveCharacters();
-  }
+    characterService.persist();
+  };
 
-  ctrl.cancelEdit = function() {
+  ctrl.cancelEdit = () => {
     ctrl.editMode = false;
-  }
+  };
 
-  ctrl.chooseSpell = function(spell) {
-    spellService.showSpell(spell);
-  }
+  ctrl.chooseSpell = (spell) => {
+    spellService.showSpell(spell.name);
+  };
 
+  ctrl.filteredLabels = (labels) => (labels.filter ? labels
+    .filter((x) => !!x)
+    .map((x) => x.replace(' spell', ''))
+    .sort() : undefined);
 }
 
 const KnownSpelLevelComponent = {
   template: require('./known-spell-level.html'),
   controller: [
     '$log',
-    '$state',
-    'filterService',
+    'characterService',
     'focusService',
     'spellService',
     'spellbookService',
-    'CLASSES',
-    KnownSpelLevelController
+    KnownSpelLevelController,
   ],
   bindings: {
     spellLevel: '<',
     level: '<',
-    index: '<'
-  }
-}
+    index: '<',
+  },
+};
 
 export default KnownSpelLevelComponent;

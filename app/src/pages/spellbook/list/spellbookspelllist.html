@@ -1,7 +1,8 @@
-<filter></filter>
+<filter only-class-spells-enabled="true"></filter>
+
 <div class="accordion" id="accordionExample">
   <div ng-repeat="(key, value) in $ctrl.spells" class="card card-collapse">
-    <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+    <div class="card-header" role="tab" id="heading{{$index}}" data-toggle="collapse" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}" ng-click="$ctrl.click($index)">
       <h5 class="mb-0 text-primary">
         <a >
           {{$ctrl.classes[$ctrl.classSelected].name}} {{key}}
@@ -13,36 +14,9 @@
 
     <div id="collapse{{$index}}" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}" data-parent="#accordionExample">
       <div class="card-body">
-        <table class="table table-sm">
-          <tbody>
-            <tr ng-repeat="spell in value track by $index">
-              <td ng-click="$ctrl.chooseSpell(spell)">
-                <a href="#" class="text-dark">
-                  {{spell.name}}
-                </a>
-                <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
-              </td>
-              <td class="float-right mb-1">
-                <a href="#" class="ml-2 mr-3" ng-class="{'text-primary': $ctrl.prepared || !$ctrl.isSpellPrepared(spell.name), 'text-muted': !$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)}" ng-disable="!$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)" ng-click="$ctrl.addSpell(key, spell)">
-                  <span class="badge badge-secondary" ng-if="$ctrl.prepared && $ctrl.isSpellPrepared(spell.name)"><small>{{$ctrl.isSpellPrepared(spell.name)}}</small></span>
-                  <i class="fas fa-scroll"></i>
-                  <div class="ripple-container"></div>
-                </a>
-                <a href="#" ng-if="$ctrl.spellbook" class="ml-2 mr-3 text-primary" ng-class="{'text-primary': !$ctrl.isInSpellBook(spell.name), 'text-muted': $ctrl.isInSpellBook(spell.name)}" ng-disable="$ctrl.isInSpellBook(spell.name)" ng-click="$ctrl.addToBook(key, spell)">
-                  <i class="fas fa-book"></i>
-                  <div class="ripple-container"></div>
-                </a>
-                <!-- <a href="#" class="ml-2" ng-click="$">
-                  <i class="fas fa-chevron-circle-down text-primary"></i>
-                  <div class="ripple-container"></div>
-                </a> -->
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <spellbook-spelllist-light class-selected="$ctrl.classSelected" lvl="key" spells="value" collapse-name="'collapse'+$index"></spellbook-spelllist-light>
       </div>
     </div>
   </div>
 </div>
 <button ng-if="$ctrl.otherSpellsCount" ng-click="$ctrl.classToAll()" class='btn btn-warning'>Found <strong>{{$ctrl.otherSpellsCount}}</strong> spell{{$ctrl.otherSpellsCount!=1?'s':''}} in other classes</button>
-<!-- <ui-view></ui-view> -->

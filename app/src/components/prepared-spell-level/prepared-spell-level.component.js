@@ -1,72 +1,91 @@
-"use strict";
-
-function PreparedSpelLevelController($log, $state, filterService, focusService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+function PreparedSpelLevelController(
+  $log,
+  characterService,
+  focusService,
+  spellService,
+  spellbookService,
+) {
   const ctrl = this;
+  $log.debug('SpellController create');
 
-  ctrl.$onInit = function() {
-    $log.debug("PreparedSpelLevelController init");
-  }
+  ctrl.$onInit = () => {
+    $log.debug('PreparedSpelLevelController init', characterService.getSelectedCharacter().preparedSpells);
+    characterService.getSelectedCharacter().preparedSpells[ctrl.level].spells.sort((a, b) => {
+      const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    characterService.persist();
+  };
 
-  ctrl.cast = function(key, id) {
-    spellbookService.selectedCharacter.preparedSpells[key].spells[id].cast = true;
-    spellbookService.saveCharacters();
-  }
+  ctrl.cast = (key, id) => {
+    spellbookService.preparedCast(key, id);
+  };
 
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.preparedSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
-  }
+  ctrl.restore = (key, id) => {
+    spellbookService.preparedRestore(key, id);
+  };
 
-  ctrl.edit = function() {
+  ctrl.delete = (key, id) => {
+    $log.debug('SpellbookBookController ctrl.delete', key, id);
+    characterService.getSelectedCharacter().preparedSpells[key].spells.splice(id, 1);
+    characterService.persist();
+  };
+
+  ctrl.edit = () => {
     ctrl.perDay = ctrl.spellLevel.perDay;
     ctrl.known = ctrl.spellLevel.known;
     ctrl.editMode = true;
     focusService.setFocus('perDay');
-  }
+  };
 
-  ctrl.saveEdit = function() {
+  ctrl.saveEdit = () => {
     ctrl.spellLevel.perDay = ctrl.perDay;
     ctrl.spellLevel.known = ctrl.known;
     ctrl.editMode = false;
-    spellbookService.saveCharacters();
-  }
+    characterService.persist();
+  };
 
-  ctrl.cancelEdit = function() {
+  ctrl.cancelEdit = () => {
     ctrl.editMode = false;
-  }
+  };
 
-  ctrl.castSpells = function() {
-    return ctrl.spellLevel.spells.reduce((acc, curr) => acc + (
-      curr.cast
+  ctrl.castSpells = () => ctrl.spellLevel.spells.reduce((acc, curr) => acc + (
+    curr.cast
       ? 1
       : 0), 0);
-  }
 
-  ctrl.chooseSpell = function(spell) {
+  ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell);
-  }
+  };
 
+  ctrl.filteredLabels = (labels) => (labels.filter ? labels
+    .filter((x) => !!x)
+    .map((x) => x.replace(' spell', ''))
+    .sort() : undefined);
 }
 
 const PreparedSpelLevelComponent = {
   template: require('./prepared-spell-level.html'),
   controller: [
     '$log',
-    '$state',
-    'filterService',
+    'characterService',
     'focusService',
     'spellService',
     'spellbookService',
-    'CLASSES',
-    PreparedSpelLevelController
+    PreparedSpelLevelController,
   ],
   bindings: {
     spellLevel: '<',
     level: '<',
-    index: '<'
-  }
-}
+    index: '<',
+  },
+};
 
 export default PreparedSpelLevelComponent;

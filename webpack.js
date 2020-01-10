@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -8,8 +10,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const {
+  GenerateSW
+} = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const VersionFile = require('webpack-version-file');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
 function getCommonConfig() {
@@ -26,21 +31,45 @@ function getCommonConfig() {
         test: /\.html$/,
         use: ['html-loader']
       }, {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      }, {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       }, {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: [{
+          loader: 'file-loader',
+          options: {
+            esModule: false,
+          }
+        }]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
       }, {
         test: /\.properties$/,
         use: ['properties-loader']
+      }, {
+        test: /\.md$/,
+        use: [{
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+          }
+        ]
       }]
     },
     plugins: [
-      new CleanWebpackPlugin(),
+      new CleanWebpackPlugin({
+        verbose: true,
+        cleanOnceBeforeBuildPatterns: ['!version.txt'],
+      }),
       new HtmlWebpackPlugin({
         template: './app/index.html',
         filename: 'index.html'
@@ -52,7 +81,7 @@ function getCommonConfig() {
       new CopyWebpackPlugin([{
         from: 'assets/CNAME'
       }, {
-        from: 'assets/404.html'
+        from: 'assets/robots.txt'
       }, {
         from: 'assets/sitemap.xml'
       }, {
@@ -78,6 +107,10 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].js'
     };
+    config.plugins.push(new GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    }));
   }
 
   if (argv.mode === 'test') {
@@ -106,25 +139,34 @@ module.exports = (env, argv) => {
         cacheGroups: {
           styles: {
             name: 'styles',
-            test: /\.css$/,
+            test: /\.((s[ac])|c)ss$/,
             chunks: 'all',
-            enforce: true
+            enforce: true,
+            // maxSize: 244000
           },
           res: {
             name: 'res',
             test: /\.json/,
-            chunks: 'all',
-            enforce: true
+            // chunks: 'all',
+            enforce: true,
+            maxSize: 244000
           },
           vendor: {
             name: 'vendor',
             test: /[\\/]node_modules[\\/]/,
-            chunks: 'all',
-            enforce: true
+            // chunks: 'all',
+            enforce: true,
+            maxSize: 244000
           }
         }
       }
     };
+    config.plugins.push(
+      new VersionFile({
+        output: './dist/version.txt',
+        verbose: true
+      })
+    );
     config.plugins.push(new FaviconsWebpackPlugin({
       logo: './assets/logo.png',
       prefix: 'icons/',
@@ -141,7 +183,7 @@ module.exports = (env, argv) => {
         windows: true
       }
     }));
-    config.plugins.push(new WorkboxPlugin.GenerateSW({
+    config.plugins.push(new GenerateSW({
       clientsClaim: true,
       skipWaiting: true
     }));
@@ -193,32 +235,11 @@ module.exports = (env, argv) => {
         "type": "image/png"
       }]
     }));
-
-    config.plugins.push(new webpack.DefinePlugin({
-      APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : false
-    }));
-
-    // if (false) {
-    //   const spells = require('./resources/spells.json');
-    //   spells.forEach((spell, index) => {
-    //     const spellUrl = spell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\]/g, '-').replace(/[’]/g, '_');
-    //     if (index > 3000 || index < 2800) {
-    //       return;
-    //     }
-    //     config.plugins.push(new HtmlWebpackPlugin({
-    //       templateParameters: {
-    //         'title': `${spell.name} - ScrollBear`,
-    //         'description': `${spell.description}`,
-    //         'url': spellUrl
-    //       },
-    //       template: 'assets/spell.ejs',
-    //       filename: 'spells/' + spellUrl + '.html',
-    //       excludeAssets: [/app.*.js/, /app.*.css/, /styles.*.js/, /styles.*.css/, /res.*.js/, /res.*.css/, /vendor.*.js/, /vendor.*.css/]
-    //     }));
-    //   });
-    //   config.plugins.push(new HtmlWebpackExcludeAssetsPlugin());
-    // }
   }
+
+  config.plugins.push(new webpack.DefinePlugin({
+    APP_VERSION: (env && env.version) ? JSON.stringify(env.version) : JSON.stringify('0.0.0')
+  }));
 
   return config;
 }

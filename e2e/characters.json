@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Тест",
+    "prepared": false,
+    "spellbook": false,
+    "class": "oracle",
+    "history": [
+      { "spontaneous": true, "level": "1", "name": "Abundant Ammunition" },
+      { "spontaneous": true, "level": "1", "name": "Abadar's Truthtelling" }
+    ],
+    "knownSpells": {
+      "1": {
+        "spells": [
+          { "name": "Abadar's Truthtelling" },
+          { "name": "Abundant Ammunition" }
+        ],
+        "cast": 2,
+        "perDay": 2,
+        "known": 2
+      }
+    }
+  },
+  {
+    "name": "CCC",
+    "prepared": true,
+    "spellbook": false,
+    "class": "cleric",
+    "history": [
+      { "prepared": true, "level": "1", "name": "Abstemiousness" },
+      { "prepared": true, "level": "1", "name": "Advanced Scurvy" }
+    ],
+    "preparedSpells": {
+      "0": {
+        "spells": [{ "name": "Bleed" }, { "name": "Create Water" }],
+        "cast": 0,
+        "perDay": 0,
+        "known": 0
+      },
+      "1": {
+        "spells": [
+          { "name": "Abstemiousness", "cast": true },
+          { "name": "Advanced Scurvy", "cast": true }
+        ],
+        "cast": 0,
+        "perDay": 0,
+        "known": 0
+      }
+    }
+  }
+]

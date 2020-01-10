@@ -31,23 +31,29 @@
   <div class="card-body">
     <table class="table table-sm">
       <tbody>
-        <tr ng-repeat="spell in $ctrl.spellLevel.spells">
+        <tr ng-repeat="spell in $ctrl.spellLevel.spells track by $index">
           <td ng-click="$ctrl.chooseSpell(spell.name)">
             <a href="#" class="text-dark">
               {{spell.name}}
+              <span ng-if="spell.domain" class="badge badge-primary ml-1" data-toggle="tooltip" data-placement="top" title="Domain">D</span>
+              <span ng-if="spell.special" class="badge badge-warning ml-1" data-toggle="tooltip" data-placement="top" title="Special">S</span>
+              <span ng-if="spell.metamagic" class="badge badge-info ml-1" data-toggle="tooltip" data-placement="top" title="Metamagic">M{{$ctrl.filteredLabels(spell.metamagicLabel).length?':':''}} {{$ctrl.filteredLabels(spell.metamagicLabel) | array}}</span>
             </a>
             <!-- <div><small class="text-info">{{spell.duration}}</small>; <small class="text-info">{{spell.savingThrow}}</small></div> -->
           </td>
           <td class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-click="$ctrl.delete($ctrl.level, $index)">
-              <i class="fas fa-trash text-danger"></i>
-              <div class="ripple-container"></div>
+            <a href="#" class="ml-2 mr-3 text-danger" ng-click="$ctrl.delete($ctrl.level, $index)">
+              <i class="fas fa-trash push-shadow"></i>
             </a>
           </td>
-          <td ng-if="$ctrl.level!='0'" class="float-right">
-            <a href="#" class="ml-2 mr-3" ng-disabled="spell.cast" ng-click="$ctrl.cast($ctrl.level, $index)">
-              <i class="fas fa-scroll" ng-class="{'text-muted': spell.cast, 'text-success': !spell.cast}"></i>
-              <div class="ripple-container"></div>
+          <td ng-if="!spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3 text-success" ng-click="$ctrl.cast($ctrl.level, $index)">
+              <i class="fas fa-scroll push-shadow"></i>
+            </a>
+          </td>
+          <td ng-if="spell.cast && $ctrl.level!='0'" class="float-right">
+            <a href="#" class="ml-2 mr-3 text-muted" ng-click="$ctrl.restore($ctrl.level, $index)">
+              <i class="fas fa-undo-alt push-shadow"></i>
             </a>
           </td>
         </tr>

@@ -6,43 +6,43 @@ async function format() {
   try {
     spells.forEach((spell) => {
       let desc = spell.description;
-      const reg = /\[[^\]]+\]\(([^\)](?!all-spells))+\)/g;
+      const reg = /\[[^\]]+\]\([^\)]+\)/g;
       desc = desc.replace(reg, (match) => {
+        if (match.includes('paizo.com'))
+          return match;
         const start = match.indexOf('[');
         const end = match.indexOf(']');
         return match.substring(start + 1, end);
       });
-      const reg2 = /\[[^\]]+\]\([^\)]+all-spells[^\)]+\)/g;
-      let isSpell = false;
-      const newDesc = desc.replace(reg2, (match) => {
-        let start = match.indexOf('[');
-        let end = match.indexOf(']');
-        let name = match.substring(start + 1, end);
-        start = match.indexOf('(');
-        end = match.indexOf(')');
-        let purl = match.substring(start + 1, end);
-        name = name.replace(/_/g, '');
-        let url = undefined;
-        // console.log(name);
-        spells.forEach((newSpell) => {
-          if (url) {
-            return;
-          }
-          const newName = newSpell.name.split(',').reduce((acc, part) => part + ' ' + acc, '').trim();
-          if (newName.toUpperCase() == name.trim().toUpperCase()) {
-            url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
-          }
-        });
-        if (!url)
-          url = name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
-        return `[${name}](/spells/${url})`;
+      const regItalic = /_[^_]+_/g;
+      let descChanged = false;
+      desc = desc.replace(regItalic, (match) => {
+        let url;
+        const label = match.substring(1, match.length - 1).trim();
+        if (spell.name.toUpperCase() != label.toUpperCase()) {
+          spells.forEach((newSpell) => {
+            const newName = newSpell.name.split(',').reduce((acc, part) => part + ' ' + acc, '').trim();
+            if (!url && newSpell.name != spell.name && newName.toUpperCase() == label.toUpperCase()) {
+              url = newSpell.name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
+            }
+          });
+        }
+        if (url) {
+          descChanged = true;
+          return `[${match}](/spells/${url})`;
+        }
+        return match;
       });
-      desc = newDesc;
-      const reg3 = /_\[[^\]]+\]\([^\)]+\)_/g;
-      desc = desc.replace(reg3, (match) => {
-        return match.substring(1, match.length - 1);
-      });
+      if (spell.name == 'Suggestion, Mass') {
+        console.log(desc);
+      }
+
+      // const reg3 = /_\[[^\]]+\]\([^\)]+\)_/g;
+      // desc = desc.replace(reg3, (match) => {
+      //   return match.substring(1, match.length - 1);
+      // });
       spell.description = desc;
+
       if (spell.levels)
         spell.levels = spell.levels.split(',').map(function(level) {
           return level
@@ -52,6 +52,8 @@ async function format() {
             .replace('wizard/sorcerer', 'sorcerer/wizard')
             .trim();
         });
+      if (spell.source)
+        spell.source = spell.source.replace('\n)',')');
       if (spell.descripters)
         spell.descripters = spell.descripters.map(function(descripter) {
           return descripter
@@ -86,7 +88,13 @@ async function format() {
       }
       return 0;
     });
-    fs.writeFileSync('resources/spells.json', JSON.stringify(spells, function replacer(key, value) {
+    const unique = ["Status, Greater"];
+    const resultSpells = spells.filter((spell) => {
+      const result = !unique.includes(spell.name);
+      unique.push(spell.name);
+      return result;
+    });
+    fs.writeFileSync('resources/spells.json', JSON.stringify(resultSpells, function replacer(key, value) {
       if (key === 'url') {
         return undefined;
       }

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://scrollbear.com/sitemap.xml

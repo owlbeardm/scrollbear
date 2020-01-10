@@ -1,35 +1,58 @@
-"use strict";
-
-function SpellListController($log, $state, filterService, spellService, CLASSES) {
-  $log.debug('SpellController create');
+function SpellListController(
+  $log,
+  $state,
+  $rootScope,
+  $scope,
+  $timeout,
+  filterService,
+  spellService,
+  CLASSES,
+  $window,
+  $document,
+) {
+  $log.debug('SpellListController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("SpellListController init");
+  ctrl.$onInit = () => {
+    $log.debug('SpellListController init');
     ctrl.classesC = CLASSES;
-  }
+  };
 
-  ctrl.chooseSpell = function(spell) {
+  ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell.name);
-  }
+  };
 
-  ctrl.isFav = function(spell) {
-    return filterService.isFav(spell);
-  }
+  ctrl.isFav = (spell) => filterService.isFav(spell);
 
-  ctrl.changeFav = function(spell) {
+  ctrl.changeFav = (spell) => {
     filterService.changeFav(spell);
-  }
+  };
 
+  ctrl.click = () => {
+    const top = $document.scrollTop(); // angular.element('#heading' + name).offset().top;
+    $timeout($document.scrollTop(top));
+  };
 }
 
 const SpellListComponent = {
   template: require('./spell-list.html'),
-  controller: ['$log', '$state', 'filterService', 'spellService', 'CLASSES', SpellListController],
+  controller: [
+    '$log',
+    '$state',
+    '$rootScope',
+    '$scope',
+    '$timeout',
+    'filterService',
+    'spellService',
+    'CLASSES',
+    '$window',
+    '$document',
+    SpellListController,
+  ],
   bindings: {
     spells: '<',
-    className: '<'
-  }
-}
+    className: '<',
+  },
+};
 
 export default SpellListComponent;

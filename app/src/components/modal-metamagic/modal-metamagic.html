@@ -1,0 +1,76 @@
+<div class="modal fade" id="modalMetamagic" tabindex="-1" role="dialog" aria-labelledby="modalSpellLabel" aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalSpellLabel">
+          Add with metamagic
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fas fa-times"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="container">
+
+          <div class="form-group ">
+            <label class="control-label" for="levelSelect">Level increase:</label>
+            <select ng-change="$ctrl.refresh()" class="form-control selectpicker mb-3" name="levelSelect" id="levelSelect" ng-model="$ctrl.levelSelected" ng-options="value as value for (idx , value) in $ctrl.levelIncreases"></select>
+          </div>
+
+          <div class="form-group pb-1 mt-1" ng-repeat="label in $ctrl.labels track by $index">
+            <div class="row">
+              <div class="col">
+                <select ng-change="$ctrl.refresh()" class="form-control selectpicker" name="levelSelect" id="levelSelect" data-live-search="true" ng-model="$ctrl.labels[$index]" ng-options="value.toLowerCase() as value for value in $ctrl.castingTimes"></select>
+              </div>
+              <div class="col-auto">
+                <button ng-if="!$ctrl.deleteMode" class="btn btn btn-danger mt-2 ng-scope" ng-click="$ctrl.delete($index)"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2 form-group">
+            <button class='btn btn-primary' ng-click='$ctrl.addLabel()'>add metamagic label</button>
+          </div>
+        </form>
+        <div class="accordion border border-primary" id="accordionExample">
+          <div class="card card-collapse">
+            <div class="card-header" role="tab" id="heading{{$index}}">
+              <h5 class="mb-0 text-primary">
+                <a>
+                  Level {{$ctrl.initialLevel/1 + $ctrl.levelSelected/1}}
+                  <i class="float-right fas fa-chevron-down expanded-flip"></i>
+                </a>
+              </h5>
+            </div>
+
+            <div class="collapse show">
+              <div class="card-body">
+                <table class="table table-sm" style="">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="text-dark">
+                          {{$ctrl.spellName}}
+                          <span class="badge badge-info ml-1" data-toggle="tooltip" data-placement="top" title="Metamagic">M{{$ctrl.filteredLabels().length?':':''}} {{$ctrl.filteredLabels() | array}}</span>
+                        </a>
+                      </td>
+                      <td class="float-right">
+                        <a class='text-success'>
+                          <i class="fas fa-scroll mt-2 mb-2 ml-4 mr-4 push-shadow"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="$ctrl.addSpell()">Add</button>
+        <button type="button" class="btn" data-dismiss="modal">cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

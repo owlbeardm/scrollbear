@@ -1,0 +1,23 @@
+<div id="list-new-{{$ctrl.collapseName}}" style="height:{{$ctrl.elementHeight}}px; padding-top:{{$ctrl.start*43}}px">
+  <table class="table table-sm" style="">
+    <tbody>
+      <tr ng-repeat="spell in $ctrl.spellsL track by $index">
+        <td  ng-click="$ctrl.chooseSpell(spell)">
+          <a id="chooseSpell" href="#" class="text-dark">
+            {{spell.name}}
+          </a>
+        </td>
+        <td class="float-right">
+          <a href="#" class="" ng-if="$ctrl.favL[$index]" ng-class="{'text-primary': $ctrl.favL[$index], 'text-muted': !$ctrl.favL[$index]}" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.favL[$index], 'far': !$ctrl.favL[$index]}"></i>
+            <div class="ripple-container"></div>
+          </a>
+          <a href="#" class="" ng-if="!$ctrl.favL[$index]" ng-class="{'text-primary': $ctrl.favL[$index], 'text-muted': !$ctrl.favL[$index]}" ng-click="$ctrl.changeFav(spell)">
+            <i class="fa-star mt-2 mb-2 ml-4 mr-4 push-shadow" ng-class="{'fas': $ctrl.favL[$index], 'far': !$ctrl.favL[$index]}"></i>
+            <div class="ripple-container"></div>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

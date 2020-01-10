@@ -1,5 +1,3 @@
-import 'angular';
+const testsContext = require.context('.', true, /\.spec$/);
 
-const testsContext = require.context(".", true, /\.spec$/)
-
-testsContext.keys().forEach(testsContext)
+testsContext.keys().forEach(testsContext);
