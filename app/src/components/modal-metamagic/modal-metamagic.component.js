@@ -55,7 +55,8 @@ function ModalMetamagicController($log, $rootScope, spellbookService, $timeout, 
       metamagic: true,
       metamagicLabel: ctrl.labels,
     };
-    spellbookService.addSpell($rootScope.spell, spellToAdd, undefined, Number.parseInt(ctrl.initialLevel, 10) + Number.parseInt(ctrl.levelSelected, 10));
+    spellbookService.addSpell($rootScope.spell, spellToAdd, undefined,
+      Number.parseInt(ctrl.initialLevel, 10) + Number.parseInt(ctrl.levelSelected, 10));
   };
 }
 
