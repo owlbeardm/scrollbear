@@ -2,8 +2,8 @@
   <table class="table table-sm" style="">
     <tbody>
       <tr ng-repeat="spell in $ctrl.spellsL track by $index">
-        <td ng-click="$ctrl.chooseSpell(spell)">
-          <a href="#" class="text-dark">
+        <td  ng-click="$ctrl.chooseSpell(spell)">
+          <a id="chooseSpell" href="#" class="text-dark">
             {{spell.name}}
           </a>
         </td>

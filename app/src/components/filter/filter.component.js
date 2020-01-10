@@ -1,15 +1,20 @@
-"use strict";
-
-function FilterController(notificationService, filterService, $log, $window, $timeout, SCHOOLS, SUBSCHOOLS, CASTING_TIME, SOURCE_BOOK) {
-  $log.debug('FilterController create');
+function FilterController(
+  notificationService,
+  filterService,
+  $log,
+  $window,
+  $timeout,
+  SCHOOLS,
+  SUBSCHOOLS,
+  CASTING_TIME,
+  SOURCE_BOOK,
+) {
   const ctrl = this;
-  const localStorage = $window['localStorage'];
-  const FAV_ONLY = "FAV_ONLY";
+  $log.debug('FilterController create');
 
-  ctrl.$onInit = function() {
+  ctrl.$onInit = () => {
     $log.debug('FilterController init ');
     ctrl.onlyClassSpells = false;
-    const favOnly = JSON.parse(localStorage.getItem(FAV_ONLY));
     ctrl.favOnly = filterService.favOnly;
     ctrl.sourceBookSelected = filterService.sourceBooks;
     ctrl.schools = SCHOOLS;
@@ -24,62 +29,62 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     filterService.castingTime = ctrl.castingTimeSelected;
     ctrl.search();
     $timeout(() => {
-      angular.element('.selectpicker').selectpicker('refresh')
+      angular.element('.selectpicker').selectpicker('refresh');
     });
-  }
+  };
 
-  ctrl.search = function() {
-    $log.debug("FilterController ctrl.search", ctrl.filter);
+  ctrl.search = () => {
+    $log.debug('FilterController ctrl.search', ctrl.filter);
     ctrl.filters = [];
-    if (ctrl.schoolSelected != 'any') {
+    if (ctrl.schoolSelected !== 'any') {
       ctrl.filters.push(SCHOOLS[ctrl.schoolSelected].name);
     }
-    if (ctrl.subSchoolSelected != 'any') {
+    if (ctrl.subSchoolSelected !== 'any') {
       ctrl.filters.push(SUBSCHOOLS[ctrl.subSchoolSelected].name);
     }
-    if (ctrl.castingTimeSelected != 'any') {
+    if (ctrl.castingTimeSelected !== 'any') {
       ctrl.filters.push(CASTING_TIME[ctrl.castingTimeSelected].name);
     }
     if (ctrl.sourceBookSelected.length) {
-      ctrl.filters.push(`${ctrl.sourceBookSelected.length} source${ctrl.sourceBookSelected.length>1?'s':''}`);
+      ctrl.filters.push(`${ctrl.sourceBookSelected.length} source${ctrl.sourceBookSelected.length > 1 ? 's' : ''}`);
     }
     filterService.filterText = ctrl.filter;
     notificationService.notify(notificationService.FILTER_CHANGED, undefined);
-  }
+  };
 
-  ctrl.setSchool = function() {
+  ctrl.setSchool = () => {
     filterService.school = ctrl.schoolSelected;
     ctrl.subSchools = SCHOOLS[ctrl.schoolSelected].subschool;
     ctrl.subSchoolSelected = 'any';
     filterService.subSchool = ctrl.subSchoolSelected;
     ctrl.search();
     $timeout(() => {
-      angular.element('.selectpicker').selectpicker('refresh')
+      angular.element('.selectpicker').selectpicker('refresh');
     });
-  }
+  };
 
-  ctrl.setSubSchool = function() {
+  ctrl.setSubSchool = () => {
     filterService.subSchool = ctrl.subSchoolSelected;
     ctrl.search();
-  }
+  };
 
-  ctrl.setCastingTime = function() {
+  ctrl.setCastingTime = () => {
     filterService.castingTime = ctrl.castingTimeSelected;
     ctrl.search();
-  }
+  };
 
-  ctrl.setSourceBook = function() {
+  ctrl.setSourceBook = () => {
     filterService.setSourceBook(ctrl.sourceBookSelected);
     ctrl.search();
-  }
+  };
 
-  ctrl.setFavOnly = function() {
+  ctrl.setFavOnly = () => {
     filterService.setFavOnly(ctrl.favOnly);
     ctrl.search();
-  }
+  };
 
-  ctrl.reset = function() {
-    ctrl.filter = "";
+  ctrl.reset = () => {
+    ctrl.filter = '';
     ctrl.schoolSelected = 'any';
     filterService.school = ctrl.schoolSelected;
     ctrl.subSchools = undefined;
@@ -89,25 +94,33 @@ function FilterController(notificationService, filterService, $log, $window, $ti
     filterService.castingTime = ctrl.schoolSelected;
     // ctrl.search();
     $timeout(() => {
-      angular.element('.selectpicker').selectpicker('refresh')
+      angular.element('.selectpicker').selectpicker('refresh');
     });
+  };
 
-  }
-
-  ctrl.onlyClassSpellsChanges = function() {
-    notificationService.notify(notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED, !ctrl.onlyClassSpells);
-  }
-
+  ctrl.onlyClassSpellsChanges = () => {
+    notificationService.notify(notificationService.FILTER_ONLY_CLASS_SPELLS_CHANGED,
+      !ctrl.onlyClassSpells);
+  };
 }
 
 const FilterComponent = {
   template: require('./filter.html'),
   controller: [
-    'notificationService', 'filterService', '$log', '$window', '$timeout', 'SCHOOLS', 'SUBSCHOOLS', 'CASTING_TIME', 'SOURCE_BOOK', FilterController
+    'notificationService',
+    'filterService',
+    '$log',
+    '$window',
+    '$timeout',
+    'SCHOOLS',
+    'SUBSCHOOLS',
+    'CASTING_TIME',
+    'SOURCE_BOOK',
+    FilterController,
   ],
   bindings: {
-    onlyClassSpellsEnabled: '<'
-  }
-}
+    onlyClassSpellsEnabled: '<',
+  },
+};
 
 export default FilterComponent;

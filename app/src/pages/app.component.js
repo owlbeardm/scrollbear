@@ -1,4 +1,3 @@
-"use strict";
 
 function AppController($log) {
   const ctrl = this;
@@ -18,7 +17,7 @@ function AppController($log) {
 
 const AppComponent = {
   template: require('./app.html'),
-  controller: ['$log', AppController]
+  controller: ['$log', AppController],
 };
 
 export default AppComponent;

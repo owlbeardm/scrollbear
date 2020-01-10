@@ -1,18 +1,18 @@
-"use strict";
-
 const aboutMd = require('./about.md');
 
 function AboutController($log, $rootScope, $state) {
   $log.debug('AboutController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("AboutController init");
+  ctrl.$onInit = () => {
+    $log.debug('AboutController init');
     ctrl.about = `<div>${aboutMd}</div>`;
     if (window.performance) {
-      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+      ga('send', 'timing', 'Transition', 'onInit',
+        Math.round(performance.now()) - $rootScope.onStartTime,
+        $state.current.name);
     }
-  }
+  };
 }
 
 const AboutComponent = {
@@ -21,8 +21,8 @@ const AboutComponent = {
     '$log',
     '$rootScope',
     '$state',
-    AboutController
-  ]
-}
+    AboutController,
+  ],
+};
 
 export default AboutComponent;
