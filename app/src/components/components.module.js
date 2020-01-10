@@ -26,6 +26,8 @@ import SidebarComponent from './sidebar/sidebar.component';
 
 import YesNoModalComponent from './yes-no-modal/yes-no-modal.component';
 
+import ModalMetamagicComponent from './modal-metamagic/modal-metamagic.component';
+
 const appComponents = angular.module('app.components', []);
 appComponents.component('history', History);
 appComponents.component('characterItem', CharacterItem);
@@ -41,6 +43,4 @@ appComponents.component('filter', FilterComponent);
 appComponents.component('sidebarToggle', SidebarToggleComponent);
 appComponents.component('sidebar', SidebarComponent);
 appComponents.component('yesNoModal', YesNoModalComponent);
-
-import ModalMetamagicComponent from './modal-metamagic/modal-metamagic.component.js';
 appComponents.component('modalMetamagic', ModalMetamagicComponent);

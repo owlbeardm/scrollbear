@@ -2,17 +2,15 @@
 function AppController($log) {
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("AppController init");
+  ctrl.$onInit = () => {
+    $log.debug('AppController init');
+  };
 
-  }
-
-  ctrl.show = function() {
-    const popup = angular.element("#modalMetamagic");
-    $log.debug("AppController metamagic", popup);
+  ctrl.show = () => {
+    const popup = angular.element('#modalMetamagic');
+    $log.debug('AppController metamagic', popup);
     popup.modal('show');
-  }
-
+  };
 }
 
 const AppComponent = {
