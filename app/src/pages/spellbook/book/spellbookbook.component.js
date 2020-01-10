@@ -3,6 +3,7 @@ function SpellbookBookController(
   $rootScope,
   $state,
   characterService,
+  spellbookService,
   spellService,
 ) {
   $log.debug('SpellbookBookController create');
@@ -12,37 +13,10 @@ function SpellbookBookController(
     ctrl.total = Object.entries(ctrl.book).reduce((total, pair) => total + (pair[1].length), 0);
   }
 
+
   function addSpell(lvlToAdd, spell, spellToAdd) {
     $log.debug('addSpell 1', spellToAdd, spell);
-    const level = lvlToAdd;
-    if (!characterService.getSelectedCharacter().prepared) {
-      if (!characterService.getSelectedCharacter().knownSpells) {
-        characterService.getSelectedCharacter().knownSpells = {};
-      }
-      if (!characterService.getSelectedCharacter().knownSpells[level]) {
-        characterService.getSelectedCharacter().knownSpells[level] = {
-          spells: [],
-        };
-      }
-      characterService.getSelectedCharacter().knownSpells[level].spells.push(spellToAdd);
-    } else {
-      if (!characterService.getSelectedCharacter().preparedSpells) {
-        characterService.getSelectedCharacter().preparedSpells = {};
-      }
-      if (!characterService.getSelectedCharacter().preparedSpells[level]) {
-        characterService.getSelectedCharacter().preparedSpells[level] = {
-          spells: [],
-        };
-      }
-      characterService.getSelectedCharacter().preparedSpells[level].spells.push(spellToAdd);
-    }
-    characterService.persist();
-    $log.debug(characterService.getSelectedCharacter());
-    if (!characterService.getSelectedCharacter().prepared) {
-      ga('send', 'event', 'known_add', spellToAdd.name, characterService.getSelectedCharacter().class);
-    } else {
-      ga('send', 'event', 'prepared_add', spellToAdd.name, characterService.getSelectedCharacter().class);
-    }
+    spellbookService.addSpell(spell, spellToAdd, undefined, lvlToAdd);
   }
 
   ctrl.$onInit = () => {
@@ -135,6 +109,7 @@ const SpellbookBookComponent = {
     '$rootScope',
     '$state',
     'characterService',
+    'spellbookService',
     'spellService',
     SpellbookBookController,
   ],

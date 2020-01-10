@@ -88,20 +88,22 @@ angular.module('app.services').factory('spellbookService', [
 
     SpellbookService.addSpell = (spell, spellToAdd, classSelected, lvl) => {
       $log.debug('addSpell 1', spellToAdd, spell);
-      let level = spell.levels.reduce((accumulator, currentValue) => {
-        if (CLASSES[classSelected].search && CLASSES[classSelected].search.length) {
-          if (CLASSES[classSelected].search.reduce((acc, curr) => acc || currentValue.search(curr) !== -1, false)) {
-            const curLevel = currentValue.substring(currentValue.length - 1);
-            if (!accumulator || accumulator > curLevel) {
-              return curLevel;
+      let level = lvl;
+      if (classSelected) {
+        const classLevel = spell.levels.reduce((accumulator, currentValue) => {
+          if (CLASSES[classSelected].search && CLASSES[classSelected].search.length) {
+            if (CLASSES[classSelected].search.reduce((acc, curr) => acc || currentValue.search(curr) !== -1, false)) {
+              const curLevel = currentValue.substring(currentValue.length - 1);
+              if (!accumulator || accumulator > curLevel) {
+                return curLevel;
+              }
             }
           }
+          return accumulator;
+        }, undefined);
+        if (classLevel) {
+          level = classLevel;
         }
-        return accumulator;
-      }, undefined);
-      $log.debug('addSpell 2', lvl, level, spellToAdd);
-      if (!level) {
-        level = lvl;
       }
       if (!characterService.getSelectedCharacter().prepared) {
         if (!characterService.getSelectedCharacter().knownSpells) {
