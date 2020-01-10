@@ -1,8 +1,9 @@
 angular.module('app.services').factory('spellbookService', [
   '$log',
+  '$rootScope',
   'characterService',
   'CLASSES',
-  ($log, characterService, CLASSES) => {
+  ($log, $rootScope, characterService, CLASSES) => {
     const SpellbookService = {};
     $log.debug('SpellbookService started');
 
@@ -133,6 +134,32 @@ angular.module('app.services').factory('spellbookService', [
       } else {
         ga('send', 'event', 'prepared_add', spellToAdd.name, characterService.getSelectedCharacter().class);
       }
+    };
+
+    SpellbookService.addMetamagic = (spell, classSelected, lvl) => {
+      let level = lvl;
+      if (classSelected) {
+        const classLevel = spell.levels.reduce((accumulator, currentValue) => {
+          if (CLASSES[classSelected].search && CLASSES[classSelected].search.length) {
+            if (CLASSES[classSelected].search.reduce((acc, curr) => acc || currentValue.search(curr) !== -1, false)) {
+              const curLevel = currentValue.substring(currentValue.length - 1);
+              if (!accumulator || accumulator > curLevel) {
+                return curLevel;
+              }
+            }
+          }
+          return accumulator;
+        }, undefined);
+        if (classLevel) {
+          level = classLevel;
+        }
+      }
+      $rootScope.spell = spell;
+      $rootScope.spellLevel = level;
+
+      const popup = angular.element('#modalMetamagic');
+      $log.debug('AppController metamagic', popup);
+      popup.modal('show');
     };
 
     return SpellbookService;

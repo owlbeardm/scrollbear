@@ -48,6 +48,11 @@ function KnownSpelLevelController(
   ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell.name);
   };
+
+  ctrl.filteredLabels = (labels) => labels
+    .filter((x) => !!x)
+    .map((x) => x.replace(' spell', ''))
+    .sort();
 }
 
 const KnownSpelLevelComponent = {

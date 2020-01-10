@@ -64,6 +64,11 @@ function PreparedSpelLevelController(
   ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell);
   };
+
+  ctrl.filteredLabels = (labels) => labels
+    .filter((x) => !!x)
+    .map((x) => x.replace(' spell', ''))
+    .sort();
 }
 
 const PreparedSpelLevelComponent = {

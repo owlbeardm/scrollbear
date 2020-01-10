@@ -19,15 +19,17 @@ angular.module('app.services').factory('characterService', [
 
     Internal.selectedCharacter = JSON.parse(localStorage.getItem(SELECTED_CHARACTER))
       ? JSON.parse(localStorage.getItem(SELECTED_CHARACTER)) : undefined;
-    //
-    // On Init Finish
-    //
-    migrationService.migrateCharacters(Internal.characters);
 
     // Internal functions
     Internal.saveCharactersToStore = () => {
       localStorage.setItem(CHARACTERS, JSON.stringify(Internal.characters));
     };
+
+    //
+    // On Init Finish
+    //
+    migrationService.migrateCharacters(Internal.characters);
+    Internal.saveCharactersToStore();
 
     CharacterService.getCharacters = () => Internal.characters;
 
