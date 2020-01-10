@@ -78,7 +78,7 @@ describe('characters service', () => {
     expect(store.CHARACTERS).toEqual(oldStore);
   });
 
-  it('deletes character by id', () => {
+  xit('deletes character by id', () => {
     const character = { name: 'Character' };
     const character2 = { name: 'Character2' };
     const character3 = { name: 'Character3' };
