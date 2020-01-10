@@ -1,32 +1,28 @@
-"use strict";
 
 describe('Components', () => {
   describe('CharacterItemComponent', () => {
-    let $componentController, $provide, $log, $state, spellbookService, CLASSES;
+    let $componentController; let $log; let $state; let characterService; let CLASSES;
     let controller;
 
     beforeEach(() => {
       angular.mock.module('ui.router');
       angular.mock.module('app.components');
       angular.mock.module('app.constants');
+      characterService = {};
       angular.mock.module(($provide) => {
-        $provide.service('spellbookService', () => {
-          return spellbookService;
-        });
+        $provide.service('characterService', () => characterService);
       });
-      spellbookService = {};
       inject((_$componentController_, _$log_, _$state_, _CLASSES_) => {
         $componentController = _$componentController_;
         $log = _$log_;
         $state = _$state_;
         CLASSES = _CLASSES_;
       });
-      $log, $state, spellbookService, CLASSES;
       controller = $componentController('characterItem', {
-        $log: $log,
-        $state: $state,
-        spellbookService: spellbookService,
-        CLASSES: CLASSES
+        $log,
+        $state,
+        characterService,
+        CLASSES,
       });
     });
 
@@ -38,7 +34,7 @@ describe('Components', () => {
       describe('$onInit', () => {
         beforeEach(() => {
           controller.characters = [];
-          spellbookService.selectedCharacter = {};
+          characterService.selectedCharacter = {};
         });
 
         it('should init fields', () => {
@@ -50,22 +46,21 @@ describe('Components', () => {
       });
 
       describe('delete', () => {
-
         beforeEach(() => {
-          spellbookService.deleteCharacter = function() {};
+          characterService.deleteCharacter = () => {};
         });
 
         it('exists', () => {
           expect(controller.delete).toBeDefined();
         });
 
-        it('should use delete method of spellbookService', () => {
+        it('should use delete method of characterService', () => {
           const id = 'id';
           controller.id = id;
-          spyOn(spellbookService, 'deleteCharacter');
+          spyOn(characterService, 'deleteCharacter');
           controller.delete();
-          expect(spellbookService.deleteCharacter).toHaveBeenCalled();
-          expect(spellbookService.deleteCharacter).toHaveBeenCalledWith(id);
+          expect(characterService.deleteCharacter).toHaveBeenCalled();
+          expect(characterService.deleteCharacter).toHaveBeenCalledWith(id);
         });
 
         it('should change delete mode', () => {
@@ -79,7 +74,7 @@ describe('Components', () => {
 
         beforeEach(() => {
           character = {};
-          spellbookService.selectCharacter = function() {};
+          characterService.selectCharacter = () => {};
         });
 
         it('exists', () => {
@@ -87,10 +82,10 @@ describe('Components', () => {
         });
 
         it('should select character', () => {
-          spyOn(spellbookService, 'selectCharacter');
+          spyOn(characterService, 'selectCharacter');
           controller.selectCharacter(character);
-          expect(spellbookService.selectCharacter).toHaveBeenCalled();
-          expect(spellbookService.selectCharacter).toHaveBeenCalledWith(character);
+          expect(characterService.selectCharacter).toHaveBeenCalled();
+          expect(characterService.selectCharacter).toHaveBeenCalledWith(character);
         });
 
         it('should initiate trasition prepared', () => {
@@ -131,6 +126,6 @@ describe('Components', () => {
           expect(controller.deleteMode).toBe(false);
         });
       });
-    })
+    });
   });
 });
