@@ -27,6 +27,21 @@ angular.module('app.services').factory('migrationService', [
         if (!character.history) {
           character.history = [];
         }
+        if (character.preparedSpells) {
+          Object.entries(character.preparedSpells).forEach(([key]) => {
+            if (!Number.isInteger(Number.parseInt(key, 10))) {
+              delete character.preparedSpells[key];
+            }
+          });
+        }
+        if (character.knownSpells) {
+          Object.entries(character.knownSpells).forEach(([key]) => {
+            if (!Number.isInteger(Number.parseInt(key, 10))) {
+              delete character.preparedSpells[key];
+            }
+          });
+        }
+        $log.debug('Characters', character);
       });
     };
 

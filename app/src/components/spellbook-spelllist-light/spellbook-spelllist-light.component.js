@@ -102,10 +102,9 @@ function SpellbookSpelllistLightController(
   ctrl.isSpellPrepared = (spellName) => {
     if (!characterService.getSelectedCharacter().prepared) {
       if (characterService.getSelectedCharacter().knownSpells) {
-        const present = Object.entries(characterService.getSelectedCharacter().knownSpells)
-          .reduce((acc, curr) => acc || curr[1].spells
-            .reduce((acc2, curr2) => acc2 || (curr2.name === spellName), false),
-          false);
+        const present = characterService.getSelectedCharacter().knownSpells[ctrl.lvl]
+                       && characterService.getSelectedCharacter().knownSpells[ctrl.lvl].spells
+                         .reduce((acc2, curr2) => acc2 || (curr2.name === spellName), false);
         return present;
       }
     } else if (characterService.getSelectedCharacter().preparedSpells) {
@@ -174,33 +173,9 @@ function SpellbookSpelllistLightController(
     addSpell(spell, spellToAdd);
   };
 
-  /* ctrl.addSpellAsMetamagic = (spell) => {
-    $log.debug('ctrl.addSpellAsMetamagic', spell);
-    const spellToAdd = {
-      name: spell.name,
-      metamagic: true,
-    };
-    const modal = $uibModal.open({
-      // animation: false,
-      component: 'yesNoModal',
-      backdropClass: 'fade show',
-      windowClass: 'fade show',
-      // windowTopClass: '',
-      size: 'lg',
-      resolve: {
-        noLabel: () => 'asd',
-        title: () => 'asd',
-        yesLabel: () => 'asd',
-        modalText: () => 'asd',
-      },
-    });
-    modal.result.then(() => {
-      $log.debug('modal result');
-    }, () => {
-      $log.debug('modal second');
-    });
-    // addSpell(lvl, spell, spellToAdd);
-  }; */
+  ctrl.addSpellAsMetamagic = (spell) => {
+    spellbookService.addMetamagic(spell, ctrl.classSelected, ctrl.lvl);
+  };
 }
 
 const SpellbookSpelllistLightComponent = {
