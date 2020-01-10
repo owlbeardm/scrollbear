@@ -1,50 +1,45 @@
-"use strict";
-
-function CharacterItemController($log, $state, spellbookService, CLASSES) {
+function CharacterItemController($log, $state, characterService, CLASSES) {
   $log.debug('CharacterItemController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("CharacterItemController init");
+  ctrl.$onInit = () => {
+    $log.debug('CharacterItemController init');
     ctrl.classes = CLASSES;
-  }
+  };
 
-  ctrl.delete = function() {
-    spellbookService.deleteCharacter(ctrl.id);
+  ctrl.delete = () => {
+    characterService.deleteCharacter(ctrl.id);
     ctrl.deleteMode = false;
-  }
+  };
 
-  ctrl.characterSelected = function() {
-    return ctrl.characters.indexOf(spellbookService.selectedCharacter);
-  }
+  ctrl.characterSelected = () => ctrl.characters.indexOf(characterService.getSelectedCharacter());
 
-  ctrl.selectCharacter = function(character) {
-    spellbookService.selectCharacter(character);
+  ctrl.selectCharacter = (character) => {
+    characterService.selectCharacter(character);
     if (character.prepared) {
       $state.go('spellbook.prepared');
     } else {
       $state.go('spellbook.known');
     }
-  }
+  };
 
-  ctrl.startDelete = function() {
+  ctrl.startDelete = () => {
     ctrl.deleteMode = true;
-  }
+  };
 
-  ctrl.cancelDelete = function() {
+  ctrl.cancelDelete = () => {
     ctrl.deleteMode = false;
-  }
-
+  };
 }
 
 const CharacterItemComponent = {
   template: require('./character-item.html'),
-  controller: ['$log', '$state', 'spellbookService', 'CLASSES', CharacterItemController],
+  controller: ['$log', '$state', 'characterService', 'CLASSES', CharacterItemController],
   bindings: {
     character: '<',
     selected: '<',
-    id: '<'
-  }
-}
+    id: '<',
+  },
+};
 
 export default CharacterItemComponent;

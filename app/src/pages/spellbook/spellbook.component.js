@@ -1,26 +1,21 @@
-"use strict";
-
-function SpellbookController($log, spellbookService) {
+function SpellbookController($log, characterService) {
   $log.debug('SpellbookController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("SpellbookController init", spellbookService.selectedCharacter);
-  }
+  ctrl.$onInit = () => {
+    $log.debug('SpellbookController init', characterService.getSelectedCharacter());
+  };
 
-  ctrl.selectedCharacter = function() {
-    // $log.debug("SpellbookController ctrl.selectedCharacter");
-    return spellbookService.selectedCharacter;
-  }
+  ctrl.selectedCharacter = () => characterService.getSelectedCharacter();
 }
 
 const SpellbookComponent = {
   template: require('./spellbook.html'),
   controller: [
     '$log',
-    'spellbookService',
-    SpellbookController
-  ]
-}
+    'characterService',
+    SpellbookController,
+  ],
+};
 
 export default SpellbookComponent;

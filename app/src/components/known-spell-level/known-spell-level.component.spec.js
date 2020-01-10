@@ -1,17 +1,20 @@
-"use strict";
 
 describe('KnownSpelLevelComponent', () => {
-
-  let $componentController, $rootScope, $provide;
-  let $log, $state, CLASSES;
-  let spellService, filterService, focusService, spellbookService;
+  let $componentController;
+  let $log;
+  let $state;
+  let CLASSES;
+  let spellService;
+  let filterService;
+  let focusService;
+  let spellbookService;
   let controller;
 
   beforeAll(() => {
     filterService = {};
     focusService = {};
     spellService = {};
-    spellService.showSpell = (spell)=>{expect(typeof spell).toEqual('string');};
+    spellService.showSpell = (spell) => { expect(typeof spell).toEqual('string'); };
     spellbookService = {};
   });
 
@@ -22,36 +25,27 @@ describe('KnownSpelLevelComponent', () => {
     angular.mock.module('app.constants');
 
     angular.mock.module(($provide) => {
-      $provide.service('filterService', () => {
-        return filterService;
-      });
-      $provide.service('focusService', () => {
-        return focusService;
-      });
-      $provide.service('spellService', () => {
-        return spellService;
-      });
-      $provide.service('spellbookService', () => {
-        return spellbookService;
-      });
+      $provide.service('filterService', () => filterService);
+      $provide.service('focusService', () => focusService);
+      $provide.service('spellService', () => spellService);
+      $provide.service('spellbookService', () => spellbookService);
     });
 
-    inject((_$componentController_, _$rootScope_, _$log_, _$state_, _CLASSES_) => {
+    inject((_$componentController_, _$log_, _$state_, _CLASSES_) => {
       $componentController = _$componentController_;
-      $rootScope = _$rootScope_;
       $log = _$log_;
       $state = _$state_;
       CLASSES = _CLASSES_;
     });
 
     controller = $componentController('knownSpellLevel', {
-      $log: $log,
-      $state: $state,
-      filterService: filterService,
-      focusService: focusService,
-      spellService: spellService,
-      spellbookService: spellbookService,
-      CLASSES: CLASSES
+      $log,
+      $state,
+      filterService,
+      focusService,
+      spellService,
+      spellbookService,
+      CLASSES,
     });
   });
 
@@ -73,7 +67,7 @@ describe('KnownSpelLevelComponent', () => {
       });
 
       it('provide spell name', () => {
-        const spell = {name: "spell"};
+        const spell = { name: 'spell' };
         controller.chooseSpell(spell);
         expect(controller.chooseSpell).toBeDefined();
       });

@@ -19,9 +19,12 @@
     "make-spells": "node parcer/make_spells_htmls.js",
     "start": "webpack-dev-server --hot --open --config webpack.js --mode=development",
     "start-prod": "webpack-dev-server --hot --open --config webpack.js --mode=production",
+    "start-test": "karma start --browsers NoSandFirefox --single-run=false",
     "commit": "git add . && git commit -m 'autocommit' && git push",
     "parse-commit": "yarn parse && yarn commit",
-    "test": "karma start --browsers NoSandFirefox --single-run"
+    "lint": "eslint app/ && eslint e2e/",
+    "test": "karma start --browsers NoSandFirefox --single-run",
+    "e2e": "webdriver-manager start && protractor"
   },
   "dependencies": {
     "@babel/core": "^7.7.7",
@@ -36,7 +39,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "favicons-webpack-plugin": "^3.0.0",
+    "favicons-webpack-plugin": "^2.1.0",
     "file-loader": "^5.0.2",
     "fuzzy-search": "^3.0.2",
     "html-loader": "^0.5.5",
@@ -73,9 +76,20 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "markdown-loader": "^5.1.0",
     "node-sass": "^4.13.0",
-    "sw-offline-google-analytics": "^0.0.25"
+    "protractor": "^5.4.2",
+    "sw-offline-google-analytics": "^0.0.25",
+    "webdriver-manager": "^12.1.7"
   }
 }

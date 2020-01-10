@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "jasmine": true,
+    "protractor": true
+  },
+  "extends": ["eslint:recommended", "airbnb/base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "angular": "true",
+    "ga": "true",
+    "inject": "true",
+    "focus": "true",
+    "APP_VERSION": "true"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-param-reassign": [2, {
+      "props": false
+    }],
+    "global-require": 0,
+    "max-len": ["error", { "code": 120 }]
+  }
+}
