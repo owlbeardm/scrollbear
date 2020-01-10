@@ -49,10 +49,10 @@ function KnownSpelLevelController(
     spellService.showSpell(spell.name);
   };
 
-  ctrl.filteredLabels = (labels) => labels
+  ctrl.filteredLabels = (labels) => (labels.filter ? labels
     .filter((x) => !!x)
     .map((x) => x.replace(' spell', ''))
-    .sort();
+    .sort() : undefined);
 }
 
 const KnownSpelLevelComponent = {

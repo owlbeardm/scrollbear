@@ -5,12 +5,6 @@ function AppController($log) {
   ctrl.$onInit = () => {
     $log.debug('AppController init');
   };
-
-  ctrl.show = () => {
-    const popup = angular.element('#modalMetamagic');
-    $log.debug('AppController metamagic', popup);
-    popup.modal('show');
-  };
 }
 
 const AppComponent = {
