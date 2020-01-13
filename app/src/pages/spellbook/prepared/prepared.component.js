@@ -1,29 +1,31 @@
-"use strict";
-
-function PreparedController($log, $rootScope, $state, filterService, spellService, spellbookService, CLASSES) {
-  $log.debug('SpellController create');
+function PreparedController($log, $rootScope, $state, characterService, spellbookService) {
   const ctrl = this;
+  $log.debug('SpellController create');
 
-  ctrl.$onInit = function() {
-    $log.debug("PreparedController init");
-    if (spellbookService.selectedCharacter) {
-      if (!spellbookService.selectedCharacter.preparedSpells) {
-        spellbookService.selectedCharacter.preparedSpells = {};
+  function calculateTotal() {
+    ctrl.total = Object.entries(ctrl.spells).reduce((total, pair) => total + (pair[1].spells.length), 0);
+  }
+
+  ctrl.$onInit = () => {
+    $log.debug('PreparedController init');
+    if (characterService.getSelectedCharacter()) {
+      if (!characterService.getSelectedCharacter().preparedSpells) {
+        characterService.getSelectedCharacter().preparedSpells = {};
       }
-      ctrl.spells = spellbookService.selectedCharacter.preparedSpells;
-      Object.entries(ctrl.spells).forEach(function(pair) {
+      ctrl.spells = characterService.getSelectedCharacter().preparedSpells;
+      Object.entries(ctrl.spells).forEach((pair) => {
         if (!pair[1].spells) {
-          pair[1].spells = []
-        };
+          pair[1].spells = [];
+        }
         if (!pair[1].cast) {
-          pair[1].cast = 0
-        };
+          pair[1].cast = 0;
+        }
         if (!pair[1].perDay) {
-          pair[1].perDay = 0
-        };
+          pair[1].perDay = 0;
+        }
         if (!pair[1].known) {
-          pair[1].known = 0
-        };
+          pair[1].known = 0;
+        }
         pair[1].spells.sort();
         const unique = [];
         pair[1].spells = pair[1].spells.filter((spell) => {
@@ -35,33 +37,29 @@ function PreparedController($log, $rootScope, $state, filterService, spellServic
     } else {
       $state.go('spellbook.characters');
     }
-    spellbookService.saveCharacters();
+    characterService.persist();
     calculateTotal();
     if (window.performance) {
-      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+      ga('send', 'timing', 'Transition', 'onInit',
+        Math.round(performance.now()) - $rootScope.onStartTime,
+        $state.current.name);
     }
-  }
+  };
 
-  ctrl.cast = function(key) {
-    spellbookService.selectedCharacter.knownSpells[key].cast++;
-    spellbookService.saveCharacters();
-  }
+  ctrl.cast = (key) => {
+    characterService.getSelectedCharacter().knownSpells[key].cast += 1;
+    characterService.persist();
+  };
 
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.knownSpells[key].spells.splice(id, 1);
-    spellbookService.saveCharacters();
-  }
+  ctrl.delete = (key, id) => {
+    $log.debug('SpellbookBookController ctrl.delete', key, id);
+    characterService.getSelectedCharacter().knownSpells[key].spells.splice(id, 1);
+    characterService.persist();
+  };
 
-  ctrl.resetCast = function() {
+  ctrl.resetCast = () => {
     spellbookService.resetCast();
-  }
-
-  function calculateTotal() {
-    ctrl.total = Object.entries(ctrl.spells).reduce(function(total, pair) {
-      return total + (pair[1].spells.length);
-    }, 0);
-  }
+  };
 }
 
 const PreparedComponent = {
@@ -70,16 +68,14 @@ const PreparedComponent = {
     '$log',
     '$rootScope',
     '$state',
-    'filterService',
-    'spellService',
+    'characterService',
     'spellbookService',
-    'CLASSES',
-    PreparedController
+    PreparedController,
   ],
   bindings: {
     spells: '<',
-    className: '<'
-  }
-}
+    className: '<',
+  },
+};
 
 export default PreparedComponent;

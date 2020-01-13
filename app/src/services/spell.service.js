@@ -1,7 +1,5 @@
-"use strict";
-
-const allSpells = require('../../../resources/spells.json');
 const showdown = require('showdown');
+const allSpells = require('../../../resources/spells.json');
 
 angular.module('app.services').factory('spellService', [
   '$log',
@@ -9,31 +7,31 @@ angular.module('app.services').factory('spellService', [
   '$rootScope',
   'filterService',
   'CLASSES',
-  function($log, $window, $rootScope, filterService, CLASSES) {
+  ($log, $window, $rootScope, filterService, CLASSES) => {
     const SpellService = {};
-    const localStorage = $window['localStorage'];
     SpellService.currentSpells = [];
     SpellService.classSet = [];
 
-    SpellService.getAllSpells = function() {
-      return SpellService.currentSpells;
-    };
+    SpellService.getAllSpells = () => SpellService.currentSpells;
 
-    SpellService.getSpellsSplited = function() {
-      console.time("SpellService.getSpellsSplited");
+    SpellService.getSpellsSplited = () => {
+      console.time('SpellService.getSpellsSplited');
       const spellsTmp = SpellService.currentSpells.filter(filterService.filter);
-      if(spellsTmp.length < 10){
-        console.log(spellsTmp);
+      if (spellsTmp.length < 10) {
+        $log.debug(spellsTmp);
       }
       const allSells = {};
       spellsTmp.forEach((value) => {
         const place = value.levels.reduce((classAccumulator, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = (!CLASSES[SpellService.classSet].search) ? true : CLASSES[SpellService.classSet].search.reduce((accumulator, currentValue) => {
-            return accumulator || className.search(currentValue) != -1;
-          }, false);
+          const isIncludeClass = (!CLASSES[SpellService.classSet].search)
+            ? true
+            : CLASSES[SpellService.classSet].search.reduce(
+              (accumulator, currentValue) => accumulator || className.search(currentValue) !== -1,
+              false,
+            );
           if (isIncludeClass) {
-            const newLevel = classLevel.substring(classLevel.length - 1)
+            const newLevel = classLevel.substring(classLevel.length - 1);
             if (!classAccumulator || newLevel < classAccumulator) {
               return newLevel;
             }
@@ -47,12 +45,12 @@ angular.module('app.services').factory('spellService', [
           allSells[place].push(value);
         }
       });
-      console.timeEnd("SpellService.getSpellsSplited");
+      console.timeEnd('SpellService.getSpellsSplited');
       return allSells;
     };
 
-    SpellService.setClass = function(classSet) {
-      console.time("SpellService.setClass");
+    SpellService.setClass = (classSet) => {
+      console.time('SpellService.setClass');
       SpellService.classSet = classSet;
       SpellService.currentSpells = allSpells.filter((value) => {
         if (!value.levels) {
@@ -60,69 +58,65 @@ angular.module('app.services').factory('spellService', [
         }
         return value.levels.reduce((accumulatorSpell, classLevel) => {
           const className = classLevel.substring(0, classLevel.length - 2);
-          const isIncludeClass = (!CLASSES[classSet].search) ? true : CLASSES[classSet].search.reduce((accumulator, currentValue) => {
-            return accumulator || className.search(currentValue) != -1;
-          }, false);
+          const isIncludeClass = (!CLASSES[classSet].search)
+            ? true
+            : CLASSES[classSet].search.reduce(
+              (accumulator, currentValue) => accumulator || className.search(currentValue) !== -1,
+              false,
+            );
           return accumulatorSpell || isIncludeClass;
         }, false);
       });
-      console.timeEnd("SpellService.setClass");
+      console.timeEnd('SpellService.setClass');
     };
 
-    SpellService.getSpellByUrl = function(url) {
-      return allSpells.find((spell) => {
-        return SpellService.spellNameToUrl(spell.name) == url;
-      });
-    };
+    SpellService.getSpellByUrl = (url) => allSpells.find((spell) => SpellService.spellNameToUrl(spell.name) === url);
 
-    SpellService.spellNameToUrl = function(name) {
-      return name.toLowerCase().trim().replace(/[.*+?^$ ,{}()|[\]\\\/]/g, '-').replace(/[’]/g, '_');
-    }
+    SpellService.spellNameToUrl = (name) => name.toLowerCase().trim()
+      .replace(/[.*+?^$ ,{}()|[\]\\/]/g, '-')
+      .replace(/[’]/g, '_');
 
-    SpellService.getSpellsCountByFilter = function() {
-      return allSpells.filter(filterService.filter).length;
-    }
+    SpellService.getSpellsCountByFilter = () => allSpells.filter(filterService.filter).length;
 
-    SpellService.showSpell = function(spellName) {
-      const spell = allSpells.find((spell) => {
-        return spell.name == spellName;
-      });
+    SpellService.showSpell = (spellName) => {
+      const spell = allSpells.find((spellFound) => spellFound.name === spellName);
       $rootScope.spell = spell;
       $rootScope.description = spell.description;
       $rootScope.spellDescription = SpellService.getSpellDescription(spell.description);
       $rootScope.spellSource = SpellService.getSpellSource(spell.source);
-      const popup = angular.element("#modalSpell");
+      const popup = angular.element('#modalSpell');
       popup.modal('show');
-    }
+    };
 
-    SpellService.getSpellDescription = function(md) {
+    SpellService.getSpellDescription = (md) => {
       const converter = new showdown.Converter({
         tables: true,
-        strikethrough: true
+        strikethrough: true,
       });
       let html = `<div>${converter.makeHtml(md)}</div>`;
-      html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>").replace(/<\/table>/g, "</table></div>").replace(/<thead>/g, "<thead class='text-primary'>");
+      html = html.replace(/<table>/g, "<div class='table-responsive'><table class='table table-sm'>")
+        .replace(/<\/table>/g, '</table></div>')
+        .replace(/<thead>/g, "<thead class='text-primary'>");
       return html;
-    }
+    };
 
-    SpellService.getSpellSource = function(md) {
+    SpellService.getSpellSource = (md) => {
       const converter = new showdown.Converter({
         tables: true,
-        strikethrough: true
+        strikethrough: true,
       });
-      let html = `<div>${converter.makeHtml(md)}</div>`;
+      const html = `<div>${converter.makeHtml(md)}</div>`;
       return html;
-    }
+    };
 
-    SpellService.getPlainSpellSource = function(md) {
-      let close = md.indexOf(' pg. ')
-      if(close == -1){
-        return md
+    SpellService.getPlainSpellSource = (md) => {
+      const close = md.indexOf(' pg. ');
+      if (close === -1) {
+        return md;
       }
       return md.substring(2, close);
-    }
-
+    };
 
     return SpellService;
-  }
+  },
 ]);

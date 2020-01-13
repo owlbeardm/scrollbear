@@ -1,4 +1,3 @@
-"use strict";
 
 describe('spellService', () => {
   let spellService;
@@ -20,11 +19,10 @@ describe('spellService', () => {
     });
   });
 
-  afterEach(function() {
+  afterEach(() => {
   });
 
   it('service exists', () => {
     expect(spellService).toBeDefined();
   });
-
 });

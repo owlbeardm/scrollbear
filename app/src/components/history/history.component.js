@@ -1,25 +1,21 @@
-"use strict";
-
-function HistoryController($log, $state, spellbookService) {
+function HistoryController($log, $state, characterService) {
   $log.debug('HistoryController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
-    $log.debug("HistoryController init");
-  }
+  ctrl.$onInit = () => {
+    $log.debug('HistoryController init');
+  };
 
-  ctrl.changeHistory = function() {
-
-    ctrl.history = spellbookService.selectedCharacter.history;
-    $log.debug("HistoryController changeHistory", spellbookService.selectedCharacter);
-  }
-
+  ctrl.changeHistory = () => {
+    ctrl.history = characterService.getSelectedCharacter().history;
+    $log.debug('HistoryController changeHistory', characterService.getSelectedCharacter());
+  };
 }
 
 const HistoryComponent = {
   template: require('./history.html'),
-  controller: ['$log', '$state', 'spellbookService', HistoryController],
-  bindings: {}
-}
+  controller: ['$log', '$state', 'characterService', HistoryController],
+  bindings: {},
+};
 
 export default HistoryComponent;

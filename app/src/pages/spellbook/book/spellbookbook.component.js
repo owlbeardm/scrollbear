@@ -1,16 +1,30 @@
-"use strict";
-
-function SpellbookBookController($log, $rootScope, $state, $scope, notificationService, filterService, spellService, spellbookService, CLASSES) {
+function SpellbookBookController(
+  $log,
+  $rootScope,
+  $state,
+  characterService,
+  spellbookService,
+  spellService,
+) {
   $log.debug('SpellbookBookController create');
   const ctrl = this;
-  const SELECTED_CLASS = "SELECTED_CLASS";
 
-  ctrl.$onInit = function() {
-    $log.debug("AppController init");
-    if (spellbookService.selectedCharacter) {
-      ctrl.prepared = spellbookService.selectedCharacter.prepared;
-      ctrl.book = spellbookService.selectedCharacter.book;
-      Object.entries(ctrl.book).forEach(function(pair) {
+  function calculateTotal() {
+    ctrl.total = Object.entries(ctrl.book).reduce((total, pair) => total + (pair[1].length), 0);
+  }
+
+
+  function addSpell(lvlToAdd, spell, spellToAdd) {
+    $log.debug('addSpell 1', spellToAdd, spell);
+    spellbookService.addSpell(spell, spellToAdd, undefined, lvlToAdd);
+  }
+
+  ctrl.$onInit = () => {
+    $log.debug('AppController init');
+    if (characterService.getSelectedCharacter()) {
+      ctrl.prepared = characterService.getSelectedCharacter().prepared;
+      ctrl.book = characterService.getSelectedCharacter().book;
+      Object.entries(ctrl.book).forEach((pair) => {
         pair[1].sort();
         const unique = [];
         ctrl.book[pair[0]] = pair[1].filter((spell) => {
@@ -22,106 +36,70 @@ function SpellbookBookController($log, $rootScope, $state, $scope, notificationS
     } else {
       $state.go('spellbook.characters');
     }
-    spellbookService.saveCharacters();
+    characterService.persist();
     calculateTotal();
     if (window.performance) {
-      ga('send', 'timing', 'Transition', 'onInit', Math.round(performance.now()) - $rootScope.onStartTime, $state.current.name);
+      ga('send', 'timing', 'Transition', 'onInit',
+        Math.round(performance.now()) - $rootScope.onStartTime,
+        $state.current.name);
     }
-  }
+  };
 
-  ctrl.chooseSpell = function(spell) {
+  ctrl.chooseSpell = (spell) => {
     spellService.showSpell(spell);
-  }
+  };
 
-  ctrl.delete = function(key, id) {
-    $log.debug("SpellbookBookController ctrl.delete", key, id);
-    spellbookService.selectedCharacter.book[key].splice(id, 1);
-    spellbookService.saveCharacters();
+  ctrl.delete = (key, id) => {
+    $log.debug('SpellbookBookController ctrl.delete', key, id);
+    characterService.getSelectedCharacter().book[key].splice(id, 1);
+    characterService.persist();
     calculateTotal();
-  }
+  };
 
-  ctrl.addSpell = function(lvlToAdd, spell) {
-    console.log("ctrl.addSpell", ctrl.collapseName, spell);
-    const spellToAdd = {
-      name: spell
-    };
-    addSpell(lvlToAdd, spell, spellToAdd);
-  }
-
-  ctrl.addSpellAsDomain = function(lvlToAdd, spell) {
-    console.log("ctrl.addSpellAsDomain", spell);
+  ctrl.addSpell = (lvlToAdd, spell) => {
+    $log.debug('ctrl.addSpell', ctrl.collapseName, spell);
     const spellToAdd = {
       name: spell,
-      domain: true
     };
     addSpell(lvlToAdd, spell, spellToAdd);
-  }
+  };
 
-  ctrl.addSpellAsSpecial = function(lvlToAdd, spell) {
-    console.log("ctrl.addSpellAsSpecial", spell);
+  ctrl.addSpellAsDomain = (lvlToAdd, spell) => {
+    $log.debug('ctrl.addSpellAsDomain', spell);
     const spellToAdd = {
       name: spell,
-      special: true
+      domain: true,
     };
     addSpell(lvlToAdd, spell, spellToAdd);
-  }
+  };
 
-  function addSpell(lvlToAdd, spell, spellToAdd) {
-    console.log("addSpell 1", spellToAdd, spell);
-    let level = lvlToAdd;
-    if (!spellbookService.selectedCharacter.prepared) {
-      if (!spellbookService.selectedCharacter.knownSpells) {
-        spellbookService.selectedCharacter.knownSpells = {};
-      }
-      if (!spellbookService.selectedCharacter.knownSpells[level]) {
-        spellbookService.selectedCharacter.knownSpells[level] = {
-          spells: []
-        };
-      }
-      spellbookService.selectedCharacter.knownSpells[level].spells.push(spellToAdd);
-    } else {
-      if (!spellbookService.selectedCharacter.preparedSpells) {
-        spellbookService.selectedCharacter.preparedSpells = {};
-      }
-      if (!spellbookService.selectedCharacter.preparedSpells[level]) {
-        spellbookService.selectedCharacter.preparedSpells[level] = {
-          spells: []
-        };
-      }
-      spellbookService.selectedCharacter.preparedSpells[level].spells.push(spellToAdd);
-    }
-    spellbookService.saveCharacters();
-    console.log(spellbookService.selectedCharacter);
-    if (!spellbookService.selectedCharacter.prepared) {
-      ga('send', 'event', 'known_add', spellToAdd.name, spellbookService.selectedCharacter.class);
-    } else {
-      ga('send', 'event', 'prepared_add', spellToAdd.name, spellbookService.selectedCharacter.class);
-    }
-  }
+  ctrl.addSpellAsSpecial = (lvlToAdd, spell) => {
+    $log.debug('ctrl.addSpellAsSpecial', spell);
+    const spellToAdd = {
+      name: spell,
+      special: true,
+    };
+    addSpell(lvlToAdd, spell, spellToAdd);
+  };
 
-  ctrl.isSpellPrepared = function(spellName) {
-    if (!spellbookService.selectedCharacter.prepared) {
-      if (spellbookService.selectedCharacter.knownSpells) {
-        const present = Object.entries(spellbookService.selectedCharacter.knownSpells).reduce(
-          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2.name == spellName), false), false);
+  ctrl.isSpellPrepared = (spellName) => {
+    if (!characterService.getSelectedCharacter().prepared) {
+      if (characterService.getSelectedCharacter().knownSpells) {
+        const present = Object.entries(characterService.getSelectedCharacter().knownSpells).reduce(
+          (acc, curr) => acc || curr[1].spells.reduce((acc2, curr2) => acc2 || (curr2.name === spellName), false),
+          false,
+        );
         return present;
       }
-    } else {
-      if (spellbookService.selectedCharacter.preparedSpells) {
-        const present = Object.entries(spellbookService.selectedCharacter.preparedSpells).reduce(
-          (acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (curr2.name == spellName?1:0), 0), 0);
-        return present;
-      }
+    } else if (characterService.getSelectedCharacter().preparedSpells) {
+      const present = Object.entries(characterService.getSelectedCharacter().preparedSpells).reduce(
+        (acc, curr) => acc + curr[1].spells.reduce((acc2, curr2) => acc2 + (curr2.name === spellName ? 1 : 0), 0),
+        0,
+      );
+      return present;
     }
     return false;
-  }
-
-  function calculateTotal() {
-    ctrl.total = Object.entries(ctrl.book).reduce(function(total, pair) {
-      return total + (pair[1].length);
-    }, 0);
-  }
-
+  };
 }
 
 const SpellbookBookComponent = {
@@ -130,18 +108,15 @@ const SpellbookBookComponent = {
     '$log',
     '$rootScope',
     '$state',
-    '$scope',
-    'notificationService',
-    'filterService',
-    'spellService',
+    'characterService',
     'spellbookService',
-    'CLASSES',
-    SpellbookBookController
+    'spellService',
+    SpellbookBookController,
   ],
   bindings: {
     spells: '<',
-    className: '<'
-  }
-}
+    className: '<',
+  },
+};
 
 export default SpellbookBookComponent;

@@ -32,7 +32,7 @@ module.exports = function(config) {
       }
     },
     // autoWatch: !config.singleRun,
-    singleRun: true,
+    singleRun: false,
     browserDisconnectTimeout:10000,
     colors: true,
     port: 9876,
