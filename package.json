@@ -61,7 +61,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "properties-loader": "^0.0.1",
     "puppeteer": "^2.0.0",
-    "sass-loader": "^8.0.1",
+    "sass-loader": "^8.0.2",
     "showdown": "^1.9.1",
     "style-loader": "^1.1.2",
     "terser-webpack-plugin": "^2.3.0",
