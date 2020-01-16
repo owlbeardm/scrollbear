@@ -9985,10 +9985,10 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-version-file@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/webpack-version-file/-/webpack-version-file-0.1.5.tgz#1ee07bf2d1632528f0ebea4f47da77e0ea1af02e"
-  integrity sha512-7QmzdiCIAiMpx3IfRTYLwG430ETiYzqHuueSMA5dRMmix9o5lL2QjBK+wtera792PZSr4DdyASH6iAGt+5XnwA==
+webpack-version-file@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/webpack-version-file/-/webpack-version-file-0.1.6.tgz#b6d0ed23a8f98c37397827996ad36bbe47a9be21"
+  integrity sha512-vGc2h2i+3s15fidvzGxUIWrnZZvYlPDSlbowoI8SRW3MV5wS6IJJ8O3BRKXlTg+VwDxyiEXh67v1T28qRBoY2A==
   dependencies:
     chalk "^2.1.0"
     ejs "^2.5.2"
