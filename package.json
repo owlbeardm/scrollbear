@@ -87,7 +87,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "markdown-loader": "^5.1.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "protractor": "^5.4.2",
     "sw-offline-google-analytics": "^0.0.25",
     "webdriver-manager": "^12.1.7"
