@@ -39,7 +39,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "favicons-webpack-plugin": "^3.0.1",
+    "favicons-webpack-plugin": "2.1.0",
     "file-loader": "^5.0.2",
     "fuzzy-search": "^3.1.0",
     "html-loader": "^0.5.5",
@@ -90,6 +90,7 @@
     "node-sass": "^4.13.1",
     "protractor": "^5.4.3",
     "sw-offline-google-analytics": "^0.0.25",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webdriver-manager": "^12.1.7"
   }
 }
