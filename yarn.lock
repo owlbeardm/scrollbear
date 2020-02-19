@@ -4560,10 +4560,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-fuzzy-search@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/fuzzy-search/-/fuzzy-search-3.1.0.tgz#97bd36a138cb6f212cd53ce53fc5a168534b3eef"
-  integrity sha512-LZXJmVbDjEdBmVDh4UBDN0GivaJ56xmyiCXPNxZ6aNPzxlGK7GZRIVo60SkIC9lWTxxvjHNHkX0Q+RzNwt9j+w==
+fuzzy-search@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/fuzzy-search/-/fuzzy-search-3.2.0.tgz#0e3047d74c6114d3dded291cd3c24430c4669b10"
+  integrity sha512-cYI+NO7iSVfhtAFU46sqkQVNEsNW2D2o8TNxoWpmBWNbqCwGBgGobzfzRG3TYjLa7fXfcwuTFWB+w1DxuzzWRg==
 
 gauge@~2.7.3:
   version "2.7.4"
