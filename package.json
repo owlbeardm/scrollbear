@@ -57,7 +57,7 @@
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^4.0.2",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-html-parser": "^1.2.7",
+    "node-html-parser": "^1.2.8",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "properties-loader": "^0.0.1",
     "puppeteer": "^2.1.1",
