@@ -6699,10 +6699,10 @@ node-gyp@^3.8.0:
     tar "^2.0.0"
     which "1"
 
-node-html-parser@^1.2.10:
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-1.2.10.tgz#a3822de8bf1cbed3369694aab87e8b575a7960a3"
-  integrity sha512-IqfTPWWPs3bnzMHXXxhVo2W41XdwQ2uHifqvgATYrk02cqim8eYQrOiMiIL2LYMnICYK+IUfsd4JJhE1mbe90w==
+node-html-parser@^1.2.11:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-1.2.11.tgz#0fd20c729b0d0d0d06179b6e6a5c51355af1c981"
+  integrity sha512-8fWtItUQcuWJZs61ytn69HXUUhYxr1W5AQzETeJWHAYqrJ2WF9CBOh6H4WQbquFG6mJk6JQ8Ue9TvnR6z4OV9g==
   dependencies:
     he "1.1.1"
 
