@@ -1,0 +1,59 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.3c99622bf11a01cd4cc6c693116bfdc6.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.c7a087bedde15e6dd5041a14bbc47a40.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.c0f037743178e6f59b86ba05da29a184.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.6e0a57effa06de0bfd734d0b8a73c4e0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_144x144.8cbb67be0bfc36bd35a05262f222c388.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.7eb09189e0b0e1abec295f200af6470d.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_72x72.c627632bcdfd7ca0ce0134735cff4df7.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_48x48.0e0e5c805c5a6919e0f15d219b144e51.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_36x36.5c13d34de28e5d4738d53f5b1993e8df.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    }
+  ],
+  "name": "ScrollBear Spellbook",
+  "short_name": "ScrollBear",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Scrollbear spellbook reference for Pathfinder RPG.",
+  "background_color": "#463e43",
+  "theme_color": "#463e43",
+  "theme-color": "#463e43",
+  "standalone": "standalone"
+}
